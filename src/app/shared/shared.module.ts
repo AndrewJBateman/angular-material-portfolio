@@ -7,8 +7,8 @@ import {
   MatToolbarModule,
   MatSidenavModule,
   MatButtonModule,
+  MatListModule,
   MatIconModule,
-  MatListModule
 } from '@angular/material';
 ​
 @NgModule({

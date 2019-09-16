@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="onToggleSidenav()" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
+  </button>
+  <a routerLink="/" mat-button>
+      <h1>Home</h1>
+  </a>
+  <div fxFlex fxLayout fxLayoutAlign="end">
+      <div fxHide.lt-md>
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <a class="nav-link" routerLink="/about" routerLinkActive="active" mat-button>About</a>
+        <a class="nav-link" routerLink="/projects" routerLinkActive="active" mat-button>Projects</a>
+        <a class="nav-link" routerLink="/skills" routerLinkActive="active" mat-button>Skills</a>
+        <a class="nav-link" routerLink="/blog" routerLinkActive="active" mat-button>Blog</a>
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active" mat-button>Contact</a>
+      </div>
+  </div>
+</mat-toolbar>

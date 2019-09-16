@@ -1,0 +1,23 @@
+<mat-nav-list>
+  <a mat-list-item routerLink="/" routerLinkActive="active" click="onSidenavClose()">
+    <mat-icon>home</mat-icon> Home
+  </a>
+  <a mat-list-item class="nav-link" routerLink="/about" routerLinkActive="active" click="onSidenavClose()">
+    <mat-icon>location_city</mat-icon> About
+  </a>
+  <a mat-list-item class="nav-link" routerLink="/projects" routerLinkActive="active" click="onSidenavClose()">
+    <mat-icon>build</mat-icon> Projects
+  </a>
+  <a mat-list-item class="nav-link" routerLink="/skills" routerLinkActive="active" click="onSidenavClose()">
+    <mat-icon>location_city</mat-icon> Skills
+  </a>
+  <a mat-list-item class="nav-link" routerLink="/blog" routerLinkActive="active" click="onSidenavClose()">
+    <mat-icon>pages</mat-icon> Blog
+  </a>
+  <a mat-list-item class="nav-link" routerLink="/contact" routerLinkActive="active" click="onSidenavClose()">
+    <mat-icon>contact_support</mat-icon> Contact
+  </a>
+  <a mat-list-item (click)="onSidenavClose()">
+    <mat-icon>close</mat-icon> Close
+  </a>
+</mat-nav-list>
