@@ -23,7 +23,7 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Navbar:** Working top/side navbars with page routing.
 
-* **Home:** Add Http service added to display my number of repos, linked to github API. Option: Add more detailed github later but will need api key.
+* **Home:** Http service added to display my number of repos, linked to github API. Option: Add more detailed github later but will need api key.
 
 * **About:** tba
 

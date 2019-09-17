@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
   <button mat-icon-button (click)="onToggleSidenav()" fxHide.gt-sm>
-      <mat-icon>menu</mat-icon>
+    <mat-icon>menu</mat-icon>
   </button>
   <a routerLink="/" mat-button>
-      <h1>Home</h1>
+    <h1>Home</h1>
   </a>
   <div fxFlex fxLayout fxLayoutAlign="end">
       <div fxHide.lt-md>
@@ -13,6 +13,8 @@
         <a class="nav-link" routerLink="/skills" routerLinkActive="active" mat-button>Skills</a>
         <a class="nav-link" routerLink="/blog" routerLinkActive="active" mat-button>Blog</a>
         <a class="nav-link" routerLink="/contact" routerLinkActive="active" mat-button>Contact</a>
+        <a class="nav-link social" href="https://www.linkedin.com/andrew_bateman" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="nav-link social" href="https://www.linkedin.com/andrew_bateman" target="_blank" rel="noreferrer">Github</a>
       </div>
   </div>
 </mat-toolbar>

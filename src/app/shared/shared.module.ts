@@ -4,6 +4,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {
+  MatCardModule,
   MatToolbarModule,
   MatSidenavModule,
   MatButtonModule,
@@ -18,6 +19,7 @@ import {
     BrowserAnimationsModule,
     MatIconModule,
     MatListModule,
+    MatCardModule,
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,

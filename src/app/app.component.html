@@ -1,11 +1,11 @@
-  <div class="root-container">
-    <app-top-navbar (sidenavToggle)="sidenav.toggle()"></app-top-navbar>
+<div class="root-container">
+  <app-top-navbar (sidenavToggle)="sidenav.toggle()"></app-top-navbar>
     <mat-sidenav-container fxFlexFill>
-        <mat-sidenav #sidenav fxHide.gt-sm>
-            <app-side-navbar (sidenavClose)="sidenav.close()"></app-side-navbar>
-        </mat-sidenav>
-        <mat-sidenav-content fxFlexFill>
-            <router-outlet></router-outlet>
-        </mat-sidenav-content>
-    </mat-sidenav-container>
+      <mat-sidenav #sidenav fxHide.gt-sm>
+        <app-side-navbar (sidenavClose)="sidenav.close()"></app-side-navbar>
+      </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
