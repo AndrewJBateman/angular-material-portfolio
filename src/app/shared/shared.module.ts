@@ -1,6 +1,7 @@
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {
@@ -13,8 +14,8 @@ import {
 } from '@angular/material';
 ​
 @NgModule({
-  imports: [],
   exports: [
+    RouterModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatIconModule,

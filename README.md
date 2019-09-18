@@ -25,6 +25,8 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Home:** Http service added to display my number of repos, linked to github API. Option: Add more detailed github later but will need api key.
 
+* **Blog:** Firebase auth service added so I can login to edit posts. Blogs will be stored in Firebase DB and displayed on the Blog Posts page.
+
 * **About:** tba
 
 * **Projects:** tba
@@ -35,7 +37,7 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Contact:** tba Single Boostrap card with links to email, github and linkedin.
 
-* **CV Download:** Finish 1-page CV that links to CV button on right.
+* **CV Download:** Add 1-page CV.
 
 ## Screenshots
 
@@ -48,6 +50,8 @@ Angular 8 app using Angular Material to create a portfolio website.
 * [Angular framework v8.2.5](https://angular.io/)
 
 * [Angular Material v8.2.0](https://material.angular.io/)
+
+* [Firebase Cloud storage and Authentication](https://firebase.google.com)
 
 ## Setup
 
@@ -79,7 +83,7 @@ export class Project {
 
 ## Status & To-Do List
 
-* Status: In development. Compiles. Basic menu.
+* Status: In development. Compiles.
 
 * To-Do: see Sections Info above.
 
