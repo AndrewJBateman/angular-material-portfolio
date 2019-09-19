@@ -1,7 +1,9 @@
+import { PostListComponent } from './../posts/post-list/post-list.component';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {
@@ -12,9 +14,10 @@ import {
   MatListModule,
   MatIconModule,
 } from '@angular/material';
-​
+
 @NgModule({
   exports: [
+    CommonModule,
     RouterModule,
     BrowserModule,
     BrowserAnimationsModule,

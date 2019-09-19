@@ -2,6 +2,16 @@
   <a mat-list-item routerLink="/" routerLinkActive="active" (click)="onSidenavClose()">
     <mat-icon>home</mat-icon>Home
   </a>
+
+  <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+    <a mat-list-item class="nav-link social" aria-label="Logout button" (click)="auth.logout()">
+        <mat-icon>no_meeting_room</mat-icon>Logout</a>
+  </div>
+  <ng-template #showLogin>
+    <a mat-list-item class="nav-link social" aria-label="Login button" (click)="auth.login()">
+      <mat-icon>meeting_room</mat-icon>Login</a>
+  </ng-template>
+
   <a mat-list-item class="nav-link" routerLink="/about" routerLinkActive="active" (click)="onSidenavClose()">
     <mat-icon>info</mat-icon>About
   </a>
@@ -14,15 +24,16 @@
   <a mat-list-item class="nav-link" routerLink="/blog" routerLinkActive="active" (click)="onSidenavClose()">
     <mat-icon>create</mat-icon>Blog
   </a>
-  <a mat-list-item class="nav-link social" href="https://www.linkedin.com/andrew_bateman" target="_blank" rel="noreferrer">
-    <mat-icon>link</mat-icon>LinkedIn
-  </a>
-  <a mat-list-item class="nav-link social" href="https://www.linkedin.com/andrew_bateman" target="_blank" rel="noreferrer">
-    <mat-icon>link</mat-icon>Github
-  </a>
   <a mat-list-item class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="onSidenavClose()">
     <mat-icon>email</mat-icon>Contact
   </a>
+  <a mat-list-item class="nav-link social" href="https://www.linkedin.com/andrew_bateman" target="_blank" rel="noreferrer">
+    <mat-icon>open_in_new</mat-icon>LinkedIn
+  </a>
+  <a mat-list-item class="nav-link social" href="https://www.linkedin.com/andrew_bateman" target="_blank" rel="noreferrer">
+    <mat-icon>open_in_new</mat-icon>Github
+  </a>
+
   <!-- <a mat-list-item (click)="onSidenavClose()">
     <mat-icon>close</mat-icon>Close
   </a> -->

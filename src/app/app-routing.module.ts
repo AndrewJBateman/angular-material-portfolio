@@ -1,6 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -8,6 +8,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
+import { PostsModule } from './posts/posts.module';
 
 
 const appRoutes: Routes = [
@@ -34,7 +35,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'blog',
-    component: BlogComponent
+    component: PostsModule
   },
   {
     path: 'contact',
@@ -51,7 +52,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [CommonModule, PostsModule, RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

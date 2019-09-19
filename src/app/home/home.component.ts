@@ -11,8 +11,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private githubService: GithubService) { }
 
-  ngOnInit() {
-    this.githubService
+  async ngOnInit() {
+    await this.githubService
 			.getUserProfile()
 			.subscribe(data => {
 				this.profile = data;
