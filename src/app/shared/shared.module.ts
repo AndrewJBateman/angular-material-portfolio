@@ -1,33 +1,23 @@
-import { PostListComponent } from './../posts/post-list/post-list.component';
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
-import {
-  MatCardModule,
-  MatToolbarModule,
-  MatSidenavModule,
-  MatButtonModule,
-  MatListModule,
-  MatIconModule,
-} from '@angular/material';
+import { MaterialModule } from '../material.module';
+
 
 @NgModule({
   exports: [
-    CommonModule,
-    RouterModule,
-    BrowserModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatButtonModule,
-    FlexLayoutModule
+    BrowserModule,
+    CommonModule,
+    FlexLayoutModule,
+    FormsModule,
+    MaterialModule,
+    RouterModule,
   ],
 })
 export class SharedModule {

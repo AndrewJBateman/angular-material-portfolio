@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -6,27 +7,27 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { environment } from '../environments/environment';
-import { AppComponent } from './app.component';
 
-import { SharedModule } from './shared/shared.module';
-import { HomeComponent } from './home/home.component';
+import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
-import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
+import { HomeComponent } from './home/home.component';
 import { NavModule } from './nav/nav.module';
+import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { PostsModule } from './posts/posts.module';
+import { ProjectsComponent } from './projects/projects.component';
+import { SharedModule } from './shared/shared.module';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     AboutComponent,
-    ProjectsComponent,
-    SkillsComponent,
     ContactComponent,
+    HomeComponent,
     PageNotFoundComponent,
+    ProjectsComponent,
+    SkillsComponent
   ],
   imports: [
     NavModule,

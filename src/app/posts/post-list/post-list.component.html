@@ -1,4 +1,4 @@
 <div *ngFor="let post of posts | async">
-  <h2>{{post.title}}</h2>
+  <h2 routerLink="{{post.id}}">{{post.title}}</h2>
   <p>{{post.content}}</p>
 </div>
