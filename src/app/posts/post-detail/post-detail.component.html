@@ -1,35 +1,38 @@
 <ng-container *ngIf="post">
+
   <div [hidden]="!editing">
     <mat-card>
-      <h2>Update Post</h2>
+      <h1>Edit Post</h1>
       <mat-form-field>
-        <input matInput placeholder="Post Title" [(ngModel)]="post.title" name="title">
+        <input matInput placeholder="Post title" [(ngModel)]="post.title" name="title">
       </mat-form-field>
       <br>
       <mat-form-field>
-        <textarea matInput placeholder="Post Content" [(ngModel)]="post.content" name="content" rows="10"></textarea>
+        <textarea matInput placeholder="Post content" [(ngModel)]="post.content" name="content" rows="10"></textarea>
       </mat-form-field>
       <br>
       <button mat-raised-button color="accent" (click)="updatePost()">Save</button>
-      <button mat-button (click)="editing=false">Cancel</button>
+      <button mat-button (click)="editing=false" *ngIf="editing">Cancel</button>
     </mat-card>
   </div>
+
   <div [hidden]="editing">
-    <mat-card>
-      <img src="{{post.image}}" alt="{{post.title}}">
-      <p>posted by {{post.author}} &bull; {{post.published | date: 'fullDate'}}</p>
+    <mat-card class="mat-elevation-z1">
+      <mat-card-header>
+        <h1 text-center>{{post.title}}, <span class="small-text">posted {{post.published.toDate() | date:'dd/MM/yyyy'}}</span></h1>
+      </mat-card-header>
       <mat-card-content>
-        <h2>{{post.title}}</h2>
+          <img mat-card-image src="{{post.image}}" alt="{{post.title}}">
         <p>{{post.content}}</p>
       </mat-card-content>
-      <mat-card-actions align="end" *ngIf="auth.currentUserId === post.authorId">
-        <button mat-icon-button (click)="editing=true">
-          <mat-icon>edit</mat-icon>
-        </button>
-        <button mat-icon-button (click)="delete()">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </mat-card-actions>
+        <mat-card-actions align="end" *ngIf="auth.currentUserId === post.authorId">
+          <button mat-icon-button (click)="editing=true">
+            <mat-icon color="accent">edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="delete(post.id)">
+            <mat-icon color="accent">delete</mat-icon>
+          </button>
+        </mat-card-actions>
     </mat-card>
   </div>
 </ng-container>

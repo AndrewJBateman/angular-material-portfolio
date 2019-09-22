@@ -17,7 +17,7 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 ## General info
 
-* tba
+* Responsive - media sizes for PC and phone-sized screens (max width 400px).
 
 ## Sections info
 
@@ -27,11 +27,9 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Blog:** Firebase auth service added so I can login to edit posts. Blogs will be stored in Firebase DB and displayed on the Blog Posts page.
 
-* **About:** tba
+* **About:** tba. Complete real content
 
-* **Projects:** tba
-
-* **Articles:** tba
+* **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Content to be replaced.
 
 * **Skills:** tba
 

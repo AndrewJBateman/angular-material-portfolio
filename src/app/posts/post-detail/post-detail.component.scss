@@ -1,10 +1,24 @@
+@import "../../../theme.scss";
+
 mat-card {
   margin: 10px auto;
   max-width: 700px;
 }
-img {
-  width: 100%;
+mat-card-img {
+  max-width: 100%;
+  margin: 0;
 }
 mat-form-field {
   width: 100%;
+}
+mat-card-actions {
+  padding: 0;
+}
+.small-text {
+  color: #0d47a1;
+  font-size: 14px;
+}
+h1 {
+  margin: 0 0 20px 0;
+  text-align: center;
 }

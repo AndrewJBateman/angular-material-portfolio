@@ -1,1 +1,28 @@
-<p>projects works!</p>
+<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height: 100vh">
+  <div fxLayout="row wrap">
+    <div
+      *ngFor="let project of projects"
+      fxFlex="25"
+      fxFlex.md="33"
+      fxFlex.sm="50"
+      fxFlex.xs="100"
+      fxLayout="column"
+      style="padding: 5px;"
+    >
+      <mat-card class="example-card">
+        <img class="mat-card-image" [src]="project.img.src" [alt]="project.img.alt">
+        <mat-card-title-group>
+          <mat-card-title class="card-container-left">{{ project.title }}</mat-card-title>
+          <span class="fill"></span>
+        </mat-card-title-group>
+        <mat-card-content>
+          <p>{{ project.content | slice:0:350 }}...</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="accent">View App</button>
+          <button mat-button color="accent">Github</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
