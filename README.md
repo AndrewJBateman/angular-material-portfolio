@@ -31,7 +31,7 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Content to be replaced.
 
-* **Skills:** tba
+* **Skills:**
 
 * **Contact:** tba Single Boostrap card with links to email, github and linkedin.
 

@@ -1,40 +1,40 @@
 <mat-nav-list>
-  <a mat-list-item routerLink="/" routerLinkActive="active" (click)="onSidenavClose()">
-    <mat-icon color="accent">home</mat-icon>Home
+  <a mat-list-item class="nav-link" routerLink="/home" routerLinkActive="active" (click)="onSidenavClose()">
+    <mat-icon>home</mat-icon>Home
   </a>
 
   <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
     <a mat-list-item class="nav-link social" aria-label="Logout button" (click)="auth.logout()">
-        <mat-icon color="accent">no_meeting_room</mat-icon>Logout</a>
+        <mat-icon>no_meeting_room</mat-icon>Logout</a>
   </div>
   <ng-template #showLogin>
     <a mat-list-item class="nav-link social" aria-label="Login button" (click)="auth.login()">
-      <mat-icon color="accent">meeting_room</mat-icon>Login</a>
+      <mat-icon>meeting_room</mat-icon>Login</a>
   </ng-template>
 
   <a mat-list-item class="nav-link" routerLink="/about" routerLinkActive="active" (click)="onSidenavClose()">
-    <mat-icon color="accent">info</mat-icon>About
+    <mat-icon>info</mat-icon>About
   </a>
   <a mat-list-item class="nav-link" routerLink="/projects" routerLinkActive="active" (click)="onSidenavClose()">
-    <mat-icon color="accent">work</mat-icon>Projects
+    <mat-icon>work</mat-icon>Projects
   </a>
   <a mat-list-item class="nav-link" routerLink="/skills" routerLinkActive="active" (click)="onSidenavClose()">
-    <mat-icon color="accent">build</mat-icon>Skills
+    <mat-icon>build</mat-icon>Skills
   </a>
   <a mat-list-item class="nav-link" routerLink="/blog" routerLinkActive="active" (click)="onSidenavClose()">
-    <mat-icon color="accent">description</mat-icon>Blog
+    <mat-icon>description</mat-icon>Blog
   </a>
   <a mat-list-item class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="onSidenavClose()">
-    <mat-icon color="accent">email</mat-icon>Contact
+    <mat-icon>email</mat-icon>Contact
   </a>
   <a mat-list-item class="nav-link social" href="https://www.linkedin.com/andrew_bateman" target="_blank" rel="noreferrer">
-    <mat-icon color="accent">open_in_new</mat-icon>LinkedIn
+    <mat-icon>open_in_new</mat-icon>LinkedIn
   </a>
   <a mat-list-item class="nav-link social" href="https://www.linkedin.com/andrew_bateman" target="_blank" rel="noreferrer">
-    <mat-icon color="accent">open_in_new</mat-icon>Github
+    <mat-icon>open_in_new</mat-icon>Github
   </a>
 
   <a mat-list-item (click)="onSidenavClose()">
-    <mat-icon color="accent">close</mat-icon>Close
+    <mat-icon>close</mat-icon>Close
   </a>
 </mat-nav-list>

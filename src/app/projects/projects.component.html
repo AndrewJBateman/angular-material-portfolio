@@ -9,7 +9,7 @@
       fxLayout="column"
       style="padding: 5px;"
     >
-      <mat-card class="example-card">
+      <mat-card>
         <img class="mat-card-image" [src]="project.img.src" [alt]="project.img.alt">
         <mat-card-title-group>
           <mat-card-title class="card-container-left">{{ project.title }}</mat-card-title>
@@ -19,8 +19,8 @@
           <p>{{ project.content | slice:0:350 }}...</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button color="accent">View App</button>
-          <button mat-button color="accent">Github</button>
+          <a mat-flat-button [href]="project.github" target="_blank" rel="noreferrer" color="accent">View App</a>
+          <a mat-flat-button [href]="project.github" target="_blank" rel="noreferrer" color="accent">Github</a>
         </mat-card-actions>
       </mat-card>
     </div>

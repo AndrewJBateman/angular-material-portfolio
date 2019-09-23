@@ -12,7 +12,7 @@
       <mat-card class="mat-elevation-z1">
         <mat-card-content routerLink="{{post.id}}">
           <img mat-card-image src="{{post.image}}" alt="{{post.title}}">
-          <p>{{post.content | slice:0:200}}... 
+          <p>{{post.content | slice:0:180}}...
             <small><mat-icon color="accent">today</mat-icon> {{post.published.toDate() | date:'dd/MM/yyyy'}}</small>
           </p>
         </mat-card-content>

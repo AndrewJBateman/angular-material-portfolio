@@ -6,16 +6,25 @@ mat-card-image {
   width: 200px;
   height: 150px;
 }
+
 mat-icon {
   font-size: 18px;
 }
+
 mat-card-actions {
   padding: 0;
+  margin: auto 0 0;
+
 }
-.card-container-left {
+
+a.mat-flat-button {
+  margin-right: 16px;
+}
+
+card-container-left {
   display: inline;
-  margin-bottom: 10px;
 }
+
 .fill {
   flex: 1 1 auto;
 }

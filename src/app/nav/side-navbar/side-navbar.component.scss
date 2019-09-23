@@ -2,11 +2,15 @@ mat-icon {
   padding: 0 8px;
 }
 
-// .nav-link {
-//   color: white;
-//   font-size: 14px;
-// }
-
 .social {
   padding: 16px 0;
+}
+
+.nav-link {
+  color: #455A64;
+}
+
+.active {
+  color: #690726;
+  font-weight: bold;
 }

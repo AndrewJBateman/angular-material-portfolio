@@ -19,7 +19,12 @@
   <div [hidden]="editing">
     <mat-card class="mat-elevation-z1">
       <mat-card-header>
-        <h1 text-center>{{post.title}}, <span class="small-text">posted {{post.published.toDate() | date:'dd/MM/yyyy'}}</span></h1>
+        <mat-card-title>
+          {{post.title}},
+          <span class="small-text">
+            <mat-icon color="accent">today</mat-icon> {{post.published.toDate() | date:'dd/MM/yyyy'}}
+          </span>
+        </mat-card-title>
       </mat-card-header>
       <mat-card-content>
           <img mat-card-image src="{{post.image}}" alt="{{post.title}}">

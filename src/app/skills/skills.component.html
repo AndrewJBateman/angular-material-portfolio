@@ -1,1 +1,28 @@
-<p>skills works!</p>
+<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height: 100vh">
+  <div fxLayout="row wrap">
+    <div
+      *ngFor="let skill of skills"
+      fxFlex="25"
+      fxFlex.md="33"
+      fxFlex.sm="50"
+      fxFlex.xs="100"
+      fxLayout="column"
+      style="padding: 5px;"
+    >
+      <mat-card>
+        <mat-card-header
+          [ngClass] = "{
+          'card-eng' : skill.area === 'eng',
+          'card-prog' : skill.area === 'prog'
+          }">
+          <mat-card-title>
+            {{ skill.title }}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ skill.content | slice:0:200 }}...</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
