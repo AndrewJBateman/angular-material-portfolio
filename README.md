@@ -33,7 +33,7 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Skills:**
 
-* **Contact:** tba Single Boostrap card with links to email, github and linkedin.
+* **Contact:** Material card with links to email, github and linkedin.
 
 * **CV Download:** Add 1-page CV.
 
