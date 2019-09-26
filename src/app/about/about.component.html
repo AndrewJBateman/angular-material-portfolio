@@ -1,63 +1,166 @@
 <div class="about-container">
   <mat-card>
     <img class="img-thumbnail" src="/assets/images/about-profile.jpg" alt="photo of Andrew Bateman">
-    <mat-card-header>      
+    <mat-card-header>
       <mat-card-title>Andrew Bateman</mat-card-title>
-      <mat-card-subtitle [ngStyle]="{'color': 'blue'}">
+      <mat-card-subtitle [ngStyle]="{'color': '#0D47A1'}">
         Programmer | Engineer
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p>I am a programmer with a background in Electrical Engineering. This website explains my technical background and what I have learnt and built in the past few years of studying programming.<p>
-      <p>After over 20 years as an electronic/electrical Engineer (see below), I started studying programming in 2016. Using on-line resources such as [TeamTreehouse](https://teamtreehouse.com) I learnt about HTML, CSS, Javascript, PHP, Wordpress, SQL, Android, iOS Development with Swift, Ruby, Rails, C#, ASP.NET.</p>
+      <p>I have been studying programming part-time since 2016, by completing a range of online courses and projects. Before this I worked for over 20 years as an electronic & electrical Engineer.<p>
     </mat-card-content>
   </mat-card>
-  
+
   <mat-card>
     <mat-card-content>
       <p>
-        <span [ngStyle]="{'color': 'blue', 'font-size': '20px'}">
-          FreecodeCamp 
-        </span>After many months of part-time study I obtained my certificate in june 2018, which included the following:
+        <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
+          General Programming
+        </span>
+        <a 
+          href="https://teamtreehouse.com/"
+          target="_blank"
+          >
+          Teamtreehouse 
+        </a>
+         courses completed. 
       </p>
-      <p class="indent">
+      <p class="para-indent">
         <span [ngStyle]="{'color': 'purple'}">
-            Responsive Web Design: 
+          highlight
+        </span>I learnt about HTML, CSS, Javascript, PHP, Wordpress, SQL, Android, iOS Development with Swift, Ruby, Rails, C#, ASP.NET
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <!--card: Full stack Freecode Camp-->
+  <mat-card>
+    <mat-card-content>
+      <p>
+        <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
+          Full Stack Development
+        </span>
+        <a 
+          href="https://www.freecodecamp.org/certification/andrewjbateman/full-stack"
+          target="_blank"
+          >
+          freeCodeCamp Certification
+        </a> completed, comprising 6 parts:
+      </p>
+      <p class="para-indent">
+        <span [ngStyle]="{'color': 'purple'}">
+          Responsive Web Design:
         </span>HTML and CSS then Applied Visual Design, Accessibility, 4 Responsive Web Design Challenges, CSS Flexbox, CSS Grid
       </p>
-      <p class="indent">
+      <p class="para-indent">
         <span [ngStyle]="{'color': 'purple'}">
-          Responsive Web Design: 
-        </span>HTML and CSS then Applied Visual Design, Accessibility, 4 Responsive Web Design Challenges, CSS Flexbox, CSS Grid
-      </p>
-      <p class="indent">
-        <span [ngStyle]="{'color': 'purple'}">
-          Javascript Algorithms & Data Structures:  
+          Javascript Algorithms & Data Structures:
         </span>ES6, Regular Expressions, Debugging, Basic Data Structures, Algorithms, Object Orientated and Functional Programming, 5 projects
       </p>
-      <p class="indent">
+      <p class="para-indent">
         <span [ngStyle]="{'color': 'purple'}">
-          Front End Libraries:   
+          Front End Libraries:
         </span>Bootstrap, jQuery, SASS, React, Redux, 5 projects
       </p>
-      <p class="indent">
+      <p class="para-indent">
         <span [ngStyle]="{'color': 'purple'}">
-          Data Visualization:  
+          Data Visualization:
         </span>D3, JSON APIs and AJAX and 5 projects
       </p>
-      <p class="indent">
+      <p class="para-indent">
         <span [ngStyle]="{'color': 'purple'}">
-          APIs and Microservices: 
+          APIs and Microservices:
         </span>npm, Node, Express, MongoDB, Mongoose and 5 projects
       </p>
-      <p class="indent">
+      <p class="para-indent">
         <span [ngStyle]="{'color': 'purple'}">
-          Information Security and Quality Assurance:  
+          Information Security and Quality Assurance:
         </span>HelmetJS, Chai, Advanced Node and Express, 5 projects
       </p>
+    </mat-card-content>
+  </mat-card>
 
+  <!--card: MEAN Stack Udemy-->
+  <mat-card>
+    <mat-card-content>
+      <p>
+        <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
+          MEAN Stack
+        </span>
+        <a 
+          href="https://www.udemy.com/course/angular-2-and-nodejs-the-practical-guide/"
+          target="_blank"
+          >
+          Udemy course
+        </a>completed, on the MongoDB/Express/Angular/NodeJS stack...
 
-      </mat-card-content>
-    </mat-card>
+      </p>
+      <p class="para-indent">
+        <span [ngStyle]="{'color': 'purple'}">
+          highlight
+        </span>rest of paragraph
+      </p>
+    </mat-card-content>
+  </mat-card>
 
+  <!--card: Angular Udemy-->
+  <mat-card>
+    <mat-card-content>
+      <p>
+        <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
+          Angular
+        </span>
+        <a 
+          href="https://www.udemy.com/course/the-complete-guide-to-angular-2/"
+          target="_blank"
+          >
+           Udemy course
+        </a>
+        completed, 
+      </p>
+      <p class="para-indent">
+        <span [ngStyle]="{'color': 'purple'}">
+          highlight
+        </span>rest of paragraph.  After learning Angular I decided to stuy mobile app development using Ionic-Angular...
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-content>
+      <p>
+        <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
+          Ionic 4
+        </span>
+        <a 
+          href="https://www.udemy.com/course/ionic-2-the-practical-guide-to-building-ios-android-apps/"
+          target="_blank"
+          >
+          Udemy course
+        </a>
+         completed. 
+      </p>
+      <p class="para-indent">
+        <span [ngStyle]="{'color': 'purple'}">
+          highlight
+        </span>rest of paragraph
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-content>
+      <p>
+        <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
+          Engineer
+        </span>I have Master & Bachelor degrees in Electronic/Electrical Engineering (completed in 1993) and over 20 years experience as an Engineer working on Low Voltage Power, Control, Instrumentation and SCADA systems in the UK, Spain and Norway.
+      </p>
+      <p class="para-indent">
+        <span [ngStyle]="{'color': 'purple'}">
+          Title
+        </span>paragraph
+      </p>
+    </mat-card-content>
+  </mat-card>
 </div>

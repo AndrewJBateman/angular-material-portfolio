@@ -2,22 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { GithubService } from './../services/github.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+	selector: 'app-home',
+	templateUrl: './home.component.html',
+	styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  profile: any;
+	profile: any;
+	repos: number;
 
-  constructor(private githubService: GithubService) { }
+	constructor(private githubService: GithubService) { }
 
-  async ngOnInit() {
-    await this.githubService
-			.getUserProfile()
-			.subscribe(data => {
-				this.profile = data;
-			}
-		);
-  }
+	getRepoData(): void {
+		this.githubService.getUserProfile()
+			.subscribe(resultArray => {
+				this.profile = resultArray;
+				this.repos = this.profile.public_repos;
+				console.log('profile:', this.profile);
+
+			});
+	}
+
+	ngOnInit(): void {
+		this.getRepoData();
+	}
 
 }

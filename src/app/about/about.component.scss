@@ -8,7 +8,8 @@ mat-card-title {
 
 mat-card-subtitle {
   text-align: center;
-  color: blue;
+  color: #455A64;
+  margin-bottom: 5px;
 }
 
 img {
@@ -19,6 +20,6 @@ img {
   box-shadow: 0 0 10px #0D47A1;
 }
 
-.indent {
-  margin-left: 5px;
+.para-indent {
+  margin: 0 0 5px 5px;
 }

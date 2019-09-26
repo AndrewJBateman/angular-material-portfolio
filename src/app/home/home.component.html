@@ -6,7 +6,7 @@
     <p style="text-align: center">I am a programmer with a background in Electrical Engineering. This website explains my technical background and what I have learnt and built in the past few years of studying programming.<p> 
       
     <div>
-      <p>I currently have <span class="repo-text"> XXXX </span> Github Repositories:</p>
+      <p *ngIf="profile">I currently have <span class="repo-text"> {{ repos }} </span> Github Repositories:</p>
     </div>
 
   </div> 
