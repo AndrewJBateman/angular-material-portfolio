@@ -1,25 +1,30 @@
 mat-card {
-  margin: 10px;
+  margin: 5px;
+  padding: 8px;
 }
 
-mat-card-title {
+.main-heading {
   text-align: center;
+  margin: 8px auto 0 auto;
 }
 
-mat-card-subtitle {
+.main-subheading {
   text-align: center;
   color: #455A64;
   margin-bottom: 5px;
 }
 
+.main-para {
+  margin: 13px;
+}
+
 img {
-  width: 160px;
-  height: 160px;
+  width: 90%;
+  height: auto;
   display: block;
-  margin: 10px auto;
-  box-shadow: 0 0 10px #0D47A1;
+  margin: 10px;
 }
 
 .para-indent {
-  margin: 0 0 5px 5px;
+  margin: 0 0 5px 0;
 }

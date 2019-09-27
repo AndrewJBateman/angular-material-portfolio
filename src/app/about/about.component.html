@@ -1,16 +1,19 @@
 <div class="about-container">
-  <mat-card>
-    <img class="img-thumbnail" src="/assets/images/about-profile.jpg" alt="photo of Andrew Bateman">
-    <mat-card-header>
-      <mat-card-title>Andrew Bateman</mat-card-title>
-      <mat-card-subtitle [ngStyle]="{'color': '#0D47A1'}">
-        Programmer | Engineer
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>I have been studying programming part-time since 2016, by completing a range of online courses and projects. Before this I worked for over 20 years as an electronic & electrical Engineer.<p>
-    </mat-card-content>
-  </mat-card>
+  <div class="container"
+    fxLayout
+    fxLayout.xs="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="0">
+    <div class="item item-1" fxFlex="20%">
+      <img class="img-thumbnail" src="/assets/images/about-profile.jpg" alt="photo of Andrew Bateman">
+    </div>
+    <div class="item item-2" fxFlex="80%" fxFlexOrder="2">
+      <h1 class="main-heading">Andrew Bateman</h1>
+      <h3 class="main-subheading" [ngStyle]="{'color': '#0D47A1'}">Programmer | Engineer</h3>
+      <p class="main-para">I have been studying programming part-time since 2016, completing a range of online courses and projects. Before this I worked for 20 years as an Electronic/Electrical Engineer. See below for the courses I have completed and what I know.<p>
+    </div>
+  </div>
 
   <mat-card>
     <mat-card-content>
@@ -18,17 +21,16 @@
         <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
           General Programming
         </span>
-        <a 
-          href="https://teamtreehouse.com/"
-          target="_blank"
-          >
-          Teamtreehouse 
-        </a>
-         courses completed. 
+        
       </p>
       <p class="para-indent">
         <span [ngStyle]="{'color': 'purple'}">
-          highlight
+            <a
+            href="https://teamtreehouse.com/"
+            target="_blank"
+            >
+            Teamtreehouse courses
+          </a>
         </span>I learnt about HTML, CSS, Javascript, PHP, Wordpress, SQL, Android, iOS Development with Swift, Ruby, Rails, C#, ASP.NET
       </p>
     </mat-card-content>
@@ -41,12 +43,14 @@
         <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
           Full Stack Development
         </span>
-        <a 
+      </p>
+      <p>
+          <a
           href="https://www.freecodecamp.org/certification/andrewjbateman/full-stack"
           target="_blank"
           >
-          freeCodeCamp Certification
-        </a> completed, comprising 6 parts:
+          freeCodeCamp Certification:
+        </a>including 6 parts
       </p>
       <p class="para-indent">
         <span [ngStyle]="{'color': 'purple'}">
@@ -88,7 +92,7 @@
         <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
           MEAN Stack
         </span>
-        <a 
+        <a
           href="https://www.udemy.com/course/angular-2-and-nodejs-the-practical-guide/"
           target="_blank"
           >
@@ -109,15 +113,15 @@
     <mat-card-content>
       <p>
         <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
-          Angular
+          Angular 8
         </span>
-        <a 
+        <a
           href="https://www.udemy.com/course/the-complete-guide-to-angular-2/"
           target="_blank"
           >
            Udemy course
         </a>
-        completed, 
+        completed,
       </p>
       <p class="para-indent">
         <span [ngStyle]="{'color': 'purple'}">
@@ -133,13 +137,13 @@
         <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
           Ionic 4
         </span>
-        <a 
+        <a
           href="https://www.udemy.com/course/ionic-2-the-practical-guide-to-building-ios-android-apps/"
           target="_blank"
           >
           Udemy course
         </a>
-         completed. 
+         completed.
       </p>
       <p class="para-indent">
         <span [ngStyle]="{'color': 'purple'}">
