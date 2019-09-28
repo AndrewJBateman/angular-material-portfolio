@@ -11,47 +11,48 @@ import { PostsModule } from './posts/posts.module';
 
 
 const appRoutes: Routes = [
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
-    path: 'projects',
-    component: ProjectsComponent
-  },
-  {
-    path: 'skills',
-    component: SkillsComponent
-  },
-  {
-    path: 'blog',
-    component: PostsModule
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent,
-    data: {
-      bodyClass: 'layout-error',
-      browserTitle: 'Page not found'
-    }
-  },
+	{
+		path: '',
+		redirectTo: '/home',
+		pathMatch: 'full'
+	},
+	{
+		path: 'home',
+		component: HomeComponent
+	},
+	{
+		path: 'about',
+		component: AboutComponent
+	},
+	{
+		path: 'projects',
+		component: ProjectsComponent
+	},
+	{
+		path: 'skills',
+		component: SkillsComponent
+	},
+	{
+		path: 'blog',
+		component: PostsModule
+	},
+	{
+		path: 'contact',
+		component: ContactComponent
+	},
+	{
+		path: '**',
+		redirectTo: '/404',
+		pathMatch: 'full'
+	},
+	{
+		path: '404',
+		component: PageNotFoundComponent
+	}
 ];
 
 @NgModule({
-  imports: [CommonModule, PostsModule, RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule]
+	imports: [CommonModule, PostsModule, RouterModule.forRoot(appRoutes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }
