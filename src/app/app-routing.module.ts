@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
@@ -19,10 +18,6 @@ const appRoutes: Routes = [
 	{
 		path: 'home',
 		component: HomeComponent
-	},
-	{
-		path: 'about',
-		component: AboutComponent
 	},
 	{
 		path: 'projects',

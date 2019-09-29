@@ -9,7 +9,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { NavModule } from './nav/nav.module';
@@ -22,7 +21,6 @@ import { SkillsComponent } from './skills/skills.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     ContactComponent,
     HomeComponent,
     PageNotFoundComponent,

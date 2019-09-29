@@ -17,25 +17,23 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 ## General info
 
-* Responsive - media sizes for PC and phone-sized screens (max width 400px).
+* Responsive - pages resize OK using Angular flex layout and grids of Angular Material mat-cards.
 
 ## Sections info
 
 * **Navbar:** Working top/side navbars with page routing.
 
-* **Home:** Http service added to display my number of repos, linked to github API. Option: Add more detailed github later but will need api key.
+* **Home:** Complete real content. Http service added to display my number of repos, linked to github API. Option: Add more detailed github later but will need api key.
 
-* **Blog:** Firebase auth service added so I can login to edit posts. Blogs will be stored in Firebase DB and displayed on the Blog Posts page.
-
-* **About:** tba. Complete real content
+* **Blog:** Complete real content. Firebase auth service added so I can login to edit posts. Blogs will be stored in Firebase DB and displayed on the Blog Posts page.
 
 * **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Content to be replaced.
 
-* **Skills:**
+* **Skills:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Content to be replaced.
 
-* **Contact:** Material card with links to email, github and linkedin.
+* **Contact:** Material card with links to email, github and linkedin. Replace with a proper contact form.
 
-* **CV Download:** Add 1-page CV.
+* **CV Download:** Complete content for 1-page CV.
 
 ## Screenshots
 
@@ -62,18 +60,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Code Examples
-
-```typescript
-export class Project {
-  title: string;
-  img: { src: string, alt: string };
-  content: string;
-  tools: { prefix: string, icon: string } [];
-  github: string;
-  url: string;
-}
-
-```
 
 ## Features
 

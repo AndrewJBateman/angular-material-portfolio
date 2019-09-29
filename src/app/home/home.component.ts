@@ -8,7 +8,8 @@ import { GithubService } from './../services/github.service';
 })
 export class HomeComponent implements OnInit {
 	profile: any;
-	repos: number;
+  repos: number;
+  panelOpenState = false;
 
 	constructor(private githubService: GithubService) { }
 
