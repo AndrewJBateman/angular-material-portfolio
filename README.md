@@ -23,7 +23,7 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Navbar:** Working top/side navbars with page routing.
 
-* **Home:** Complete real content. Http service added to display my number of repos, linked to github API. Option: Add more detailed github later but will need api key.
+* **Home:** Complete real content. Http service added to display my number of repos, linked to github API. Option: Add more detailed github later but will need api key. Nagular Material Expansion Panels used to display data on areas studied/worked, using data-binding from an array of areas based on a Area model.
 
 * **Blog:** Complete real content. Firebase auth service added so I can login to edit posts. Blogs will be stored in Firebase DB and displayed on the Blog Posts page.
 

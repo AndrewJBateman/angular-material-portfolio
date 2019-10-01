@@ -1,211 +1,53 @@
 <div class="about-container">
-    <div class="container"
-      fxLayout
-      fxLayout.xs="column"
-      fxLayoutAlign="center"
-      fxLayoutGap="10px"
-      fxLayoutGap.xs="0">
-      <div class="item item-1" fxFlex="25%">
-        <img class="img-thumbnail" src="/assets/images/about-profile.jpg" alt="photo of Andrew Bateman">
-        <h1 class="main-heading" [ngStyle]="{'color': '#0D47A1'}">Andrew Bateman</h1>
-        <h3 class="main-subheading">Programmer | Engineer</h3>
-      </div>
-      <div class="item item-2" fxFlex="75%" fxFlexOrder="2">
-        <h2 class="me-heading" [ngStyle]="{'color': '#0D47A1'}">About Me</h2>
-        <p class="main-para">I have been studying programming part-time since 2016, completing a range of online courses and projects. I currently have <span *ngIf="profile" class="repo-text"> {{ repos }} </span> Github Repositories.
+  <div class="container"
+    fxLayout
+    fxLayout.xs="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="0">
+    <div class="item item-1" fxFlex="25%">
+      <img class="img-thumbnail" src="/assets/images/about-profile.jpg" alt="photo of Andrew Bateman">
+      <h1 class="main-heading" [ngStyle]="{'color': '#0D47A1'}">Andrew Bateman</h1>
+      <h3 class="main-subheading">Programmer | Engineer</h3>
 
-        <p class="main-para">Before this I worked for 20 years as an Electronic/Electrical Engineer in the UK, Spainand Norway, but returned to Spain to look after the family (including a child with a
-          <a
-            href="https://en.wikipedia.org/wiki/Landau%E2%80%93Kleffner_syndrome"
-            target="_blank"
-          >rare disease
-          </a>) and study programming.
-        </p>
-        <p class="main-para">More about my areas of expertise in the cards below...
-        </p>
 
-        <h2 class="me-heading" [ngStyle]="{'color': '#0D47A1'}">About This Website</h2>
-        <p class="main-para">The Angular 8 javascript front-end framework was used to build this site. A Google Cloud Firebase backend database stores the blog posts. An authorized user can Create, Read, Update and Delete posts. Github repo data is fetched from the Github API via an Angular HTTPClient request (resting on the browser XMLHttp Request Interface) service using an RxJS Observable.</p>
-      </div>
     </div>
-
-    <!--exp panel: Full stack Freecode Camp-->
-    <mat-expansion-panel (opened)="panelOpenState = true"
-                         (closed)="panelOpenState = false">
-      <mat-expansion-panel-header>
-        <mat-panel-title [ngStyle]="{'color': '#0D47A1', 'font-size': '18px'}">
-          Full Stack Development
-        </mat-panel-title>
-        <mat-panel-description>
-          Click to see more...
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p>
+    <div class="item item-2" fxFlex="75%" fxFlexOrder="2">
+      <h2 class="me-heading" [ngStyle]="{'color': '#0D47A1'}">About Me</h2>
+      <p class="main-para">I have been studying programming part-time for 3 years by completing a range of online courses and projects. I currently have <span *ngIf="profile" class="repo-text"> {{ repos }} </span> Github Repositories.
+      <p class="main-para">Before this I worked for 20 years as an Electronic/Electrical Engineer in the UK, Spain and finally in Norway (including 2 years in the 
           <a
-            href="https://www.freecodecamp.org/certification/andrewjbateman/full-stack"
-            target="_blank"
-            >
-            freeCodeCamp Certification:
-          </a>including 6 parts
+          href="https://en.wikipedia.org/wiki/Hammerfest_(town)"
+          target="_blank"
+        >Northermost town in the world
+        </a>). In 2017 I returned to Spain to look after the family (including a child with a
+        <a
+          href="https://en.wikipedia.org/wiki/Landau%E2%80%93Kleffner_syndrome"
+          target="_blank"
+        >rare disease
+        </a>) & continue coding.
       </p>
-    </mat-expansion-panel>
+      <p class="main-para">More about my areas of expertise below...</p>
 
-    <!--card: Full stack Freecode Camp-->
+    </div><!--end of item 2-->
+  </div><!--end of top container-->
+
+  <hr class="horiz-line">
+  <!--mat-card for each area with data-binding from area.module.ts-->
+  <div *ngFor="let area of areas">
     <mat-card>
       <mat-card-content>
-        <p>
-          <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
-            Full Stack Development
-          </span>
-        </p>
-        <p>
-            <a
-            href="https://www.freecodecamp.org/certification/andrewjbateman/full-stack"
-            target="_blank"
-            >
-            freeCodeCamp Certification:
-          </a>including 6 parts
+        <p [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
+          {{ area.title }}
         </p>
         <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-            Responsive Web Design:
-          </span>HTML and CSS then Applied Visual Design, Accessibility, 4 Responsive Web Design Challenges, CSS Flexbox, CSS Grid
-        </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-            Javascript Algorithms & Data Structures:
-          </span>ES6, Regular Expressions, Debugging, Basic Data Structures, Algorithms, Object Orientated and Functional Programming, 5 projects
-        </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-            Front End Libraries:
-          </span>Bootstrap, jQuery, SASS, React, Redux, 5 projects
-        </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-            Data Visualization:
-          </span>D3, JSON APIs and AJAX and 5 projects
-        </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-            APIs and Microservices:
-          </span>npm, Node, Express, MongoDB, Mongoose and 5 projects
-        </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-            Information Security and Quality Assurance:
-          </span>HelmetJS, Chai, Advanced Node and Express, 5 projects
-        </p>
-      </mat-card-content>
-    </mat-card>
-
-    <!--card: MEAN Stack Udemy-->
-    <mat-card>
-      <mat-card-content>
-        <p>
-          <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
-            MEAN Stack
-          </span>
-          <a
-            href="https://www.udemy.com/course/angular-2-and-nodejs-the-practical-guide/"
-            target="_blank"
-            >
-            Udemy course
-          </a>completed, on the MongoDB/Express/Angular/NodeJS stack...
-
-        </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-            highlight
-          </span>rest of paragraph
-        </p>
-      </mat-card-content>
-    </mat-card>
-
-    <!--card: Angular Udemy-->
-    <mat-card>
-      <mat-card-content>
-        <p>
-          <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
-            Angular 8
-          </span>
-          <a
-            href="https://www.udemy.com/course/the-complete-guide-to-angular-2/"
-            target="_blank"
-            >
-             Udemy course
-          </a>
-          completed,
-        </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-            highlight
-          </span>rest of paragraph.  After learning Angular I decided to stuy mobile app development using Ionic-Angular...
-        </p>
-      </mat-card-content>
-    </mat-card>
-
-    <!--card: Ionic-->
-    <mat-card>
-      <mat-card-content>
-        <p>
-          <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
-            Ionic 4
-          </span>
-          <a
-            href="https://www.udemy.com/course/ionic-2-the-practical-guide-to-building-ios-android-apps/"
-            target="_blank"
-            >
-            Udemy course
-          </a>
-           completed.
-        </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-            highlight
-          </span>rest of paragraph
-        </p>
-      </mat-card-content>
-    </mat-card>
-
-    <!--card: Other-->
-    <mat-card>
-      <mat-card-content>
-        <p>
-          <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
-            General Programming
-          </span>
-
-        </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-              <a
-              href="https://teamtreehouse.com/"
-              target="_blank"
-              >
-              Teamtreehouse courses
-            </a>
-          </span>I learnt about HTML, CSS, Javascript, PHP, Wordpress, SQL, Android, iOS Development with Swift, Ruby, Rails, C#, ASP.NET
-        </p>
-      </mat-card-content>
-    </mat-card>
-
-    <!--card: Engineering-->
-    <mat-card>
-      <mat-card-content>
-        <p>
-          <span [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
-            Engineer
-          </span>I have Master & Bachelor degrees in Electronic/Electrical Engineering (completed in 1993) and over 20 years experience as an Engineer working on Low Voltage Power, Control, Instrumentation and SCADA systems in the UK, Spain and Norway.
-        </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}">
-            Title
-          </span>paragraph
+          <span [ngStyle]="{'color': 'purple'}"></span>{{ area.content }}
         </p>
       </mat-card-content>
     </mat-card>
   </div>
+
+</div>
 
 
 

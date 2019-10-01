@@ -11,7 +11,7 @@ mat-card {
 .main-subheading {
   text-align: center;
   color: #455A64;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 
 .me-heading {
@@ -32,10 +32,11 @@ mat-card {
   border-radius: 50%;
 }
 
-.para-indent {
-  margin: 0 0 5px 0;
-}
-
 .repo-text {
   color: #0D47A1;
+}
+
+.horiz-line {
+  margin: 1em;
+  border: 2px solid rgb(245, 200, 241)
 }
