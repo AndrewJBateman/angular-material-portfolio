@@ -9,6 +9,7 @@
       fxLayout="column"
       style="padding: 5px;"
     >
+      <!--mat-card for each project with data-binding from projects.ts-->
       <mat-card>
         <img class="mat-card-image" [src]="project.img.src" [alt]="project.img.alt">
         <mat-card-title-group>
@@ -19,7 +20,7 @@
           <p>{{ project.content | slice:0:350 }}...</p>
         </mat-card-content>
         <mat-card-actions>
-          <a mat-flat-button [href]="project.github" target="_blank" rel="noreferrer" color="accent">View App</a>
+          <a mat-flat-button [href]="project.github" target="_blank" rel="noreferrer" color="accent">View</a>
           <a mat-flat-button [href]="project.github" target="_blank" rel="noreferrer" color="accent">Github</a>
         </mat-card-actions>
       </mat-card>

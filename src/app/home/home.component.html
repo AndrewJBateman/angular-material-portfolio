@@ -1,4 +1,4 @@
-<div class="about-container">
+<div class="home-container">
   <div class="container"
     fxLayout
     fxLayout.xs="column"
@@ -7,28 +7,21 @@
     fxLayoutGap.xs="0">
     <div class="item item-1" fxFlex="25%">
       <img class="img-thumbnail" src="/assets/images/about-profile.jpg" alt="photo of Andrew Bateman">
-      <h1 class="main-heading" [ngStyle]="{'color': '#0D47A1'}">Andrew Bateman</h1>
+      <h2 class="main-heading" [ngStyle]="{'color': '#0D47A1'}">Andrew Bateman</h2>
       <h3 class="main-subheading">Programmer | Engineer</h3>
-
-
     </div>
     <div class="item item-2" fxFlex="75%" fxFlexOrder="2">
       <h2 class="me-heading" [ngStyle]="{'color': '#0D47A1'}">About Me</h2>
-      <p class="main-para">I have been studying programming part-time for 3 years by completing a range of online courses and projects. I currently have <span *ngIf="profile" class="repo-text"> {{ repos }} </span> Github Repositories.
-      <p class="main-para">Before this I worked for 20 years as an Electronic/Electrical Engineer in the UK, Spain and finally in Norway (including 2 years in the 
-          <a
-          href="https://en.wikipedia.org/wiki/Hammerfest_(town)"
-          target="_blank"
-        >Northermost town in the world
+      <p class="main-para">I have been studying programming part-time for 3 years, completing a range of online courses and projects. I currently have <span *ngIf="profile" class="repo-text"> {{ repos }} </span> Github Repositories with a mixture of own projects, tutorial code and forked repos of interest to me.
+      <p class="main-para">Before studying programming I worked for 20 years as an Electronic/Electrical Engineer in the UK, Spain and finally in Norway (including 2 years in the
+        <a href="https://en.wikipedia.org/wiki/Hammerfest_(town)"
+          target="_blank">Northermost town in the world
         </a>). In 2017 I returned to Spain to look after the family (including a child with a
-        <a
-          href="https://en.wikipedia.org/wiki/Landau%E2%80%93Kleffner_syndrome"
-          target="_blank"
-        >rare disease
-        </a>) & continue coding.
+        <a href="https://en.wikipedia.org/wiki/Landau%E2%80%93Kleffner_syndrome"
+          target="_blank">rare disease
+        </a>) & continue programming.
       </p>
-      <p class="main-para">More about my areas of expertise below...</p>
-
+      <p class="main-para">More about my technical background below. You can also find me on Github & LinkedIn - links in navbar.</p>
     </div><!--end of item 2-->
   </div><!--end of top container-->
 
@@ -40,13 +33,10 @@
         <p [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
           {{ area.title }}
         </p>
-        <p class="para-indent">
-          <span [ngStyle]="{'color': 'purple'}"></span>{{ area.content }}
-        </p>
+        <p>{{ area.content }}</p>
       </mat-card-content>
     </mat-card>
   </div>
-
 </div>
 
 

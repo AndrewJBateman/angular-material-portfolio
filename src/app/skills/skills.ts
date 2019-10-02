@@ -6,7 +6,7 @@ export const SKILLS: Skill[] = [
 		area: 'prog',
 		title: 'Stacks/Front-End',
 // tslint:disable-next-line: max-line-length
-		content: `MEAN, HTML5, CSS3, Typescript, JavaScript, AJAX, Less, SASS/SCSS, SVG, Material UI, Various Browser & REST API padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding`,
+		content: `MEAN, HTML5, CSS3, Typescript, JavaScript, AJAX, Less, SASS/SCSS, SVG, Material UI, REST API padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding`,
 	},
 	{
 		area: 'prog',
@@ -16,7 +16,7 @@ export const SKILLS: Skill[] = [
 	{
 		area: 'prog',
 		title: 'Libraries/Frameworks',
-		content: 'Angular 8, jQuery, Bootstrap 4, ExpressJS, TensorFlow.js padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding'
+		content: 'Angular 6+, jQuery, Bootstrap 4, ExpressJS, D3, TensorFlow.js padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding, padding padding, padding, padding, padding, padding, padding'
 	},
 	{
 		area: 'prog',

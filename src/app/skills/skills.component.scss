@@ -1,14 +1,16 @@
-mat-card-header{
-  padding: 12px 12px 0 12px;
-}
-mat-card-title {
-  text-align: center;
-  margin-bottom: !important 0;
-  color: white;
+h2 {
+  margin: 10px auto 0 auto;
+  position: center;
 }
 .card-eng {
-  background-color: #690726;
+  color: #690726;
+  font-size: 20px;
 }
 .card-prog {
-  background-color: #0D47A1;
+  color: #0D47A1;
+  font-size: 20px;
+}
+.horiz-line {
+  margin: 0 14px;
+  border: 2px solid rgb(245, 200, 241)
 }
