@@ -15,6 +15,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
 export class PostDashboardComponent implements OnInit {
   content: string;
   image: string;
+  imageby: string;
   title: string;
 
   uploadPercent: Observable<number>;
@@ -39,6 +40,7 @@ export class PostDashboardComponent implements OnInit {
       authorId: this.auth.currentUserId,
       content: this.content,
       image: this.image || null,
+      imageby: this.imageby,
       published: new Date(),
       title: this.title
     };
@@ -47,6 +49,7 @@ export class PostDashboardComponent implements OnInit {
     this.content = '';
     this.buttonText = 'Post Created';
     this.image = '';
+    this.imageby = '';
     setTimeout(() => (this.buttonText = 'Create Post'), 3000);
   }
 

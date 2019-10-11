@@ -5,9 +5,12 @@ mat-card-image {
   margin: auto 0 0;
   display: block;
   max-width: 100%;
-  width: 200px;
-  height: 150px;
+  width: 100%;
 }
 mat-icon {
   font-size: 18px;
+}
+
+.content-style {
+  white-space: pre-wrap;
 }

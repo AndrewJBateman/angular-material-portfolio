@@ -10,11 +10,17 @@
       style="padding: 5px;"
     >
       <mat-card class="mat-elevation-z1">
+        <img mat-card-image class="blog-image" src="{{post.image}}" alt="{{post.title}}">
         <mat-card-content routerLink="{{post.id}}">
-          <img mat-card-image src="{{post.image}}" alt="{{post.title}}">
-          <p>{{post.content | slice:0:180}}...
-            <small><mat-icon color="accent">today</mat-icon> {{post.published.toDate() | date:'dd/MM/yyyy'}}</small>
+
+          <p>
+            <small><mat-icon color="accent">photo_camera</mat-icon> {{ post.imageby }}</small>
           </p>
+          <p class="content-style">{{post.content | slice:0:180}}...
+            <small><mat-icon color="accent">today</mat-icon> {{ post.published.toDate() | date:'dd/MM/yyyy' }}</small>
+          </p>
+
+
         </mat-card-content>
       </mat-card>
     </div>

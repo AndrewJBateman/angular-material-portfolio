@@ -6,17 +6,17 @@ import { PostService } from './../../services/post.service';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-post-list',
-  templateUrl: './post-list.component.html',
-  styleUrls: ['./post-list.component.scss']
+	selector: 'app-post-list',
+	templateUrl: './post-list.component.html',
+	styleUrls: ['./post-list.component.scss']
 })
 export class PostListComponent implements OnInit {
-  posts: Observable<Post[]>;
+	posts: Observable<Post[]>;
 
-  constructor(private postService: PostService, public auth: AuthService) { }
+	constructor(private postService: PostService, public auth: AuthService) { }
 
-  ngOnInit() {
-    this.posts = this.postService.getPosts();
-    console.log(this);
-  }
+	ngOnInit() {
+		this.posts = this.postService.getPosts();
+		console.log(this.posts);
+	}
 }

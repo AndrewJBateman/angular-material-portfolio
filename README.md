@@ -23,17 +23,17 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Navbar:** Working top/side navbars with page routing.
 
-* **Home:** Complete real content. Http service added to display my number of repos, linked to github API. Option: Add more detailed github later but will need api key. Nagular Material Expansion Panels used to display data on areas studied/worked, using data-binding from an array of areas based on a Area model.
+* **Home:** 1. Complete real content. Http service added to display my number of repos, linked to github API. Option: Add more detailed github later but will need api key. Angular Material cards used to display data on areas studied/worked, using data-binding from an array of areas based on a Area model.
 
-* **Blog:** Complete real content. Firebase auth service added so I can login to edit posts. Blogs will be stored in Firebase DB and displayed on the Blog Posts page.
+* **Blog:** 2. Complete first 4 of real content: Angular, . Firebase auth service added so I can login to edit posts. Blogs will be stored in Firebase DB and displayed on the Blog Posts page.
 
-* **Projects:** Complete real content. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
+* **Projects:** 3. Complete real content or add coming soon link. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
-* **Skills:** Complete real content. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
+* **Skills:** 4. Complete real content. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
-* **Contact:** Material card with links to email, github and linkedin. Replace with a proper contact form.
+* **Contact:** Working OK. Material card with link to email. Replace with a proper contact form.
 
-* **CV Download:** Complete content for 1-page CV.
+* **CV Download:** 5. Complete content for 1-page CV.
 
 ## Screenshots
 
@@ -78,6 +78,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 * [website by Jaxon Wright](https://jaxonwright.com/)
 
 * [Medium article by Tomas Trajan: The complete guide to Angular Material Themes](https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1)
+
+* [javascript: Photo by Markus Spiske on Unsplash,  database: Photo by Markus Spiske on Unsplash, angular: Photo by Markus Spiske on Unsplash, arrays: Photo by Taylor Vick on Unsplash](https://unsplash.com/)
 
 ## Contact
 

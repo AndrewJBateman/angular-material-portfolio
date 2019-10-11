@@ -3,27 +3,27 @@ import { Area } from './area.module';
 export const AREAS: Area[] = [
 	{
 		title: 'Full Stack Development',
-		content: 'I obtained the Free Code Camp (FCC) Full Stack Development Certificate after starting with html, css & javascript then completing course units & projects in 6 programming areas: Responsive Web Design, Javascript Algorithms & Data Structures, Front-End Libraries (including Bootstrap, jQuery, SaSS, React & Redux), D3 Data Visualisation, APIs/Microservices & Information Security/Quality Assurance. It is estimated to take 1800hours and it took me a year working part-time. It gave me experience in a variety of web development tools. From there I wanted to specialise in one javascript framework. After studying React and Vue I decided to focus on Angular.'
+		content: 'I obtained the Free Code Camp (FCC) Full Stack Development Certificate after starting with html, css & javascript then completing course units & projects in 6 programming areas: Responsive Web Design, Javascript Algorithms & Data Structures, Front-End Libraries (including Bootstrap, jQuery, SaSS, React & Redux), D3 Data Visualisation, APIs/Microservices & Information Security/Quality Assurance. It is estimated to take 1800hours and it took me a year (2017) working part-time. It gave me experience in a variety of web development tools. From there I wanted to specialise in one javascript framework. After studying React and Vue I decided to focus on Angular.'
 	},
 	{
 		title: 'Angular',
-		content: 'A big consideration when choosing what language/framework/stack/etc. to spend time mastering is simply the number of jobs in Linkedin. I found Angular skills to be very much in demand and its use by larger companies was a big attraction. I have therefore gained a lot of experience of Angular, including components, 1 and 2-way data-binding, pipes, directives, services, forms, Http requests, routing, authentication, modules, NgRx, observables, dependancy injection, service workers etc, as well as fixing breaking changes caused by 6-monthly Angular version updates. After a lot more tutorials (including a 37-hour Udemy course) and projects in Angular 6/7/8 - 40% of my repositories include Angular - I decided to deepen my knowledge of the MEAN Stack.'
+		content: 'A big consideration when choosing what language/framework/stack/etc. to spend time mastering is simply the number of jobs in Linkedin. I found Angular skills to be very much in demand and its support by Google and use by larger companies was a big attraction. I have therefore gained a lot of experience of Angular, including components, 1 and 2-way data-binding, pipes, directives, services, forms, Http requests, routing, authentication, modules, NgRx, observables, dependancy injection, service workers etc, as well as fixing breaking changes caused by 6-monthly Angular version updates. I am currently working withAngular 8. After a lot more tutorials (including a 37-hour Udemy course) and projects in Angular 6/7/8 - 40% of my repositories include Angular - I decided to deepen my knowledge of the MEAN Stack.'
 	},
 	{
 		title: 'MEAN Stack',
-		content: 'After exploring the MERN and MEVN stacks I decided to focus on MEAN. I had already used MongoDB with Mongoose and the Heroku mLab database service, Express middleware and Node.js for the backend part of the FCC Full-Stack Certificate. I also had knowledge of Angular as a front-end and communicating with the backend using the Angular HttpClient service. I completed a 12.5-hour MEAN-Stack Udemy course as well as other Youtube tutorials, learning the details of making full CRUD operations at the front-end to Create-Read-Update and Delete data in a backend database. User autorization and error-handling was also covered. I also completed a 36.5-hour Udemy course on Node.js, REST APIs, GraphQL APIs.'
+		content: 'After exploring the MERN and MEVN stacks I decided to focus on MEAN. I had already used MongoDB with Mongoose and the Heroku mLab database service, Express middleware and Node.js for the backend part of the FCC Full-Stack Certificate. I also had knowledge of Angular as a front-end and communicating with the backend using the Angular HttpClient service. I completed a 12.5-hour MEAN-Stack Udemy course as well as other Youtube tutorials, learning the details of making full CRUD operations at the front-end to Create-Read-Update and Delete data in a backend database. User authorization and error-handling was also covered. I also completed a 36.5-hour Udemy course on Node.js, REST APIs, GraphQL APIs.'
 	},
 	{
 		title: 'Databases',
-		content: 'I have experience of Structured Query Language (SQL) databases, My experience of noSQL is mainly MongoDB, using Mongoose schemas and models. I have used the AWS MongoDB Atlas Cloud Service and the MongoDB Compass GUI for some projects. I have also used Cordova SQLite with Ionic apps. My database knowledge has come from Teamtreehouse, Youtube videos and the FCC and Udemy courses already mentioned.'
+		content: 'I have experience of Structured Query Language (SQL) relational databases, My experience of noSQL is mainly MongoDB, using Mongoose schemas and models. I have used the AWS MongoDB Atlas Cloud Service and the MongoDB Compass GUI for some projects. I have also used Cordova SQLite with Ionic apps. My database knowledge has come from Teamtreehouse, Youtube videos and the FCC and Udemy courses already mentioned.'
 	},
 	{
 		title: 'Ionic',
-		content: 'I wanted to build mobile apps and found the Ionic Framework ideal as it is integrated with Angular and builds native and prgressive web apps from the same code-base. I completed a 34-hour Ionic Udemy course, many Youtube tutoriala and have worked on a number of apps using Ionic 4+ - 15% of my repositories include Angular. I also have experience using Capacitor to create native-like user interface. see Projects page.'
+		content: 'I wanted to build mobile apps and found the Ionic Framework ideal as it is integrated with Angular and builds native and prgressive web apps from the same code-base. I completed a 34-hour Ionic Udemy course, many Youtube tutorials and have worked on a number of apps using Ionic 4 & 5 - 15% of my repositories include Angular. I also have experience using Capacitor to create native-like user interfaces. See Projects page.'
 	},
 		{
 		title: 'Programming Languages',
-		content: 'Most of my programming experience so far has been in Javascript ES6 (ECMAScipt6/2015), on the client and server side. I started my programming journey with a range of courses with TeamTreehouse, including completing Full Stack Javascript, PHP, C#, Rails Development, Java Web Development, Android (up to advanced level) Tracks, Swift, Ruby, Wordpress, Rails, ASP.NET. Since Treehouse I focused on Javascript as it was the most popular language was used on the front and backend.'
+		content: 'Most of my programming experience so far has been in Javascript ES6 (ECMAScript6 / 2015), on the client and server sides. I started my programming journey with a range of courses with TeamTreehouse, including completing Full Stack Javascript, PHP, C#, Rails Development, Java Web Development, Android (up to advanced level) Tracks, Swift, Ruby, Wordpress, Rails, ASP.NET. Since Treehouse I focused on Javascript as it was the most popular language and was used on the front and backend. Due to its use in Angular I have also spent a lot of time using Typescript.'
 	},
 	{
 		title: 'Machine-Learning and TensorFlow',
@@ -31,7 +31,7 @@ export const AREAS: Area[] = [
 	},
 	{
 		title: 'Engineer',
-		content: 'I have Master & Bachelor degrees in Electronic/Electrical Engineering (completed in 1993) and over 20 years experience as an Engineer working on Low Voltage Power, Control, Instrumentation and SCADA systems.'
+		content: 'I have Master & Bachelor degrees in Electronic/Electrical Engineering (completed in 1993) and over 20 years experience as an Engineer working on Power, Process Control, Instrumentation and PLC/SCADA systems. I am familiar with computer hardware, data communications, industrial ethernet, profibus, RS485/RS422/RS232C networks, technical software, PLC digital/analogue I/O & ladder logic etc. I also had experience of concepts relevent to programming, such as boolean logic, arrays and memory caching etc so getting heavily into programming was less difficult for me.'
 	},
 	{
 		title: 'About This Website',
@@ -41,8 +41,6 @@ export const AREAS: Area[] = [
 
     I wanted to minimise time spent on styling and layout as I am an Engineer by trade and for me technical content is king. However a simple clear presentation is important as well as having a fully responsiveness layout. Hence I have made a lot of use of Angular Material cards to present information, together with the Angular Flex Layout API. Icons are limited to what is available in the Angular Material Icon Library - e.g. there are no icons for linkedin or github and I have avoided adding bloat by importing the Bootstrap library.
 
-    Where possible I have kept DRY and avoided repetition, so data for the home, skills and projects pages was created in separate typescript files (based on a model class) with data-binding to a *ngFor mat-card loop in the template so html files are kept short.
-
-    Navigation is via top and side navbars. I added icons to the side nav bar just because I liked them but I know they are not necessary. I have seen mobile apps with them and without them.`
+    Where possible I have kept DRY and avoided repetition, so data for the home, skills and projects pages was created in separate typescript files (based on a model class) with data-binding to a *ngFor mat-card loop in the template so html files are kept short. Navigation is via top and side navbars. I added icons to the side nav bar just because I liked them but I know they are not necessary.`
 	}
 ];
