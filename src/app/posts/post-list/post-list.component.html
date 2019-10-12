@@ -9,18 +9,11 @@
       fxLayout="column"
       style="padding: 5px;"
     >
-      <mat-card class="mat-elevation-z1">
-        <img mat-card-image class="blog-image" src="{{post.image}}" alt="{{post.title}}">
-        <mat-card-content routerLink="{{post.id}}">
-
-          <p>
-            <small><mat-icon color="accent">photo_camera</mat-icon> {{ post.imageby }}</small>
-          </p>
-          <p class="content-style">{{post.content | slice:0:180}}...
-            <small><mat-icon color="accent">today</mat-icon> {{ post.published.toDate() | date:'dd/MM/yyyy' }}</small>
-          </p>
-
-
+      <mat-card class="mat-elevation-z1" routerLink="{{ post.id }}">
+        <img mat-card-image class="img" src="{{ post.image }}" alt="{{ post.title }}">
+        <mat-card-content>
+          <p class="strong-style">{{ post.title }}: </p>
+          <p class="content-style">{{ post.content | slice:0:120 }}...</p>
         </mat-card-content>
       </mat-card>
     </div>

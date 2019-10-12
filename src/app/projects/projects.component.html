@@ -12,12 +12,13 @@
       <!--mat-card for each project with data-binding from projects.ts-->
       <mat-card>
         <img class="mat-card-image" [src]="project.img.src" [alt]="project.img.alt">
-        <mat-card-title-group>
+        <!-- <mat-card-title-group>
           <mat-card-title class="card-container-left">{{ project.title }}</mat-card-title>
           <span class="fill"></span>
-        </mat-card-title-group>
+        </mat-card-title-group> -->
         <mat-card-content>
-          <p>{{ project.content | slice:0:350 }}...</p>
+          <p class="strong-style">{{ project.title }}: </p>
+          <p class="content-style">{{ project.content | slice:0:300 }}...</p>
         </mat-card-content>
         <mat-card-actions>
           <a mat-flat-button [href]="project.github" target="_blank" rel="noreferrer" color="accent">View</a>

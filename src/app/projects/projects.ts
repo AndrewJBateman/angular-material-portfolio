@@ -7,10 +7,7 @@ export const PROJECTS: Project[] = [
 			src: '../assets/images/techNews.jpg',
 			alt: 'country data'
 		},
-		content: `Ionic-Angular app that displays world news using
-      JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-      JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-      JSON data fetched from an external API. Includes a user search field`,
+    content: `Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field`,
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: 'https://www.getronics.com/what-we-do/industries/healthcare/'
 	},
@@ -20,10 +17,7 @@ export const PROJECTS: Project[] = [
 			src: '../assets/images/countryData.jpg',
 			alt: 'country data'
 		},
-		content: `Ionic-Angular app that displays information about world countries using
-      JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-      JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-      JSON data fetched from an external API. Includes a user search field`,
+    content: `Ionic-Angular app that displays information about world countries using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field`,
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: 'https://www.getronics.com/what-we-do/industries/healthcare/'
 	},
@@ -33,10 +27,7 @@ export const PROJECTS: Project[] = [
 			src: '../assets/images/elecInfo.jpg',
 			alt: 'country data'
 		},
-		content: `Ionic app that displays electrical information using
-      JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-      JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-      JSON data fetched from an external API. Includes a user search field`,
+    content: `Ionic app that displays electrical information using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using. JSON data fetched from an external API. Includes a user search field. Includes a user search field Ionic-Angular app that displays world news using.`,
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: 'https://www.getronics.com/what-we-do/industries/healthcare/'
 	},
@@ -46,10 +37,7 @@ export const PROJECTS: Project[] = [
 			src: '../assets/images/cryptoInfo.jpg',
 			alt: 'cryptocurrency prices'
 		},
-		content: `Ionic app that displays information about cryptocurrency prices using
-      JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-      JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-      JSON data fetched from an external API. Includes a user search field`,
+    content: `Ionic app that displays information about cryptocurrency prices using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API`,
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: 'https://www.getronics.com/what-we-do/industries/healthcare/'
 	},
@@ -59,10 +47,7 @@ export const PROJECTS: Project[] = [
 			src: '../assets/images/tensorflow.jpg',
 			alt: 'tensorflow data'
 		},
-		content: `Ionic app that displays tensorflow info. Ionic-Angular app that displays world news using
-    JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-    JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-    JSON data fetched from an external API. Includes a user search field`,
+    content: `Ionic app that displays tensorflow info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API`,
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: 'https://www.getronics.com/what-we-do/industries/healthcare/'
 	},
@@ -72,9 +57,7 @@ export const PROJECTS: Project[] = [
 			src: '../assets/images/worldBank.jpg',
 			alt: 'world bank data'
 		},
-		content: `Ionic app that displays worldbankinfo. Ionic-Angular app that displays world news using
-    JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-    JSON data fetched from an external API. Includes a user search field`,
+    content: `Ionic app that displays worldbankinfo. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field`,
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: 'https://www.getronics.com/what-we-do/industries/healthcare/'
 	},
@@ -84,9 +67,7 @@ export const PROJECTS: Project[] = [
 			src: '../assets/images/nasaData.jpg',
 			alt: 'nasa data'
 		},
-		content: `Ionic app that displays NASA info. Ionic-Angular app that displays world news using
-    JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-    JSON data fetched from an external API. Includes a user search field`,
+    content: `Ionic app that displays NASA info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field Includes a user search field`,
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: 'https://www.getronics.com/what-we-do/industries/healthcare/'
 	},
@@ -96,9 +77,7 @@ export const PROJECTS: Project[] = [
 			src: '../assets/images/techNews.jpg',
 			alt: 'youtube data'
 		},
-		content: `Ionic app that stores Youtube videos in a very  Ionic-Angular app that displays world news using
-    JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using
-    JSON data fetched from an external API. Includes a user search field colourful format for people with special-needs`,
+    content: `Ionic app that stores Youtube videos in a very Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field colourful format for people with special-needs Includes a user search field Includes a user search field Includes a user search field`,
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: 'https://www.getronics.com/what-we-do/industries/healthcare/'
 	}

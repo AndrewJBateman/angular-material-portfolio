@@ -1,14 +1,23 @@
 h2 {
   margin: 0;
 }
+
 mat-card-image {
   margin: auto 0 0;
   display: block;
   max-width: 100%;
-  width: 100%;
 }
+
 mat-icon {
   font-size: 18px;
+}
+
+.strong-style {
+  color: #0D47A1;
+  margin: 0 0 4px;
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-color: rgb(245, 200, 241);
 }
 
 .content-style {

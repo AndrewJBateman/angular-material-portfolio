@@ -5,7 +5,10 @@ mat-card {
 
 .main-heading {
   text-align: center;
+  color: #0D47A1;
   margin: 8px auto 0 auto;
+  text-decoration: underline;
+  text-decoration-color: rgb(245, 200, 241);
 }
 
 .main-subheading {
@@ -16,7 +19,10 @@ mat-card {
 
 .me-heading {
   text-align: left;
+  color: #0D47A1;
   margin: 16px 12px 10px;
+  text-decoration: underline;
+  text-decoration-color: rgb(245, 200, 241);
 }
 
 .main-para {
@@ -39,4 +45,15 @@ mat-card {
 .horiz-line {
   margin: 1em;
   border: 2px solid rgb(245, 200, 241)
+}
+
+.title-style {
+  color: #0D47A1;
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-color: rgb(245, 200, 241);
+}
+
+.content-style {
+  white-space: pre-wrap;
 }

@@ -7,18 +7,18 @@
     fxLayoutGap.xs="0">
     <div class="item item-1" fxFlex="20%">
       <img class="img-thumbnail" src="/assets/images/about-profile.jpg" alt="photo of Andrew Bateman">
-      <h2 class="main-heading" [ngStyle]="{'color': '#0D47A1'}">Andrew Bateman</h2>
+      <h2 class="main-heading">Andrew Bateman</h2>
       <h3 class="main-subheading">Programmer | Engineer</h3>
     </div>
     <div class="item item-2" fxFlex="70%" fxFlexOrder="2">
-      <h2 class="me-heading" [ngStyle]="{'color': '#0D47A1'}">About Me</h2>
+      <h2 class="me-heading">About Me</h2>
       <p class="main-para">I have been studying programming part-time for 3 years, completing a range of online courses (FreeCodeCamp, Treehouse, Udemy and Youtube video tutorials, as well as reading blogs and other programming articles) and projects. I currently have <span *ngIf="profile" class="repo-text"> {{ repos }} </span> Github Repositories with a mixture of my own projects, tutorial code and forked projects of interest.
       <p class="main-para">Programming was not completely new to me as I previously worked for 20 years as an Electronic/Electrical Engineer in the UK, Spain and finally in Norway (including 2 years in the
         <a href="https://en.wikipedia.org/wiki/Hammerfest_(town)"
           target="_blank">Northermost town in the world
         </a>). In 2017 I returned to Spain to look after the family (including a child with a rare disease called
         <a href="https://en.wikipedia.org/wiki/Landau%E2%80%93Kleffner_syndrome"
-          target="_blank">Landau Kleffner 
+          target="_blank">Landau Kleffner
         </a>) & continue programming.
       </p>
       <p class="main-para">There is more about my programming and engineering in the cards below. The aim is to give a background to the choices I made and how it all fits together, without repeating what is on my linkedin profile or CV. The last card explains the technical details behind this website.</p>
@@ -30,10 +30,11 @@
   <div *ngFor="let area of areas">
     <mat-card>
       <mat-card-content>
-        <p [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}">
+        <!-- <p class="title-style" [ngStyle]="{'color': '#0D47A1', 'font-size': '20px'}"> -->
+            <p class="title-style">
           {{ area.title }}
         </p>
-        <p>{{ area.content }}</p>
+        <p class="content-style">{{ area.content }}</p>
       </mat-card-content>
     </mat-card>
   </div>
