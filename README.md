@@ -31,7 +31,7 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Skills:** 4. Complete real content. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
-* **Contact:** Working OK. Material card with link to email. Replace with a proper contact form.
+* **Contact:** Contact form 95% complete. Email service needs to be completed to email actually sends. Free Formspree requires captcha so does not work.
 
 * **CV Download:** 5. Complete content for 1-page CV.
 

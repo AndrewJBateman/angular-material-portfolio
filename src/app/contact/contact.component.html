@@ -1,13 +1,47 @@
-<div class="main-div">
+  <div class="container"
+    fxLayout
+    fxLayout.xs="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="0">
+    <div class="item-1" fxFlex="40%">
+      <img class="img-thumbnail" src="/assets/images/email.jpg" alt="photo of an email">
+      <h2 class="contact-heading">Contact Form</h2>
+    </div>
+    <div class="item-2" fxFlex="60%" fxFlexOrder="2">
+      <form [formGroup]="contactForm" [hidden]="success" (ngSubmit)="submitHandler()">
+        <mat-card class="card-container">
+          <mat-form-field>
+            <input matInput placeholder="Enter your name" formControlName="name" autocomplete="off">
 
-  <mat-card class="contact-card">
-    <mat-card-header>
-      <mat-card-title>Send me an email: </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <hr class="horiz-line">
-      <h3>gomezbateman@yahoo.com</h3>
-    </mat-card-content>
-  </mat-card>
+            <mat-error *ngIf="name.invalid && name.touched" class="alert alert-danger">
+              That name is incorrect
+            </mat-error>
+          </mat-form-field>
 
-</div>
+          <mat-form-field>
+            <input matInput placeholder="Enter your email" formControlName="email" autocomplete="off">
+
+            <mat-error *ngIf="email.invalid && email.touched" class="alert alert-danger">
+              Your email does not look right
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <textarea matInput placeholder="Enter your message..." formControlName="message" autocomplete="off"></textarea>
+
+            <mat-error *ngIf="message.invalid && message.touched" class="alert alert-danger">
+              Your message does not look right
+            </mat-error>
+          </mat-form-field>
+          <button
+            mat-raised-button
+            type="submit"
+            [disabled]="contactForm.invalid || loading"
+            color="primary"
+            >{{btnLabel}}
+          </button>
+        </mat-card>
+      </form>
+    </div>
+  </div>

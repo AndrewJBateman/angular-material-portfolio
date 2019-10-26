@@ -1,18 +1,51 @@
-@import "../../styles.scss";
+@import '../../styles.scss';
 
-.main-div{
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+mat-form-field {
+  display: block;
+}
+
+mat-card {
+  margin: 16px;
+  padding: 8px;
+}
+
+textarea {
+  min-height: 130px;
+}
+
+.contact-heading {
+  text-align: center;
+  color: #0D47A1;
+  margin: 0px auto 0 auto;
+  text-decoration: underline;
+  text-decoration-color: rgb(245, 200, 241);
+}
+
+.photo-credit {
+  text-align: center;
+  color: #0D47A1;
+  margin: 8px auto 0 auto;
+}
+
+.img-thumbnail {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 16px auto;
+  position: center;
+  border-radius: 50%;
 }
 
 .horiz-line {
-  width: 95%;
-  margin-bottom: 1em;
+  margin: 1em;
   border: 2px solid rgb(245, 200, 241)
 }
 
-.contact-card {
-  justify-content: center;
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container > * {
+  width: 100%;
 }
