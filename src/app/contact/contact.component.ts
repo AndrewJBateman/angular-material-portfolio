@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators, NgForm } from '@angular/forms';
-import { ContactModel } from './contact.model';
-
-import { EmailService } from '../services/email.service';
+import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
 	selector: 'app-contact',
@@ -10,15 +9,17 @@ import { EmailService } from '../services/email.service';
 	styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+
 	contactForm: FormGroup;
 
 	// Form state
 	loading = false;
 	success = false;
+	imagePath = '/assets/images/laptop-desk.jpg';
 
 	btnLabel = 'Send Message';
 
-	constructor(private fb: FormBuilder, private emailService: EmailService) { }
+	constructor(private fb: FormBuilder, private afs: AngularFirestore, private router: Router) { }
 
 	ngOnInit() {
 		this.contactForm = this.fb.group({
@@ -29,8 +30,8 @@ export class ContactComponent implements OnInit {
 			]],
 			message: ['', [
 				Validators.required,
-				Validators.minLength(10),
-				Validators.maxLength(300)
+				Validators.minLength(4),
+				Validators.maxLength(400)
 			]]
 		});
 
@@ -49,25 +50,23 @@ export class ContactComponent implements OnInit {
 		return this.contactForm.get('message');
 	}
 
-	submitHandler() {
-		console.log(this.contactForm.value);
+	async submitHandler() {
 		this.loading = true;
 		this.btnLabel = 'Sending...';
-		this.emailService.sendEmail(this.contactForm.value)
-			.then(res => this.handleResponse(res))
-			.catch(err => this.handleError(err));
+
+		const formValue = this.contactForm.value;
+
+		try {
+			await this.afs.collection('contacts').add(formValue);
+			this.success = true;
+		} catch (err) {
+			console.log(err);
+		}
+		this.imagePath = '/assets/images/thanks.jpg';
+		this.loading = false;
 	}
 
-	private handleResponse(res): void {
-		this.contactForm.setValue({
-			name: '',
-			email: '',
-			comment: ''
-		});
+	goHome() {
+		this.router.navigate(['/']);
 	}
-
-	private handleError(err: any): void {
-		console.log('error: ', err);
-	}
-
 }

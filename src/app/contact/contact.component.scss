@@ -9,6 +9,10 @@ mat-card {
   padding: 8px;
 }
 
+p {
+  color: #455A64;
+}
+
 textarea {
   min-height: 130px;
 }
@@ -21,6 +25,11 @@ textarea {
   text-decoration-color: rgb(245, 200, 241);
 }
 
+.contact-button {
+  text-align: center;
+  margin: auto;
+}
+
 .photo-credit {
   text-align: center;
   color: #0D47A1;
@@ -29,7 +38,7 @@ textarea {
 
 .img-thumbnail {
   display: block;
-  width: 80%;
+  width: 60%;
   height: auto;
   margin: 16px auto;
   position: center;
@@ -48,4 +57,22 @@ textarea {
 
 .card-container > * {
   width: 100%;
+}
+
+.thanks-card {
+  position: center;
+  margin: 16px auto;
+}
+
+.success-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-home-button {
+  position: center;
+  text-align: center;
+  padding: 16px 16px 4px 16px;
 }
