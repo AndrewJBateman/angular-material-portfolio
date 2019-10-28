@@ -23,7 +23,7 @@ It is estimated to take 1800hours and it took me a year (2017) working part-time
 		title: 'Ionic',
 		content: 'I wanted to build mobile apps and found the Ionic Framework ideal as it is integrated with Angular and builds native and prgressive web apps from the same code-base. I completed a 34-hour Ionic Udemy course, many Youtube tutorials and have worked on a number of apps using Ionic 4 & 5 - 15% of my repositories include Angular. I also have experience using Capacitor to create native-like user interfaces. See Projects page.'
 	},
-		{
+	{
 		title: 'Programming Languages',
 		content: 'Most of my programming experience so far has been in Javascript ES6 (ECMAScript6 / 2015), on the client and server sides. I started my programming journey with a range of courses with TeamTreehouse, including completing Full Stack Javascript, PHP, C#, Rails Development, Java Web Development, Android (up to advanced level) Tracks, Swift, Ruby, Wordpress, Rails, ASP.NET. Since Treehouse I focused on Javascript as it was the most popular language and was used on the front and backend. Due to its use in Angular I have also spent a lot of time using Typescript.'
 	},
@@ -33,16 +33,20 @@ It is estimated to take 1800hours and it took me a year (2017) working part-time
 	},
 	{
 		title: 'Engineer',
-		content: 'I have Master & Bachelor degrees in Electronic/Electrical Engineering (completed in 1993) and over 20 years experience as an Engineer working on Power, Process Control, Instrumentation and PLC/SCADA systems. I am familiar with computer hardware, data communications, industrial ethernet, profibus, RS485/RS422/RS232C networks, technical software, PLC digital/analogue I/O & ladder logic etc. I also had experience of concepts relevent to programming, such as boolean logic, arrays and memory caching etc so getting heavily into programming was less difficult for me.'
+		content: 'I have Master & Bachelor degrees in Electronic/Electrical Engineering (completed in 1993) and over 20 years experience as an Engineer working on Power, Process Control, Instrumentation and PLC/SCADA systems. I am familiar with computer hardware, synchronous/asynchronous data communications, industrial ethernet, profibus, RS485/RS422/RS232C networks, technical software, PLC digital/analogue I/O & ladder logic etc. I also had experience of concepts relevent to programming, such as boolean logic, arrays and memory caching etc so getting heavily into programming was less difficult for me.'
 	},
 	{
 		title: 'About This Website',
-		content: `The Angular 8 javascript framework was used to build this site. A Google Cloud Firebase backend database stores the blog posts. There is a login link in the navbars and an authorized user can Create, Read, Update and Delete (CRUD) posts. Firebase Authorization is used to login.
+		content: `The Angular 8 javascript framework was used to build this site. A Google Cloud Firebase backend database stores the blog posts and any data from submitted Contact forms. There is a login link in the navbars and an authorized user can Create, Read, Update and Delete (CRUD) posts. Firebase Authorization is used to login.
 
 Github repository data is fetched from the Github API via an Angular HTTPClient get request (resting on the browser XMLHttp Request Interface) service using an RxJS Observable.
 
 I wanted to minimise time spent on styling and layout as I am an Engineer by trade and for me technical content is king. However a simple clear presentation is important as well as having a fully responsiveness layout. Hence I have made a lot of use of Angular Material cards to present information, together with the Angular Flex Layout API. Icons are limited to what is available in the Angular Material Icon Library - e.g. there are no icons for linkedin or github and I have avoided adding bloat by importing the Bootstrap library.
 
-Where possible I have kept DRY and avoided repetition, so data for the home, skills and projects pages was created in separate typescript files (based on a model class) with data-binding to a *ngFor mat-card loop in the template so html files are kept short. Navigation is via top and side navbars. I added icons to the side nav bar just because I liked them but I know they are not necessary.`
+The Contact page uses an Angular Material Card inside a Form that is added to the app Firestore database collection when submitted.
+
+I have followed Don\'t Repeat Yourself (DRY) rules, so data for the home, skills and projects pages was created in separate typescript files (based on a model class) with data-binding to a *ngFor mat-card loop in the template so html template files are kept short.
+
+Navigation is via top and side navbars. I added icons to the side nav bar just because I liked them but I know they are not necessary.`
 	}
 ];

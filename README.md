@@ -21,11 +21,11 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 ## Sections info
 
-* **Navbar:** Working top/side navbars with page routing.
+* **Navbar:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles.
 
-* **Home:** 1. Complete real content. Http service added to display my number of repos, linked to github API. Option: Add more detailed github later but will need api key. Angular Material cards used to display data on areas studied/worked, using data-binding from an array of areas based on an Area model.
+* **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Option: Add more detailed github later but will need api key. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of areas based on an Area model.
 
-* **Blog:** 2. Complete first 8 of real content: Firebase auth service added so I can login to edit posts. Blogs will be stored in Firebase DB and displayed on the Blog Posts page.
+* **Blog:** 2. Complete first 8 of real content: Firebase auth service added so I can login to edit posts. Posts are stored in the app Firebase DB and displayed on the Blog Posts page.
 
 * **Projects:** 3. Complete real content or add coming soon link. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
@@ -33,11 +33,7 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Contact:** Simple mat-form that user can fill in with name, email and comment. Some input validation is included, linked to the send button so an incomplete/incorrect form cannot be sent. The data is sent to the app Firestore backend and a success message is returned once sending is complete.
 
-* **CV Download:** 5. Complete content for 1-page CV.
-
-## Screenshots
-
-![Example screenshot](./img/.png)
+* **Future Updates** Dark mode toggle, CV Download, blog list mode toggle (removes photos from list page), blog post notification - tells readers there is a new post.
 
 ## Technologies
 
@@ -47,7 +43,7 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * [Angular Material v8.2.0](https://material.angular.io/)
 
-* [Firebase Cloud storage and Authentication](https://firebase.google.com)
+* [Firebase v6.6.1](https://firebase.google.com) Cloud storage and authentication.
 
 ## Setup
 
@@ -80,6 +76,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 * [Medium article by Tomas Trajan: The complete guide to Angular Material Themes](https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1)
 
 * [javascript: Photo by Markus Spiske on Unsplash,  database: Photo by Markus Spiske on Unsplash, angular: Photo by Markus Spiske on Unsplash, arrays: Photo by Taylor Vick on Unsplash, mobile frameworks: Photo by Christian Widell on Unsplash, frameworks: Photo by Caspar Camille Rubin on Unsplash, newsapp: Photo by Breakslow on Unsplash, microservices: Photo by QuickOrder on Unsplash](https://unsplash.com/)
+
+## Screenshots
+
+![Example screenshot](./img/home-pc.png)
+![Example screenshot](./img/home-mobile.png)
+![Example screenshot](./img/contact-pc.png)
+![Example screenshot](./img/contact-pc-sent.png)
+![Example screenshot](./img/contact-mobile.png)
+![Example screenshot](./img/contact-mobile-sent.png)
 
 ## Contact
 

@@ -12,7 +12,7 @@
       <mat-card class="mat-elevation-z1" routerLink="{{ post.id }}">
         <img mat-card-image class="img" src="{{ post.image }}" alt="{{ post.title }}">
         <mat-card-content>
-          <p class="strong-style">{{ post.title }}: </p>
+          <p class="strong-style">{{ post.title }}</p>
           <p class="content-style">{{ post.content | slice:0:120 }}...</p>
         </mat-card-content>
       </mat-card>

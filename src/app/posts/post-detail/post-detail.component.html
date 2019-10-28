@@ -18,20 +18,25 @@
 
   <div [hidden]="editing">
     <mat-card class="mat-elevation-z1">
+        <img mat-card-image src="{{ post.image }}" alt="{{ post.title }}">
       <mat-card-header>
         <mat-card-title>
-          {{ post.title }},
+          {{ post.title }}
           <span class="small-text">
             <mat-icon color="accent">today</mat-icon> {{ post.published.toDate() | date:'dd/MM/yyyy' }}
           </span>
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <img mat-card-image src="{{ post.image }}" alt="{{ post.title }}">
-        <p>
+        
+        <p class="photo-credit">
           <small><mat-icon color="accent">photo_camera</mat-icon> {{ post.imageby }}</small>
         </p>
-        <p>{{post.content}}</p>
+
+          <p class="post-content">
+            {{ post.content }}
+          </p>
+
       </mat-card-content>
       <mat-card-actions align="end">
         <button mat-icon-button (click)="editing=true">

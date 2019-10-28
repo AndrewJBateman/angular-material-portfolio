@@ -1,7 +1,7 @@
 @import "../../../theme.scss";
 
 mat-card {
-  margin: 10px auto;
+  margin: 0 auto;
   max-width: 700px;
 }
 mat-card-img {
@@ -17,8 +17,19 @@ mat-card-actions {
 .small-text {
   color: #0d47a1;
   font-size: 14px;
+  padding: 0 16px;
 }
 mat-card-header {
-  margin: 0 0 20px 0;
+  margin: 0;
   text-align: center;
+}
+
+.post-content {
+  white-space: pre-wrap;
+  // padding: 0 16px;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.photo-credit {
+  padding: 0;
 }
