@@ -13,7 +13,10 @@ import { AuthService } from 'src/app/services/auth.service';
 export class PostListComponent implements OnInit {
 	posts: Observable<Post[]>;
 
-	constructor(private postService: PostService, public auth: AuthService) { }
+	constructor(
+    private postService: PostService,
+    // public auth: AuthService
+  ) { }
 
 	ngOnInit() {
 		this.posts = this.postService.getPosts();

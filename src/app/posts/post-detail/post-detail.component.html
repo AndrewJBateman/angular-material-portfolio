@@ -8,14 +8,14 @@
       </mat-form-field>
       <br>
       <mat-form-field>
-        <textarea matInput placeholder="Post content" [(ngModel)]="post.content" name="content" rows="10"></textarea>
+        <textarea matInput placeholder="Post content" [(ngModel)]="post.content" name="content" rows="30"></textarea>
       </mat-form-field>
       <br>
       <button mat-raised-button color="accent" (click)="updatePost()">Save</button>
       <button mat-button (click)="editing=false" *ngIf="editing">Cancel</button>
     </mat-card>
   </div>
-
+ 
   <div [hidden]="editing">
     <mat-card class="mat-elevation-z1">
         <img mat-card-image src="{{ post.image }}" alt="{{ post.title }}">
@@ -28,7 +28,7 @@
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        
+
         <p class="photo-credit">
           <small><mat-icon color="accent">photo_camera</mat-icon> {{ post.imageby }}</small>
         </p>

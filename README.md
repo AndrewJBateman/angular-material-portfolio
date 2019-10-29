@@ -85,6 +85,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ![Example screenshot](./img/contact-pc-sent.png)
 ![Example screenshot](./img/contact-mobile.png)
 ![Example screenshot](./img/contact-mobile-sent.png)
+![Example screenshot](./img/blog-pc.png)
+![Example screenshot](./img/blog-create-pc.png)
+![Example screenshot](./img/blog-mobile.png)
 
 ## Contact
 

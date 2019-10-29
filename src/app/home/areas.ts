@@ -37,11 +37,11 @@ It is estimated to take 1800hours and it took me a year (2017) working part-time
 	},
 	{
 		title: 'About This Website',
-		content: `The Angular 8 javascript framework was used to build this site. A Google Cloud Firebase backend database stores the blog posts and any data from submitted Contact forms. There is a login link in the navbars and an authorized user can Create, Read, Update and Delete (CRUD) posts. Firebase Authorization is used to login.
+		content: `The Angular 8 javascript framework was used to build this site. A Google Cloud Firebase backend database stores the blog posts and data from submitted Contact forms. There is a login link in the navbars and an authorized user can Create, Read, Update and Delete (CRUD) posts. Firebase Authorization is used to login.
 
 Github repository data is fetched from the Github API via an Angular HTTPClient get request (resting on the browser XMLHttp Request Interface) service using an RxJS Observable.
 
-I wanted to minimise time spent on styling and layout as I am an Engineer by trade and for me technical content is king. However a simple clear presentation is important as well as having a fully responsiveness layout. Hence I have made a lot of use of Angular Material cards to present information, together with the Angular Flex Layout API. Icons are limited to what is available in the Angular Material Icon Library - e.g. there are no icons for linkedin or github and I have avoided adding bloat by importing the Bootstrap library.
+I wanted to minimise time spent on styling and layout as I am an Engineer by trade and for me technical content is king. However a simple clear presentation is important as well as having a fully responsiveness layout. Hence I have made a lot of use of Angular Material cards to present information, together with the Angular Flex Layout API. Icons are limited to the Angular Material Icon Library - e.g. there are no icons for linkedin or github and I have avoided adding bloat by importing the Bootstrap library.
 
 The Contact page uses an Angular Material Card inside a Form that is added to the app Firestore database collection when submitted.
 

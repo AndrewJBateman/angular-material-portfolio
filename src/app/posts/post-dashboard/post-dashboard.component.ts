@@ -21,9 +21,7 @@ export class PostDashboardComponent implements OnInit {
 	uploadPercent: Observable<number>;
 	downloadURL: Observable<string>;
 
-
 	buttonText = 'Create Post';
-
 
 	constructor(
 		private auth: AuthService,
