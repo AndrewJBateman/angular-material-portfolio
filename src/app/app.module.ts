@@ -20,6 +20,7 @@ import { PostsModule } from './posts/posts.module';
 import { ProjectsComponent } from './projects/projects.component';
 import { SharedModule } from './shared/shared.module';
 import { SkillsComponent } from './skills/skills.component';
+import { DateConvertPipe } from './pipes/date-convert.pipe';
 
 @NgModule({
 	declarations: [
@@ -28,7 +29,8 @@ import { SkillsComponent } from './skills/skills.component';
 		HomeComponent,
 		PageNotFoundComponent,
 		ProjectsComponent,
-		SkillsComponent
+		SkillsComponent,
+		DateConvertPipe
 	],
 	imports: [
 		AngularFireModule.initializeApp(environment.firebase, 'angular-blog'), // imports firebase/app needed for everything

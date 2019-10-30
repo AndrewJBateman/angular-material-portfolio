@@ -23,15 +23,15 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Navbar:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles.
 
-* **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Option: Add more detailed github later but will need api key. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of areas based on an Area model.
+* **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date Github profile page was updated - change to website update update date. Option: Add more detailed github later but will need api key. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of areas based on an Area model.
 
-* **Blog:** 2. Complete first 8 of real content: Firebase auth service added so I can login to edit posts. Posts are stored in the app Firebase DB and displayed on the Blog Posts page.
+* **Blog:** Working. Complete first 8 of real content: A non-authorized user can Read the blog posts. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
 
-* **Projects:** 3. Complete real content or add coming soon link. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
+* **Projects:** Working. 3. Complete real content or add coming soon link. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
-* **Skills:** 4. Complete real content. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
+* **Skills:** Working. Complete real content. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
-* **Contact:** Simple mat-form that user can fill in with name, email and comment. Some input validation is included, linked to the send button so an incomplete/incorrect form cannot be sent. The data is sent to the app Firestore backend and a success message is returned once sending is complete.
+* **Contact:** Working. Simple mat-form that user can fill in with name, email and comment. Some input validation is included, linked to the send button so an incomplete/incorrect form cannot be sent. The data is sent to the app Firestore backend and a success message is returned once sending is complete.
 
 * **Future Updates** Dark mode toggle, CV Download, blog list mode toggle (removes photos from list page), blog post notification - tells readers there is a new post.
 
@@ -63,7 +63,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Status & To-Do List
 
-* Status: In development. Compiles.
+* Status: Working but still in development. Compiles.
 
 * To-Do: see Sections Info above.
 
@@ -75,7 +75,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 * [Medium article by Tomas Trajan: The complete guide to Angular Material Themes](https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1)
 
-* [javascript: Photo by Markus Spiske on Unsplash,  database: Photo by Markus Spiske on Unsplash, angular: Photo by Markus Spiske on Unsplash, arrays: Photo by Taylor Vick on Unsplash, mobile frameworks: Photo by Christian Widell on Unsplash, frameworks: Photo by Caspar Camille Rubin on Unsplash, newsapp: Photo by Breakslow on Unsplash, microservices: Photo by QuickOrder on Unsplash](https://unsplash.com/)
+* [**Blog posts image credits:** javascript: Photo by Markus Spiske on Unsplash, database: Photo by Markus Spiske on Unsplash, angular: Photo by Markus Spiske on Unsplash, arrays: Photo by Taylor Vick on Unsplash, mobile frameworks: Photo by Christian Widell on Unsplash, frameworks: Photo by Caspar Camille Rubin on Unsplash, newsapp: Photo by Breakslow on Unsplash, microservices: Photo by QuickOrder on Unsplash](https://unsplash.com/)
 
 ## Screenshots
 

@@ -12,7 +12,7 @@
     </div>
     <div class="item-2" fxFlex="70%" fxFlexOrder="2">
       <h2 class="me-heading">About Me</h2>
-      <p class="main-para">I have been studying programming part-time for 3 years, completing a range of projects, online courses & tutorials from FreeCodeCamp, Treehouse, Udemy and Youtube etc. I have also learnt a lot from reading programming-related blogs and articles. I currently have <span *ngIf="profile" class="repo-text"> {{ repos }} </span> Github Repositories with a mixture of my own projects, tutorial code and forked projects of interest.
+      <p class="main-para">I have been studying programming part-time for 3 years, completing a range of projects, online courses & tutorials from FreeCodeCamp, Treehouse, Udemy and Youtube etc. I have also learnt a lot from reading programming-related blogs and articles. I currently have <span *ngIf="profile" class="repo-text"> {{ repos }}</span> repositories on Github (last updated: <span *ngIf="profile" class="repo-text">{{ lastUpdated | dateConvert }}</span>) with a mixture of my own projects, tutorial code and forked projects of interest.
       <p class="main-para">Programming was not completely new to me as I previously worked for 20 years as an Electronic/Electrical Engineer in the UK, Spain and finally in Norway (including 2 years in the
         <a href="https://en.wikipedia.org/wiki/Hammerfest_(town)"
           target="_blank">Northermost town in the world
@@ -22,7 +22,7 @@
         </a>) & continue programming.
       </p>
       <p class="main-para">There is more about my programming and engineering in the cards below. The aim of this website is to showcase some of my projects and explain a little about me, without repeating what is on my Linkedin profile or CV. This website has been a big programming project in itself - the last of the cards below explains more about it.</p>
-        
+
       <p class="main-para">This site has a technical blog that I can log into and add to or edit anytime, even from my mobile phone. As with all programming, this website will be updated and improved. I welcome comments on this or anything else - just go to the Contact page to send me a message :-).</p>
     </div><!--end of item 2-->
   </div><!--end of top container-->

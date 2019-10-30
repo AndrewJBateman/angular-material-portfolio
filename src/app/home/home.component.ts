@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 	areas = AREAS;
 	profile: any;
 	repos: number;
+	lastUpdated: string;
 
 	constructor(private githubService: GithubService) { }
 
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
 			.subscribe(resultArray => {
 				this.profile = resultArray;
 				this.repos = this.profile.public_repos;
+				this.lastUpdated = this.profile.updated_at;
 				console.log('profile:', this.profile);
 
 			});
