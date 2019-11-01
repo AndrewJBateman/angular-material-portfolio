@@ -13,7 +13,12 @@
         <img mat-card-image class="img" src="{{ post.image }}" alt="{{ post.title }}">
         <mat-card-content>
           <p class="strong-style">{{ post.title }}</p>
-          <p class="content-style">{{ post.content | slice:0:120 }}...</p>
+          <p class="content-style">{{ post.content | slice:0:120 }}...
+            <span class="small-text">
+              (published: {{ post.published.toDate() | date:'dd/MM/yyyy' }})
+              <!-- (published: {{ post.published.toDate() | dateConvert }}) -->
+            </span>
+          </p>
         </mat-card-content>
       </mat-card>
     </div>

@@ -10,6 +10,7 @@ export class PostService {
 	postDoc: AngularFirestoreDocument<Post>;
 
 	constructor(private afs: AngularFirestore) {
+    // afs.firestore.settings({ timestampsInSnapshots: true });
 		this.postsCollection = this.afs.collection('posts', ref =>
 			ref.orderBy('published', 'desc'));
 	}

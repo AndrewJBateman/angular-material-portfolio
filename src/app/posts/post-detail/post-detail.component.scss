@@ -16,12 +16,18 @@ mat-card-actions {
 }
 .small-text {
   color: #0d47a1;
-  font-size: 14px;
-  padding: 0 16px;
+  font-size: 12px;
+  padding: 0;
 }
 mat-card-header {
   margin: 0;
-  text-align: center;
+  padding: 0;
+  text-align: left;
+  font-size: 18px !important;
+}
+
+mat-card-title {
+  font-size: 18px;
 }
 
 .post-content {

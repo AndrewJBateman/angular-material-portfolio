@@ -23,11 +23,11 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Navbar:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles.
 
-* **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date Github profile page was updated - change to website update update date. Option: Add more detailed github later but will need api key. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of areas based on an Area model.
+* **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
 
-* **Blog:** Working. Complete first 8 of real content: A non-authorized user can Read the blog posts. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
+* **Blog:** Working. A non-authorized user can only Read the blog posts. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts. Put photo credit in footer with action buttons - use grid, row and 2 columns with 8 - 4 widths? Make title start on left and have date on the right.
 
-* **Projects:** Working. 3. Complete real content or add coming soon link. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
+* **Projects:** Working. Complete real content or add coming soon link. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
 * **Skills:** Working. Complete real content. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
@@ -44,6 +44,8 @@ Angular 8 app using Angular Material to create a portfolio website.
 * [Angular Material v8.2.0](https://material.angular.io/)
 
 * [Firebase v6.6.1](https://firebase.google.com) Cloud storage and authentication.
+
+* [moment v2.24.0](https://momentjs.com) to convert Github UTC string to '... ago'.
 
 ## Setup
 

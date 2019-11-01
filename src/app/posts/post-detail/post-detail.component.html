@@ -2,7 +2,7 @@
 
   <div [hidden]="!editing">
     <mat-card>
-      <h1>Edit Post</h1>
+      <h1 color="primary">Edit Post</h1>
       <mat-form-field>
         <input matInput placeholder="Post title" [(ngModel)]="post.title" name="title">
       </mat-form-field>
@@ -15,10 +15,11 @@
       <button mat-button (click)="editing=false" *ngIf="editing">Cancel</button>
     </mat-card>
   </div>
- 
+
   <div [hidden]="editing">
     <mat-card class="mat-elevation-z1">
-        <img mat-card-image src="{{ post.image }}" alt="{{ post.title }}">
+      <img mat-card-image src="{{ post.image }}" alt="{{ post.title }}">
+
       <mat-card-header>
         <mat-card-title>
           {{ post.title }}
@@ -27,17 +28,15 @@
           </span>
         </mat-card-title>
       </mat-card-header>
-      <mat-card-content>
 
+      <mat-card-content>
         <p class="photo-credit">
           <small><mat-icon color="accent">photo_camera</mat-icon> {{ post.imageby }}</small>
         </p>
 
-          <p class="post-content">
-            {{ post.content }}
-          </p>
-
+        <p class="post-content">{{ post.content }}</p>
       </mat-card-content>
+
       <mat-card-actions align="end">
         <button mat-icon-button (click)="editing=true">
           <mat-icon color="accent">edit</mat-icon>
@@ -46,6 +45,7 @@
           <mat-icon color="accent">delete</mat-icon>
         </button>
       </mat-card-actions>
+
     </mat-card>
   </div>
 </ng-container>

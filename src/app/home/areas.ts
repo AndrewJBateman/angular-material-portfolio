@@ -21,7 +21,7 @@ It is estimated to take 1800hours and it took me a year (2017) working part-time
 	},
 	{
 		title: 'Ionic',
-		content: 'I wanted to build mobile apps and found the Ionic Framework ideal as it is integrated with Angular and builds native and prgressive web apps from the same code-base. I completed a 34-hour Ionic Udemy course, many Youtube tutorials and have worked on a number of apps using Ionic 4 & 5 - 15% of my repositories include Angular. I also have experience using Capacitor to create native-like user interfaces. See Projects page.'
+		content: 'I wanted to build mobile apps and found the Ionic Framework ideal as it is integrated with Angular and builds native and progressive web apps from the same code-base. I completed a 34-hour Ionic Udemy course, many Youtube tutorials and have worked on a number of apps using Ionic 4 & 5 - 15% of my repositories include Ionic. I also have experience using Capacitor to create native-like user interfaces. See Projects page.'
 	},
 	{
 		title: 'Programming Languages',
@@ -37,7 +37,7 @@ It is estimated to take 1800hours and it took me a year (2017) working part-time
 	},
 	{
 		title: 'About This Website',
-		content: `The Angular 8 javascript framework was used to build this site. A Google Cloud Firebase backend database stores the blog posts and data from submitted Contact forms. There is a login link in the navbars and an authorized user can Create, Read, Update and Delete (CRUD) posts. Firebase Authorization is used to login.
+		content: `The Angular 8 javascript framework was used to build this site. A Google Cloud Firebase backend database stores the blog posts and data from submitted Contact forms. Anyone can view the blog posts but there is a login link in the navbars so only an authorized user can Create, Update and Delete (CRUD) posts. Firebase Authorization is used to login.
 
 Github repository data is fetched from the Github API via an Angular HTTPClient get request (resting on the browser XMLHttp Request Interface) service using an RxJS Observable.
 
