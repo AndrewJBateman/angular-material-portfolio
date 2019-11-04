@@ -10,6 +10,13 @@ mat-card-image {
 
 mat-icon {
   font-size: 18px;
+  margin-left: 0;
+}
+
+mat-card-actions {
+  padding: 0;
+  color: #0D47A1;
+  font-size: 12px !important;
 }
 
 .strong-style {
@@ -22,8 +29,10 @@ mat-icon {
 
 .content-style {
   white-space: pre-wrap;
+  margin: 0 0 4px;
 }
 
 .small-text {
   color: #0D47A1;
+  font-size: 14px !important;
 }

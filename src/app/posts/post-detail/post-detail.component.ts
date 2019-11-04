@@ -47,4 +47,8 @@ export class PostDetailComponent implements OnInit {
     this.router.navigate(['/blog']);
 
   }
+
+  returnToList() {
+    this.router.navigate(['/blog']);
+  }
 }

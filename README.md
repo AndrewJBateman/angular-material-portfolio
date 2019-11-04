@@ -25,13 +25,13 @@ Angular 8 app using Angular Material to create a portfolio website.
 
 * **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
 
-* **Blog:** Working. A non-authorized user can only Read the blog posts. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts. Put photo credit in footer with action buttons - use grid, row and 2 columns with 8 - 4 widths? Make title start on left and have date on the right.
-
 * **Projects:** Working. Complete real content or add coming soon link. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
 * **Skills:** Working. Complete real content. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
 * **Contact:** Working. Simple mat-form that user can fill in with name, email and comment. Some input validation is included, linked to the send button so an incomplete/incorrect form cannot be sent. The data is sent to the app Firestore backend and a success message is returned once sending is complete.
+
+* **Blog:** Working. A non-authorized user can only Read the blog posts. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts. Put photo credit in footer with action buttons - use grid, row and 2 columns with 8 - 4 widths? Make title start on left and have date on the right. Fix Wordcount pipe  - not findable by template. Edit date of post when it is edited.
 
 * **Future Updates** Dark mode toggle, CV Download, blog list mode toggle (removes photos from list page), blog post notification - tells readers there is a new post.
 

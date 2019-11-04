@@ -16,11 +16,11 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { NavModule } from './nav/nav.module';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
+import { PipesModule } from './pipes/pipes.module';
 import { PostsModule } from './posts/posts.module';
 import { ProjectsComponent } from './projects/projects.component';
 import { SharedModule } from './shared/shared.module';
 import { SkillsComponent } from './skills/skills.component';
-import { DateConvertPipe } from './pipes/date-convert.pipe';
 
 @NgModule({
 	declarations: [
@@ -29,8 +29,7 @@ import { DateConvertPipe } from './pipes/date-convert.pipe';
 		HomeComponent,
 		PageNotFoundComponent,
 		ProjectsComponent,
-		SkillsComponent,
-		DateConvertPipe
+    SkillsComponent
 	],
 	imports: [
 		AngularFireModule.initializeApp(environment.firebase, 'angular-blog'), // imports firebase/app needed for everything
@@ -40,11 +39,13 @@ import { DateConvertPipe } from './pipes/date-convert.pipe';
 		BrowserModule,
 		BrowserAnimationsModule,
 		HttpClientModule,
-		NavModule,
+    NavModule,
+    PipesModule,
 		PostsModule,
 		ReactiveFormsModule,
-		SharedModule.forRoot(),
-	],
+    SharedModule.forRoot()
+  ],
+  exports: [],
 	providers: [],
 	bootstrap: [AppComponent]
 })

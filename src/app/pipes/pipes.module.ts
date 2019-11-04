@@ -2,11 +2,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DateConvertPipe } from './date-convert.pipe';
+import { WordCountPipe } from './word-count.pipe';
 
 @NgModule({
-	declarations: [DateConvertPipe],
-	imports: [CommonModule],
-	exports: [DateConvertPipe]
+  imports: [CommonModule],
+	declarations: [DateConvertPipe, WordCountPipe],
+	exports: [DateConvertPipe, WordCountPipe]
 })
 
 export class PipesModule {}

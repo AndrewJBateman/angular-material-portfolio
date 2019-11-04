@@ -1,6 +1,6 @@
 <mat-nav-list>
   <a mat-list-item class="nav-link" routerLink="/home" routerLinkActive="active" (click)="onSidenavClose()">
-    <mat-icon>home</mat-icon>Home
+    <mat-icon>home</mat-icon>AB
   </a>
 
   <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
@@ -21,9 +21,6 @@
   <a mat-list-item class="nav-link" routerLink="/skills" routerLinkActive="active" (click)="onSidenavClose()">
     <mat-icon>build</mat-icon>Skills
   </a>
-  <a mat-list-item class="nav-link" routerLink="/blog" routerLinkActive="active" (click)="onSidenavClose()">
-    <mat-icon>description</mat-icon>Blog
-  </a>
   <a mat-list-item class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="onSidenavClose()">
     <mat-icon>email</mat-icon>Contact
   </a>
@@ -36,6 +33,9 @@
   <!-- <a mat-list-item class="nav-link social" href="/assets/AndrewBatemanResume.pdf" target="_blank" rel="noreferrer">
     <mat-icon>cloud_download</mat-icon> CV
   </a> -->
+  <a mat-list-item class="nav-link" routerLink="/blog" routerLinkActive="active" (click)="onSidenavClose()">
+    <mat-icon>description</mat-icon>Blog
+  </a>
   <a mat-list-item (click)="onSidenavClose()">
     <mat-icon>close</mat-icon>Close
   </a>
