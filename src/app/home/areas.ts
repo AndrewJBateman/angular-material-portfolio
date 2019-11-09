@@ -3,7 +3,7 @@ import { Area } from './area.module';
 export const AREAS: Area[] = [
 	{
 		title: 'Full Stack Development',
-		content: `I obtained the Free Code Camp (FCC) Full Stack Development Certificate after starting with html, css & javascript then completing course units & projects in 6 programming areas: Responsive Web Design, Javascript Algorithms & Data Structures, Front-End Libraries (including Bootstrap, jQuery, SaSS, React & Redux), D3 Data Visualisation, APIs/Microservices & Information Security/Quality Assurance.
+		content: `I obtained the Free Code Camp (FCC) Full Stack Development Certificate after starting with HTML, CSS & javascript then completing course units & projects in 6 programming areas: Responsive Web Design, Javascript Algorithms & Data Structures, Front-End Libraries (including Bootstrap, jQuery, SaSS, React & Redux), D3 Data Visualisation, APIs/Microservices & Information Security/Quality Assurance.
 
 It is estimated to take 1800hours and it took me a year (2017) working part-time. It gave me experience in a variety of web development tools. From there I wanted to specialise in one javascript framework. After studying React and Vue I decided to focus on Angular.`
 	},

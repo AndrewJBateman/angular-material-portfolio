@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
 			src: '../assets/images/techNews.jpg',
 			alt: 'world news app'
 		},
-		content: `Ionic-Angular app that displays articles from a news API. App includes pages for news detail with links to the original article, social media sharing and offline storage of favourite articles.`,
+		content: `Ionic-Angular app that displays articles from a news API. App includes pages for news detail with links to the original article, social media sharing and offline storage of favourite articles. Includes a user search field Ionic-Angular app that displays world new. Dark mode inverts colours...`,
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: ''
 	},

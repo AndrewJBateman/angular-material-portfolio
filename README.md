@@ -53,10 +53,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
 ## Code Examples
 
 ## Features
@@ -83,6 +79,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ![Example screenshot](./img/home-pc.png)
 ![Example screenshot](./img/home-mobile.png)
+![Example screenshot](./img/projects-pc.png)
+![Example screenshot](./img/projects-mobile.png)
+![Example screenshot](./img/skills-pc.png)
+![Example screenshot](./img/skills-mobile.png)
 ![Example screenshot](./img/contact-pc.png)
 ![Example screenshot](./img/contact-pc-sent.png)
 ![Example screenshot](./img/contact-mobile.png)
