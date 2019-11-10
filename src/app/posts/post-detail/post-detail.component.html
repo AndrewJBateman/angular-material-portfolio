@@ -11,8 +11,8 @@
         <textarea matInput placeholder="Post content" [(ngModel)]="post.content" name="content" rows="30"></textarea>
       </mat-form-field>
       <br>
-      <button mat-raised-button color="accent" (click)="updatePost()">Save</button>
-      <button mat-button (click)="editing=false" *ngIf="editing">Cancel</button>
+      <button mat-flat-button color="accent" (click)="updatePost()">Save</button>
+      <button mat-flat-button color="primary" (click)="editing=false" *ngIf="editing">Cancel</button>
     </mat-card>
   </div>
 
@@ -21,8 +21,9 @@
       <img mat-card-image src="{{ post.image }}" alt="{{ post.title }}">
 
       <mat-card-header>
-        <mat-card-title>
+        <mat-card-title class="title-left" align="end">
           {{ post.title }}
+          <div fxFlex></div>
           <span class="small-text">
             <mat-icon color="accent">today</mat-icon> {{ post.published.toDate() | date:'dd/MM/yyyy' }}
           </span>
@@ -38,15 +39,13 @@
       </mat-card-content>
 
       <mat-card-actions align="end">
-        <button mat-icon-button (click)="returnToList()">
-          <mat-icon color="accent">arrow_back</mat-icon>
+        <button mat-flat-button color="accent" (click)="returnToList()" aria-label="Back button">
+          <mat-icon>arrow_back</mat-icon>
         </button>
-        <button mat-icon-button (click)="editing=true">
-          <mat-icon color="accent">edit</mat-icon>
-        </button>
-        <button mat-icon-button (click)="delete(post.id)">
-          <mat-icon color="accent">delete</mat-icon>
-        </button>
+        <div fxFlex></div>
+        <a mat-flat-button (click)="editing=true" color="primary"><mat-icon>edit</mat-icon></a>
+        <div fxFlex></div>
+        <a mat-flat-button (click)="delete(post.id)" color="warn"><mat-icon>delete</mat-icon></a>
       </mat-card-actions>
 
     </mat-card>

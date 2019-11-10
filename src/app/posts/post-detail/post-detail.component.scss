@@ -13,6 +13,7 @@ mat-form-field {
 }
 mat-card-actions {
   padding: 0;
+  margin: auto 0 0;
 }
 .small-text {
   color: #0d47a1;
@@ -20,10 +21,13 @@ mat-card-actions {
   padding: 0;
 }
 mat-card-header {
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
-  text-align: left;
   font-size: 18px !important;
+}
+
+mat-card-header-text {
+  margin-left: 0 !important;
 }
 
 mat-card-title {
@@ -38,4 +42,8 @@ mat-card-title {
 
 .photo-credit {
   padding: 0;
+}
+
+.title-left {
+  display: inline;
 }

@@ -1,0 +1,18 @@
+Title: SQL and NoSQL Databases - Which One? 
+Updated: 10 nov 2019.
+
+A Structured Query Language (SQL) database is a relational structured database. A NoSQL database is unstructured & non-relational. Dynamic schema are used to store and retrieve unstructured data. Examples of SQL: PostgreSQL, MySQL, Oracle and Microsoft SQL Server. Examples of NoSQL: Redis, RavenDB, Cassandra, MongoDB, BigTable, HBase, Neo4j and CouchDB. 60% of databases are SQL, 40% noSQL.
+
+Differences:
+- SQL is table-based whereas NoSQL is more flexible and data can be stored as document-orientated, column-orientated, graph-based or as key-values. So SQL is better for multi-row transaction databases.
+- SQL databases are vertically scaleable but NoSQL databases are horizontally-scaleable so can become larger and more powerful as datasets change.
+- SQL is more suitable for complex queries and big data analysis. However NoSQL is better for big data where flexibility is important.
+- SQL has a rigid structure based on predefined schema and is hard to change. Simple SQL commands like SELECT, ORDER BY and INSERT help administrators to route data in and out of a database table. NoSQL is much more flexible as documents can be created without a defined structure.
+- The SQL database language is the most widely used and versatil.
+- SQL is a mature and well-known technology, NoSQL is relatively new.
+- SQL databases are faster that NoSQL ones for joins, queries and updates, due to their logical tables. However NoSQL is faster for read and write operations due to data entities being stored togther and not partitioned.
+- NoSQL is used by Google, Yahoo, Amazon, Instagram, Twitter, Facebook.
+- SQL is used by Uber, Twitter, Netflix, Instagram, LinkedIn, Quora, Lyft, Stack Overflow, Microsoft, MIT, Intuit, Namshi etc, most companies in fact.
+
+Conclusion:
+Which database to use depends on the database requirements, such as the type of data (structured or not..), how it will be queried and scaleability. SQL is better for applications with multi-row transactions such as accountancy, due to their rigid schema design. NoSQL is better for applications that do not have specific defined schema such as content-management systems, real-time analysis and big data, due to their scaleability, flexibility and ease of use. 

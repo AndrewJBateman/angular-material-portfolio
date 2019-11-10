@@ -3,6 +3,6 @@ export class Post {
 	imageby?: string;
 	content: string;
 	image: string;
-	published: Date;
+  published: Date;
 	title: string;
 }

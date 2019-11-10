@@ -18,6 +18,8 @@
             <span class="small-text">
               <mat-icon color="accent">calendar_today</mat-icon>
               {{ post.published.toDate() | date:'dd/MM/yyyy' }}
+              <!-- <mat-icon color="accent">update</mat-icon>
+              {{ post.updated.toDate() | date:'dd/MM/yyyy' }} -->
               <!-- (published: {{ post.published.toDate() | dateConvert }}) -->
               <mat-icon color="accent">schedule</mat-icon>
               {{ post.content.split(" ").length / 200 }} minutes read

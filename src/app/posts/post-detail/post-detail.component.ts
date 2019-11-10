@@ -35,6 +35,7 @@ export class PostDetailComponent implements OnInit {
     const formData = {
       title: this.post.title,
       content: this.post.content,
+      published: new Date()
     };
     const id = this.route.snapshot.paramMap.get('id');
 		this.postService.update(id, formData);
