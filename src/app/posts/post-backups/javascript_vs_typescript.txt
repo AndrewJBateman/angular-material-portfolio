@@ -1,0 +1,13 @@
+Title: Javascript v Typescript
+Updated: 11 nov 2019.
+Content:
+Typescript is a superset of ES5 & ES6 Javascript and supports JS libraries and API Documentation. All browsers understand Javascript and it is also used on the server-side. But they cannot understand Typescript so the Typescript code is transpiled into Javascript during compilation. Javascript is an interpreted language so errors are only seen at run-time. Also it is single-threaded.
+
+Differences between the two languages:
+-  Javascript is a light-weight scripting language whereas Typescript is a heavy-weight interpreted Object-orientated programming language.
+- Unlike Javascript, Microsoft's Typescript uses static typing so parameter types have to be defined to avoid errors in compilation. This is a huge advantage over Javascript and avoids a lot of bugs.
+- Typescript needs to be compiled, javascript does not.
+- Typescript is composed of modules, functions, variables, statements and expressions and comments. Javascript has to be written between script tags. 
+- Typescript is better for large (team) projects and its type safety ensures less bugs in larger coding teams.
+- Javascript can be written using a simple text editor such as notepad and does not require a compiler, unlike Typescript.
+- Unlike Typescript, Client-side Javascript does not allow the reading or writing of files and it cannot be used for network applications.  

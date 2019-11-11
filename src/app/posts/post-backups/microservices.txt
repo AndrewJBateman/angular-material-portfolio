@@ -1,0 +1,16 @@
+Title: Microservices - What Are They?
+Updated: 11 nov 2019.
+Content:
+A microservice provides a single service for an app and is independent, stateless, always available, has persistent data, includes external colaborations and is data-synchronised. It has to be able to handle failure of the network, authentication, authorization etc. and have an API that can be used by the front-end. 
+
+So an app with a microservice architecture consists of lots of small services, each one running its own independent process and usually communicating via a http API. Microservices can be deployed automatically, depending on the business need. Microservices are preferred due to the disadvantages of the traditional backend monolithic architecture where a small change requires the whole monolith to be rebuilt and deployed. 
+
+Microservices require a different, simpler asynchronous communication to monoliths, such as RabbitMQ or ZeroMQ (message brokers). A microservice architecture allows the use of different technologies. Eg, one microservice could use Node.js for a database-related application and another could use C++ for a real-time graphics component.
+
+The angular framework is well suited for client-side UI integration with backend services; each UI component can be an Angular component (library) that deals with the particular backend service. Web components would be ideal in this case too.
+
+A disadvantage of microservices is that the app has to be designed to tolerate failure of any service. A lot of extra testing is required. So microservices use real-time monitoring to check the status of the service.
+
+Single microservices are maintained by independant, specialized teams. 
+
+Companies using microservices: eCommerce: Amazon (Amazon Web Services), Coca Cola (uses Dev-Ops model), Zalando (uses AWS, Docker deployments, App Dynamics and Zmon for monitoring), Netflix (earliest to use microservices, uses AWS), Bestbuy.com (uses the Strangler pattern), eBay, Etsy, Gilt.com, Spotify (uses 90 autonomous full-stack teams or tribes and now has 810 services), Uber, Comcast Cable, Sound Cloud, Karma, Groupon, Hailo, Capital One, Lending Club, Autoscout24 etc.

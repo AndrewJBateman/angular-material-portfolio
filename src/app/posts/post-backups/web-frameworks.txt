@@ -1,0 +1,28 @@
+Title: Web Frameworks - An Overview
+Updated: 11 nov 2019.
+Content:
+Web frameworks are used to help standardise the development and deployment of web applications. They should allow the programmer to focus on the functionality of the app and to spend less time on the mechanics of actually making the app work. For example. using ready-made library functions for database Access, routing etc. as well helping to keep to DRY (Don't Repeat Yourself) and reuse common code. Most frontend frameworks use the Model-View-ViewModel pattern to separate the data model with business rules from the user interface.
+
+The most common frontend web frameworks are: 
+
+Angular: Developed by Google, creates Single Page Applications (SPAs). It uses typescript and is the largest of the frameworks. See my separate post on Angular.
+
+React: Developed by Facebook. Technically a library, not a framework. It is fast due to its use of the virtual DOM and uses JSX syntax.
+
+Vue: Created by Evan You. It is small and trendy.
+
+Ember: Supported by Yahoo!, LinkedIn and Bustle. Uses the Glimmer rendering engine and a virtual DOM tree, similar to React, to speed up performance. Rapid 6-week release cycle.
+
+Backbone:
+
+The most common backend frameworks are:
+
+Express: Used with Node.js as a minimal, fast and non-opinionated library.
+
+Django: Uses a M-V-Template architecture framework for Python. It has an Object-Relational-Mapping layer to deal with databases. No code-execution is posible in the template layer so it is more secure. Includes many packages as standard, like authentication, session management, Google sitemaps generator etc.
+
+Rails: A M-V-C framework that uses Ruby and Gems (library-like dependencies).
+
+Laravel: Created by Tony Otwell. A PHP framework based on Symfony. Created as an alternative to the CodeIgniter framework, it has a modular packaging system. Includes route handling, a security layer, models and DB integrations, views/templates, authentication, sesión management, asset compilation, file management and storage, error handling, unit testing, email, cache handling.
+
+Spring: 
