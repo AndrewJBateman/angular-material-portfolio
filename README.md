@@ -1,6 +1,6 @@
 # Portfolio Angular Material
 
-Angular 8 app using Angular Material to create a portfolio website.
+Angular 8 app using Angular Material to create a fully-responsive portfolio website.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 

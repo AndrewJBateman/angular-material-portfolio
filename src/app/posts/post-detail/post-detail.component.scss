@@ -3,6 +3,7 @@
 mat-card {
   margin: 0 auto;
   max-width: 700px;
+  padding: 16px 16px 20px 16px;
 }
 mat-card-img {
   max-width: 100%;
@@ -12,14 +13,15 @@ mat-form-field {
   width: 100%;
 }
 mat-card-actions {
-  padding: 0;
-  margin: auto 0 0;
+  margin: auto;
 }
-.small-text {
+.credit-date-text {
   color: #0d47a1;
-  font-size: 12px;
+  font-size: 14px;
   padding: 0;
+  margin: 0;
 }
+
 mat-card-header {
   margin: 0 !important;
   padding: 0;
@@ -34,16 +36,13 @@ mat-card-title {
   font-size: 18px;
 }
 
+.post-title {
+  margin-left: 0 !important;
+  color: #0d47a1;
+}
+
 .post-content {
+  margin: 16px 0;
   white-space: pre-wrap;
-  // padding: 0 16px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
-}
-
-.photo-credit {
-  padding: 0;
-}
-
-.title-left {
-  display: inline;
 }

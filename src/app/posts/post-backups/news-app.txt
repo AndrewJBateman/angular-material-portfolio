@@ -1,0 +1,20 @@
+Title: How I created an Ionic News App
+Updated: 11 nov 2019.
+Content:
+Framework: I used the Ionic framework to create a news app that would run on multiple mobile platforms using the same code base. Hence the app consists of Ionic toolbars, list views, cards, navigation menus etc. I also used the Cordova plugin library to enhance performance.
+
+Cordova Plugins: Plugins are used to get network status (to know if user is on or offline) and to save news data to device storage so it is available off-lline. Another Cordova plugin is used for social-sharing of news articles.
+
+News API: I used the 'newsapi.org' HTTP REST API to get breaking news headlines/search articles in Javascript Object Notation (JSON). The service is free. It is necessary to register to get an API key that has to be included in all http get requests as authentication.
+
+Geo-location API: I used the 'ip-api.com' API which does not require an API key and which returns a JSON response with information obtained from the user ip address. 
+
+News Page: The 'home' page is a list of news articles, each list item is an ion-card containing a thumbnail image, headline and how old the article is. When the app initialises an 'country-check' api checks which country the user is in and then the 'news-api' shows news from this country. If the country is not covered by the news-api (countries covered are stored in an array so this is a simple .indexOf array search) then the app defaults to news from the United States.
+
+News-Detail Page: Clicking on a list item navigates the user to a news-detail page with more detail. 
+
+Components: Re-used blocks of code are kept in a Components folder as library components.
+
+Providers: Services are created in the 'Providers' folder with @Injectable 'provided in root' so they can all be used anywhere in the app. There is a debate as to whether to call this folder the 'Services' folder. My news app includes news-api, news-storage, network-available, language and light/dark mode theme services.
+
+Pipes: pipe transforms are used to convert a UTC date object to '... time ago' and to concatenate news article titles to a shorter substring with ... on the end.

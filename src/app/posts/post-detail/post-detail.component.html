@@ -21,21 +21,22 @@
       <img mat-card-image src="{{ post.image }}" alt="{{ post.title }}">
 
       <mat-card-header>
-        <mat-card-title class="title-left" align="end">
+        <mat-card-title class="post-title">
           {{ post.title }}
-          <div fxFlex></div>
-          <span class="small-text">
-            <mat-icon color="accent">today</mat-icon> {{ post.published.toDate() | date:'dd/MM/yyyy' }}
-          </span>
         </mat-card-title>
       </mat-card-header>
 
       <mat-card-content>
-        <p class="photo-credit">
-          <small><mat-icon color="accent">photo_camera</mat-icon> {{ post.imageby }}</small>
-        </p>
-
         <p class="post-content">{{ post.content }}</p>
+        <span>
+          <p class="credit-date-text">
+            <mat-icon color="accent">photo_camera</mat-icon> {{ post.imageby }}
+          </p>
+          <div fxFlex></div>
+          <p class="credit-date-text">
+            <mat-icon color="accent">today</mat-icon> {{ post.published.toDate() | date:'dd/MM/yyyy' }}
+          </p>
+        </span>
       </mat-card-content>
 
       <mat-card-actions align="end">
