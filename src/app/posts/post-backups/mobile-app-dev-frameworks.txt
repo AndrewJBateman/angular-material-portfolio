@@ -1,0 +1,24 @@
+Title: Mobile App Dev Frameworks 
+Subtitle: In a Nutshell
+Content:
+Cross-platform hybrid app development frameworks are increasingly popular as the same code-base can be deployed to multiple platforms. The most popular ones are detailed below:
+
+Ionic: This is the one I know well. It comes with UI elements like forms, cards, lists, tab bars and navigation menus and lots more out of the box. Uses CSS/SCSS, HTML & Typescript. Even better is used in PhoneGap. Mostly used with Angular but also available now to use with React and Vue. Uses Cordova plugins to interface with the phone's camera, GPS, Storage, Network status etc.
+
+PhoneGap:
+
+Xamrin:
+
+React Native:
+
+Corona SDK:
+
+jQuery Mobile:
+
+Intel XDK:
+
+Flutter:
+
+Mobile Angular UI:
+
+Appcelerator Titanium: 

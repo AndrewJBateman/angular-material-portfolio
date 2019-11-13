@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from '../material.module';
 
+import { PipesModule } from '../pipes/pipes.module';
+
 @NgModule({
 	exports: [
 		BrowserAnimationsModule,
@@ -17,9 +19,11 @@ import { MaterialModule } from '../material.module';
     FormsModule,
     ReactiveFormsModule,
 		MaterialModule,
-		RouterModule,
+    RouterModule,
+    PipesModule
 	],
-	declarations: [],
+	declarations: [
+  ]
 })
 export class SharedModule {
 	static forRoot(): ModuleWithProviders {

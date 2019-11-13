@@ -1,5 +1,5 @@
-Title: SQL and NoSQL Databases - Which One? 
-Updated: 10 nov 2019.
+Title: SQL and NoSQL Databases
+Subtitle: Explained a Little
 Content:
 A Structured Query Language (SQL) database is a relational structured database. A NoSQL database is unstructured & non-relational. Dynamic schema are used to store and retrieve unstructured data. Examples of SQL: PostgreSQL, MySQL, Oracle and Microsoft SQL Server. Examples of NoSQL: Redis, RavenDB, Cassandra, MongoDB, BigTable, HBase, Neo4j and CouchDB. 60% of databases are SQL, 40% noSQL.
 

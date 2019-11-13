@@ -1,5 +1,5 @@
-Title: Microservices - What Are They?
-Updated: 11 nov 2019.
+Title: Microservices 
+Subtitle: What Are They?
 Content:
 A microservice provides a single service for an app and is independent, stateless, always available, has persistent data, includes external colaborations and is data-synchronised. It has to be able to handle failure of the network, authentication, authorization etc. and have an API that can be used by the front-end. 
 

@@ -23,11 +23,15 @@
     </mat-form-field>
     <br>
     <mat-form-field>
+      <input matInput placeholder="Post Subtitle" [(ngModel)]="subtitle" name="subtitle">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
       <textarea matInput placeholder="Post Content" [(ngModel)]="content" name="content" rows="4"></textarea>
     </mat-form-field>
     <br>
     <button mat-raised-button (click)="createPost()" [disabled]="!title || !content || !image" color="accent">{{buttonText}}</button>
-
+    <!-- <button mat-raised-button (click)="createPost()"  color="accent">Cancel</button> -->
   </mat-expansion-panel>
 </section>
 

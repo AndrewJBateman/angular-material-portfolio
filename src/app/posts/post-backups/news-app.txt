@@ -1,5 +1,5 @@
-Title: How I created an Ionic News App
-Updated: 11 nov 2019.
+Title: Ionic News App
+Subtitle: How I created one 
 Content:
 Framework: I used the Ionic framework to create a news app that would run on multiple mobile platforms using the same code base. Hence the app consists of Ionic toolbars, list views, cards, navigation menus etc. I also used the Cordova plugin library to enhance performance.
 

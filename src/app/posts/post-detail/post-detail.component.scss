@@ -15,9 +15,14 @@ mat-form-field {
 mat-card-actions {
   margin: auto;
 }
+
+.mat-icon {
+  vertical-align: middle;
+}
+
 .credit-date-text {
   color: #0d47a1;
-  font-size: 14px;
+  font-size: 12px;
   padding: 0;
   margin: 0;
 }
@@ -28,21 +33,25 @@ mat-card-header {
   font-size: 18px !important;
 }
 
-mat-card-header-text {
-  margin-left: 0 !important;
-}
-
-mat-card-title {
-  font-size: 18px;
-}
-
 .post-title {
-  margin-left: 0 !important;
   color: #0d47a1;
+  font-size: 20px !important;
+  margin: 0 0 4px !important;
+}
+
+.post-subtitle {
+  color: #0d47a1;
+  font-size: 16px !important;
+  margin: 0 !important;
 }
 
 .post-content {
-  margin: 16px 0;
+  margin: 16px 0 !important;
   white-space: pre-wrap;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.header-image {
+  background-image: url('/assets/images/me-outside.jpg');
+  background-size: cover;
 }

@@ -1,5 +1,5 @@
 Title: Javascript v Typescript
-Updated: 11 nov 2019.
+Subtitle: The Differences
 Content:
 Typescript is a superset of ES5 & ES6 Javascript and supports JS libraries and API Documentation. All browsers understand Javascript and it is also used on the server-side. But they cannot understand Typescript so the Typescript code is transpiled into Javascript during compilation. Javascript is an interpreted language so errors are only seen at run-time. Also it is single-threaded.
 

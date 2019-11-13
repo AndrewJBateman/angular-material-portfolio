@@ -1,5 +1,5 @@
-Title: Javascript Array Methods - in a Nutshell
-Updated: 11 nov 2019.
+Title: Javascript Array methods
+Subtitle: In a Nutshell
 Content:
 Arrays are high-level list-like objects that must use integers as indexes. There are about 30 array methods, or traversal/mutation operations. Some methods take the length of the array into account, e.g. join(), slice() and indexOf(). Some methods modify the length of the array, e.g. push(), splice() and pop().
 

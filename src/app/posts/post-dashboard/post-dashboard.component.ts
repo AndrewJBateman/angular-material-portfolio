@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { finalize } from 'rxjs/operators';
 
 import { PostService } from './../../services/post.service';
@@ -16,7 +17,8 @@ export class PostDashboardComponent implements OnInit {
 	content: string;
 	image: string;
 	imageby: string;
-	title: string;
+  title: string;
+  subtitle: string;
 
 	uploadPercent: Observable<number>;
 	downloadURL: Observable<string>;
@@ -24,6 +26,7 @@ export class PostDashboardComponent implements OnInit {
 	buttonText = 'Create Post';
 
 	constructor(
+    private router: Router,
 		private auth: AuthService,
 		private postService: PostService,
 		private storage: AngularFireStorage
@@ -39,18 +42,24 @@ export class PostDashboardComponent implements OnInit {
 			content: this.content,
 			image: this.image || null,
 			imageby: this.imageby,
-			published: new Date(),
-			title: this.title
+      published: new Date(),
+      title: this.title,
+      subtitle: this.subtitle,
 		};
 		this.postService.create(postData);
-		this.title = '';
+    this.title = '';
+    this.subtitle = '';
 		this.content = '';
 		this.buttonText = 'Post Created';
 		this.image = '';
 		this.imageby = '';
 		setTimeout(() => (this.buttonText = 'Create Post'), 3000);
-	}
+  }
 
+  // returnToList() {
+  //   this.router.navigate(['/blog']);
+  // }
+  
 	uploadImage(event) {
 		const file = event.target.files[0];
 		const path = `posts/${file.name}`;
@@ -70,6 +79,6 @@ export class PostDashboardComponent implements OnInit {
 			.subscribe();
 			console.log('image uploaded');
 		}
-	}
-
+  }
+  
 }
