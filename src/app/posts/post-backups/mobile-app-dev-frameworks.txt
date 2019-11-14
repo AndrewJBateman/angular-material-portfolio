@@ -1,11 +1,13 @@
 Title: Mobile App Dev Frameworks 
 Subtitle: In a Nutshell
 Content:
-Cross-platform hybrid app development frameworks are increasingly popular as the same code-base can be deployed to multiple platforms. The most popular ones are detailed below:
+Traditionally, Android apps were written in Java and iOS apps were written in Swift/Objective-C. However Cross-platform hybrid app development frameworks are increasingly popular as the same code-base can be deployed to multiple platforms, including Android, iOS but also some/all of Blackberry, WebOS, Symbian, Tizen & Bada. The most popular ones (generally open-source & free) are detailed below:
 
-Ionic: This is the one I know well. It comes with UI elements like forms, cards, lists, tab bars and navigation menus and lots more out of the box. Uses CSS/SCSS, HTML & Typescript. Even better is used in PhoneGap. Mostly used with Angular but also available now to use with React and Vue. Uses Cordova plugins to interface with the phone's camera, GPS, Storage, Network status etc.
+Ionic: This comes with UI elements like forms, cards, lists, tab bars and navigation menus and lots more out of the box. Uses HTML5, CSS3/SCSS & Typescript. Even better is used in PhoneGap. Mostly used with Angular but also available now to use with React and Vue. Uses Cordova plugins to interface with the phone's camera, GPS, Storage, Network status etc.
 
-PhoneGap:
+The most well-known Ionic apps out there are MarketWatch for news and market data, Pacifica for mental health, Sworkit for fitness, JustWatch for a streaming search engine, Joule for sous vide cooking, McDonald's Turkey for food ordering, ChefSteps for learning to cook, Untappd for beer drinking, NMAAHC African American Culture Museum and Diesel for clothes store performance.
+
+PhoneGap: Also called Apache Cordova and is part of Adobe Systems. Uses HTML5, CSS3 & Javascript. Like Ionic, it is built on top of Cordova and enables access to native APIs so the app can use the camera, geolocation, accelerometer, contacts list etc. Does not support plugins with hooks and is not suitable for gaming apps due to freezing. Also, if developing for iOS a Mac is required for the Software Development Kits. Example apps include: TripCase for trip planning, Wikipedia encyclopedia, Democratic and Health Survey (DHS Program) & Paylution for international payments.
 
 Xamrin:
 

@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from '../material.module';
-
 import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({

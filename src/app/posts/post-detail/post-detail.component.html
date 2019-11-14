@@ -16,8 +16,10 @@
         <textarea matInput placeholder="Post content" [(ngModel)]="post.content" name="content" rows="30"></textarea>
       </mat-form-field>
       <br>
-      <button mat-flat-button color="accent" (click)="updatePost()">Save</button>
-      <button mat-flat-button color="primary" (click)="editing=false" *ngIf="editing">Cancel</button>
+      <div class="bottom-button-row">
+        <button mat-flat-button color="accent" (click)="updatePost()">Save</button>
+        <button mat-flat-button color="primary" (click)="editing=false" *ngIf="editing">Cancel</button>
+      </div>
     </mat-card>
   </div>
 

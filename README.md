@@ -31,7 +31,7 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 * **Contact:** Working. Simple mat-form that user can fill in with name, email and comment. Some input validation is included, linked to the send button so an incomplete/incorrect form cannot be sent. The data is sent to the app Firestore backend and a success message is returned once sending is complete.
 
-* **Blog:** Working. A non-authorized user can only Read the blog posts. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts. TODO: add cancel button to post dashboard & navigate back to blog list. Space out Save and Cancel button on post edit page.
+* **Blog:** Working. User can only Read the blog posts if authorized. Otherwise I get email from Google firebase complaining - need to sort this out - guest login?. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts. TODO: add cancel button to post dashboard & navigate back to blog list.
 
 Note: I keep a backup copy of each post in the post-backups folder, in case the Firestore database goes down.
 
