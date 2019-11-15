@@ -40,6 +40,7 @@
 
       <mat-card-content>
         <p class="post-content">{{ post.content }}</p>
+
         <span>
           <p class="credit-date-text">
             <mat-icon color="accent">photo_camera</mat-icon> {{ post.imageby }}
@@ -50,7 +51,7 @@
           </p>
         </span>
       </mat-card-content>
-
+      <hr class="horiz-line">
       <mat-card-actions align="end">
         <button mat-flat-button color="accent" (click)="returnToList()" aria-label="Back button">
           <mat-icon>arrow_back</mat-icon>
