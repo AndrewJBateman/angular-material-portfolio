@@ -12,16 +12,18 @@
       <mat-card class="mat-elevation-z1" routerLink="{{ post.id }}">
         <img mat-card-image class="img" src="{{ post.image }}" alt="{{ post.title }}">
         <mat-card-content>
-          <p class="strong-style">{{ post.title }} - {{ post.subtitle }}</p>
-          <p class="content-style">{{ post.content | slice:0:120 }}...</p>
+          <p class="title-style">{{ post.title }}</p>
+          <p class="content-style">
+            <span class="subtitle-style">{{ post.subtitle }}:</span>
+            {{ post.content | slice:0:120 }}...
+          </p>
           <p>
             <span class="small-text">
               <mat-icon color="accent">calendar_today</mat-icon>
               <!-- {{ post.published.toDate() | date:'dd/MM/yyyy' }} -->
               {{ post.published.toDate() | dateConvert }}
               <div fxFlex></div>
-              <mat-icon color="accent">schedule</mat-icon>
-              <!-- {{ post.content.split(" ").length / 200 }} minutes read -->
+              <mat-icon color="accent">timer</mat-icon>
               {{ post.content | readTime }} minute read
             </span>
           </p>

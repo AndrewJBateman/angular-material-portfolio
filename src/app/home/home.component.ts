@@ -22,8 +22,6 @@ export class HomeComponent implements OnInit {
 				this.profile = resultArray;
 				this.repos = this.profile.public_repos;
 				this.lastUpdated = this.profile.updated_at;
-				console.log('profile:', this.profile);
-
 			});
 	}
 

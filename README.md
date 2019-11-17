@@ -17,7 +17,7 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 ## General info
 
-* Responsive - pages resize OK using Angular flex layout and grids of Angular Material mat-cards.
+* Responsive - pages resize using Angular flex layout and grids of Angular Material mat-cards. Using 3 breakpoint sizes: desktop 1200px (anything above 1024px), tablet iPad 768 x 1024px, iPhone 5 320 x 568px
 
 ## Sections info
 
@@ -31,7 +31,7 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 * **Contact:** Working. Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Update this to send me an email with the message.
 
-* **Blog:** Working. User can only Read the blog posts if authorized. Otherwise I get email from Google firebase complaining - need to sort this out - guest login?. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts. TODO: add cancel button to post dashboard & navigate back to blog list.
+* **Blog:** Working. User can only Read the blog posts if authorized. Otherwise I get email from Google firebase complaining - need to sort this out - guest login?. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts. TODO: add cancel button to post dashboard & navigate back to blog list. It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to ehight ration (16:9).
 
 Note: I keep a backup copy of each post in the post-backups folder, in case the Firestore database goes down.
 

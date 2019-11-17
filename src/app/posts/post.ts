@@ -4,6 +4,6 @@ export class Post {
 	content: string;
 	image: string;
   published: Date;
-  subtitle: String;
+  subtitle: string;
 	title: string;
 }

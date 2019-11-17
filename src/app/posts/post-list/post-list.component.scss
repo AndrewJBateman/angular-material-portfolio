@@ -17,12 +17,21 @@ mat-card-actions {
   font-size: 12px !important;
 }
 
-.strong-style {
+.title-style {
   color: #0D47A1;
-  margin: 0 0 8px;
+  margin: 0 0 4px;
   font-size: 18px;
   text-decoration: underline;
   text-decoration-color: rgb(245, 200, 241);
+}
+
+.subtitle-style {
+  color: #0D47A1;
+  font-size: 14px;
+  // margin: 0 0 8px;
+  // font-size: 14px;
+  // text-decoration: underline;
+  // text-decoration-color: rgb(245, 200, 241);
 }
 
 .content-style {

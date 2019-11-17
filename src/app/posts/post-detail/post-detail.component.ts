@@ -34,6 +34,7 @@ export class PostDetailComponent implements OnInit {
   updatePost() {
     const formData = {
       title: this.post.title,
+      subtitle: this.post.subtitle,
       content: this.post.content,
       published: new Date()
     };

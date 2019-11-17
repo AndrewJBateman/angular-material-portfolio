@@ -1,0 +1,33 @@
+{
+  avatar_url: "https://avatars2.githubusercontent.com/u/27190679?v=4"
+  bio: "Engineering | Information Technology | Programming"
+  blog: ""
+  company: null
+  created_at: "2017-04-10T06:11:57Z"
+  email: null
+  events_url: "https://api.github.com/users/AndrewJBateman/events{/privacy}"
+  followers: 5
+  followers_url: "https://api.github.com/users/AndrewJBateman/followers"
+  following: 19
+  following_url: "https://api.github.com/users/AndrewJBateman/following{/other_user}"
+  gists_url: "https://api.github.com/users/AndrewJBateman/gists{/gist_id}"
+  gravatar_id: ""
+  hireable: null
+  html_url: "https://github.com/AndrewJBateman"
+  id: 27190679
+  location: "Spain, France & England"
+  login: "AndrewJBateman"
+  name: "Andrew Bateman"
+  node_id: "MDQ6VXNlcjI3MTkwNjc5"
+  organizations_url: "https://api.github.com/users/AndrewJBateman/orgs"
+  public_gists: 5
+  public_repos: 204
+  received_events_url: "https://api.github.com/users/AndrewJBateman/received_events"
+  repos_url: "https://api.github.com/users/AndrewJBateman/repos"
+  site_admin: false
+  starred_url: "https://api.github.com/users/AndrewJBateman/starred{/owner}{/repo}"
+  subscriptions_url: "https://api.github.com/users/AndrewJBateman/subscriptions"
+  type: "User"
+  updated_at: "2019-11-14T11:13:45Z"
+  url: "https://api.github.com/users/AndrewJBateman"
+}
