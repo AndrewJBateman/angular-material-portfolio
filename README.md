@@ -17,13 +17,18 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 ## General info
 
-* Responsive - pages resize using Angular flex layout and grids of Angular Material mat-cards. Using 3 breakpoint sizes: desktop 1200px (anything above 1024px), tablet iPad 768 x 1024px, iPhone 5 320 x 568px
+* Responsive - pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes:
+desktop 1200px (anything above 1024px)
+iPad: 768
+bigger screens: 1024px, 
+iPhone: 320, 480px lanscape
 
 ## Sections info
 
 * **Navbars:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles.
 
 * **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
+TODO: add link at bottom to return to the top (good for mobile phones):
 
 * **Projects:** Working. Complete real content or add coming soon link. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
@@ -31,7 +36,9 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 * **Contact:** Working. Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Update this to send me an email with the message.
 
-* **Blog:** Working. User can only Read the blog posts if authorized. Otherwise I get email from Google firebase complaining - need to sort this out - guest login?. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts. TODO: add cancel button to post dashboard & navigate back to blog list. It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to ehight ration (16:9).
+* **Blog:** Working. User can only Read the blog posts if authorized. Otherwise I get daily emails from Google firebase complaining - need to sort this out - guest login?. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
+mat-cards now display Post title, subtitle, content as well post category (dev, IT or Eng), time to read, calculated using a simple Angular pipe and how old the post is (another pipe using the Moment npm module).
+TODO: add cancel button to post dashboard & navigate back to blog list. It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to ehight ration (16:9).
 
 Note: I keep a backup copy of each post in the post-backups folder, in case the Firestore database goes down.
 

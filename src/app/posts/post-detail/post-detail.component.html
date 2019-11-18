@@ -12,23 +12,15 @@
         <input matInput placeholder="Post Subtitle" [(ngModel)]="post.subtitle" name="subtitle">
       </mat-form-field>
       <br>
-      <!-- <mat-form-field>
-        <mat-label>Select Category</mat-label>
-        <select matNativeControl [(ngModel)]="selectedCategory" name="category">
-          <option value="Dev">Programming Development</option>
-          <option value="IT">Information Technology</option>
-          <option value="Eng">Engineering</option>
-        </select>
-        </mat-form-field> -->
-        <mat-form-field>
-        <mat-label>Select Category ({{ post.category }} currently selected)</mat-label>
-        <mat-select [(ngModel)]="post.category" [(value)]="selectedCategory" name="category">
-          <mat-option value="Dev">Programming Development</mat-option>
-          <mat-option value="IT">Information Technology</mat-option>
-          <mat-option value="Eng">Engineering</mat-option>
-        </mat-select>
-        </mat-form-field>
-        <br>
+      <mat-form-field>
+      <mat-label>Select Category ({{ post.category }} currently selected)</mat-label>
+      <mat-select [(ngModel)]="post.category" [(value)]="selectedCategory" name="category">
+        <mat-option value="Dev">Dev (Programming Development)</mat-option>
+        <mat-option value="IT">IT (Information Technology)</mat-option>
+        <mat-option value="Eng">Eng (Engineering)</mat-option>
+      </mat-select>
+      </mat-form-field>
+      <br>
       <mat-form-field>
         <textarea matInput placeholder="Post content" [(ngModel)]="post.content" name="content" rows="30"></textarea>
       </mat-form-field>
@@ -78,9 +70,13 @@
           <mat-icon>arrow_back</mat-icon>
         </button>
         <div fxFlex></div>
-        <a mat-flat-button (click)="editing=true" color="primary"><mat-icon>edit</mat-icon></a>
+        <div [hidden]="">
+          <a mat-flat-button (click)="editing=true" color="primary"><mat-icon>edit</mat-icon></a>
+        </div>
         <div fxFlex></div>
-        <a mat-flat-button (click)="delete(post.id)" color="warn"><mat-icon>delete</mat-icon></a>
+        <div [hidden]="">
+          <a mat-flat-button (click)="delete(post.id)" color="warn"><mat-icon>delete</mat-icon></a>
+        </div>
       </mat-card-actions>
 
     </mat-card>

@@ -13,9 +13,9 @@
         <img mat-card-image class="img" src="{{ post.image }}" alt="{{ post.title }}">
         <mat-card-content>
           <p class="title-style">{{ post.title }}</p>
-          <p class="content-style" style="height:80px">
+          <p class="content-style" style="height:90px">
             <span class="subtitle-style">{{ post.subtitle }}:</span>
-            {{ post.content | slice:0:(160 - post.subtitle.length) }}...
+            {{ post.content | slice:0:(158 - post.subtitle.length) }}...
           </p>
           <p>
             <span class="small-text">

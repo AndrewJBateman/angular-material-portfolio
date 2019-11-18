@@ -18,7 +18,7 @@
         </mat-card-title-group> -->
         <mat-card-content>
           <p class="strong-style">{{ project.title }}: </p>
-          <p class="content-style">{{ project.content | slice:0:300 }}...</p>
+          <p class="content-style" style="height:130px">{{ project.content | slice:0:270 }}...</p>
         </mat-card-content>
         <mat-card-actions>
           <a mat-flat-button [href]="project.github" target="_blank" rel="noreferrer" color="accent">View</a>

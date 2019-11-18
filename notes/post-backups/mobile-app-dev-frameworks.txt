@@ -15,7 +15,7 @@ React Native: Developed by Facebook to build Android and iOS apps using Javascri
 
 Corona Native SDK: Developed by Corona Labs Inc. Uses Lua (the leading scripting language for games) on top of C++/OpenGL to build graphics mobile apps for iOS, Android & Kindle, desktop apps for Windows & OS X and conected TV apps for Apple TV, Fire TV and Android TV. Corona API includes audio and graphics, cryptography, networking and device acceleromater info, GPS and user inputs. Apps include Designer City, Cuentopia's Jakhu Stories, Tiny Boxes...
 
-jQuery Mobile:
+jQuery Mobile: HTML-based user interface javascript library. Compatible with other frameworks such as Phonegap and Whitelight..Uses the AJAX navigation system and HTML5, CSS3 & Javascript. jQuery provided DOM manipulation, animation and AJAX calls but went out of fashion as other frameworks appeared and javascript matured. However jQuery is still used in 77% of the top websites. jQuery Mobile is at version 1.4.5. It is used by Untappd for beer drinking, Goba (Get Out Be Active), Take Me Fishing, Galla Art, Veev, mba Multimedia, Chase mobile banking, Sony Vaio S, Pillow Whisper, Redvolume Records, Geekaphone, Boorbool.
 
 Intel XDK:
 
