@@ -27,11 +27,20 @@
     </mat-form-field>
     <br>
     <mat-form-field>
+      <mat-label>Select Category</mat-label>
+      <select matNativeControl [(ngModel)]="category" name="category">
+        <option value="Dev">Programming Development</option>
+        <option value="IT">Information Technology</option>
+        <option value="Eng">Engineering</option>
+      </select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
       <textarea matInput placeholder="Post Content" [(ngModel)]="content" name="content" rows="4"></textarea>
     </mat-form-field>
     <br>
-    <button mat-raised-button (click)="createPost()" [disabled]="!title || !content || !image" color="accent">{{buttonText}}</button>
-    <!-- <button mat-raised-button (click)="createPost()"  color="accent">Cancel</button> -->
+    <button mat-raised-button (click)="createPost()" [disabled]="!title || !content || !image || !category" color="accent">{{buttonText}}</button>
+    <!-- <button mat-raised-button (click)="cancel()"  color="accent">Cancel</button> -->
   </mat-expansion-panel>
 </section>
 

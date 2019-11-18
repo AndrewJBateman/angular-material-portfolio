@@ -19,6 +19,7 @@ export class PostDashboardComponent implements OnInit {
 	imageby: string;
   title: string;
   subtitle: string;
+  category: string;
 
 	uploadPercent: Observable<number>;
 	downloadURL: Observable<string>;
@@ -45,13 +46,15 @@ export class PostDashboardComponent implements OnInit {
       published: new Date(),
       title: this.title,
       subtitle: this.subtitle,
+      category: this.category
 		};
 		this.postService.create(postData);
     this.title = '';
     this.subtitle = '';
+    this.category = '';
 		this.content = '';
 		this.buttonText = 'Post Created';
-		this.image = '';
+    this.image = '';
 		this.imageby = '';
 		setTimeout(() => (this.buttonText = 'Create Post'), 3000);
   }
@@ -60,7 +63,7 @@ export class PostDashboardComponent implements OnInit {
   //   this.router.navigate(['/blog']);
   // }
   
-	uploadImage(event) {
+	uploadImage(event: any) {
 		const file = event.target.files[0];
 		const path = `posts/${file.name}`;
 		const fileRef = this.storage.ref(path);
@@ -77,7 +80,7 @@ export class PostDashboardComponent implements OnInit {
 				})
 			)
 			.subscribe();
-			console.log('image uploaded');
+      console.log('image uploaded');
 		}
   }
   

@@ -13,9 +13,9 @@
         <img mat-card-image class="img" src="{{ post.image }}" alt="{{ post.title }}">
         <mat-card-content>
           <p class="title-style">{{ post.title }}</p>
-          <p class="content-style">
+          <p class="content-style" style="height:80px">
             <span class="subtitle-style">{{ post.subtitle }}:</span>
-            {{ post.content | slice:0:120 }}...
+            {{ post.content | slice:0:(160 - post.subtitle.length) }}...
           </p>
           <p>
             <span class="small-text">
@@ -23,8 +23,11 @@
               <!-- {{ post.published.toDate() | date:'dd/MM/yyyy' }} -->
               {{ post.published.toDate() | dateConvert }}
               <div fxFlex></div>
+              <mat-icon color="accent">folder_open</mat-icon>
+              {{ post.category }}
+              <div fxFlex></div>
               <mat-icon color="accent">timer</mat-icon>
-              {{ post.content | readTime }} minute read
+              {{ post.content | readTime }} minutes
             </span>
           </p>
         </mat-card-content>             

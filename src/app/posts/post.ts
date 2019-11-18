@@ -5,5 +5,6 @@ export class Post {
 	image: string;
   published: Date;
   subtitle: string;
-	title: string;
+  title: string;
+  category: string;
 }

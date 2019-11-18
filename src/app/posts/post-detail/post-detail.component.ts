@@ -12,6 +12,7 @@ import { Post } from '../post';
 export class PostDetailComponent implements OnInit {
   post: Post;
   editing = false;
+  selectedCategory: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -35,6 +36,7 @@ export class PostDetailComponent implements OnInit {
     const formData = {
       title: this.post.title,
       subtitle: this.post.subtitle,
+      category: this.post.category,
       content: this.post.content,
       published: new Date()
     };
