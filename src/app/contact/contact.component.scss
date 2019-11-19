@@ -9,6 +9,11 @@ mat-card {
   padding: 8px;
 }
 
+mat-card-actions {
+  margin: auto;
+  padding: 8px 0 !important;
+}
+
 p {
   color: #455A64;
 }
@@ -71,8 +76,9 @@ textarea {
   align-items: center;
 }
 
-.go-home-button {
+.home-another-button {
   position: center;
   text-align: center;
   padding: 16px 16px 4px 16px;
+  border: 1px solid rgb(245, 200, 241) !important;
 }

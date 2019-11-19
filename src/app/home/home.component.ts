@@ -8,13 +8,17 @@ import { AREAS } from './areas';
 	templateUrl: './home.component.html',
 	styleUrls: ['./home.component.scss']
 })
+
+
 export class HomeComponent implements OnInit {
 	areas = AREAS;
 	profile: any;
 	repos: number;
-	lastUpdated: string;
-
-	constructor(private githubService: GithubService) { }
+  lastUpdated: string;
+  
+	constructor(
+    private githubService: GithubService
+  ) { }
 
 	getRepoData(): void {
 		this.githubService.getUserProfile()
@@ -27,6 +31,6 @@ export class HomeComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.getRepoData();
-	}
+  }
 
 }

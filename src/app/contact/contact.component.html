@@ -36,22 +36,49 @@
           </mat-error>
         </mat-form-field>
 
-        <button
+        <!-- <button
           mat-raised-button
           type="submit"
           [disabled]="contactForm.invalid || loading"
           color="primary">
           {{btnLabel}}
+        </button> -->
+
+      <mat-card-actions align="end">
+        <button
+          mat-flat-button
+          [disabled]="contactForm.valid && loading"
+          color="primary"
+          (click)="goBack()"
+          aria-label="Back button">
+          <mat-icon>arrow_back</mat-icon>
         </button>
+        <div fxFlex></div>
+        <button
+          mat-raised-button
+          type="submit"
+          [disabled]="contactForm.invalid || loading"
+          color="primary">
+          <mat-icon>email</mat-icon>
+        </button>
+        <div fxFlex></div>
+        <div [hidden]="">
+          <a mat-flat-button (click)="sendAnother()" color="warn"><mat-icon>clear</mat-icon></a>
+        </div>
+      </mat-card-actions>
       </mat-card>
     </form>
 
     <div *ngIf="success" class="success-div">
       <mat-card class="thanks-card" style="text-align: center;">
         <mat-card-header class="center">
-           
-          <mat-card-title style="color: green"><mat-icon class="success-icon" style="color: green">check_circle</mat-icon>  Success!</mat-card-title>
+          <mat-card-title style="color: green">
+            <mat-icon class="success-icon" style="color: green">
+              check_circle
+            </mat-icon>  Success!
+          </mat-card-title>
         </mat-card-header>
+
         <mat-card-content>
           <p>Your message has been sent.</p>
           <button
@@ -59,8 +86,18 @@
             (click)="goHome()"
             class="go-home-button"
             >
-            <mat-icon style="text-align: center; color: #690726; transform: scale(2)">home</mat-icon>
+            <mat-icon style="text-align: center; color: #0D47A1; transform: scale(2)">
+              home
+            </mat-icon>
             <p>Go to Homepage</p>
+          </button>
+
+          <button
+            mat-button
+            (click)="sendAnother()"
+            class="home-another-button">
+            <mat-icon style="text-align: center; color: #0D47A1; transform: scale(2)">email</mat-icon>
+            <p>Send another message</p>
           </button>
         </mat-card-content>
       </mat-card>

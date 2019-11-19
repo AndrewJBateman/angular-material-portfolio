@@ -32,13 +32,15 @@ TODO: add link at bottom to return to the top (good for mobile phones):
 
 * **Projects:** Working. Complete real content or add coming soon link. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
 
-* **Skills:** Working. Complete real content. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. 
+* **Skills:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
+TODO: Complete real content. 
 
-* **Contact:** Working. Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Update this to send me an email with the message.
+* **Contact:** Working. Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
+TODO: Update this to send me an email with the message.
 
 * **Blog:** Working. User can only Read the blog posts if authorized. Otherwise I get daily emails from Google firebase complaining - need to sort this out - guest login?. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
 mat-cards now display Post title, subtitle, content as well post category (dev, IT or Eng), time to read, calculated using a simple Angular pipe and how old the post is (another pipe using the Moment npm module).
-TODO: add cancel button to post dashboard & navigate back to blog list. It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to ehight ration (16:9).
+TODO:  It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9).
 
 Note: I keep a backup copy of each post in the post-backups folder, in case the Firestore database goes down.
 

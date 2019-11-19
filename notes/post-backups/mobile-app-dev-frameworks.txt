@@ -17,9 +17,9 @@ Corona Native SDK: Developed by Corona Labs Inc. Uses Lua (the leading scripting
 
 jQuery Mobile: HTML-based user interface javascript library. Compatible with other frameworks such as Phonegap and Whitelight..Uses the AJAX navigation system and HTML5, CSS3 & Javascript. jQuery provided DOM manipulation, animation and AJAX calls but went out of fashion as other frameworks appeared and javascript matured. However jQuery is still used in 77% of the top websites. jQuery Mobile is at version 1.4.5. It is used by Untappd for beer drinking, Goba (Get Out Be Active), Take Me Fishing, Galla Art, Veev, mba Multimedia, Chase mobile banking, Sony Vaio S, Pillow Whisper, Redvolume Records, Geekaphone, Boorbool.
 
-Intel XDK:
+Intel XDK: Created by Intel, uses HTML5, CSS3 and Javascript. Only used by Intel for IoT dev. No longer used for mobile app dev. 
 
-Flutter:
+Flutter: Flutter does not use Javascript. It uses Dart that compiles to binary code. Native UI components are not used so there is no communication layer between View component and code so graphics are very fast. Flutter works like React with its virtual DOM, rendering only when necessary. Everything is based on widgets, composed on a Skia canvas. Apps using Flutter include: realtor.com, Tencent, The New York Times, Square, Google Assistant, ebay, Groupon, CapitalOne etc.
 
 Mobile Angular UI:
 

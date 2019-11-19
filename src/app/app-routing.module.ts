@@ -33,7 +33,7 @@ const appRoutes: Routes = [
 	},
 	{
 		path: 'contact',
-		component: ContactComponent
+    component: ContactComponent
 	},
 	{
 		path: '**',
@@ -47,7 +47,14 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-	imports: [CommonModule, PostsModule, RouterModule.forRoot(appRoutes)],
+	imports: [
+    CommonModule,
+    PostsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      // { onSameUrlNavigation: 'reload' }
+    )
+  ],
 	exports: [RouterModule]
 })
 export class AppRoutingModule { }

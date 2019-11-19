@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 
@@ -17,13 +18,24 @@ export class ContactComponent implements OnInit {
 	success = false;
 	imagePath = '/assets/images/laptop-desk.jpg';
 
-	btnLabel = 'Send Message';
-
-	constructor(private fb: FormBuilder, private afs: AngularFirestore, private router: Router) { }
+	constructor(
+    private fb: FormBuilder,
+    private afs: AngularFirestore,
+    private router: Router,
+    private location: Location
+  ) { }
 
 	ngOnInit() {
-		this.contactForm = this.fb.group({
-			name: '',
+    this.fillForm();
+  }
+  
+  private fillForm() {
+    this.contactForm = this.fb.group({
+			name: ['', [
+				Validators.required,
+				Validators.minLength(4),
+				Validators.maxLength(100)
+			]],
 			email: ['', [
 				Validators.required,
 				Validators.email
@@ -34,9 +46,7 @@ export class ContactComponent implements OnInit {
 				Validators.maxLength(400)
 			]]
 		});
-
-		this.contactForm.valueChanges.subscribe(console.log);
-	}
+  }
 
 	get name() {
 		return this.contactForm.get('name');
@@ -52,7 +62,6 @@ export class ContactComponent implements OnInit {
 
 	async submitHandler() {
 		this.loading = true;
-		this.btnLabel = 'Sending...';
 
 		const formValue = this.contactForm.value;
 
@@ -68,5 +77,16 @@ export class ContactComponent implements OnInit {
 
 	goHome() {
 		this.router.navigate(['/']);
-	}
+  }
+
+  goBack() {
+    this.location.back();
+  }
+  
+  sendAnother() {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate(['/contact']);
+  }  
+
 }
