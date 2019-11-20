@@ -23,7 +23,7 @@ iPad: 768
 bigger screens: 1024px, 
 iPhone: 320, 480px lanscape
 
-* Build file: TODO: reduce bundle sizes (2.5MB currently).
+* Build file: TODO: reduce bundle sizes (2.5MB currently). webpack-bundle-analyzer used to analyse webpack performance. Replace moment package with day.js
 
 * colors - add to styles scss to reduce repeated scss throughout app.
 
@@ -64,7 +64,7 @@ Note: I keep a backup copy of each post in the post-backups folder, in case the 
 
 * [Reactive Extensions Library for Javascript rxjs v6.5.3](https://rxjs-dev.firebaseapp.com/)
 
-* [moment v2.24.0](https://momentjs.com) to convert Github UTC string to '... ago'.
+* [dayjs v1.8.17](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'.
 
 ## Setup
 
