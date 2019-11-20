@@ -6,7 +6,7 @@ mat-card {
 .main-heading {
   text-align: center;
   color: #0D47A1;
-  margin: 8px auto 0 auto;
+  margin: 0;
   text-decoration: underline;
   text-decoration-color: rgb(245, 200, 241);
 }
@@ -15,6 +15,7 @@ mat-card {
   text-align: center;
   color: #455A64;
   margin-bottom: 0;
+  font-size: 14px;
 }
 
 .me-heading {
@@ -40,11 +41,12 @@ mat-card {
 
 .repo-text {
   color: #0D47A1;
+  font-size: larger;
 }
 
 .horiz-line {
   margin: 1em;
-  border: 2px solid rgb(245, 200, 241)
+  border: 2px solid rgb(245, 200, 241);
 }
 
 .title-style {

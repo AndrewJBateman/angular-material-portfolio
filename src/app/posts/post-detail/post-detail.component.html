@@ -59,7 +59,7 @@
           </p>
           <div fxFlex></div>
           <p class="credit-date-text">
-            <mat-icon color="accent">today</mat-icon> {{ post.published.toDate() | date:'dd/MM/yyyy' }}
+            <mat-icon color="accent">today</mat-icon> {{ post.published.toDate() | dateConvert }}
           </p>
         </span>
       </mat-card-content>
@@ -70,12 +70,12 @@
           <mat-icon>arrow_back</mat-icon>
         </button>
         <div fxFlex></div>
-        <div [hidden]="">
+        <div>
           <a mat-flat-button (click)="editing=true" color="primary"><mat-icon>edit</mat-icon></a>
         </div>
         <div fxFlex></div>
-        <div [hidden]="">
-          <a mat-flat-button (click)="delete(post.id)" color="warn"><mat-icon>delete</mat-icon></a>
+        <div>
+          <a mat-flat-button (click)="delete()" color="warn"><mat-icon>delete</mat-icon></a>
         </div>
       </mat-card-actions>
 
