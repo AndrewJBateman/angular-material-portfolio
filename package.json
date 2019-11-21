@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:stats": "ng build --stats-json",
+    "analyze": "webpack-bundle-analyzer dist/stats-es2015.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

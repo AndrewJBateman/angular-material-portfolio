@@ -1,6 +1,6 @@
 # Portfolio Angular Material
 
-Angular 8 app using Angular Material to create a fully-responsive portfolio website.
+Angular 8 app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as Contact messages from users.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -17,25 +17,26 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 ## General info
 
-* Responsive - pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes:
+* **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes:
 desktop 1200px (anything above 1024px)
 iPad: 768
 bigger screens: 1024px, 
 iPhone: 320, 480px lanscape
 
-* Build file: TODO: reduce bundle sizes (2.5MB currently). webpack-bundle-analyzer used to analyse webpack performance. Replace moment package with day.js
+* **Build file:** TODO: reduce bundle sizes (2.5MB currently). webpack-bundle-analyzer used to analyse webpack performance. Replaced moment package with day.js as it uses less memory.
 
-* colors - add to styles scss to reduce repeated scss throughout app.
+* **Colors:** Add to styles scss to reduce repeated scss throughout app.
 
 ## Sections info
 
 * **Navbars:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles.
-TODO: all good for now. add link to CV
+TODO: all good for now. Add link to CV
 
 * **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
 TODO: add link at bottom to return to the top (good for mobile phones):
 
-* **Projects:** Working. Complete real content or add coming soon link. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
+* **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen.
+TODO: Complete real content.
 
 * **Skills:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 TODO: Complete real content. 
@@ -66,17 +67,23 @@ Note: I keep a backup copy of each post in the post-backups folder, in case the 
 
 * [dayjs v1.8.17](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'.
 
+* [Webpack Bundle Analyser v3.6.0](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'.
+
 ## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+* Run `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder.
+
+* Run `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis.
 
 ## Code Examples
 
 ## Features
 
-* [Github API](https://developer.github.com/v4/query/) used with httpClient get request to display current state of my repository.
+* [Github API](https://developer.github.com/v4/query/) used with a httpClient get request to display current state of my repository.
 
 ## Status & To-Do List
 
@@ -91,6 +98,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 * [website by Jaxon Wright](https://jaxonwright.com/)
 
 * [Medium article by Tomas Trajan: The complete guide to Angular Material Themes](https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1)
+
+* [article by Paul Halliday: Angular: Performance Analysis with webpack Bundle Analyzer](https://alligator.io/angular/angular-webpack-bundle-analyzer/)
 
 * [**Blog posts image credits:** javascript: Photo by Markus Spiske on Unsplash, database: Photo by Markus Spiske on Unsplash, angular: Photo by Markus Spiske on Unsplash, arrays: Photo by Taylor Vick on Unsplash, mobile frameworks: Photo by Christian Widell on Unsplash, frameworks: Photo by Caspar Camille Rubin on Unsplash, newsapp: Photo by Breakslow on Unsplash, microservices: Photo by QuickOrder on Unsplash](https://unsplash.com/)
 
@@ -109,6 +118,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ![Example screenshot](./img/blog-pc.png)
 ![Example screenshot](./img/blog-create-pc.png)
 ![Example screenshot](./img/blog-mobile.png)
+![Example screenshot](./img/bundle_analyser.png)
 
 ## Contact
 
