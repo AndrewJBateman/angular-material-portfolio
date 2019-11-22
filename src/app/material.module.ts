@@ -24,7 +24,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 		MatListModule,
 		MatProgressBarModule,
 		MatSelectModule,
-		MatSidenavModule,
+    MatSidenavModule,
 		MatToolbarModule,
 	]
 })

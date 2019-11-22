@@ -7,8 +7,8 @@
   <div class="item-1" fxFlex="40%">
     <img 
       class="img-thumbnail"
-      src="{{imagePath}}"
-      alt="photo of a laptop on a desk">
+      src="{{ imagePath }}"
+      alt="{{ imageAlt }}">
     <h2 class="contact-heading" [hidden]="success">Send me a message...</h2>
   </div>
   <div class="item-2" fxFlex="60%" fxFlexOrder="2">
@@ -36,44 +36,43 @@
           </mat-error>
         </mat-form-field>
 
-        <!-- <button
-          mat-raised-button
-          type="submit"
-          [disabled]="contactForm.invalid || loading"
-          color="primary">
-          {{btnLabel}}
-        </button> -->
-
-      <mat-card-actions align="end">
-        <button
-          mat-flat-button
-          [disabled]="contactForm.valid && loading"
-          color="accent"
-          (click)="goBack()"
-          aria-label="Back button">
-          <mat-icon>arrow_back</mat-icon>
-        </button>
-        <div fxFlex></div>
-        <button
-          mat-raised-button
-          type="submit"
-          [disabled]="contactForm.invalid || loading"
-          color="primary">
-          <mat-icon>email</mat-icon>
-        </button>
-        <div fxFlex></div>
-        <div [hidden]="">
-          <a mat-flat-button (click)="sendAnother()" color="warn"><mat-icon>clear</mat-icon></a>
-        </div>
-      </mat-card-actions>
+        <mat-card-actions align="end">
+          <button
+            mat-flat-button
+            [disabled]="contactForm.valid && loading"
+            color="accent"
+            (click)="goBack()"
+            aria-label="Back button">
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+          <div fxFlex></div>
+          <button
+            mat-raised-button
+            type="submit"
+            [disabled]="contactForm.invalid || loading"
+            color="primary"
+            aria-label="Send button">
+            <mat-icon>email</mat-icon>
+          </button>
+          <div fxFlex></div>
+          <div [hidden]="">
+            <a
+              mat-flat-button
+              (click)="sendAnother()"
+              color="warn"
+              aria-label="cancel button">
+              <mat-icon>clear</mat-icon>
+            </a>
+          </div>
+        </mat-card-actions>
       </mat-card>
     </form>
 
     <div *ngIf="success" class="success-div">
-      <mat-card class="thanks-card" style="text-align: center;">
+      <mat-card class="thanks-card">
         <mat-card-header class="center">
           <mat-card-title style="color: green">
-            <mat-icon class="success-icon" style="color: green">
+            <mat-icon class="success-icon">
               check_circle
             </mat-icon>  Success!
           </mat-card-title>
@@ -84,9 +83,8 @@
           <button
             mat-button
             (click)="goHome()"
-            class="go-home-button"
-            >
-            <mat-icon style="text-align: center; color: #0D47A1; transform: scale(2)">
+            class="go-home-button">
+            <mat-icon class="contact-sent-icon">
               home
             </mat-icon>
             <p>Go to Homepage</p>
@@ -96,10 +94,11 @@
             mat-button
             (click)="sendAnother()"
             class="home-another-button">
-            <mat-icon style="text-align: center; color: #0D47A1; transform: scale(2)">email</mat-icon>
+            <mat-icon class="contact-sent-icon">email</mat-icon>
             <p>Send another message</p>
           </button>
         </mat-card-content>
+        
       </mat-card>
     </div>
   </div>

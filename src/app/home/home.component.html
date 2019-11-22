@@ -12,18 +12,36 @@
     </div>
     <div class="item-2" fxFlex="70%" fxFlexOrder="2">
       <h2 class="me-heading">About Me</h2>
-      <p class="main-para">I have been studying programming part-time for 3 years, completing a range of projects, online courses & tutorials from FreeCodeCamp, Treehouse, Udemy and Youtube etc. I have also learnt a lot from reading programming-related blogs and articles. I currently have <span *ngIf="profile" class="repo-text"> {{ repos }}</span> repositories on Github (last updated: <span *ngIf="profile" class="repo-text">{{ lastUpdated | dateConvert }}</span>) with a mixture of my own projects, tutorial code and forked projects of interest.
-      <p class="main-para">Programming was not completely new to me as I previously worked for 20 years as an Electronic/Electrical Engineer in the UK, Spain and finally in Norway (including 2 years in the
-        <a href="https://en.wikipedia.org/wiki/Hammerfest_(town)"
-          target="_blank">Northermost town in the world
-        </a>). After this I returned to Spain to look after the family (including a child with a rare disease called
-        <a href="https://en.wikipedia.org/wiki/Landau%E2%80%93Kleffner_syndrome"
-          target="_blank">Landau Kleffner
-        </a>) & continue programming.
+      
+      <p class="main-para">
+        I have been studying programming part-time for 3 years, completing a range of projects, online courses & tutorials from FreeCodeCamp, Treehouse, Udemy and Youtube etc. I have also learnt a lot from reading programming-related blogs and articles. I currently have
+        <span *ngIf="profile" class="repo-text"> {{ repos }}</span> 
+        repositories on Github (last updated: 
+        <span *ngIf="profile" class="repo-text">{{ lastUpdated | dateConvert }}</span>
+        ) with a mixture of my own projects, tutorial code and forked projects of interest.
       </p>
-      <p class="main-para">There is more about my programming and engineering in the cards below. The aim of this website is to showcase some of my projects and explain a little about me, without repeating what is on my Linkedin profile or CV. This website has been a big project in itself - see the last of the cards below for info.</p>
 
-      <p class="main-para">This site has a technical blog that I will be updating regularly with categories including Programming Development (Dev), IT and Engineering (Eng). I welcome comments - just go to the Contact page to send me a message :-).</p>
+      <p class="main-para">Programming was not completely new to me as I previously worked for 20 years as an Electronic/Electrical Engineer in the UK, Spain and finally in Norway (including 2 years in the
+        <a
+          href="https://en.wikipedia.org/wiki/Hammerfest_(town)"
+          target="_blank">
+          Northermost town in the world
+        </a>
+        ). After this I returned to Spain to look after the family (including a child with a rare disease called
+        <a
+          href="https://en.wikipedia.org/wiki/Landau%E2%80%93Kleffner_syndrome"
+          target="_blank">
+          Landau Kleffner
+        </a>
+        ) & continue programming.
+      </p>
+      <p class="main-para">
+        There is more about my programming and engineering in the cards below. The aim of this website is to showcase some of my projects and explain a little about me, without repeating what is on my Linkedin profile or CV. This website has been a big project in itself - see the last of the cards below for info.
+      </p>
+
+      <p class="main-para">
+        This site has a technical blog that I will be updating regularly with categories including Programming Development (Dev), IT and Engineering (Eng). I welcome comments - just go to the Contact page to send me a message :-).
+      </p>
     </div><!--end of item 2-->
   </div><!--end of top container-->
 
@@ -40,7 +58,3 @@
     </mat-card>
   </div>
 </div>
-
-
-
-

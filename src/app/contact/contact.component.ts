@@ -16,7 +16,8 @@ export class ContactComponent implements OnInit {
 	// Form state
 	loading = false;
 	success = false;
-	imagePath = '/assets/images/laptop-desk.jpg';
+  imagePath = '/assets/images/laptop-desk.jpg';
+  imageAlt = 'photo of someone typing at a laptop on a desk';
 
 	constructor(
     private fb: FormBuilder,
@@ -71,7 +72,8 @@ export class ContactComponent implements OnInit {
 		} catch (err) {
 			console.log(err);
 		}
-		this.imagePath = '/assets/images/thanks.jpg';
+    this.imagePath = '/assets/images/thanks.jpg';
+    this.imageAlt = 'photo of a card with the word thanks on a wooden table';
 		this.loading = false;
 	}
 

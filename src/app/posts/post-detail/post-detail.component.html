@@ -50,9 +50,9 @@
       <mat-card-content>
         <p class="post-content">{{ post.content }}</p>
         <span>
-          <p class="credit-date-text">
+          <a class="credit-date-text" href="{{ post.imageLink }}" target="_blank" rel="noreferrer">
             <mat-icon color="accent">photo_camera</mat-icon> {{ post.imageby }}
-          </p>
+          </a>
           <div fxFlex></div>
           <p class="credit-date-text">
           <mat-icon color="accent">folder_open</mat-icon> {{ post.category }}

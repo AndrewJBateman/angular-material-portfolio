@@ -10,7 +10,10 @@
       style="padding: 5px;"
     >
       <mat-card class="mat-elevation-z1" routerLink="{{ post.id }}">
-        <img mat-card-image class="img" src="{{ post.image }}" alt="{{ post.title }}">
+        <div class="image-div">
+          <img mat-card-image class="img" src="{{ post.image }}" alt="{{ post.title }}">
+          <div class="photo-credit">Photo by {{ post.imageby }}</div>
+        </div>
         <mat-card-content>
           <p class="title-style">{{ post.title }}</p>
           <p class="content-style" style="height:90px">
@@ -20,7 +23,6 @@
           <p>
             <span class="small-text">
               <mat-icon color="accent">calendar_today</mat-icon>
-              <!-- {{ post.published.toDate() | date:'dd/MM/yyyy' }} -->
               {{ post.published.toDate() | dateConvert }}
               <div fxFlex></div>
               <mat-icon color="accent">folder_open</mat-icon>
