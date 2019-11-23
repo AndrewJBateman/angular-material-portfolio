@@ -9,8 +9,8 @@
 // define 3 theme color
 // mat-palette accepts $palette-name, main, lighter and darker variants
 $ngMatPort-app-primary: mat-palette($mat-blue-grey, 700);
-$ngMatPort-app-secondary: mat-palette($mat-blue-grey, 700);
 $ngMatPort-app-accent:  mat-palette($mat-blue, 900);
+$ngMatPort-app-warn:    mat-palette($mat-red);
 
 // The warn palette is optional (defaults to red).
 $ngMatPort-app-warn:    mat-palette($mat-red);

@@ -7,9 +7,9 @@ mat-card-image {
   height: 150px;
 }
 
-mat-icon {
-  font-size: 18px;
-}
+// mat-icon {
+//   font-size: 18px;
+// }
 
 mat-card-actions {
   padding: 0;
@@ -18,7 +18,7 @@ mat-card-actions {
 }
 
 a.mat-flat-button {
-  margin-right: 16px;
+  margin-bottom: 8px;
 }
 
 card-container-left {
@@ -33,11 +33,15 @@ card-container-left {
 .strong-style {
   color: #0D47A1;
   margin: 0 0 4px;
-  font-size: 14px;
+  font-size: 18px;
   text-decoration: underline;
   text-decoration-color: rgb(245, 200, 241);
 }
 
 .content-style {
   white-space: pre-wrap;
+}
+
+.project-open-browser {
+  background-color: green;
 }

@@ -79,11 +79,11 @@
         </mat-card-header>
 
         <mat-card-content>
-          <p>Your message has been sent.</p>
+          <p class="success-message">Your message has been sent.</p>
           <button
             mat-button
             (click)="goHome()"
-            class="go-home-button">
+            class="home-another-button">
             <mat-icon class="contact-sent-icon">
               home
             </mat-icon>
@@ -95,7 +95,7 @@
             (click)="sendAnother()"
             class="home-another-button">
             <mat-icon class="contact-sent-icon">email</mat-icon>
-            <p>Send another message</p>
+            <p>Send another</p>
           </button>
         </mat-card-content>
         

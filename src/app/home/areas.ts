@@ -34,19 +34,5 @@ It is estimated to take 1800hours and it took me all of 2017 working part-time. 
 	{
 		title: 'Engineer',
 		content: 'I have Master & Bachelor degrees in Electronic/Electrical Engineering (completed in 1993) and over 20 years experience as an Engineer working on Power, Process Control, Instrumentation and PLC/SCADA systems. I am familiar with computer hardware, synchronous/asynchronous data communications, industrial ethernet, profibus, RS485/RS422/RS232C networks, technical software, PLC digital/analogue I/O & ladder logic etc. I also had experience of concepts relevent to programming, such as boolean logic, arrays and memory caching etc so getting heavily into programming was less difficult for me.'
-	},
-	{
-		title: 'About This Website',
-		content: `The Angular 8 javascript framework was used to build this site. A Google Cloud Firebase backend database stores the blog posts and data from submitted Contact forms. Anyone can view the blog posts but there is a login link in the navbars so only an authorized user can Create, Update and Delete (CRUD) posts. Firebase Authorization is used to login.
-
-Github repository data is fetched from the Github API via an Angular HTTPClient get request (resting on the browser XMLHttp Request Interface) service using an RxJS Observable.
-
-I wanted to minimise time spent on styling and layout as I am an Engineer by trade and for me technical content is king. However a simple clear presentation is important as well as having a fully responsiveness layout. Hence I have made a lot of use of Angular Material cards to present information, together with the Angular Flex Layout API. Icons are limited to the Angular Material Icon Library - e.g. there are no icons for linkedin or github and I have avoided adding bloat by importing the Bootstrap library.
-
-The Contact page uses an Angular Material Card inside a Form that is added to the app Firestore database collection when submitted.
-
-I have followed Don\'t Repeat Yourself (DRY) rules, so data for the home, skills and projects pages was created in separate typescript files (based on a model class) with data-binding to a *ngFor mat-card loop in the template so html template files are kept short.
-
-Navigation is via top and side navbars. I added icons to the side nav bar just because I liked them but I know they are not necessary.`
-	}
+	}	
 ];

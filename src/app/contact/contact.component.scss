@@ -16,6 +16,12 @@ mat-card-actions {
 
 p {
   color: #455A64;
+  margin: 0 0 8px;
+}
+
+p .success-message {
+  color: #455A64;
+  margin: 0 0 16px;
 }
 
 textarea {
@@ -83,6 +89,7 @@ textarea {
   text-align: center;
   padding: 16px 16px 4px 16px;
   border: 1px solid rgb(245, 200, 241) !important;
+  width: 60%;
 }
 
 .success-icon {

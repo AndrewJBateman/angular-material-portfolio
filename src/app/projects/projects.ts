@@ -1,6 +1,26 @@
 import { Project } from './project.module';
 
 export const PROJECTS: Project[] = [
+  {
+		title: 'Portfolio Website',
+		img: {
+			src: '../assets/images/techNews.jpg',
+			alt: 'portfolio website'
+		},
+		content: `Angular 8 + Angular Material fully-responsive frontend with top/side navbars. A Google Cloud Firebase backend database stores the blog posts and data from submitted Contact forms. Anyone can view the blog posts but there is a login link in the navbars so only an authorized user can Create, Update and Delete posts. Firebase Authorization is used to login.
+
+    Github repository data is fetched from the Github API via an Angular HTTPClient get request (resting on the browser XMLHttp Request Interface) service using an RxJS Observable.
+    
+    I wanted to minimise time spent on styling and layout as I am an Engineer by trade and for me technical content is king. However a simple clear presentation is important as well as having a fully responsiveness layout. Hence I have made a lot of use of Angular Material cards to present information, together with the Angular Flex Layout API. Icons are limited to the Angular Material Icon Library - e.g. there are no icons for linkedin or github and I have avoided adding bloat by importing the Bootstrap library.
+    
+    The Contact page uses an Angular Material Card inside a Form that is added to the app Firestore database collection when submitted.
+    
+    I have followed Don\'t Repeat Yourself (DRY) rules, so data for the home, skills and projects pages was created in separate typescript files (based on a model class) with data-binding to a *ngFor mat-card loop in the template so html template files are kept short.
+    
+    `,
+		github: 'https://github.com/AndrewJBateman/angular-material-portfolio',
+		url: ''
+	},
 	{
 		title: 'World News',
 		img: {

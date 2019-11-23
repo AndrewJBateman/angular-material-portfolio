@@ -52,7 +52,6 @@ const appRoutes: Routes = [
     PostsModule,
     RouterModule.forRoot(
       appRoutes,
-      // { onSameUrlNavigation: 'reload' }
     )
   ],
 	exports: [RouterModule]
