@@ -1,1 +1,49 @@
-<p>project-detail works!</p>
+
+
+<section>
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+        </mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list>
+
+<!--mat-card for each project with data-binding from projects.ts-->
+<mat-card>
+    <img class="mat-card-image" [src]="project.img.src" [alt]="project.img.alt">
+    
+    <mat-card-content>
+      <p class="strong-style">{{ project.title }}: </p>
+      <p class="content-style">{{ project.content }}...</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a
+        mat-flat-button
+        target="_blank"
+        rel="noreferrer"
+        color="accent">
+        <mat-icon>more_horiz</mat-icon>
+      </a>
+      <div fxFlex></div>
+      <a 
+        mat-flat-button
+        [href]="project.github"
+        target="_blank"
+        rel="noreferrer"
+        color="primary">
+        <mat-icon>code</mat-icon>
+      </a>
+      <div fxFlex></div>
+      <a 
+      mat-flat-button
+      [href]=""
+      target="_blank"
+      rel="noreferrer"
+      class="project-open-browser">
+      <mat-icon style="color: white;">open_in_browser</mat-icon>
+    </a>
+    </mat-card-actions>
+  </mat-card>
+<section>

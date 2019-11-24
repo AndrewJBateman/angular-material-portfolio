@@ -3,6 +3,10 @@ mat-card {
   padding: 8px;
 }
 
+.home-container {
+  margin-top: 16px;
+}
+
 .main-heading {
   text-align: center;
   color: #0D47A1;
@@ -21,20 +25,20 @@ mat-card {
 .me-heading {
   text-align: left;
   color: #0D47A1;
-  margin: 16px 12px 10px;
+  margin: 0 12px 0;
   text-decoration: underline;
   text-decoration-color: rgb(245, 200, 241);
 }
 
 .main-para {
-  margin: 12px;
+  margin: 0 12px 12px;
 }
 
 .img-thumbnail {
   display: block;
   width: 80%;
   height: auto;
-  margin: 16px auto;
+  margin: 0 auto 8px;
   position: center;
   border-radius: 50%;
 }

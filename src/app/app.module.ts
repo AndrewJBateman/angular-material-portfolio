@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { PipesModule } from './pipes/pipes.module';
 import { PostsModule } from './posts/posts.module';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 import { SharedModule } from './shared/shared.module';
 import { SkillsComponent } from './skills/skills.component';
 
@@ -24,7 +25,8 @@ import { SkillsComponent } from './skills/skills.component';
 		ContactComponent,
 		HomeComponent,
 		PageNotFoundComponent,
-		ProjectsComponent,
+    ProjectsComponent,
+    ProjectDetailComponent,
     SkillsComponent
 	],
 	imports: [

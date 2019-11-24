@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
@@ -21,8 +22,12 @@ const appRoutes: Routes = [
 	},
 	{
 		path: 'projects',
-		component: ProjectsComponent
-	},
+    component: ProjectsComponent
+  },
+  {
+    path: 'projects/:projectId',
+    component: ProjectDetailComponent
+  },
 	{
 		path: 'skills',
 		component: SkillsComponent

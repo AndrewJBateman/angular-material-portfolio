@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { PROJECTS } from './projects';
 
@@ -10,6 +11,6 @@ import { PROJECTS } from './projects';
 export class ProjectsComponent {
   projects = PROJECTS;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 }

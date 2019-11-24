@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { PROJECTS } from '../projects';
 
 @Component({
   selector: 'app-project-detail',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-detail.component.scss']
 })
 export class ProjectDetailComponent implements OnInit {
+  // projects = PROJECTS;
+  project;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.project = PROJECTS[+params.get('projectId')];
+    });
   }
 
 }

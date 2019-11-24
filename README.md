@@ -38,6 +38,9 @@ TODO: add link at bottom to return to the top (good for mobile phones):
 * **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page with more info, 1 routes to github page and 1 open app in browser.
 TODO: Complete real content, add routing for Project-detail page.
 
+* **Project-Detail:** Navigates to project detail page from project page link. No content.
+TODO: Grid-list to be used to display screeen prints and info on projects.
+
 * **Skills:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 TODO: Complete real content. 
 
@@ -100,7 +103,7 @@ Note: I keep a backup copy of each post in the post-backups folder, in case the 
 
 * [article by Paul Halliday: Angular: Performance Analysis with webpack Bundle Analyzer](https://alligator.io/angular/angular-webpack-bundle-analyzer/)
 
-* Blog posts images from [Unsplash](https://unsplash.com/)
+* [Blog post images from Unsplash](https://unsplash.com/)
 
 ## Screenshots
 
