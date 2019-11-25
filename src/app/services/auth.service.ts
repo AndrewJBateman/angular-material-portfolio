@@ -22,7 +22,8 @@ export class AuthService {
 	}
 
 	async login() {
-		await this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    await this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    console.log('authState', this.authState);
 	}
 
 	async logout() {

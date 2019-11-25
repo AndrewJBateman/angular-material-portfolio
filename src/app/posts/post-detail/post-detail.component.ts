@@ -56,7 +56,7 @@ export class PostDetailComponent implements OnInit {
     this.router.navigate(['/blog']);
   }
 
-  // isLoggedIn() {
-  //   return this.auth.authState != null;
-  // }
+  isLoggedIn() {
+    return this.auth.authState != null;
+  }
 }

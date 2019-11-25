@@ -7,21 +7,19 @@
       fxFlex.sm="50"
       fxFlex.xs="100"
       fxLayout="column"
-      style="padding: 5px;"
-    >
+      style="padding: 5px;">
+      
       <!--mat-card for each project with data-binding from projects.ts-->
       <mat-card>
-        <img class="mat-card-image" [src]="project.img.src" [alt]="project.img.alt">
+        <img class="mat-card-image" [src]="project.images[0].src" [alt]="project.images[0].page">
         <mat-card-content>
           <p class="strong-style">{{ project.title }}: </p>
-          <p class="content-style">{{ project.content | slice:0:270 }}...</p>
+          <p class="content-style">{{ project.summary | slice:0:270 }}...</p>
         </mat-card-content>
         <mat-card-actions>
           <a
             mat-flat-button
             [routerLink]="['/projects', projectId]"
-            target="_blank"
-            rel="noreferrer"
             color="accent">
             <mat-icon>more_horiz</mat-icon>
           </a>
@@ -36,16 +34,16 @@
           </a>
           <div fxFlex></div>
           <a 
-          mat-flat-button
-          [href]=""
-          target="_blank"
-          rel="noreferrer"
-          class="project-open-browser">
-          <mat-icon style="color: white;">open_in_browser</mat-icon>
-        </a>
+            mat-flat-button
+            [href]=""
+            target="_blank"
+            rel="noreferrer"
+            class="project-open-browser">
+            <mat-icon style="color: white;">open_in_browser</mat-icon>
+          </a>
         </mat-card-actions>
       </mat-card>
     </div>
-    <router-outlet></router-outlet>
-  </div>
+  <!-- <router-outlet></router-outlet> -->
+</div>
 </div>

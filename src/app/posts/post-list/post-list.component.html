@@ -1,4 +1,4 @@
-<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height: 100vh">
+<div fxFlex fxLayout="column" fxLayoutGap="10px">
   <div fxLayout="row wrap">
     <div
       *ngFor="let post of posts | async"
@@ -11,7 +11,7 @@
     >
       <mat-card class="mat-elevation-z1" routerLink="{{ post.id }}">
         <div class="image-div">
-          <img mat-card-image class="img" src="{{ post.image }}" alt="{{ post.title }}">
+          <img mat-card-image src="{{ post.image }}" alt="{{ post.title }}">
           <div class="photo-credit">Photo by {{ post.imageby }}</div>
         </div>
         <mat-card-content>

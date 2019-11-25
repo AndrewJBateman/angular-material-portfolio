@@ -1,7 +1,14 @@
 export class Project {
-	title: string;
-	img: { src: string, alt: string };
-	content: string;
+  title: string;
+  summary: string;
+  images: [
+    { src: string, page: string, content: string },
+    { src: string, page: string, content: string },
+    { src: string, page: string, content: string },
+    { src: string, page: string, content: string },
+    { src: string, page: string, content: string },
+    { src: string, page: string, content: string }
+  ];
 	github: string;
 	url: string;
 }

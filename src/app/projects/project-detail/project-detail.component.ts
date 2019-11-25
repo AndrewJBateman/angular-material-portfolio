@@ -12,6 +12,7 @@ export class ProjectDetailComponent implements OnInit {
   // projects = PROJECTS;
   project;
 
+
   constructor(
     private route: ActivatedRoute
   ) { }

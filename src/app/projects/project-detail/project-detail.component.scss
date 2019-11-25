@@ -1,8 +1,54 @@
-section {
-  max-width: 700px;
-  margin: 2em auto;
+mat-card-image {
+  // margin: auto 0 0;
+  margin: 0;
+  display: block;
+  max-width: 100%;
+  width: 400px;
+  height: 300px;
 }
 
-mat-grid-tile {
-  background: lightblue;
+.image-div {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+card-container-left {
+  display: inline;
+  color: #0D47A1;
+}
+
+.project-summary-card {
+  width: 100%;
+}
+
+// .fill {
+//   flex: 1 1 auto;
+// }
+
+// .strong-style {
+//   color: #0D47A1;
+//   margin: 0 0 4px;
+//   font-size: 18px;
+//   text-decoration: underline;
+//   text-decoration-color: rgb(245, 200, 241);
+// }
+
+.content-style {
+  white-space: pre-wrap;
+  height:130px;
+}
+
+/* Bottom right text */
+.project-image-text {
+  position: absolute;
+  bottom: 26px;
+  right: -10px;
+  font-size: 20px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.55); /* Black background with 0.5 opacity */
+  color: white; /* Grey text */
+  padding-left: 4px;
+  padding-right: 4px;
 }
