@@ -1,10 +1,37 @@
-mat-card-image {
-  // margin: auto 0 0;
-  margin: 0;
-  display: block;
-  max-width: 100%;
-  width: 400px;
-  height: 300px;
+.project-title {
+  color: #0d47a1;
+  font-size: 20px !important;
+  margin: 0 0 4px !important;
+}
+
+.project-subtitle {
+  color: #0d47a1;
+  font-size: 16px !important;
+  margin: 0 !important;
+  text-decoration: underline;
+  text-decoration-color: rgb(245, 200, 241);
+}
+
+.project-content {
+  margin: 16px 0 0 !important;
+  white-space: pre-wrap;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.header-image {
+  background-image: url('/assets/images/me-outside.jpg');
+  background-size: cover;
+}
+
+.horiz-line {
+  margin: 5px;
+  border: 2px solid rgb(245, 200, 241);
+}
+
+.mat-card-image {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: rgb(245, 200, 241);
 }
 
 .image-div {
@@ -14,30 +41,9 @@ mat-card-image {
   color: white;
 }
 
-card-container-left {
-  display: inline;
-  color: #0D47A1;
-}
-
-.project-summary-card {
-  width: 100%;
-}
-
-// .fill {
-//   flex: 1 1 auto;
-// }
-
-// .strong-style {
-//   color: #0D47A1;
-//   margin: 0 0 4px;
-//   font-size: 18px;
-//   text-decoration: underline;
-//   text-decoration-color: rgb(245, 200, 241);
-// }
-
 .content-style {
   white-space: pre-wrap;
-  height:130px;
+  height:155px;
 }
 
 /* Bottom right text */

@@ -1,4 +1,4 @@
-<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height: 100vh">
+<div fxFlex fxLayout="column" fxLayoutGap="10px">
   <div fxLayout="row wrap">
     <div
       *ngFor="let project of projects; index as projectId"
@@ -11,9 +11,11 @@
       
       <!--mat-card for each project with data-binding from projects.ts-->
       <mat-card>
-        <img class="mat-card-image" [src]="project.images[0].src" [alt]="project.images[0].page">
+        <div class="image-div">
+          <img class="mat-card-image" [src]="project.images[0].src" [alt]="project.images[0].page">
+          <div class="project-image-text">{{ project.title }}</div>
+        </div>
         <mat-card-content>
-          <p class="strong-style">{{ project.title }}: </p>
           <p class="content-style">{{ project.summary | slice:0:270 }}...</p>
         </mat-card-content>
         <mat-card-actions>
@@ -44,6 +46,5 @@
         </mat-card-actions>
       </mat-card>
     </div>
-  <!-- <router-outlet></router-outlet> -->
-</div>
+  </div>
 </div>

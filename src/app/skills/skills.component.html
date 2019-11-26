@@ -1,4 +1,4 @@
-<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height: 100vh">
+<div fxFlex fxLayout="column" fxLayoutGap="10px">
   <h2>Programming & Engineering Skills</h2>
   <hr class="horiz-line">
   <div fxLayout="row wrap">
@@ -14,13 +14,13 @@
       <!--mat-card for each skill with data-binding from skills.ts-->
       <mat-card>
         <mat-card-content>
-          <p [ngClass]= "{
+          <p [ngClass] = "{
             'card-eng' : skill.area === 'eng',
             'card-prog' : skill.area === 'prog'
           }">
             {{ skill.title }}
           </p>
-          <p class="content-style" style="height:80px">{{ skill.content | slice:0:140 }}</p>
+          <p class="content-style">{{ skill.content | slice:0:140 }}</p>
         </mat-card-content>
       </mat-card>
     </div>

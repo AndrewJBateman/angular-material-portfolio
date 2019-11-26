@@ -23,7 +23,7 @@ iPad: 768
 bigger screens: 1024px, 
 iPhone: 320, 480px lanscape
 
-* **Build file:** TODO: reduce bundle sizes (2.5MB currently). webpack-bundle-analyzer used to analyse webpack performance. Replaced moment package with day.js as it uses less memory.
+* **Build file:** TODO: reduce bundle sizes. webpack-bundle-analyzer used to analyse webpack performance. Replaced moment package with day.js as it uses less memory.
 
 * **Colors:** Add to styles scss to reduce repeated scss throughout app.
 
@@ -36,7 +36,7 @@ iPhone: 320, 480px lanscape
 **TODO:** add link at bottom to return to the top (good for mobile phones):
 
 * **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page with more info, 1 routes to github page and 1 open app in browser.
-
+**TODO:** complete real content for 8 cards.
 
 * **Project-Detail:** Navigates to project detail page from project page link. No content.
 **TODO:** Add title block with summary - full width.
@@ -58,6 +58,7 @@ iPhone: 320, 480px lanscape
 * **Blog:** Working. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
 Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Posts list page shows the image with the image credit text in bottom left corner. The Post Detail page adds a web link to the image authors page in the card footer. Note: I keep a backup copy of each post in the post-backups folder, in case the Firestore database goes down.
 **TODO:**  It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
+**TODO:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
 
 * **Future Updates** Dark mode toggle, CV Download, blog list mode toggle (removes photos from list page)/Field Selector to only show Dev, Eng or IT, blog post notification - tells readers there is a new post.

@@ -7,11 +7,13 @@
       fxFlex.sm="50"
       fxFlex.xs="100"
       fxLayout="column"
-      style="padding: 5px;"
-    >
+      style="padding: 5px;">
+      <!-- <ng-container *ngIf="post.category === 'Dev'"> -->
+
+      <!--mat-card for each post with data-binding from post.ts-->
       <mat-card class="mat-elevation-z1" routerLink="{{ post.id }}">
         <div class="image-div">
-          <img mat-card-image src="{{ post.image }}" alt="{{ post.title }}">
+          <img class="mat-card-image" src="{{ post.image }}" alt="{{ post.title }}">
           <div class="photo-credit">Photo by {{ post.imageby }}</div>
         </div>
         <mat-card-content>
@@ -34,6 +36,7 @@
           </p>
         </mat-card-content>             
       </mat-card>
+      <!-- </ng-container> -->
     </div>
   </div>
 </div>

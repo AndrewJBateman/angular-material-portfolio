@@ -1,14 +1,31 @@
-<!-- <div class="container">
-  <mat-card class="project-summary-card">
-    <mat-card-header>
-      <mat-card-title>
-        {{ project.title }}
-      </mat-card-title>
-    </mat-card-header>
-  </mat-card>
-</div> -->
 
-<div fxFlex fxLayout="column" fxLayoutGap="10px">
+<div fxFlex fxLayout="column" fxLayoutGap="5px">
+  <div fxLayout="row wrap">
+    <div
+      fxFlex="100"
+      fxLayout="column"
+      style="padding: 5px;">
+      <!--mat-card for title and summary-->
+      <mat-card class="mat-elevation-z1">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image" alt="photo of Andrew Bateman"></div>
+          <mat-card-title class="project-title">
+              {{ project.title }}
+            </mat-card-title>
+            <mat-card-subtitle class="project-subtitle">
+              Summary
+            </mat-card-subtitle>
+          </mat-card-header>
+    
+          <mat-card-content>
+            <p class="project-content">{{ project.summary }} Individual pages are explained in the mat-cards below.</p>
+          </mat-card-content>
+        </mat-card>
+    </div>
+  </div>
+
+  <hr class="horiz-line">
+
   <div fxLayout="row wrap">
     <div
       *ngFor="let image of project.images; let i = index;"
@@ -18,15 +35,16 @@
       fxFlex.xs="100"
       fxLayout="column"
       style="padding: 5px;">
-      <!--mat-card for each project with data-binding from projects.ts-->
+      
+      <!--mat-card for each project page with data-binding from projects.ts-->
       <mat-card>
         <div class="image-div">
-          <img mat-card-image [src]="project.images[i].src" [alt]="project.images[i].page">
+          <img class="mat-card-image" [src]="project.images[i].src" [alt]="project.images[i].page">
           <div class="project-image-text">{{ project.images[i].page }}</div>
         </div>
         <mat-card-content>
           <!-- <p class="strong-style">{{ project.images[i].page }}</p> -->
-          <p class="content-style">{{ project.images[i].content }}</p>
+          <p class="content-style">{{ project.images[i].content  | slice:0:310 }}</p>
         </mat-card-content>
       </mat-card>
     </div>

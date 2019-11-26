@@ -1,7 +1,7 @@
-mat-card-image {
-  margin: auto 0 0;
-  display: block;
-  max-width: 100%;
+.mat-card-image {
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color: rgb(245, 200, 241);
 }
 
 mat-icon {
@@ -49,7 +49,7 @@ mat-card-actions {
 /* Bottom right text */
 .photo-credit {
   position: absolute;
-  bottom: 26px;
+  bottom: 30px;
   right: -10px;
   background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 0.55); /* Black background with 0.5 opacity */

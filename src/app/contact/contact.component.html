@@ -59,6 +59,7 @@
             <a
               mat-flat-button
               (click)="sendAnother()"
+              [disabled]="!contactForm.touched"
               color="warn"
               aria-label="cancel button">
               <mat-icon>clear</mat-icon>
