@@ -18,7 +18,7 @@
           </mat-card-header>
     
           <mat-card-content>
-            <p class="project-content">{{ project.summary }} Individual pages are explained in the mat-cards below.</p>
+            <p class="project-content">{{ project.summary }} Some of the pages are explained in the mat-cards below.</p>
           </mat-card-content>
         </mat-card>
     </div>
@@ -34,6 +34,7 @@
       fxFlex.sm="50"
       fxFlex.xs="100"
       fxLayout="column"
+      
       style="padding: 5px;">
       
       <!--mat-card for each project page with data-binding from projects.ts-->
@@ -43,9 +44,14 @@
           <div class="project-image-text">{{ project.images[i].page }}</div>
         </div>
         <mat-card-content>
-          <!-- <p class="strong-style">{{ project.images[i].page }}</p> -->
-          <p class="content-style">{{ project.images[i].content  | slice:0:310 }}</p>
+          <div>
+            <p 
+              [ngClass.sm]="{'content-style': true}">
+              {{ project.images[i].content  | slice:0:310 }}
+            </p>
+          </div>
         </mat-card-content>
+        
       </mat-card>
     </div>
   </div>

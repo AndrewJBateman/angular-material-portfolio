@@ -5,8 +5,6 @@ export class Project {
     { src: string, page: string, content: string },
     { src: string, page: string, content: string },
     { src: string, page: string, content: string },
-    { src: string, page: string, content: string },
-    { src: string, page: string, content: string },
     { src: string, page: string, content: string }
   ];
 	github: string;
