@@ -45,6 +45,8 @@ xl	'screen and (min-width: 1920px) and (max-width: 5000px)'
 * **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page with more info, 1 routes to github page and 1 open app in browser.
 
 * **Project-Detail:** Navigates to project detail page from project page link. 4 pages featured with images.
+Image size used: 892 x 502.
+
 **TODO:** Complete real content for Project 1: World News App.
 **TODO:** Complete real content for Project 2: Country Data App.
 **TODO:** Complete real content for Project 3: Tech Info App.

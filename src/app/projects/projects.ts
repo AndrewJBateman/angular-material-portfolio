@@ -40,14 +40,14 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
     summary: 'Ionic-Angular app that displays articles from a news API. App includes pages for news detail with links to the original article, social media sharing and offline storage of favourite articles. Includes a user search field Ionic-Angular app that displays world new. Dark mode inverts colours padding padding padding padding',
     images: [
       {
-        src: '../assets/images/worldBank.jpg',
-        page: 'Home Page',
+        src: '../assets/images/newsapp-news.jpg',
+        page: 'News Page',
         content: 'Github repository data is fetched from the Github API via an Angular HTTPClient get request (resting on the browser XMLHttp Request Interface) service using an RxJS Observable.'
       },
       {
-        src: '../assets/images/worldBank.jpg',
-        page: 'xx Page',
-        content: ''
+        src: '../assets/images/newsapp-categories.jpg',
+        page: 'Categories Page',
+        content: 'Github repository data is fetched from the Github API via an Angular HTTPClie'
       },
       {
         src: '../assets/images/worldBank.jpg',
