@@ -29,7 +29,7 @@ a.mat-flat-button {
   background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 0.55); /* Black background with 0.5 opacity */
   color: white; /* Grey text */
-  padding: 8px;
+  padding: 12px;
   // padding-right: 4px;
 }
 
@@ -40,4 +40,9 @@ a.mat-flat-button {
 
 .project-open-browser {
   background-color: green;
+}
+
+.icon-display {
+  transform: scale(1.5);
+  margin-right: 4px;
 }

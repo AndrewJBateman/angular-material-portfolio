@@ -13,7 +13,7 @@
       <mat-card>
         <div class="image-div">
           <img class="mat-card-image" [src]="project.images[0].src" [alt]="project.images[0].page">
-          <div class="project-image-text">{{ project.title }}</div>
+          <div class="project-image-text"><mat-icon class="icon-display">{{ project.icon }}</mat-icon>  {{ project.title }}</div>
         </div>
         <mat-card-content>
           <p class="content-style">{{ project.summary | slice:0:270 }}...</p>

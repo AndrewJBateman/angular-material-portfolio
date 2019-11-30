@@ -18,17 +18,22 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 ## General info
 
 * **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes:
-desktop 1200px (anything above 1024px)
-iPad: 768
-bigger screens: 1024px, 
-iPhone: 320, 480px lanscape
 
-From [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API). 
-xs	'screen and (max-width: 599px)'
-sm	'screen and (min-width: 600px) and (max-width: 959px)'
-md	'screen and (min-width: 960px) and (max-width: 1279px)'
-lg	'screen and (min-width: 1280px) and (max-width: 1919px)'
-xl	'screen and (min-width: 1920px) and (max-width: 5000px)'
+* desktop 1200px (anything above 1024px)
+
+* iPad: 768
+
+* bigger screens: 1024px, 
+
+* iPhone: 320, 480px lanscape
+
+* From [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
+
+1. xs	'screen and (max-width: 599px)'
+2. sm	'screen and (min-width: 600px) and (max-width: 959px)'
+3. md	'screen and (min-width: 960px) and (max-width: 1279px)'
+4. lg	'screen and (min-width: 1280px) and (max-width: 1919px)'
+5. xl	'screen and (min-width: 1920px) and (max-width: 5000px)'
 
 * **Build file:** TODO: reduce bundle sizes. webpack-bundle-analyzer used to analyse webpack performance. Replaced moment package with day.js as it uses less memory.
 
@@ -44,29 +49,38 @@ xl	'screen and (min-width: 1920px) and (max-width: 5000px)'
 
 * **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page with more info, 1 routes to github page and 1 open app in browser.
 
-* **Project-Detail:** Navigates to project detail page from project page link. 4 pages featured with images.
-Image size used: 892 x 502.
+* **Project-Detail:** Navigates to project detail page from project page link. 4 pages featured with images shown max 2 per line.
+* PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
+* mobile app: Image size used: 1066 x 600 (containes 3 x 9:16 images) to give 16:9 when 3 images in a row.
 
-**TODO:** Complete real content for Project 1: World News App.
-**TODO:** Complete real content for Project 2: Country Data App.
-**TODO:** Complete real content for Project 3: Tech Info App.
-**TODO:** Complete real content for Project 4: Cryptocurrencies App.
-**TODO:** Complete real content for Project 5: TensorFlow App.
-**TODO:** Complete real content for Project 6: WorldBank Data App.
-**TODO:** Complete real content for Project 7: Nasa Data App.
+* **TODO:** Complete real content for Project 1: Portfolio.
+
+* **TODO:** Complete real content for Project 2: World News App.
+
+* **TODO:** Complete real content for Project 3: Country Data App.
+
+* **TODO:** Complete real content for Project 4: Tech Info App.
+
+* **TODO:** Complete real content for Project 5: Cryptocurrencies App.
+
+* **TODO:** Complete real content for Project 6: TensorFlow App.
+
+* **TODO:** Complete real content for Project 7: WorldBank Data App.
+
+* **TODO:** Complete real content for Project 8: Nasa Data App.
 
 * **Skills:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 **TODO:** Complete real content. 
 
 * **Contact:** Working, code tidy. Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
-**TODO:** Update this to send me an email with the message.
+**OPTION:** Update this to send me an email with the message.
 
 * **Blog:** Working. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
 Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Posts list page shows the image with the image credit text in bottom left corner. The Post Detail page adds a web link to the image authors page in the card footer. Note: I keep a backup copy of each post in the post-backups folder, in case the Firestore database goes down.
-**TODO:**  It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
-**TODO:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
+**OPTION:**  It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
+**OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
-* **Future Updates** Dark mode toggle, CV Download, blog list mode toggle (removes photos from list page)/Field Selector to only show Dev, Eng or IT, blog post notification - tells readers there is a new post.
+* **Future Updates** Dark mode toggle, CV Download, blog list mode toggle (removes photos from list page)/Field Selector to only show Dev, Eng or IT. Blog post notification - tells readers there is a new post.
 
 ## Technologies
 
@@ -104,7 +118,7 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 * Status: Working, Built for Production and Deployed to Firebase but content not finished.
 
-* To-Do: see Sections Info above.
+* To-Do: see Sections Info above. Update screenshots to use a table with 2 images per line.
 
 ## Inspiration
 

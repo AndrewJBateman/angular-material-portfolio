@@ -9,6 +9,7 @@ export const PROJECTS: Project[] = [
 I wanted to minimise time spent on styling and layout so I could focus on technical content. However presenting clear and fully-responsive content is also very important so I have made great use of Angular Material mat-cards to present information. The Angular Flex Layout API was used to create responsive rows of mat-cards so cards regroup neatly as the screen width is reduced to mobile size (about 400px) where the mat-cards are shown in a single column. Angular SlicePipe API used to trim mat-card content text to a fixed length. Height of cards in a line are made equal by fixing the height of the content text.
 
 Icons are limited to the Angular Material Icon Library - e.g. there are no icons for linkedin or github menu links and I have avoided adding bloat by importing the Bootstrap library. I have followed Don\'t Repeat Yourself (DRY) rules, so data for the home, skills and projects pages was created in separate typescript files (based on a model class) with data-binding to a *ngFor mat-card loop in the template so html template files are kept short.`,
+    icon: 'person',
     images: [
       {
         src: '../assets/images/home-pc.jpg',
@@ -37,27 +38,39 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   // app 2
 	{
     title: 'World News App',
-    summary: 'Ionic-Angular app that displays articles from a news API. App includes pages for news detail with links to the original article, social media sharing and offline storage of favourite articles. Includes a user search field Ionic-Angular app that displays world new. Dark mode inverts colours padding padding padding padding',
+    summary: `Ionic-Angular app that displays a news page of articles from a news API. App includes pages for news detail with links to the original article, social media sharing and offline storage of favourite articles. Includes a user search field Ionic-Angular app that displays world new. Dark mode inverts colours.
+    
+  Features include: 
+  Typescript interface used to define the expected structure of the json object returned from the news API.
+  Separate providers (services) page with API http fetch functions.
+  Custom pipes used to modify API news article titles, contents and derive '..time ago' from a date string.
+  Dark mode switch on menu changes from light to dark mode.
+  Offline Storage of favourite articles using Ionic Storage.
+  Network status check in initialisation so latest news data is stored. Template data-binding always from stored data.
+  Common Refresh Component dragging down will perform refresh function.
+  Common Progess Bar Component ion-card shows while news loading on News, Categories and Favourites pages.
+  Localisation using i18n so user can select between English (default), Spanish and French.`,
+  icon: 'announcement',
     images: [
       {
         src: '../assets/images/newsapp-news.jpg',
         page: 'News Page',
-        content: 'Github repository data is fetched from the Github API via an Angular HTTPClient get request (resting on the browser XMLHttp Request Interface) service using an RxJS Observable.'
+        content: `ion-select used to show list of news sources as a drop-down action-sheet with a cancel button at the bottom. `
       },
       {
         src: '../assets/images/newsapp-categories.jpg',
         page: 'Categories Page',
-        content: 'Github repository data is fetched from the Github API via an Angular HTTPClie'
+        content: `ion-segment used to show categories in a scrollable horizontal menu: Sport, Busines, Health, Technology, Science, General, Entertainment. Shows time as '... ago'. Shows the selected news item in more detail. Title has news source end text removed using a custom Angular pipe as I show this information in the top toolbar. Also uses custom pipe to show time as '... ago'. Includes working footer buttons for 'More info', which opens news source in a separate window and 'Favourite' which adds the article to a stored news 'favourites' array. Array symbol at end of article content string replaced with text using split and concat. Has social media share buttons.`
       },
       {
-        src: '../assets/images/worldBank.jpg',
-        page: 'xx Page',
-        content: ''
+        src: '../assets/images/newsapp-favourites.jpg',
+        page: 'Favourites Page',
+        content: 'Saved articles are listed in reverse date-time order. Sliding from the right deletes the favourite. Unsplash image is shown (with credit to author) if there are no favourites stored.'
       },
       {
-        src: '../assets/images/worldBank.jpg',
-        page: 'xx Page',
-        content: 'The Contact page uses an Angular Material Card inside a Form that is added to the app Firestore database collection when submitted.'
+        src: '../assets/images/newsapp-about.jpg',
+        page: 'About Page/Side-Menu',
+        content: `Includes popover with links to Author Website, Github Repo and a Contact Page. Unsplash image with author credit also shown. Side navigation menu also shown where the user can navigate to another page (menu closes automatically) or change language/dark-mode settings.`
       }
     ],
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
@@ -67,6 +80,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 	{
     title: 'Country Data App',
     summary: 'Ionic-Angular app that displays information about world countries using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
+    icon: 'language',
     images: [
       {
         src: '../assets/images/countryData.jpg',
@@ -96,6 +110,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 	{
     title: 'Tech Info App',
     summary: 'Ionic app that displays electrical information using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using. JSON data fetched from an external API. Includes a user search field. Includes a user search field Ionic-Angular app that displays world news using.',
+    icon: 'build',
     images: [
       {
         src: '../assets/images/elecInfo.jpg',
@@ -125,6 +140,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 	{
     title: 'Cryptocurrency App',
     summary: 'Ionic app that displays information about cryptocurrency prices using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
+    icon: 'attach_money',
     images: [
       {
         src: '../assets/images/cryptoInfo.jpg',
@@ -154,6 +170,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 	{
     title: 'Tensorflow App',
     summary: 'Ionic app that displays tensorflow info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
+    icon: 'timeline',
     images: [
       {
         src: '../assets/images/tensorflow.jpg',
@@ -183,6 +200,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 	{
     title: 'World Bank Data App',
     summary: 'Ionic app that displays worldbankinfo. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field',
+    icon: 'trending_up',
     images: [
       {
         src: '../assets/images/worldBank.jpg',
@@ -212,6 +230,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 	{
     title: 'NASA Data App',
     summary: 'Ionic app that displays NASA info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field Includes a user search field',
+    icon: 'location_searching',
     images: [
       {
         src: '../assets/images/nasaData.jpg',

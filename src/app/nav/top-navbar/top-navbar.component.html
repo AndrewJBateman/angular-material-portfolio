@@ -1,13 +1,27 @@
 <mat-toolbar color="primary" sticky>
-  <button mat-icon-button (click)="onToggleSidenav()" fxHide.gt-sm>
+  <button 
+    mat-icon-button
+    (click)="onToggleSidenav()"
+    fxHide.gt-sm>
     <mat-icon>menu</mat-icon>
   </button>
-  <a class="nav-link" routerLink="/home" routerLinkActive="active" mat-button>
+  <a class="nav-link"
+    routerLink="/home"
+    routerLinkActive="active"
+    mat-button>
     <h2>AB</h2>
   </a>
   <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
-    <button mat-icon-button routerLink="/dashboard"><mat-icon>edit</mat-icon></button>
-    <button mat-button aria-label="Logout button" (click)="auth.logout()">Logout</button>
+    <button 
+      mat-icon-button
+      routerLink="/dashboard">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button
+      mat-button
+      aria-label="Logout button"
+      (click)="auth.logout()">Logout
+    </button>
   </div>
   <ng-template #showLogin>
     <button mat-button aria-label="Login button" (click)="auth.login()">Login</button>
