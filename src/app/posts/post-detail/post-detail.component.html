@@ -13,6 +13,14 @@
       </mat-form-field>
       <br>
       <mat-form-field>
+        <input matInput placeholder="Image Credit" [(ngModel)]="post.imageby" name="imageby">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Image Link" [(ngModel)]="post.imageLink" name="imageLink">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
       <mat-label>Select Category ({{ post.category }} currently selected)</mat-label>
       <mat-select [(ngModel)]="post.category" [(value)]="selectedCategory" name="category">
         <mat-option value="Dev">Dev (Programming Development)</mat-option>

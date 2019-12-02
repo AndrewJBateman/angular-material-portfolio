@@ -1,0 +1,8 @@
+Title: Industrial IoT
+Subtitle: In a Nutshell
+Content:
+The Industrial Internet of Things (IIOT, also referred to as Industry 4.0) includes the billions of intelligent devices (such as machines, engines & instrumentation) connected to networks to send and receive data. Analysing data from these device sensors can help automation and can make industrial processes more efficient.
+
+Industries using this IIOT include manufacturing - to monitor production lines and have machines monitor themselves, utilities - by making remote stations monitor themselves (electricity, water and gas smartgrids), transport - to monitor vehicle performance & retail - to monitor supply chain problems. Cloud computing is used in most of these applications. Edge computing is now a service available from vendors to allow data to be analysed near the device (at the edge of the network). The big vendors: Microsoft Azure IoT hub, Google Cloud IoT and AWS IoT services. 
+
+Security risks are increased as IIOT devices can have insufficient security. 

@@ -52,7 +52,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 * Common Refresh Component: dragging down on a page will perform refresh function.
 * Common Progess Bar Component ion-card shown while news loading on News, Categories and Favourites pages.
 * Localisation using i18n so user can select between English (default), Spanish and French.`,
-  icon: 'announcement',
+  icon: 'view_headline',
     images: [
       {
         src: '../assets/images/newsapp-news.jpg',

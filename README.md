@@ -37,7 +37,7 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 ## Sections info
 
 * **Navbars:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles.
-**TODO:** When 1-page CV complete add link to it.
+**OPTION:** When 1-page CV complete add link to it.
 
 * **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
 **TODO:** add link at bottom to return to the top (good for mobile phones):
@@ -87,7 +87,7 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 * [Reactive Extensions Library for Javascript rxjs v6.5.3](https://rxjs-dev.firebaseapp.com/)
 
-* [dayjs v1.8.17](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'.
+* [Dayjs v1.8.17](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'.
 
 * [Webpack Bundle Analyser v3.6.0](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'.
 

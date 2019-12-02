@@ -36,6 +36,8 @@ export class PostDetailComponent implements OnInit {
     const formData = {
       title: this.post.title,
       subtitle: this.post.subtitle,
+      imageby: this.post.imageby,
+      imageLink: this.post.imageLink,
       category: this.post.category,
       content: this.post.content,
       published: new Date()
