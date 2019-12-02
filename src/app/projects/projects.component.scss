@@ -27,15 +27,16 @@ a.mat-flat-button {
   right: -10px;
   font-size: 24px;
   background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.55); /* Black background with 0.5 opacity */
-  color: white; /* Grey text */
+  background: rgba(0, 0, 0, 0.55); /* Black background with 0.55 opacity */
+  color: white;
   padding: 12px;
   // padding-right: 4px;
 }
 
-.content-style {
+p.content-style {
   white-space: pre-wrap;
   // height:130px;
+  margin: 0 !important;
 }
 
 .project-open-browser {
@@ -44,5 +45,5 @@ a.mat-flat-button {
 
 .icon-display {
   transform: scale(1.5);
-  margin-right: 4px;
+  color: rgb(245, 200, 241);
 }

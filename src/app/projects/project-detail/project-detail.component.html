@@ -18,7 +18,7 @@
           </mat-card-header>
     
           <mat-card-content>
-            <p class="project-content">{{ project.summary }} Some of the pages are explained in the mat-cards below.</p>
+            <p class="project-content">{{ project.summary }} Some of the pages are explained below.</p>
           </mat-card-content>
         </mat-card>
     </div>
@@ -41,12 +41,14 @@
       <mat-card>
         <div class="image-div">
           <img class="mat-card-image" [src]="project.images[i].src" [alt]="project.images[i].page">
-          <div class="project-image-text">{{ project.images[i].page }}</div>
+          <div class="project-image-text"><mat-icon class="icon-display">{{ project.images[i].icon }}</mat-icon>  {{ project.images[i].page }}</div>
         </div>
         <mat-card-content>
           <div>
             <p 
-              [ngClass.sm]="{'content-style': true}">
+              [ngClass.sm]="{'spare-style': true}"
+              class="content-style">
+              <mat-icon class="icon-content">{{ project.images[i].icon }}</mat-icon>
               {{ project.images[i].content  | slice:0:310 }}
             </p>
           </div>

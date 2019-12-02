@@ -18,17 +18,12 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 ## General info
 
 * **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes:
-
 * desktop 1200px (anything above 1024px)
-
 * iPad: 768
-
 * bigger screens: 1024px, 
-
-* iPhone: 320, 480px lanscape
+* iPhone: 320, 480px landscape
 
 * From [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
-
 1. xs	'screen and (max-width: 599px)'
 2. sm	'screen and (min-width: 600px) and (max-width: 959px)'
 3. md	'screen and (min-width: 960px) and (max-width: 1279px)'
@@ -52,10 +47,6 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 * **Project-Detail:** Navigates to project detail page from project page link. 4 pages featured with images shown max 2 per line.
 * PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
 * mobile app: Image size used: 1066 x 600 (containes 3 x 9:16 images) to give 16:9 when 3 images in a row.
-
-* **TODO:** Complete real content for Project 1: Portfolio.
-
-* **TODO:** Complete real content for Project 2: World News App.
 
 * **TODO:** Complete real content for Project 3: Country Data App.
 
@@ -90,6 +81,8 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 * [Angular Material v8.2.3](https://material.angular.io/)
 
+* [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
+
 * [Firebase v6.6.1](https://firebase.google.com) Cloud storage and authentication.
 
 * [Reactive Extensions Library for Javascript rxjs v6.5.3](https://rxjs-dev.firebaseapp.com/)
@@ -116,9 +109,9 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 ## Status & To-Do List
 
-* Status: Working, Built for Production and Deployed to Firebase but content not finished.
+* Status: Working, Built for Production and Deployed to Firebase, waiting link to my domain. Content not finished.
 
-* To-Do: see Sections Info above. Update screenshots to use a table with 2 images per line.
+* To-Do: see Sections Info above.
 
 ## Inspiration
 
@@ -131,6 +124,8 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 * [article by Paul Halliday: Angular: Performance Analysis with webpack Bundle Analyzer](https://alligator.io/angular/angular-webpack-bundle-analyzer/)
 
 * [Blog post images from Unsplash](https://unsplash.com/)
+
+* [Devdactic article: How to Host Your Ionic App as a Website on Firebase & Standard Web Servers](https://devdactic.com/host-ionic-website-firebase/)
 
 ## Screenshots
 

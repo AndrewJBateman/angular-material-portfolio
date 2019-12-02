@@ -3,7 +3,7 @@
     <div
       *ngFor="let project of projects; index as projectId"
       fxFlex="50"
-      fxFlex.md="100"
+      fxFlex.md="50"
       fxFlex.sm="100"
       fxFlex.xs="100"
       fxLayout="column"
@@ -37,7 +37,8 @@
           <div fxFlex></div>
           <a 
             mat-flat-button
-            [href]=""
+            [disabled]="project.title == 'This Website'"
+            [href]="project.url"
             target="_blank"
             rel="noreferrer"
             class="project-open-browser">

@@ -43,6 +43,7 @@
 
 .content-style {
   white-space: pre-wrap;
+  margin: 0;
   // min-height: 150px;
 }
 
@@ -54,6 +55,16 @@
   font-size: 24px;
   background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 0.55); /* Black background with 0.5 opacity */
-  color: white; /* Grey text */
+  color: white;
   padding: 8px;
+}
+
+.icon-display {
+  transform: scale(1.5);
+  color: rgb(245, 200, 241);
+}
+
+.icon-content {
+  transform: scale(1.5);
+  color: #0d47a1;
 }
