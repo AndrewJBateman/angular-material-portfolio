@@ -37,12 +37,13 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 ## Sections info
 
 * **Navbars:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles.
-**OPTION:** When 1-page CV complete add link to it.
+**OPTIONAL:** When 1-page CV complete add link to it.
 
 * **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
-**TODO:** add link at bottom to return to the top (good for mobile phones):
+**OPTIONAL:** add link at bottom to return to the top (good for mobile phones):
 
-* **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page with more info, 1 routes to github page and 1 open app in browser.
+* **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page with more info, 1 routes to github page and 1 open app in browser.
+**TODO:** ensure equal card content height in row of 2.
 
 * **Project-Detail:** Navigates to project detail page from project page link. 4 pages featured with images shown max 2 per line.
 * PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
@@ -68,7 +69,7 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 * **Blog:** Working. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
 Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Posts list page shows the image with the image credit text in bottom left corner. The Post Detail page adds a web link to the image authors page in the card footer. Note: I keep a backup copy of each post in the post-backups folder, in case the Firestore database goes down.
-**OPTION:**  It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
+**OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
 * **Future Updates** Dark mode toggle, CV Download, blog list mode toggle (removes photos from list page)/Field Selector to only show Dev, Eng or IT. Blog post notification - tells readers there is a new post.
@@ -105,7 +106,13 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 ## Features
 
-* [Github API](https://developer.github.com/v4/query/) used with a httpClient get request to display current state of my repository.
+* Services: All http calls are enclosed in their own service, in the services folder. There are 3 services:
+
+1. posts: to get posts from the Firestore backend database, 
+
+2. github: [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display current state of my repository.
+
+3. auth: to authenticate users and limit write access to the Firestore backend database.
 
 ## Status & To-Do List
 

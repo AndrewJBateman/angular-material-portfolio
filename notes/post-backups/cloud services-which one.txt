@@ -1,3 +1,13 @@
 Title: Cloud Services
-Subtitle: The Main Providers
+Subtitle: and Certifications
 Content:
+Cloud services provide storage of data in a backend database via the internet. The most well-known cloud service providers are Amazon Web Services (AWS), Microsoft Azure and Google Cloud Platform. However there are other less well-known service providers, some of which are: Dropbox, Egnyte, SAP, Verizon Cloud, Salesforce, Adobe, phoenixNAP, Kamatera, Navisite, Rackspace, Oracle Cloud and IBM Cloud.
+
+Often there is a free tier then the service is a scalable pay-as-you-go so the user oonly pays for resources actually used. Cloud services have built-in redundancy as they are distributed, so the user is less likely to be affected by network equipment failure. 
+
+AWS
+AWS offers a range of Infrastructure as a Service (IaaS) and Platform as a Service (PaaS) services. These include: EC2 - Elastic Cloud Compute, Elastic Beanstalk, S3 - Simple Storage Service and RDS - Relational Database Service. There is a 12-month tier. Customers can customise infrastructure requirements. 
+
+AWS offers six different certifications, grouped into four main paths: Cloud Practitioner, Architect, Developer & Operations. There is also a Specialty Path, divided into five subpaths. 
+
+The Certified Solutions Architect - Associate - is the best option as a first certification and the student must be able to design, distribute and manage applications using AWS tools. Systems must have high availability and be scaleable with proper security, disaster recovery and trouble-shooting. Recommends 1-year of hands-on experience.

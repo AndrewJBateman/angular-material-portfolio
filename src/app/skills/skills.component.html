@@ -9,7 +9,7 @@
       fxFlex.sm="50"
       fxFlex.xs="100"
       fxLayout="column"
-      style="padding: 5px;"
+      style="padding: 10px;"
     >
       <!--mat-card for each skill with data-binding from skills.ts-->
       <mat-card>
@@ -20,7 +20,7 @@
           }">
             {{ skill.title }}
           </p>
-          <p class="content-style">{{ skill.content | slice:0:140 }}</p>
+          <p class="content-style">{{ skill.content }}</p>
         </mat-card-content>
       </mat-card>
     </div>

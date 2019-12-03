@@ -25,14 +25,14 @@ It is estimated to take 1800hours and it took me all of 2017 working part-time. 
 	},
 	{
 		title: 'Programming Languages',
-		content: 'Most of my programming experience so far has been in Javascript ES6 (ECMAScript6 / 2015), on the client and server sides. I started my programming journey with a range of courses with TeamTreehouse, including completing Full Stack Javascript, PHP, C#, Rails Development, Java Web Development, Android (up to advanced level) Tracks, Swift, Ruby, Wordpress, Rails, ASP.NET. Since Treehouse I focused on Javascript as it was the most popular language and was used on the front and backend. Due to its use in Angular I have also spent a lot of time using Typescript.'
+		content: 'Most of my programming experience so far has been in Javascript ES6 (ECMAScript6 / 2015), on the client and server sides. I started my programming journey with a range of courses with FrontEndMasters & TeamTreehouse courses, including completing Full Stack Javascript, PHP, C#, Rails Development, Java Web Development, Android (up to advanced level) Tracks, Swift, Ruby, Wordpress, Rails, ASP.NET. Since Treehouse I focused on Javascript as it was the most popular language and was used on the front and backend. Due to its use in Angular I have also spent a lot of time using Typescript.'
 	},
 	{
 		title: 'Machine-Learning and TensorFlow',
 		content: 'Tensorflow came up in one of my job-searches as a skill in demand. I then found that a TensorFlow.js library was available so I would not have to learn Python to use it. I completed a 17.5-hour Udemy course in Machine Learning with Javascript and have a few Github repos but this is work in progress and I am looking to incorporate TensorFlow into an Ionic mobile app.'
 	},
 	{
-		title: 'Engineer',
-		content: 'I have Master & Bachelor degrees in Electronic/Electrical Engineering (completed in 1993) and over 20 years experience as an Engineer working on Power, Process Control, Instrumentation and PLC/SCADA systems. I am familiar with computer hardware, synchronous/asynchronous data communications, industrial ethernet, profibus, RS485/RS422/RS232C networks, technical software, PLC digital/analogue I/O & ladder logic etc. I also had experience of concepts relevent to programming, such as boolean logic, arrays and memory caching etc so getting heavily into programming was less difficult for me.'
+		title: 'Engineering',
+		content: 'I have Master & Bachelor degrees in Electronic/Electrical Engineering & over 20 years experience working on Power, Process Control, Instrumentation and PLC/SCADA systems. Hence I already had knowledge of computers and understood concepts relevent to programming, such as boolean logic, arrays and memory caching etc. so getting heavily into programming was less difficult for me.'
 	}	
 ];
