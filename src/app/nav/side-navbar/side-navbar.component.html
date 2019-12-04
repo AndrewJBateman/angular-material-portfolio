@@ -3,14 +3,14 @@
     <mat-icon>home</mat-icon>AB
   </a>
 
-  <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+  <!-- <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
     <a mat-list-item class="nav-link social" aria-label="Logout button" (click)="auth.logout()">
         <mat-icon>no_meeting_room</mat-icon>Logout</a>
   </div>
   <ng-template #showLogin>
     <a mat-list-item class="nav-link social" aria-label="Login button" (click)="auth.login()">
       <mat-icon>meeting_room</mat-icon>Login</a>
-  </ng-template>
+  </ng-template> -->
 
   <!-- <a mat-list-item class="nav-link" routerLink="/about" routerLinkActive="active" (click)="onSidenavClose()">
     <mat-icon>info</mat-icon>About

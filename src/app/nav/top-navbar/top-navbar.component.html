@@ -11,21 +11,24 @@
     mat-button>
     <h2>AB</h2>
   </a>
-  <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
-    <button 
-      mat-icon-button
-      routerLink="/dashboard">
-      <mat-icon>edit</mat-icon>
-    </button>
-    <button
-      mat-button
-      aria-label="Logout button"
-      (click)="auth.logout()">Logout
-    </button>
+ 
+  <div *ngIf="displayLogin">
+    <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+      <button 
+        mat-icon-button
+        routerLink="/dashboard">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+        mat-button
+        aria-label="Logout button"
+        (click)="auth.logout()">Logout
+      </button>
+    </div>
+    <ng-template #showLogin>
+      <button mat-button aria-label="Login button" (click)="auth.login()">Login</button>
+    </ng-template>
   </div>
-  <ng-template #showLogin>
-    <button mat-button aria-label="Login button" (click)="auth.login()">Login</button>
-  </ng-template>
 
   <div fxFlex fxLayout fxLayoutAlign="end">
     <div fxHide.lt-md>

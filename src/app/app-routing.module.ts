@@ -35,7 +35,7 @@ const appRoutes: Routes = [
 	{
 		path: 'blog',
 		component: PostsModule
-	},
+  },
 	{
 		path: 'contact',
     component: ContactComponent

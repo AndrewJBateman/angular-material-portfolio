@@ -36,7 +36,7 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 ## Sections info
 
-* **Navbars:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles.
+* **Navbars:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
 **OPTIONAL:** When 1-page CV complete add link to it.
 
 * **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
@@ -69,6 +69,7 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 * **Blog:** Working. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
 Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Posts list page shows the image with the image credit text in bottom left corner. The Post Detail page adds a web link to the image authors page in the card footer. Note: I keep a backup copy of each post in the post-backups folder, in case the Firestore database goes down.
+**TODO:** change login to my email only.
 **OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
@@ -101,6 +102,10 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 * Run `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder.
 
 * Run `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis.
+
+* Run `ng build --prod --aot` to create build file with Ahead of Time (aot) compilation.
+
+* Run `firebase deploy` to deploy to firebase hosting.
 
 ## Code Examples
 
