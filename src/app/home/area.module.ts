@@ -1,4 +1,5 @@
 export class Area {
-	title: string;
+  title: string;
+  imgPath: string;
 	content: string;
 }

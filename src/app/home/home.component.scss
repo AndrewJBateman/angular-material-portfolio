@@ -3,6 +3,11 @@ mat-card {
   padding: 8px;
 }
 
+.card-title-image {
+  // background-image: url('../../assets/images/angular.png');
+  background-size: cover;
+}
+
 .home-container {
   margin-top: 16px;
 }

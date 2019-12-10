@@ -53,7 +53,11 @@
     <mat-card>
       <mat-card-content>
         <p class="title-style">
-          {{ area.title }}
+          <img 
+            [src]="area.imgPath"
+            [alt]="area.title" 
+            mat-card-avatar class="card-title-image"/>
+            {{ area.title }}
         </p>
         <p class="content-style">{{ area.content }}</p>
       </mat-card-content>

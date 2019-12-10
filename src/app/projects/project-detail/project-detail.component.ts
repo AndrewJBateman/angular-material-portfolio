@@ -10,7 +10,7 @@ import { PROJECTS } from '../projects';
 })
 export class ProjectDetailComponent implements OnInit {
   // projects = PROJECTS;
-  project;
+  project: any;
 
 
   constructor(
