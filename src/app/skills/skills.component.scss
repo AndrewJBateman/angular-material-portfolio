@@ -3,6 +3,17 @@ h2 {
   color: #0D47A1;
   position: center;
 }
+
+.title-icon {
+  transform: scale(1.5);
+  padding-right: 8px;
+}
+
+.horiz-line {
+  margin: 0 5px;
+  border: 2px solid rgb(245, 200, 241)
+}
+
 .card-eng {
   color: #690726;
   font-size: 20px;
@@ -14,10 +25,6 @@ h2 {
   font-size: 20px;
   text-decoration: underline;
   text-decoration-color: rgb(245, 200, 241);
-}
-.horiz-line {
-  margin: 0 5px;
-  border: 2px solid rgb(245, 200, 241)
 }
 
 .content-style {

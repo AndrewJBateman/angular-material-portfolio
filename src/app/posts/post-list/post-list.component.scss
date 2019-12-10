@@ -1,3 +1,21 @@
+// Top title styling
+h2 {
+  margin: 10px auto 0 auto;
+  color: #0D47A1;
+  position: center;
+}
+
+.title-icon {
+  transform: scale(2);
+  padding-right: 4px;
+}
+
+.horiz-line {
+  margin: 0 5px;
+  border: 2px solid rgb(245, 200, 241)
+}
+
+// card styling
 .mat-card-image {
   border-bottom-style: solid;
   border-bottom-width: 4px;

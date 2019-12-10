@@ -1,12 +1,12 @@
 Title: Cloud Services
 Subtitle: and Certifications
 Content:
-Cloud services provide storage of data in a backend database via the internet. The most well-known cloud service providers are Amazon Web Services (AWS), Microsoft Azure and Google Cloud Platform. However there are other less well-known service providers, some of which are: Dropbox, Egnyte, SAP, Verizon Cloud, Salesforce, Adobe, phoenixNAP, Kamatera, Navisite, Rackspace, Oracle Cloud and IBM Cloud.
+Cloud services provide storage of data in a backend database via the internet. The most well-known cloud service providers are Amazon Web Services (AWS), Microsoft Azure and Google Cloud Platform. However there are other less well-known ones, including: Dropbox, Egnyte, SAP, Verizon Cloud, Salesforce, Adobe, phoenixNAP, Kamatera, Navisite, Rackspace, Oracle Cloud and IBM Cloud.
 
-Often there is a free tier then the service is a scalable pay-as-you-go so the user oonly pays for resources actually used. Cloud services have built-in redundancy as they are distributed, so the user is less likely to be affected by network equipment failure. 
+Often there is a free tier then the service is a scalable pay-as-you-go so the user only pays for resources actually used. Cloud services have built-in redundancy as they are distributed, so the user is less likely to be affected by network equipment failure. 
 
 AWS
-AWS offers a range of Infrastructure as a Service (IaaS) and Platform as a Service (PaaS) services. These include: EC2 - Elastic Cloud Compute, Elastic Beanstalk, S3 - Simple Storage Service and RDS - Relational Database Service. There is a 12-month tier. Customers can customise infrastructure requirements. 
+AWS offers a range of Infrastructure as a Service (IaaS) and Platform as a Service (PaaS) services. These include: EC2 - Elastic Cloud Compute, Elastic Beanstalk, S3 - Simple Storage Service and RDS - a Relational Database Service. There is a 12-month free tier. Customers can customise infrastructure requirements. 
 
 AWS Certifications
 AWS offers six different certifications, grouped into four main paths: Cloud Practitioner, Architect, Developer & Operations. There is also a Specialty Path, divided into five subpaths. 
@@ -18,7 +18,7 @@ The Certified Solutions Architect - Associate - is the best option as a first ce
 Example text from some job ads: Knowledge with Cloud platforms (AWS, Azure, Google) is a plus: building and deploying cloud solutions (AWS preferred). Vous disposez d'une certification Google Cloud Platform (GCP) ou Amazon Web Services (AWS) ou Microsoft Azure. 
 
 Microsoft Azure
-Microsoft also provides a range of Saas, Iaas & PaaS cloud solutions, including services for Linux. Services include backup & disaster recovery, hosting of web-based and mobile applications with automatic patch management, autoscale and on-site app integration, global distribution of Active Directory and IoT Hub management of IoT devices.
+Microsoft also provides a range of Software as a Service (SaaS), IaaS & PaaS cloud solutions, including services for Linux. Services include backup & disaster recovery, hosting of web-based and mobile applications with automatic patch management, autoscale and on-site app integration, global distribution of Active Directory and IoT Hub management of IoT devices.
 
 Azure Certifications
 Microsoft Certified Solutions Associate (MCSA) – Cloud Platform
@@ -37,16 +37,31 @@ Google Cloud
 The Google Cloud Platform provides IaaS and PaaS solutions. They provide a number of tools, including: Compute Engine, App Engine, Container Engine, Cloud Storage and Big Query. 
 
 Google Cloud Certification
-Google has a 3-month challenge with discounts on training materials etc.
-There are 7 levels: 
-**Associate Cloud Engineer, entry-level cert. Qwiklabs. Corsera Architecting with Google Compute Engine, recommends Linux experience.
-Professional Cloud Architect
-Professional Data Engineer
-Professional Cloud Developer
-Professional Cloud DevOps Engineer (beta)
-Professional Cloud Network Engineer
-Professional Cloud Security Engineer &
-Professional Collaboration Engineer: G suite & Google Cloud Toolset.
+Google has a 3-month challenge with discounts on training materials etc. There is 1 Associate and 7 Professional Google Cloud Certification levels: 
+
+Associate Cloud Engineer Certification (entry-level):
+Includes Qwiklabs. Corsera Architecting with Google Compute Engine, recommends Linux experience. Sections include:
+*Compute; Compute Engine, App Engine, Google Kubernetes Engine, Cloud Functions.
+*Networking:
+*Virtual Private Cloud (VPC)
+*Firewall Rules
+*Load Balancing
+*Classless Inter-Domain Routing (CIDR) - used for IP addressing and routing.
+*Virtual Private Network (VPN), Cloud VPN etc.
+*Google Command Line Utility, gloud commands.
+*Data: Cloud Storage, Cloud SQL, Big Query.
+*Other: Stackdriver, Cloud Identity Access Management. 
+
+Professional Cloud Certifications:
+1. Professional Cloud Architect
+2. Professional Data Engineer
+3. Professional Cloud Developer
+4. Professional Cloud DevOps Engineer (beta)
+5. Professional Cloud Network Engineer
+6. Professional Cloud Security Engineer
+7. Professional Collaboration Engineer: G suite & Google Cloud Toolset.
+
+Others:
 G-suite Certification
 Google Cloud - Apigee Certified API Engineer
 Associate Android Developer

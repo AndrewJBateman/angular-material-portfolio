@@ -30,7 +30,7 @@ It is estimated to take 1800hours and it took me all of 2017 working part-time. 
 	},
 	{
     title: 'Programming Languages',
-    imgPath: '../../assets/images/prog1.png',
+    imgPath: '../../assets/images/prog.png',
 		content: 'Most of my programming experience so far has been in Javascript ES6 (ECMAScript6 / 2015), on the client and server sides. I started my programming journey with a range of courses with FrontEndMasters & TeamTreehouse courses, including completing Full Stack Javascript, PHP, C#, Rails Development, Java Web Development, Android (up to advanced level) Tracks, Swift, Ruby, Wordpress, Rails, ASP.NET. Since Treehouse I focused on Javascript as it was the most popular language and was used on the front and backend. Due to its use in Angular I have also spent a lot of time using Typescript.'
 	},
 	{

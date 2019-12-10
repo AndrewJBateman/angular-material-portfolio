@@ -1,4 +1,9 @@
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
+  <h2>
+    <mat-icon color="accent" class="title-icon">
+      work
+    </mat-icon>Recent Projects</h2>
+  <hr class="horiz-line">
   <div fxLayout="row wrap">
     <div
       *ngFor="let project of projects; index as projectId"
@@ -7,7 +12,7 @@
       fxFlex.sm="100"
       fxFlex.xs="100"
       fxLayout="column"
-      style="padding: 5px;">
+      style="padding: 10px;">
       
       <!--mat-card for each project with data-binding from projects.ts-->
       <mat-card>

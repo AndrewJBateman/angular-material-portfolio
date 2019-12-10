@@ -76,7 +76,7 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 ## Technologies
 
-* [Angular CLI v8.3.19](https://github.com/angular/angular-cli)
+* [Angular CLI v8.3.20](https://github.com/angular/angular-cli)
 
 * [Angular framework v8.2.14](https://angular.io/)
 
@@ -136,7 +136,7 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 * [Blog post images from Unsplash](https://unsplash.com/)
 
-* [Devdactic article: How to Host Your Ionic App as a Website on Firebase & Standard Web Servers](https://devdactic.com/host-ionic-website-firebase/)
+* [Simon Grimm of Devdactic's article: How to Host Your Ionic App as a Website on Firebase & Standard Web Servers](https://devdactic.com/host-ionic-website-firebase/)
 
 ## Screenshots
 
