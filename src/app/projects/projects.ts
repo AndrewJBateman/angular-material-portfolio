@@ -4,9 +4,9 @@ export const PROJECTS: Project[] = [
   // app 1
   {
     title: 'This Website',
-    summary: `Angular 8 was used to build this site and Angular Material Design components are used extensively. A Google Cloud Firestore NoSQL database stores the blog posts and data from submitted Contact forms. Anyone can Read the blog posts but there is a login link in the navbars so only a logged in user can Create, Update and Delete (CRUD) posts. Firebase Authorization is used to login. 
+    summary: `Angular 8 was used to build this site and Angular Material Design components were used extensively. A Google Cloud Firestore NoSQL database stores the blog posts and data from submitted Contact forms. Anyone can Read the blog posts but there is a login link in the navbars so only a logged in user can Create, Update and Delete (CRUD) posts. Google Authorization is used to login. 
 
-I wanted to minimise time spent on styling and layout so I could focus on technical content. However presenting clear and fully-responsive content is also very important so I have made great use of Angular Material mat-cards to present information. The Angular Flex Layout API was used to create a responsive row of columns. This means content such as mat-cards regroup neatly as the screen width is reduced to mobile size (max-width: 599px).
+I wanted to minimise time spent on styling and layout so I could focus on technical content. However presenting clear and fully-responsive content is also very important so I have made great use of Angular Material mat-cards. The Angular Flex Layout API was used to create a responsive row of columns. This means content such as mat-cards regroup neatly as the screen width is reduced to mobile (xs) size; max-width: 599px.
 
 Icons are limited to the Angular Material Icon Library - e.g. there are no icons for linkedin or github menu links and I have avoided adding bloat by importing the Bootstrap library. I have followed Don\'t Repeat Yourself (DRY) rules, so data for the Home, Skills and Projects pages was created in separate typescript files (based on a model class) with 1-way data-binding to a *ngFor mat-card loop in the template so html template files are kept short.`,
     icon: 'person',
@@ -118,9 +118,9 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   },
   // app 4
 	{
-    title: 'Tech Info App',
-    summary: 'Ionic app that displays electrical information using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using. JSON data fetched from an external API. Includes a user search field. Includes a user search field Ionic-Angular app that displays world news using.',
-    icon: 'build',
+    title: 'Github Info App',
+    summary: 'Ionic-Angular app that allows the user to search for Github users then displays their profile/repository info. using JSON data fetched from the Github API. ',
+    icon: 'laptop',
     images: [
       {
         src: '../assets/images/elecInfo.jpg',
@@ -147,11 +147,11 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
         icon: ''
       }
     ],
-		github: 'https://github.com/AndrewJBateman/ionic-api-techdata',
+		github: 'https://github.com/AndrewJBateman/ionic-angular-github',
 		url: ''
   },
   // app 5
-	{
+	/* {
     title: 'Cryptocurrency App',
     summary: 'Ionic app that displays information about cryptocurrency prices using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
     icon: 'attach_money',
@@ -183,9 +183,9 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
     ],
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: ''
-  },
+  }, */
   // app 6
-	{
+	/* {
     title: 'Tensorflow App',
     summary: 'Ionic app that displays tensorflow info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
     icon: 'timeline',
@@ -217,9 +217,9 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
     ],
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: ''
-  },
+  }, */
   // app 7
-	{
+	/* {
     title: 'World Bank Data App',
     summary: 'Ionic app that displays worldbankinfo. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field',
     icon: 'trending_up',
@@ -251,9 +251,9 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
     ],
 		github: 'https://github.com/AndrewJBateman/ionic-angular-world-data',
 		url: ''
-  },
+  }, */
   // app 8
-	{
+	/* {
     title: 'NASA Data App',
     summary: 'Ionic app that displays NASA info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field Includes a user search field',
     icon: 'location_searching',
@@ -285,5 +285,5 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
     ],
 		github: 'https://github.com/AndrewJBateman/angular-nasa-api',
 		url: ''
-	},
+	}, */
 ];

@@ -10,8 +10,8 @@ export const SKILLS: Skill[] = [
 	},
 	{
 		area: 'prog',
-		title: 'Back-End/Database',
-		content: 'Node.js with Mongoose, SQL - mainly MySQL & SQLite, NoSQL - mainly MongoDB, Google Firebase'
+		title: 'Cloud/Back-End/Database',
+		content: 'Google Cloud, including Firebase, Node.js with Mongoose, SQL - mainly MySQL & SQLite, NoSQL - mainly MongoDB'
 	},
 	{
 		area: 'prog',

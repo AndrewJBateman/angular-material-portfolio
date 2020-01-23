@@ -39,18 +39,22 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 * **Navbars:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
 
 * **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
-**OPTIONAL:** add link at bottom to return to the top (good for mobile phones)
+
+**OPTION:** add link at bottom to return to the top (good for mobile phones)
 
 * **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page with more info, 1 routes to github page and 1 open app in browser.
+
 **TODO:** ensure equal card content height in row of 2.
 
 * **Project-Detail:** Navigates to project detail page from project page link. 4 pages featured with images shown max 2 per line.
 * PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
 * mobile app: Image size used: 1066 x 600 (containes 3 x 9:16 images) to give 16:9 when 3 images in a row.
 
+* **TODO:** Correct API data/store issue for Project 2: News App.
+
 * **TODO:** Complete real content for Project 3: Country Data App.
 
-* **TODO:** Complete real content for Project 4: Tech Info App.
+* **TODO:** Complete real content for Project 4: Github Info App.
 
 * **TODO:** Complete real content for Project 5: Cryptocurrencies App.
 
@@ -61,14 +65,18 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 * **TODO:** Complete real content for Project 8: Nasa Data App.
 
 * **Skills:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
-**TODO:** Complete real content. 
+
+**TODO:** Complete real content - add Project Management skills. 
 
 * **Contact:** Working, code tidy. Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
+
 **OPTION:** Update this to send me an email with the message.
 
 * **Blog:** Working. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
 Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Posts list page shows the image with the image credit text in bottom left corner. The Post Detail page adds a web link to the image authors page in the card footer. Note: I keep a backup copy of each post in the post-backups folder, in case the Firestore database goes down.
+
 **TODO:** change login to my email only.
+
 **OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
@@ -126,13 +134,13 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 ## Inspiration
 
-* [website by Julian Rubiano](http://www.julienrubiano.fr/)
+* [Website by Julian Rubiano](http://www.julienrubiano.fr/)
 
-* [website by Jaxon Wright](https://jaxonwright.com/)
+* [Website by Jaxon Wright](https://jaxonwright.com/)
 
 * [Medium article by Tomas Trajan: The complete guide to Angular Material Themes](https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1)
 
-* [article by Paul Halliday: Angular: Performance Analysis with webpack Bundle Analyzer](https://alligator.io/angular/angular-webpack-bundle-analyzer/)
+* [Article by Paul Halliday: Angular: Performance Analysis with webpack Bundle Analyzer](https://alligator.io/angular/angular-webpack-bundle-analyzer/)
 
 * [Blog post images from Unsplash](https://unsplash.com/)
 
