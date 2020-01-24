@@ -84,33 +84,33 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   },
   // app 3
 	{
-    title: 'Country Data App',
-    summary: 'Ionic-Angular app that displays information about world countries using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
+    title: 'World Data App',
+    summary: 'Ionic-Angular app that displays information about world countries and oceans using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world country information using JSON data fetched from an external API. There is a page devoted to the worlds oceans as well',
     icon: 'language',
     images: [
       {
         src: '../assets/images/countryData.jpg',
         page: 'Home Page',
         content: '',
-        icon: ''
+        icon: 'home'
       },
       {
         src: '../assets/images/countryData.jpg',
-        page: 'xx Page',
+        page: 'Categories Page',
         content: '',
-        icon: ''
+        icon: 'tune'
       },
       {
         src: '../assets/images/countryData.jpg',
-        page: 'xx Page',
+        page: 'Favourites Page',
         content: '',
-        icon: ''
+        icon: 'favorite'
       },
       {
         src: '../assets/images/countryData.jpg',
-        page: 'xx Page',
+        page: 'About Page',
         content: '',
-        icon: ''
+        icon: 'info'
       }
     ],
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
@@ -119,32 +119,32 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   // app 4
 	{
     title: 'Github Info App',
-    summary: 'Ionic-Angular app that allows the user to search for Github users then displays their profile/repository info. using JSON data fetched from the Github API. ',
+    summary: 'Ionic-Angular app that allows the user to search for Github users then displays their profile/repository info. using JSON data fetched from the Github API. User can see the number of repositories, how many followers and a full description of each software project.',
     icon: 'laptop',
     images: [
       {
         src: '../assets/images/elecInfo.jpg',
         page: 'Home Page',
         content: '',
-        icon: ''
+        icon: 'home'
       },
       {
         src: '../assets/images/elecInfo.jpg',
-        page: 'xx Page',
+        page: 'Categories Page',
         content: '',
-        icon: ''
+        icon: 'tune'
       },
       {
         src: '../assets/images/elecInfo.jpg',
-        page: 'xx Page',
+        page: 'Favourites Page',
         content: '',
-        icon: ''
+        icon: 'favorite'
       },
       {
         src: '../assets/images/elecInfo.jpg',
-        page: 'xx Page',
+        page: 'About Page',
         content: '',
-        icon: ''
+        icon: 'info'
       }
     ],
 		github: 'https://github.com/AndrewJBateman/ionic-angular-github',
