@@ -36,13 +36,13 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 ## Sections info
 
-* **Navbars:** Working. top/side navbars with page routing and working links to my Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
+* **Navbars:** Working. Top nav tidy. top/side navbars with page routing and working links to my Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu. 
 
-* **Home:** Working. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
+* **Home:** Working & Tidy. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
 
-**OPTION:** add link at bottom to return to the top (good for mobile phones)
+**OPTION:** add link at bottom to return to the top (good for mobile phones).
 
-* **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 8 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page with more info, 1 routes to github page and 1 open app in browser.
+* **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 2 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page, 1 routes to github page and 1 opens the app in a browser.
 
 **TODO:** ensure equal card content height in row of 2.
 
@@ -115,6 +115,25 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 * Run `firebase deploy` to deploy to firebase hosting.
 
 ## Code Examples
+* service function to fetch blog posts, from `post.service.ts` using the `AngularFirestoreCollection` database service.
+
+```typescript
+getPosts() {
+	return this.postsCollection
+		.snapshotChanges()
+		.pipe(
+			map(
+				actions => {
+					return actions.map(a => {
+						const data = a.payload.doc.data() as Post;
+						const id = a.payload.doc.id;
+						return { id, ...data };
+					});
+				}
+			)
+		);
+}
+```
 
 ## Features
 
@@ -130,7 +149,7 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain.
 
-* To-Do: see Sections Info above.
+* To-Do: see Sections Info above. Check aria labels
 
 ## Inspiration
 
