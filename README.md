@@ -36,7 +36,7 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 ## Sections info
 
-* **Navbars:** Working. Top nav tidy. top/side navbars with page routing and working links to my Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu. 
+* **Navbars:** Working & Tidy. Top/side navbars with page routing and working links to my Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu. 
 
 * **Home:** Working & Tidy. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
 
