@@ -1,7 +1,7 @@
 Title: Angular Framework
 Subtitle: the Good, Bad and Bugly
 Content:
-Angular is an open-source javascript framework based on Typescript, used to produce Single Page Applications (SPA). It mainly consists of components, modules, templates, metadata with 2-way data-binding, services, RESTful API handling, directives and injection of dependencies. We are currently on Angular 8 with Angular 9 due in october/november 2019.
+Angular is an open-source javascript framework based on Typescript, used to produce Single Page Applications (SPA). It mainly consists of components, modules, templates, metadata with 2-way data-binding, services, RESTful API handling, directives and injection of dependencies. We are currently on Angular 9 with Angular 9 due in may 2020.
 
 Which companies uses it? Google, Wix, The Guardian, Weather.com
 
