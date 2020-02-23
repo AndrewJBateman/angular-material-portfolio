@@ -1,5 +1,11 @@
+// Notes on the Projects page classes:
+//
+// 1. Project image has overlay text bottom right with pink icon and white text name of project.
+//
+// 2. Mat-card content text uses pre-wrap for white space styling so paragraph spacing from `projects.ts` is observed and text text is not pushed together with no paragraph spacing.
+
 h2 {
-  margin: 10px auto 0 auto;
+  margin: 10px auto;
   color: #0D47A1;
   position: center;
 }
@@ -9,7 +15,7 @@ h2 {
   border: 2px solid rgb(245, 200, 241)
 }
 
-.title-icon {
+.project-title-icon {
   transform: scale(1.5);
   padding-right: 8px;
 }
@@ -29,7 +35,7 @@ a.mat-flat-button {
   margin-bottom: 8px;
 }
 
-.image-div {
+.project-image {
   position: relative;
   max-width: 100%;
   text-align: center;
@@ -49,7 +55,7 @@ a.mat-flat-button {
   // padding-right: 4px;
 }
 
-p.content-style {
+p.project-content {
   white-space: pre-wrap;
   // height:130px;
   margin: 0 !important;
@@ -59,12 +65,12 @@ p.content-style {
   background-color: green;
 }
 
-.icon-display {
+.project-image-icon {
   transform: scale(1.5);
   color: rgb(245, 200, 241);
 }
 
-.icon-content {
+.project-content-icon {
   transform: scale(1.5);
   color: #0d47a1;
   margin-right: 4px;

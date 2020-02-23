@@ -42,31 +42,22 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 **OPTION:** add link at bottom to return to the top (good for mobile phones).
 
-* **Projects:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 2 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page, 1 routes to github page and 1 opens the app in a browser.
+* **Projects:** Working & Tidy. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 2 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page, 1 routes to github page and 1 opens the app in a browser.
+* **TODO:** ensure equal card content height in row of 2.
 
-**TODO:** ensure equal card content height in row of 2.
-
-* **Project-Detail:** Navigates to project detail page from project page link. 4 pages featured with images shown max 2 per line.
+* **Project-Detail:** Working & Tidy. Navigates to project detail page from project page link. 4 pages featured with images shown max 2 per line.
 * PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
 * mobile app: Image size used: 1066 x 600 (containes 3 x 9:16 images) to give 16:9 when 3 images in a row.
-
 * **TODO:** Correct API data/store issue for Project 2: News App.
-
 * **TODO:** Complete real content for Project 3: Country Data App.
-
 * **TODO:** Complete real content for Project 4: Github Info App.
-
 * **TODO:** Complete real content for Project 5: Cryptocurrencies App.
-
 * **TODO:** Complete real content for Project 6: TensorFlow App.
-
 * **TODO:** Complete real content for Project 7: WorldBank Data App.
-
 * **TODO:** Complete real content for Project 8: Nasa Data App.
 
 * **Skills:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
-
-**TODO:** Complete real content - add Project Management skills. 
+* **TODO:** Complete real content - add Project Management skills. 
 
 * **Contact:** Working, code tidy. Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
 
@@ -74,8 +65,7 @@ Angular 8 app using Angular Material to create a fully-responsive portfolio webs
 
 * **Blog:** Working. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
 Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Posts list page shows the image with the image credit text in bottom left corner. The Post Detail page adds a web link to the image authors page in the card footer. Note: I keep a backup copy of each post in the post-backups folder, in case the Firestore database goes down.
-
-**TODO:** change login to my email only.
+* **TODO:** change login to my email only.
 
 **OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
@@ -149,7 +139,7 @@ getPosts() {
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain.
 
-* To-Do: see Sections Info above. Check aria labels
+* To-Do: see Sections Info above. Check aria labels. scss embed styles-
 
 ## Inspiration
 

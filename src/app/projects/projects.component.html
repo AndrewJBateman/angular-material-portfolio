@@ -1,8 +1,9 @@
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
   <h2>
-    <mat-icon color="accent" class="title-icon">
+    <mat-icon color="accent" class="project-title-icon">
       work
-    </mat-icon>Recent Projects</h2>
+    </mat-icon>Recent Projects
+  </h2>
   <hr class="horiz-line">
   <div fxLayout="row wrap">
     <div
@@ -14,22 +15,22 @@
       fxLayout="column"
       style="padding: 10px;">
       
-      <!--mat-card for each project with data-binding from projects.ts-->
+      <!--mat-card for each project with data-binding from projects.ts.
+        Project summary length is truncated using Angular slice pipe-->
       <mat-card>
-        <div class="image-div">
+        <div class="project-image">
           <img class="mat-card-image" [src]="project.images[0].src" [alt]="project.images[0].page">
           <div class="project-image-text">
-            <mat-icon class="icon-display">{{ project.icon }}</mat-icon>
+            <mat-icon class="project-image-icon">{{ project.icon }}</mat-icon>
             <span style="margin-left: 4px;">
               {{ project.title }}
             </span>
           </div>
         </div>
         <mat-card-content>
-          <p class="content-style">
-            <mat-icon class="icon-content"> {{ project.icon }}</mat-icon>
+          <p class="project-content">
+            <mat-icon class="project-content-icon"> {{ project.icon }}</mat-icon>
             {{ project.summary | slice:0:270 }}...
-            
           </p>
         </mat-card-content>
         <mat-card-actions>

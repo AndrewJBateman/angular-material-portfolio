@@ -1,3 +1,9 @@
+// Notes on the Project Detail page classes:
+//
+// 1. Project image has overlay text bottom right with pink icon and white text name of project.
+//
+// 2. Mat-card content text uses pre-wrap for white space styling so paragraph spacing from `projects.ts` is observed and text text is not pushed together with no paragraph spacing.
+
 .project-title {
   color: #0d47a1;
   font-size: 20px !important;
@@ -18,7 +24,7 @@
   font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 
-.header-image {
+.project-title-avatar {
   background-image: url('/assets/images/me-outside.jpg');
   background-size: cover;
 }
@@ -64,7 +70,7 @@
   color: rgb(245, 200, 241);
 }
 
-.icon-content {
+.project-content-icon {
   transform: scale(1.5);
   color: #0d47a1;
   margin-right: 4px;

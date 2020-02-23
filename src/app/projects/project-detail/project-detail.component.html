@@ -7,19 +7,19 @@
       <!--mat-card for title and summary-->
       <mat-card class="mat-elevation-z1">
         <mat-card-header>
-          <div mat-card-avatar class="header-image" alt="photo of Andrew Bateman"></div>
+          <div mat-card-avatar class="project-title-avatar" alt="photo of Andrew Bateman"></div>
           <mat-card-title class="project-title">
-              {{ project.title }}
-            </mat-card-title>
-            <mat-card-subtitle class="project-subtitle">
-              Project Summary
-            </mat-card-subtitle>
-          </mat-card-header>
+            {{ project.title }}
+          </mat-card-title>
+          <mat-card-subtitle class="project-subtitle">
+            Project Summary
+          </mat-card-subtitle>
+        </mat-card-header>
     
-          <mat-card-content>
-            <p class="project-content">{{ project.summary }} Some of the pages are explained below.</p>
-          </mat-card-content>
-        </mat-card>
+        <mat-card-content>
+          <p class="project-content">{{ project.summary }} Some of the pages are explained below.</p>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 
@@ -47,13 +47,13 @@
             <p 
               [ngClass.sm]="{'spare-style': true}"
               class="content-style">
-              <mat-icon class="icon-content">{{ project.images[i].icon }}</mat-icon>
+              <mat-icon class="project-content-icon">{{ project.images[i].icon }}</mat-icon>
               {{ project.images[i].content  | slice:0:310 }}
             </p>
           </div>
         </mat-card-content>
-        
       </mat-card>
+
     </div>
   </div>
 </div>

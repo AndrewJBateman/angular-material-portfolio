@@ -21,7 +21,7 @@ It is estimated to take 1800hours and it took me all of 2017 working part-time. 
 	{
     title: 'Databases',
     imgPath: '../../assets/images/database.png',
-		content: 'I have experience of Structured Query Language (SQL) relational databases, My experience of noSQL is mainly MongoDB, using Mongoose schemas and models. I have used the AWS MongoDB Atlas Cloud Service and the MongoDB Compass GUI for some projects. I have also used Cordova SQLite with Ionic apps. My database knowledge has come from Teamtreehouse, Youtube videos and the FCC and Udemy courses already mentioned.'
+		content: 'I have experience of Structured Query Language (SQL) relational databases, My experience of NoSQL is mainly MongoDB, using Mongoose schemas and models. I have used the AWS MongoDB Atlas Cloud Service and the MongoDB Compass GUI for some projects. I have also used Cordova SQLite with Ionic apps. My database knowledge has come from Teamtreehouse, Youtube videos and the FCC and Udemy courses already mentioned.'
 	},
 	{
     title: 'Ionic',
