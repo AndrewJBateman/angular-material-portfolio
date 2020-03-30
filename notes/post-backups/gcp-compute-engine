@@ -1,0 +1,7 @@
+Compute Engine allows you to create, configure and run virtual machines (VMs) as 'instances'. It is possible to run thousands of these VMs. Depending on the number of CPUs and amount of memory required, different types of instances can be chosen; general purpose (N2, N2D or E2), compute optimized (C2) or memory optimised (M2). 
+
+Graphics Processing Units (GPUs) can also be chosen to accelerate certain types of workload such as data processing or machine learning. All GPUs use NVIDIA Tesla CPUs. Custom VMs can also be created.
+
+Preemptible VMs can be used to save up to 80% of the cost but they can be terminated anytime, depending on if Google needs the resource, but certainly within 24 hours. However stopping and starting a VM will reset the counter. So they are only suitable for batch processing or fault-tolerant applications and are not covered by any Service Level Agreement.
+
+Sole-tenant nodes are physical servers dedicated to a single user, good if bringing a single-user software license.
