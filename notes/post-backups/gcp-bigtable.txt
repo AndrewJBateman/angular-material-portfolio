@@ -1,14 +1,14 @@
 Title: GCP BigTable
 Subtitle: Just How Big?
 Content:
-Petabytes. GCP Bigtable is a distributed non-relational storage system that uses schema like a multi-dimensional map of cells. Is very scalable - up to a maximum of 10Mb in a single cell & 100MB in a single row (with a max 4KB for the row key). It is better to have fewer larger tables. The actual tables are sparse - they use up very little space. It is preferable to have a table with a large number of columns even if they are not all used - empty cells take up no space. Tables can scale up to billions of rows and thousands of columns - allowing terabytes or even petabytes of data to be stored. Ideal for using MapReduce operations (dividing work into parallel independent tasks using tuples - key-value pairs). 
+Petabytes. GCP Bigtable is a distributed non-relational storage system that uses schema like a multi-dimensional map of cells. It is very scalable - up to a maximum of 10MB in a single cell & 100MB in a single row (with a max 4KB for the row key). It is better to have fewer larger tables. The actual tables are sparse - they use up very little space. It is preferable to have a table with a large number of columns even if they are not all used - empty cells take up no space. Tables can scale up to billions of rows and thousands of columns - allowing terabytes or even petabytes of data to be stored. Ideal for using MapReduce operations (dividing work into parallel independent tasks using tuples - key-value pairs). 
 
 When sending mutations (changes) there can be no more than 100,000 mutations in a batch. Row keys should be kept short and can be of the following types: reverse domain names, string identifiers, timestamps. Rowkeys can have multiple values. Rows are sorted lexicographically by row key.
 
-The maximum size of a GCP bigTable will depend on the supporting nodes - which should be loaded to no more than 70%. For SSD clusters allow 2.5TB per node, for HDD allow 8TB per node. An example calculation on the Google website shows that for 50TB of data stored in an SSD cluster you should have at least 29 nodes which will give you 29 x 2.5TB = 72.5TB of storage.
+The maximum size of a GCP Bigtable will depend on the supporting nodes - which should be loaded to no more than 70%. For SSD clusters allow 2.5TB per node, for HDD allow 8TB per node. An example calculation on the Google website shows that for 50TB of data stored in an SSD cluster you should have at least 29 nodes which will give you 29 x 2.5TB = 72.5TB of storage.
 
 Every GCP Bigtable is automatically load-balanced as part of the controlling process. Table tablets are distributed between nodes and periodic compactions rewrite tables to organise the data more efficiently. Original data in a row as well as any mutated data will be stored until the periodic compaction removes the original data. Data is also automatically compressed. Google keeps multiple copies of data for high data durability and access is controlled using Cloud Identity & Access Management (IAM) roles.
 
-Bigtable is not relational so does not support SQL queries, joins etc. Cloud Spanner or Cloud SQL should be used if SQL functionality is required.
+Bigtable is non-relational so it does not support SQL queries, joins etc. Cloud Spanner or Cloud SQL should be used if SQL functionality is required.
 
 In order to use Bigtable it is necessary to create instances that can have up to 4 clusters, each containing nodes (Compute Units or CUs) that manage the data.

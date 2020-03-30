@@ -1,0 +1,26 @@
+Title: GCP Cloud Storage
+Subtitle: What Is It?
+Content:
+-Cloud Storage is a RESTful, unstructured, secure & highly durable object (blob) online storage for data such as pdfs, videos and images; data that will not be queried, just stored and retrieved as a whole. 
+
+There are 4 classes of storage: 
+-Standard: Regional, Multi-Regional or Dual-Regional Storage: performant and high-frequency access
+-Nearline Storage: fast access of less than once a month
+-Coldline Storage: fast access of less than once a quarter
+-Archive: long-term preservation of data accessed less than once a year
+
+The storage will operate together with AWS S3 and Eucalyptus Systems. Google uses an Access Control List (ACL) to control who can access the data. Data is stored with automatic redundancy. Data can be configured to automatically transition to a lower cost storage option if not accessed within 90 days.
+
+Features include:
+-Object Lifecycle Management
+-Object Versioning: so old copies of data can be kept
+-Retention policies: define minimum periods data has to be stored for
+-Object Holds: place a hold to prevent its deletion
+-Customer-managed encryption keys: stored by the Cloud Key Management Service
+-Customer-supplied encryption keys
+-Uniform bucket-level access: control access to Cloud Storage resources by disabling object ACLs
+-Requester Pays: people accessing the data have to supply a project ID to bill
+-Pub/Sub Notifications for Cloud Storage: send notifications when objects are changed; created, updated or deleted
+-Cloud Audit Logs with Cloud Storage: keep admin activity logs
+
+The cost depends on the amount of data stored, the number of operations, the duration it is stored for and the network resources used when moving or accessing the data. Google Cloud Storage is ideal for keeping backups. 

@@ -65,7 +65,7 @@ Angular 9 app using Angular Material to create a fully-responsive portfolio webs
 
 - **Blog:** Working. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
   Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the Blog Detail and the footer includes an image credit with web link to the authors page. Note: I keep a backup copy of each post in `/post-backups`.
-- **TODO:** change login to my email only.
+- **TODO:** change login to my email only. Complete gcp-Kubernetes Engine post
 
 **OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
