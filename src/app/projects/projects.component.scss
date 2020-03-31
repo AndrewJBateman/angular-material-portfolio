@@ -2,8 +2,9 @@
 //
 // 1. Project image has overlay text bottom right with pink icon and white text name of project.
 //
-// 2. Mat-card content text uses pre-wrap for white space styling so paragraph spacing from `projects.ts` is observed and text text is not pushed together with no paragraph spacing.
+// 2. Mat-card content text uses pre-wrap for white space styling so paragraph spacing from `projects.ts` is observed and text is not pushed together with no paragraph spacing.
 
+// Top title styling
 h2 {
   margin: 10px auto;
   color: #0D47A1;
@@ -20,6 +21,7 @@ h2 {
   padding-right: 8px;
 }
 
+// card styling
 mat-card-actions {
   padding: 0;
   margin: auto 0 0;

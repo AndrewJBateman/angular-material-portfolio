@@ -1,4 +1,10 @@
-// Top title styling
+// Notes on the Blog (Post-List) page classes:
+//
+// 1. There is a horizontal line (styling in global styles.scss) to separate title and cards.
+//
+// 2. The main section is made up of mat-cards.
+
+// Title styling
 h2 {
   margin: 10px auto 0 auto;
   color: #0D47A1;
@@ -15,7 +21,7 @@ h2 {
   border: 2px solid rgb(245, 200, 241)
 }
 
-// card styling
+// Card styling
 .mat-card-image {
   border-bottom-style: solid;
   border-bottom-width: 4px;
@@ -62,17 +68,4 @@ mat-card-actions {
   position: relative;
   text-align: center;
   color: white;
-}
-
-/* Bottom right text */
-.photo-credit {
-  position: absolute;
-  bottom: 30px;
-  right: -10px;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.4); /* Black background with 0.5 opacity */
-  color: white; /* Grey text */
-  padding-left: 4px;
-  padding-right: 4px;
-  font-size: 12px !important;
 }

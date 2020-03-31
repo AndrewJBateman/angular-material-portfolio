@@ -38,15 +38,15 @@ Angular 9 app using Angular Material to create a fully-responsive portfolio webs
 
 ## Sections info
 
-- **Navbars:** Working & Tidy. Top/side navbars with page routing and working links to my Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
+- **Navbars:** Working & tidy. Top/side navbars with page routing and working links to my Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
 
-- **Home:** Working & Tidy. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
+- **Home:** Working & tidy. Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
 - **OPTION:** add link at bottom to return to the top (good for mobile phones).
 
-- **Projects:** Working & Tidy. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 2 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page, 1 routes to github page and 1 opens the app in a browser.
+- **Projects:** Working & tidy. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 2 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page, 1 routes to github page and 1 opens the app in a browser.
 - **TODO:** ensure equal card content height in row of 2.
 
-- **Project-Detail:** Working & Tidy. Navigates to project detail page from project page link. 4 pages featured with images shown max 2 per line.
+- **Project-Detail:** Working & tidy. Navigates to project detail page from project page link. 4 pages featured with images shown max 2 per line.
 - PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
 - mobile app: Image size used: 1066 x 600 (containes 3 x 9:16 images) to give 16:9 when 3 images in a row.
 - **TODO:** Correct API data/store issue for Project 2: News App.
@@ -57,10 +57,9 @@ Angular 9 app using Angular Material to create a fully-responsive portfolio webs
 - **TODO:** Complete real content for Project 7: WorldBank Data App.
 - **TODO:** Complete real content for Project 8: Nasa Data App.
 
-- **Skills:** Working. fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
-- **TODO:** Complete real content - add Project Management skills.
+- **Skills:** Working & tidy. fxFlex layout with cards to display project data using data-binding from an array of skills based on a Skill model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 
-- **Contact:** Working, code tidy. Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
+- **Contact:** Working & tidy. Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
 - **OPTION:** Update this to send me an email with the message.
 
 - **Blog:** Working. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
