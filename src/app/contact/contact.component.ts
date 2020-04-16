@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -10,6 +11,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 	styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  title = 'Send a message';
 
 	contactForm: FormGroup;
 
@@ -23,11 +25,17 @@ export class ContactComponent implements OnInit {
     private fb: FormBuilder,
     private afs: AngularFirestore,
     private router: Router,
-    private location: Location
+    private location: Location,
+    private titleService: Title,
+    private metaTagService: Meta
   ) { }
 
 	ngOnInit() {
     this.fillForm();
+    this.titleService.setTitle(this.title);
+    this.metaTagService.updateTag(
+      { name: 'contact', content: 'andrewbateman.org' }
+    );
   }
   
   private fillForm() {

@@ -42,7 +42,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   // app 2
 	{
     title: 'News App',
-    summary: `Ionic 5 with Angular 8 was used to create an app that displays articles fetched from a news API. Angular Material components, including mat-list, mat-card, mat-sidenav etc. were also used. Features include:
+    summary: `Ionic 5 with Angular 9 was used to create an app that displays articles fetched from a news API. Angular Material components, including mat-list, mat-card, mat-sidenav etc. were also used. Features include:
 * Typescript interface used to define the expected structure of the json object returned from the news API.
 * Separate providers (services) page with API http fetch functions.
 * Custom pipes used to modify API news article titles, contents and derive '..time ago' from a Univsal Time Constant (UTC) date string.
@@ -113,7 +113,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
         icon: 'info'
       }
     ],
-		github: 'https://github.com/AndrewJBateman/angular-api-countries',
+		github: 'https://github.com/AndrewJBateman/ionic-angular-world-data',
 		url: ''
   },
   // app 4

@@ -1,4 +1,9 @@
-Compute Engine allows you to create, configure and run virtual machines (VMs) as 'instances'. It is possible to run thousands of these VMs. Depending on the number of CPUs and amount of memory required, different types of instances can be chosen; general purpose (N2, N2D or E2), compute optimized (C2) or memory optimised (M2). 
+Title: GCP Compute Engine
+Subtitle: Explained
+Content:
+Compute Engine allows you to create, configure and run virtual machines (VMs) as 'instances'. It is possible to run thousands of these VMs. Depending on the number of CPUs and type/amount of persistant storage (memory) required, different types of instances can be chosen; general purpose (N2, N2D or E2), compute optimized (C2) or memory optimised (M2). 
+
+Google VMs run inside Linux x86-based Kernal Virtual Machine (KVM) hypervisors. These hypervisors can run multiple VMs, including with guest operating systems.
 
 Graphics Processing Units (GPUs) can also be chosen to accelerate certain types of workload such as data processing or machine learning. All GPUs use NVIDIA Tesla CPUs. Custom VMs can also be created.
 

@@ -18,6 +18,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 import { SharedModule } from './shared/shared.module';
 import { SkillsComponent } from './skills/skills.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
 	declarations: [
@@ -38,7 +39,8 @@ import { SkillsComponent } from './skills/skills.component';
     NavModule,
     PipesModule,
 		PostsModule,
-    SharedModule.forRoot()
+    SharedModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [],
 	providers: [],

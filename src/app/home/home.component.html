@@ -1,3 +1,9 @@
+<head>
+  <meta
+  name="description"           
+  content="Home page gives a brief history of my technical background and years spent learning to code. Shows what I learnt using Material cards">
+</head>
+
 <div class="home-container">
   <!--Top 'main' section-->
   <div class="container"
@@ -25,7 +31,7 @@
       </h2>
       
       <p class="about-para">
-        I have been studying programming part-time for 3 years, completing a range of projects, online courses & tutorials from FreeCodeCamp, Treehouse, Udemy, Coursera and Youtube etc. I am currently studying hard for Google Associate Cloud Engineer Certification. I have read countless programming-related information online and have
+        I have been studying programming part-time for over 3 years, completing a range of projects, online courses & tutorials from FreeCodeCamp, Treehouse, Udemy, Coursera and Youtube etc. I am currently studying hard for Google Associate Cloud Engineer Certification. I have read countless programming-related information online and have
         <span *ngIf="profile" class="about-repo-text"> {{ repos }}</span> 
         repositories on Github (last updated: 
         <span *ngIf="profile" class="about-repo-text">{{ lastUpdated | dateConvert }}</span>
@@ -33,16 +39,18 @@
       </p>
 
       <p class="about-para">
-        Programming was not completely new to me as I previously worked for 20 years as an Electronic/Electrical Engineer in the UK, Spain and finally in Norway (including 2 years in the
+        Programming was not totally new to me as I previously worked for 20 years as an Electronic/Electrical Engineer in the UK, Spain and finally in Norway (including 2 years in the
         <a
           href="https://en.wikipedia.org/wiki/Hammerfest_(town)"
-          target="_blank">
+          target="_blank"
+          rel="noopener">
           Northermost town in the world
         </a>
         ). After this I returned to Spain to look after the family (including a child with a rare disease called
         <a
           href="https://en.wikipedia.org/wiki/Landau%E2%80%93Kleffner_syndrome"
-          target="_blank">
+          target="_blank"
+          rel="noopener">
           Landau Kleffner
         </a>
         ) & continue programming.

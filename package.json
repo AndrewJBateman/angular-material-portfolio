@@ -24,6 +24,7 @@
     "@angular/platform-browser": "~9.0.2",
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "~9.0.2",
+    "@angular/service-worker": "~9.0.2",
     "cors": "^2.8.5",
     "dayjs": "^1.8.17",
     "firebase": "^6.6.1",
