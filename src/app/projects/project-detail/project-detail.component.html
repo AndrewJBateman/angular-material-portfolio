@@ -1,19 +1,21 @@
 <head>
   <meta
-  name="description"           
-  content="Project Detail page gives more detail about the project, including screen shots.">
+    name="description"
+    content="Project Detail page gives more detail about the project, including screen shots."
+  />
 </head>
 
 <div fxFlex fxLayout="column" fxLayoutGap="5px">
   <div fxLayout="row wrap">
-    <div
-      fxFlex="100"
-      fxLayout="column"
-      style="padding: 5px;">
+    <div fxFlex="100" fxLayout="column" style="padding: 5px;">
       <!--mat-card for title and summary-->
       <mat-card class="mat-elevation-z1">
         <mat-card-header>
-          <div mat-card-avatar class="project-title-avatar" alt="photo of Andrew Bateman"></div>
+          <div
+            mat-card-avatar
+            class="project-title-avatar"
+            alt="photo of Andrew Bateman"
+          ></div>
           <mat-card-title class="project-title">
             {{ project.title }}
           </mat-card-title>
@@ -21,45 +23,54 @@
             Project Summary
           </mat-card-subtitle>
         </mat-card-header>
-    
+
         <mat-card-content>
-          <p class="project-content">{{ project.summary }} Some of the pages are explained below.</p>
+          <p class="project-content">
+            {{ project.summary }} Some of the pages are explained below.
+          </p>
         </mat-card-content>
       </mat-card>
     </div>
   </div>
 
-  <hr class="horiz-line">
+  <hr class="horiz-line" />
 
   <div fxLayout="row wrap">
     <div
-      *ngFor="let image of project.images; let i = index;"
+      *ngFor="let image of project.images; let i = index"
       fxFlex="50"
       fxFlex.md="50"
       fxFlex.sm="100"
       fxFlex.xs="100"
       fxLayout="column"
-      
-      style="padding: 5px;">
-      
+      style="padding: 5px;"
+    >
       <!--mat-card for each project page with data-binding from projects.ts-->
       <mat-card>
         <div class="image-div">
-          <img class="mat-card-image" [src]="project.images[i].src" [alt]="project.images[i].page">
-          <div class="project-image-text"><mat-icon class="icon-display">{{ project.images[i].icon }}</mat-icon>  {{ project.images[i].page }}</div>
+          <img
+            class="mat-card-image"
+            [src]="project.images[i].src"
+            [alt]="project.images[i].page"
+          />
+          <div class="project-image-text">
+            <mat-icon class="icon-display">{{
+              project.images[i].icon
+            }}</mat-icon>
+            {{ project.images[i].page }}
+          </div>
         </div>
         <mat-card-content>
           <div>
-            <p 
-              [ngClass.sm]="{'spare-style': true}"
-              class="content-style">
-              <mat-icon class="project-content-icon">{{ project.images[i].icon }}</mat-icon>
-              {{ project.images[i].content  | slice:0:310 }}
+            <p [ngClass.sm]="{ 'spare-style': true }" class="content-style">
+              <mat-icon class="project-content-icon">{{
+                project.images[i].icon
+              }}</mat-icon>
+              {{ project.images[i].content | slice: 0:310 }}
             </p>
           </div>
         </mat-card-content>
       </mat-card>
-
     </div>
   </div>
 </div>

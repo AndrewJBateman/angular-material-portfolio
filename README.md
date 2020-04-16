@@ -69,8 +69,7 @@ From [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/
 
 **Blog:** Working. Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
   Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the Blog Detail and the footer includes an image credit with web link to the authors page. Note: I keep a backup copy of each post in `/post-backups`.
-**TODO:** change login to my email only. Complete gcp-Kubernetes Engine post
-
+**TODO:** change login to my email only.
 **OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
@@ -78,23 +77,21 @@ From [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/
 
 ## :signal_strength: Technologies
 
-* [Angular CLI v8.3.20](https://github.com/angular/angular-cli)
-* [Angular framework v8.2.14](https://angular.io/)
-* [Angular Material v8.2.3](https://material.angular.io/)
+* [Angular framework v9](https://angular.io/)
+* [Angular Material v9](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
-* [Angular service worker](https://angular.io/guide/service-worker-intro) addded
-* [Firebase v6.6.1](https://firebase.google.com) Cloud storage and authentication.
-* [Reactive Extensions Library for Javascript rxjs v6.5.3](https://rxjs-dev.firebaseapp.com/)
-* [Dayjs v1.8.17](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
-* [Webpack Bundle Analyser v3.6.0](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
+* [Angular service worker v9](https://angular.io/guide/service-worker-intro) addded
+* [Firebase v6](https://firebase.google.com) Cloud storage and authentication.
+* [Reactive Extensions Library for Javascript rxjs v6](https://rxjs-dev.firebaseapp.com/)
+* [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
+* [Webpack Bundle Analyser v3](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
 
 ## :floppy_disk: Setup
 
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-* Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Run `ng build --prod --aot` to create build file with Ahead of Time (aot) compilation.
 * Run `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder.
 * Run `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis.
-* Run `ng build --prod --aot` to create build file with Ahead of Time (aot) compilation.
 * Run `firebase deploy` to deploy to firebase hosting.
 
 ## :computer: Code Examples
@@ -130,8 +127,8 @@ getPosts() {
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain.
-* Lighthouse score: Performance 49%, Accessibility: 89%, Best practises & SEO: 100%, PWA
-* To-Do: Improve lighthouse score. Other todos - see Sections Info above. Check aria labels. scss embed styles.
+* Lighthouse PC score: Performance 47%, Accessibility, Best practises & SEO: 100%, PWA OK
+* To-Do: Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles.
 
 ## :clap: Inspiration
 
