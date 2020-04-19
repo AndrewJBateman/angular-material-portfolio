@@ -6,34 +6,31 @@
 
 ## :page_facing_up: Table of contents
 
-[:zap: Portfolio Angular Material](#zap-portfolio-angular-material) [:page_facing_up: Table of contents](#pagefacingup-table-of-contents)
-[:books: General info](#books-general-info)
-[:books: Sections info](#books-sections-info)
-[:signal_strength: Technologies](#signalstrength-technologies)
-[:floppy_disk: Setup](#floppydisk-setup)
-[:computer: Code Examples](#computer-code-examples)
-[:cool: Features](#cool-features)
-[:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
-[:clap: Inspiration](#clap-inspiration)
-[:camera: Screenshots](#camera-screenshots)
-[:envelope: Contact](#envelope-contact)
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
 ## :books: General info
 
 **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes:
 
-1. desktop 1200px (anything above 1024px)
-2. iPad: 768
-3. bigger screens: 1024px,
-4. iPhone: 320, 480px landscape
+* desktop 1200px (anything above 1024px)
+* iPad: 768
+* bigger screens: 1024px,
+* iPhone: 320, 480px landscape
 
 From [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
 
-1. xs 'screen and (max-width: 599px)'
-2. sm 'screen and (min-width: 600px) and (max-width: 959px)'
-3. md 'screen and (min-width: 960px) and (max-width: 1279px)'
-4. lg 'screen and (min-width: 1280px) and (max-width: 1919px)'
-5. xl 'screen and (min-width: 1920px) and (max-width: 5000px)'
+* xs 'screen and (max-width: 599px)'
+* sm 'screen and (min-width: 600px) and (max-width: 959px)'
+* md 'screen and (min-width: 960px) and (max-width: 1279px)'
+* lg 'screen and (min-width: 1280px) and (max-width: 1919px)'
+* xl 'screen and (min-width: 1920px) and (max-width: 5000px)'
 
 **Build file:** TODO: reduce bundle sizes. webpack-bundle-analyzer used to analyse webpack performance. Replaced moment package with day.js as it uses less memory.
 
@@ -80,7 +77,7 @@ From [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/
 * [Angular framework v9](https://angular.io/)
 * [Angular Material v9](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
-* [Angular service worker v9](https://angular.io/guide/service-worker-intro) addded
+* [Angular service worker v9](https://angular.io/guide/service-worker-intro) added
 * [Firebase v6](https://firebase.google.com) Cloud storage and authentication.
 * [Reactive Extensions Library for Javascript rxjs v6](https://rxjs-dev.firebaseapp.com/)
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
@@ -120,9 +117,7 @@ getPosts() {
 
 * Services: All http calls are enclosed in their own service, in the services folder. There are 3 services:
 
-1. posts: to get posts from the Firestore backend database,
-2. github: [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display current state of my repository.
-3. auth: to authenticate users and limit write access to the Firestore backend database.
+**posts:** to get posts from the Firestore backend database, **github:** [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display current state of my repository, **auth:** to authenticate users and limit write access to the Firestore backend database.
 
 ## :clipboard: Status & To-Do List
 

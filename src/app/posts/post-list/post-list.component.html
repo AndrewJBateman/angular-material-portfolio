@@ -1,16 +1,16 @@
 <head>
   <meta
-  name="blog"           
-  content="Blog page uses Angular cards to display some technical posts that can be clicked on to show a more detailed page.">
+    name="blog"
+    content="Blog page uses Angular cards to display some technical posts that can be clicked on to show a more detailed page."
+  />
 </head>
 
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
   <h2>
-    <mat-icon color="accent" class="title-icon">
-      assignment
-    </mat-icon>Technical Posts
+    <mat-icon color="accent" class="title-icon"> assignment </mat-icon>Technical
+    Posts
   </h2>
-  <hr class="horiz-line">
+  <hr class="horiz-line" />
   <div fxLayout="row wrap">
     <div
       *ngFor="let post of posts | async"
@@ -19,21 +19,24 @@
       fxFlex.sm="50"
       fxFlex.xs="100"
       fxLayout="column"
-      style="padding: 5px;">
+      style="padding: 5px;"
+    >
       <!-- <ng-container *ngIf="post.category === 'Dev'"> -->
 
       <!--mat-card for each post with data-binding from post.ts-->
-      <mat-card
-        class="mat-elevation-z1"
-        routerLink="{{ post.id }}">
+      <mat-card class="mat-elevation-z1" routerLink="{{ post.id }}">
         <div class="image-div">
-          <img class="mat-card-image" src="{{ post.image }}" alt="{{ post.title }}">
+          <img
+            class="mat-card-image"
+            src="{{ post.image }}"
+            alt="{{ post.title }}"
+          />
         </div>
         <mat-card-content>
           <p class="title-style">{{ post.title }}</p>
-          <p class="content-style" style="height:90px">
+          <p class="content-style" style="height: 90px;">
             <span class="subtitle-style">{{ post.subtitle }}:</span>
-            {{ post.content | slice:0:(158 - post.subtitle.length) }}...
+            {{ post.content | slice: 0:158 - post.subtitle.length }}...
           </p>
           <p>
             <span class="small-text">
@@ -47,7 +50,7 @@
               {{ post.content | readTime }} minutes
             </span>
           </p>
-        </mat-card-content>             
+        </mat-card-content>
       </mat-card>
       <!-- </ng-container> -->
     </div>
