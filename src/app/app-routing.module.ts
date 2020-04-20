@@ -55,9 +55,9 @@ const appRoutes: Routes = [
 	imports: [
     CommonModule,
     PostsModule,
-    RouterModule.forRoot(
-      appRoutes,
-    )
+    RouterModule.forRoot(appRoutes, {
+    initialNavigation: 'enabled'
+})
   ],
 	exports: [RouterModule]
 })
