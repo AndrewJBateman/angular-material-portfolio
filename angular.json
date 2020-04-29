@@ -61,8 +61,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "70kb",
+                  "maximumError": "80kb"
                 }
               ],
               "serviceWorker": true,
@@ -177,6 +177,10 @@
           "configurations": {
             "production": {}
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

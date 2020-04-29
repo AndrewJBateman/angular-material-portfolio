@@ -13,8 +13,7 @@ import { AREAS } from './areas';
 
 export class HomeComponent implements OnInit {
   title = 'Home';
-  
-	areas = AREAS;
+  areas = AREAS;
 	profile: any;
 	repos: number;
   lastUpdated: string;

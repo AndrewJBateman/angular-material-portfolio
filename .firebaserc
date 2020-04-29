@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "angular-blog-14cef"
+  },
+  "targets": {
+    "angular-blog-14cef": {
+      "hosting": {
+        "angular-material-portfolio": [
+          "angular-blog-14cef"
+        ]
+      }
+    }
   }
 }

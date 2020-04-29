@@ -20,7 +20,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
       {
         src: '../assets/images/projects-page.jpg',
         page: 'Projects Page',
-        content: 'Mat-cards display project data using data-binding from an array of projects based on a Project model. Cards sized so up to 4 will show on a row before wrapping to the next line. Footer includes buttons to: navigate to Project-detail page with more info, navigate to github page & open app in browser.',
+        content: 'Mat-cards display project data using data-binding from an array of projects based on a Project model. Cards sized so up to 2 will show on a row before wrapping to the next line. Footer includes buttons to: navigate to Project-detail page with more info, navigate to github page & open app in browser.',
         icon: 'assignment'
       },
       {
@@ -48,7 +48,6 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 * Custom pipes used to modify API news article titles, contents and derive '..time ago' from a Univsal Time Constant (UTC) date string.
 * Dark mode switch on menu changes from light to dark mode.
 * Offline Storage of favourite articles using Ionic Storage.
-* Network status check in initialisation so latest news data is stored. Template data-binding always from stored data.
 * Common Refresh Component: dragging down on a page will perform refresh function.
 * Common Progess Bar Component ion-card shown while news loading on News, Categories and Favourites pages.
 * Localisation using i18n so user can select between English (default), Spanish and French.`,
@@ -69,7 +68,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
       {
         src: '../assets/images/newsapp-favourites.jpg',
         page: 'Favourites Page',
-        content: 'Saved articles are listed in reverse date-time order using an ion-list inside a mat-cards. Sliding from the right deletes the favourite from the stored array. Unsplash image is shown (with credit to author) if there are no favourites stored using the Angular *ngIf structural directive.',
+        content: 'Saved articles are listed in reverse date-time order using an ion-list inside mat-cards. Sliding from the right deletes the favourite from the stored array. An Unsplash image is shown, with credit to the author if there are no favourites stored using the Angular *ngIf structural directive.',
         icon: 'favorite'
       },
       {
@@ -85,36 +84,43 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   // app 3
 	{
     title: 'World Data App',
-    summary: 'Ionic-Angular app that displays information about world countries and oceans using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world country information using JSON data fetched from an external API. There is a page devoted to the worlds oceans as well',
+    summary: `Ionic-Angular app that displays information about world countries and oceans using JSON data fetched from an external API. Includes a user search field that will find all search results as the user types their search text. Page popovers are used to provide the user with links to external websites or activate functions such as delete item from favourites. Features include:
+    * Typescript interface used to define the expected structure of the json object returned from the news API.
+    * Separate providers (services) page with API http fetch functions.
+    * Side menu switch to activate dark mode switch.
+    * Localisation using i18n so user can select between English (default), Spanish or French language from side menu.
+    * Integrated Google Maps API to show interactive country map.
+    * Ion-grid with fixed column size used so content is responsive.
+    `,
     icon: 'language',
     images: [
       {
-        src: '../assets/images/countryData.jpg',
-        page: 'Home Page',
-        content: '',
-        icon: 'home'
+        src: '../assets/images/worldapp-countries.jpg',
+        page: 'Countries Page',
+        content: `Displays a mat-card list of countries, displaying country flag, title, capital and region, for 'all' and 5 region sub-categories. Clicking on a country list item will show the country detail as well as a fab icon link to Google Maps. Country searchbar to search by country name.`,
+        icon: 'language'
       },
       {
-        src: '../assets/images/countryData.jpg',
-        page: 'Categories Page',
-        content: '',
-        icon: 'tune'
+        src: '../assets/images/worldapp-mapmenu.jpg',
+        page: 'Map & Menu Pages',
+        content: 'Google maps API used to show zoomable map that is centered on the country selected. Side Menu with links to pages for countries, oceans, favorites and about pages. Language can be changed from default English to Spanish or French. Dark theme toggle + image.',
+        icon: 'location_searching'
       },
       {
-        src: '../assets/images/countryData.jpg',
-        page: 'Favourites Page',
-        content: '',
-        icon: 'favorite'
+        src: '../assets/images/worldapp-oceans.jpg',
+        page: 'Oceans Page',
+        content: `Displays a mat-card for each ocean using data from a local json file and an *ngFor loop. Header toolbar includes popover with links to Wikipedia articles on each ocean that opens in a separate browser. It was decided not to add 'favourites functionality' as there are only 5 oceans and they are easy to find.`,
+        icon: 'waves'
       },
       {
-        src: '../assets/images/countryData.jpg',
+        src: '../assets/images/worldapp-about.jpg',
         page: 'About Page',
-        content: '',
-        icon: 'info'
+        content: `Displays an Unsplash image with an author credit and short information about the app with links to the country information and Google Maps APIs used. Header includes a popover with working links that open externally to author Website, Github Repo & a Contact Form on the author's website.`,
+        icon: `information_circle`
       }
     ],
 		github: 'https://github.com/AndrewJBateman/ionic-angular-world-data',
-		url: ''
+		url: 'https://github.com/AndrewJBateman/ionic-angular-world-data'
   },
   // app 4
 	{
