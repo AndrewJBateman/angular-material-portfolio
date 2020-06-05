@@ -37,16 +37,17 @@
 **OPTION:** add link at bottom to return to the top (good for mobile phones).
 
 **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 2 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page, 1 routes to github page and 1 opens the app in a browser.
-**TODO:** ensure equal card content height in row of 2.
 
-**Project-Detail:** Navigates to project detail page from project page link. 4 pages featured with images shown max 2 per line.
+**Project-Detail:** Navigates to project detail page from project page link. pages featured with images shown max 2 per line.
 
 * PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
 * mobile app: Image size used: 1066 x 600 (containes 3 x 9:16 images) to give 16:9 when 3 images in a row.
 **TODO:** Add back button to return to project overview page.
-**TODO:** Correct API data/store issue for Project 2: News App.
-**TODO:** Complete real content for Project 4: Github Info App.
-**TODO:** Complete real content for Project 5: Cryptocurrencies App.
+**TODO:** Complete real content for Project 1: Angular API Dashboard.
+**TODO:** Complete real content for Project 2: Angular This website - redo images etc.
+**TODO:** Complete real content for Project 3: Ionic News - redo images etc.
+**TODO:** Correct API data/store issue for Project 4: Ionic Country Info App.
+**TODO:** Correct API data/store issue for Project 5: Ionic Github.
 **TODO:** Complete real content for Project 6: TensorFlow App.
 **TODO:** Complete real content for Project 7: WorldBank Data App.
 **TODO:** Complete real content for Project 8: Nasa Data App.

@@ -1,19 +1,9 @@
-// Notes on the Projects page classes:
-//
-// 1. Project image has overlay text bottom right with pink icon and white text name of project.
-//
-// 2. Mat-card content text uses pre-wrap for white space styling so paragraph spacing from `projects.ts` is observed and text is not pushed together with no paragraph spacing.
+
 
 // Top title styling
-h2 {
-  margin: 10px auto;
+.main-title {
+  margin: 10px auto 0 auto !important;
   color: #0d47a1;
-  position: center;
-}
-
-.horiz-line {
-  margin: 0 5px;
-  border: 2px solid rgb(245, 200, 241);
 }
 
 .project-title-icon {
@@ -22,58 +12,33 @@ h2 {
 }
 
 // card styling
-mat-card-actions {
+.mat-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-card > .mat-card-actions:last-child {
+  margin: 0 0;
   padding: 0;
-  margin: auto 0 0;
 }
 
 .mat-card-image {
-  border-bottom-style: solid;
-  border-bottom-width: 4px;
-  border-bottom-color: rgb(245, 200, 241);
+  flex-shrink: 0;
 }
 
-a.mat-flat-button {
-  margin-bottom: 8px;
+.title-style {
+  color: #0d47a1;
+  margin: 0 0 8px;
+  text-decoration: underline;
+  text-decoration-color: #008000;
 }
 
-.project-image {
-  position: relative;
-  max-width: 100%;
-  text-align: center;
-  color: white;
-}
-
-/* Bottom right text */
-.project-image-text {
-  position: absolute;
-  bottom: 30px;
-  right: -10px;
-  font-size: 24px;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.55); /* Black background with 0.55 opacity */
-  color: white;
-  padding: 12px;
-  // padding-right: 4px;
-}
-
-p.project-content {
-  white-space: pre-wrap;
-  // height:130px;
-  margin: 0 !important;
+.mat-card-content {
+  flex-grow: 1;
+  overflow: auto;
 }
 
 .project-open-browser {
   background-color: green;
-}
-
-.project-image-icon {
-  transform: scale(1.5);
-  color: rgb(245, 200, 241);
-}
-
-.project-content-icon {
-  transform: scale(1.5);
-  color: #0d47a1;
-  margin-right: 4px;
 }

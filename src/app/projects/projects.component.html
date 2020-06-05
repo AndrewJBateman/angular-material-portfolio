@@ -1,12 +1,12 @@
 <head>
   <meta
-    name="projects"
+    name="description"
     content="Projects page shows some of my recent projects using Angular cards. Clicking on a card will show the project in more detail or navigate to the GitHub code or the app website."
   />
 </head>
 
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
-  <h2>
+  <h2 class="main-title">
     <mat-icon color="accent" class="project-title-icon"> work </mat-icon>Recent
     Projects
   </h2>
@@ -14,36 +14,28 @@
   <div fxLayout="row wrap">
     <div
       *ngFor="let project of projects; index as projectId"
-      fxFlex="50"
+      fxFlex="25"
       fxFlex.md="50"
-      fxFlex.sm="100"
+      fxFlex.sm="50"
       fxFlex.xs="100"
       fxLayout="column"
       style="padding: 10px;"
     >
       <!--mat-card for each project with data-binding from projects.ts.
         Project summary length is truncated using Angular slice pipe-->
-      <mat-card>
-        <div class="project-image">
-          <img
-            class="mat-card-image"
-            [src]="project.images[0].src"
-            [alt]="project.images[0].page"
-          />
-          <div class="project-image-text">
-            <mat-icon class="project-image-icon">{{ project.icon }}</mat-icon>
-            <span style="margin-left: 4px;">
-              {{ project.title }}
-            </span>
-          </div>
-        </div>
+      <mat-card class="">
+        <!-- <div class="project-image"> -->
+        <img
+          class="mat-card-image"
+          [src]="project.images[0].src"
+          [alt]="project.images[0].page"
+        />
+        <!-- </div> -->
         <mat-card-content>
-          <p class="project-content">
-            <mat-icon class="project-content-icon">
-              {{ project.icon }}</mat-icon
-            >
-            {{ project.summary | slice: 0:270 }}...
-          </p>
+          <h3 class="title-style">
+            {{ project.page }}
+          </h3>
+          <p class="project-content">{{ project.summary | slice: 0:270 }}...</p>
         </mat-card-content>
         <mat-card-actions>
           <a

@@ -1,9 +1,3 @@
-// Notes on the Project Detail page classes:
-//
-// 1. Project image has overlay text bottom right with pink icon and white text name of project.
-//
-// 2. Mat-card content text uses pre-wrap for white space styling so paragraph spacing from `projects.ts` is observed and text text is not pushed together with no paragraph spacing.
-
 .project-title {
   color: #0d47a1;
   font-size: 20px !important;
@@ -15,7 +9,7 @@
   font-size: 16px !important;
   margin: 0 !important;
   text-decoration: underline;
-  text-decoration-color: rgb(245, 200, 241);
+  text-decoration-color: #008000;
 }
 
 .project-content {
@@ -29,15 +23,8 @@
   background-size: cover;
 }
 
-.horiz-line {
-  margin: 5px;
-  border: 2px solid rgb(245, 200, 241);
-}
-
 .mat-card-image {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: rgb(245, 200, 241);
+  flex-shrink: 0;
 }
 
 .image-div {
@@ -47,31 +34,13 @@
   color: white;
 }
 
+.title-style {
+  color: #0d47a1;
+  margin: 0 0 8px;
+  text-decoration: underline;
+  text-decoration-color: #008000;
+}
 .content-style {
   white-space: pre-wrap;
   margin: 0;
-  // min-height: 150px;
-}
-
-/* Bottom right text */
-.project-image-text {
-  position: absolute;
-  bottom: 26px;
-  right: -10px;
-  font-size: 24px;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.55); /* Black background with 0.5 opacity */
-  color: white;
-  padding: 8px;
-}
-
-.icon-display {
-  transform: scale(1.5);
-  color: rgb(245, 200, 241);
-}
-
-.project-content-icon {
-  transform: scale(1.5);
-  color: #0d47a1;
-  margin-right: 4px;
 }

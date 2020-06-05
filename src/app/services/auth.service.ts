@@ -25,11 +25,11 @@ export class AuthService {
 	}
 
 	async login() {
-    await this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
 	}
 
 	async logout() {
-		await this.afAuth.auth.signOut();
+		await this.afAuth.signOut();
 		localStorage.removeItem('user');
 	}
 

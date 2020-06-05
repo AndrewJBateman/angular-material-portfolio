@@ -25,7 +25,7 @@
   color: #0D47A1;
   margin: 0;
   text-decoration: underline;
-  text-decoration-color: rgb(245, 200, 241);
+  text-decoration-color: #008000;
 }
 
 .main-subheading {
@@ -46,7 +46,7 @@
   color: #0D47A1;
   margin: 0 12px 0;
   text-decoration: underline;
-  text-decoration-color: rgb(245, 200, 241);
+  text-decoration-color: #008000;
 }
 
 .about-para {
@@ -60,20 +60,20 @@
 
 // Bottom subject area cards
 mat-card {
-  margin: 5px;
+  margin: 10px;
   padding: 8px;
 
   .area-card-avatar {
     background-size: cover;
   }
-  
+
   .area-card-title {
     color: #0D47A1;
     font-size: 20px;
     text-decoration: underline;
-    text-decoration-color: rgb(245, 200, 241);
+    text-decoration-color: #008000;
   }
-  
+
   .area-card-content {
     white-space: pre-wrap;
   }

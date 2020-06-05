@@ -5,7 +5,7 @@ export const SKILLS: Skill[] = [
     area: "prog",
     title: "Front-end",
     content:
-      "HTML5, CSS3/SASS, Bootstrap, jQuery, AJAX, JSON, YAML, GraphQL, Material Design, JavaScript (ECMAScript 2015), Typescript, Angular, RxJS, D3"
+      "HTML5, CSS3/SASS, Bootstrap, jQuery, AJAX, JSON, YAML, GraphQL, Material Design, JavaScript (ECMAScript 2015), TypeScript, Angular, RxJS, D3"
   },
   {
     area: "prog",
@@ -71,5 +71,5 @@ export const SKILLS: Skill[] = [
     title: "Automation & Control",
     content:
       "PLC digital/analog I/O & plant instrumentation. Fire & Gas, Emergency ShutDown, Distributed Control & Supervisory Control & Data Aquisition systems (SCADA), industrial control systems... "
-  } 
+  }
 ];

@@ -53,19 +53,13 @@
             [src]="project.images[i].src"
             [alt]="project.images[i].page"
           />
-          <div class="project-image-text">
-            <mat-icon class="icon-display">{{
-              project.images[i].icon
-            }}</mat-icon>
-            {{ project.images[i].page }}
-          </div>
         </div>
         <mat-card-content>
+          <h3 class="title-style">
+            {{ project.images[i].page }}
+          </h3>
           <div>
             <p [ngClass.sm]="{ 'spare-style': true }" class="content-style">
-              <mat-icon class="project-content-icon">{{
-                project.images[i].icon
-              }}</mat-icon>
               {{ project.images[i].content | slice: 0:310 }}
             </p>
           </div>

@@ -1,14 +1,8 @@
-// Notes on the Skills page classes:
-//
-// 1. There is a horizontal line (styling in global styles.scss) to separate title and cards.
-//
-// 2. The main section is made up of mat-cards with styling class depending on skill area (eng or prog)
-
 // Title styling
 h2 {
-  margin: 10px auto 0 auto;
+  margin: 10px auto 0 auto !important;
   color: #0D47A1;
-  position: center;
+  // position: center;
 }
 
 .title-icon {
@@ -16,14 +10,9 @@ h2 {
   padding-right: 8px;
 }
 
-.horiz-line {
-  margin: 0 5px;
-  border: 2px solid rgb(245, 200, 241)
-}
-
 // Card styling
 .card-eng {
-  color: #690726;
+  color: #008000;
   font-size: 20px;
   text-decoration: underline;
   text-decoration-color: #0D47A1;
@@ -34,7 +23,7 @@ h2 {
   color: #0D47A1;
   font-size: 20px;
   text-decoration: underline;
-  text-decoration-color: rgb(245, 200, 241);
+  text-decoration-color: #008000;
 }
 
 .content-style {

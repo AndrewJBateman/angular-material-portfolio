@@ -1,13 +1,7 @@
-// Notes on the Blog (Post-List) page classes:
-//
-// 1. There is a horizontal line (styling in global styles.scss) to separate title and cards.
-//
-// 2. The main section is made up of mat-cards.
-
 // Title styling
 h2 {
-  margin: 10px auto 0 auto;
-  color: #0D47A1;
+  margin: 10px auto 0 auto !important;
+  color: #0d47a1;
   position: center;
 }
 
@@ -16,16 +10,9 @@ h2 {
   padding-right: 4px;
 }
 
-.horiz-line {
-  margin: 0 5px;
-  border: 2px solid rgb(245, 200, 241)
-}
-
 // Card styling
 .mat-card-image {
-  border-bottom-style: solid;
-  border-bottom-width: 4px;
-  border-bottom-color: rgb(245, 200, 241);
+  flex-shrink: 0;
 }
 
 mat-icon {
@@ -35,22 +22,16 @@ mat-icon {
   width: 18px;
 }
 
-mat-card-actions {
-  padding: 0;
-  color: #0D47A1;
-  font-size: 12px !important;
-}
-
 .title-style {
-  color: #0D47A1;
+  color: #0d47a1;
   margin: 0 0 4px;
   font-size: 18px;
   text-decoration: underline;
-  text-decoration-color: rgb(245, 200, 241);
+  text-decoration-color: #008000;
 }
 
 .subtitle-style {
-  color: #0D47A1;
+  color: #0d47a1;
   font-size: 14px;
 }
 
@@ -60,7 +41,7 @@ mat-card-actions {
 }
 
 .small-text {
-  color: #0D47A1;
+  color: #0d47a1;
   font-size: 14px !important;
 }
 
