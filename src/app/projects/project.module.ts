@@ -1,7 +1,6 @@
 export class Project {
   title: string;
   summary: string;
-  icon: string;
   images: Image[];
   github: string;
   url: string;

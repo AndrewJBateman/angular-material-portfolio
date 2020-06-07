@@ -26,7 +26,7 @@
 
         <mat-card-content>
           <p class="project-content">
-            {{ project.summary }} Some of the pages are explained below.
+            {{ project.summary }}
           </p>
         </mat-card-content>
       </mat-card>
@@ -54,13 +54,14 @@
             [alt]="project.images[i].page"
           />
         </div>
-        <mat-card-content>
+        <mat-card-content style="height: 100%;">
           <h3 class="title-style">
             {{ project.images[i].page }}
           </h3>
           <div>
             <p [ngClass.sm]="{ 'spare-style': true }" class="content-style">
-              {{ project.images[i].content | slice: 0:310 }}
+              <!-- {{ project.images[i].content | slice: 0:500 }} -->
+              {{ project.images[i].content }}
             </p>
           </div>
         </mat-card-content>

@@ -4,55 +4,71 @@ export const PROJECTS: Project[] = [
   // app 1
   {
     title: "API Dashboard",
-    summary: `Angular 9 and Bootstrap were used to build a dashboard of API data.
+    summary: `Angular 9 and Bootstrap were used to build 8 components that display a range of API/chart data. The objective was to demonstrate Angular/reactive programming best practices in accessing REST API data, including separating http calls into separate services, using observables with API interface models to subscribe to the data via pipe(map) and correct error handling.
 
-`,
-    icon: "person",
+All pages are fully responsive so they resize for PC, table or phone screens. A Bootstrap responsive nav bar is used that changes to a burger menu with collapsible top menu on medium and smaller-sized screens. The component page name is displayed in the nav bar when the component is active.
+
+HTML pages have meta tags in the header to describe the page content using metadata. This is to optimise searches by search engines (SEO) and is part of the Google Lighthouse automated testing tool.`,
     images: [
       {
         src: "../assets/images/apiDash-home.jpg",
         page: "Home Page",
-        content: "fff",
+        content: "A grid of 8 Bootstrap cards is displayed, with changes to box shadow and cursor when the user hovers over each card. Angular flex-layout is used to make the grid fully responsive. The template uses an *ngFor loop and data-binding to display the page data for each card from an array in the typescript file. Clicking on a card will route the user to that page.",
       },
       {
         src: "../assets/images/apiDash-nasa.jpg",
-        page: "Nasa Page",
-        content: "fff",
+        page: "NASA Page",
+        content: "The NASA API Astronomy Picture of the Day (APOD) is displayed. No date is added into the http request so the API defaults to today's date. The response can be a hd image or a video. The video function required the 'Safe Pipe' npm module in order to work. The footer includes the date the image/video was taken and a credit to the author",
       },
       {
         src: "../assets/images/apiDash-crypto.jpg",
-        page: "Crypto Page",
-        content: "fff",
+        page: "Cryptocurrency Page",
+        content: "Price data for 19 cryptocurrencies from the CryptoCompare API is displayed in a responsive table. The crytocurrency symbols are stored in a svg library in the assets folder. Prices are shown in euro and this is specified in the api http request url. The currency data-binding uses the Angular currency pipe",
       },
       {
         src: "../assets/images/apiDash-map.jpg",
         page: "Map Page",
-        content: "fff",
+        content: "The user location is obtained from a location service based on the ipapi.co API. Latitude and longitude coordinates are used in the Leaflet open-source JavaScript maps library that is based on the OpenstreetMap map of the world. A preset zoom level of 13 is used but this can be adjusted by the user.",
       },
       {
         src: "../assets/images/apiDash-news.jpg",
         page: "News Page",
-        content: "fff",
+        content: "News data is obtained from the New York Times (NYT) News API. Each Bootstrap News card shows an image with title and content. There is a footer that shows the date of the article as '..ago' via a custom 'date-convert' pipe based on the Day.js minimalist JavaScript library. There is also a hyper-link to the original NYT article."
       },
       {
         src: "../assets/images/apiDash-charts.jpg",
-        page: "Charts Page",
-        content: "fff",
+        page: "Google Charts Page",
+        content: "Bootstrap accordian-style collapsible cards are used to display data in a range of Google Charts formats, including line, pie, gauge (3 gauges shown), table and bar-chart. All charts have their own components. Only one card is displayed at a time - clicking on one will collapse the previous one.",
       },
       {
         src: "../assets/images/apiDash-books.jpg",
-        page: "Books Page",
-        content: "fff",
+        page: "Google Books Page",
+        content: "Books matching the user input are obtained from the Google Books API and shown as a responsive grid of book images. Clicking on a book image routes the user to a detail page that displays more information from the API data. Windows SessionStorage is used to store the API book data so that when navigating back to the searched list the original API response data is displayed rather than repeating the http request.",
       },
       {
         src: "../assets/images/apiDash-bestsellers.jpg",
-        page: "Bestsellers Page",
-        content: "fff",
+        page: "NYT Bestsellers Page",
+        content: "Current data on bestsellers in 18 categories is obtained from the New York Times (NYT) Books API. Each Bootstrap card shows the category and an image of the bestseller. Clicking on a card routes the user to a detail page that displays more information from the API data.",
+      },
+      {
+        src: "../assets/images/apiDash-bestsellers-detail.jpg",
+        page: "NYT Bestsellers Detail Page",
+        content: "Details of the bestseller are displayed in a row of 2 columns, split 4:8. Only the ISBN13 number is displayed, not the older ISBN 10-digit number. Bootstrap badges are used to highlight ranking and weeks on list values. There are buttons to return to the bestseller list via the Angular Location back function and to see the bestseller Amazon page via hyperlink",
       },
       {
         src: "../assets/images/apiDash-github.jpg",
-        page: "github Page",
-        content: "fff",
+        page: "Github Page",
+        content: "A profile matching the username inputted by the user is displayed from the Github API. This includes user profile image, location, bio, number of repositories, joined date (using the custom dateConvert pipe) & following/ follower numbers. My own Github data is shown on page initialisation. A Clear button clears current Github user data. Buttons reroute to a user repository page and the Github profile page.",
+      },
+            {
+        src: "../assets/images/apiDash-github-repos.jpg",
+        page: "Github Repos Page",
+        content: "A list of the user repositories is displayed using bootstrap cards. Data includes repo name, description, updated date (using the custom dateConvert pipe), languages, forks, number of repo viewers and a link to the Github repo. My own repo data is shown if the user has not previously entered a username. Buttons reroute the user back to the user page and to a Github signup page.",
+      },
+      {
+        src: "../assets/images/apiDash-appinfo.jpg",
+        page: "App Info Page",
+        content: "Bootstrap accordian-style collapsible cards are used to display information on each of the 8 components. Only one card is displayed at a time - clicking on one will collapse the other one. Cards include hyperlinks to the APIs used.",
       },
     ],
     github: "https://github.com/AndrewJBateman/pean-stack-api-display",
@@ -63,10 +79,9 @@ export const PROJECTS: Project[] = [
     title: "This Website",
     summary: `Angular 9 was used to build this site and Angular Material Design components were used extensively. A Google Cloud Firestore NoSQL database stores the blog posts and data from submitted Contact forms. Anyone can Read the blog posts but there is a login link in the navbars so only a logged in user can Create, Update and Delete (CRUD) posts. Google Authorization is used to login.
 
-I wanted to minimise time spent on styling and layout so I could focus on technical content. However presenting clear and fully-responsive content is also very important so I have made great use of Angular Material mat-cards. The Angular Flex Layout API was used to create a responsive row of columns. This means content such as mat-cards regroup neatly as the screen width is reduced to mobile (xs) size; max-width: 599px.
+I wanted to minimise time spent on styling and layout so I could focus on technical content. However presenting the content clearly and fully-responsively is also very important so I have made great use of Angular Material mat-cards. The Angular Flex Layout API was used to create a responsive row of columns. This means content such as mat-cards regroup neatly as the screen width is reduced to mobile (xs) size; max-width: 599px.
 
 Icons are limited to the Angular Material Icon Library - e.g. there are no icons for linkedin or github menu links and I have avoided adding bloat by importing the Bootstrap library. I have followed Don\'t Repeat Yourself (DRY) rules, so data for the Home, Skills and Projects pages was created in separate typescript files (based on a model class) with 1-way data-binding to a *ngFor mat-card loop in the template so html template files are kept short.`,
-    icon: "person",
     images: [
       {
         src: "../assets/images/home-pc.jpg",
@@ -81,6 +96,12 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
           "Mat-cards display project data using data-binding from an array of projects based on a Project model. Cards sized so up to 2 will show on a row before wrapping to the next line. Footer includes buttons to: navigate to Project-detail page with more info, navigate to github page & open app in browser.",
       },
       {
+        src: "../assets/images/skills-page.jpg",
+        page: "Skills Page",
+        content:
+          "Mat-cards display programming and engineering skills data using data-binding from an array of skills based on a Skill model. Cards sized so up to 4 will show on a row before wrapping to the next line.",
+      },
+      {
         src: "../assets/images/contact-page.jpg",
         page: "Contacts Page",
         content:
@@ -91,6 +112,12 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
         page: "Blog Page",
         content:
           "Mat-cards display posts using data-binding from an array of posts based on a Post model. A custom pipe, using the day.js javascript library, converts the Firestore database UTC Epoch time Timestamp string to say 2 days ago etc. Another custom pipe calculates reading time based on content length.",
+      },
+      {
+        src: "../assets/images/notfound-page.jpg",
+        page: "Not Found Page",
+        content:
+          "In the event of the user trying to route to any page address that is not listed in the router-module a single Mat-card will display a message to the user. There is a simple button to reroute the user to the Home page.",
       },
     ],
     github: "https://github.com/AndrewJBateman/angular-material-portfolio",
@@ -108,7 +135,6 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 * Common Refresh Component: dragging down on a page will perform refresh function.
 * Common Progess Bar Component ion-card shown while news loading on News, Categories and Favourites pages.
 * Localisation using i18n so user can select between English (default), Spanish and French.`,
-    icon: "view_headline",
     images: [
       {
         src: "../assets/images/newsapp-news.jpg",
@@ -146,7 +172,6 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
     * Integrated Google Maps API to show interactive country map.
     * Ion-grid with fixed column size used so content is responsive.
     `,
-    icon: "language",
     images: [
       {
         src: "../assets/images/worldapp-countries.jpg",
@@ -174,11 +199,10 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
     url: "https://ionic-world-info.firebaseapp.com",
   },
   // app 5
-  {
+  /* {
     title: "Github Info App",
     summary:
       "Ionic-Angular app that allows the user to search for Github users then displays their profile/repository info. using JSON data fetched from the Github API. User can see the number of repositories, how many followers and a full description of each software project.",
-    icon: "laptop",
     images: [
       {
         src: "../assets/images/elecInfo.jpg",
@@ -203,12 +227,11 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
     ],
     github: "https://github.com/AndrewJBateman/ionic-angular-github",
     url: "",
-  },
+  }, */
   // app 6
   /* {
     title: 'Cryptocurrency App',
     summary: 'Ionic app that displays information about cryptocurrency prices using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
-    icon: 'attach_money',
     images: [
       {
         src: '../assets/images/cryptoInfo.jpg',
@@ -238,7 +261,6 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   /* {
     title: 'Tensorflow App',
     summary: 'Ionic app that displays tensorflow info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
-    icon: 'timeline',
     images: [
       {
         src: '../assets/images/tensorflow.jpg',
@@ -268,7 +290,6 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   /* {
     title: 'World Bank Data App',
     summary: 'Ionic app that displays worldbankinfo. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field',
-    icon: 'trending_up',
     images: [
       {
         src: '../assets/images/worldBank.jpg',
@@ -298,7 +319,6 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   /* {
     title: 'NASA Data App',
     summary: 'Ionic app that displays NASA info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field Includes a user search field',
-    icon: 'location_searching',
     images: [
       {
         src: '../assets/images/nasaData.jpg',

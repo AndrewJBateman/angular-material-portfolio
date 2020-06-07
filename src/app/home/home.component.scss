@@ -1,11 +1,3 @@
-// Notes on the Home page classes:
-//
-// 1. There is a Top section with an image & titles on the left and an about section on the right.
-//
-// 2. There is a horizontal line to separate Top and Bottom sections (styling in global styles.scss).
-//
-// 3. There is a Bottom section with mat-cards.
-
 .home-container {
   margin-top: 16px;
 }
@@ -22,7 +14,7 @@
 
 .main-heading {
   text-align: center;
-  color: #0D47A1;
+  color: #0d47a1;
   margin: 0;
   text-decoration: underline;
   text-decoration-color: #008000;
@@ -30,7 +22,7 @@
 
 .main-subheading {
   text-align: center;
-  color: #455A64;
+  color: #455a64;
   margin-bottom: 0;
   font-size: 14px;
 }
@@ -43,7 +35,7 @@
 
 .about-heading {
   text-align: left;
-  color: #0D47A1;
+  color: #0d47a1;
   margin: 0 12px 0;
   text-decoration: underline;
   text-decoration-color: #008000;
@@ -54,7 +46,7 @@
 }
 
 .about-repo-text {
-  color: #0D47A1;
+  color: #0d47a1;
   font-size: larger;
 }
 
@@ -68,7 +60,7 @@ mat-card {
   }
 
   .area-card-title {
-    color: #0D47A1;
+    color: #0d47a1;
     font-size: 20px;
     text-decoration: underline;
     text-decoration-color: #008000;

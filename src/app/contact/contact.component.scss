@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 mat-form-field {
   display: block;
@@ -15,12 +15,12 @@ mat-card-actions {
 }
 
 p {
-  color: #455A64;
+  color: #455a64;
   margin: 0 0 8px;
 }
 
 p .success-message {
-  color: #455A64;
+  color: #455a64;
   margin: 0 0 16px;
 }
 
@@ -30,26 +30,10 @@ textarea {
 
 .contact-heading {
   text-align: center;
-  color: #0D47A1;
+  color: #0d47a1;
   margin: 0px auto 0 auto;
   text-decoration: underline;
-  text-decoration-color: #008000;;
-}
-
-.contact-button {
-  text-align: center;
-  margin: auto;
-}
-
-.title-icon {
-  transform: scale(1.5);
-  padding-right: 8px;
-}
-
-.photo-credit {
-  text-align: center;
-  color: #0D47A1;
-  margin: 8px auto 0 auto;
+  text-decoration-color: #008000;
 }
 
 .img-thumbnail {
@@ -59,11 +43,6 @@ textarea {
   margin: 16px auto;
   position: center;
   border-radius: 50%;
-}
-
-.horiz-line {
-  margin: 1em;
-  border: 2px solid rgb(245, 200, 241)
 }
 
 .card-container {
@@ -103,6 +82,6 @@ textarea {
 
 .contact-sent-icon {
   text-align: center;
-  color: #0D47A1;
+  color: #0d47a1;
   transform: scale(2);
 }

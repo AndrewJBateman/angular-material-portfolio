@@ -43,8 +43,6 @@
 * PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
 * mobile app: Image size used: 1066 x 600 (containes 3 x 9:16 images) to give 16:9 when 3 images in a row.
 **TODO:** Add back button to return to project overview page.
-**TODO:** Complete real content for Project 1: Angular API Dashboard.
-**TODO:** Complete real content for Project 2: Angular This website - redo images etc.
 **TODO:** Complete real content for Project 3: Ionic News - redo images etc.
 **TODO:** Correct API data/store issue for Project 4: Ionic Country Info App.
 **TODO:** Correct API data/store issue for Project 5: Ionic Github.
@@ -132,30 +130,22 @@ getPosts() {
 
 ## :camera: Screenshots
 
-* Home page - PC and Mobile
+* Home page - PC
   ![Example screenshot](./img/home-pc.png)
-  ![Example screenshot](./img/home-mobile.png)
 
-* Project page - PC and Mobile
+* Project page - PC
   ![Example screenshot](./img/projects-pc.png)
-  ![Example screenshot](./img/projects-mobile.png)
 
-* Skills page - PC and Mobile
+* Skills page
   ![Example screenshot](./img/skills-pc.png)
-  ![Example screenshot](./img/skills-mobile.png)
-
-* Contact page before & after sending - PC
-  ![Example screenshot](./img/contact-pc.png)
-  ![Example screenshot](./img/contact-pc-sent.png)
 
 * Contact page before & after sending - Mobile
   ![Example screenshot](./img/contact-mobile.png)
   ![Example screenshot](./img/contact-mobile-sent.png)
 
-* Blog Posts List page - PC and Mobile size
+* Blog Posts List page - PC
   ![Example screenshot](./img/blog-pc.png)
   ![Example screenshot](./img/blog-create-pc.png)
-  ![Example screenshot](./img/blog-mobile.png)
 
 * Webpack Bundle Analyzer 21 november 2019
   ![Example screenshot](./img/bundle_analyzer.png)

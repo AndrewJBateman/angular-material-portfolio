@@ -1,7 +1,7 @@
 <div class="root-container">
   <app-top-navbar (sidenavToggle)="sidenav.toggle()"></app-top-navbar>
   <mat-sidenav-container fxFlexFill>
-    <mat-sidenav #sidenav fxHide.gt-sm>
+    <mat-sidenav #sidenav fxHide.gt-xs>
       <app-side-navbar (sidenavClose)="sidenav.close()"></app-side-navbar>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
