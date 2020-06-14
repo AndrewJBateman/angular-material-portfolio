@@ -4,7 +4,7 @@ export const PROJECTS: Project[] = [
   // app 1
   {
     title: "API Dashboard",
-    summary: `Angular 9 and Bootstrap were used to build 8 components that display a range of API/chart data. The objective was to demonstrate Angular/reactive programming best practices in accessing REST API data, including separating http calls into separate services, using observables with API interface models to subscribe to the data via pipe(map) and correct error handling.
+    summary: `Angular 9 and Bootstrap were used to build 8 components that display a range of API/chart data. The objective was to demonstrate Angular/reactive programming best practices in accessing REST API data, including separating http calls into separate services, using observables with API interface models to subscribe to the data via pipe(map) operators and correct error handling.
 
 All pages are fully responsive so they resize for PC, table or phone screens. A Bootstrap responsive nav bar is used that changes to a burger menu with collapsible top menu on medium and smaller-sized screens. The component page name is displayed in the nav bar when the component is active.
 
@@ -131,7 +131,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 * Separate providers (services) page with API http fetch functions.
 * Custom pipes used to modify API news article titles, contents and derive '..time ago' from a Univsal Time Constant (UTC) date string.
 * Dark mode switch on menu changes from light to dark mode.
-* Offline Storage of favourite articles using Ionic Storage.
+* Offline Storage of favourite articles, dark-mode & language settings using Ionic Storage.
 * Common Refresh Component: dragging down on a page will perform refresh function.
 * Common Progess Bar Component ion-card shown while news loading on News, Categories and Favourites pages.
 * Localisation using i18n so user can select between English (default), Spanish and French.`,
@@ -139,7 +139,12 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
       {
         src: "../assets/images/newsapp-news.jpg",
         page: "News Page",
-        content: `News articles listed using a mat-list. Clicking on a list item will redirect user to a news-detail page with social media share buttons. Footer has links to the original article and option to save as a Favourite. Ion-select is used to show a list of news sources as a drop-down action-sheet with cancel button.`,
+        content: `News articles listed using a mat-list. Clicking on a list item will redirect user to a news-detail page. Ion-select is used to show a list of news sources as a drop-down action-sheet with cancel button.`,
+      },
+      {
+        src: "../assets/images/newsapp-newsdetail.jpg",
+        page: "News Detail Page",
+        content: `News article detail is shown using a mat-card with an author credit below (if there is one). Footer has links to the original article and an option to save as a Favourite.`,
       },
       {
         src: "../assets/images/newsapp-categories.jpg",
@@ -157,6 +162,11 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
         page: "About Page/Side-Menu",
         content: `Includes popover with links to Author Website, Github Repo and a Contact Page. Unsplash image with author credit also shown. Images above include Side navigation menu, where the user can navigate to another page (menu closes automatically) or change language/dark-mode settings.`,
       },
+      {
+        src: "../assets/images/newsapp-dark.jpg",
+        page: "Dark Mode Pages/Menu",
+        content: `Dark mode can be activated via a toggle switch on the side menu. This setting is set in device storage until the user toggles it, however the ngInit lifecycle clears storage content so it will default to light mode.`,
+      }
     ],
     github: "https://github.com/AndrewJBateman/ionic-angular-news-app",
     url: "https://ionic-angular-news.web.app/",

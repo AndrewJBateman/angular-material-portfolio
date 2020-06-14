@@ -43,7 +43,6 @@
 * PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
 * mobile app: Image size used: 1066 x 600 (containes 3 x 9:16 images) to give 16:9 when 3 images in a row.
 **TODO:** Add back button to return to project overview page.
-**TODO:** Complete real content for Project 3: Ionic News - redo images etc.
 **TODO:** Correct API data/store issue for Project 4: Ionic Country Info App.
 **TODO:** Correct API data/store issue for Project 5: Ionic Github.
 **TODO:** Complete real content for Project 6: TensorFlow App.
@@ -76,11 +75,13 @@
 
 ## :floppy_disk: Setup
 
-* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-* Run `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder.
-* Run `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis.
-* Run `ng build --prod --aot` to create build file with Ahead of Time (aot) compilation.
-* Run `firebase deploy` to deploy to firebase hosting.
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
+* Run `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder
+* Run `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis
+* Run `ng build --prod --aot` to create build file with Ahead of Time (aot) compilation
+* Run `npm run build:ssr` to create a build file with SSR
+* Run `npm run serve:ssr` to see the SSR on localhost
+* Run `firebase deploy` to deploy to firebase hosting
 
 ## :computer: Code Examples
 
@@ -112,9 +113,9 @@ getPosts() {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working, Built for Production and Deployed to Firebase, linked to my domain.
+* Status: Working, Built for Production and Deployed to Firebase, linked to my domain. SSR version has errors - try ncu -u
 * Lighthouse PC score: Performance 47%, Accessibility, Best practises & SEO: 100%, PWA OK
-* To-Do: Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles.
+* To-Do: Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
 
 ## :clap: Inspiration
 
@@ -125,16 +126,18 @@ getPosts() {
 * [Blog post images from Unsplash](https://unsplash.com/)
 * [Simon Grimm of Devdactic's article: How to Host Your Ionic App as a Website on Firebase & Standard Web Servers](https://devdactic.com/host-ionic-website-firebase/)
 * [Okta, Holger Schmitz: What Is Angular Ivy and Why Is It Awesome?](https://developer.okta.com/blog/2020/02/12/angular-ivy)
+* [Ahmed Bouchefra, Setting Up Angular Server-Side Rendering (SSR)](https://blog.jscrambler.com/setting-up-angular-server-side-rendering-ssr/)
 * [Angular 8/9 SEO – Set Dynamic Page Title and Meta Tags in Universal App](https://www.positronx.io/angular-seo-set-dynamic-page-title-meta-tags-in-universal-app/)
 * [Firebase Quickstart Guide](https://firebaseopensource.com/projects/angular/angularfire2/)
 
 ## :camera: Screenshots
 
-* Home page - PC
+* Home page
   ![Example screenshot](./img/home-pc.png)
 
-* Project page - PC
+* Project page
   ![Example screenshot](./img/projects-pc.png)
+  ![Example screenshot](./img/projects-detail.png)
 
 * Skills page
   ![Example screenshot](./img/skills-pc.png)
@@ -143,7 +146,7 @@ getPosts() {
   ![Example screenshot](./img/contact-mobile.png)
   ![Example screenshot](./img/contact-mobile-sent.png)
 
-* Blog Posts List page - PC
+* Blog Posts List page
   ![Example screenshot](./img/blog-pc.png)
   ![Example screenshot](./img/blog-create-pc.png)
 
