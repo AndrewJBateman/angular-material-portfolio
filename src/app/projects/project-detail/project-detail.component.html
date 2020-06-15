@@ -29,6 +29,40 @@
             {{ project.summary }}
           </p>
         </mat-card-content>
+
+        <mat-card-actions align="end">
+          <button
+            mat-flat-button
+            color="accent"
+            (click)="returnToList()"
+            aria-label="Back button"
+          >
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+          <div fxFlex></div>
+          <a
+            mat-flat-button
+            [href]="project.github"
+            target="_blank"
+            rel="noreferrer"
+            color="primary"
+            aria-label="link to GitHub page"
+          >
+            <mat-icon>code</mat-icon>
+          </a>
+          <div fxFlex></div>
+          <a
+            mat-flat-button
+            [disabled]="project.title == 'This Website'"
+            [href]="project.url"
+            target="_blank"
+            rel="noreferrer"
+            class="project-open-browser"
+            aria-label="link to app web page"
+          >
+            <mat-icon style="color: white;">open_in_browser</mat-icon>
+          </a>
+        </mat-card-actions>
       </mat-card>
     </div>
   </div>
