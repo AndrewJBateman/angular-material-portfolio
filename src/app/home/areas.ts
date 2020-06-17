@@ -27,7 +27,7 @@ It is estimated to take 1800 hours and it took me all of 2017 working part-time.
   },
   {
     title: "Ionic",
-    imgPath: "../../assets/images/ionic1.png",
+    imgPath: "../../assets/images/ionic.png",
     content:
       "I wanted to build mobile apps and found the Ionic Framework ideal as it is integrated with Angular and builds native and progressive web apps from the same code-base. I completed a 34-hour Ionic Udemy course and many Youtube tutorials. I have worked on a number of apps using Ionic 4 & 5 - 25% of my repositories include Ionic. I also have experience using Capacitor to create native-like user interfaces. See Projects page.",
   },

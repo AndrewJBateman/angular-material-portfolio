@@ -31,7 +31,7 @@
 
 ## :books: Sections info
 
-**Navbars:** Top/side navbars with page routing and working links to my Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
+**Navbars:** Top/side navbars with page routing and working links to my CV, Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
 
 **Home:** Top section has 2 fxFlex columns with photo and text, including a Http service to display my number of repos, linked to the github API. Also displays date when Github profile page was updated. Rest of page comprises Angular Material cards used to display data on areas studied/worked, using data-binding from an array of 'areas' based on an Area model.
 **OPTION:** add link at bottom to return to the top (good for mobile phones).
@@ -50,11 +50,10 @@
 
 **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
   Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the Blog Detail and the footer includes an image credit with web link to the authors page. Note: I keep a backup copy of each post in `/post-backups`.
-**TODO:** change login to my email only.
 **OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
-**Future Updates** Dark mode toggle, CV Download, blog list mode toggle (removes photos from list page)/Field Selector to only show Dev, Eng or IT. Blog post notification - tells readers there is a new post.
+**Future Updates** Dark mode toggle, blog list mode toggle (removes photos from list page)/Field Selector to only show Dev, Eng or IT. Blog post notification - tells readers there is a new post.
 
 ## :signal_strength: Technologies
 
@@ -72,7 +71,7 @@
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
 * Run `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder
 * Run `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis
-* Run `ng build --prod --aot` to create build file with Ahead of Time (aot) compilation
+* Run `ng build --prod` to create build file with Ahead of Time (aot) compilation (enabled by default from Angular 9)
 * Run `npm run build:ssr` to create a build file with SSR
 * Run `npm run serve:ssr` to see the SSR on localhost
 * Run `firebase deploy` to deploy to firebase hosting. (`ng deploy` does not work due to [errors with SSR](https://stackoverflow.com/questions/61913016/angular-npm-run-servessr-fails))
@@ -107,9 +106,9 @@ getPosts() {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working, Built for Production and Deployed to Firebase, linked to my domain. SSR version has errors - try ncu -u
+* Status: Working, Built for Production and Deployed to Firebase, linked to my domain. SSR version has errors
 * Lighthouse PC score: Performance 47%, Accessibility, Best practises & SEO: 100%, PWA OK
-* To-Do: Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
+* To-Do: Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles. Move images to firebase storage. Sort project images into their own files.
 
 ## :clap: Inspiration
 

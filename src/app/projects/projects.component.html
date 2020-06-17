@@ -60,7 +60,9 @@
           <div fxFlex></div>
           <a
             mat-flat-button
-            [disabled]="project.title == 'This Website'"
+            [disabled]="
+              project.title == 'This Website' || project.title == 'News App'
+            "
             [href]="project.url"
             target="_blank"
             rel="noreferrer"
