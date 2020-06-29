@@ -184,7 +184,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
       }
     ],
     github: "https://github.com/AndrewJBateman/ionic-angular-news-app",
-    url: "https://github.com/AndrewJBateman/ionic-angular-news-app",
+    url: "https://github.com/AndrewJBateman/ionic-angular-news-app"
   },
   // app 4
   {
@@ -203,29 +203,73 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
       {
         src: "../assets/images/worldApp/worldapp-countries.jpg",
         page: "Countries Page",
-        content: `Displays a list of countries, displaying country flag, title, capital and region, for 'all' and 5 region sub-categories. Clicking on a country list item will show the country detail as well as a fab icon link to Google Maps. Country searchbar to search by country name.`,
+        content: `Displays a list of countries, displaying country flag, title, capital and region, for 'all' and 5 region sub-categories. Clicking on a country list item will show the country detail as well as a fab icon link to Google Maps. Country searchbar to search by country name.`
       },
       {
         src: "../assets/images/worldApp/worldapp-mapmenu.jpg",
         page: "Map & Menu Pages",
         content:
-          "Google maps API used to show zoomable map that is centered on the country selected. Side Menu with links to pages for countries, oceans, favorites and about pages. Language can be changed from default English to Spanish or French. Dark theme toggle + image.",
+          "Google maps API used to show zoomable map that is centered on the country selected. Side Menu with links to pages for countries, oceans, favorites and about pages. Language can be changed from default English to Spanish or French. Dark theme toggle + image."
       },
       {
         src: "../assets/images/worldApp/worldapp-oceans.jpg",
         page: "Oceans Page",
-        content: `Displays an ion-card for each ocean using data from a local json file and an *ngFor loop. Header toolbar includes popover with links to Wikipedia articles on each ocean that opens in a separate browser. It was decided not to add 'favourites functionality' as there are only 5 oceans and they are easy to find.`,
+        content: `Displays an ion-card for each ocean using data from a local json file and an *ngFor loop. Header toolbar includes popover with links to Wikipedia articles on each ocean that opens in a separate browser. It was decided not to add 'favourites functionality' as there are only 5 oceans and they are easy to find.`
       },
       {
         src: "../assets/images/worldApp/worldapp-about.jpg",
         page: "About Page",
-        content: `Displays an Unsplash image with an author credit and short information about the app with links to the country information and Google Maps APIs used. Header includes a popover with working links that open externally to author Website, Github Repo & a Contact Form on the author's website.`,
+        content: `Displays an Unsplash image with an author credit and short information about the app with links to the country information and Google Maps APIs used. Header includes a popover with working links that open externally to author Website, Github Repo & a Contact Form on the author's website.`
       },
     ],
     github: "https://github.com/AndrewJBateman/ionic-angular-world-data",
     url: "https://ionic-world-info.firebaseapp.com",
   },
   // app 5
+  {
+    title: "MEVN Stack Notes",
+    summary:
+      `This app displays simple text notes in a grid of Bootstrap cards. It uses the MongoDB, Express, Vue & Node.js (MEVN) stack to perform Create, Read, Update and Delete (CRUD) operations. Vue is much smaller sized, simpler and easier to get start using than Angular. For such a small app I did not use Vuex state management - that will be for another Vue app.
+
+Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model.
+
+Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use svg icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Note model so notes are shown in separate categories, e.g. 'work', 'hobby' or 'holiday ideas' etc.`,
+    images: [
+      {
+        src: "../assets/images/mevn-notes/mevn-notes.jpg",
+        page: "Notes Display Page",
+        content: "The notes are displayed in a responsive grid so they wrap around nicely as the screen size changes. A simple 'Notes Hub' displays how many notes there are and includes buttons to navigate to the add note or app info. pages. Note max title length set to 23 so it shows on 1 line on a mobile screen. Note maximum content length is set to 280 characters, same as a twitter post."
+      },
+      {
+        src: "../assets/images/mevn-notes/mevn-create.jpg",
+        page: "Create Note Page",
+        content: "This page includes a character countdown display to show the user how many characters are left from the 280 character maximum. There are buttons to Create (save to the database), Clear both input fields and Cancel to return to the Notes List page."
+      },
+      {
+        src: "../assets/images/mevn-notes/mevn-edit.jpg",
+        page: "Edit Note Page",
+        content: "This page is very similar and also calculates the note body characters left. Updating a note will automatically update the date so it goes to the front of the (date-sorted) notes list."
+      },
+      {
+        src: "../assets/images/mevn-notes/mevn-info.jpg",
+        page: "App Info. Page",
+        content: "This page gives the user information about the app and how it works. The back button navigates the user back to the grid of notes (home) page."
+      },
+      {
+        src: "../assets/images/mevn-notes/mevn-mongodb.jpg",
+        page: "Database Page",
+        content: "This is a screenshot of the MongoDB Atlas No-SQL backend. The database 'notes' collection can be seen with the document objects listed with object id, title and body strings and UTC date stamp."
+      },
+      {
+        src: "../assets/images/mevn-notes/mevn-code.jpg",
+        page: "VS Code Screenshot",
+        content: "This is a screenshot of my work in Visual Studio Code. It shows the Vue methods used in the notes Create page."
+      }
+    ],
+    github: "https://github.com/AndrewJBateman/mevn-stack-notes",
+    url: "https://mevn-stack-notes.herokuapp.com/",
+  },
+  // app 6
   /* {
     title: "Github Info App",
     summary:
@@ -255,7 +299,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
     github: "https://github.com/AndrewJBateman/ionic-angular-github",
     url: "",
   }, */
-  // app 6
+  // app 7
   /* {
     title: 'Cryptocurrency App',
     summary: 'Ionic app that displays information about cryptocurrency prices using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
@@ -284,7 +328,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: ''
   }, */
-  // app 7
+  // app 8
   /* {
     title: 'Tensorflow App',
     summary: 'Ionic app that displays tensorflow info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
@@ -313,7 +357,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: ''
   }, */
-  // app 8
+  // app 9
   /* {
     title: 'World Bank Data App',
     summary: 'Ionic app that displays worldbankinfo. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field',
@@ -342,7 +386,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
 		github: 'https://github.com/AndrewJBateman/ionic-angular-world-data',
 		url: ''
   }, */
-  // app 9
+  // app 10
   /* {
     title: 'NASA Data App',
     summary: 'Ionic app that displays NASA info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field Includes a user search field',

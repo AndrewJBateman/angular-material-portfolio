@@ -74,7 +74,7 @@
 * Run `ng build --prod` to create build file with Ahead of Time (aot) compilation (enabled by default from Angular 9)
 * Run `npm run build:ssr` to create a build file with SSR
 * Run `npm run serve:ssr` to see the SSR on localhost
-* Run `firebase deploy` to deploy to firebase hosting. (`ng deploy` does not work due to [errors with SSR](https://stackoverflow.com/questions/61913016/angular-npm-run-servessr-fails))
+* Run `firebase deploy` to deploy build file to firebase hosting. (`ng deploy` does not work due to [errors with SSR](https://stackoverflow.com/questions/61913016/angular-npm-run-servessr-fails))
 
 ## :computer: Code Examples
 
