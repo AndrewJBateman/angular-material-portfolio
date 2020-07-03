@@ -58,10 +58,10 @@
 ## :signal_strength: Technologies
 
 * [Angular framework v10](https://angular.io/)
-* [Angular Material v9](https://material.angular.io/)
+* [Angular Material v10](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
-* [Angular service worker v9](https://angular.io/guide/service-worker-intro) added
-* [Firebase v6](https://firebase.google.com) Cloud storage and authentication.
+* [Angular service worker v10](https://angular.io/guide/service-worker-intro) added
+* [Firebase v7,,m](https://firebase.google.com) Cloud storage and authentication.
 * [Reactive Extensions Library for Javascript rxjs v6](https://rxjs-dev.firebaseapp.com/)
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
 * [Webpack Bundle Analyser v3](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
