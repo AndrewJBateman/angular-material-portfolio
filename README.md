@@ -1,6 +1,6 @@
 # :zap: Portfolio Angular Material
 
-* Angular 9 Progressive Web App (PWA) using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
+* Angular 10 Progressive Web App (PWA) using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
 
 **\* Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -57,7 +57,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v9](https://angular.io/)
+* [Angular framework v10](https://angular.io/)
 * [Angular Material v9](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
 * [Angular service worker v9](https://angular.io/guide/service-worker-intro) added
