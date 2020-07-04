@@ -61,7 +61,7 @@
 * [Angular Material v10](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
 * [Angular service worker v10](https://angular.io/guide/service-worker-intro) added
-* [Firebase v7,,m](https://firebase.google.com) Cloud storage and authentication.
+* [Firebase v7](https://firebase.google.com) Cloud storage and authentication.
 * [Reactive Extensions Library for Javascript rxjs v6](https://rxjs-dev.firebaseapp.com/)
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
 * [Webpack Bundle Analyser v3](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
@@ -106,9 +106,9 @@ getPosts() {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working, Built for Production and Deployed to Firebase, linked to my domain. SSR version has errors
+* Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser oonly version deployed - SSR version has errors
 * Lighthouse PC score: Performance 47%, Accessibility, Best practises & SEO: 100%, PWA OK
-* To-Do: Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles. Move images to firebase storage. Sort project images into their own files.
+* To-Do: Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
 
 ## :clap: Inspiration
 
