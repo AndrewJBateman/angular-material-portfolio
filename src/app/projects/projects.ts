@@ -4,7 +4,7 @@ export const PROJECTS: Project[] = [
   // app 1
   {
     title: "API Dashboard",
-    summary: `Angular 9 and Bootstrap were used to build 8 components that display a range of API/chart data. The objective was to demonstrate Angular/reactive programming best practices in accessing REST API data, including separating http calls into separate services, using observables with API interface models to subscribe to the data via pipe(map) operators and correct error handling.
+    summary: `Angular and Bootstrap were used to build 8 components that display a range of API/chart data. The objective was to demonstrate Angular/reactive programming best practices in accessing REST API data, including separating http calls into separate services, using observables with API interface models to subscribe to the data via pipe(map) operators and correct error handling.
 
 All pages are fully responsive so they resize for PC, table or phone screens. A Bootstrap responsive nav bar is used that changes to a burger menu with collapsible top menu on medium and smaller-sized screens. The component page name is displayed in the nav bar when the component is active.
 
@@ -13,62 +13,74 @@ HTML pages have meta tags in the header to describe the page content using metad
       {
         src: "../assets/images/apiDashboard/apiDash-home.jpg",
         page: "Home Page",
-        content: "A grid of 8 Bootstrap cards is displayed, with changes to box shadow and cursor when the user hovers over each card. Angular flex-layout is used to make the grid fully responsive. The template uses an *ngFor loop and data-binding to display the page data for each card from an array in the typescript file. Clicking on a card will route the user to that page.",
+        content:
+          "A grid of 8 Bootstrap cards is displayed, with changes to box shadow and cursor when the user hovers over each card. Angular flex-layout is used to make the grid fully responsive. The template uses an *ngFor loop and data-binding to display the page data for each card from an array in the typescript file. Clicking on a card will route the user to that page.",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-nasa.jpg",
         page: "NASA Page",
-        content: "The NASA API Astronomy Picture of the Day (APOD) is displayed. No date is added into the http request so the API defaults to today's date. The response can be a hd image or a video. The video function required the 'Safe Pipe' npm module in order to work. The footer includes the date the image/video was taken and a credit to the author",
+        content:
+          "The NASA API Astronomy Picture of the Day (APOD) is displayed. No date is added into the HTTP request so the API defaults to today's date. The response can be a HD image or a video. The video function required the 'Safe Pipe' npm module in order to work. The footer includes the date the image/video was taken and a credit to the author",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-crypto.jpg",
         page: "Cryptocurrency Page",
-        content: "Price data for 19 cryptocurrencies from the CryptoCompare API is displayed in a responsive table. The crytocurrency symbols are stored in a svg library in the assets folder. Prices are shown in euro and this is specified in the api http request url. The currency data-binding uses the Angular currency pipe",
+        content:
+          "Price data for 19 cryptocurrencies from the CryptoCompare API is displayed in a responsive table. The crytocurrency symbols are stored in a SVG library in the assets folder. Prices are shown in euro and this is specified in the API http request url. The currency data-binding uses the Angular currency pipe",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-map.jpg",
         page: "Map Page",
-        content: "The user location is obtained from a location service based on the ipapi.co API. Latitude and longitude coordinates are used in the Leaflet open-source JavaScript maps library that is based on the OpenstreetMap map of the world. A preset zoom level of 13 is used but this can be adjusted by the user.",
+        content:
+          "The user location is obtained from a location service based on the ipapi.co API. Latitude and longitude coordinates are used in the Leaflet open-source JavaScript maps library that is based on the OpenstreetMap map of the world. A preset zoom level of 13 is used but this can be adjusted by the user.",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-news.jpg",
         page: "News Page",
-        content: "News data is obtained from the New York Times (NYT) News API. Each Bootstrap News card shows an image with title and content. There is a footer that shows the date of the article as '..ago' via a custom 'date-convert' pipe based on the Day.js minimalist JavaScript library. There is also a hyper-link to the original NYT article."
+        content:
+          "News data is obtained from the New York Times (NYT) News API. Each Bootstrap News card shows an image with title and content. There is a footer that shows the date of the article as '..ago' via a custom 'date-convert' pipe based on the Day.js minimalist JavaScript library. There is also a hyper-link to the original NYT article.",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-charts.jpg",
         page: "Google Charts Page",
-        content: "Bootstrap accordian-style collapsible cards are used to display data in a range of Google Charts formats, including line, pie, gauge (3 gauges shown), table and bar-chart. All charts have their own components. Only one card is displayed at a time - clicking on one will collapse the previous one.",
+        content:
+          "Bootstrap accordian-style collapsible cards are used to display data in a range of Google Charts formats, including line, pie, gauge (3 gauges shown), table and bar-chart. All charts have their own components. Only one card is displayed at a time - clicking on one will collapse the previous one.",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-books.jpg",
         page: "Google Books Page",
-        content: "Books matching the user input are obtained from the Google Books API and shown as a responsive grid of book images. Clicking on a book image routes the user to a detail page that displays more information from the API data. Windows SessionStorage is used to store the API book data so that when navigating back to the searched list the original API response data is displayed rather than repeating the http request.",
+        content:
+          "Books matching the user input are obtained from the Google Books API and shown as a responsive grid of book images. Clicking on a book image routes the user to a detail page that displays more information from the API data. Windows SessionStorage is used to store the API book data so that when navigating back to the searched list the original API response data is displayed rather than repeating the http request.",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-bestsellers.jpg",
         page: "NYT Bestsellers Page",
-        content: "Current data on bestsellers in 18 categories is obtained from the New York Times (NYT) Books API. Each Bootstrap card shows the category and an image of the bestseller. Clicking on a card routes the user to a detail page that displays more information from the API data.",
+        content:
+          "Current data on bestsellers in 18 categories is obtained from the New York Times (NYT) Books API. Each Bootstrap card shows the category and an image of the bestseller. Clicking on a card routes the user to a detail page that displays more information from the API data.",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-bestsellers-detail.jpg",
         page: "NYT Bestsellers Detail Page",
-        content: "Details of the bestseller are displayed in a row of 2 columns, split 4:8. Only the ISBN13 number is displayed, not the older ISBN 10-digit number. Bootstrap badges are used to highlight ranking and weeks on list values. There are buttons to return to the bestseller list via the Angular Location back function and to see the bestseller Amazon page via hyperlink",
+        content:
+          "Details of the bestseller are displayed in a row of 2 columns, split 4:8. Only the ISBN13 number is displayed, not the older ISBN 10-digit number. Bootstrap badges are used to highlight ranking and weeks on list values. There are buttons to return to the bestseller list via the Angular Location back function and to see the bestseller Amazon page via hyperlink",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-github.jpg",
         page: "Github Page",
-        content: "A profile matching the username inputted by the user is displayed from the Github API. This includes user profile image, location, bio, number of repositories, joined date (using the custom dateConvert pipe) & following/ follower numbers. My own Github data is shown on page initialisation. A Clear button clears current Github user data. Buttons reroute to a user repository page and the Github profile page.",
+        content:
+          "A profile matching the username inputted by the user is displayed from the Github API. This includes user profile image, location, bio, number of repositories, joined date (using the custom dateConvert pipe) & following/ follower numbers. My own Github data is shown on page initialisation. A Clear button clears current Github user data. Buttons reroute to a user repository page and the Github profile page.",
       },
-            {
+      {
         src: "../assets/images/apiDashboard/apiDash-github-repos.jpg",
         page: "Github Repos Page",
-        content: "A list of the user repositories is displayed using bootstrap cards. Data includes repo name, description, updated date (using the custom dateConvert pipe), languages, forks, number of repo viewers and a link to the Github repo. My own repo data is shown if the user has not previously entered a username. Buttons reroute the user back to the user page and to a Github signup page.",
+        content:
+          "A list of the user repositories is displayed using bootstrap cards. Data includes repo name, description, updated date (using the custom dateConvert pipe), languages, forks, number of repo viewers and a link to the Github repo. My own repo data is shown if the user has not previously entered a username. Buttons reroute the user back to the user page and to a Github signup page.",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-appinfo.jpg",
         page: "App Info Page",
-        content: "Bootstrap accordian-style collapsible cards are used to display information on each of the 8 components. Only one card is displayed at a time - clicking on one will collapse the other one. Cards include hyperlinks to the APIs used.",
+        content:
+          "Bootstrap accordian-style collapsible cards are used to display information on each of the 8 components. Only one card is displayed at a time - clicking on one will collapse the other one. Cards include hyperlinks to the APIs used.",
       },
     ],
     github: "https://github.com/AndrewJBateman/pean-stack-api-display",
@@ -77,7 +89,7 @@ HTML pages have meta tags in the header to describe the page content using metad
   // app 2
   {
     title: "This Website",
-    summary: `Angular 9 was used to build this site and Angular Material Design components were used extensively. A Google Cloud Firestore NoSQL database stores the blog posts and data from submitted Contact forms. Anyone can Read the blog posts but there is a login link in the navbars so only a logged in user can Create, Update and Delete (CRUD) posts. Google Authorization is used to login.
+    summary: `Angular was used to build this site and Angular Material Design components were used extensively. A Google Cloud Firestore NoSQL database stores the blog posts and data from submitted Contact forms. Anyone can Read the blog posts but there is a login link in the navbars so only a logged in user can Create, Update and Delete (CRUD) posts. Google Authorization is used to login.
 
 I wanted to minimise time spent on styling and layout so I could focus on technical content. However presenting the content clearly and fully-responsively is also very important so I have made great use of Angular Material mat-cards. The Angular Flex Layout API was used to create a responsive row of columns. This means content such as mat-cards regroup neatly as the screen width is reduced to mobile (xs) size; max-width: 599px.
 
@@ -126,7 +138,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   // app 3
   {
     title: "News App",
-    summary: `Ionic 5 with Angular 9 was used to create an app that displays articles fetched from a news API. The News API dev version only works in localhost and on Android Studio. As of May 2020 the API returns a CORS 406 error to non-dev front-ends unless a monthly API subscription is payed. Hence I decided not to deploy this app. Features include:
+    summary: `Ionic-Angular was used to create an app that displays articles fetched from a news API. The News API dev version only works in localhost and on Android Studio. As of May 2020 the API returns a CORS 406 error to non-dev front-ends unless a monthly API subscription is payed. Hence I decided not to deploy this app. Features include:
 * Typescript interface used to define the expected structure of the json object returned from the news API.
 * Separate providers (services) page with API http fetch functions.
 * Custom pipes used to modify API news article titles, contents and derive '..time ago' from a Univsal Time Constant (UTC) date string.
@@ -181,10 +193,10 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
         src: "../assets/images/newsApp/newsapp-android3.jpg",
         page: "Android Studio Device Connected 3",
         content: `The top right icon opens a modal to delete all favourites. The bottom tab and side menus provide navigation between pages and the icons change colour when page active.`,
-      }
+      },
     ],
     github: "https://github.com/AndrewJBateman/ionic-angular-news-app",
-    url: "https://github.com/AndrewJBateman/ionic-angular-news-app"
+    url: "https://github.com/AndrewJBateman/ionic-angular-news-app",
   },
   // app 4
   {
@@ -203,23 +215,23 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
       {
         src: "../assets/images/worldApp/worldapp-countries.jpg",
         page: "Countries Page",
-        content: `Displays a list of countries, displaying country flag, title, capital and region, for 'all' and 5 region sub-categories. Clicking on a country list item will show the country detail as well as a fab icon link to Google Maps. Country searchbar to search by country name.`
+        content: `Displays a list of countries, displaying country flag, title, capital and region, for 'all' and 5 region sub-categories. Clicking on a country list item will show the country detail as well as a fab icon link to Google Maps. Country searchbar to search by country name.`,
       },
       {
         src: "../assets/images/worldApp/worldapp-mapmenu.jpg",
         page: "Map & Menu Pages",
         content:
-          "Google maps API used to show zoomable map that is centered on the country selected. Side Menu with links to pages for countries, oceans, favorites and about pages. Language can be changed from default English to Spanish or French. Dark theme toggle + image."
+          "Google maps API used to show zoomable map that is centered on the country selected. Side Menu with links to pages for countries, oceans, favorites and about pages. Language can be changed from default English to Spanish or French. Dark theme toggle + image.",
       },
       {
         src: "../assets/images/worldApp/worldapp-oceans.jpg",
         page: "Oceans Page",
-        content: `Displays an ion-card for each ocean using data from a local json file and an *ngFor loop. Header toolbar includes popover with links to Wikipedia articles on each ocean that opens in a separate browser. It was decided not to add 'favourites functionality' as there are only 5 oceans and they are easy to find.`
+        content: `Displays an ion-card for each ocean using data from a local json file and an *ngFor loop. Header toolbar includes popover with links to Wikipedia articles on each ocean that opens in a separate browser. It was decided not to add 'favourites functionality' as there are only 5 oceans and they are easy to find.`,
       },
       {
         src: "../assets/images/worldApp/worldapp-about.jpg",
         page: "About Page",
-        content: `Displays an Unsplash image with an author credit and short information about the app with links to the country information and Google Maps APIs used. Header includes a popover with working links that open externally to author Website, Github Repo & a Contact Form on the author's website.`
+        content: `Displays an Unsplash image with an author credit and short information about the app with links to the country information and Google Maps APIs used. Header includes a popover with working links that open externally to author Website, Github Repo & a Contact Form on the author's website.`,
       },
     ],
     github: "https://github.com/AndrewJBateman/ionic-angular-world-data",
@@ -228,52 +240,108 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   // app 5
   {
     title: "MEVN Stack Notes",
-    summary:
-      `This app displays simple text notes in a grid of Bootstrap cards. It uses the MongoDB, Express, Vue & Node.js (MEVN) stack to perform Create, Read, Update and Delete (CRUD) operations. Vue is much smaller sized, simpler and easier to get start using than Angular. For such a small app I did not use Vuex state management - that will be for another Vue app.
+    summary: `This app displays simple text notes in a grid of Bootstrap cards. It uses the MongoDB, Express, Vue & Node.js (MEVN) stack to perform Create, Read, Update and Delete (CRUD) operations. Vue is much smaller sized, simpler and easier to get start using than Angular. For such a small app I did not use Vuex state management - that will be for another Vue app.
 
 Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model.
 
-Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use svg icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Note model so notes are shown in separate categories, e.g. 'work', 'hobby' or 'holiday ideas' etc.`,
+Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use SVG icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Note model so notes are shown in separate categories, e.g. 'work', 'hobby' or 'holiday ideas' etc.`,
     images: [
       {
         src: "../assets/images/mevn-notes/mevn-notes.jpg",
         page: "Notes Display Page",
-        content: "The notes are displayed in a responsive grid so they wrap around nicely as the screen size changes. A simple 'Notes Hub' displays how many notes there are and includes buttons to navigate to the add note or app info. pages. Note max title length set to 23 so it shows on 1 line on a mobile screen. Note maximum content length is set to 280 characters, same as a twitter post."
+        content:
+          "The notes are displayed in a responsive grid so they wrap around nicely as the screen size changes. A simple 'Notes Hub' displays how many notes there are and includes buttons to navigate to the add note or app info. pages. Note max title length set to 23 so it shows on 1 line on a mobile screen. Note maximum content length is set to 280 characters, same as a twitter post.",
       },
       {
         src: "../assets/images/mevn-notes/mevn-create.jpg",
         page: "Create Note Page",
-        content: "This page includes a character countdown display to show the user how many characters are left from the 280 character maximum. There are buttons to Create (save to the database), Clear both input fields and Cancel to return to the Notes List page."
+        content:
+          "This page includes a character countdown display to show the user how many characters are left from the 280 character maximum. There are buttons to Create (save to the database), Clear both input fields and Cancel to return to the Notes List page.",
       },
       {
         src: "../assets/images/mevn-notes/mevn-edit.jpg",
         page: "Edit Note Page",
-        content: "This page is very similar and also calculates the note body characters left. Updating a note will automatically update the date so it goes to the front of the (date-sorted) notes list."
+        content:
+          "This page is very similar and also calculates the note body characters left. Updating a note will automatically update the date so it goes to the front of the (date-sorted) notes list.",
       },
       {
         src: "../assets/images/mevn-notes/mevn-info.jpg",
         page: "App Info. Page",
-        content: "This page gives the user information about the app and how it works. The back button navigates the user back to the grid of notes (home) page."
+        content:
+          "This page gives the user information about the app and how it works. The back button navigates the user back to the grid of notes (home) page.",
       },
       {
         src: "../assets/images/mevn-notes/mevn-mongodb.jpg",
         page: "Database Page",
-        content: "This is a screenshot of the MongoDB Atlas No-SQL backend. The database 'notes' collection can be seen with the document objects listed with object id, title and body strings and UTC date stamp."
+        content:
+          "This is a screenshot of the MongoDB Atlas No-SQL backend. The database 'notes' collection can be seen with the document objects listed with object id, title and body strings and UTC date stamp.",
       },
       {
         src: "../assets/images/mevn-notes/mevn-code.jpg",
         page: "VS Code Screenshot",
-        content: "This is a screenshot of my work in Visual Studio Code. It shows the Vue methods used in the notes Create page."
-      }
+        content:
+          "This is a screenshot of my work in Visual Studio Code. It shows the Vue methods used in the notes Create page.",
+      },
     ],
     github: "https://github.com/AndrewJBateman/mevn-stack-notes",
     url: "https://mevn-stack-notes.herokuapp.com/",
   },
   // app 6
+  {
+    title: "Covid API Data",
+    summary: `
+Angular and Angular-Material components/icons were used to build this app that displays data from a Covid-19 API. Angular/reactive programming best practices were used to access REST API data. All pages are fully responsive so they resize for PC, table or phone screens. There is a top menu for desktop/tablet screens and a burger icon-activated side menu for phone screens. The RxJS reactive programming library is used to handle datastreams and propagation of change using observables.
+
+Browser localStorage is used to store API data to prevent multiple GET requests for the same data. This app does not have significant performance needs so the synchronous nature of localStorage is ignored. Accessing of offline data via a Service worker/Progressive Web App (PWA) compliance was not added. HTML pages have meta tags in the header to describe the page content using metadata. This is to optimise searches by search engines (SEO) and is part of the Google Lighthouse automated testing tool.`,
+    images: [
+      {
+        src: "../assets/images/covidApp/home.jpg",
+        page: "Home Page",
+        content: "Global data for Covid-19 cases is fetched from a coronatracker API, set in local storage then displayed on a Mat-card. The Apapi API is used to determine the user country and Covid-19 cases are also shown from that country. Global Covid-19 cases are shown on a chart using the angular-google-charts module.",
+      },
+      {
+        src: "../assets/images/covidApp/country-list.jpg",
+        page: "Country List Page",
+        content:
+        `Covid data is fetched from local storage and displayed using a Mat-Table of countries. Flags are obtained from the Countryflags API and data is formatted using the Angular number pipe. The HTML includes *ngIf loops to allow for inaccuracies/anomolies in the data, e.g. 'MS Zaandam' is listed the API as a country but is actually a cruise ship from the Netherlands.`,
+      },
+      {
+        src: "../assets/images/covidApp/news.jpg",
+        page: "News Page",
+        content:
+          "Covid news data is fetched from the coronatracker API, set in localStorage then shown on Mat-cards. The Day.js npm module is used to convert the UTC format date into '... ago'. Clicking on a news card will route the user to a news detail page with the JSON data passed using angular router navigation extras.",
+      },
+      {
+        src: "../assets/images/covidApp/charts.jpg",
+        page: "Charts Page",
+        content:
+          "Global Covid case data is displayed by country using line and pie charts from the Angular-Google-Charts npm module. Thresholds are set to limit the data to make the charts more readable. A radio button group allows the user to choose which class of data is displayed; Confirmed, Recovered or Dead",
+      },
+      {
+        src: "../assets/images/covidApp/about.jpg",
+        page: "About Page",
+        content:
+          "Descriptions of the app/pages are shown in Mat-cards with useful links below. Clicking on a link will open it in a new page. To keep code DRY an *ngFor loop is used to display page information on the cards using data-binding from a separate 'pages' file.",
+      },
+      {
+        src: "../assets/images/covidApp/contact.jpg",
+        page: "Contact Page",
+        content:
+          "A centrally-positioned Mat-card displays author details from the Github API - no API access key is required for this. The card footer has buttons that open contact/home pages from the author's own website in separate windows."
+      },
+    ],
+    github: "https://github.com/AndrewJBateman/angular-data-charts",
+    url: "https://angular-data-charts.web.app",
+  },
+  // app 7
   /* {
-    title: "Github Info App",
+    title: "MEEN Stack Articles",
     summary:
-      "Ionic-Angular app that allows the user to search for Github users then displays their profile/repository info. using JSON data fetched from the Github API. User can see the number of repositories, how many followers and a full description of each software project.",
+      `This app displays articles in a grid of Bootstrap cards. It uses the MongoDB, Express, Embedded Javascript Templating (EJS) & Node.js (MEEN) stack to perform Create, Read, Update and Delete (CRUD) operations. EJS is a templating language that uses javascript to produce the HTML template markup. I wanted to see if using EJS resulted in quicker rendering.
+
+Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model.
+
+Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use svg icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Note model so notes are shown in separate categories, e.g. 'work', 'hobby' or 'holiday ideas' etc.`,
     images: [
       {
         src: "../assets/images/elecInfo.jpg",
@@ -296,123 +364,65 @@ Frontend: I used the vue-moment Moment.js filter dependency to extract a more re
         content: "",
       },
     ],
-    github: "https://github.com/AndrewJBateman/ionic-angular-github",
+    github: "https://github.com/AndrewJBateman/meen-stack-articles",
     url: "",
-  }, */
-  // app 7
-  /* {
-    title: 'Cryptocurrency App',
-    summary: 'Ionic app that displays information about cryptocurrency prices using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
-    images: [
-      {
-        src: '../assets/images/cryptoInfo.jpg',
-        page: 'Home Page',
-        content: ''
-      },
-      {
-        src: '../assets/images/cryptoInfo.jpg',
-        page: 'xx Page',
-        content: ''
-      },
-      {
-        src: '../assets/images/cryptoInfo.jpg',
-        page: 'xx Page',
-        content: ''
-      },
-      {
-        src: '../assets/images/cryptoInfo.jpg',
-        page: 'xx Page',
-        content: ''
-      }
-    ],
-		github: 'https://github.com/AndrewJBateman/angular-api-countries',
-		url: ''
   }, */
   // app 8
   /* {
-    title: 'Tensorflow App',
-    summary: 'Ionic app that displays tensorflow info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API',
+    title: 'Ionic React Project Planning',
+    summary: '',
     images: [
       {
-        src: '../assets/images/tensorflow.jpg',
+        src: '../assets/images/cryptoInfo.jpg',
         page: 'Home Page',
         content: ''
       },
       {
-        src: '../assets/images/tensorflow.jpg',
+        src: '../assets/images/cryptoInfo.jpg',
         page: 'xx Page',
         content: ''
       },
       {
-        src: '../assets/images/tensorflow.jpg',
+        src: '../assets/images/cryptoInfo.jpg',
         page: 'xx Page',
         content: ''
       },
       {
-        src: '../assets/images/tensorflow.jpg',
+        src: '../assets/images/cryptoInfo.jpg',
         page: 'xx Page',
         content: ''
       }
     ],
-		github: 'https://github.com/AndrewJBateman/angular-api-countries',
+		github: 'https://github.com/AndrewJBateman/ionic-react-planning',
 		url: ''
   }, */
   // app 9
   /* {
-    title: 'World Bank Data App',
-    summary: 'Ionic app that displays worldbankinfo. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field',
+    title: 'Express-EJS News App',
+    summary: '',
     images: [
       {
-        src: '../assets/images/worldBank.jpg',
+        src: '../assets/images/tensorflow.jpg',
         page: 'Home Page',
         content: ''
       },
       {
-        src: '../assets/images/worldBank.jpg',
+        src: '../assets/images/tensorflow.jpg',
         page: 'xx Page',
         content: ''
       },
       {
-        src: '../assets/images/worldBank.jpg',
+        src: '../assets/images/tensorflow.jpg',
         page: 'xx Page',
         content: ''
       },
       {
-        src: '../assets/images/worldBank.jpg',
+        src: '../assets/images/tensorflow.jpg',
         page: 'xx Page',
         content: ''
       }
     ],
-		github: 'https://github.com/AndrewJBateman/ionic-angular-world-data',
+		github: 'https://github.com/AndrewJBateman/angular-api-countries',
 		url: ''
   }, */
-  // app 10
-  /* {
-    title: 'NASA Data App',
-    summary: 'Ionic app that displays NASA info. Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Ionic-Angular app that displays world news using JSON data fetched from an external API. Includes a user search field Includes a user search field Includes a user search field Includes a user search field Includes a user search field',
-    images: [
-      {
-        src: '../assets/images/nasaData.jpg',
-        page: 'Home Page',
-        content: ''
-      },
-      {
-        src: '../assets/images/nasaData.jpg',
-        page: 'xx Page',
-        content: ''
-      },
-      {
-        src: '../assets/images/nasaData.jpg',
-        page: 'xx Page',
-        content: ''
-      },
-      {
-        src: '../assets/images/nasaData.jpg',
-        page: 'xx Page',
-        content: ''
-      }
-    ],
-		github: 'https://github.com/AndrewJBateman/angular-nasa-api',
-		url: ''
-	}, */
 ];

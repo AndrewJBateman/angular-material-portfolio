@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
 import { Meta, Title } from "@angular/platform-browser";
 
 import { PROJECTS } from "./projects";
@@ -14,11 +13,7 @@ export class ProjectsComponent implements OnInit {
 
   projects = PROJECTS;
 
-  constructor(
-    private router: Router,
-    private titleService: Title,
-    private metaTagService: Meta
-  ) {}
+  constructor(private titleService: Title, private metaTagService: Meta) {}
 
   ngOnInit() {
     this.titleService.setTitle(this.title);

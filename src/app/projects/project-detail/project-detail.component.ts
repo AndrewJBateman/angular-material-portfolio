@@ -9,7 +9,6 @@ import { PROJECTS } from "../projects";
   styleUrls: ["./project-detail.component.scss"],
 })
 export class ProjectDetailComponent implements OnInit {
-  // projects = PROJECTS;
   project: any;
 
   constructor(private route: ActivatedRoute, private router: Router) {}

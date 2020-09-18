@@ -7,8 +7,8 @@
 
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
   <h2>
-    <mat-icon color="accent" class="title-icon"> description </mat-icon>Technical
-    Posts
+    <mat-icon color="accent" class="title-icon"> description </mat-icon
+    >Technical Posts
   </h2>
   <hr class="horiz-line" />
   <div fxLayout="row wrap">
@@ -19,7 +19,7 @@
       fxFlex.sm="50"
       fxFlex.xs="100"
       fxLayout="column"
-      style="padding: 5px;"
+      style="padding: 5px"
     >
       <!-- <ng-container *ngIf="post.category === 'Dev'"> -->
 
@@ -34,7 +34,7 @@
         </div>
         <mat-card-content>
           <p class="title-style">{{ post.title }}</p>
-          <p class="content-style" style="height: 90px;">
+          <p class="content-style" style="height: 90px">
             <span class="subtitle-style">{{ post.subtitle }}:</span>
             {{ post.content | slice: 0:158 - post.subtitle.length }}...
           </p>

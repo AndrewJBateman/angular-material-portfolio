@@ -106,7 +106,7 @@ getPosts() {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser oonly version deployed - SSR version has errors
+* Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed - SSR version has errors
 * Lighthouse PC score: Performance 47%, Accessibility, Best practises & SEO: 100%, PWA OK
 * To-Do: Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
 
