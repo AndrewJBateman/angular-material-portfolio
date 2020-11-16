@@ -89,7 +89,7 @@ HTML pages have meta tags in the header to describe the page content using metad
   // app 2
   {
     title: "This Website",
-    summary: `Angular was used to build this site and Angular Material Design components were used extensively. A Google Cloud Firestore NoSQL database stores the blog posts and data from submitted Contact forms. Anyone can Read the blog posts but there is a login link in the navbars so only a logged in user can Create, Update and Delete (CRUD) posts. Google Authorization is used to login.
+    summary: `Angular 11 with Angular Material Design components are used to build this website. A Google Cloud Firestore NoSQL database stores the blog posts and data from submitted Contact forms. Anyone can Read the blog posts but there is a login link in the navbars so only a logged in user can Create, Update and Delete (CRUD) posts. Google Authorization is used to login.
 
 I wanted to minimise time spent on styling and layout so I could focus on technical content. However presenting the content clearly and fully-responsively is also very important so I have made great use of Angular Material mat-cards. The Angular Flex Layout API was used to create a responsive row of columns. This means content such as mat-cards regroup neatly as the screen width is reduced to mobile (xs) size; max-width: 599px.
 
@@ -334,14 +334,14 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
     url: "https://angular-data-charts.web.app",
   },
   // app 7
-  /* {
+  {
     title: "MEEN Stack Articles",
     summary:
       `This app displays articles in a grid of Bootstrap cards. It uses the MongoDB, Express, Embedded Javascript Templating (EJS) & Node.js (MEEN) stack to perform Create, Read, Update and Delete (CRUD) operations. EJS is a templating language that uses javascript to produce the HTML template markup. I wanted to see if using EJS resulted in quicker rendering.
 
 Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model.
 
-Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use svg icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Note model so notes are shown in separate categories, e.g. 'work', 'hobby' or 'holiday ideas' etc.`,
+Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use svg icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Article model so articles are shown in separate categories, e.g. 'Engineering', 'IT' etc.`,
     images: [
       {
         src: "../assets/images/elecInfo.jpg",
@@ -366,7 +366,7 @@ Frontend: I used the vue-moment Moment.js filter dependency to extract a more re
     ],
     github: "https://github.com/AndrewJBateman/meen-stack-articles",
     url: "",
-  }, */
+  },
   // app 8
   /* {
     title: 'Ionic React Project Planning',

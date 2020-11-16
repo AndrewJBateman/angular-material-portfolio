@@ -35,13 +35,13 @@ It is estimated to take 1800 hours and it took me all of 2017 working part-time.
     title: "Programming Languages",
     imgPath: "../../assets/icons/prog.png",
     content:
-      "Most of my programming experience so far has been in Javascript ES6 (ECMAScript6 / 2015), on the client and server sides. I started my programming journey with a range of courses with FrontEndMasters & TeamTreehouse courses, including completing Full Stack Javascript, PHP, C#, Rails Development, Java Web Development, Android (up to advanced level) Tracks, Swift, Ruby, Wordpress, Rails, ASP.NET. Since Treehouse I focused on Javascript as it was the most popular language and was used on the front and backend. Due to its use in Angular I have also spent a lot of time using Typescript.",
+      "Most of my programming experience so far has been in Javascript ES6 (ECMAScript6 / 2015), on the client and server sides. I started my programming journey with a range of courses with FrontEndMasters & TeamTreehouse courses, including completing Full Stack Javascript, PHP, C#, Rails Development, Java Web Development, Android (up to advanced level) Tracks, Swift, Ruby, Wordpress, Rails, ASP.NET. Since Treehouse I focused on Javascript as it was the most popular language and was used on the front and backend. Due to its use in Angular I have also spent a lot of time using Typescript. I am currently studying Python and Django too.",
   },
   {
     title: "Machine-Learning and TensorFlow",
     imgPath: "../../assets/icons/tensorflow.png",
     content:
-      "Tensorflow came up in one of my job-searches as a skill in demand. I then found that a TensorFlow.js library was available so I would not have to learn Python to use it. I completed a 17.5-hour Udemy course in Machine Learning with Javascript and have a few Github repos but this is work in progress and I am looking to incorporate TensorFlow into an Ionic mobile app.",
+      "Tensorflow came up in one of my job-searches as a skill in demand. I then found that a TensorFlow.js library was available. I completed a 17.5-hour Udemy course in Machine Learning with Javascript and have a few Github repos but this is work in progress and I am looking to incorporate TensorFlow into an Ionic mobile app.",
   },
   {
     title: "Engineering",

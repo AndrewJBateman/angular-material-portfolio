@@ -1,19 +1,21 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import * as firebase from 'firebase/app';
+import firebase from 'firebase/app';
+// import * as firebase from 'firebase/app';
+// import auth from 'firebase/app';
 import { Router } from '@angular/router';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class AuthService {
-	authState: any = null;
+  authState: any = null;
 
 	constructor(
-    public afAuth: AngularFireAuth,
+    public auth: AngularFireAuth,
     public router: Router
   ) {
-		this.afAuth.authState.subscribe(data => this.authState = data);
+		this.auth.authState.subscribe(data => this.authState = data);
 	}
 
 	get authenticated(): boolean {
@@ -24,12 +26,12 @@ export class AuthService {
     return this.authenticated ? this.authState.uid : null;
 	}
 
-	async login() {
-    await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+	async login()  {
+    await this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
 	}
 
 	async logout() {
-		await this.afAuth.signOut();
+		await this.auth.signOut();
 		localStorage.removeItem('user');
 	}
 

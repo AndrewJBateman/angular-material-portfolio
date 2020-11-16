@@ -1,6 +1,6 @@
 # :zap: Portfolio Angular Material
 
-* Angular 10 Progressive Web App (PWA) using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
+* Angular & Angular Material used to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
 
 **\* Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -57,10 +57,10 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v10](https://angular.io/)
-* [Angular Material v10](https://material.angular.io/)
+* [Angular framework v11](https://angular.io/)
+* [Angular Material v11](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
-* [Angular service worker v10](https://angular.io/guide/service-worker-intro) added
+* [Angular service worker v11](https://angular.io/guide/service-worker-intro) added
 * [Firebase v7](https://firebase.google.com) Cloud storage and authentication.
 * [Reactive Extensions Library for Javascript rxjs v6](https://rxjs-dev.firebaseapp.com/)
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
@@ -108,7 +108,7 @@ getPosts() {
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed - SSR version has errors
 * Lighthouse PC score: Performance 47%, Accessibility, Best practises & SEO: 100%, PWA OK
-* To-Do: Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
+* To-Do: Fix login. Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
 
 ## :clap: Inspiration
 
