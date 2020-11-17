@@ -39,8 +39,8 @@ export class PostDashboardComponent implements OnInit {
 
 	createPost() {
 		const postData = {
-			author: this.auth.authState.displayName || this.auth.authState.email,
-			authorId: this.auth.currentUserId,
+			// author: this.auth.authState.displayName || this.auth.authState.email,
+			// authorId: this.auth.currentUserId,
 			content: this.content,
 			image: this.image || null,
       imageby: this.imageby,
@@ -65,7 +65,7 @@ export class PostDashboardComponent implements OnInit {
   // returnToList() {
   //   this.router.navigate(['/blog']);
   // }
-  
+
 	uploadImage(event: any) {
 		const file = event.target.files[0];
 		const path = `posts/${file.name}`;
@@ -86,5 +86,5 @@ export class PostDashboardComponent implements OnInit {
       console.log('image uploaded');
 		}
   }
-  
+
 }

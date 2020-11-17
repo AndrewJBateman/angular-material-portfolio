@@ -9,7 +9,8 @@ import { AuthService } from "../../services/auth.service";
   styleUrls: ["./top-navbar.component.scss"],
 })
 export class TopNavbarComponent implements OnInit {
-  displayLogin = false; /* initially displayLogin is false */
+  displayLogin = false; /* initially displayLogin is false*/
+  loggedIn = false;
 
   @Output() public sidenavToggle = new EventEmitter();
 

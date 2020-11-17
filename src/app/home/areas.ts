@@ -11,19 +11,19 @@ It is estimated to take 1800 hours and it took me all of 2017 working part-time.
   {
     title: "Angular",
     imgPath: "../../assets/icons/angular.png",
-    content: `A big consideration when choosing what language/framework/stack/etc. to spend time mastering is simply the number of jobs in Linkedin. I found Angular skills to be very much in demand and its support by Google and use by larger companies was a big attraction. I have therefore gained a lot of experience of Angular, including components, 1 and 2-way data-binding, pipes, directives, services, forms, Http requests, routing, authentication, modules, NgRx, observables, dependancy injection, service workers etc, as well as fixing breaking changes caused by 6-monthly Angular version updates. I am currently working with Angular 9. After a lot more tutorials (including a 37-hour Udemy course) and projects in Angular 6/7/8/9 - 50% of my repositories include Angular - I decided to deepen my knowledge of the MEAN Stack.`,
+    content: `A big consideration when choosing what language/framework/stack/etc. to spend time mastering is simply the number of jobs in Linkedin. I found Angular skills to be very much in demand and its support by Google and use by larger companies was a big attraction. I have therefore gained a lot of experience of Angular, including components, 1 and 2-way data-binding, pipes, directives, services, forms, Http requests, routing, authentication, modules, NgRx, observables, dependancy injection, service workers etc, as well as fixing breaking changes caused by 6-monthly Angular version updates. I am currently working with Angular 9. After a lot more tutorials (including a 37-hour Udemy course) and projects in Angular 6/7/8/9 - 50% of my repositories include Angular - I decided to deepen my knowledge of the MEAN Stack. See Projects page.`,
   },
   {
     title: "MEAN Stack",
     imgPath: "../../assets/icons/mean.png",
     content:
-      "After exploring the MERN, MEVN, PEVN & PEAN stacks I decided to focus on MEAN. I had already used MongoDB with Mongoose and the Heroku mLab database service, Express middleware and Node.js for the backend part of the FCC Full-Stack Certificate. I also had knowledge of Angular as a front-end and communicating with the backend using the Angular HttpClient service. I completed a 12.5-hour MEAN-Stack Udemy course as well as other Youtube tutorials, learning the details of making full CRUD operations at the front-end to Create, Read, Update and Delete data in a backend database. User authorization and error-handling was also covered. I also completed a 36.5-hour Udemy course on Node.js, REST APIs and GraphQL APIs.",
+      `After exploring the MERN, MEVN, PEVN & PEAN stacks I decided to focus on MEAN. I had already used MongoDB with Mongoose and the Heroku mLab database service, Express middleware and Node.js for the backend part of the FCC Full-Stack Certificate. I also had knowledge of Angular as a front-end and communicating with the backend using the Angular HttpClient service. I completed a 12.5-hour MEAN-Stack Udemy course as well as other Youtube tutorials, learning the details of making full CRUD operations at the front-end to Create, Read, Update and Delete data in a backend database. User authorization and error-handling was also covered. I also completed a 36.5-hour Udemy course on Node.js, REST APIs and GraphQL APIs. See Projects page.`,
   },
   {
     title: "Databases",
     imgPath: "../../assets/icons/database.png",
     content:
-      "I have experience of Structured Query Language (SQL) relational databases, including MySQL and PostgreSQL. My experience of NoSQL databases is mainly with MongoDB, using Mongoose schemas and models. I have used the AWS MongoDB Atlas Cloud Service and the MongoDB Compass GUI for some projects, as well as Cordova SQLite with Ionic apps. My database knowledge has come from Teamtreehouse, Youtube videos and the FCC and Udemy courses already mentioned.",
+      "I have experience of Structured Query Language (SQL) relational databases, including MySQL and PostgreSQL. My experience of NoSQL databases is mainly with MongoDB, using Mongoose schemas and models. I have used the AWS MongoDB Atlas Cloud Service and the MongoDB Compass GUI for some projects, as well as Cordova SQLite with Ionic apps. My database knowledge has come from Teamtreehouse, Youtube videos and the FCC and Udemy courses already mentioned. See Projects page.",
   },
   {
     title: "Ionic",

@@ -19,7 +19,7 @@
   </a>
 
   <div *ngIf="displayLogin">
-    <div *ngIf="auth.authState | async as user; else showLogin">
+    <div *ngIf="auth.authState as user; else showLogin">
       <button
         mat-icon-button
         routerLink="/dashboard"
