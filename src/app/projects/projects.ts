@@ -334,95 +334,148 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
     url: "https://angular-data-charts.web.app",
   },
   // app 7
-  {
-    title: "MEEN Stack Articles",
-    summary:
-      `This app displays articles in a grid of Bootstrap cards. It uses the MongoDB, Express, Embedded Javascript Templating (EJS) & Node.js (MEEN) stack to perform Create, Read, Update and Delete (CRUD) operations. EJS is a templating language that uses javascript to produce the HTML template markup. I wanted to see if using EJS resulted in quicker rendering.
+//   {
+//     title: "MEEN Stack Articles",
+//     summary:
+//       `This app displays articles in a grid of Bootstrap cards. It uses the MongoDB, Express, Embedded Javascript Templating (EJS) & Node.js (MEEN) stack to perform Create, Read, Update and Delete (CRUD) operations. EJS is a templating language that uses javascript to produce the HTML template markup. I wanted to see if using EJS resulted in quicker rendering.
 
-Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model.
+// Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model.
 
-Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use svg icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Article model so articles are shown in separate categories, e.g. 'Engineering', 'IT' etc.`,
-    images: [
-      {
-        src: "../assets/images/elecInfo.jpg",
-        page: "Home Page",
-        content: "",
-      },
-      {
-        src: "../assets/images/elecInfo.jpg",
-        page: "Categories Page",
-        content: "",
-      },
-      {
-        src: "../assets/images/elecInfo.jpg",
-        page: "Favourites Page",
-        content: "",
-      },
-      {
-        src: "../assets/images/elecInfo.jpg",
-        page: "About Page",
-        content: "",
-      },
-    ],
-    github: "https://github.com/AndrewJBateman/meen-stack-articles",
-    url: "",
-  },
+// Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use svg icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Article model so articles are shown in separate categories, e.g. 'Engineering', 'IT' etc.`,
+//     images: [
+//       {
+//         src: "../assets/images/elecInfo.jpg",
+//         page: "Home Page",
+//         content: "",
+//       },
+//     ],
+//     github: "https://github.com/AndrewJBateman/meen-stack-articles",
+//     url: "",
+//   },
   // app 8
   /* {
-    title: 'Ionic React Project Planning',
-    summary: '',
+    title: 'Angular Unsplash API',
+    summary: 'Angular app to get random images from the Unsplash API',
     images: [
       {
-        src: '../assets/images/cryptoInfo.jpg',
+        src: '../assets/images/unsplash.jpg',
         page: 'Home Page',
         content: ''
       },
-      {
-        src: '../assets/images/cryptoInfo.jpg',
-        page: 'xx Page',
-        content: ''
-      },
-      {
-        src: '../assets/images/cryptoInfo.jpg',
-        page: 'xx Page',
-        content: ''
-      },
-      {
-        src: '../assets/images/cryptoInfo.jpg',
-        page: 'xx Page',
-        content: ''
-      }
     ],
-		github: 'https://github.com/AndrewJBateman/ionic-react-planning',
+		github: 'https://github.com/AndrewJBateman/angular-unsplash-api',
 		url: ''
   }, */
   // app 9
   /* {
-    title: 'Express-EJS News App',
-    summary: '',
+    title: 'Angular Tailwind Ratp',
+    summary: 'Angular app to show data from the RATP (French transport system) API',
     images: [
       {
-        src: '../assets/images/tensorflow.jpg',
+        src: '../assets/images/home.jpg',
         page: 'Home Page',
         content: ''
       },
-      {
-        src: '../assets/images/tensorflow.jpg',
-        page: 'xx Page',
-        content: ''
-      },
-      {
-        src: '../assets/images/tensorflow.jpg',
-        page: 'xx Page',
-        content: ''
-      },
-      {
-        src: '../assets/images/tensorflow.jpg',
-        page: 'xx Page',
-        content: ''
-      }
     ],
-		github: 'https://github.com/AndrewJBateman/angular-api-countries',
+		github: 'https://github.com/AndrewJBateman/angular-tailwind-ratp',
+		url: ''
+  }, */
+  // app 10
+  /* {
+    title: 'Angular Esri ArcGIS',
+    summary: 'Displays map data from the ArcGIS API, using the esri-loader and an Angular map creation service',
+    images: [
+      {
+        src: '../assets/images/home.jpg',
+        page: 'Home Page',
+        content: ''
+      },
+    ],
+		github: 'https://github.com/AndrewJBateman/angular-esri-arcgis',
+		url: ''
+  }, */
+  // app 11
+  /* {
+    title: 'Ionic Angular Nouvelles',
+    summary: 'Ionic-Angular PWA to fetch French news from an API',
+    images: [
+      {
+        src: '../assets/images/home.jpg',
+        page: 'Home Page',
+        content: ''
+      },
+    ],
+		github: 'https://github.com/AndrewJBateman/ionic-angular-nouvelles',
+		url: ''
+  }, */
+  // app 12
+  /* {
+    title: 'Angular API Gouvfr',
+    summary: 'Angular app to search for address data from the French Government official API',
+    images: [
+      {
+        src: '../assets/images/home.jpg',
+        page: 'Home Page',
+        content: ''
+      },
+    ],
+		github: 'https://github.com/AndrewJBateman/angular-api-gouvfr',
+		url: ''
+  }, */
+    // app 13
+  /* {
+    title: 'Python Django IcelandAPI',
+    summary: 'Displays volcano data from an Iceland API',
+    images: [
+      {
+        src: '../assets/images/home.jpg',
+        page: 'Home Page',
+        content: ''
+      },
+    ],
+		github: '',
+		url: ''
+  }, */
+      // app 14
+  /* {
+    title: 'Python Django SomethingData',
+    summary: '',
+    images: [
+      {
+        src: '../assets/images/home.jpg',
+        page: 'Home Page',
+        content: ''
+      },
+    ],
+		github: '',
+		url: ''
+  }, */
+        // app 15
+  /* {
+    title: 'GCP App Engine something',
+    summary: '',
+    images: [
+      {
+        src: '../assets/images/home.jpg',
+        page: 'Home Page',
+        content: ''
+      },
+    ],
+		github: '',
+		url: ''
+  }, */
+        // app 16
+  /* {
+    title: 'GCP Covid database something',
+    summary: '',
+    images: [
+      {
+        src: '../assets/images/home.jpg',
+        page: 'Home Page',
+        content: ''
+      },
+    ],
+		github: '',
 		url: ''
   }, */
 ];
