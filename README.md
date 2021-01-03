@@ -33,7 +33,7 @@
 
 **Navbars:** Top/side navbars with page routing and working links to my CV, Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
 
-**Home:** Top section has 2 fxFlex columns with photo and text, including a Http service to fetch my repo details from the github API.  Angular Material cards used to display data on areas studied/worked in, using data-binding from an array of 'areas' based on an Area model.
+**Home:** Top section has 2 fxFlex columns with photo and text, including a Http service to fetch my repo details from the github API.  Angular Material cards used to display data on areas studied/worked in, using data-binding from an array of 'areas' based on an Area model. Replace top section with card.
 
 **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 2 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page, 1 routes to github page and 1 opens the app in a browser.
 
@@ -47,7 +47,7 @@
 **Contact:** Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
 
 **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
-  Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the Blog Detail and the footer includes an image credit with web link to the authors page. Note: I keep a backup copy of each post in `/post-backups`.
+  Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the Blog Detail and the footer includes an image credit with web link to the authors page..
 **OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
@@ -107,7 +107,7 @@ getPosts() {
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed - SSR version has errors
 * Lighthouse PC score: Performance 47%, Accessibility, Best practises & SEO: 100%, PWA OK
-* To-Do: Fix login. Improve lighthouse performance score. Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
+* To-Do: Fix login. Improve lighthouse performance score. Replace mat-icons? Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
 
 ## :clap: Inspiration
 

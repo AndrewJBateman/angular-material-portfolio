@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
 import { SKILLS } from "./skills";

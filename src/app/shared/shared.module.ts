@@ -1,32 +1,26 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { NgModule, ModuleWithProviders } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { RouterModule } from "@angular/router";
 
-import { MaterialModule } from '../material.module';
-import { PipesModule } from '../pipes/pipes.module';
+import { MaterialModule } from "../material.module";
+import { PipesModule } from "../pipes/pipes.module";
 
 @NgModule({
-	exports: [
-		BrowserAnimationsModule,
-		CommonModule,
-		FlexLayoutModule,
-    FormsModule,
-    ReactiveFormsModule,
-		MaterialModule,
+  exports: [
+    CommonModule,
+    FlexLayoutModule,
+    MaterialModule,
     RouterModule,
-    PipesModule
-	],
-	declarations: [
-  ]
+    PipesModule,
+  ],
+  declarations: [],
 })
 export class SharedModule {
-	static forRoot(): ModuleWithProviders<SharedModule> {
-		return {
-			ngModule: SharedModule,
-			providers: []
-		};
-	}
+  static forRoot(): ModuleWithProviders<SharedModule> {
+    return {
+      ngModule: SharedModule,
+      providers: [],
+    };
+  }
 }

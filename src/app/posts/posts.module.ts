@@ -3,21 +3,23 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SharedModule } from './../shared/shared.module';
 
-import { PostDashboardComponent } from './post-dashboard/post-dashboard.component';
-import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostService } from '../services/post.service';
 ​
 const routes: Routes = [
 	{
 		path: 'blog', component: PostListComponent
-	},
-	{
-		path: 'blog/:id', component: PostDetailComponent
-	},
-	{
-		path: 'dashboard', component: PostDashboardComponent
-	}
+  },
+  {
+    path: "blog/:id",
+    loadChildren: () =>
+      import("./post-detail/post-detail.module").then((mod) => mod.PostDetailModule),
+  },
+  {
+    path: "dashboard",
+    loadChildren: () =>
+      import("./post-dashboard/post-dashboard.module").then((mod) => mod.PostDashboardModule),
+  }
 ];
 @NgModule({
 	imports: [
@@ -25,8 +27,6 @@ const routes: Routes = [
 		RouterModule.forChild(routes)
 	],
 	declarations: [
-		PostDashboardComponent,
-		PostDetailComponent,
 		PostListComponent
 	],
 	providers: [PostService]

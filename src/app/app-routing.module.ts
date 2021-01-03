@@ -1,13 +1,7 @@
-import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+
 import { HomeComponent } from "./home/home.component";
-import { ProjectsComponent } from "./projects/projects.component";
-import { ProjectDetailComponent } from "./projects/project-detail/project-detail.component";
-import { SkillsComponent } from "./skills/skills.component";
-import { ContactComponent } from "./contact/contact.component";
-import { PageNotFoundComponent } from "./pagenotfound/pagenotfound.component";
-import { PostsModule } from "./posts/posts.module";
 
 const appRoutes: Routes = [
   {
@@ -21,41 +15,42 @@ const appRoutes: Routes = [
   },
   {
     path: "projects",
-    component: ProjectsComponent,
+    loadChildren: () =>
+      import("./projects/projects.module").then((mod) => mod.ProjectsModule),
   },
   {
     path: "projects/:projectId",
-    component: ProjectDetailComponent,
+    loadChildren: () =>
+      import("./projects/project-detail/project-detail.module").then((mod) => mod.ProjectDetailModule),
   },
   {
     path: "skills",
-    component: SkillsComponent,
+    loadChildren: () =>
+      import("./skills/skills.module").then((mod) => mod.SkillsModule),
   },
   {
     path: "blog",
-    component: PostsModule,
+    loadChildren: () =>
+      import("./posts/posts.module").then((mod) => mod.PostsModule),
   },
   {
     path: "contact",
-    component: ContactComponent,
+    loadChildren: () =>
+      import("./contact/contact.module").then((mod) => mod.ContactModule),
   },
   {
     path: "**",
-    redirectTo: "/404",
-    pathMatch: "full",
-  },
-  {
-    path: "404",
-    component: PageNotFoundComponent,
+    loadChildren: () =>
+      import("./pagenotfound/pagenotfound.module").then(
+        (mod) => mod.PageNotFoundModule
+      ),
   },
 ];
 
 @NgModule({
   imports: [
-    CommonModule,
-    PostsModule,
     RouterModule.forRoot(appRoutes, {
-      initialNavigation: "enabled",
+      // initialNavigation: "enabledBlocking",
     }),
   ],
   exports: [RouterModule],
