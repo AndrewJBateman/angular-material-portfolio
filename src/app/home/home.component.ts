@@ -14,10 +14,11 @@ import { AREAS } from './areas';
 export class HomeComponent implements OnInit {
   title = 'Home';
   areas = AREAS;
-	profile: any;
+  profile: any;
+  bio: string;
 	repos: number;
   lastUpdated: string;
-  
+
 	constructor(
     private githubService: GithubService,
     private metaTagService: Meta,
@@ -27,8 +28,9 @@ export class HomeComponent implements OnInit {
 	getRepoData(): void {
 		this.githubService.getUserProfile()
 			.subscribe(resultArray => {
-				this.profile = resultArray;
-				this.repos = this.profile.public_repos;
+        this.profile = resultArray;
+        this.bio = this.profile.bio;
+        this.repos = this.profile.public_repos;
 				this.lastUpdated = this.profile.updated_at;
 			});
 	}

@@ -33,7 +33,7 @@
 
 **Navbars:** Top/side navbars with page routing and working links to my CV, Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
 
-**Home:** Top section has 2 fxFlex columns with photo and text, including a Http service to fetch my repo details from the github API.  Angular Material cards used to display data on areas studied/worked in, using data-binding from an array of 'areas' based on an Area model. Replace top section with card.
+**Home:** Includes a Http service to fetch my repo details from the github API.  Angular Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
 
 **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 2 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page, 1 routes to github page and 1 opens the app in a browser.
 
@@ -106,7 +106,7 @@ getPosts() {
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed - SSR version has errors
-* Lighthouse PC score: Performance 47%, Accessibility, Best practises & SEO: 100%, PWA OK
+* Lighthouse PC score: Performance 80%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
 * To-Do: Fix login. Improve lighthouse performance score. Replace mat-icons? Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
 
 ## :clap: Inspiration

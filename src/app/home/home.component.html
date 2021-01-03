@@ -6,49 +6,34 @@
 </head>
 
 <div class="home-container">
-  <!--Top 'main' section-->
-  <div
-    class="container"
-    fxLayout
-    fxLayout.xs="column"
-    fxLayoutAlign="center"
-    fxLayoutGap="10px"
-    fxLayoutGap.xs="0"
-  >
-    <!--Top 'main' section lhs-->
-    <div class="item-1" fxFlex="20%">
-      <img
-        class="main-img"
-        src="/assets/images/me-outside.jpg"
-        alt="photo of Andrew Bateman"
-      />
-      <h2 class="main-heading">Andrew Bateman</h2>
-      <h3 class="main-subheading">Programming, IT & Engineering</h3>
-    </div>
-
-    <!--Top 'about' section rhs-->
-    <div class="item-2" fxFlex="70%" fxFlexOrder="2">
-      <h2 class="about-heading">
-        <mat-icon color="accent" class="about-title-avatar"> face </mat-icon
-        >About Me
-      </h2>
-
-      <p class="about-para">
-        I have been studying programming part-time for over 3 years, completing
-        a range of projects, online courses & tutorials from FreeCodeCamp,
-        Treehouse, Udemy, Coursera and Youtube etc. I recently gained Google Associate Cloud Engineer Certification. I have read countless programming-related information online and have
-        <span *ngIf="profile" class="about-repo-text"> {{ repos }}</span>
+  <!--Top Section-->
+  <mat-card>
+    <mat-card-content>
+      <p class="top-card-title">
+        <img
+          src="../../assets/images/me-outside.jpg"
+          alt="profile photo"
+          mat-card-avatar
+          class="top-card-avatar"
+        />Andrew Bateman
+      </p>
+      <p class="top-card-content">
+        <span class="card-blue-text">{{ bio }}</span
+        >I have been studying programming part-time for a number of years,
+        completing lots of online courses & tutorials from FreeCodeCamp,
+        Treehouse, Udemy, Coursera and Youtube etc. I also recently gained
+        Google Associate Cloud Engineer Certification. I have
+        <span *ngIf="profile" class="card-blue-text"> {{ repos }}</span>
         repositories on Github (last updated:
-        <span *ngIf="profile" class="about-repo-text">{{
+        <span *ngIf="profile" class="card-blue-text">{{
           lastUpdated | dateConvert
         }}</span>
         ) with a mixture of my own projects and tutorial code.
       </p>
-
-      <p class="about-para">
-        Programming was not new to me as I previously worked for 20
-        years as an Electronic/Electrical Engineer in the UK, Spain and finally
-        in Norway (including 2 years in the
+      <p class="card-content">
+        Programming was not new to me as I previously worked for 20 years as an
+        Electronic/Electrical Engineer in the UK, Spain and finally in Norway
+        (including 2 years in the
         <a
           href="https://en.wikipedia.org/wiki/Hammerfest_(town)"
           target="_blank"
@@ -67,24 +52,21 @@
         </a>
         ) & continue programming.
       </p>
-      <p class="about-para">
+      <p class="card-content">
         There is more about my Programming, Engineering & IT below. The aim of
-        this website is to showcase some of my projects and explain a little
+        this website is to show some of my projects and a little
         about me, without repeating what is in Linkedin. This website was built
         with an Angular front-end and a Firebase backend - see Projects for more
         info.
       </p>
 
-      <p class="about-para">
+      <p class="card-content">
         This site has a technical blog with categories: Programming Development,
         IT and Engineering. I welcome comments - just go to the Contact page to
         send me a message :-).
       </p>
-    </div>
-    <!--end of item 2-->
-  </div>
-  <!--end of top container-->
-
+    </mat-card-content>
+  </mat-card>
   <hr class="horiz-line" />
 
   <!--Bottom section: mat-card for each area with data-binding from area.module.ts-->
@@ -100,7 +82,7 @@
           />
           {{ area.title }}
         </p>
-        <p class="area-card-content">{{ area.content }}</p>
+        <p class="card-content">{{ area.content }}</p>
       </mat-card-content>
     </mat-card>
   </div>

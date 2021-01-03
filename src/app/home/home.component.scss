@@ -2,52 +2,28 @@
   margin-top: 16px;
 }
 
-// Top 'main' section lhs
-.main-img {
-  display: block;
-  width: 80%;
-  height: auto;
-  margin: 0 auto 8px;
-  position: center;
-  border-radius: 50%;
-}
-
-.main-heading {
-  text-align: center;
-  color: #0d47a1;
-  margin: 0;
-  text-decoration: underline;
-  text-decoration-color: #008000;
-}
-
-.main-subheading {
-  text-align: center;
-  color: #455a64;
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-// Top 'about' section rhs
-.about-title-avatar {
+.top-card-avatar {
+  background-size: cover;
   transform: scale(1.5);
-  padding-right: 8px;
+  padding: 10px;
+  margin-right: 8px;
 }
 
-.about-heading {
-  text-align: left;
+.top-card-title {
   color: #0d47a1;
-  margin: 0 12px 0;
+  font-size: 24px;
   text-decoration: underline;
-  text-decoration-color: #008000;
+  text-decoration-color: #0D47A1;
+  margin-bottom: 0 !important;
 }
 
-.about-para {
-  margin: 0 12px 12px;
+.top-card-content {
+  margin-top: 8px !important;
 }
 
-.about-repo-text {
+.card-blue-text {
   color: #0d47a1;
-  font-size: larger;
+  font-size: 14px;
 }
 
 // Bottom subject area cards
@@ -66,7 +42,7 @@ mat-card {
     text-decoration-color: #008000;
   }
 
-  .area-card-content {
+  .card-content {
     white-space: pre-wrap;
   }
 }
