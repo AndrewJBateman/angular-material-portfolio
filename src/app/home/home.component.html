@@ -18,14 +18,14 @@
         />Andrew Bateman
       </p>
       <p class="top-card-content">
-        <span class="card-blue-text">{{ bio }}</span
+        <span *ngIf="user" class="card-blue-text">{{ bio }}</span
         >I have been studying programming part-time for a number of years,
         completing lots of online courses & tutorials from FreeCodeCamp,
         Treehouse, Udemy, Coursera and Youtube etc. I also recently gained
         Google Associate Cloud Engineer Certification. I have
-        <span *ngIf="profile" class="card-blue-text"> {{ repos }}</span>
+        <span *ngIf="user" class="card-blue-text"> {{ repos }}</span>
         repositories on Github (last updated:
-        <span *ngIf="profile" class="card-blue-text">{{
+        <span *ngIf="user" class="card-blue-text">{{
           lastUpdated | dateConvert
         }}</span>
         ) with a mixture of my own projects and tutorial code.

@@ -77,7 +77,7 @@
 
 ## :computer: Code Examples
 
-* service function to fetch blog posts, from `post.service.ts` using the `AngularFirestoreCollection` database service.
+* service function to fetch blog posts, from `post.service.ts` using the `AngularFirestoreCollection` database service. Note the use of the spread operator to return the data
 
 ```typescript
 getPosts() {
@@ -107,7 +107,7 @@ getPosts() {
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed - SSR version has errors
 * Lighthouse PC score: Performance 80%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
-* To-Do: Fix login. Improve lighthouse performance score. Replace mat-icons? Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
+* To-Do: Improve lighthouse performance score. Replace mat-icons? Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
 
 ## :clap: Inspiration
 

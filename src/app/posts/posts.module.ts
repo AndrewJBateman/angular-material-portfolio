@@ -8,10 +8,10 @@ import { PostService } from '../services/post.service';
 ​
 const routes: Routes = [
 	{
-		path: 'blog', component: PostListComponent
+		path: '', component: PostListComponent
   },
   {
-    path: "blog/:id",
+    path: ":id",
     loadChildren: () =>
       import("./post-detail/post-detail.module").then((mod) => mod.PostDetailModule),
   },

@@ -1,17 +1,27 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable} from 'rxjs';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { throwError, Observable } from "rxjs";
+
+import { User } from "../models/user";
+import { catchError, map } from "rxjs/operators";
 
 @Injectable({
-	providedIn: 'root'
+  providedIn: "root",
 })
 export class GithubService {
+  constructor(private http: HttpClient) {}
 
-
-	constructor(private http: HttpClient) { }
-
-	getUserProfile(): Observable<any> {
-		const githubUrl = 'https://api.github.com/users/andrewjbateman';
-		return this.http.get(githubUrl);
-	}
+  getUserProfile(): Observable<User> {
+    const githubUrl = "https://api.github.com/users/andrewjbateman";
+    return this.http
+      .get<User>(githubUrl).pipe(
+      map((data: User) => data),
+      catchError((err) => {
+        return throwError(
+          "There was a problem fetching data from Github API, error: ",
+          err
+        );
+      })
+    );
+  }
 }

@@ -11,7 +11,8 @@ import { AngularFireStorage } from '@angular/fire/storage';
 @Component({
 	selector: 'app-post-dashboard',
 	templateUrl: './post-dashboard.component.html',
-	styleUrls: ['./post-dashboard.component.scss']
+  styleUrls: ['./post-dashboard.component.scss'],
+  providers: [PostService]
 })
 export class PostDashboardComponent implements OnInit {
 	content: string;
