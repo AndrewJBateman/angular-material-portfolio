@@ -7,9 +7,10 @@ import { SharedModule } from "../../shared/shared.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { MatExpansionModule } from "@angular/material/expansion";
-import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatFormFieldModule, MatFormFieldControl } from "@angular/material/form-field";
 import { MatListModule } from "@angular/material/list";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
   declarations: [PostDashboardComponent],
@@ -22,9 +23,10 @@ import { MatProgressBarModule } from "@angular/material/progress-bar";
     MatButtonModule,
     MatExpansionModule,
     MatFormFieldModule,
+    MatInputModule,
     MatListModule,
     MatProgressBarModule,
   ],
-  exports: [PostDashboardComponent],
+  exports: [PostDashboardComponent]
 })
 export class PostDashboardModule {}

@@ -1,84 +1,73 @@
 <section>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Create a Post
-      </mat-panel-title>
-    </mat-expansion-panel-header>
+  <mat-panel-title> Create a Post </mat-panel-title>
 
-    <input type="file" name="file" id="file" (change)="uploadImage($event)" />
-    <div [hidden]="!uploadPercent">
-      <mat-progress-bar
-        mode="determinate"
-        value="{{ uploadPercent | async }}"
-      ></mat-progress-bar>
-    </div>
-    <div [hidden]="!image">
-      <img [src]="image || '//:0'" />
-    </div>
+  <input type="file" name="file" id="file" (change)="uploadImage($event)" />
+  <div [hidden]="!uploadPercent">
+    <mat-progress-bar
+      mode="determinate"
+      value="{{ uploadPercent | async }}"
+    ></mat-progress-bar>
+  </div>
+  <div [hidden]="!image">
+    <img [src]="image || '//:0'" />
+  </div>
 
-    <mat-form-field>
-      <input
-        matInput
-        placeholder="Image Credit"
-        [(ngModel)]="imageby"
-        name="imageby"
-      />
-    </mat-form-field>
-    <br />
-    <mat-form-field>
-      <input
-        matInput
-        placeholder="Image Link"
-        [(ngModel)]="imageLink"
-        name="imageLink"
-      />
-    </mat-form-field>
-    <br />
-    <mat-form-field>
-      <input
-        matInput
-        placeholder="Post Title"
-        [(ngModel)]="title"
-        name="title"
-      />
-    </mat-form-field>
-    <br />
-    <mat-form-field>
-      <input
-        matInput
-        placeholder="Post Subtitle"
-        [(ngModel)]="subtitle"
-        name="subtitle"
-      />
-    </mat-form-field>
-    <br />
-    <mat-form-field>
-      <mat-label>Select Category</mat-label>
-      <select matNativeControl [(ngModel)]="category" name="category">
-        <option value="Dev">Programming Development</option>
-        <option value="IT">Information Technology</option>
-        <option value="Eng">Engineering</option>
-      </select>
-    </mat-form-field>
-    <br />
-    <mat-form-field>
-      <textarea
-        matInput
-        placeholder="Post Content"
-        [(ngModel)]="content"
-        name="content"
-        rows="4"
-      ></textarea>
-    </mat-form-field>
-    <br />
-    <button
-      mat-raised-button
-      (click)="createPost()"
-      [disabled]="!title || !content || !image || !category"
-      color="accent"
-    >
-      {{ buttonText }}
-    </button>
-  </mat-expansion-panel>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Image Credit"
+      [(ngModel)]="imageby"
+      name="imageby"
+    />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Image Link"
+      [(ngModel)]="imageLink"
+      name="imageLink"
+    />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <input matInput placeholder="Post Title" [(ngModel)]="title" name="title" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Post Subtitle"
+      [(ngModel)]="subtitle"
+      name="subtitle"
+    />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>Select Category</mat-label>
+    <select matNativeControl [(ngModel)]="category" name="category">
+      <option value="Dev">Programming Development</option>
+      <option value="IT">Information Technology</option>
+      <option value="Eng">Engineering</option>
+    </select>
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <textarea
+      matInput
+      placeholder="Post Content"
+      [(ngModel)]="content"
+      name="content"
+      rows="4"
+    ></textarea>
+  </mat-form-field>
+  <br />
+  <button
+    mat-raised-button
+    (click)="createPost()"
+    [disabled]="!title || !content || !image || !category"
+    color="accent"
+  >
+    {{ buttonText }}
+  </button>
 </section>

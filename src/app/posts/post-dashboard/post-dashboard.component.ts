@@ -29,8 +29,6 @@ export class PostDashboardComponent implements OnInit {
 	buttonText = 'Create Post';
 
 	constructor(
-    private router: Router,
-		private auth: AuthService,
 		private postService: PostService,
 		private storage: AngularFireStorage
 		) { }
@@ -40,8 +38,6 @@ export class PostDashboardComponent implements OnInit {
 
 	createPost() {
 		const postData = {
-			// author: this.auth.authState.displayName || this.auth.authState.email,
-			// authorId: this.auth.currentUserId,
 			content: this.content,
 			image: this.image || null,
       imageby: this.imageby,
