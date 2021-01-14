@@ -23,7 +23,7 @@
               "@firebase/component",
               "@firebase/util",
               "@firebase/app"
-           ],
+            ],
             "outputPath": "dist/angular-material-portfolio/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -144,7 +144,9 @@
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "bundleDependencies": false,
-            "externalDependencies": ["@firebase/firestore"]
+            "externalDependencies": [
+              "@firebase/firestore"
+            ]
           },
           "configurations": {
             "production": {
@@ -194,5 +196,8 @@
       }
     }
   },
-  "defaultProject": "angular-material-portfolio"
+  "defaultProject": "angular-material-portfolio",
+  "cli": {
+    "analytics": false
+  }
 }
