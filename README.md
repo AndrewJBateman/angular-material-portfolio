@@ -46,12 +46,12 @@
 
 **Contact:** Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
 
-**Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.**Todo**add login check to control if post delete key is shown and if post can be edited.
-  Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the Blog Detail and the footer includes an image credit with web link to the authors page..
+**Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
+  Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the image, Blog Detail and the footer includes an image credit with web link to the authors page.
 **OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
-**Future Updates** Dark mode toggle, blog list mode toggle (removes photos from list page)/Field Selector to only show Dev, Eng or IT. Blog post notification - tells readers there is a new post.
+**Future Updates** Dark mode toggle
 
 ## :signal_strength: Technologies
 
@@ -107,7 +107,7 @@ getPosts() {
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed - SSR version has errors
 * Lighthouse PC score: Performance 80%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
-* To-Do: Improve lighthouse performance score. Replace mat-icons? Other todos - see Sections Info above. scss embed styles. Move images to firebase storage.
+* To-Do: Improve lighthouse performance score. Replace mat-icons? Other todos - see Sections Info above. scss embed styles. Move images to firebase storage. Fix `ng test`.
 
 ## :clap: Inspiration
 
@@ -121,6 +121,7 @@ getPosts() {
 * [Ahmed Bouchefra, Setting Up Angular Server-Side Rendering (SSR)](https://blog.jscrambler.com/setting-up-angular-server-side-rendering-ssr/)
 * [Angular 8/9 SEO – Set Dynamic Page Title and Meta Tags in Universal App](https://www.positronx.io/angular-seo-set-dynamic-page-title-meta-tags-in-universal-app/)
 * [Firebase Quickstart Guide](https://firebaseopensource.com/projects/angular/angularfire2/)
+ [](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
 
 ## :camera: Screenshots
 
@@ -141,9 +142,6 @@ getPosts() {
 * Blog Posts List page
   ![Example screenshot](./img/blog-pc.png)
   ![Example screenshot](./img/blog-create-pc.png)
-
-* Webpack Bundle Analyzer 21 november 2019
-  ![Example screenshot](./img/bundle_analyzer.png)
 
 ## :envelope: Contact
 

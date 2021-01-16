@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, Output, EventEmitter } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { AuthService } from "../../services/auth.service";
@@ -8,7 +8,7 @@ import { AuthService } from "../../services/auth.service";
   templateUrl: "./top-navbar.component.html",
   styleUrls: ["./top-navbar.component.scss"],
 })
-export class TopNavbarComponent implements OnInit {
+export class TopNavbarComponent {
   displayLogin = false; /* initially displayLogin is false*/
   loggedIn = false;
 
@@ -32,8 +32,6 @@ export class TopNavbarComponent implements OnInit {
       }
     });
   }
-
-  ngOnInit() {}
 
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();

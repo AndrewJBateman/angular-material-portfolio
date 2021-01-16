@@ -21,7 +21,9 @@ const appRoutes: Routes = [
   {
     path: "projects/:projectId",
     loadChildren: () =>
-      import("./projects/project-detail/project-detail.module").then((mod) => mod.ProjectDetailModule),
+      import("./projects/project-detail/project-detail.module").then(
+        (mod) => mod.ProjectDetailModule
+      ),
   },
   {
     path: "skills",
@@ -36,7 +38,9 @@ const appRoutes: Routes = [
   {
     path: "dashboard",
     loadChildren: () =>
-      import("./posts/post-dashboard/post-dashboard.module").then((mod) => mod.PostDashboardModule),
+      import("./posts/post-dashboard/post-dashboard.module").then(
+        (mod) => mod.PostDashboardModule
+      ),
   },
   {
     path: "contact",

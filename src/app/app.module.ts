@@ -16,13 +16,10 @@ import { SharedModule } from "./shared/shared.module";
 import { MatSidenavModule } from "@angular/material/sidenav";
 
 import { ServiceWorkerModule } from "@angular/service-worker";
-import { ProjectDetailModule } from './projects/project-detail/project-detail.module';
+import { ProjectDetailModule } from "./projects/project-detail/project-detail.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     AngularFireModule.initializeApp(environment.firebase, "angular-portfolio"), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
@@ -36,7 +33,7 @@ import { ProjectDetailModule } from './projects/project-detail/project-detail.mo
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
     }),
-    ProjectDetailModule
+    ProjectDetailModule,
   ],
   exports: [],
   providers: [],

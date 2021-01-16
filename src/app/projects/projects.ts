@@ -151,17 +151,20 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
       {
         src: "../assets/images/newsApp/newsapp-news.jpg",
         page: "News Page",
-        content: `News articles listed using a list of ion-cards. Clicking on a card will redirect the user to a news-detail page. Ion-select is used to show a list of news sources as a drop-down action-sheet with cancel button.`,
+        content:
+          "News articles listed using a list of ion-cards. Clicking on a card will redirect the user to a news-detail page. Ion-select is used to show a list of news sources as a drop-down action-sheet with cancel button.",
       },
       {
         src: "../assets/images/newsApp/newsapp-newsdetail.jpg",
         page: "News Detail Page",
-        content: `News article detail is shown using an ion-card with an author credit below (if there is one). Footer has links to the original article and an option to save as a Favourite.`,
+        content:
+          "News article detail is shown using an ion-card with an author credit below (if there is one). Footer has links to the original article and an option to save as a Favourite.",
       },
       {
         src: "../assets/images/newsApp/newsapp-categories.jpg",
         page: "Categories Page",
-        content: `Ion-segment used to show categories in a scrollable horizontal menu: Sport, Busines, Health, Technology, Science, General, Entertainment. Shows time as '... ago'. Title has news source and text removed using a custom Angular pipe as I show this information in the top toolbar.`,
+        content:
+          "Ion-segment used to show categories in a scrollable horizontal menu: Sport, Busines, Health, Technology, Science, General, Entertainment. Shows time as '... ago'. Title has news source and text removed using a custom Angular pipe as I show this information in the top toolbar.",
       },
       {
         src: "../assets/images/newsApp/newsapp-favourites.jpg",
@@ -172,27 +175,32 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
       {
         src: "../assets/images/newsApp/newsapp-about.jpg",
         page: "About Page/Side-Menu",
-        content: `Includes popover with links to Author Website, Github Repo and a Contact Page. Unsplash image with author credit also shown. Images above include Side navigation menu, where the user can navigate to another page (menu closes automatically) or change language/dark-mode settings.`,
+        content:
+          "Includes popover with links to Author Website, Github Repo and a Contact Page. Unsplash image with author credit also shown. Images above include Side navigation menu, where the user can navigate to another page (menu closes automatically) or change language/dark-mode settings.",
       },
       {
         src: "../assets/images/newsApp/newsapp-dark.jpg",
         page: "Dark Mode Pages/Menu",
-        content: `Dark mode can be activated via a toggle switch on the side menu. This setting is set in device storage until the user toggles it, however the ngInit lifecycle clears storage content so it will default to light mode.`,
+        content:
+          "Dark mode can be activated via a toggle switch on the side menu. This setting is set in device storage until the user toggles it, however the ngInit lifecycle clears storage content so it will default to light mode.",
       },
       {
         src: "../assets/images/newsApp/newsapp-android1.jpg",
         page: "Android Studio Device Connected 1",
-        content: `An Android build file was created and opened in Android Studio on a Windows 10 Home PC connected via USB to a Realme 5 Pro mobile running Android v10.`,
+        content:
+          "An Android build file was created and opened in Android Studio on a Windows 10 Home PC connected via USB to a Realme 5 Pro mobile running Android v10.",
       },
       {
         src: "../assets/images/newsApp/newsapp-android2.jpg",
         page: "Android Studio Device Connected 2",
-        content: `Light and dark mode toggling and saving favourite articles in storage worked. Articles displayed and clicking on one routed to a news detail page.`,
+        content:
+          "Light and dark mode toggling and saving favourite articles in storage worked. Articles displayed and clicking on one routed to a news detail page.",
       },
       {
         src: "../assets/images/newsApp/newsapp-android3.jpg",
         page: "Android Studio Device Connected 3",
-        content: `The top right icon opens a modal to delete all favourites. The bottom tab and side menus provide navigation between pages and the icons change colour when page active.`,
+        content:
+          "The top right icon opens a modal to delete all favourites. The bottom tab and side menus provide navigation between pages and the icons change colour when page active.",
       },
     ],
     github: "https://github.com/AndrewJBateman/ionic-angular-news-app",
@@ -215,7 +223,8 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
       {
         src: "../assets/images/worldApp/worldapp-countries.jpg",
         page: "Countries Page",
-        content: `Displays a list of countries, displaying country flag, title, capital and region, for 'all' and 5 region sub-categories. Clicking on a country list item will show the country detail as well as a fab icon link to Google Maps. Country searchbar to search by country name.`,
+        content:
+          "Displays a list of countries, displaying country flag, title, capital and region, for 'all' and 5 region sub-categories. Clicking on a country list item will show the country detail as well as a fab icon link to Google Maps. Country searchbar to search by country name.",
       },
       {
         src: "../assets/images/worldApp/worldapp-mapmenu.jpg",
@@ -226,12 +235,14 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
       {
         src: "../assets/images/worldApp/worldapp-oceans.jpg",
         page: "Oceans Page",
-        content: `Displays an ion-card for each ocean using data from a local json file and an *ngFor loop. Header toolbar includes popover with links to Wikipedia articles on each ocean that opens in a separate browser. It was decided not to add 'favourites functionality' as there are only 5 oceans and they are easy to find.`,
+        content:
+          "Displays an ion-card for each ocean using data from a local json file and an *ngFor loop. Header toolbar includes popover with links to Wikipedia articles on each ocean that opens in a separate browser. It was decided not to add 'favourites functionality' as there are only 5 oceans and they are easy to find.",
       },
       {
         src: "../assets/images/worldApp/worldapp-about.jpg",
         page: "About Page",
-        content: `Displays an Unsplash image with an author credit and short information about the app with links to the country information and Google Maps APIs used. Header includes a popover with working links that open externally to author Website, Github Repo & a Contact Form on the author's website.`,
+        content:
+          "Displays an Unsplash image with an author credit and short information about the app with links to the country information and Google Maps APIs used. Header includes a popover with working links that open externally to author Website, Github Repo & a Contact Form on the author's website.",
       },
     ],
     github: "https://github.com/AndrewJBateman/ionic-angular-world-data",
@@ -297,13 +308,14 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
       {
         src: "../assets/images/covidApp/home.jpg",
         page: "Home Page",
-        content: "Global data for Covid-19 cases is fetched from a coronatracker API, set in local storage then displayed on a Mat-card. The Apapi API is used to determine the user country and Covid-19 cases are also shown from that country. Global Covid-19 cases are shown on a chart using the angular-google-charts module.",
+        content:
+          "Global data for Covid-19 cases is fetched from a coronatracker API, set in local storage then displayed on a Mat-card. The Apapi API is used to determine the user country and Covid-19 cases are also shown from that country. Global Covid-19 cases are shown on a chart using the angular-google-charts module.",
       },
       {
         src: "../assets/images/covidApp/country-list.jpg",
         page: "Country List Page",
         content:
-        `Covid data is fetched from local storage and displayed using a Mat-Table of countries. Flags are obtained from the Countryflags API and data is formatted using the Angular number pipe. The HTML includes *ngIf loops to allow for inaccuracies/anomolies in the data, e.g. 'MS Zaandam' is listed the API as a country but is actually a cruise ship from the Netherlands.`,
+          "Covid data is fetched from local storage and displayed using a Mat-Table of countries. Flags are obtained from the Countryflags API and data is formatted using the Angular number pipe. The HTML includes *ngIf loops to allow for inaccuracies/anomolies in the data, e.g. 'MS Zaandam' is listed the API as a country but is actually a cruise ship from the Netherlands.",
       },
       {
         src: "../assets/images/covidApp/news.jpg",
@@ -327,31 +339,31 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
         src: "../assets/images/covidApp/contact.jpg",
         page: "Contact Page",
         content:
-          "A centrally-positioned Mat-card displays author details from the Github API - no API access key is required for this. The card footer has buttons that open contact/home pages from the author's own website in separate windows."
+          "A centrally-positioned Mat-card displays author details from the Github API - no API access key is required for this. The card footer has buttons that open contact/home pages from the author's own website in separate windows.",
       },
     ],
     github: "https://github.com/AndrewJBateman/angular-data-charts",
     url: "https://angular-data-charts.web.app",
   },
   // app 7
-//   {
-//     title: "MEEN Stack Articles",
-//     summary:
-//       `This app displays articles in a grid of Bootstrap cards. It uses the MongoDB, Express, Embedded Javascript Templating (EJS) & Node.js (MEEN) stack to perform Create, Read, Update and Delete (CRUD) operations. EJS is a templating language that uses javascript to produce the HTML template markup. I wanted to see if using EJS resulted in quicker rendering.
+  //   {
+  //     title: "MEEN Stack Articles",
+  //     summary:
+  //       `This app displays articles in a grid of Bootstrap cards. It uses the MongoDB, Express, Embedded Javascript Templating (EJS) & Node.js (MEEN) stack to perform Create, Read, Update and Delete (CRUD) operations. EJS is a templating language that uses javascript to produce the HTML template markup. I wanted to see if using EJS resulted in quicker rendering.
 
-// Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model.
+  // Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model.
 
-// Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use svg icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Article model so articles are shown in separate categories, e.g. 'Engineering', 'IT' etc.`,
-//     images: [
-//       {
-//         src: "../assets/images/elecInfo.jpg",
-//         page: "Home Page",
-//         content: "",
-//       },
-//     ],
-//     github: "https://github.com/AndrewJBateman/meen-stack-articles",
-//     url: "",
-//   },
+  // Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use svg icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Article model so articles are shown in separate categories, e.g. 'Engineering', 'IT' etc.`,
+  //     images: [
+  //       {
+  //         src: "../assets/images/elecInfo.jpg",
+  //         page: "Home Page",
+  //         content: "",
+  //       },
+  //     ],
+  //     github: "https://github.com/AndrewJBateman/meen-stack-articles",
+  //     url: "",
+  //   },
   // app 8
   /* {
     title: 'Angular Unsplash API',
@@ -422,7 +434,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
 		github: 'https://github.com/AndrewJBateman/angular-api-gouvfr',
 		url: ''
   }, */
-    // app 13
+  // app 13
   /* {
     title: 'Python Django IcelandAPI',
     summary: 'Displays volcano data from an Iceland API',
@@ -436,7 +448,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
 		github: '',
 		url: ''
   }, */
-      // app 14
+  // app 14
   /* {
     title: 'Python Django SomethingData',
     summary: '',
@@ -450,7 +462,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
 		github: '',
 		url: ''
   }, */
-        // app 15
+  // app 15
   /* {
     title: 'GCP App Engine something',
     summary: '',
@@ -464,7 +476,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
 		github: '',
 		url: ''
   }, */
-        // app 16
+  // app 16
   /* {
     title: 'GCP Covid database something',
     summary: '',

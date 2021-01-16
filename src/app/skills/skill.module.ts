@@ -1,5 +1,5 @@
 export class Skill {
-	area: string;
-	title: string;
-	content: string;
+  area: string;
+  title: string;
+  content: string;
 }

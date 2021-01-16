@@ -1,9 +1,9 @@
-import { Url } from 'url';
+import { Url } from "url";
 
 export class Post {
-	id?: string;
-	imageby?: string;
-	content: string;
+  id?: string;
+  imageby?: string;
+  content: string;
   image: string;
   imageLink?: string;
   published: any;

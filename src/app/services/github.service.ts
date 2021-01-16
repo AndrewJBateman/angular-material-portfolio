@@ -13,8 +13,7 @@ export class GithubService {
 
   getUserProfile(): Observable<User> {
     const githubUrl = "https://api.github.com/users/andrewjbateman";
-    return this.http
-      .get<User>(githubUrl).pipe(
+    return this.http.get<User>(githubUrl).pipe(
       map((data: User) => data),
       catchError((err) => {
         return throwError(

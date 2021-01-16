@@ -25,6 +25,8 @@ export class PostDetailComponent implements OnInit {
     this.getPost();
   }
 
+  isLoggedIn = this.auth.authState;
+
   getPost() {
     const id = this.route.snapshot.paramMap.get("id");
     return this.postService

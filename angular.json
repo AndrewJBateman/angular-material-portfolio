@@ -120,9 +120,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -144,9 +142,7 @@
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "bundleDependencies": false,
-            "externalDependencies": [
-              "@firebase/firestore"
-            ]
+            "externalDependencies": ["@firebase/firestore"]
           },
           "configurations": {
             "production": {
@@ -181,9 +177,7 @@
           "options": {
             "browserTarget": "angular-material-portfolio:build:production",
             "serverTarget": "angular-material-portfolio:server:production",
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {}
