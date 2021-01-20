@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from "@angular/core";
+import { MatSlideToggleChange } from "@angular/material/slide-toggle";
 import { Router } from "@angular/router";
 
 import { AuthService } from "../../services/auth.service";
@@ -12,7 +13,10 @@ export class TopNavbarComponent {
   displayLogin = false; /* initially displayLogin is false*/
   loggedIn = false;
 
-  @Output() public sidenavToggle = new EventEmitter();
+  @Output()
+  readonly darkModeSwitched = new EventEmitter();
+
+  @Output() public sidenavToggle = new EventEmitter<boolean>();
 
   constructor(public auth: AuthService, router: Router) {
     /*  displayLogin only true when on blog list or blog detail page
@@ -37,4 +41,7 @@ export class TopNavbarComponent {
     this.sidenavToggle.emit();
   };
 
+  onDarkModeSwitched({ checked }: MatSlideToggleChange): void {
+    return this.darkModeSwitched.emit(checked);
+  }
 }

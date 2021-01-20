@@ -9,6 +9,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { AppRoutingModule } from "../app-routing.module";
 @NgModule({
   declarations: [TopNavbarComponent, SideNavbarComponent],
@@ -20,6 +21,7 @@ import { AppRoutingModule } from "../app-routing.module";
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,
+    MatSlideToggleModule,
     FlexLayoutModule,
   ],
   exports: [TopNavbarComponent, SideNavbarComponent],

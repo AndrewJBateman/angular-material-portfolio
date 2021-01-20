@@ -17,6 +17,10 @@
   >
     <h2>AB</h2>
   </a>
+  <span>
+    <mat-slide-toggle (change)="onDarkModeSwitched($event)"><mat-icon class=""> dark_mode </mat-icon
+      ></mat-slide-toggle>
+  </span>
 
   <div *ngIf="displayLogin">
     <div *ngIf="auth.authState as user; else showLogin">

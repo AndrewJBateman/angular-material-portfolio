@@ -7,7 +7,7 @@ import { Meta } from "@angular/platform-browser";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
-  private isDark = true;
+  private isDark = false;
 
   @HostBinding("class")
   get themeMode(): string | boolean {
@@ -29,5 +29,9 @@ export class AppComponent implements OnInit {
       { name: "date", content: "2019-04-16", scheme: "YYYY-MM-DD" },
       { charset: "UTF-8" },
     ]);
+  }
+
+  switchMode(isDarkMode: boolean): void {
+    this.isDark = isDarkMode;
   }
 }

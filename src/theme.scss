@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$ngMatPort-app-primary: mat-palette($mat-blue-grey, 700);
+$ngMatPort-app-accent:  mat-palette($mat-blue, 900);
+$ngMatPort-app-warn:    mat-palette($mat-red);
+$ngMatPort-app-warn:    mat-palette($mat-red);
+
+$ngMatPort-app-theme: mat-light-theme($ngMatPort-app-primary, $ngMatPort-app-accent, $ngMatPort-app-warn);
+$ngMatPort-app-theme-dark: mat-dark-theme($ngMatPort-app-primary, $ngMatPort-app-accent, $ngMatPort-app-warn);
+
+@include angular-material-theme($ngMatPort-app-theme-dark);
