@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, HostBinding, OnInit } from "@angular/core";
 import { Meta } from "@angular/platform-browser";
 
 @Component({
@@ -7,9 +7,16 @@ import { Meta } from "@angular/platform-browser";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
+  private isDark = true;
+
+  @HostBinding("class")
+  get themeMode(): string | boolean {
+    return this.isDark ? "theme-dark" : "theme-light";
+  }
+
   constructor(private metaTagService: Meta) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.metaTagService.addTags([
       {
         name: "keywords",

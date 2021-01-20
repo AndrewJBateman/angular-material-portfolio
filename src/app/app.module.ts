@@ -14,6 +14,7 @@ import { HomeComponent } from "./home/home.component";
 import { NavModule } from "./nav/nav.module";
 import { SharedModule } from "./shared/shared.module";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { ProjectDetailModule } from "./projects/project-detail/project-detail.module";
@@ -30,6 +31,7 @@ import { ProjectDetailModule } from "./projects/project-detail/project-detail.mo
     NavModule,
     SharedModule,
     MatSidenavModule,
+    MatSlideToggleModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
     }),

@@ -17,7 +17,7 @@ export class TopNavbarComponent {
   constructor(public auth: AuthService, router: Router) {
     /*  displayLogin only true when on blog list or blog detail page
         as we don't need to login anywhere else*/
-    router.events.subscribe((event) => {
+    router.events.subscribe(() => {
       if (router.url.includes("/blog")) {
         this.displayLogin = true;
       } else if (
@@ -33,7 +33,8 @@ export class TopNavbarComponent {
     });
   }
 
-  public onToggleSidenav = () => {
+  public onToggleSidenav = (): void => {
     this.sidenavToggle.emit();
   };
+
 }

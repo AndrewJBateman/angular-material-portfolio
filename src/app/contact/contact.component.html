@@ -37,7 +37,7 @@
             *ngIf="name.invalid && name.touched"
             class="alert alert-danger"
           >
-            There is an error somewhere
+            There is an error with the input data
           </mat-error>
         </mat-form-field>
 
@@ -108,8 +108,8 @@
     <div *ngIf="success" class="success-div">
       <mat-card class="thanks-card">
         <mat-card-header class="center">
-          <mat-card-title style="color: green">
-            <mat-icon class="success-icon"> check_circle </mat-icon>
+          <mat-card-title>
+            <mat-icon class="success-icon" style="color: green"> check_circle </mat-icon>
             Success!
           </mat-card-title>
         </mat-card-header>

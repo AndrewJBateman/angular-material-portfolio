@@ -16,6 +16,6 @@
     "es6": true
   },
   "rules": {
-    "quotes": ["error", "double"]
+    "quotes": ["warn", "double"]
   }
 }

@@ -1,7 +1,37 @@
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "~@angular/material/theming";
 
-// common horiz line
+$ngMatPort-app-primary: mat-palette($mat-blue-grey, 700);
+$ngMatPort-app-accent: mat-palette($mat-blue, 900);
+$ngMatPort-app-warn: mat-palette($mat-red);
+
+$ngMatPort-app-theme: mat-light-theme(
+  $ngMatPort-app-primary,
+  $ngMatPort-app-accent,
+  $ngMatPort-app-warn
+);
+$ngMatPort-app-theme-dark: mat-dark-theme(
+  $ngMatPort-app-primary,
+  $ngMatPort-app-accent,
+  $ngMatPort-app-warn
+);
+
+// @include angular-material-theme($ngMatPort-app-theme-dark);
+@include mat-core();
+
+html, body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 .horiz-line {
   margin: 8px;
-  border: 2px solid #0D47A1;
+  border: 2px solid #68a1e2;
+}
+
+.theme-dark {
+  @include angular-material-theme($ngMatPort-app-theme-dark);
+}
+
+.theme-light {
+  @include angular-material-theme($ngMatPort-app-theme);
 }

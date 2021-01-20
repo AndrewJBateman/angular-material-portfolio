@@ -9,7 +9,6 @@
   }
 
   .top-card-title {
-    color: #0d47a1;
     font-size: 24px;
     margin-bottom: 0 !important;
   }
@@ -18,9 +17,14 @@
     margin-top: 8px !important;
   }
 
-  .card-blue-text {
-    color: #0d47a1;
+  .card-bold-text {
     font-size: 14px;
+    font-weight: 700;
+  }
+
+  .card-link-text {
+    font-size: 14px;
+    font-style: italic;
   }
 
   // Bottom subject area cards
@@ -33,10 +37,7 @@
     }
 
     .area-card-title {
-      color: #0d47a1;
       font-size: 20px;
-      text-decoration: underline;
-      text-decoration-color: #0d47a1;
     }
 
     .card-content {
