@@ -105,9 +105,9 @@ getPosts() {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed - SSR version has errors
-* Lighthouse PC score: Performance 80%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
-* To-Do: Finish darkmode - icon colors. Improve lighthouse performance score. Replace mat-icons? Other todos - see Sections Info above. scss embed styles. Move images to firebase storage. Fix `ng test`.
+* Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
+* Lighthouse PC score: Performance 82%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
+* To-Do: Finish darkmode - icon colors. Improve lighthouse performance score: remove unused css and redo small images. Replace mat-icons? Other todos - see Sections Info above. scss embed styles. Move images to firebase storage. Fix `ng test`.
 
 ## :clap: Inspiration
 
@@ -121,7 +121,8 @@ getPosts() {
 * [Ahmed Bouchefra, Setting Up Angular Server-Side Rendering (SSR)](https://blog.jscrambler.com/setting-up-angular-server-side-rendering-ssr/)
 * [Angular 8/9 SEO – Set Dynamic Page Title and Meta Tags in Universal App](https://www.positronx.io/angular-seo-set-dynamic-page-title-meta-tags-in-universal-app/)
 * [Firebase Quickstart Guide](https://firebaseopensource.com/projects/angular/angularfire2/)
- [](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
+* [Andrei Voicu: Using ESLint and Prettier with VScode in an Angular Project](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
+ * [Taonpm: compression](https://developer.aliyun.com/mirror/npm/package/compression)
 
 ## :camera: Screenshots
 

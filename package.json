@@ -31,6 +31,7 @@
     "@angular/router": "~11.0.9",
     "@angular/service-worker": "~11.0.9",
     "@nguniversal/express-engine": "^11.0.1",
+    "compression": "^1.7.4",
     "dayjs": "^1.10.3",
     "express": "^4.17.1",
     "firebase": "^8.2.2",

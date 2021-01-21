@@ -30,7 +30,7 @@ export class ContactComponent implements OnInit {
     private metaTagService: Meta
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.fillForm();
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({
@@ -61,19 +61,22 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  get name() {
+  get name(): any {
     return this.contactForm.get("name");
   }
 
-  get email() {
+  get email(): any {
     return this.contactForm.get("email");
   }
 
-  get message() {
-    return this.contactForm.get("message");
+  get message(): any {
+    const returnMessage = this.contactForm.get("message");
+    // console.log("returnMessage", returnMessage);
+    // return this.contactForm.get("message");
+    return returnMessage;
   }
 
-  async submitHandler() {
+  async submitHandler(): Promise<void> {
     this.loading = true;
 
     const formValue = this.contactForm.value;
@@ -89,15 +92,15 @@ export class ContactComponent implements OnInit {
     this.loading = false;
   }
 
-  goHome() {
+  goHome(): any {
     this.router.navigate(["/"]);
   }
 
-  goBack() {
+  goBack(): any {
     this.location.back();
   }
 
-  sendAnother() {
+  sendAnother(): any {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = "reload";
     this.router.navigate(["/contact"]);
