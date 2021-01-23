@@ -32,9 +32,14 @@ export const SKILLS: Skill[] = [
   },
   {
     area: "prog",
+    title: "Software Testing",
+    content: "Jasmine, Karma",
+  },
+  {
+    area: "prog",
     title: "Cloud Computing",
     content:
-      "GCP application deployment & monitoring, Cloud Console, command-line interface, GCP Firebase",
+      "Google Cloud Certified Associate Cloud Engineer: GCP application deployment & monitoring, Cloud Console, command-line interface, GCP Firebase",
   },
   {
     area: "eng",

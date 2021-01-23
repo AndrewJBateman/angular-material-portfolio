@@ -52,12 +52,14 @@
     <mat-card>
       <mat-card-content>
         <p class="area-card-title">
-          <img
+          <!-- <img
             [src]="area.imgPath"
             [alt]="area.title"
             mat-card-avatar
             class="area-card-avatar"
-          />
+          /> -->
+          <!-- <app-svg-angular></app-svg-angular> -->
+          <img src="assets/svgs/{{area.svgPath}}.svg" style="width: 40px; height: 40px;">
           {{ area.title }}
         </p>
         <p class="card-content">{{ area.content }}</p>

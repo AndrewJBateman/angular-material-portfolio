@@ -18,9 +18,10 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { ProjectDetailModule } from "./projects/project-detail/project-detail.module";
+import { SvgAngularComponent } from './components/svg-angular/svg-angular.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, SvgAngularComponent],
   imports: [
     AngularFireModule.initializeApp(environment.firebase, "angular-portfolio"), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

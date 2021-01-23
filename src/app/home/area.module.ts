@@ -1,5 +1,5 @@
 export class Area {
   title: string;
-  imgPath: string;
+  svgPath: string;
   content: string;
 }
