@@ -21,6 +21,12 @@ It is estimated to take 1800 hours and it took me all of 2017 working part-time.
       "After exploring the MERN, MEVN, PEVN & PEAN stacks I decided to focus on MEAN. I had already used MongoDB with Mongoose and the Heroku mLab database service, Express middleware and Node.js for the backend part of the FCC Full-Stack Certificate. I also had knowledge of Angular as a front-end and communicating with the backend using the Angular HttpClient service. I completed a 12.5-hour MEAN-Stack Udemy course as well as other Youtube tutorials, learning the details of making full CRUD operations at the front-end to Create, Read, Update and Delete data in a backend database. User authorization and error-handling was also covered. I also completed a 36.5-hour Udemy course on Node.js, REST APIs and GraphQL APIs. See Projects page.",
   },
   {
+    title: "Google Cloud",
+    svgPath: "gcp",
+    content:
+      "For many years I have used the Google Cloud Platform (GCP). This website is hosted on Google Cloud Firestore and the Technical Posts blog & images are stored in the firestore NoQSL serverless document database. After a lot of study and practise with GCP I gained Google Associate Cloud Engineer Certification in november 2020",
+  },
+  {
     title: "Databases",
     svgPath: "base",
     content:

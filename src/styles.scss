@@ -2,7 +2,7 @@
 
 $ngMatPort-app-primary: mat-palette($mat-blue-grey, 700);
 $ngMatPort-app-accent: mat-palette($mat-blue, 900);
-$ngMatPort-app-warn: mat-palette($mat-red);
+$ngMatPort-app-warn: mat-palette($mat-orange, 800);
 
 $ngMatPort-app-theme: mat-light-theme(
   $ngMatPort-app-primary,

@@ -18,8 +18,13 @@
     <h2>AB</h2>
   </a>
   <span>
-    <mat-slide-toggle (change)="onDarkModeSwitched($event)" aria-label="dark mode toggle button"><mat-icon class=""> dark_mode </mat-icon
-      ></mat-slide-toggle>
+    <mat-slide-toggle
+      (change)="onDarkModeSwitched($event)"
+      aria-label="dark mode toggle button"
+      color="warn"
+      style="margin: 0 4px;"
+      ><app-svg-dark style="margin-left: 4px;"></app-svg-dark
+    ></mat-slide-toggle>
   </span>
 
   <div *ngIf="displayLogin">
@@ -29,7 +34,8 @@
         routerLink="/dashboard"
         aria-label="edit blog post button"
       >
-        <mat-icon>edit</mat-icon>
+        <!-- <mat-icon>edit</mat-icon> -->
+        <app-svg-menu></app-svg-menu>
       </button>
       <button
         mat-button

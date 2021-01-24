@@ -11,11 +11,11 @@
     <mat-card-content>
       <p class="top-card-title">
         <img
-          src="../../assets/images/me-outside.jpg"
+          src="assets/images/me-outside.jpg"
           alt="profile photo"
-          mat-card-avatar
-          class="top-card-avatar"
-        />Andrew Bateman
+          style="width: 40px; height: 40px;"
+        />
+        Andrew Bateman
       </p>
       <p class="top-card-content">
         <span *ngIf="user" class="card-bold-text">{{ bio }}</span
@@ -46,19 +46,11 @@
     </mat-card-content>
   </mat-card>
   <hr class="horiz-line" />
-
   <!--Bottom section: mat-card for each area with data-binding from area.module.ts-->
   <div *ngFor="let area of areas">
     <mat-card>
       <mat-card-content>
         <p class="area-card-title">
-          <!-- <img
-            [src]="area.imgPath"
-            [alt]="area.title"
-            mat-card-avatar
-            class="area-card-avatar"
-          /> -->
-          <!-- <app-svg-angular></app-svg-angular> -->
           <img src="assets/svgs/{{area.svgPath}}.svg" style="width: 40px; height: 40px;">
           {{ area.title }}
         </p>

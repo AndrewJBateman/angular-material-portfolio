@@ -1,4 +1,4 @@
-<mat-nav-list>
+<mat-nav-list style="background-color: #455A64">
   <a
     mat-list-item
     class="side-nav-link"
@@ -6,7 +6,8 @@
     routerLinkActive="side-link-active"
     (click)="onSidenavClose()"
   >
-    <mat-icon>home</mat-icon>AB
+    <app-svg-home></app-svg-home>
+    AB
   </a>
   <a
     mat-list-item
@@ -15,7 +16,8 @@
     routerLinkActive="side-link-active"
     (click)="onSidenavClose()"
   >
-    <mat-icon>work</mat-icon>Projects
+    <app-svg-work></app-svg-work>
+    Projects
   </a>
   <a
     mat-list-item
@@ -24,7 +26,8 @@
     routerLinkActive="side-link-active"
     (click)="onSidenavClose()"
   >
-    <mat-icon>computer</mat-icon>Skills
+    <app-svg-project></app-svg-project>
+    Skills
   </a>
   <a
     mat-list-item
@@ -33,7 +36,8 @@
     routerLinkActive="side-link-active"
     (click)="onSidenavClose()"
   >
-    <mat-icon>email</mat-icon>Contact
+    <app-svg-mail></app-svg-mail>
+    Contact
   </a>
   <a
     mat-list-item
@@ -51,7 +55,8 @@
     target="_blank"
     rel="noreferrer"
   >
-    <mat-icon>open_in_new</mat-icon>LinkedIn
+    <app-svg-linkedin></app-svg-linkedin>
+    LinkedIn
   </a>
   <a
     mat-list-item

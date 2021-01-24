@@ -1,16 +1,21 @@
+mat-nav-list-item {
+  color:#fff;
+}
+
 mat-icon {
   padding: 0 8px;
 }
 
 .side-nav-link {
-  color: #455a64;
+  color: #fff !important;
 }
 
 .side-link-social {
   padding: 16px 0;
+  color: #fff !important;
 }
 
 .side-link-active {
-  color: #008000;
+  color: rgb(173, 211, 255) !important;
   font-weight: bold;
 }

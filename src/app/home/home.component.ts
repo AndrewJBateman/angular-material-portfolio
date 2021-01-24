@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { GithubService } from "./../services/github.service";
+import { User } from "../models/user";
 
 import { AREAS } from "./areas";
 
@@ -12,7 +13,7 @@ import { AREAS } from "./areas";
 export class HomeComponent implements OnInit {
   title = "Home";
   areas = AREAS;
-  user: any;
+  user: User;
   bio: string;
   repos: number;
   lastUpdated: string;
