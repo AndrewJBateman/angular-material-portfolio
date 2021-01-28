@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
 
 import { User } from "../models/user";
-import { catchError, map, tap } from "rxjs/operators";
+import { catchError, map } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
@@ -14,7 +14,6 @@ export class GithubService {
   getUserProfile(): Observable<User> {
     const githubUrl = "https://api.github.com/users/andrewjbateman";
     return this.http.get<User>(githubUrl).pipe(
-      tap((data: User) => console.log("data", data)),
       map((data: User) => data),
       catchError((err) => {
         return throwError(
@@ -22,6 +21,8 @@ export class GithubService {
           err
         );
       })
+      // tap((data: User) => console.log("github data", data)),
+      // pluck("public_repos")
     );
   }
 }

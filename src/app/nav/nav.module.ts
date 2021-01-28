@@ -9,10 +9,13 @@ import { SvgHomeComponent } from "../components/svg-home/svg-home.component";
 import { SvgWorkComponent } from "../components/svg-work/svg-work.component";
 import { SvgProjectComponent } from "../components/svg-project/svg-project.component";
 import { SvgMailComponent } from "../components/svg-mail/svg-mail.component";
+import { SvgGithubComponent } from "../components/svg-github/svg-github.component";
 import { SvgLinkedinComponent } from "../components/svg-linkedin/svg-linkedin.component";
+import { SvgDownloadComponent } from "../components/svg-download/svg-download.component";
+import { SvgBlogComponent } from "../components/svg-blog/svg-blog.component";
+import { SvgCloseComponent } from "../components/svg-close/svg-close.component";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppRoutingModule } from "../app-routing.module";
 
 // Shared/Material modules
@@ -33,7 +36,11 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     SvgWorkComponent,
     SvgProjectComponent,
     SvgMailComponent,
+    SvgGithubComponent,
     SvgLinkedinComponent,
+    SvgDownloadComponent,
+    SvgBlogComponent,
+    SvgCloseComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -44,7 +51,6 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     MatSidenavModule,
     MatButtonModule,
     MatSlideToggleModule,
-    FlexLayoutModule,
   ],
   exports: [TopNavbarComponent, SideNavbarComponent, SvgDarkComponent],
 })

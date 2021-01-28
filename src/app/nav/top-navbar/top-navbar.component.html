@@ -1,12 +1,12 @@
 <!-- Top Navbar sticks to top of screen -->
 <mat-toolbar color="primary" sticky>
   <button
-    mat-icon-button
     (click)="onToggleSidenav()"
+    style="background-color: transparent; border: none;"
     fxHide.gt-sm
     aria-label="drop-down menu button"
   >
-    <mat-icon>menu</mat-icon>
+    <app-svg-menu></app-svg-menu>
   </button>
   <a
     class="top-nav-link"

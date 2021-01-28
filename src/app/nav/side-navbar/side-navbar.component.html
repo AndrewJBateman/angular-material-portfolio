@@ -1,4 +1,4 @@
-<mat-nav-list style="background-color: #455A64">
+<mat-nav-list style="background-color: #455a64 !important">
   <a
     mat-list-item
     class="side-nav-link"
@@ -46,7 +46,8 @@
     target="_blank"
     rel="noreferrer"
   >
-    <mat-icon>open_in_new</mat-icon>Github
+    <app-svg-github></app-svg-github>
+    Github
   </a>
   <a
     mat-list-item
@@ -61,11 +62,13 @@
   <a
     mat-list-item
     class="nav-link-social"
+    style="color: #fff;"
     href="../../../assets/images/AndrewBatemanResume.pdf"
     target="_blank"
     rel="noreferrer"
   >
-    <mat-icon>cloud_download</mat-icon> CV
+    <app-svg-download></app-svg-download>
+    CV
   </a>
   <a
     mat-list-item
@@ -74,9 +77,11 @@
     routerLinkActive="side-link-active"
     (click)="onSidenavClose()"
   >
-    <mat-icon>description</mat-icon>Blog
+    <app-svg-blog></app-svg-blog>
+    Blog
   </a>
-  <a mat-list-item (click)="onSidenavClose()">
-    <mat-icon>close</mat-icon>Close
+  <a mat-list-item class="side-nav-link" (click)="onSidenavClose()">
+    <app-svg-close></app-svg-close>
+    Close
   </a>
 </mat-nav-list>

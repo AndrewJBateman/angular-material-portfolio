@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { SharedModule } from "./../shared/shared.module";
+import { MatIconModule } from "@angular/material/icon";
 
 import { PostListComponent } from "./post-list/post-list.component";
 import { PostService } from "../services/post.service";
@@ -26,7 +27,7 @@ const routes: Routes = [
   },
 ];
 @NgModule({
-  imports: [SharedModule, RouterModule.forChild(routes)],
+  imports: [SharedModule, MatIconModule, RouterModule.forChild(routes)],
   declarations: [PostListComponent],
   providers: [PostService],
 })

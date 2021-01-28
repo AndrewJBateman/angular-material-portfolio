@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
   user: User;
   bio: string;
   repos: number;
-  lastUpdated: string;
 
   constructor(
     private githubService: GithubService,
@@ -29,7 +28,6 @@ export class HomeComponent implements OnInit {
       this.user = user;
       this.bio = this.user.bio;
       this.repos = this.user.public_repos;
-      this.lastUpdated = this.user.updated_at;
     });
   }
 

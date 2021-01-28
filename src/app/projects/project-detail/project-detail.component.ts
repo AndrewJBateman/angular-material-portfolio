@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
+import { Project } from "../project.module";
 
 import { PROJECTS } from "../projects";
 
@@ -9,17 +10,17 @@ import { PROJECTS } from "../projects";
   styleUrls: ["./project-detail.component.scss"],
 })
 export class ProjectDetailComponent implements OnInit {
-  project: any;
+  project: Project;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.project = PROJECTS[+params.get("projectId")];
     });
   }
 
-  returnToList() {
+  returnToList(): void {
     this.router.navigate(["/projects"]);
   }
 }
