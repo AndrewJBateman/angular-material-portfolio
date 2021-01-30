@@ -6,11 +6,6 @@
 </head>
 
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
-  <h2>
-    <mat-icon color="accent" class="title-icon"> description </mat-icon
-    >Technical Posts
-  </h2>
-  <hr class="horiz-line" />
   <div fxLayout="row wrap">
     <div
       *ngFor="let post of posts | async"

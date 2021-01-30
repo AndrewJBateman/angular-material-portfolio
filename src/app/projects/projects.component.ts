@@ -9,13 +9,13 @@ import { PROJECTS } from "./projects";
   styleUrls: ["./projects.component.scss"],
 })
 export class ProjectsComponent implements OnInit {
-  title = "Recent projects";
+  title = "Projects";
 
   projects = PROJECTS;
 
   constructor(private titleService: Title, private metaTagService: Meta) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({
       name: "projects",

@@ -1,7 +1,6 @@
 import "zone.js/dist/zone-node";
 
 import { ngExpressEngine } from "@nguniversal/express-engine";
-// const compression = require("compression");
 import * as compression from "compression";
 import * as express from "express";
 import { join } from "path";

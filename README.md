@@ -106,9 +106,9 @@ getPosts() {
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
-* Lighthouse PC score: Performance 82%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
+* Lighthouse PC score: Performance 83%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
 * To-Do: Finish darkmode - icon colors. Improve lighthouse performance score: remove unused css and redo small images.
-* To-Do: Replace mat-icons in Projects, Skills etc pages
+* To-Do: Replace mat-icons in Skills, NotFound etc pages
 *  Other todos - see Sections Info above. scss embed styles. Move images to firebase storage. Fix `ng test`.
 
 ## :clap: Inspiration

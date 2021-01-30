@@ -6,11 +6,6 @@
 </head>
 
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
-  <h2 class="main-title">
-    <mat-icon color="accent" class="project-title-icon"> work </mat-icon>Recent
-    Projects
-  </h2>
-  <hr class="horiz-line" />
   <div fxLayout="row wrap">
     <div
       *ngFor="let project of projects; index as projectId"
@@ -44,7 +39,7 @@
             color="accent"
             aria-label="See more detail"
           >
-            <mat-icon>more_horiz</mat-icon>
+            <app-svg-more></app-svg-more>
           </a>
           <div fxFlex></div>
           <a
@@ -55,7 +50,7 @@
             color="primary"
             aria-label="link to GitHub page"
           >
-            <mat-icon>code</mat-icon>
+            <app-svg-code></app-svg-code>
           </a>
           <div fxFlex></div>
           <a
@@ -69,7 +64,7 @@
             class="project-open-browser"
             aria-label="link to app web page"
           >
-            <mat-icon style="color: white">open_in_browser</mat-icon>
+            <app-svg-open></app-svg-open>
           </a>
         </mat-card-actions>
       </mat-card>

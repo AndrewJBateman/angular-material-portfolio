@@ -6,7 +6,7 @@ import { SideNavbarComponent } from "./side-navbar/side-navbar.component";
 import { SvgDarkComponent } from "../components/svg-dark/svg-dark.component";
 import { SvgMenuComponent } from "../components/svg-menu/svg-menu.component";
 import { SvgHomeComponent } from "../components/svg-home/svg-home.component";
-import { SvgWorkComponent } from "../components/svg-work/svg-work.component";
+// import { SvgWorkComponent } from "../components/svg-work/svg-work.component";
 import { SvgProjectComponent } from "../components/svg-project/svg-project.component";
 import { SvgMailComponent } from "../components/svg-mail/svg-mail.component";
 import { SvgGithubComponent } from "../components/svg-github/svg-github.component";
@@ -26,6 +26,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 
+import { SvgWorkModule } from "../components/svg-work/svg-work.module";
+
 @NgModule({
   declarations: [
     TopNavbarComponent,
@@ -33,7 +35,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     SvgDarkComponent,
     SvgMenuComponent,
     SvgHomeComponent,
-    SvgWorkComponent,
+    // SvgWorkComponent,
     SvgProjectComponent,
     SvgMailComponent,
     SvgGithubComponent,
@@ -51,6 +53,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     MatSidenavModule,
     MatButtonModule,
     MatSlideToggleModule,
+    SvgWorkModule,
   ],
   exports: [TopNavbarComponent, SideNavbarComponent, SvgDarkComponent],
 })

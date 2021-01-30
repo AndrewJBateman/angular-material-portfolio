@@ -28,7 +28,7 @@ export const SKILLS: Skill[] = [
     area: "prog",
     title: "Software Tools/Services",
     content:
-      "Visual Studio Code, npm, GitHub, Heroku, AWS Cloud 9, Postman, Atom, Glitch",
+      "Visual Studio Code, IntelliJ IDEA, npm, GitHub, Heroku, AWS Cloud 9, Postman, Atom, Glitch",
   },
   {
     area: "prog",

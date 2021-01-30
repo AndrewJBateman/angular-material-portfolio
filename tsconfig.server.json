@@ -3,7 +3,8 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app-server",
     "types": ["node"],
-    "target": "es2016"
+    "target": "es2016",
+    "experimentalDecorators": true
   },
   "files": ["src/main.server.ts", "server.ts"],
   "angularCompilerOptions": {

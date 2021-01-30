@@ -47,7 +47,7 @@
     <mat-card>
       <mat-card-content>
         <p class="area-card-title">
-          <img src="assets/svgs/{{area.svgPath}}.svg" style="width: 40px; height: 40px;">
+          <img [src]="area.svgPath" style="width: 40px; height: 40px;" alt="icon of {{area.title}}">
           {{ area.title }}
         </p>
         <p class="card-content">{{ area.content }}</p>

@@ -1,10 +1,4 @@
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
-  <h2>
-    <mat-icon color="accent" class="title-icon">
-      computer
-    </mat-icon>Technical Skills
-  </h2>
-  <hr class="horiz-line">
   <div fxLayout="row wrap">
     <div
       *ngFor="let skill of skills"
@@ -13,15 +7,17 @@
       fxFlex.sm="50"
       fxFlex.xs="100"
       fxLayout="column"
-      style="padding: 10px;"
+      style="padding: 10px"
     >
       <!--mat-card for each skill with data-binding from skills.ts-->
       <mat-card>
         <mat-card-content>
-          <p [ngClass] = "{
-            'card-eng' : skill.area === 'eng',
-            'card-prog' : skill.area === 'prog'
-          }">
+          <p
+            [ngClass]="{
+              'card-eng': skill.area === 'eng',
+              'card-prog': skill.area === 'prog'
+            }"
+          >
             {{ skill.title }}
           </p>
           <p class="content-style">{{ skill.content }}</p>
