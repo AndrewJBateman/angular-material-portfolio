@@ -34,37 +34,36 @@
         </mat-card-content>
         <mat-card-actions>
           <a
-            mat-flat-button
+            mat-raised-button
+            class="card-button-small"
             [routerLink]="['/projects', projectId]"
             color="accent"
-            aria-label="See more detail"
-          >
-            <app-svg-more></app-svg-more>
+            aria-label="See details"
+          ><span>Details</span>
           </a>
           <div fxFlex></div>
           <a
-            mat-flat-button
+            mat-raised-button
+            class="card-button-small"
             [href]="project.github"
             target="_blank"
             rel="noreferrer"
             color="primary"
             aria-label="link to GitHub page"
-          >
-            <app-svg-code></app-svg-code>
+          ><span>Github</span>
           </a>
           <div fxFlex></div>
           <a
-            mat-flat-button
+            mat-raised-button
             [disabled]="
               project.title == 'This Website' || project.title == 'News App'
             "
             [href]="project.url"
             target="_blank"
             rel="noreferrer"
-            class="project-open-browser"
+            class="card-button-app"
             aria-label="link to app web page"
-          >
-            <app-svg-open></app-svg-open>
+          ><span>Open App</span>
           </a>
         </mat-card-actions>
       </mat-card>

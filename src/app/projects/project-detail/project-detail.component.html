@@ -30,37 +30,36 @@
           </p>
         </mat-card-content>
 
-        <mat-card-actions align="end">
+        <mat-card-actions>
           <button
-            mat-flat-button
+            mat-raised-button
+            class="card-button-small"
             color="accent"
             (click)="returnToList()"
             aria-label="Back button"
-          >
-            <mat-icon>arrow_back</mat-icon>
+          ><span>Back</span>
           </button>
           <div fxFlex></div>
           <a
-            mat-flat-button
+            mat-raised-button
+            class="card-button-small"
             [href]="project.github"
             target="_blank"
             rel="noreferrer"
             color="primary"
             aria-label="link to GitHub page"
-          >
-            <mat-icon>code</mat-icon>
+          ><span>Github</span>
           </a>
           <div fxFlex></div>
           <a
-            mat-flat-button
+            mat-raised-button
             [disabled]="project.title == 'This Website'"
             [href]="project.url"
             target="_blank"
             rel="noreferrer"
-            class="project-open-browser"
+            class="card-button-app"
             aria-label="link to app web page"
-          >
-            <mat-icon style="color: white">open_in_browser</mat-icon>
+          ><span>Open App</span>
           </a>
         </mat-card-actions>
       </mat-card>

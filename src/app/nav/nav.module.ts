@@ -6,7 +6,6 @@ import { SideNavbarComponent } from "./side-navbar/side-navbar.component";
 import { SvgDarkComponent } from "../components/svg-dark/svg-dark.component";
 import { SvgMenuComponent } from "../components/svg-menu/svg-menu.component";
 import { SvgHomeComponent } from "../components/svg-home/svg-home.component";
-// import { SvgWorkComponent } from "../components/svg-work/svg-work.component";
 import { SvgProjectComponent } from "../components/svg-project/svg-project.component";
 import { SvgMailComponent } from "../components/svg-mail/svg-mail.component";
 import { SvgGithubComponent } from "../components/svg-github/svg-github.component";
@@ -35,7 +34,6 @@ import { SvgWorkModule } from "../components/svg-work/svg-work.module";
     SvgDarkComponent,
     SvgMenuComponent,
     SvgHomeComponent,
-    // SvgWorkComponent,
     SvgProjectComponent,
     SvgMailComponent,
     SvgGithubComponent,

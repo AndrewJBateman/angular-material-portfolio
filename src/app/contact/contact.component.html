@@ -16,8 +16,7 @@
   <div class="item-1" fxFlex="40%">
     <img class="img-thumbnail" src="{{ imagePath }}" alt="{{ imageAlt }}" />
     <h2 class="contact-heading" [hidden]="success">
-      <mat-icon color="accent" class="title-icon"> message </mat-icon>Send me a
-      message...
+      Send me a message...
     </h2>
   </div>
   <div class="item-2" fxFlex="60%" fxFlexOrder="2">
@@ -77,7 +76,7 @@
             (click)="goBack()"
             aria-label="Back button"
           >
-            <mat-icon>arrow_back</mat-icon>
+            <!-- <mat-icon>arrow_back</mat-icon> -->
           </button>
           <div fxFlex></div>
           <button
@@ -87,7 +86,7 @@
             color="primary"
             aria-label="Send button"
           >
-            <mat-icon>email</mat-icon>
+            <!-- <mat-icon>email</mat-icon> -->
           </button>
           <div fxFlex></div>
           <div [hidden]="">
@@ -98,7 +97,7 @@
               color="warn"
               aria-label="cancel button"
             >
-              <mat-icon>clear</mat-icon>
+              <!-- <mat-icon>clear</mat-icon> -->
             </a>
           </div>
         </mat-card-actions>
@@ -109,7 +108,7 @@
       <mat-card class="thanks-card">
         <mat-card-header class="center">
           <mat-card-title>
-            <mat-icon class="success-icon" style="color: green"> check_circle </mat-icon>
+            <!-- <mat-icon class="success-icon" style="color: green"> check_circle </mat-icon> -->
             Success!
           </mat-card-title>
         </mat-card-header>
@@ -117,7 +116,7 @@
         <mat-card-content>
           <p class="success-message">Your message has been sent.</p>
           <button mat-button (click)="goHome()" class="home-another-button">
-            <mat-icon class="contact-sent-icon"> home </mat-icon>
+            <!-- <mat-icon class="contact-sent-icon"> home </mat-icon> -->
             <p>Go to Homepage</p>
           </button>
 
@@ -126,7 +125,7 @@
             (click)="sendAnother()"
             class="home-another-button"
           >
-            <mat-icon class="contact-sent-icon">email</mat-icon>
+            <!-- <mat-icon class="contact-sent-icon">email</mat-icon> -->
             <p>Send another</p>
           </button>
         </mat-card-content>

@@ -12,12 +12,7 @@
       <!--mat-card for each skill with data-binding from skills.ts-->
       <mat-card>
         <mat-card-content>
-          <p
-            [ngClass]="{
-              'card-eng': skill.area === 'eng',
-              'card-prog': skill.area === 'prog'
-            }"
-          >
+          <p class="card-text">
             {{ skill.title }}
           </p>
           <p class="content-style">{{ skill.content }}</p>

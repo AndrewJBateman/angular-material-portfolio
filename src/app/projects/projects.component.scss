@@ -24,6 +24,15 @@
   overflow: auto;
 }
 
-.project-open-browser {
+.card-button-small {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.card-button-app {
   background-color: green;
+  color: white;
+  font-size: 12px;
+  line-height: 20px;
+  margin-right: 0;
 }

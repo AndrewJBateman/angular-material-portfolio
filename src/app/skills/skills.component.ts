@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
 import { SKILLS } from "./skills";
@@ -15,7 +15,7 @@ export class SkillsComponent {
 
   constructor(private titleService: Title, private metaTagService: Meta) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({
       name: "skills",
