@@ -21,7 +21,7 @@ export class PostListComponent implements OnInit {
     private metaTagService: Meta // public auth: AuthService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.posts = this.postService.getPosts();
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({

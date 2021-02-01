@@ -2,9 +2,11 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { SharedModule } from "./../shared/shared.module";
-import { MatIconModule } from "@angular/material/icon";
 
 import { PostListComponent } from "./post-list/post-list.component";
+import { SvgCalenderComponent } from "../components/svg-calender/svg-calender.component";
+import { SvgFolderComponent } from "../components/svg-folder/svg-folder.component";
+import { SvgTimerComponent } from "../components/svg-timer/svg-timer.component";
 import { PostService } from "../services/post.service";
 const routes: Routes = [
   {
@@ -27,8 +29,13 @@ const routes: Routes = [
   },
 ];
 @NgModule({
-  imports: [SharedModule, MatIconModule, RouterModule.forChild(routes)],
-  declarations: [PostListComponent],
+  imports: [SharedModule, RouterModule.forChild(routes)],
+  declarations: [
+    PostListComponent,
+    SvgCalenderComponent,
+    SvgFolderComponent,
+    SvgTimerComponent,
+  ],
   providers: [PostService],
 })
 export class PostsModule {}

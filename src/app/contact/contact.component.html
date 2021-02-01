@@ -15,9 +15,7 @@
 >
   <div class="item-1" fxFlex="40%">
     <img class="img-thumbnail" src="{{ imagePath }}" alt="{{ imageAlt }}" />
-    <h2 class="contact-heading" [hidden]="success">
-      Send me a message...
-    </h2>
+    <h2 class="contact-heading" [hidden]="success">Send me a message...</h2>
   </div>
   <div class="item-2" fxFlex="60%" fxFlexOrder="2">
     <form
@@ -68,7 +66,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-card-actions align="end">
+        <mat-card-actions>
           <button
             mat-flat-button
             [disabled]="contactForm.valid && loading"
@@ -76,7 +74,7 @@
             (click)="goBack()"
             aria-label="Back button"
           >
-            <!-- <mat-icon>arrow_back</mat-icon> -->
+            <span>Back</span>
           </button>
           <div fxFlex></div>
           <button
@@ -86,7 +84,7 @@
             color="primary"
             aria-label="Send button"
           >
-            <!-- <mat-icon>email</mat-icon> -->
+            <span>Send</span>
           </button>
           <div fxFlex></div>
           <div [hidden]="">
@@ -96,8 +94,7 @@
               [disabled]="!contactForm.touched"
               color="warn"
               aria-label="cancel button"
-            >
-              <!-- <mat-icon>clear</mat-icon> -->
+              ><span>Cancel</span>
             </a>
           </div>
         </mat-card-actions>
@@ -106,9 +103,8 @@
 
     <div *ngIf="success" class="success-div">
       <mat-card class="thanks-card">
-        <mat-card-header class="center">
-          <mat-card-title>
-            <!-- <mat-icon class="success-icon" style="color: green"> check_circle </mat-icon> -->
+        <mat-card-header>
+          <mat-card-title style="color: green;">
             Success!
           </mat-card-title>
         </mat-card-header>
@@ -116,7 +112,6 @@
         <mat-card-content>
           <p class="success-message">Your message has been sent.</p>
           <button mat-button (click)="goHome()" class="home-another-button">
-            <!-- <mat-icon class="contact-sent-icon"> home </mat-icon> -->
             <p>Go to Homepage</p>
           </button>
 
@@ -125,8 +120,7 @@
             (click)="sendAnother()"
             class="home-another-button"
           >
-            <!-- <mat-icon class="contact-sent-icon">email</mat-icon> -->
-            <p>Send another</p>
+            <p>Send Another</p>
           </button>
         </mat-card-content>
       </mat-card>

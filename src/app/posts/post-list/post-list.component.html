@@ -35,13 +35,13 @@
           </p>
           <p>
             <span class="small-text">
-              <mat-icon color="accent">calendar_today</mat-icon>
+              <app-svg-calender></app-svg-calender>
               {{ post.published.toDate() | dateConvert }}
               <div fxFlex></div>
-              <mat-icon color="accent">folder_open</mat-icon>
+              <app-svg-folder></app-svg-folder>
               {{ post.category }}
               <div fxFlex></div>
-              <mat-icon color="accent">timer</mat-icon>
+              <app-svg-timer></app-svg-timer>
               {{ post.content | readTime }} minutes
             </span>
           </p>
