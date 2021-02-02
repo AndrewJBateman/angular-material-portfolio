@@ -14,10 +14,6 @@ mat-card-actions {
   margin: auto;
 }
 
-.mat-icon {
-  vertical-align: middle;
-}
-
 .credit-date-text {
   font-size: 12px;
   padding: 0;
@@ -54,6 +50,10 @@ mat-card-header {
   background-size: cover;
 }
 
+.post-button-back {
+  background-color: #0D47A1;
+  color: white;
+}
 .post-button-delete {
   color: orangered;
 }
