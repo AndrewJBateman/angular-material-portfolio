@@ -1,6 +1,6 @@
 # :zap: Portfolio Angular Material
 
-* Angular & Angular Material used to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
+* Angular Server Side Rendered app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users. Dark-mode toggle. Lazy-loading modules.
 
 **\* Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -50,8 +50,6 @@
   Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page.
 **OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
-
-**Future Updates** Dark mode toggle
 
 ## :signal_strength: Technologies
 
@@ -106,9 +104,8 @@ getPosts() {
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
-* Lighthouse PC score: Performance 83%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
+* Lighthouse PC score: Performance 89%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
-* To-Do change to pluck method in Github service
 *  Other todos - see Sections Info above. scss embed styles. Move images to firebase storage. Fix `ng test`.
 
 ## :clap: Inspiration

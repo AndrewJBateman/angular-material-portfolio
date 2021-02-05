@@ -13,30 +13,35 @@
         <img
           src="assets/images/me-outside.jpg"
           alt="profile photo"
-          style="width: 40px; height: 40px;"
+          style="width: 40px; height: 40px"
         />
         Andrew Bateman
       </p>
       <p class="top-card-content">
-        <span *ngIf="user" class="card-bold-text">Full-Stack Developement | Engineering | Cloud | IT. </span
+        <span class="card-bold-text"
+          >Full-Stack Developement | Engineering | Cloud | IT. </span
         >I have been studying programming part-time for a number of years,
         completing lots of online courses & tutorials from FreeCodeCamp,
         Treehouse, Udemy, Coursera and Youtube etc. I also recently gained
         Google Associate Cloud Engineer Certification. I have
-        <span *ngIf="user" class="card-bold-text"> {{ repos }}</span>
-        repositories on Github with a mixture of my own projects and tutorial code.
+        <span *ngIf="repos" class="card-bold-text"> {{ repos }}</span>
+        repositories on Github with a mixture of my own projects and tutorial
+        code.
       </p>
-      <p class="card-content"
-        >Programming was not new to me as I previously worked for 20 years as an
+      <p class="card-content">
+        Programming was not new to me as I previously worked for 20 years as an
         Electronic/Electrical Engineer in the UK, Spain and finally in Norway
-        (including 2 years in Hammerfest, the Northermost town in the world). After this I returned to Spain to look after the family (including a
-        child with a rare disease called Landau Kleffner) & continue programming.
+        (including 2 years in Hammerfest, the Northermost town in the world).
+        After this I returned to Spain to look after the family (including a
+        child with a rare disease called Landau Kleffner) & continue
+        programming.
       </p>
-      <p class="card-content"
-        >There is more about my Programming, Engineering & IT below. The aim of
+      <p class="card-content">
+        There is more about my Programming, Engineering & IT below. The aim of
         this website is to show some of my projects and a little about me,
         without repeating what is in Linkedin. This website was built with an
-        Angular front-end and a Firebase backend - see Projects for more info. This site has a technical blog with categories: Programming Development,
+        Angular front-end and a Firebase backend - see Projects for more info.
+        This site has a technical blog with categories: Programming Development,
         IT and Engineering.
       </p>
     </mat-card-content>
@@ -47,7 +52,11 @@
     <mat-card>
       <mat-card-content>
         <p class="area-card-title">
-          <img [src]="area.svgPath" style="width: 40px; height: 40px;" alt="icon of {{area.title}}">
+          <img
+            [src]="area.svgPath"
+            style="width: 40px; height: 40px"
+            alt="icon of {{ area.title }}"
+          />
           {{ area.title }}
         </p>
         <p class="card-content">{{ area.content }}</p>

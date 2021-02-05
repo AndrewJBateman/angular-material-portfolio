@@ -1,10 +1,9 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { GithubService } from "./../services/github.service";
-import { User } from "../models/user";
 
 import { AREAS } from "./areas";
-import { Subscription } from "rxjs";
+import { Observable, Subscription } from "rxjs";
 
 @Component({
   selector: "app-home",
@@ -14,8 +13,6 @@ import { Subscription } from "rxjs";
 export class HomeComponent implements OnInit, OnDestroy {
   title = "Home";
   areas = AREAS;
-  user: User;
-  bio: string;
   repos: number;
   subscription: Subscription;
 
@@ -24,16 +21,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     private metaTagService: Meta,
     private titleService: Title
   ) {}
-
-  getRepoData(): void {
-    this.subscription = this.githubService
-      .getUserProfile()
-      .subscribe((user) => {
-        this.user = user;
-        this.bio = this.user.bio;
-        this.repos = this.user.public_repos;
-      });
-  }
 
   ngOnInit(): void {
     this.getRepoData();
@@ -44,7 +31,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
+  getRepoData(): any {
+    this.subscription = this.githubService
+      .getNumberRepos()
+      .subscribe((data) => {
+        this.repos = data;
+      });
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
-}
+  }
 }
