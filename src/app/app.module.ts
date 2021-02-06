@@ -18,7 +18,6 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 
 import { ServiceWorkerModule } from "@angular/service-worker";
-import { ProjectDetailModule } from "./projects/project-detail/project-detail.module";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -36,7 +35,6 @@ import { ProjectDetailModule } from "./projects/project-detail/project-detail.mo
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
     }),
-    ProjectDetailModule,
   ],
   exports: [],
   providers: [],

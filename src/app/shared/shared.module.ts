@@ -4,16 +4,9 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { RouterModule } from "@angular/router";
 
 import { MaterialModule } from "../material.module";
-import { PipesModule } from "../pipes/pipes.module";
 
 @NgModule({
-  exports: [
-    CommonModule,
-    FlexLayoutModule,
-    MaterialModule,
-    RouterModule,
-    PipesModule,
-  ],
+  exports: [CommonModule, FlexLayoutModule, MaterialModule, RouterModule],
   declarations: [],
 })
 export class SharedModule {

@@ -3,7 +3,7 @@ import { Meta, Title } from "@angular/platform-browser";
 import { GithubService } from "./../services/github.service";
 
 import { AREAS } from "./areas";
-import { Observable, Subscription } from "rxjs";
+import { Subscription } from "rxjs";
 
 @Component({
   selector: "app-home",
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-  getRepoData(): any {
+  getRepoData(): void {
     this.subscription = this.githubService
       .getNumberRepos()
       .subscribe((data) => {

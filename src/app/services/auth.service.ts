@@ -21,11 +21,11 @@ export class AuthService {
     return this.authenticated ? this.authState.uid : null;
   }
 
-  async login() {
+  async login(): Promise<void> {
     await this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 
-  async logout() {
+  async logout(): Promise<void> {
     await this.auth.signOut();
     localStorage.removeItem("user");
   }

@@ -8,6 +8,7 @@ import { SvgCameraModule } from "../../components/svg-camera/svg-camera.module";
 import { SvgTimerModule } from "../../components/svg-timer/svg-timer.module";
 
 import { SharedModule } from "../../shared/shared.module";
+import { PipesModule } from "./../../pipes/pipes.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
@@ -19,6 +20,7 @@ import { MatSelectModule } from "@angular/material/select";
     CommonModule,
     PostDetailRoutingModule,
     SharedModule,
+    PipesModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,

@@ -1,5 +1,8 @@
 <div class="root-container">
-  <app-top-navbar (darkModeSwitched)= "switchMode($event)" (sidenavToggle)="sidenav.toggle()"></app-top-navbar>
+  <app-top-navbar
+    (darkModeSwitched)="switchMode($event)"
+    (sidenavToggle)="sidenav.toggle()"
+  ></app-top-navbar>
   <mat-sidenav-container fxFlexFill>
     <mat-sidenav #sidenav fxHide.gt-md>
       <app-side-navbar (sidenavClose)="sidenav.close()"></app-side-navbar>

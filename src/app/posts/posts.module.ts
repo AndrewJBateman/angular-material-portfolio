@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { SharedModule } from "./../shared/shared.module";
+import { PipesModule } from "./../pipes/pipes.module";
 
 import { PostListComponent } from "./post-list/post-list.component";
 import { SvgCalenderComponent } from "../components/svg-calender/svg-calender.component";
@@ -31,6 +32,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     SharedModule,
+    PipesModule,
     RouterModule.forChild(routes),
     SvgFolderModule,
     SvgTimerModule,
