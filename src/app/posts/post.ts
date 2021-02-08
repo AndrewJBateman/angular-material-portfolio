@@ -1,12 +1,10 @@
-import { Url } from "url";
-
 export class Post {
   id?: string;
   imageby?: string;
   content: string;
   image: string;
   imageLink?: string;
-  published: any;
+  published: Date | string;
   subtitle: string;
   title: string;
   category: string;

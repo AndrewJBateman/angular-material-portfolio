@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --source-map",
     "build:stats": "ng build --stats-json",
     "analyze": "webpack-bundle-analyzer dist/angular-material-portfolio/browser/stats.json",
     "test": "ng test",

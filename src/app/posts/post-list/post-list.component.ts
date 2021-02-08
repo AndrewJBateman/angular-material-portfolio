@@ -29,4 +29,8 @@ export class PostListComponent implements OnInit {
       content: "andrewbateman.org",
     });
   }
+
+  trackByFn(index: number, post: Post): string {
+    return post.id;
+  }
 }

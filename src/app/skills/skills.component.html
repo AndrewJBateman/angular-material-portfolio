@@ -1,7 +1,7 @@
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
   <div fxLayout="row wrap">
     <div
-      *ngFor="let skill of skills"
+      *ngFor="let skill of skills; trackBy: trackByFn"
       fxFlex="25"
       fxFlex.md="33"
       fxFlex.sm="50"

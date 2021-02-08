@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
+import { Skill } from "./skill.module";
 
 import { SKILLS } from "./skills";
 
@@ -21,5 +22,9 @@ export class SkillsComponent {
       name: "skills",
       content: "andrewbateman.org",
     });
+  }
+
+  trackByFn(index: number, skill: Skill): number {
+    return skill.id;
   }
 }

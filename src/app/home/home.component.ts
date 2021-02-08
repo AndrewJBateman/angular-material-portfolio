@@ -1,20 +1,20 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { GithubService } from "./../services/github.service";
 
 import { AREAS } from "./areas";
-import { Subscription } from "rxjs";
+import { Observable } from "rxjs";
+import { Area } from "./area.module";
 
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.scss"],
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit {
   title = "Home";
   areas = AREAS;
-  repos: number;
-  subscription: Subscription;
+  repos: Observable<number>;
 
   constructor(
     private githubService: GithubService,
@@ -31,15 +31,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-  getRepoData(): void {
-    this.subscription = this.githubService
-      .getNumberRepos()
-      .subscribe((data) => {
-        this.repos = data;
-      });
+  getRepoData(): Observable<number> {
+    this.repos = this.githubService.getNumberRepos();
+    return this.repos;
   }
 
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+  trackByFn(index: number, area: Area): number {
+    return area.id; // unique id corresponding to the item
   }
 }

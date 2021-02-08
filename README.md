@@ -66,7 +66,7 @@
 ## :floppy_disk: Setup
 
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
-* Run `ng build --prod` to create build file with Ahead of Time (aot) compilation (enabled by default from Angular 9)
+* Run `npm run build` to create build file with Ahead of Time (aot) compilation (enabled by default from Angular 9) and with source map explorer
 * Run `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder
 * Run `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis
 * Run `npm run build:ssr` to create a build file with SSR
@@ -121,7 +121,8 @@ getPosts() {
 * [Angular 8/9 SEO – Set Dynamic Page Title and Meta Tags in Universal App](https://www.positronx.io/angular-seo-set-dynamic-page-title-meta-tags-in-universal-app/)
 * [Firebase Quickstart Guide](https://firebaseopensource.com/projects/angular/angularfire2/)
 * [Andrei Voicu: Using ESLint and Prettier with VScode in an Angular Project](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
- * [Taonpm: compression](https://developer.aliyun.com/mirror/npm/package/compression)
+* [Taonpm: compression](https://developer.aliyun.com/mirror/npm/package/compression)
+* [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
 
 ## :camera: Screenshots
 
