@@ -24,7 +24,7 @@
         completing lots of online courses & tutorials from FreeCodeCamp,
         Treehouse, Udemy, Coursera and Youtube etc. I also recently gained
         Google Associate Cloud Engineer Certification. I have
-        <span *ngIf="repos" class="card-bold-text"> {{ repos }}</span>
+        <span *ngIf="repos" class="card-bold-text"> {{ repos | async }}</span>
         repositories on Github with a mixture of my own projects and tutorial
         code.
       </p>

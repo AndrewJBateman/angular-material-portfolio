@@ -13,6 +13,7 @@ import { SvgLinkedinComponent } from "../components/svg-linkedin/svg-linkedin.co
 import { SvgDownloadComponent } from "../components/svg-download/svg-download.component";
 import { SvgBlogComponent } from "../components/svg-blog/svg-blog.component";
 import { SvgCloseComponent } from "../components/svg-close/svg-close.component";
+import { SvgCreateComponent } from "../components/svg-create/svg-create.component";
 
 import { SvgWorkModule } from "../components/svg-work/svg-work.module";
 
@@ -41,6 +42,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     SvgDownloadComponent,
     SvgBlogComponent,
     SvgCloseComponent,
+    SvgCreateComponent
   ],
   imports: [
     BrowserAnimationsModule,

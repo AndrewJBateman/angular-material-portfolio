@@ -19,12 +19,6 @@
 
 **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes from [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
 
-* xs 'screen and (max-width: 599px)'
-* sm 'screen and (min-width: 600px) and (max-width: 959px)'
-* md 'screen and (min-width: 960px) and (max-width: 1279px)'
-* lg 'screen and (min-width: 1280px) and (max-width: 1919px)'
-* xl 'screen and (min-width: 1920px) and (max-width: 5000px)'
-
 **Build file:** TODO: reduce bundle sizes. webpack-bundle-analyzer used to analyse webpack performance. Replaced moment package with day.js as it uses less memory.
 
 **Colors:** Add to styles scss to reduce repeated scss throughout app.
@@ -48,7 +42,7 @@
 
 **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts. Google Firebase auth service added so an authenticated user can log in to Create, Update and Delete posts.
   Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page.
-**OPTION:** It is not currently possible to Update the image in a post - consider adding this and using firestore photo sizing to get the right width to height ratio (16:9). Post create page - change size, button color? Add link to project detail page.
+
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
 ## :signal_strength: Technologies
@@ -75,24 +69,21 @@
 
 ## :computer: Code Examples
 
-* service function to fetch blog posts, from `post.service.ts` using the `AngularFirestoreCollection` database service. Note the use of the spread operator to return the data
+* extract from `github.service.ts` to get number of repos from a user from Github API using the rxjs pluck method 
 
 ```typescript
-getPosts() {
-  return this.postsCollection
-    .snapshotChanges()
-    .pipe(
-      map(
-        actions => {
-          return actions.map(a => {
-            const data = a.payload.doc.data() as Post;
-            const id = a.payload.doc.id;
-            return { id, ...data };
-          });
-        }
-      )
+getNumberRepos(): Observable<number> {
+    const githubUrl = "https://api.github.com/users/andrewjbateman";
+    return this.http.get<User>(githubUrl).pipe(
+      pluck("public_repos"),
+      catchError((err) => {
+        return throwError(
+          "There was a problem fetching data from Github API, error: ",
+          err
+        );
+      })
     );
-}
+  }
 ```
 
 ## :cool: Features
@@ -106,7 +97,7 @@ getPosts() {
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
 * Lighthouse PC score: Performance 89%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
-*  Other todos - see Sections Info above. scss embed styles. Move images to firebase storage. Fix `ng test`.
+* Other todos - see Sections Info above. scss embed styles. Move images to firebase storage. Fix `ng test`.
 
 ## :clap: Inspiration
 
