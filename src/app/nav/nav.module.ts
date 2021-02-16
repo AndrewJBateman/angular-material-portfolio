@@ -42,7 +42,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     SvgDownloadComponent,
     SvgBlogComponent,
     SvgCloseComponent,
-    SvgCreateComponent
+    SvgCreateComponent,
   ],
   imports: [
     BrowserAnimationsModule,

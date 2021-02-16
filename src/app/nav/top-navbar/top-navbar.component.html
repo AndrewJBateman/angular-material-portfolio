@@ -27,37 +27,6 @@
     ></mat-slide-toggle>
   </span>
 
-  <div *ngIf="displayLogin">
-    <div *ngIf="auth.authState as user; else showLogin">
-      <button
-        mat-icon-button
-        routerLink="/dashboard"
-        aria-label="edit blog post button"
-      >
-        <!-- <mat-icon>edit</mat-icon> -->
-        <app-svg-menu></app-svg-menu>
-      </button>
-      <button
-        mat-button
-        aria-label="Logout button"
-        (click)="auth.logout()"
-        aria-label="log-out button"
-      >
-        Logout
-      </button>
-    </div>
-    <ng-template #showLogin>
-      <button
-        mat-button
-        aria-label="Login button"
-        (click)="auth.login()"
-        aria-label="login button"
-      >
-        Login
-      </button>
-    </ng-template>
-  </div>
-
   <div fxFlex fxLayout fxLayoutAlign="end">
     <div fxHide.lt-md>
       <!-- The following menu items will be hidden on both SM and XS screen sizes -->
