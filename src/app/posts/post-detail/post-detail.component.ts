@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { PostService } from "../../services/post.service";
+import { PostService } from "../post.service";
 import { Post } from "../post";
 
 @Component({
@@ -19,15 +19,15 @@ export class PostDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getPost();
+    // this.getPost();
   }
 
-  getPost(): any {
-    const id = this.route.snapshot.paramMap.get("id");
-    return this.postService
-      .getPostData(id)
-      .subscribe((data) => (this.post = data));
-  }
+  // getPost(): any {
+  //   const id = this.route.snapshot.paramMap.get("id");
+  //   return this.postService
+  //     .getPostData(id)
+  //     .subscribe((data) => (this.post = data));
+  // }
 
   returnToList(): any {
     this.router.navigate(["/blog"]);

@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  firebase: {
-
+  config: {
+    projectId: "",
   },
 };

@@ -1,9 +1,9 @@
-import { Observable } from "rxjs";
+import { BehaviorSubject, Observable } from "rxjs";
 import { Component, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
 import { Post } from "../post";
-import { PostService } from "./../../services/post.service";
+import { PostService } from "../post.service";
 
 @Component({
   selector: "app-post-list",
@@ -13,7 +13,7 @@ import { PostService } from "./../../services/post.service";
 export class PostListComponent implements OnInit {
   title = "Read my posts";
 
-  posts: Observable<Post[]>;
+  posts: Observable<BehaviorSubject<Post[]>>;
 
   constructor(
     private postService: PostService,

@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { AngularFireLite } from "angularfire-lite";
 import { Routes, RouterModule } from "@angular/router";
 
 import { SharedModule } from "./../shared/shared.module";
@@ -8,7 +9,8 @@ import { PostListComponent } from "./post-list/post-list.component";
 import { SvgCalenderComponent } from "../components/svg-calender/svg-calender.component";
 import { SvgFolderModule } from "../components/svg-folder/svg-folder.module";
 import { SvgTimerModule } from "../components/svg-timer/svg-timer.module";
-import { PostService } from "../services/post.service";
+import { PostService } from "./post.service";
+import { environment } from "src/environments/environment";
 const routes: Routes = [
   {
     path: "",
@@ -21,19 +23,13 @@ const routes: Routes = [
         (mod) => mod.PostDetailModule
       ),
   },
-  {
-    path: "dashboard",
-    loadChildren: () =>
-      import("./post-dashboard/post-dashboard.module").then(
-        (mod) => mod.PostDashboardModule
-      ),
-  },
 ];
 @NgModule({
   imports: [
     SharedModule,
     PipesModule,
     RouterModule.forChild(routes),
+    AngularFireLite.forRoot(environment.config),
     SvgFolderModule,
     SvgTimerModule,
   ],

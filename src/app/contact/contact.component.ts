@@ -3,7 +3,7 @@ import { Meta, Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
 import { Location } from "@angular/common";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { AngularFirestore } from "@angular/fire/firestore";
+// import { AngularFirestore } from "@angular/fire/firestore";
 
 @Component({
   selector: "app-contact",
@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private afs: AngularFirestore,
+    // private afs: AngularFirestore,
     private router: Router,
     private location: Location,
     private titleService: Title,
@@ -81,12 +81,12 @@ export class ContactComponent implements OnInit {
 
     const formValue = this.contactForm.value;
 
-    try {
-      await this.afs.collection("contacts").add(formValue);
-      this.success = true;
-    } catch (err) {
-      console.log(err);
-    }
+    // try {
+    //   await this.afs.collection("contacts").add(formValue);
+    //   this.success = true;
+    // } catch (err) {
+    //   console.log(err);
+    // }
     this.imagePath = "/assets/images/thanks.jpg";
     this.imageAlt = "photo of a card with the word thanks on a wooden table";
     this.loading = false;

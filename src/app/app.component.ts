@@ -20,8 +20,7 @@ export class AppComponent implements OnInit {
     this.metaTagService.addTags([
       {
         name: "keywords",
-        content:
-          "Angular SEO Integration, blog CRUD, contact, projects, portfolio",
+        content: "Angular SEO Integration, posts, contact, projects, portfolio",
       },
       { name: "robots", content: "index" },
       { name: "author", content: "Andrew Bateman" },
