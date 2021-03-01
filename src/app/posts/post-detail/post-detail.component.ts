@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { PostService } from "../post.service";
 import { Post } from "../post";
+import { StorageService } from "../storage.service";
 
 @Component({
   selector: "app-post-detail",
@@ -15,19 +15,17 @@ export class PostDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private postService: PostService
+    private storageService: StorageService
   ) {}
 
   ngOnInit(): void {
-    // this.getPost();
+    this.getPost();
   }
 
-  // getPost(): any {
-  //   const id = this.route.snapshot.paramMap.get("id");
-  //   return this.postService
-  //     .getPostData(id)
-  //     .subscribe((data) => (this.post = data));
-  // }
+  getPost(): void {
+    const id = this.route.snapshot.paramMap.get("id");
+    this.post = this.storageService.get("storedPosts")[id];
+  }
 
   returnToList(): any {
     this.router.navigate(["/blog"]);

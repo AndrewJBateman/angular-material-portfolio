@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { AngularFireLiteFirestore } from "angularfire-lite";
+import { pipe } from "rxjs";
 import { BehaviorSubject, Observable } from "rxjs";
-import { map, tap } from "rxjs/operators";
+import { map, tap, toArray } from "rxjs/operators";
 
 import { Post } from "./post";
 
@@ -11,15 +12,11 @@ export class PostService {
     []
   );
   // postDoc: AngularFirestoreDocument<Post>;
-
   constructor(public firestore: AngularFireLiteFirestore) {}
 
   getPosts(): Observable<BehaviorSubject<Post[]>> {
     return this.firestore
       .read("posts")
-      .pipe(
-        tap((posts: BehaviorSubject<Post[]>) => console.log("posts: ", posts))
-      );
   }
 
   // getPosts() {
@@ -39,7 +36,9 @@ export class PostService {
   //   return this.postDoc.valueChanges();
   // }
 
-  // getPost(id: string) {
-  //   return this.firestore.read(`posts/${id}`);
-  // }
+  getPost(id: string) {
+    console.log("post: ", this.firestore.read(`posts[0]`));
+    return this.firestore
+      .read(`posts[0]`);
+  }
 }

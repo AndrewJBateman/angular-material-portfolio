@@ -9,6 +9,7 @@ import { SvgTimerModule } from "../../components/svg-timer/svg-timer.module";
 
 import { SharedModule } from "../../shared/shared.module";
 import { PipesModule } from "./../../pipes/pipes.module";
+import { StorageService } from "../storage.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
@@ -31,5 +32,6 @@ import { MatSelectModule } from "@angular/material/select";
     SvgTimerModule,
   ],
   exports: [MatFormFieldModule, MatInputModule, PostDetailComponent],
+  providers: [StorageService],
 })
 export class PostDetailModule {}

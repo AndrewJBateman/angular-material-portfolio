@@ -4,7 +4,7 @@ export class Post {
   content: string;
   image: string;
   imageLink?: string;
-  published: Date | string;
+  published: any;
   subtitle: string;
   title: string;
   category: string;

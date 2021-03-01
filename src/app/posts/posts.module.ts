@@ -10,7 +10,9 @@ import { SvgCalenderComponent } from "../components/svg-calender/svg-calender.co
 import { SvgFolderModule } from "../components/svg-folder/svg-folder.module";
 import { SvgTimerModule } from "../components/svg-timer/svg-timer.module";
 import { PostService } from "./post.service";
+import { StorageService } from "./storage.service";
 import { environment } from "src/environments/environment";
+
 const routes: Routes = [
   {
     path: "",
@@ -34,6 +36,6 @@ const routes: Routes = [
     SvgTimerModule,
   ],
   declarations: [PostListComponent, SvgCalenderComponent],
-  providers: [PostService],
+  providers: [PostService, StorageService],
 })
 export class PostsModule {}

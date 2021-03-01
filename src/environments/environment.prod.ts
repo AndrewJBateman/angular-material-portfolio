@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   config: {
-    projectId: "",
+    projectId: "angular-blog-14cef",
   },
 };

@@ -1,5 +1,0 @@
-Title: Process Control 
-Subtitle: using Angular
-Content:
-
-https://github.com/frangoteam/FUXA

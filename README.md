@@ -52,6 +52,7 @@
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
 * [Angular service worker v11](https://angular.io/guide/service-worker-intro) added
 * [Firebase v8](https://firebase.google.com) Cloud storage and authentication.
+* [angularfire-lite](https://www.npmjs.com/package/angularfire-lite) lightweight wrapper to use Firebase API with Angular.
 * [Reactive Extensions Library for Javascript rxjs v6](https://rxjs-dev.firebaseapp.com/)
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
 * [Webpack Bundle Analyser v4](https://www.npmjs.com/pawebpack-bundle-analyzerckage/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
@@ -90,7 +91,7 @@ getNumberRepos(): Observable<number> {
 
 * Services: All http calls are enclosed in their own service, in the services folder. There are 2 services:
 
-**posts:** to get posts from the Firestore backend database, **github:** [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display current state of my repository.
+**posts:** to get posts from the Firestore backend database, **github:** [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display number of my Git repositories.
 
 ## :clipboard: Status & To-Do List
 

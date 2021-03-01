@@ -34,6 +34,12 @@ const appRoutes: Routes = [
     path: "blog",
     loadChildren: () =>
       import("./posts/posts.module").then((mod) => mod.PostsModule),
+      
+  },
+  {
+    path: "blog/:id",
+    loadChildren: () =>
+      import("./posts/post-detail/post-detail.module").then((mod) => mod.PostDetailModule),
   },
   {
     path: "contact",
