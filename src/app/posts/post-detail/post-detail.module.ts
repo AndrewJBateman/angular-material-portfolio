@@ -6,6 +6,7 @@ import { PostDetailComponent } from "../post-detail/post-detail.component";
 import { SvgFolderModule } from "../../components/svg-folder/svg-folder.module";
 import { SvgCameraModule } from "../../components/svg-camera/svg-camera.module";
 import { SvgTimerModule } from "../../components/svg-timer/svg-timer.module";
+import { SvgCalenderModule } from "../../components/svg-calender/svg-calender.module";
 
 import { SharedModule } from "../../shared/shared.module";
 import { PipesModule } from "./../../pipes/pipes.module";
@@ -30,6 +31,7 @@ import { MatSelectModule } from "@angular/material/select";
     SvgFolderModule,
     SvgCameraModule,
     SvgTimerModule,
+    SvgCalenderModule
   ],
   exports: [MatFormFieldModule, MatInputModule, PostDetailComponent],
   providers: [StorageService],

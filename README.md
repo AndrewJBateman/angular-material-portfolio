@@ -41,7 +41,7 @@
 **Contact:** Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
 
 **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts.
-  Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page.
+  Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info.
 
 **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
@@ -93,16 +93,25 @@ getNumberRepos(): Observable<number> {
 
 **posts:** to get posts from the Firestore backend database, **github:** [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display number of my Git repositories.
 
+* Angularfire-lite used to reduce size of build files
+
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
 * Lighthouse PC score: Performance 89%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
+* To-Do: Fix dark-mode links (image credit etc.) to be in white not blue
+* To-Do: change contact method to email in server.js file
+* To-Do: Move Projects info. to Firebase and access using Firebase-Lite
+* To-Do: Move Skills info. to Firebase and access using Firebase-Lite
+* To-Do: Move Home info. to Firebase and access using Firebase-Lite
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
-* Other todos - see Sections Info above. scss embed styles. Move images to firebase storage. Fix `ng test`.
+* To-Do: see Sections Info above. scss embed styles.
+* To-Do: replace images in Blog firebase storage.
+* To-Do: Fix `ng test`.
+* To-Do: Fix SSR and deploy
 
 ## :clap: Inspiration
 
-* [Website by Julian Rubiano](http://www.julienrubiano.fr/)
 * [Website by Jaxon Wright](https://jaxonwright.com/)
 * [Medium article by Tomas Trajan: The complete guide to Angular Material Themes](https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1)
 * [Article by Paul Halliday: Angular: Performance Analysis with webpack Bundle Analyzer](https://alligator.io/angular/angular-webpack-bundle-analyzer/)
@@ -111,7 +120,6 @@ getNumberRepos(): Observable<number> {
 * [Okta, Holger Schmitz: What Is Angular Ivy and Why Is It Awesome?](https://developer.okta.com/blog/2020/02/12/angular-ivy)
 * [Ahmed Bouchefra, Setting Up Angular Server-Side Rendering (SSR)](https://blog.jscrambler.com/setting-up-angular-server-side-rendering-ssr/)
 * [Angular 8/9 SEO – Set Dynamic Page Title and Meta Tags in Universal App](https://www.positronx.io/angular-seo-set-dynamic-page-title-meta-tags-in-universal-app/)
-* [Firebase Quickstart Guide](https://firebaseopensource.com/projects/angular/angularfire2/)
 * [Andrei Voicu: Using ESLint and Prettier with VScode in an Angular Project](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
 * [Taonpm: compression](https://developer.aliyun.com/mirror/npm/package/compression)
 * [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)

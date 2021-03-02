@@ -21,11 +21,20 @@
       <mat-card-content>
         <p class="post-content">{{ post.content }}</p>
         <span>
-          <a class="credit-date-text" href="{{ post.imageLink }}" target="_blank" rel="noreferrer">
+          <a class="mat-card-text" href="{{ post.imageLink }}" target="_blank" rel="noreferrer">
             <app-svg-camera></app-svg-camera>
             {{ post.imageby }}
           </a>
           <div fxFlex></div>
+          <p class="credit-date-text">
+            <app-svg-folder></app-svg-folder>
+             {{ post.category }}
+          </p>
+          <div fxFlex></div>
+          <p class="credit-date-text">
+            <app-svg-calender></app-svg-calender>
+            {{ post.published.seconds * 1000 | date:'dd/MM/yyyy(EEE)' }}
+          </p>
         </span>
       </mat-card-content>
       <hr class="horiz-line" />

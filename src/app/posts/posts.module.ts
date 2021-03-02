@@ -6,7 +6,7 @@ import { SharedModule } from "./../shared/shared.module";
 import { PipesModule } from "./../pipes/pipes.module";
 
 import { PostListComponent } from "./post-list/post-list.component";
-import { SvgCalenderComponent } from "../components/svg-calender/svg-calender.component";
+import { SvgCalenderModule } from "../components/svg-calender/svg-calender.module";
 import { SvgFolderModule } from "../components/svg-folder/svg-folder.module";
 import { SvgTimerModule } from "../components/svg-timer/svg-timer.module";
 import { PostService } from "./post.service";
@@ -34,8 +34,9 @@ const routes: Routes = [
     AngularFireLite.forRoot(environment.config),
     SvgFolderModule,
     SvgTimerModule,
+    SvgCalenderModule
   ],
-  declarations: [PostListComponent, SvgCalenderComponent],
+  declarations: [PostListComponent],
   providers: [PostService, StorageService],
 })
 export class PostsModule {}
