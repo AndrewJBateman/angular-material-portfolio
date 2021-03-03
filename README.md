@@ -19,10 +19,6 @@
 
 **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes from [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
 
-**Build file:** TODO: reduce bundle sizes. webpack-bundle-analyzer used to analyse webpack performance. Replaced moment package with day.js as it uses less memory.
-
-**Colors:** Add to styles scss to reduce repeated scss throughout app.
-
 ## :books: Sections info
 
 **Navbars:** Top/side navbars with page routing and working links to my CV, Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
@@ -38,12 +34,10 @@
 
 **Skills:** fxFlex layout with cards to display project data using data-binding from an array of skills based on a Skill model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 
-**Contact:** Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
+**Contact:** Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend using angularfire-lite and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
 
 **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts.
-  Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info.
-
-**OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
+  Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info. **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 
 ## :signal_strength: Technologies
 
@@ -64,7 +58,7 @@
 * Run `npm run build` to create build file with Ahead of Time (aot) compilation (enabled by default from Angular 9) and with source map explorer
 * Run `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder
 * Run `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis
-* Run `npm run build:ssr` to create a build file with SSR
+* Run `npm run build:ssr` to create a build file with SSR. Add "defer" in inline css file in browser/index.html
 * Run `npm run serve:ssr` to see the SSR on localhost
 * Run `firebase deploy` to deploy build file to firebase hosting. (`ng deploy` does not work due to [errors with SSR](https://stackoverflow.com/questions/61913016/angular-npm-run-servessr-fails))
 
@@ -93,22 +87,18 @@ getNumberRepos(): Observable<number> {
 
 **posts:** to get posts from the Firestore backend database, **github:** [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display number of my Git repositories.
 
-* Angularfire-lite used to reduce size of build files
+* Angularfire-lite used to read blog posts and push user contact form data to firebase backend. This reduces size of Vendor build bundles
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
-* Lighthouse PC score: Performance 89%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
+* SSR Lighthouse PC score: Performance 94%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
 * To-Do: Fix dark-mode links (image credit etc.) to be in white not blue
-* To-Do: change contact method to email in server.js file
-* To-Do: Move Projects info. to Firebase and access using Firebase-Lite
-* To-Do: Move Skills info. to Firebase and access using Firebase-Lite
-* To-Do: Move Home info. to Firebase and access using Firebase-Lite
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
-* To-Do: see Sections Info above. scss embed styles.
-* To-Do: replace images in Blog firebase storage.
-* To-Do: Fix `ng test`.
-* To-Do: Fix SSR and deploy
+* To-Do: Blog: rewrite posts and replace images with lighter ones in firebase storage.
+* To-Do: Projects: add projects and reduce image sizes
+* To-Do: deploy with SSR (fix)
+* To-Do: **Colors:** Add to styles scss to reduce repeated scss throughout app.
 
 ## :clap: Inspiration
 
@@ -123,6 +113,7 @@ getNumberRepos(): Observable<number> {
 * [Andrei Voicu: Using ESLint and Prettier with VScode in an Angular Project](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
 * [Taonpm: compression](https://developer.aliyun.com/mirror/npm/package/compression)
 * [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
+* [Angular Data Pipe](https://angular.io/api/common/DatePipe)
 
 ## :camera: Screenshots
 

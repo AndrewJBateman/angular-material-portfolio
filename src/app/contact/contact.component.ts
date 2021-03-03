@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Testability } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
 import { Location } from "@angular/common";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-// import { AngularFirestore } from "@angular/fire/firestore";
+import { AngularFireLiteFirestore } from "angularfire-lite";
 
 @Component({
   selector: "app-contact",
@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    // private afs: AngularFirestore,
+    private afs: AngularFireLiteFirestore,
     private router: Router,
     private location: Location,
     private titleService: Title,
@@ -71,22 +71,19 @@ export class ContactComponent implements OnInit {
 
   get message(): any {
     const returnMessage = this.contactForm.get("message");
-    // console.log("returnMessage", returnMessage);
-    // return this.contactForm.get("message");
     return returnMessage;
   }
 
   async submitHandler(): Promise<void> {
     this.loading = true;
-
     const formValue = this.contactForm.value;
 
-    // try {
-    //   await this.afs.collection("contacts").add(formValue);
-    //   this.success = true;
-    // } catch (err) {
-    //   console.log(err);
-    // }
+    try {
+      this.afs.push("contacts", formValue)
+      this.success = true;
+    } catch (err) {
+      console.log(err);
+    }
     this.imagePath = "/assets/images/thanks.jpg";
     this.imageAlt = "photo of a card with the word thanks on a wooden table";
     this.loading = false;
