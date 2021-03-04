@@ -87,16 +87,13 @@ getNumberRepos(): Observable<number> {
 
 **posts:** to get posts from the Firestore backend database, **github:** [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display number of my Git repositories.
 
-* Angularfire-lite used to read blog posts and push user contact form data to firebase backend. This reduces size of Vendor build bundles
+* **Angularfire-lite** used to read blog posts and push user contact form data to firebase backend. This greatly reduces size of Vendor build bundles
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
 * SSR Lighthouse PC score: Performance 94%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
-* To-Do: Fix dark-mode links (image credit etc.) to be in white not blue
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
-* To-Do: Blog: rewrite posts and replace images with lighter ones in firebase storage.
-* To-Do: Projects: add projects and reduce image sizes
 * To-Do: deploy with SSR (fix)
 * To-Do: **Colors:** Add to styles scss to reduce repeated scss throughout app.
 
@@ -133,7 +130,6 @@ getNumberRepos(): Observable<number> {
 
 * Blog Posts List page
   ![Example screenshot](./img/blog-pc.png)
-  ![Example screenshot](./img/blog-create-pc.png)
 
 ## :envelope: Contact
 
