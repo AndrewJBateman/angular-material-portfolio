@@ -13,7 +13,7 @@ import { StorageService } from "../storage.service";
 })
 export class PostListComponent implements OnInit {
   title = "Read my posts";
-  posts: Observable<BehaviorSubject<Post[]>>;
+  posts$: Observable<BehaviorSubject<Post[]>>;
 
   constructor(
     private postService: PostService,
@@ -23,10 +23,11 @@ export class PostListComponent implements OnInit {
   ) {}
 
   ngOnInit():void {
-    this.posts = this.postService.getPosts();
-    this.posts.subscribe(val => {
+    this.posts$ = this.postService.getPosts();
+    this.posts$.subscribe(val => {
       this.storageService.set("storedPosts", val);
-    })
+    });
+   
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({
       name: "blog",

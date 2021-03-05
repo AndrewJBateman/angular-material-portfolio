@@ -64,7 +64,7 @@
 
 ## :computer: Code Examples
 
-* extract from `github.service.ts` to get number of repos from a user from Github API using the rxjs pluck method 
+* extract from `github.service.ts` to get number of repos from a user from Github API using the [rxjs pluck method](https://rxjs.dev/api/operators/pluck) (picks one of the nested properties of the Github repo emitted object.) Note, async used in template to take care of unsubscribing
 
 ```typescript
 getNumberRepos(): Observable<number> {
@@ -92,10 +92,12 @@ getNumberRepos(): Observable<number> {
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
-* SSR Lighthouse PC score: Performance 94%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
+* SSR Lighthouse PC score: Performance 98%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
 * To-Do: deploy with SSR (fix)
 * To-Do: **Colors:** Add to styles scss to reduce repeated scss throughout app.
+* To-Do: restructure post-detail to share post.module then remove post-detail module so posts list is not lost each time a post-detail page is shown.
+* To-Do: clear posts storage when browser shut down
 
 ## :clap: Inspiration
 

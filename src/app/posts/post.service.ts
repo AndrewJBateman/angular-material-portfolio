@@ -12,6 +12,7 @@ export class PostService {
   constructor(public firestore: AngularFireLiteFirestore) {}
 
   getPosts(): Observable<BehaviorSubject<Post[]>> {
+    console.log("post service running");
     return this.firestore
       .read("posts")
   }

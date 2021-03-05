@@ -14,7 +14,7 @@ import { Area } from "./area.module";
 export class HomeComponent implements OnInit {
   title = "Home";
   areas = AREAS;
-  repos: Observable<number>;
+  repos$: Observable<number>;
 
   constructor(
     private githubService: GithubService,
@@ -32,11 +32,11 @@ export class HomeComponent implements OnInit {
   }
 
   getRepoData(): Observable<number> {
-    this.repos = this.githubService.getNumberRepos();
-    return this.repos;
+    this.repos$ = this.githubService.getNumberRepos();
+    return this.repos$;
   }
 
   trackByFn(index: number, area: Area): number {
-    return area.id; // unique id corresponding to the item
+    return area.id;
   }
 }

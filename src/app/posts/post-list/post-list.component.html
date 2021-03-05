@@ -8,7 +8,7 @@
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
   <div fxLayout="row wrap">
     <div
-      *ngFor="let post of posts | async; let postId = index"
+      *ngFor="let post of posts$ | async; let postId = index"
       fxFlex="25"
       fxFlex.md="33"
       fxFlex.sm="50"
