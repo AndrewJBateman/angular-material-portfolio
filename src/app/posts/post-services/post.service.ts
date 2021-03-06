@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { AngularFireLiteFirestore } from "angularfire-lite";
 import { BehaviorSubject, Observable } from "rxjs";
 
-import { Post } from "./post";
+import { Post } from "../models/post";
 
 @Injectable()
 export class PostService {

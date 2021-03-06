@@ -34,7 +34,7 @@
     "compression": "^1.7.4",
     "dayjs": "^1.10.4",
     "express": "^4.17.1",
-    "firebase": "^8.2.9",
+    "firebase": "^8.2.10",
     "rxjs": "~6.6.6",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"

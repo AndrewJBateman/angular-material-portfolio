@@ -2,9 +2,9 @@ import { BehaviorSubject, Observable } from "rxjs";
 import { Component, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
-import { Post } from "../post";
-import { PostService } from "../post.service";
-import { StorageService } from "../storage.service";
+import { Post } from "../models/post";
+import { PostService } from "../post-services/post.service";
+import { StorageService } from "../post-services/storage.service";
 
 @Component({
   selector: "app-post-list",

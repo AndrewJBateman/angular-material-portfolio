@@ -1,6 +1,12 @@
 # :zap: Portfolio Angular Material
 
-* Angular Server Side Rendered app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users. Dark-mode toggle. Lazy-loading modules.
+* Angular Server Side Rendered app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users. Includes dark-mode toggle and lazy-loading modules.
+
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-portfolio?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/AndrewJBateman/angular-material-portfolio?style=for-the-badge)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-material-portfolio?style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-material-portfolio?style=for-the-badge)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/AndrewJBateman/angular-material-portfolio?style=for-the-badge)
 
 **\* Note: to open web links in a new window use: _ctrl+click on link_**
 
