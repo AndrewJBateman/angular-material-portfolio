@@ -1,19 +1,24 @@
 import { Injectable } from "@angular/core";
 import { AngularFireLiteFirestore } from "angularfire-lite";
 import { BehaviorSubject, Observable } from "rxjs";
+import { share } from "rxjs/operators";
 
 import { Post } from "../models/post";
 
 @Injectable()
 export class PostService {
-  public postsCollection: BehaviorSubject<Post[]> = new BehaviorSubject<Post[]>(
-    []
-  );
-  constructor(public firestore: AngularFireLiteFirestore) {}
+  private postsCollection: Observable<BehaviorSubject<Post[]>>;
+  constructor(private firestore: AngularFireLiteFirestore) {}
 
+  // get Posts collection Observable if it does not already exist and use rxjs share()
+  // so the same Observable is shared the next time to avoid unnecessary http requests
   getPosts(): Observable<BehaviorSubject<Post[]>> {
-    console.log("post service running");
-    return this.firestore
-      .read("posts")
+    if (this.postsCollection) {
+      return this.postsCollection;
+    } else {
+      this.postsCollection = this.firestore
+        .read("posts").pipe(share());
+      return this.postsCollection;
+    }
   }
 }

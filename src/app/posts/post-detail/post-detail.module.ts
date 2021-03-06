@@ -11,8 +11,6 @@ import { SvgCalenderModule } from "../../components/svg-calender/svg-calender.mo
 import { SharedModule } from "../../shared/shared.module";
 import { PipesModule } from "./../../pipes/pipes.module";
 import { StorageService } from "../post-services/storage.service";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { MatFormFieldModule } from "@angular/material/form-field";
 
 @NgModule({
   declarations: [PostDetailComponent],
@@ -21,15 +19,12 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     PostDetailRoutingModule,
     SharedModule,
     PipesModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
     SvgFolderModule,
     SvgCameraModule,
     SvgTimerModule,
     SvgCalenderModule
   ],
-  exports: [MatFormFieldModule, PostDetailComponent],
+  exports: [PostDetailComponent],
   providers: [StorageService],
 })
 export class PostDetailModule {}

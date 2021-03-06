@@ -22,11 +22,14 @@ export class PostListComponent implements OnInit {
     private metaTagService: Meta // public auth: AuthService
   ) {}
 
-  ngOnInit():void {
+  // get posts Observable and store if not stored already
+  async ngOnInit():Promise<void> {
     this.posts$ = this.postService.getPosts();
-    this.posts$.subscribe(val => {
-      this.storageService.set("storedPosts", val);
-    });
+    if (this.storageService.get("storedPosts") == null) {
+      this.posts$.subscribe(val => {
+        this.storageService.set("storedPosts", val);
+      });
+    }
    
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({

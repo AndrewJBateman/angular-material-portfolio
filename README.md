@@ -54,6 +54,7 @@
 * [Firebase v8](https://firebase.google.com) Cloud storage and authentication.
 * [angularfire-lite](https://www.npmjs.com/package/angularfire-lite) lightweight wrapper to use Firebase API with Angular.
 * [Reactive Extensions Library for Javascript rxjs v6](https://rxjs-dev.firebaseapp.com/)
+* [rxjs share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
 * [Webpack Bundle Analyser v4](https://www.npmjs.com/pawebpack-bundle-analyzerckage/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
 * [Easy-resize.com](https://www.easy-resize.com/en/) to resize pictures online
@@ -70,21 +71,40 @@
 
 ## :computer: Code Examples
 
-* extract from `github.service.ts` to get number of repos from a user from Github API using the [rxjs pluck method](https://rxjs.dev/api/operators/pluck) (picks one of the nested properties of the Github repo emitted object.) Note, async used in template to take care of unsubscribing
+* `github.service.ts` function to get number of user repos from the Github API using the [rxjs pluck method](https://rxjs.dev/api/operators/pluck) (picks one of the nested properties of the Github repo emitted object.). Note, async used in template to take care of unsubscribing
 
 ```typescript
 getNumberRepos(): Observable<number> {
-    const githubUrl = "https://api.github.com/users/andrewjbateman";
-    return this.http.get<User>(githubUrl).pipe(
-      pluck("public_repos"),
-      catchError((err) => {
-        return throwError(
-          "There was a problem fetching data from Github API, error: ",
-          err
-        );
-      })
-    );
+  const githubUrl = "https://api.github.com/users/andrewjbateman";
+  return this.http.get<User>(githubUrl).pipe(
+    pluck("public_repos"),
+    catchError((err) => {
+      return throwError(
+        "There was a problem fetching data from Github API, error: ",
+        err
+      );
+    })
+  );
+}
+```
+
+* `post.service.ts` class to get Posts collection Observable if it does not already exist using the [rxjs share method](https://rxjs.dev/api/operators/share) so the same Observable is shared the next time to avoid unnecessary http requests
+
+```typescript
+export class PostService {
+  private postsCollection: Observable<BehaviorSubject<Post[]>>;
+  constructor(private firestore: AngularFireLiteFirestore) {}
+
+  getPosts(): Observable<BehaviorSubject<Post[]>> {
+    if (this.postsCollection) {
+      return this.postsCollection;
+    } else {
+      this.postsCollection = this.firestore
+        .read("posts").pipe(share());
+      return this.postsCollection;
+    }
   }
+}
 ```
 
 ## :cool: Features
@@ -95,6 +115,8 @@ getNumberRepos(): Observable<number> {
 
 * **Angularfire-lite** used to read blog posts and push user contact form data to firebase backend. This greatly reduces size of Vendor build bundles
 
+* Rxjs pluck and share methods used to avoid unnecessary http calls and simplify code
+
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
@@ -102,7 +124,6 @@ getNumberRepos(): Observable<number> {
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
 * To-Do: deploy with SSR (fix)
 * To-Do: **Colors:** Add to styles scss to reduce repeated scss throughout app.
-* To-Do: restructure post-detail to share post.module then remove post-detail module so posts list is not lost each time a post-detail page is shown.
 * To-Do: clear posts storage when browser shut down
 
 ## :clap: Inspiration
@@ -119,6 +140,7 @@ getNumberRepos(): Observable<number> {
 * [Taonpm: compression](https://developer.aliyun.com/mirror/npm/package/compression)
 * [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
 * [Angular Data Pipe](https://angular.io/api/common/DatePipe)
+* [Article: THE PAST, PRESENT & FUTURE OF LOCAL STORAGE FOR WEB APPLICATIONS](http://diveintohtml5.info/storage.html)
 
 ## :camera: Screenshots
 
