@@ -1,5 +1,6 @@
 export class Project {
   title: string;
+  svgPath: string;
   summary: string;
   images: Image[];
   github: string;

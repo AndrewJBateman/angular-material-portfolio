@@ -109,19 +109,16 @@ export class PostService {
 
 ## :cool: Features
 
-* Services: All http calls are enclosed in their own service, in the services folder. There are 2 services:
-
-**posts:** to get posts from the Firestore backend database, **github:** [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display number of my Git repositories.
-
+* Services: All http calls are enclosed in their own service, in the services folder. There are 2 services: **posts:** to get posts from the Firestore backend database, **github:** [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display number of my Git repositories.
 * **Angularfire-lite** used to read blog posts and push user contact form data to firebase backend. This greatly reduces size of Vendor build bundles
-
-* Rxjs pluck and share methods used to avoid unnecessary http calls and simplify code
+* **Rxjs pluck and share methods** used to avoid unnecessary http calls and simplify code
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
-* SSR Lighthouse PC score: Performance 98%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
+* SSR Lighthouse PC score (home): Performance 98%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
+* To-Do Projects: properly size images - remove images on main page?, next-gen formats, update pean-stack project text
 * To-Do: deploy with SSR (fix)
 * To-Do: **Colors:** Add to styles scss to reduce repeated scss throughout app.
 * To-Do: clear posts storage when browser shut down
@@ -145,21 +142,7 @@ export class PostService {
 ## :camera: Screenshots
 
 * Home page
-  ![Example screenshot](./img/home-pc.png)
-
-* Project page
-  ![Example screenshot](./img/projects-pc.png)
-  ![Example screenshot](./img/projects-detail.png)
-
-* Skills page
-  ![Example screenshot](./img/skills-pc.png)
-
-* Contact page before & after sending - Mobile
-  ![Example screenshot](./img/contact-mobile.png)
-  ![Example screenshot](./img/contact-mobile-sent.png)
-
-* Blog Posts List page
-  ![Example screenshot](./img/blog-pc.png)
+  ![Example screenshot](./img/home.png)
 
 ## :envelope: Contact
 

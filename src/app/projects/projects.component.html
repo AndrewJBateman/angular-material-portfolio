@@ -14,24 +14,23 @@
       fxFlex.sm="50"
       fxFlex.xs="100"
       fxLayout="column"
-      style="padding: 10px"
+      style="padding: 8px"
     >
       <!--mat-card for each project with data-binding from projects.ts.
         Project summary length is truncated using Angular slice pipe-->
       <mat-card class="">
-        <!-- <div class="project-image"> -->
-        <img
-          class="mat-card-image"
-          [src]="project.images[0].src"
-          [alt]="project.images[0].page"
-        />
-        <!-- </div> -->
         <mat-card-content>
-          <h3 class="title-style">
+          <p class="project-card-title">
+            <img
+              [src]="project.svgPath"
+              style="width: 40px; height: 40px"
+              alt="icon of {{ project.title }}"
+            />
             {{ project.title }}
-          </h3>
-          <p class="project-content">{{ project.summary | slice: 0:270 }}...</p>
+          </p>
+          <p class="card-content">{{ project.summary | slice: 0:270 }}...</p>
         </mat-card-content>
+
         <mat-card-actions>
           <a
             mat-raised-button

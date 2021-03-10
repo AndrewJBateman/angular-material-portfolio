@@ -4,6 +4,7 @@ export const PROJECTS: Project[] = [
   // app 1
   {
     title: "API Dashboard",
+    svgPath: "../assets/svgs/angular.svg",
     summary: `Angular and Bootstrap were used to build 8 components that display a range of API/chart data. The objective was to demonstrate Angular/reactive programming best practices in accessing REST API data, including separating http calls into separate services, using observables with API interface models to subscribe to the data via pipe(map) operators and correct error handling.
 
 All pages are fully responsive so they resize for PC, table or phone screens. A Bootstrap responsive nav bar is used that changes to a burger menu with collapsible top menu on medium and smaller-sized screens. The component page name is displayed in the nav bar when the component is active.
@@ -89,6 +90,7 @@ HTML pages have meta tags in the header to describe the page content using metad
   // app 2
   {
     title: "This Website",
+    svgPath: "../assets/svgs/angular.svg",
     summary: `Angular 11 with Angular Material Design components is used to build this website. A Google Cloud Firestore NoSQL database stores the blog posts and data from submitted Contact forms. Anyone can Read the blog posts but there is a login link in the navbars so only a logged in user can Create, Update and Delete (CRUD) posts. Google Authorization is used to login.
 
 I wanted to minimise time spent on styling and layout so I could focus on technical content. However presenting the content clearly and fully-responsively is also very important so I have made great use of Angular Material mat-cards. The Angular Flex Layout API was used to create a responsive row of columns. This means content such as mat-cards regroup neatly as the screen width is reduced to mobile (xs) size; max-width: 599px.
@@ -138,6 +140,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   // app 3
   {
     title: "News App",
+    svgPath: "../assets/svgs/angular.svg",
     summary: `Ionic-Angular was used to create an app that displays articles fetched from a news API. The News API dev version only works in localhost and on Android Studio. As of May 2020 the API returns a CORS 406 error to non-dev front-ends unless a monthly API subscription is payed. Hence I decided not to deploy this app. Features include:
 * Typescript interface used to define the expected structure of the json object returned from the news API.
 * Separate providers (services) page with API http fetch functions.
@@ -209,6 +212,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   // app 4
   {
     title: "World Data App",
+    svgPath: "../assets/svgs/angular.svg",
     summary: `Ionic-Angular app that displays information about world countries and oceans using JSON data fetched from an external API. Includes a user search field that will find all search results as the user types their search text. Page popovers are used to provide the user with links to external websites or activate functions such as delete item from favourites.
 
     Features include:
@@ -251,6 +255,7 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   // app 5
   {
     title: "MEVN Stack Notes",
+    svgPath: "../assets/svgs/angular.svg",
     summary: `This app displays simple text notes in a grid of Bootstrap cards. It uses the MongoDB, Express, Vue & Node.js (MEVN) stack to perform Create, Read, Update and Delete (CRUD) operations. Vue is much smaller sized, simpler and easier to get start using than Angular. For such a small app I did not use Vuex state management - that will be for another Vue app.
 
 Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model.
@@ -300,6 +305,7 @@ Frontend: I used the vue-moment Moment.js filter dependency to extract a more re
   // app 6
   {
     title: "Covid API Data",
+    svgPath: "../assets/svgs/angular.svg",
     summary: `
 Angular and Angular-Material components/icons were used to build this app that displays data from a Covid-19 API. Angular/reactive programming best practices were used to access REST API data. All pages are fully responsive so they resize for PC, table or phone screens. There is a top menu for desktop/tablet screens and a burger icon-activated side menu for phone screens. The RxJS reactive programming library is used to handle datastreams and propagation of change using observables.
 
@@ -348,6 +354,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
   // app 7
   //   {
   //     title: "MEEN Stack Articles",
+  // svgPath: "../assets/svgs/angular.svg",
   //     summary:
   //       `This app displays articles in a grid of Bootstrap cards. It uses the MongoDB, Express, Embedded Javascript Templating (EJS) & Node.js (MEEN) stack to perform Create, Read, Update and Delete (CRUD) operations. EJS is a templating language that uses javascript to produce the HTML template markup. I wanted to see if using EJS resulted in quicker rendering.
 
@@ -367,6 +374,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
   // app 8
   /* {
     title: 'Angular Unsplash API',
+    svgPath: "../assets/svgs/angular.svg",
     summary: 'Angular app to get random images from the Unsplash API',
     images: [
       {
@@ -381,6 +389,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
   // app 9
   /* {
     title: 'Angular Tailwind Ratp',
+    svgPath: "../assets/svgs/angular.svg",
     summary: 'Angular app to show data from the RATP (French transport system) API',
     images: [
       {
@@ -395,6 +404,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
   // app 10
   /* {
     title: 'Angular Esri ArcGIS',
+    svgPath: "../assets/svgs/angular.svg",
     summary: 'Displays map data from the ArcGIS API, using the esri-loader and an Angular map creation service',
     images: [
       {
@@ -409,6 +419,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
   // app 11
   /* {
     title: 'Ionic Angular Nouvelles',
+    svgPath: "../assets/svgs/angular.svg",
     summary: 'Ionic-Angular PWA to fetch French news from an API',
     images: [
       {
@@ -423,6 +434,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
   // app 12
   /* {
     title: 'Angular API Gouvfr',
+    svgPath: "../assets/svgs/angular.svg",
     summary: 'Angular app to search for address data from the French Government official API',
     images: [
       {
@@ -437,6 +449,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
   // app 13
   /* {
     title: 'Python Django IcelandAPI',
+    svgPath: "../assets/svgs/angular.svg",
     summary: 'Displays volcano data from an Iceland API',
     images: [
       {
@@ -451,6 +464,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
   // app 14
   /* {
     title: 'Python Django SomethingData',
+    svgPath: "../assets/svgs/angular.svg",
     summary: '',
     images: [
       {
@@ -465,6 +479,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
   // app 15
   /* {
     title: 'GCP App Engine something',
+    svgPath: "../assets/svgs/angular.svg",
     summary: '',
     images: [
       {
@@ -479,6 +494,7 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
   // app 16
   /* {
     title: 'GCP Covid database something',
+    svgPath: "../assets/svgs/angular.svg",
     summary: '',
     images: [
       {
