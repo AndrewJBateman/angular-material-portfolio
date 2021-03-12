@@ -26,7 +26,7 @@ It is estimated to take 1800 hours and it took me all of 2017 working part-time.
   {
     id: 4,
     title: "Google Cloud",
-    svgPath: "assets/svgs/gcp.svg",
+    svgPath: "assets/svgs/google-cloud.svg",
     content:
       "For many years I have used the Google Cloud Platform (GCP). This website is hosted on Google Cloud Firestore and the Technical Posts blog & images are stored in the firestore NoQSL serverless document database. After a lot of study and practise with GCP I gained Google Associate Cloud Engineer Certification in november 2020",
   },

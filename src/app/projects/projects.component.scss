@@ -10,6 +10,12 @@
     padding: 0;
   }
 
+  .project-card-svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+  }
+
   .project-card-title {
     font-size: 18px;
   }
@@ -18,18 +24,5 @@
     flex-grow: 1;
     overflow: auto;
     white-space: pre-wrap;
-  }
-
-  .card-button-small {
-    font-size: 12px;
-    line-height: 20px;
-  }
-
-  .card-button-app {
-    background-color: green;
-    color: white;
-    font-size: 12px;
-    line-height: 20px;
-    margin-right: 0;
   }
 }

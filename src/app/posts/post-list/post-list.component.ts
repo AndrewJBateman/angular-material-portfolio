@@ -1,5 +1,5 @@
 import { BehaviorSubject, Observable } from "rxjs";
-import { Component, OnInit } from "@angular/core";
+import { Component, HostListener, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
 import { Post } from "../models/post";
@@ -22,6 +22,11 @@ export class PostListComponent implements OnInit {
     private metaTagService: Meta // public auth: AuthService
   ) {}
 
+  @HostListener("document:visibilitychange", ["$event"]) handleVisibilityChange(event: any): void {
+    console.log("back button pressed");
+    // this.posts$ = this.postService.getPosts();
+  }
+
   // get posts Observable and store if not stored already
   async ngOnInit():Promise<void> {
     this.posts$ = this.postService.getPosts();
@@ -37,4 +42,5 @@ export class PostListComponent implements OnInit {
       content: "andrewbateman.org",
     });
   }
+
 }
