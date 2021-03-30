@@ -44,6 +44,12 @@
               [src]="project.svgPath4"
               alt="icon of {{ project.title }}"
             />
+            <img
+            *ngIf="project.svgPath5"
+            class="project-card-svg"
+            [src]="project.svgPath5"
+            alt="icon of {{ project.title }}"
+          />
             {{ project.title }}
           </p>
           <p class="card-content">{{ project.summary | slice: 0:270 }}...</p>

@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from "@angular/core";
-import { isPlatformBrowser } from "@angular/common";
-import { Router, ActivatedRoute } from "@angular/router";
+import { isPlatformBrowser, Location } from "@angular/common";
+import { ActivatedRoute } from "@angular/router";
 import { Post } from "../models/post";
 import { StorageService } from "../post-services/storage.service";
 
@@ -15,8 +15,8 @@ export class PostDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private storageService: StorageService,
+    private location: Location,
     @Inject(PLATFORM_ID) private platformId: object
   ) {}
 
@@ -35,6 +35,6 @@ export class PostDetailComponent implements OnInit {
   }
 
   returnToList(): any {
-    this.router.navigate(["/blog"]);
+    this.location.back();
   }
 }

@@ -31,9 +31,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  getRepoData(): Observable<number> {
+  getRepoData(): void {
     this.repos$ = this.githubService.getNumberRepos();
-    return this.repos$;
   }
 
   trackByFn(index: number, area: Area): number {

@@ -3,12 +3,13 @@ import { Project } from "./project.module";
 export const PROJECTS: Project[] = [
   // app 1
   {
-    title: "PEAN Stack API Display",
+    title: "PEAN Stack",
     svgPath1: "../assets/svgs/postgresql.svg",
     svgPath2: "../assets/svgs/expressjs.svg",
     svgPath3: "../assets/svgs/angular.svg",
     svgPath4: "../assets/svgs/nodejs.svg",
-    summary: `Angular and Bootstrap were used to build 8 components that display data from a PostgreSQL database and external APIs. The objective was to demonstrate Angular/reactive programming best practices in accessing REST API data, including separating http calls into separate services, using observables with API interface models to subscribe to the data via pipe(take(1)) operators and correct error handling.
+    svgPath5: "../assets/svgs/pie_chart.svg",
+    summary: `A dashboard of 8 components that display data from an SQL database & external APIs. The objective was to display data from a PostgreSQL backend database using Google Charts & to demonstrate Angular/reactive programming best practices in accessing REST API data, including separating http calls into separate services, using observables with API interface models to subscribe to the data via pipe(take(1)) operators and correct error handling.
 
 All pages are fully responsive. A Bootstrap responsive nav bar is used that changes to a burger menu with collapsible top menu on medium and smaller-sized screens. The component page name is displayed in the nav bar when the component is active.
 
@@ -48,7 +49,7 @@ HTML pages have meta tags in the header to describe the page content using metad
         src: "../assets/images/apiDashboard/apiDash-charts.jpg",
         page: "Google Charts Page",
         content:
-          "Bootstrap accordian-style collapsible cards are used to display data in a range of Google Charts formats, including line, pie, gauge (3 gauges shown), table and bar-chart. All charts have their own components. Only one card is displayed at a time - clicking on one will collapse the previous one.",
+          "Bootstrap accordian-style collapsible cards are used to display data from a PostgreSQL database using Google line, pie, gauge (3 gauges shown), table and bar-charts. All charts have their own components. Only one card is displayed at a time - clicking on one will collapse the previous one.",
       },
       {
         src: "../assets/images/apiDashboard/apiDash-books.jpg",
@@ -96,7 +97,7 @@ HTML pages have meta tags in the header to describe the page content using metad
     svgPath1: "../assets/svgs/angular.svg",
     svgPath2: "../assets/svgs/material.svg",
     svgPath3: "../assets/svgs/firebase.svg",
-    summary: `Angular 11 with Angular Material Design components is used to build this website. A Google Cloud Firestore NoSQL database stores the blog posts and data from submitted Contact forms. Anyone can Read the blog posts but there is a login link in the navbars so only a logged in user can Create, Update and Delete (CRUD) posts. Google Authorization is used to login.
+    summary: `Angular Material components are used to display my technical information. A Google Cloud Firestore NoSQL database stores the blog posts and data from submitted Contact forms. Anyone can Read the blog posts. Angularfire-lite was used as a Firebase API wrapper as it is easy to use and lightweight, so reducing Vendor bundle size and improving the Chrome Lighthouse score.
 
 I wanted to minimise time spent on styling and layout so I could focus on technical content. However presenting the content clearly and fully-responsively is also very important so I have made great use of Angular Material mat-cards. The Angular Flex Layout API was used to create a responsive row of columns. This means content such as mat-cards regroup neatly as the screen width is reduced to mobile (xs) size; max-width: 599px.
 
@@ -263,12 +264,13 @@ Icons are limited to the Angular Material Icon Library - e.g. there are no icons
   },
   // app 5
   {
-    title: "MEVN Stack Notes",
+    title: "MEVN Stack",
     svgPath1: "../assets/svgs/mongodb.svg",
     svgPath2: "../assets/svgs/expressjs.svg",
     svgPath3: "../assets/svgs/vue.svg",
     svgPath4: "../assets/svgs/nodejs.svg",
-    summary: `This app displays simple text notes in a grid of Bootstrap cards. It uses the MongoDB, Express, Vue & Node.js (MEVN) stack to perform Create, Read, Update and Delete (CRUD) operations. Vue is much smaller sized, simpler and easier to get start using than Angular. For such a small app I did not use Vuex state management - that will be for another Vue app.
+    svgPath5: "../assets/svgs/heroku.svg",
+    summary: `This app is hosted on Heroku and displays simple text notes in a grid of Bootstrap cards. It uses the MongoDB, Express, Vue & Node.js (MEVN) stack to perform Create, Read, Update and Delete (CRUD) operations. Vue is much smaller sized, simpler and easier to get start using than Angular. For such a small app I did not use Vuex state management - that will be for another Vue app.
 
 Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model.
 
@@ -297,19 +299,7 @@ Frontend: I used the vue-moment Moment.js filter dependency to extract a more re
         page: "App Info. Page",
         content:
           "This page gives the user information about the app and how it works. The back button navigates the user back to the grid of notes (home) page.",
-      },
-      {
-        src: "../assets/images/mevn-notes/mevn-mongodb.jpg",
-        page: "Database Page",
-        content:
-          "This is a screenshot of the MongoDB Atlas No-SQL backend. The database 'notes' collection can be seen with the document objects listed with object id, title and body strings and UTC date stamp.",
-      },
-      {
-        src: "../assets/images/mevn-notes/mevn-code.jpg",
-        page: "VS Code Screenshot",
-        content:
-          "This is a screenshot of my work in Visual Studio Code. It shows the Vue methods used in the notes Create page.",
-      },
+      }
     ],
     github: "https://github.com/AndrewJBateman/mevn-stack-notes",
     url: "https://mevn-stack-notes.herokuapp.com/",
@@ -320,7 +310,7 @@ Frontend: I used the vue-moment Moment.js filter dependency to extract a more re
     svgPath1: "../assets/svgs/angular.svg",
     svgPath2: "../assets/svgs/material.svg",
     svgPath3: "../assets/svgs/covid.svg",
-    svgPath4: "../assets/svgs/angularcharts.svg",
+    svgPath4: "../assets/svgs/pie_chart.svg",
     summary: `Displays data from a Covid-19 API. Angular/reactive programming best practices were used to access REST API data. All pages are fully responsive. There is a top menu for desktop/tablet screens and a burger icon-activated side menu for phone screens. The RxJS reactive programming library is used to handle datastreams and propagation of change using observables.
 
 Browser localStorage is used to store API data to prevent multiple GET requests for the same data. This app does not have significant performance needs so the synchronous nature of localStorage is ignored. Accessing of offline data via a Service worker/Progressive Web App (PWA) compliance was not added. HTML pages have meta tags in the header to describe the page content using metadata. This is to optimise searches by search engines (SEO) and is part of the Google Lighthouse automated testing tool.`,
@@ -401,20 +391,32 @@ Browser localStorage is used to store API data to prevent multiple GET requests 
 		url: ''
   }, */
   // app 9
-  /* {
+  {
     title: 'Angular Tailwind Ratp',
     svgPath1: "../assets/svgs/angular.svg",
-    summary: 'Angular app to show data from the RATP (French transport system) API',
+    svgPath2: "../assets/svgs/tailwind.svg",
+    svgPath3: "../assets/svgs/ratp.svg",
+    summary: 'Displays data on commerce local to a RATP (French transport system) station, based on a user-entered postcode. Data fetched from the RATP API using Reactive Extensions Library (rxjs) methods',
     images: [
       {
-        src: '../assets/images/home.jpg',
+        src: '../assets/images/ratpApp/home.jpg',
         page: 'Home Page',
         content: ''
       },
+      {
+        src: '../assets/images/ratpApp/about-contact.jpg',
+        page: 'About & Contact Pages',
+        content: ''
+      },
+      // {
+      //   src: '../assets/images/ratpApp/contact.jpg',
+      //   page: 'Contact Page',
+      //   content: ''
+      // }
     ],
 		github: 'https://github.com/AndrewJBateman/angular-tailwind-ratp',
 		url: ''
-  }, */
+  },
   // app 10
   /* {
     title: 'Angular Esri ArcGIS',

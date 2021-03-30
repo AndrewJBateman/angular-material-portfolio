@@ -31,9 +31,9 @@
 
 **Home:** Includes a Http service to fetch my repo details from the github API. Angular Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
 
-**Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 2 will show on a row (on a PC) before wrapping to the next line. Image sized to 16:9 ratio. Cards simplified to get 2 on a large screen. Footer includes 3 buttons: 1 routes to Project-detail page, 1 routes to github page and 1 opens the app in a browser.
+**Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 
-**Project-Detail:** Navigates to project detail page from project page link. pages featured with images shown max 2 per line. Top card includes buttons to navigate back or to see code/app.
+**Project-Detail:** Navigates to project detail page from project page link. pages featured with images shown max 2 per line. Image sized to 16:9 ratio. Top card includes buttons to navigate back or to see code/app.
 
 * PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
 * mobile app: Image size used: 1066 x 600 (containes 3 x 9:16 images) to give 16:9 when 3 images in a row.
@@ -58,6 +58,7 @@
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
 * [Webpack Bundle Analyser v4](https://www.npmjs.com/pawebpack-bundle-analyzerckage/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
 * [Easy-resize.com](https://www.easy-resize.com/en/) to resize pictures online
+* [svg logos](https://worldvectorlogo.com/) for Projects page
 
 ## :floppy_disk: Setup
 
@@ -71,7 +72,7 @@
 
 ## :computer: Code Examples
 
-* `github.service.ts` function to get number of user repos from the Github API using the [rxjs pluck method](https://rxjs.dev/api/operators/pluck) (picks one of the nested properties of the Github repo emitted object.). Note, async used in template to take care of unsubscribing
+* `github.service.ts` function to get number of user repos from the Github API using the [rxjs pluck method](https://rxjs.dev/api/operators/pluck) (picks one of the nested properties of the Github repo emitted object). Note, async used in template to take care of unsubscribing of observable
 
 ```typescript
 getNumberRepos(): Observable<number> {
@@ -121,7 +122,7 @@ export class PostService {
 * To-Do Projects: properly size images - remove images on main page?, next-gen formats, update pean-stack project text
 * To-Do: deploy with SSR (fix)
 * To-Do: **Colors:** Add to styles scss to reduce repeated scss throughout app.
-* To-Do: clear posts storage when browser shut down
+* To-Do: overview drg
 
 ## :clap: Inspiration
 

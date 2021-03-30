@@ -37,7 +37,8 @@
             color="accent"
             (click)="returnToList()"
             aria-label="Back button"
-          ><span>Back</span>
+          >
+            <span>Back</span>
           </button>
           <div fxFlex></div>
           <a
@@ -48,7 +49,7 @@
             rel="noreferrer"
             color="primary"
             aria-label="link to GitHub page"
-          ><span>Github</span>
+            ><span>Github</span>
           </a>
           <div fxFlex></div>
           <a
@@ -59,7 +60,7 @@
             rel="noreferrer"
             class="card-button-app"
             aria-label="link to app web page"
-          ><span>Open App</span>
+            ><span>Open App</span>
           </a>
         </mat-card-actions>
       </mat-card>
@@ -79,14 +80,12 @@
       style="padding: 5px"
     >
       <!--mat-card for each project page with data-binding from projects.ts-->
-      <mat-card>
-        <div class="image-div">
-          <img
-            class="mat-card-image"
-            [src]="project.images[i].src"
-            [alt]="project.images[i].page"
-          />
-        </div>
+      <mat-card class="image-card">
+        <img
+          class="mat-card-image"
+          [src]="project.images[i].src"
+          [alt]="project.images[i].page"
+        />
         <mat-card-content style="height: 100%">
           <h3 class="title-style">
             {{ project.images[i].page }}

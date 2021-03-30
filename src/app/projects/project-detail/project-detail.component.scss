@@ -19,7 +19,7 @@
   background-size: cover;
 }
 
-.mat-card {
+mat-card {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -33,12 +33,11 @@
   margin: 0 !important;
 }
 
-.image-div {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  color: white;
-}
+// .image-div {
+//   position: relative;
+//   width: 100%;
+//   color: white;
+// }
 
 .title-style {
   margin: 0 0 8px;

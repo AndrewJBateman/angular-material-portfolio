@@ -4,6 +4,7 @@ export class Project {
   svgPath2?: string;
   svgPath3?: string;
   svgPath4?: string;
+  svgPath5?: string;
   summary: string;
   images: Image[];
   github: string;
