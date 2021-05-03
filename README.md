@@ -27,16 +27,11 @@
 
 ## :books: Sections info
 
-**Navbars:** Top/side navbars with page routing and working links to my CV, Github and LinkedIn profiles. Login nav-link only shown when on blog page. Not needed on side menu.
+**Navbars:** Top/side navbars with page routing with links to Github & LinkedIn.
 
 **Home:** Includes a Http service to fetch my repo details from the github API. Angular Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
 
 **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
-
-**Project-Detail:** Navigates to project detail page from project page link. pages featured with images shown max 2 per line. Image sized to 16:9 ratio. Top card includes buttons to navigate back or to see code/app.
-
-* PC app: Image size used: 892 x 502 to give 16:9 when 3 images in a row.
-* mobile app: Image size used: 1066 x 600 (containes 3 x 9:16 images) to give 16:9 when 3 images in a row.
 
 **Skills:** fxFlex layout with cards to display project data using data-binding from an array of skills based on a Skill model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 
@@ -44,6 +39,13 @@
 
 **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts.
   Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info. **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
+
+**Not Found:** In the event of the user trying to route to any page address that is not listed in the router-module a single Mat-card will display a message to the user. There is a simple button to reroute the user to the Home page.
+
+## :camera: Screenshots
+
+* Home page
+  ![Example screenshot](./img/home.jpg)
 
 ## :signal_strength: Technologies
 
@@ -122,7 +124,7 @@ export class PostService {
 * To-Do Projects: properly size images - remove images on main page?, next-gen formats, update pean-stack project text
 * To-Do: deploy with SSR (fix)
 * To-Do: **Colors:** Add to styles scss to reduce repeated scss throughout app.
-* To-Do: overview drg
+* To-Do: overview drg, replace contact code to send me an email
 
 ## :clap: Inspiration
 
@@ -140,11 +142,10 @@ export class PostService {
 * [Angular Data Pipe](https://angular.io/api/common/DatePipe)
 * [Article: THE PAST, PRESENT & FUTURE OF LOCAL STORAGE FOR WEB APPLICATIONS](http://diveintohtml5.info/storage.html)
 
-## :camera: Screenshots
+## :file_folder: License
 
-* Home page
-  ![Example screenshot](./img/home.png)
+* This project is licensed under the terms of the MIT license.
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com

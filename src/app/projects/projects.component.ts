@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
 import { PROJECTS } from "./projects";
+import { Project } from './project.module';
 
 @Component({
   selector: "app-projects",
@@ -11,7 +12,8 @@ import { PROJECTS } from "./projects";
 export class ProjectsComponent implements OnInit {
   title = "Projects";
 
-  projects = PROJECTS;
+  projects: Project[] = PROJECTS;
+  project: Project;
 
   constructor(private titleService: Title, private metaTagService: Meta) {}
 

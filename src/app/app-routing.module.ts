@@ -19,13 +19,6 @@ const appRoutes: Routes = [
       import("./projects/projects.module").then((mod) => mod.ProjectsModule),
   },
   {
-    path: "projects/:projectId",
-    loadChildren: () =>
-      import("./projects/project-detail/project-detail.module").then(
-        (mod) => mod.ProjectDetailModule
-      ),
-  },
-  {
     path: "skills",
     loadChildren: () =>
       import("./skills/skills.module").then((mod) => mod.SkillsModule),
@@ -34,7 +27,7 @@ const appRoutes: Routes = [
     path: "blog",
     loadChildren: () =>
       import("./posts/posts.module").then((mod) => mod.PostsModule),
-      
+
   },
   {
     path: "contact",
