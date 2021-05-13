@@ -157,15 +157,16 @@ export const PROJECTS: Project[] = [
     svgPath1: "../assets/svgs/ionic.svg",
     svgPath2: "../assets/svgs/angular.svg",
     svgPath6: "../assets/svgs/france.svg",
-    summary: 'French news from a REST API, also using websockets',
+    summary: 'Ionic-Angular app using the Capacitor network plugin to check network status. Progressive Web App (PWA) functionality so the app is still usable in the event of a loss of network. Display French news from a REST API, also using websockets',
 		github: 'https://github.com/AndrewJBateman/ionic-angular-nouvelles'
   },
   // app 16
   {
     title: 'Next Cryptocurrency Charts',
     svgPath1: "../assets/svgs/next.svg",
-    svgPath2: "../assets/svgs/bitcoin.svg",
-    summary: 'A Next-React Server Side Rendered (SSR) app to display cryptocurrency historical data using graphs with data from the CryptoCompare API',
+    svgPath2: "../assets/svgs/bootstrap.svg",
+    svgPath3: "../assets/svgs/bitcoin.svg",
+    summary: 'Uses the Next javascript framework with React library components and Bootstrap to create a Server Side Rendered (SSR) app. App displays cryptocurrency historical data using graphs with data from the CryptoCompare API',
 		github: 'https://github.com/AndrewJBateman/next-api-data'
   }
 ];
