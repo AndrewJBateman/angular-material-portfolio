@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
 import { PROJECTS } from "./projects";
@@ -10,6 +10,7 @@ import { Project } from './project.module';
   styleUrls: ["./projects.component.scss"],
 })
 export class ProjectsComponent implements OnInit {
+  @Input() darkModeSwitched: Boolean;
   title = "Projects";
 
   projects: Project[] = PROJECTS;
@@ -18,6 +19,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private titleService: Title, private metaTagService: Meta) {}
 
   ngOnInit(): void {
+    console.log("dark mode?", this.darkModeSwitched);
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({
       name: "projects",

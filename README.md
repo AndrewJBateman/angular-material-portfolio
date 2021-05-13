@@ -114,15 +114,16 @@ export class PostService {
 
 * Services: All http calls are enclosed in their own service, in the services folder. There are 2 services: **posts:** to get posts from the Firestore backend database, **github:** [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display number of my Git repositories.
 * **Angularfire-lite** used to read blog posts and push user contact form data to firebase backend. This greatly reduces size of Vendor build bundles
-* **Rxjs pluck and share methods** used to avoid unnecessary http calls and simplify code
+* **Rxjs pluck and share methods** used to avoid unnecessary http calls and to simplify code
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
 * SSR Lighthouse PC score (home): Performance 98%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
-* To-Do Projects: properly size images - remove images on main page?, next-gen formats, update pean-stack project text
+* To-Do: Projects: complete svgs & summaries
 * To-Do: deploy with SSR (fix)
+* To-Do: Skills: add more skills, green skills?
 * To-Do: **Colors:** Add to styles scss to reduce repeated scss throughout app.
 * To-Do: overview drg, replace contact code to send me an email
 

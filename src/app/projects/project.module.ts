@@ -1,11 +1,13 @@
 export class Project {
   title: string;
-  svgPath1: string;
+  svgPath1?: string;
   svgPath2?: string;
   svgPath3?: string;
   svgPath4?: string;
   svgPath5?: string;
+  svgPath6?: string;
+  svgPath7?: string;
+  svgPath8?: string;
   summary: string;
   github: string;
-  url: string;
 }
