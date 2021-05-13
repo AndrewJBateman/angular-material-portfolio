@@ -162,9 +162,10 @@ export const PROJECTS: Project[] = [
   },
   // app 16
   {
-    title: 'React Cryptocurrency Charts',
-    svgPath1: "../assets/svgs/angular.svg",
-    summary: 'Displays cryptocurrency historical data using graphs with data from the CryptoCompare API',
-		github: 'https://github.com/AndrewJBateman/react-app-cryptocurrency'
+    title: 'Next Cryptocurrency Charts',
+    svgPath1: "../assets/svgs/next.svg",
+    svgPath2: "../assets/svgs/bitcoin.svg",
+    summary: 'A Next-React Server Side Rendered (SSR) app to display cryptocurrency historical data using graphs with data from the CryptoCompare API',
+		github: 'https://github.com/AndrewJBateman/next-api-data'
   }
 ];

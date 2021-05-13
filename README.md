@@ -1,12 +1,12 @@
 # :zap: Portfolio Angular Material
 
-* Angular Server Side Rendered app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users. Includes dark-mode toggle and lazy-loading modules.
+* Angular12 Server Side Rendered app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users. Includes dark-mode toggle and lazy-loading modules.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-portfolio?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/AndrewJBateman/angular-material-portfolio?style=for-the-badge)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-material-portfolio?style=for-the-badge)
-![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-material-portfolio?style=for-the-badge)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/AndrewJBateman/angular-material-portfolio?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-portfolio?style=plastic)
+![GitHub issues](https://img.shields.io/github/issues/AndrewJBateman/angular-material-portfolio?style=social)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-material-portfolio?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-material-portfolio?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-material-portfolio?style=plastic)
 
 **\* Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -49,10 +49,10 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v11](https://angular.io/)
-* [Angular Material v11](https://material.angular.io/)
+* [Angular framework v12](https://angular.io/)
+* [Angular Material v12](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
-* [Angular service worker v11](https://angular.io/guide/service-worker-intro) added
+* [Angular service worker v12](https://angular.io/guide/service-worker-intro) added
 * [Firebase v8](https://firebase.google.com) Cloud storage and authentication.
 * [angularfire-lite](https://www.npmjs.com/package/angularfire-lite) lightweight wrapper to use Firebase API with Angular.
 * [Reactive Extensions Library for Javascript rxjs v6](https://rxjs-dev.firebaseapp.com/)
