@@ -1,9 +1,9 @@
 # :zap: Portfolio Angular Material
 
-* Angular12 Server Side Rendered app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users. Includes dark-mode toggle and lazy-loading modules.
-* **\* Note: to open web links in a new window use: _ctrl+click on link_**
+* Angular 12 Server Side Rendered (SSR) app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users. Includes dark-mode toggle and lazy-loading modules.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-* ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-portfolio?style=plastic)
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-portfolio?style=plastic)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-material-portfolio?style=plastic)
 ![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-material-portfolio?style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-material-portfolio?style=plastic)
@@ -22,9 +22,6 @@
 ## :books: General info
 
 * **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes from [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
-
-## :books: Sections info
-
 * **Navbars:** Top/side navbars with page routing & links to Github & LinkedIn.
 * **Home:** Includes a Http service to fetch my repo details from the github API. Angular Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
 * **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
@@ -46,7 +43,7 @@
 * [Angular service worker v12](https://angular.io/guide/service-worker-intro) added
 * [Firebase v8](https://firebase.google.com) Cloud storage and authentication.
 * [angularfire-lite](https://www.npmjs.com/package/angularfire-lite) lightweight wrapper to use Firebase API with Angular.
-* [Reactive Extensions Library for Javascript rxjs v6](https://rxjs-dev.firebaseapp.com/)
+* [Reactive Extensions Library for Javascript rxjs v7](https://rxjs-dev.firebaseapp.com/)
 * [rxjs share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
 * [Webpack Bundle Analyser v4](https://www.npmjs.com/pawebpack-bundle-analyzerckage/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
@@ -109,7 +106,7 @@ export class PostService {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
+* Status: Working PWA, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
 * SSR Lighthouse PC score (home): Performance 98%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
 * To-Do: Projects: complete svgs & summaries
