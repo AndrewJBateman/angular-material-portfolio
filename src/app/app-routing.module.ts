@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { HomeComponent } from "./home/home.component";
+import { HomeComponent } from "./modules/home/home.component";
 
 const appRoutes: Routes = [
   {
@@ -16,28 +16,28 @@ const appRoutes: Routes = [
   {
     path: "projects",
     loadChildren: () =>
-      import("./projects/projects.module").then((mod) => mod.ProjectsModule),
+      import("./modules/projects/projects.module").then((mod) => mod.ProjectsModule),
   },
   {
     path: "skills",
     loadChildren: () =>
-      import("./skills/skills.module").then((mod) => mod.SkillsModule),
+      import("./modules/skills/skills.module").then((mod) => mod.SkillsModule),
   },
   {
     path: "blog",
     loadChildren: () =>
-      import("./posts/posts.module").then((mod) => mod.PostsModule),
+      import("./modules/posts/posts.module").then((mod) => mod.PostsModule),
 
   },
   {
     path: "contact",
     loadChildren: () =>
-      import("./contact/contact.module").then((mod) => mod.ContactModule),
+      import("./modules/contact/contact.module").then((mod) => mod.ContactModule),
   },
   {
     path: "**",
     loadChildren: () =>
-      import("./pagenotfound/pagenotfound.module").then(
+      import("./modules/pagenotfound/pagenotfound.module").then(
         (mod) => mod.PageNotFoundModule
       ),
   },

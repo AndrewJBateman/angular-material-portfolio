@@ -5,9 +5,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { environment } from "../environments/environment";
 
 import { AppComponent } from "./app.component";
-import { HomeComponent } from "./home/home.component";
+import { HomeComponent } from "./modules/home/home.component";
 
-import { NavModule } from "./nav/nav.module";
+import { NavModule } from "./core/nav/nav.module";
 import { SharedModule } from "./shared/shared.module";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
