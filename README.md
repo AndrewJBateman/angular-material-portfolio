@@ -1,6 +1,7 @@
 # :zap: Portfolio Angular Material
 
-* Angular 12 Server Side Rendered (SSR) app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users. Includes dark-mode toggle and lazy-loading modules.
+* Angular 12 Server Side Rendered (SSR) app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
+* Includes dark-mode toggle and lazy-loading modules.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-portfolio?style=plastic)
@@ -23,7 +24,7 @@
 
 * **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes from [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
 * **Navbars:** Top/side navbars with page routing & links to Github & LinkedIn.
-* **Home:** Includes a Http service to fetch my repo details from the github API. Angular Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
+* **Home:** Angular Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
 * **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 * **Skills:** fxFlex layout with cards to display project data using data-binding from an array of skills based on a Skill model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 * **Contact:** Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend using angularfire-lite and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
@@ -53,7 +54,7 @@
 ## :floppy_disk: Setup
 
 * `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
-* `npm run build` to create build file with Ahead of Time (aot) compilation (enabled by default from Angular 9) and with source map explorer
+* `npm run build` to create build file with Ahead of Time (AOT) compilation (enabled by default from Angular 9) and with source map explorer
 * `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder
 * `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis
 * `npm run build:ssr` to create a build file with SSR. Add "defer" in inline css file in browser/index.html
@@ -62,20 +63,33 @@
 
 ## :computer: Code Examples
 
-* `github.service.ts` function to get number of user repos from the Github API using the [rxjs pluck method](https://rxjs.dev/api/operators/pluck) (picks one of the nested properties of the Github repo emitted object). Note, async used in template to take care of unsubscribing of observable
+* `storage.service.ts` used to store blog Posts to avoid repeated http calls to fetch the same data every time
 
 ```typescript
-getNumberRepos(): Observable<number> {
-  const githubUrl = "https://api.github.com/users/andrewjbateman";
-  return this.http.get<User>(githubUrl).pipe(
-    pluck("public_repos"),
-    catchError((err) => {
-      return throwError(
-        "There was a problem fetching data from Github API, error: ",
-        err
-      );
-    })
-  );
+@Injectable()
+export class StorageService {
+  constructor() {}
+
+  set(key: string, data: any): void {
+    try {
+      sessionStorage.setItem(key, JSON.stringify(data));
+    } catch (err) {
+      console.error("Error saving to localStorage", err);
+    }
+  }
+
+  get(key: string): string {
+    try {
+      return JSON.parse(sessionStorage.getItem(key));
+    } catch (err) {
+      console.error("Error getting data from localStorage", err);
+      return null;
+    }
+  }
+
+  clear(): void {
+    sessionStorage.clear();
+  }
 }
 ```
 
@@ -100,17 +114,14 @@ export class PostService {
 
 ## :cool: Features
 
-* Services: All http calls are enclosed in their own service, in the services folder. There are 2 services: **posts:** to get posts from the Firestore backend database, **github:** [Github API](https://developer.github.com/v4/query/) used with a httpClient GET request to display number of my Git repositories.
 * **Angularfire-lite** used to read blog posts and push user contact form data to firebase backend. This greatly reduces size of Vendor build bundles
 * **Rxjs pluck and share methods** used to avoid unnecessary http calls and to simplify code
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working PWA, Built for Production and Deployed to Firebase, linked to my domain. Browser only version deployed.
-* SSR Lighthouse PC score (home): Performance 98%, Accessibility: 100%, Best practises: 100% & SEO: 100%, PWA OK
+* Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 95%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
 * To-Do: Improve lighthouse performance score: remove unused css and redo small images.
 * To-Do: Projects: complete svgs & summaries
-* To-Do: deploy with SSR (fix)
 * To-Do: Skills: add more skills, green skills?
 * To-Do: **Colors:** Add to styles scss to reduce repeated scss throughout app.
 * To-Do: overview drg, replace contact code to send me an email
