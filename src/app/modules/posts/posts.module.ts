@@ -17,14 +17,7 @@ const routes: Routes = [
   {
     path: "",
     component: PostListComponent,
-  },
-  {
-    path: ":id",
-    loadChildren: () =>
-      import("./post-detail/post-detail.module").then(
-        (mod) => mod.PostDetailModule
-      ),
-  },
+  }
 ];
 @NgModule({
   imports: [
