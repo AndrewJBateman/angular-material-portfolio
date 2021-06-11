@@ -19,7 +19,7 @@ export class PostListComponent implements OnInit {
     private postService: PostService,
     private storageService: StorageService,
     private titleService: Title,
-    private metaTagService: Meta // public auth: AuthService
+    private metaTagService: Meta
   ) {}
 
   @HostListener("document:visibilitychange", ["$event"]) handleVisibilityChange(event: any): void {
@@ -29,7 +29,6 @@ export class PostListComponent implements OnInit {
 
   // get posts Observable and store if not stored already
   async ngOnInit():Promise<void> {
-    console.log("posts ngonit started");
     this.posts$ = this.postService.getPosts();
     if (this.storageService.get("storedPosts") == null) {
       this.posts$.subscribe(val => {

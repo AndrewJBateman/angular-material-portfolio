@@ -19,7 +19,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private titleService: Title, private metaTagService: Meta) {}
 
   ngOnInit(): void {
-    console.log("dark mode?", this.darkModeSwitched);
+    // console.log("dark mode?", this.darkModeSwitched);
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({
       name: "projects",
