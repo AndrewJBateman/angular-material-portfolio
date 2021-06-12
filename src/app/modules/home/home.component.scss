@@ -1,32 +1,32 @@
 .home-container {
   margin-top: 16px;
 
-  .top-card-title {
-    font-size: 24px;
-    margin-bottom: 0 !important;
-  }
-
-  .top-card-content {
-    margin-top: 8px !important;
-  }
-
-  .card-bold-text {
-    font-size: 14px;
-    font-weight: 700;
-  }
-
-  .card-link-text {
-    font-size: 14px;
-    font-style: italic;
-  }
-
-  // Bottom subject area cards
   mat-card {
     margin: 10px;
     padding: 8px;
 
+    .top-card-title {
+      font-size: 24px;
+      margin-bottom: 0 !important;
+    }
+
+    .top-card-content {
+      margin-top: 8px !important;
+    }
+
+    .card-bold-text {
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: #68a1e2;
+      text-decoration-thickness: 2px;
+    }
+
     .area-card-title {
       font-size: 18px;
+      text-decoration: underline;
+      text-decoration-color: #68a1e2;
+      text-decoration-thickness: 2px;
     }
 
     .card-content {

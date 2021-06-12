@@ -19,7 +19,14 @@
   outline: none !important;
 
   &:focus {
-    background-color: #475364;
+    background-color: none;
     border: 0;
   }
+
+  ::ng-deep .mat-button-focus-overlay {
+    display: none !important;
+    border: none !important;
+    background-color: transparent;
+  }
+
 }
