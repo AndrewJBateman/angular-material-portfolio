@@ -21,9 +21,24 @@
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/assets/**",
+          "**/assets/**",
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
         ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "andrewbateman.org",
+      "urls": [
+        "**//andrewbateman.org/**",
+        "**//angular-blog-14cef.web.app/**",
+        "**//angular-blog-14cef.firebaseapp.com/**"
+      ],
+      "cacheConfig": {
+        "maxAge": "7d",
+        "maxSize": 100,
+        "strategy": "performance"
       }
     }
   ]
