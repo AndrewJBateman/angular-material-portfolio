@@ -4,15 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --source-map",
-    "build:stats": "ng build --stats-json",
-    "analyze": "webpack-bundle-analyzer dist/angular-material-portfolio/browser/stats.json",
+    "build": "ng build --configuration production --named-chunks --source-map=false",
     "test": "ng test",
     "lint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix",
     "e2e": "ng e2e",
+    "explore": "source-map-explorer dist/**/*.js",
     "dev:ssr": "ng run angular-material-portfolio:serve-ssr",
     "serve:ssr": "node dist/angular-material-portfolio/server/main.js",
-    "build:ssr": "ng build --prod && ng run angular-material-portfolio:server:production",
+    "build:ssr": "ng build --configuration production && ng run angular-material-portfolio:server:production",
     "prerender": "ng run angular-material-portfolio:prerender"
   },
   "private": true,
@@ -36,7 +35,7 @@
     "express": "^4.17.1",
     "firebase": "^8.6.7",
     "rxjs": "~7.1.0",
-    "tslib": "^2.2.0",
+    "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -64,16 +63,16 @@
     "inquirer-autocomplete-prompt": "^1.3.0",
     "jasmine-core": "~3.7.1",
     "jasmine-spec-reporter": "~7.0.0",
-    "karma": "~6.3.3",
+    "karma": "~6.3.4",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~3.0.3",
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.6.0",
     "prettier": "^2.3.1",
     "protractor": "~7.0.0",
+    "source-map-explorer": "^2.5.2",
     "ts-loader": "^9.2.3",
     "ts-node": "~10.0.0",
-    "typescript": "^4.2.4",
-    "webpack-bundle-analyzer": "^4.4.2"
+    "typescript": "^4.2.4"
   }
 }
