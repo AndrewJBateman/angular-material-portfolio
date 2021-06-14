@@ -3,7 +3,7 @@
     name="description"
     content="Home page gives a brief history of my technical background and years spent learning to code part-time. Shows what I learnt using Material cards"
   />
-  <meta name="theme-color" content="#317EFB"/>
+  <meta name="theme-color" content="#317EFB" />
 </head>
 
 <div class="home-container">
@@ -20,15 +20,11 @@
       </p>
       <p class="top-card-content">
         <span class="card-bold-text"
-          >Full-Stack Developement | Engineering | Cloud | IT. </span
-        >I have been studying programming part-time for a number of years,
+          >Full-Stack Development | Engineering | Cloud | IT.</span
+        > I have been studying programming part-time for a number of years,
         completing lots of online courses & tutorials from FreeCodeCamp,
         Treehouse, Udemy, Coursera and Youtube etc. I also recently gained
-        Google Associate Cloud Engineer Certification. I have
-        <span *ngIf="repos$ else noRepoCount" class="card-bold-text"> {{ repos$ | async }}</span>
-        <ng-template #noRepoCount>
-          <span>hundreds of</span>
-        </ng-template>
+        Google Associate Cloud Engineer Certification. I have hundreds of
         repositories on Github with a mixture of my own projects and tutorial
         code.
       </p>
@@ -43,14 +39,13 @@
       <p class="card-content">
         There is more about my Programming, Engineering & IT below. The aim of
         this website is to show some of my projects and a little about me,
-        without repeating what is in Linkedin. This website was built with an
-        Angular front-end and a Firebase backend - see Projects for more info.
-        This site has a technical blog with categories: Programming Development,
-        IT and Engineering.
+        without repeating what is in Linkedin or Github. This website was built
+        with an Angular front-end and a Firebase backend - see Projects for more
+        info. This site has a technical blog with categories: Programming
+        Development, IT and Engineering.
       </p>
     </mat-card-content>
   </mat-card>
-  <hr class="horiz-line" />
   <!--Bottom section: mat-card for each area with data-binding from area.module.ts-->
   <div *ngFor="let area of areas; trackBy: trackByFn">
     <mat-card>
