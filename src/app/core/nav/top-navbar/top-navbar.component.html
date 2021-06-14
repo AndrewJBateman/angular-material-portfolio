@@ -9,11 +9,12 @@
     <app-svg-menu></app-svg-menu>
   </button>
   <a
-    class="top-nav-link"
+    class="top-nav-link no-hover-effect"
     routerLink="/home"
     routerLinkActive="top-link-active"
     aria-label="home nav button"
     mat-button
+    [disableRipple]="true"
   >
     <h2>AB</h2>
   </a>
@@ -36,6 +37,7 @@
         routerLinkActive="top-link-active"
         aria-label="projects nav button"
         mat-button
+        [disableRipple]="true"
         >Projects</a
       >
       <a
@@ -44,6 +46,7 @@
         routerLinkActive="top-link-active"
         aria-label="skills nav button"
         mat-button
+        [disableRipple]="true"
         >Skills</a
       >
       <a
@@ -52,6 +55,7 @@
         routerLinkActive="top-link-active"
         aria-label="contact nav button"
         mat-button
+        [disableRipple]="true"
         >Contact</a
       >
       <a
@@ -76,6 +80,7 @@
         routerLinkActive="top-link-active"
         aria-label="blog nav button"
         mat-button
+        [disableRipple]="true"
         >Blog</a
       >
     </div>
