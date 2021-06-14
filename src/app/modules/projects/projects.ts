@@ -164,9 +164,12 @@ export const PROJECTS: Project[] = [
   {
     title: 'Next Cryptocurrency Charts',
     svgPath1: "../assets/svgs/next.svg",
-    svgPath2: "../assets/svgs/bootstrap.svg",
-    svgPath3: "../assets/svgs/bitcoin.svg",
-    summary: 'Uses the Next javascript framework with React library components and Bootstrap to create a Server Side Rendered (SSR) app. App displays cryptocurrency historical data using graphs with data from the CryptoCompare API',
-		github: 'https://github.com/AndrewJBateman/next-api-data'
+    svgPath2: "../assets/svgs/react.svg",
+    svgPath3: "../assets/svgs/materialui.svg",
+    svgPath4: "../assets/svgs/apollo.svg",
+    svgPath5: "../assets/svgs/graphql.svg",
+    svgPath6: "../assets/svgs/bitcoin.svg",
+    summary: 'Next.js app using React library components, Material-UI, GraphQL, Apollo & Server Side Renderng (SSR) to display cryptocurrency price data from the Nomics Cryptocurrency API',
+		github: 'https://github.com/AndrewJBateman/next-apollo-crypto'
   }
 ];
