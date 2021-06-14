@@ -3,7 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./modules/home/home.component";
 
-const appRoutes: Routes = [
+const routes: Routes = [
   {
     path: "",
     redirectTo: "/home",
@@ -45,7 +45,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes, {
+    RouterModule.forRoot(routes, {
       // initialNavigation: "enabledBlocking",
     }),
   ],
