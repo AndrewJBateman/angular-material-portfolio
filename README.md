@@ -141,6 +141,7 @@ export class PostService {
 * [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
 * [Angular Data Pipe](https://angular.io/api/common/DatePipe)
 * [Article: THE PAST, PRESENT & FUTURE OF LOCAL STORAGE FOR WEB APPLICATIONS](http://diveintohtml5.info/storage.html)
+* [The Beginners Guide to Service Workers and Angular](https://blog.ng-book.com/service-workers-and-angular/)
 
 ## :file_folder: License
 
