@@ -26,20 +26,5 @@
         ]
       }
     }
-  ],
-  "dataGroups": [
-    {
-      "name": "andrewbateman.org",
-      "urls": [
-        "**//andrewbateman.org/**",
-        "**//angular-blog-14cef.web.app/**",
-        "**//angular-blog-14cef.firebaseapp.com/**"
-      ],
-      "cacheConfig": {
-        "maxAge": "7d",
-        "maxSize": 100,
-        "strategy": "performance"
-      }
-    }
   ]
 }
