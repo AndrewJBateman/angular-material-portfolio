@@ -1,0 +1,37 @@
+<head>
+  <meta
+    name="description"
+    content="Blog detail page uses an Angular card to display technical post in detail"
+  />
+</head>
+
+<div class="post-detail-container">
+  <!--mat-card for each post with data-binding from post.ts-->
+  <mat-card class="mat-card mat-elevation-z1">
+    <img
+      mat-card-image
+      [src]="post.image"
+      [alt]="post.title"
+      class="card-image"
+    />
+    <mat-card-content>
+      <p class="title-style">{{ post.title }}</p>
+      <p class="content-style">
+        <span class="subtitle-style">{{ post.subtitle }}:</span>
+        {{ post.content }}
+      </p>
+      <p>
+        <!-- <span class="small-text">
+        <app-svg-calender></app-svg-calender>
+        {{ post.published.toDate() | dateConvert }}
+        <div fxFlex></div>
+        <app-svg-folder></app-svg-folder>
+        {{ post.category }}
+        <div fxFlex></div>
+        <app-svg-timer></app-svg-timer>
+        {{ post.content | readTime }} minutes
+      </span> -->
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

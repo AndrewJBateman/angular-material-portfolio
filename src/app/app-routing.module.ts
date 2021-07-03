@@ -30,6 +30,12 @@ const routes: Routes = [
 
   },
   {
+    path: "blog/detail",
+    loadChildren: () =>
+      import("./modules/posts/post-list/post-detail/post-detail.module").then((mod) => mod.PostDetailModule),
+
+  },
+  {
     path: "contact",
     loadChildren: () =>
       import("./modules/contact/contact.module").then((mod) => mod.ContactModule),

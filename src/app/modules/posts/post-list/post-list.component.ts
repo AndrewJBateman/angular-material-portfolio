@@ -1,6 +1,7 @@
 import { BehaviorSubject, Observable } from "rxjs";
 import { Component, HostListener, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
+import { Router, NavigationExtras } from "@angular/router";
 
 import { Post } from "../post";
 import { PostService } from "../post-services/post.service";
@@ -19,11 +20,11 @@ export class PostListComponent implements OnInit {
     private postService: PostService,
     private storageService: StorageService,
     private titleService: Title,
-    private metaTagService: Meta
+    private metaTagService: Meta,
+    private router: Router
   ) {}
 
   @HostListener("document:visibilitychange", ["$event"]) handleVisibilityChange(event: any): void {
-    console.log("back button pressed");
     // this.posts$ = this.postService.getPosts();
   }
 
@@ -41,6 +42,15 @@ export class PostListComponent implements OnInit {
       name: "blog",
       content: "andrewbateman.org",
     });
+  }
+
+  onGoToPostDetail(post: Post): void {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        post,
+      },
+    };
+    this.router.navigate(["blog/detail"], navigationExtras);
   }
 
 }
