@@ -22,7 +22,7 @@ export class PostDetailComponent {
     })
   }
 
-  returnToList(): void {
+  onNavigateBackToPosts(): void {
     this.location.back();
   }
 

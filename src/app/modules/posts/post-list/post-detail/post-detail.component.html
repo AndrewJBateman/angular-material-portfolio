@@ -21,16 +21,29 @@
         {{ post.content }}
       </p>
       <p>
-        <!-- <span class="small-text">
-        <app-svg-calender></app-svg-calender>
-        {{ post.published.toDate() | dateConvert }}
-        <div fxFlex></div>
-        <app-svg-folder></app-svg-folder>
-        {{ post.category }}
-        <div fxFlex></div>
-        <app-svg-timer></app-svg-timer>
-        {{ post.content | readTime }} minutes
-      </span> -->
+        <span class="small-text">
+          <a (click)="onNavigateBackToPosts()" target="_blank" rel="noreferrer">
+            <!-- <app-svg-list></app-svg-list> -->
+
+            <app-svg-back></app-svg-back>Back
+          </a>
+
+          <div fxFlex></div>
+          <a
+            class="credit-date-text"
+            href="{{ post.imageLink }}"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <app-svg-camera></app-svg-camera>
+            {{ post.imageby }}
+          </a>
+          <div fxFlex></div>
+          <p class="credit-date-text">
+            <app-svg-timer></app-svg-timer>
+            {{ post.published.toDate() | dateConvert }}
+          </p>
+        </span>
       </p>
     </mat-card-content>
   </mat-card>

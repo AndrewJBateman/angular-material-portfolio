@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./modules/home/home.component";
+import { PostDetailComponent } from "./modules/posts/post-list/post-detail/post-detail.component";
 
 const routes: Routes = [
   {
@@ -31,9 +32,7 @@ const routes: Routes = [
   },
   {
     path: "blog/detail",
-    loadChildren: () =>
-      import("./modules/posts/post-list/post-detail/post-detail.module").then((mod) => mod.PostDetailModule),
-
+    component: PostDetailComponent
   },
   {
     path: "contact",
