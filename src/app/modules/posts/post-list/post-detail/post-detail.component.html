@@ -30,7 +30,6 @@
 
           <div fxFlex></div>
           <a
-            class="credit-date-text"
             href="{{ post.imageLink }}"
             target="_blank"
             rel="noreferrer"
@@ -39,7 +38,7 @@
             {{ post.imageby }}
           </a>
           <div fxFlex></div>
-          <p class="credit-date-text">
+          <p>
             <app-svg-timer></app-svg-timer>
             {{ post.published.toDate() | dateConvert }}
           </p>
