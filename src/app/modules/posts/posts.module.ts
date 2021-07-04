@@ -12,7 +12,6 @@ import { SvgFolderModule } from "../../shared/components/svg-folder/svg-folder.m
 import { SvgTimerModule } from "../../shared/components/svg-timer/svg-timer.module";
 import { SvgCameraModule } from "../../shared/components/svg-camera/svg-camera.module";
 import { SvgBackModule } from "../../shared/components/svg-back/svg-back.module";
-import { SvgListModule } from "../../shared/components/svg-list/svg-list.module";
 import { PostService } from "./post-services/post.service";
 import { StorageService } from "./post-services/storage.service";
 import { environment } from "../../../environments/environment";
@@ -37,8 +36,7 @@ const routes: Routes = [
     SvgTimerModule,
     SvgCalenderModule,
     SvgCameraModule,
-    SvgBackModule,
-    SvgListModule
+    SvgBackModule
   ],
   declarations: [PostListComponent, PostDetailComponent],
   providers: [PostService, StorageService],
