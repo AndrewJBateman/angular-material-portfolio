@@ -10,7 +10,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-material-portfolio?style=plastic)
 
 ## :page_facing_up: Table of contents
-* [Angular Material Portfolio](#zap-angular-material-portfolio)
+* [:zap: Angular Material Portfolio](#zap-angular-material-portfolio)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
