@@ -24,6 +24,7 @@
 
 * **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes from [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
 * **Navbars:** Top/side navbars with page routing & links to Github & LinkedIn.
+* **Footer** with link to Build information page
 * **Home:** Angular Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
 * **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 * **Skills:** fxFlex layout with cards to display project data using data-binding from an array of skills based on a Skill model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
@@ -54,12 +55,12 @@
 ## :floppy_disk: Setup
 
 * `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
-* `npm run build` to create build file with Ahead of Time (AOT) compilation (enabled by default from Angular 9) and with source map explorer
+* `npm run build` to create build file with Ahead of Time (AOT) compilation (enabled by default from Angular 9). Source map explorer set to false
 * `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder
 * `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis
 * `npm run build:ssr` to create a build file with SSR. Add "defer" in inline css file in browser/index.html
 * `npm run serve:ssr` to see the SSR on localhost
-* `firebase deploy` to deploy build file to firebase hosting. (`ng deploy` does not work due to [errors with SSR](https://stackoverflow.com/questions/61913016/angular-npm-run-servessr-fails))
+* `firebase deploy` to deploy build file to firebase hosting.
 
 ## :computer: Code Examples
 
