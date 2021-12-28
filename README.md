@@ -1,6 +1,6 @@
-# :zap: Portfolio Angular Material
+# :zap: Angular Material Portfolio 
 
-* Angular 12 Server Side Rendered (SSR) app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
+* Angular Server Side Rendered (SSR) app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
 * Includes dark-mode toggle and lazy-loading modules.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
@@ -42,12 +42,12 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v12](https://angular.io/)
-* [Angular Material v12](https://material.angular.io/)
+* [Angular framework v13](https://angular.io/)
+* [Angular Material v13](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
-* [Angular service worker v12](https://angular.io/guide/service-worker-intro) added
-* [Firebase v8](https://firebase.google.com) Cloud storage and authentication.
-* [angularfire-lite](https://www.npmjs.com/package/angularfire-lite) lightweight wrapper to use Firebase API with Angular.
+* [Angular service worker v13](https://angular.io/guide/service-worker-intro) added
+* [Firebase v8](https://firebase.google.com) Cloud storage and authentication. Not to be updated to v9
+* [angularfire-lite v6](https://www.npmjs.com/package/angularfire-lite) lightweight wrapper to use Firebase API with Angular.
 * [Reactive Extensions Library for Javascript rxjs v7](https://rxjs-dev.firebaseapp.com/)
 * [rxjs share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
