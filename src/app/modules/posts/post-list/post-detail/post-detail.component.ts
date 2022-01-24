@@ -23,7 +23,7 @@ export class PostDetailComponent {
   }
 
   onNavigateBackToPosts(): void {
-    this.location.back();
+    this.router.navigate(["/blog"]);
   }
 
 }
