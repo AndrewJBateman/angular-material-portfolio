@@ -1,0 +1,74 @@
+<!-- <div fxFlex fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row wrap">
+    <div
+      *ngFor="let project of jsProjects; index as projectId"
+      fxFlex="25"
+      fxFlex.md="50"
+      fxFlex.sm="50"
+      fxFlex.xs="100"
+      fxLayout="column"
+      style="padding: 5px"
+    >
+      <mat-card class="">
+        <mat-card-content>
+          <p class="project-card-title">
+            <img
+              class="project-card-svg"
+              [src]="project.svgPath1"
+              alt="icon of {{ project.title }}"
+            />
+            <img
+              *ngIf="project.svgPath2"
+              class="project-card-svg"
+              [src]="project.svgPath2"
+              alt="icon of {{ project.title }}"
+            />
+            <img
+              *ngIf="project.svgPath3"
+              class="project-card-svg"
+              [src]="project.svgPath3"
+              alt="icon of {{ project.title }}"
+            />
+            <img
+              *ngIf="project.svgPath4"
+              class="project-card-svg"
+              [src]="project.svgPath4"
+              alt="icon of {{ project.title }}"
+            />
+            <img
+              *ngIf="project.svgPath5"
+              class="project-card-svg"
+              [src]="project.svgPath5"
+              alt="icon of {{ project.title }}"
+            />
+            <img
+              *ngIf="project.svgPath6"
+              class="project-card-svg"
+              [src]="project.svgPath6"
+              alt="icon of {{ project.title }}"
+            />
+            <img
+              *ngIf="project.svgPath7"
+              class="project-card-svg"
+              [src]="project.svgPath7"
+              alt="icon of {{ project.title }}"
+            />
+            {{ project.title }}
+          </p>
+          <p class="card-content">
+            <span class="project-card-title">{{ project.title }}:</span>
+            {{ project.summary | slice: 0:240 }}...
+            <a
+              class="project-card-link"
+              [href]="project.github"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="link to GitHub page"
+              ><span>View on Github</span>
+            </a>
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>-->

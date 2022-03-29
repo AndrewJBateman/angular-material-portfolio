@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
-import { PROJECTS } from "./projects";
-import { Project } from './project.module';
+import { ProjectsArray } from "./projects";
+import { Project } from './project.model';
 
 @Component({
   selector: "app-projects",
@@ -12,8 +12,7 @@ import { Project } from './project.module';
 export class ProjectsComponent implements OnInit {
   @Input() darkModeSwitched: Boolean;
   title = "Projects";
-
-  projects: Project[] = PROJECTS;
+  projectsArray: Project[] = ProjectsArray;
   project: Project;
 
   constructor(private titleService: Title, private metaTagService: Meta) {}

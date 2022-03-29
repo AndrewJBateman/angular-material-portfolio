@@ -1,4 +1,9 @@
 export class Project {
+  projectArea: string;
+  projects: ProjectDetails[];
+}
+
+export class ProjectDetails {
   title: string;
   svgPath1?: string;
   svgPath2?: string;
