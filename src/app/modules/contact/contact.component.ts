@@ -58,6 +58,7 @@ export class ContactComponent implements OnInit {
           Validators.maxLength(400),
         ],
       ],
+      date: Date.now()
     });
   }
 
