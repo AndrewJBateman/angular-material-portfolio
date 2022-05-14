@@ -8,8 +8,8 @@ export const ProjectsArray: Project[] = [
       {
         title: "This Website",
         svgPath1: "../assets/svgs/angular.svg",
-        svgPath2: "../assets/svgs/rxjs.svg",
-        svgPath3: "../assets/svgs/material.svg",
+        svgPath2: "../assets/svgs/material.svg",
+        svgPath3: "../assets/svgs/rxjs.svg",
         svgPath4: "../assets/svgs/firebase.svg",
         summary:
           "Angular Material & RxJS Observables are used to display my data. A Google Cloud Firestore NoSQL database stores the blog posts & Contact Form data. Anyone can read the blog posts. Angularfire-lite was used as a Firebase API wrapper as it is simple and lightweight, reducing Vendor bundle size & improving the Chrome Lighthouse score.",
@@ -56,7 +56,9 @@ export const ProjectsArray: Project[] = [
       {
         title: "Angular Material API",
         svgPath1: "../assets/svgs/angular.svg",
-        svgPath2: "../assets/svgs/rxjs.svg",
+        svgPath2: "../assets/svgs/material.svg",
+        svgPath3: "../assets/svgs/rxjs.svg",
+        svgPath4: "../assets/svgs/bitcoin.svg",
         summary:
           "Angular Progressive Web App using Angular Material and Server Side Rendering (SSR) to display cryptocurrency information and achieve an excellent Lighthouse score.",
         github: "https://github.com/AndrewJBateman/angular-material-api",
@@ -74,10 +76,14 @@ export const ProjectsArray: Project[] = [
       },
       // app 7
       {
-        title: "Angular GraphQL API",
-        svgPath1: "../assets/svgs/angular.svg",
-        summary: "Angular frontend with GraphQL with node backend",
-        github: "https://github.com/AndrewJBateman/angular-graphql-api",
+        title: "Next Apollo Crypto",
+        svgPath1: "../assets/svgs/next.svg",
+        svgPath2: "../assets/svgs/apollo.svg",
+        svgPath3: "../assets/svgs/materialui.svg",
+        svgPath4: "../assets/svgs/bitcoin.svg",
+        summary:
+          "A Next.js React cryptocurrency api app using Apollo GraphQL client and Material-UI components.",
+        github: "https://github.com/AndrewJBateman/next-apollo-crypto",
       },
       // app 8
       {
@@ -88,11 +94,21 @@ export const ProjectsArray: Project[] = [
         svgPath4: "../assets/svgs/ratp.svg",
         svgPath5: "../assets/svgs/github1.svg",
         svgPath6: "../assets/svgs/france.svg",
-        summary: "Displays data SNCF",
+        summary:
+          "Angular app using Tailwind styles to display SNCF data from the Navitia API",
         github: "https://github.com/AndrewJBateman/angular-tailwind-sncf",
       },
       // app 9
-
+      {
+        title: "Angular ARCGis Maps",
+        svgPath1: "../assets/svgs/angular.svg",
+        svgPath2: "../assets/svgs/rxjs.svg",
+        svgPath3: "../assets/svgs/tailwind.svg",
+        svgPath4: "../assets/svgs/arcgis.svg",
+        summary:
+          "Angular multi-page app using RxJS operators and ArcGIS esri-mapping solutions from Esri to display a map. Tailwind CSS used for reduced styles build bundle. ",
+        github: "https://github.com/AndrewJBateman/angular-arcgis-multimaps",
+      },
       // app 10
       {
         title: "News App",
@@ -143,8 +159,8 @@ export const ProjectsArray: Project[] = [
         svgPath5: "../assets/svgs/expressjs.svg",
         svgPath6: "../assets/svgs/heroku.svg",
         summary:
-          "Displays simple text notes in a grid of Bootstrap cards. MongoDB, Express, Vue & Node.js (MEVN) stack used to perform Create, Read, Update and Delete (CRUD) operations. Vue is much smaller sized, simpler and easier to get start using than Angular. For such a small app I did not use Vuex state management. Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model. Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use SVG icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Note model so notes are shown in separate categories, e.g. work, hobby or holiday ideas etc.",
-        github: "https://github.com/AndrewJBateman/mevn-stack-notes",
+          "Vue frontend used to Create Read Update & Delete (CRUD) cable installation data with a Node-Express backend & MongoDB database.",
+        github: "https://github.com/AndrewJBateman/mevn-stack-data",
       },
       // app 2
       {
@@ -154,9 +170,8 @@ export const ProjectsArray: Project[] = [
         svgPath3: "../assets/svgs/mongodb.svg",
         svgPath4: "../assets/svgs/nodejs.svg",
         svgPath5: "../assets/svgs/expressjs.svg",
-        svgPath6: "../assets/svgs/heroku.svg",
         summary:
-          "Displays simple text notes in a grid of Bootstrap cards. MongoDB, Express, Vue & Node.js (MEVN) stack used to perform Create, Read, Update and Delete (CRUD) operations. Vue is much smaller sized, simpler and easier to get start using than Angular. For such a small app I did not use Vuex state management. Backend: Express routes and controllers were created in separate folders to make the code more readable. A Mongoose schema was used for the Note model. Frontend: I used the vue-moment Moment.js filter dependency to extract a more readable time format from the database UTC timestamp using a pipe. I chose to use SVG icons stored in the assets folder, instead of importing font-awesome or other dependencies that would slow the app rendering speed. Future update could include adding a category field to the Note model so notes are shown in separate categories, e.g. work, hobby or holiday ideas etc.",
+          "Displays simple text notes in a grid of Bootstrap cards. MongoDB, Express, Vue & Node.js (MEVN) stack used to perform Create, Read, Update and Delete (CRUD) operations. Vue is much smaller sized, simpler and easier to get start using than Angular.",
         github: "https://github.com/AndrewJBateman/mevn-stack-notes",
       },
       // app 3
@@ -188,97 +203,188 @@ export const ProjectsArray: Project[] = [
       },
       // app 5
       {
-        title: "Node Express Excel",
-        svgPath4: "../assets/svgs/nodejs.svg",
-        summary: "Node.js app to connect to google sheets doc",
-        github: "https://github.com/AndrewJBateman/node-express-excel",
+        title: "Angular GraphQL API",
+        svgPath1: "../assets/svgs/angular.svg",
+        svgPath2: "../assets/svgs/rxjs.svg",
+        svgPath3: "../assets/svgs/graphql.svg",
+        svgPath4: "../assets/svgs/apollo.svg",
+        svgPath5: "../assets/svgs/nodejs.svg",
+        summary:
+          "Frontend: Angular with GraphQL & Apollo Client to view backend Engineering Parts data. Backend: Node.js + GraphQL + Apollo Server and GraphQL schema to execute queries on data",
+        github: "https://github.com/AndrewJBateman/angular-graphql-api",
       },
       // app 6
       {
         title: "Next Prisma PostgreSQL",
-        svgPath4: "../assets/svgs/nodejs.svg",
+        svgPath1: "../assets/svgs/next.svg",
+        svgPath2: "../assets/svgs/react.svg",
+        svgPath3: "../assets/svgs/nodejs.svg",
+        svgPath4: "../assets/svgs/postgresql.svg",
+        svgPath5: "../assets/svgs/materialui.svg",
         summary:
           "PostgreSQL database with Prisma & Next.js (React) to display project data",
         github: "https://github.com/AndrewJBateman/next-prisma-postgresql",
       },
       // app 7
       {
-        title: "Angular Python Charts",
+        title: "Angular Python Data",
         svgPath1: "../assets/svgs/angular.svg",
+        svgPath2: "../assets/svgs/material.svg",
+        svgPath3: "../assets/svgs/rxjs.svg",
+        svgPath4: "../assets/svgs/python.svg",
+        svgPath5: "../assets/svgs/pie_chart.svg",
         summary:
-          "Displays data from Firebase database in an Angular frontend chart using Python",
-        github: "https://github.com/AndrewJBateman/angular-python-charts",
+          "Data is created using Python and stored in a Firebase database. Then it is displayedin an Angular frontend chart",
+        github: "https://github.com/AndrewJBateman/angular-python-data",
       },
       // app 8
       {
         title: "Angular Material Firebase",
-        svgPath4: "../assets/svgs/angular.svg",
+        svgPath1: "../assets/svgs/angular.svg",
+        svgPath2: "../assets/svgs/material.svg",
+        svgPath3: "../assets/svgs/rxjs.svg",
+        svgPath4: "../assets/svgs/firebase.svg",
         summary:
-          "Angular app with Angular material components to display data stored using firebase v9",
+          "Angular app with Angular material components used to display data stored in a firebase database",
         github: "https://github.com/AndrewJBateman/angular-material-firebase",
       },
     ],
   },
   {
-    projectArea: "Python",
+    projectArea: "Node",
     projects: [
       {
-        title: "Python Title 1",
-        svgPath1: "../assets/svgs/angular.svg",
+        title: "Node ORM PostgreSQL",
+        svgPath1: "../assets/svgs/nodejs.svg",
+        svgPath2: "../assets/svgs/expressjs.svg",
+        svgPath3: "../assets/svgs/postgresql.svg",
+        svgPath4: "../assets/svgs/typescript.svg",
         summary:
-          "Python1 project summary python1 project summary python1 project summary python1 project summary python1 project summary",
-        github: "https://github.com/AndrewJBateman/python-bigquery-data",
+          "Node.js used with TypeORM (an ORM - Object Relational Mapping) and Typescript to create a data Entity model and perform CRUD operations on the data in a PostgreSQL database",
+        github: "https://github.com/AndrewJBateman/node-orm-postgres",
       },
       {
-        title: "Python Title 2",
-        svgPath1: "../assets/svgs/angular.svg",
-        summary: "Python2 project summary",
-        github: "https://github.com/AndrewJBateman/python-bigquery-data",
+        title: "Node CRON PostgreSQL",
+        svgPath1: "../assets/svgs/nodejs.svg",
+        svgPath2: "../assets/svgs/expressjs.svg",
+        svgPath3: "../assets/svgs/postgresql.svg",
+        svgPath4: "../assets/svgs/cron.svg",
+        svgPath5: "../assets/svgs/rss.svg",
+        summary:
+          "Node.js + Express used with the node-cron module to fetch RSS feed data in XML format and interract with a Supabase (PostgreSQL) database",
+        github: "https://github.com/AndrewJBateman/node-cron-postgresql",
       },
       {
-        title: "Python Title 3",
-        svgPath1: "../assets/svgs/angular.svg",
-        summary: "Python3 project summary",
-        github: "https://github.com/AndrewJBateman/python-bigquery-data",
+        title: "Node Koa Data",
+        svgPath1: "../assets/svgs/nodejs.svg",
+        svgPath2: "../assets/svgs/koajs.svg",
+        svgPath3: "../assets/svgs/bootstrap.svg",
+        svgPath4: "../assets/svgs/ejs.svg",
+        summary:
+          "Node.js used with Koa instead of Express middleware, with embedded javascript (EJS) & Bootstrap to display oil well data",
+        github: "https://github.com/AndrewJBateman/node-koa-data",
       },
       {
-        title: "Python Title 4",
-        svgPath1: "../assets/svgs/angular.svg",
-        summary: "Python4 project summary",
-        github: "https://github.com/AndrewJBateman/python-bigquery-data",
+        title: "Node Sequelize PostgreSQL",
+        svgPath1: "../assets/svgs/nodejs.svg",
+        svgPath2: "../assets/svgs/expressjs.svg",
+        svgPath3: "../assets/svgs/postgresql.svg",
+        svgPath4: "../assets/svgs/sequelize.svg",
+        summary:
+          "Node.js + Express used with Sequelize Object-Relational Mapping (ORM) to perform Create, Read, Update & Delete (CRUD) operations on linked data tables in a PostgreSQL database",
+        github: "https://github.com/AndrewJBateman/node-sequelize-postgresql",
       },
     ],
   },
-  {
-    projectArea: "Java",
-    projects: [
-      {
-        title: "Java Title 1",
-        svgPath1: "../assets/svgs/angular.svg",
-        summary:
-          "Java1 project summary java1 project summary java1 project summary java1 project summary",
-        github: "https://github.com/AndrewJBateman/java-concurrency-threads",
-      },
-      {
-        title: "Java Title 2",
-        svgPath1: "../assets/svgs/angular.svg",
-        summary: "Java2 project summary",
-        github: "https://github.com/AndrewJBateman/java-concurrency-threads",
-      },
-      {
-        title: "Java Title 3",
-        svgPath1: "../assets/svgs/angular.svg",
-        summary: "Java3 project summary",
-        github: "https://github.com/AndrewJBateman/java-concurrency-threads",
-      },
-      {
-        title: "Java Title 4",
-        svgPath1: "../assets/svgs/angular.svg",
-        summary: "Java4 project summary",
-        github: "https://github.com/AndrewJBateman/java-concurrency-threads",
-      },
-    ],
-  },
+  // {
+  //   projectArea: "Python",
+  //   projects: [
+  //     {
+  //       title: "Python Title 1",
+  //       svgPath1: "../assets/svgs/python.svg",
+  //       summary:
+  //         "Python1 project summary python1 project summary python1 project summary python1 project summary python1 project summary",
+  //       github: "https://github.com/AndrewJBateman/python-bigquery-data",
+  //     },
+  //     {
+  //       title: "Python Title 2",
+  //       svgPath1: "../assets/svgs/python.svg",
+  //       summary: "Python2 project summary",
+  //       github: "https://github.com/AndrewJBateman/python-bigquery-data",
+  //     },
+  //     {
+  //       title: "Python Title 3",
+  //       svgPath1: "../assets/svgs/python.svg",
+  //       summary: "Python3 project summary",
+  //       github: "https://github.com/AndrewJBateman/python-bigquery-data",
+  //     },
+  //     {
+  //       title: "Python Title 4",
+  //       svgPath1: "../assets/svgs/python.svg",
+  //       summary: "Python4 project summary",
+  //       github: "https://github.com/AndrewJBateman/python-bigquery-data",
+  //     },
+  //   ],
+  // },
+  //   {
+  //   projectArea: "Docker/Kubernetes",
+  //   projects: [
+  //     {
+  //       title: "",
+  //       svgPath1: "",
+  //       summary: "",
+  //       github: "",
+  //     },
+  //     {
+  //       title: "",
+  //       svgPath1: "",
+  //       summary: "",
+  //       github: "",
+  //     },
+  //     {
+  //       title: "",
+  //       svgPath1: "",
+  //       summary: "",
+  //       github: "",
+  //     },
+  //     {
+  //       title: "",
+  //       svgPath1: "",
+  //       summary: "",
+  //       github: "",
+  //     },
+  //   ],
+  // },
+  // {
+  //   projectArea: "Java",
+  //   projects: [
+  //     {
+  //       title: "Java Title 1",
+  //       svgPath1: "../assets/svgs/angular.svg",
+  //       summary:
+  //         "Java1 project summary java1 project summary java1 project summary java1 project summary",
+  //       github: "https://github.com/AndrewJBateman/java-concurrency-threads",
+  //     },
+  //     {
+  //       title: "Java Title 2",
+  //       svgPath1: "../assets/svgs/angular.svg",
+  //       summary: "Java2 project summary",
+  //       github: "https://github.com/AndrewJBateman/java-concurrency-threads",
+  //     },
+  //     {
+  //       title: "Java Title 3",
+  //       svgPath1: "../assets/svgs/angular.svg",
+  //       summary: "Java3 project summary",
+  //       github: "https://github.com/AndrewJBateman/java-concurrency-threads",
+  //     },
+  //     {
+  //       title: "Java Title 4",
+  //       svgPath1: "../assets/svgs/angular.svg",
+  //       summary: "Java4 project summary",
+  //       github: "https://github.com/AndrewJBateman/java-concurrency-threads",
+  //     },
+  //   ],
+  // },
   // {
   //   projectArea: "IoT",
   //   projects: [

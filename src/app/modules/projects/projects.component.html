@@ -1,7 +1,7 @@
 <head>
   <meta
     name="description"
-    content="Projects page shows some of my recent projects using Angular cards. Clicking on a card will show the project in more detail or navigate to the GitHub code or the app website."
+    content="Projects page shows some of my recent projects using Angular cards. From the footer it is possible to navigate to the GitHub code."
   />
 </head>
 
@@ -19,7 +19,6 @@
             fxLayout="column"
             style="padding: 5px"
           >
-            <!-- <app-project-card [project]=project></app-project-card> -->
             <mat-card class="">
               <mat-card-content>
                 <p class="project-card-title">
@@ -64,7 +63,6 @@
                     [src]="project.svgPath7"
                     alt="icon of {{ project.title }}"
                   />
-                  <!-- {{ project.title }} -->
                 </p>
                 <p class="card-content">
                   <span class="project-card-title">{{ project.title }}:</span>

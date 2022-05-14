@@ -1,4 +1,3 @@
-import { ProjectCardComponent } from "./project-card/project-card.component";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
@@ -9,8 +8,8 @@ import { SharedModule } from "../../shared/shared.module";
 import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
-  declarations: [ProjectsComponent, ProjectCardComponent],
+  declarations: [ProjectsComponent],
   imports: [CommonModule, ProjectsRoutingModule, SharedModule, MatButtonModule],
-  exports: [ProjectsComponent, ProjectCardComponent],
+  exports: [ProjectsComponent],
 })
 export class ProjectsModule {}
