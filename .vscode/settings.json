@@ -1,6 +1,5 @@
 {
   "editor.detectIndentation": false,
-  "editor.highlightActiveIndentGuide": false,
   "editor.tabSize": 2,
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -10,7 +9,7 @@
     "editor.formatOnSave": false
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
@@ -35,5 +34,6 @@
         "modules": true
       }
     }
-  }
+  },
+  "editor.guides.highlightActiveIndentation": false
 }
