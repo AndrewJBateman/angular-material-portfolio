@@ -1,4 +1,4 @@
-# :zap: Angular Material Portfolio 
+# :zap: Angular Material Portfolio
 
 * Angular Server Side Rendered (SSR) app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
 * Includes dark-mode toggle and lazy-loading modules.
@@ -10,6 +10,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-material-portfolio?style=plastic)
 
 ## :page_facing_up: Table of contents
+
 * [:zap: Angular Material Portfolio](#zap-angular-material-portfolio)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
@@ -28,7 +29,7 @@
 * **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes from [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
 * **Navbars:** Top/side navbars with page routing & links to Github & LinkedIn.
 * **Footer** with link to Build information page
-* **Home:** Angular Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
+* **Home:** Angular Tab Groups/Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
 * **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 * **Skills:** fxFlex layout with cards to display project data using data-binding from an array of skills based on a Skill model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 * **Contact:** Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend using angularfire-lite and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
@@ -39,6 +40,7 @@
 ## :camera: Screenshots
 
   ![Example screenshot](./img/home.jpg)
+  ![Example screenshot](./img/projects.png)
 
 ## :signal_strength: Technologies
 
@@ -46,14 +48,13 @@
 * [Angular Material v13](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
 * [Angular service worker v13](https://angular.io/guide/service-worker-intro) added
-* [Firebase v8](https://firebase.google.com) Cloud storage and authentication. Not to be updated to v9
+* [Firebase v8](https://firebase.google.com) Cloud storage and authentication. **Not to be updated to v9**
 * [angularfire-lite v6](https://www.npmjs.com/package/angularfire-lite) lightweight wrapper to use Firebase API with Angular.
 * [Reactive Extensions Library for Javascript rxjs v7](https://rxjs-dev.firebaseapp.com/)
-* [rxjs share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
+* [RxJS share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
-* [Webpack Bundle Analyser v4](https://www.npmjs.com/pawebpack-bundle-analyzerckage/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
+* [Webpack Bundle Analyser v4](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
 * [Easy-resize.com](https://www.easy-resize.com/en/) to resize pictures online
-* [svg logos](https://worldvectorlogo.com/) for Projects page
 
 ## :floppy_disk: Setup
 
@@ -97,7 +98,7 @@ export class StorageService {
 }
 ```
 
-* `post.service.ts` class to get Posts collection Observable if it does not already exist using the [rxjs share method](https://rxjs.dev/api/operators/share) so the same Observable is shared the next time to avoid unnecessary http requests
+* `post.service.ts` class to get Posts collection Observable if it does not already exist using the [rxjs share method](https://rxjs.dev/api/operators/share) so the same Observable is shared the next time to avoid unnecessary HTTP requests
 
 ```typescript
 export class PostService {
@@ -124,10 +125,11 @@ export class PostService {
 ## :clipboard: Status & To-Do List
 
 * Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 95%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
-* To-Do: Improve lighthouse performance score: remove unused css and redo small images.
-* To-Do: Projects: complete svgs & summaries
-* To-Do: Skills: add more skills, green skills?
-* To-Do: **Colors:** Add to styles scss to reduce repeated scss throughout app.
+* To-Do: Skills: add more skills, green skills? check electrical/instr skills are all there
+* To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
+* To-Do: Projects: add to Node, add Docker/Java/IoT.. projects
+
+* To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
 * To-Do: overview drg, replace contact code to send me an email
 
 ## :clap: Inspiration
@@ -143,7 +145,6 @@ export class PostService {
 * [Andrei Voicu: Using ESLint and Prettier with VScode in an Angular Project](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
 * [Taonpm: compression](https://developer.aliyun.com/mirror/npm/package/compression)
 * [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
-* [Angular Data Pipe](https://angular.io/api/common/DatePipe)
 * [Article: THE PAST, PRESENT & FUTURE OF LOCAL STORAGE FOR WEB APPLICATIONS](http://diveintohtml5.info/storage.html)
 * [The Beginners Guide to Service Workers and Angular](https://blog.ng-book.com/service-workers-and-angular/)
 
