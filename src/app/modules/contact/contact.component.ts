@@ -2,7 +2,7 @@ import { Component, OnInit, Testability } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
 import { Location } from "@angular/common";
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from "@angular/forms";
 import { AngularFireLiteFirestore } from "angularfire-lite";
 
 @Component({
@@ -13,7 +13,7 @@ import { AngularFireLiteFirestore } from "angularfire-lite";
 export class ContactComponent implements OnInit {
   title = "Send a message";
 
-  contactForm: FormGroup;
+  contactForm: UntypedFormGroup;
 
   // Form state
   loading = false;
@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
   imageAlt = "photo of someone typing at a laptop on a desk";
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private afs: AngularFireLiteFirestore,
     private router: Router,
     private location: Location,

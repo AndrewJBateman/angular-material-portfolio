@@ -187,7 +187,6 @@
       }
     }
   },
-  "defaultProject": "angular-material-portfolio",
   "cli": {
     "analytics": false
   }
