@@ -44,12 +44,12 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v13](https://angular.io/)
-* [Angular Material v13](https://material.angular.io/)
+* [Angular framework v14](https://angular.io/)
+* [Angular Material v14](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
-* [Angular service worker v13](https://angular.io/guide/service-worker-intro) added
+* [Angular service worker v14](https://angular.io/guide/service-worker-intro) added
 * [Firebase v8](https://firebase.google.com) Cloud storage and authentication. **Not to be updated to v9**
-* [angularfire-lite v6](https://www.npmjs.com/package/angularfire-lite) lightweight wrapper to use Firebase API with Angular.
+* [angularfire-lite v6](https://www.npmjs.com/package/angularfire-lite) lightweight wrapper to use Firebase API with Angular. **Last published 3 years ago**
 * [Reactive Extensions Library for Javascript rxjs v7](https://rxjs-dev.firebaseapp.com/)
 * [RxJS share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
@@ -59,9 +59,8 @@
 ## :floppy_disk: Setup
 
 * `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
-* `npm run build` to create build file with Ahead of Time (AOT) compilation (enabled by default from Angular 9). Source map explorer set to false
-* `npm run build:stats` to run the webpack-bundle-analyzer & generate a stats.json file inside of the dist folder
-* `npm run analyze` and navigate to `http://localhost:8888/` to see the analysis
+* `npm run build` to create build file with Ahead of Time (AOT) compilation. Source map explorer set to false
+* `npm run explore` to run the webpack-bundle-analyzer - opens bundle analysis drawing
 * `npm run build:ssr` to create a build file with SSR. Add "defer" in inline css file in browser/index.html
 * `npm run serve:ssr` to see the SSR on localhost
 * `firebase deploy` to deploy build file to firebase hosting.
@@ -143,10 +142,8 @@ export class PostService {
 * [Ahmed Bouchefra, Setting Up Angular Server-Side Rendering (SSR)](https://blog.jscrambler.com/setting-up-angular-server-side-rendering-ssr/)
 * [Angular 8/9 SEO – Set Dynamic Page Title and Meta Tags in Universal App](https://www.positronx.io/angular-seo-set-dynamic-page-title-meta-tags-in-universal-app/)
 * [Andrei Voicu: Using ESLint and Prettier with VScode in an Angular Project](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
-* [Taonpm: compression](https://developer.aliyun.com/mirror/npm/package/compression)
 * [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
 * [Article: THE PAST, PRESENT & FUTURE OF LOCAL STORAGE FOR WEB APPLICATIONS](http://diveintohtml5.info/storage.html)
-* [The Beginners Guide to Service Workers and Angular](https://blog.ng-book.com/service-workers-and-angular/)
 
 ## :file_folder: License
 
