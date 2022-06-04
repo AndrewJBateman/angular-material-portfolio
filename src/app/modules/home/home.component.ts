@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
 import { AREAS } from "./areas";
@@ -7,6 +7,7 @@ import { Area } from "./area.module";
 
 @Component({
   selector: "app-home",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.scss"],
 })

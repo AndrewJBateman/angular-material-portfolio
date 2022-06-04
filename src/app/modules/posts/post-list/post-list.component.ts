@@ -1,5 +1,5 @@
 import { BehaviorSubject, Observable } from "rxjs";
-import { Component, HostListener, OnInit } from "@angular/core";
+import { Component, HostListener, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { Router, NavigationExtras } from "@angular/router";
 
@@ -9,6 +9,7 @@ import { StorageService } from "../post-services/storage.service";
 
 @Component({
   selector: "app-post-list",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./post-list.component.html",
   styleUrls: ["./post-list.component.scss"],
 })

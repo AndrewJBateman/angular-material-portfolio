@@ -1,4 +1,4 @@
-import { Component, OnInit, Testability } from "@angular/core";
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
 import { Location } from "@angular/common";
@@ -7,6 +7,7 @@ import { AngularFireLiteFirestore } from "angularfire-lite";
 
 @Component({
   selector: "app-contact",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./contact.component.html",
   styleUrls: ["./contact.component.scss"],
 })

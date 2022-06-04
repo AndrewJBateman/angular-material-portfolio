@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { Skill } from "./skill.module";
 
@@ -6,6 +6,7 @@ import { SKILLS } from "./skills";
 
 @Component({
   selector: "app-skills",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./skills.component.html",
   styleUrls: ["./skills.component.scss"],
 })

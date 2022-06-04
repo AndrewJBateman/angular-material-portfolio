@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
 import { ProjectsArray } from "./projects";
@@ -6,6 +6,7 @@ import { Project } from './project.model';
 
 @Component({
   selector: "app-projects",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./projects.component.html",
   styleUrls: ["./projects.component.scss"],
 })

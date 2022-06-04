@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
@@ -6,6 +6,7 @@ import { Post } from '../../post';
 
 @Component({
   selector: 'app-post-detail',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './post-detail.component.html',
   styleUrls: ['./post-detail.component.scss']
 })
