@@ -28,7 +28,8 @@
 
 * **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes from [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
 * **Navbars:** Top/side navbars with page routing & links to Github & LinkedIn.
-* **Footer** with link to Build information page
+* **Footer** with date & link to Build information page
+* **Build Data** fxFlex layout with cards to display info. on main dependencies used in app
 * **Home:** Angular Tab Groups/Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
 * **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 * **Skills:** fxFlex layout with cards to display project data using data-binding from an array of skills based on a Skill model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
@@ -53,7 +54,7 @@
 * [Reactive Extensions Library for Javascript rxjs v7](https://rxjs-dev.firebaseapp.com/)
 * [RxJS share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
-* [Webpack Bundle Analyser v4](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.'
+* [Webpack Bundle Analyser v4](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.
 * [Easy-resize.com](https://www.easy-resize.com/en/) to resize pictures online
 
 ## :floppy_disk: Setup
