@@ -19,7 +19,7 @@
       <!-- <ng-container *ngIf="post.category === 'Dev'"> -->
 
       <!--mat-card for each post with data-binding from post.ts-->
-      <mat-card class="mat-elevation-z1" (click)="onGoToPostDetail(post)">
+      <mat-card class="mat-elevation-z1 general-card" (click)="onGoToPostDetail(post)">
         <mat-card-content>
           <p class="title-style">{{ post.title }}</p>
           <p class="content-style" style="height: 90px">

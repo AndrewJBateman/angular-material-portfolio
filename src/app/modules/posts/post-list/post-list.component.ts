@@ -10,8 +10,7 @@ import { StorageService } from "../post-services/storage.service";
 @Component({
   selector: "app-post-list",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./post-list.component.html",
-  styleUrls: ["./post-list.component.scss"],
+  templateUrl: "./post-list.component.html"
 })
 export class PostListComponent implements OnInit {
   title = "Read my posts";

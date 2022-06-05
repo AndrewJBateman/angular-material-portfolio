@@ -28,7 +28,7 @@
         repositories on Github with a mixture of my own projects and tutorial
         code.
       </p>
-      <p class="card-content">
+      <p class="general-card-content">
         Programming was not new to me as I previously worked for 20 years as an
         Electronic/Electrical Engineer in the UK, Spain and finally in Norway
         (including 2 years in Hammerfest, the Northermost town in the world).
@@ -36,7 +36,7 @@
         child with a rare disease called Landau Kleffner) & continue
         programming.
       </p>
-      <p class="card-content">
+      <p class="general-card-content">
         There is more about my Programming, Engineering & IT below. The aim of
         this website is to show some of my projects and a little about me,
         without repeating what is in Linkedin or Github. This website was built
@@ -50,7 +50,7 @@
   <div *ngFor="let area of areas; trackBy: trackByFn">
     <mat-card>
       <mat-card-content>
-        <p class="area-card-title">
+        <p class="general-card-title">
           <img
             [src]="area.svgPath"
             style="width: 30px; height: 30px"
@@ -58,7 +58,7 @@
           />
           {{ area.title }}
         </p>
-        <p class="card-content">{{ area.content }}</p>
+        <p class="general-card-content">{{ area.content }}</p>
       </mat-card-content>
     </mat-card>
   </div>
