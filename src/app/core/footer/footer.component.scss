@@ -1,0 +1,27 @@
+mat-divider {
+  position: absolute;
+  bottom: 64px;
+  left: 0;
+  right: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 25px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  p {
+    margin: 8px 0;
+    font-weight: 300;
+    font-size: medium;
+  }
+
+  .footer-link {
+    color: white;
+    padding: 0 16px;
+  }
+}

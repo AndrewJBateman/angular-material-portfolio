@@ -1,0 +1,40 @@
+<head>
+  <meta
+    name="description"
+    content="Web Tech page shows Angular and otther dependencies used in the website build"
+  />
+</head>
+
+<div fxFlex fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row wrap">
+    <div
+      *ngFor="let item of dataItems; let i = index"
+      fxFlex="25"
+      fxFlex.md="33"
+      fxFlex.sm="50"
+      fxFlex.xs="100"
+      fxLayout="column"
+      style="padding: 10px"
+    >
+      <mat-card class="general-card">
+        <mat-card-content>
+          <p class="general-card-content">
+            <img
+              [src]="item.iconLink"
+              style="width: 30px; height: 30px"
+              alt="icon of {{ item.name }}"
+            />
+            {{ item.name }}
+            <a
+              [href]="item.link"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="link to dependency page"
+              >v{{ item.version }}</a
+            >
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

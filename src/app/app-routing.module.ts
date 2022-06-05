@@ -40,6 +40,11 @@ const routes: Routes = [
       import("./modules/contact/contact.module").then((mod) => mod.ContactModule),
   },
   {
+    path: "web-tech",
+    loadChildren: () =>
+      import("./modules/web-tech/web-tech.module").then((mod) => mod.WebTechModule),
+  },
+  {
     path: "**",
     loadChildren: () =>
       import("./modules/pagenotfound/pagenotfound.module").then(
