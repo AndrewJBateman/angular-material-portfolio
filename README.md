@@ -1,7 +1,6 @@
 # :zap: Angular Material Portfolio
 
 * Angular Server Side Rendered (SSR) app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
-* Includes dark-mode toggle and lazy-loading modules.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-portfolio?style=plastic)
@@ -31,17 +30,19 @@
 * **Footer** with date & link to Build information page
 * **Build Data** fxFlex layout with cards to display info. on main dependencies used in app
 * **Home:** Angular Tab Groups/Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
-* **Projects:** fxFlex layout with cards to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
+* **Projects:** fxFlex layout with tabbed card pages to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 * **Skills:** fxFlex layout with cards to display project data using data-binding from an array of skills based on a Skill model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 * **Contact:** Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend using angularfire-lite and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
 * **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts.
-  Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info. **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
+Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info. **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 * **Not Found:** In the event of the user trying to route to any page address that is not listed in the router-module a single Mat-card will display a message to the user. There is a simple button to reroute the user to the Home page.
 
 ## :camera: Screenshots
 
   ![Example screenshot](./img/home.jpg)
   ![Example screenshot](./img/projects.png)
+  ![Example screenshot](./img/blog.png)
+  ![Example screenshot](./img/skills.png)
 
 ## :signal_strength: Technologies
 
@@ -61,7 +62,7 @@
 
 * `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
 * `npm run build` to create build file with Ahead of Time (AOT) compilation. Source map explorer set to false
-* `npm run explore` to run the webpack-bundle-analyzer - opens bundle analysis drawing
+* Once there is a build folder: `npm run explore` to run the webpack-bundle-analyzer - opens bundle analysis drawing
 * `npm run build:ssr` to create a build file with SSR. Add "defer" in inline css file in browser/index.html
 * `npm run serve:ssr` to see the SSR on localhost
 * `firebase deploy` to deploy build file to firebase hosting.
@@ -125,9 +126,10 @@ export class PostService {
 ## :clipboard: Status & To-Do List
 
 * Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 95%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
-* To-Do: Skills: add more skills, green skills? check electrical/instr skills are all there
+* To-Do: Skills: add more skills, green skills? add electrical/instr skills
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
-* To-Do: Projects: add to Node, add Docker/Java/IoT.. projects
+* To-Do: Projects: add to Node projects, add Docker/Java/IoT.. projects
+* To-Do: Blog: add articles and tab layout same as projects
 
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
 * To-Do: overview drg, replace contact code to send me an email
@@ -145,6 +147,7 @@ export class PostService {
 * [Andrei Voicu: Using ESLint and Prettier with VScode in an Angular Project](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
 * [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
 * [Article: THE PAST, PRESENT & FUTURE OF LOCAL STORAGE FOR WEB APPLICATIONS](http://diveintohtml5.info/storage.html)
+* [stackoverflow.com: Is it okay to add Angular routerLink to HTML a tags to avoid SEO issues?](https://stackoverflow.com/questions/57937451/is-it-okay-to-add-angular-routerlink-to-html-a-tags-to-avoid-seo-issues)
 
 ## :file_folder: License
 
