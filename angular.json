@@ -150,7 +150,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "sourceMap": false,
+              "sourceMap": true,
               "optimization": true,
               "bundleDependencies": true
             }
