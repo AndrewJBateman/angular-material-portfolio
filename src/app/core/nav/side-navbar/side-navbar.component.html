@@ -1,8 +1,19 @@
-<mat-nav-list style="background-color: #455a64 !important">
+<mat-nav-list
+  style="background-color: #455a64 !important; height: 100%; position:fixed; min-height: 100vh"
+  (click)="onSidenavClose()"
+  ><img
+    class="mat-elevation-z8 sidenav-image"
+    src="../../../../assets/svgs/angular.svg"
+    alt="profile image"
+    style="background-color: white !important; width: 60px; height: 60px"
+  />
+
+  <mat-divider class="sidenav-divider"></mat-divider>
   <a
     mat-list-item
     class="side-nav-link"
-    routerLink="/home"
+    [routerLink]="['/']"
+    href="/"
     routerLinkActive="side-link-active"
     (click)="onSidenavClose()"
   >
@@ -12,7 +23,8 @@
   <a
     mat-list-item
     class="side-nav-link"
-    routerLink="/projects"
+    [routerLink]="['/projects']"
+    href="/projects"
     routerLinkActive="side-link-active"
     (click)="onSidenavClose()"
   >
@@ -22,7 +34,8 @@
   <a
     mat-list-item
     class="side-nav-link"
-    routerLink="/skills"
+    [routerLink]="['/skills']"
+    href="/skills"
     routerLinkActive="side-link-active"
     (click)="onSidenavClose()"
   >
@@ -32,13 +45,26 @@
   <a
     mat-list-item
     class="side-nav-link"
-    routerLink="/contact"
+    [routerLink]="['/contact']"
+    href="/contact"
     routerLinkActive="side-link-active"
     (click)="onSidenavClose()"
   >
     <app-svg-mail></app-svg-mail>
     Contact
   </a>
+  <a
+    mat-list-item
+    class="side-nav-link"
+    [routerLink]="['/blog']"
+    href="/blog"
+    routerLinkActive="side-link-active"
+    (click)="onSidenavClose()"
+  >
+    <app-svg-blog></app-svg-blog>
+    Blog
+  </a>
+  <mat-divider class="sidenav-divider"></mat-divider>
   <a
     mat-list-item
     class="side-link-social"
@@ -59,18 +85,8 @@
     <app-svg-linkedin></app-svg-linkedin>
     LinkedIn
   </a>
-  <a
-    mat-list-item
-    class="side-nav-link"
-    routerLink="/blog"
-    routerLinkActive="side-link-active"
-    (click)="onSidenavClose()"
-  >
-    <app-svg-blog></app-svg-blog>
-    Blog
-  </a>
-  <a mat-list-item class="side-nav-link" (click)="onSidenavClose()">
+  <!-- <a mat-list-item class="side-drawer-close" (click)="onSidenavClose()">
     <app-svg-close></app-svg-close>
     Close
-  </a>
+  </a> -->
 </mat-nav-list>

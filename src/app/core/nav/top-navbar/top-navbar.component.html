@@ -2,7 +2,7 @@
 <mat-toolbar color="primary" sticky>
   <button
     (click)="onToggleSidenav()"
-    style="border: none; background-color: transparent;"
+    style="border: none; background-color: transparent"
     fxHide.gt-sm
     aria-label="drop-down menu button"
   >
@@ -10,7 +10,8 @@
   </button>
   <a
     class="top-nav-link no-hover-effect"
-    routerLink="/home"
+    [routerLink]="['/']"
+    href="/"
     routerLinkActive="top-link-active"
     aria-label="home nav button"
     mat-button
@@ -33,7 +34,8 @@
       <!-- The following menu items will be hidden on both SM and XS screen sizes -->
       <a
         class="top-nav-link"
-        routerLink="/projects"
+        [routerLink]="['/projects']"
+        href="/projects"
         routerLinkActive="top-link-active"
         aria-label="projects nav button"
         mat-button
@@ -42,7 +44,8 @@
       >
       <a
         class="top-nav-link"
-        routerLink="/skills"
+        [routerLink]="['/skills']"
+        href="/skills"
         routerLinkActive="top-link-active"
         aria-label="skills nav button"
         mat-button
@@ -51,12 +54,23 @@
       >
       <a
         class="top-nav-link"
-        routerLink="/contact"
+        [routerLink]="['/contact']"
+        href="/contact"
         routerLinkActive="top-link-active"
         aria-label="contact nav button"
         mat-button
         [disableRipple]="true"
         >Contact</a
+      >
+      <a
+        class="top-nav-link"
+        [routerLink]="['/blog']"
+        href="/blog"
+        routerLinkActive="top-link-active"
+        aria-label="blog nav button"
+        mat-button
+        [disableRipple]="true"
+        >Blog</a
       >
       <a
         class="top-link-social"
@@ -73,15 +87,6 @@
         rel="noreferrer"
         aria-label="link to linkedin profile"
         >LinkedIn</a
-      >
-      <a
-        class="top-nav-link"
-        routerLink="/blog"
-        routerLinkActive="top-link-active"
-        aria-label="blog nav button"
-        mat-button
-        [disableRipple]="true"
-        >Blog</a
       >
     </div>
   </div>

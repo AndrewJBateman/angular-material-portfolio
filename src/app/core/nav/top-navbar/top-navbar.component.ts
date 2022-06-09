@@ -1,8 +1,9 @@
-import { Component, Output, EventEmitter } from "@angular/core";
+import { Component, Output, EventEmitter, ChangeDetectionStrategy } from "@angular/core";
 import { MatSlideToggleChange } from "@angular/material/slide-toggle";
 
 @Component({
   selector: "app-top-navbar",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./top-navbar.component.html",
   styleUrls: ["./top-navbar.component.scss"],
 })

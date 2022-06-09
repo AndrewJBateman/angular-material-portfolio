@@ -3,8 +3,13 @@
   min-height: calc(100vh);
 
   .container {
-    padding-bottom: 64px;
+    padding-bottom: 56px;
+
+    mat-sidenav-container {
+      height: 100vh;
+    }
   }
+
 }
 
 // html, body, app-root {

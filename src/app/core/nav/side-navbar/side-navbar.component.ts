@@ -1,7 +1,8 @@
-import { Component, Output, EventEmitter } from "@angular/core";
+import { Component, Output, EventEmitter, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
   selector: "app-side-navbar",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./side-navbar.component.html",
   styleUrls: ["./side-navbar.component.scss"],
 })

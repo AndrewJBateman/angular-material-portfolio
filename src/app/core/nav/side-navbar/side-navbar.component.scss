@@ -2,16 +2,29 @@ mat-nav-list-item {
   color: #fff;
 }
 
+.sidenav-image {
+  margin: 16px 34px !important;
+}
+
+.sidenav-divider {
+  border-top-color: white;
+  color: #fff !important;
+  padding: 8px 0;
+}
+
 .side-nav-link {
   color: #fff !important;
 }
 
-.mat-drawer {
-  background-color: #455a64 !important;
+// .mat-drawer-inner-container {
+//   background-color: #455a64 !important;
+// }
+
+.side-drawer-close {
+  color: #fff !important;
 }
 
 .side-link-social {
-  padding: 16px 0;
   color: #fff !important;
   text-decoration: underline;
   text-decoration-color: #fff;
