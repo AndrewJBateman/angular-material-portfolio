@@ -39,7 +39,7 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 ## :camera: Screenshots
 
-  ![Example screenshot](./img/home.jpg)
+  ![Example screenshot](./img/home.png)
   ![Example screenshot](./img/projects.png)
   ![Example screenshot](./img/blog.png)
   ![Example screenshot](./img/skills.png)
