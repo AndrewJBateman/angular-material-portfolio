@@ -54,14 +54,14 @@ export const ProjectsArray: Project[] = [
       },
       // app 5
       {
-        title: "Angular Material API",
-        svgPath1: "../assets/svgs/angular.svg",
-        svgPath2: "../assets/svgs/material.svg",
+        title: "World Data App",
+        svgPath1: "../assets/svgs/ionic.svg",
+        svgPath2: "../assets/svgs/angular.svg",
         svgPath3: "../assets/svgs/rxjs.svg",
-        svgPath4: "../assets/svgs/bitcoin.svg",
+        svgPath4: "../assets/svgs/capacitor.svg",
         summary:
-          "Angular Progressive Web App using Angular Material and Server Side Rendering (SSR) to display cryptocurrency information and achieve an excellent Lighthouse score.",
-        github: "https://github.com/AndrewJBateman/angular-material-api",
+          "Ionic-Angular app that displays information about world countries and oceans using JSON data fetched from a REST API. Includes a user search of countries/capitals. Page popovers used to provide links to external websites or activate functions such as delete item from favourites. Integrated Google Maps API to show interactive country map. Ion-grid with fixed column size used so content is responsive.",
+        github: "https://github.com/AndrewJBateman/ionic-angular-world-data",
       },
       // app 6
       {
@@ -76,14 +76,14 @@ export const ProjectsArray: Project[] = [
       },
       // app 7
       {
-        title: "Next Apollo Crypto",
+        title: "Next GraphQL GraphCMS",
         svgPath1: "../assets/svgs/next.svg",
-        svgPath2: "../assets/svgs/apollo.svg",
-        svgPath3: "../assets/svgs/materialui.svg",
-        svgPath4: "../assets/svgs/bitcoin.svg",
+        svgPath2: "../assets/svgs/react.svg",
+        svgPath3: "../assets/svgs/graphql.svg",
+        svgPath4: "../assets/svgs/apollo.svg",
         summary:
-          "A Next.js React cryptocurrency api app using Apollo GraphQL client and Material-UI components.",
-        github: "https://github.com/AndrewJBateman/next-apollo-crypto",
+          "GraphCMS used to set up data models and allow public read access to the data using GraphQL. An API is created and accessed from a Next.js frontend. A query is created in the GraphCMS Playground.",
+        github: "https://github.com/AndrewJBateman/next-graphql-graphcms",
       },
       // app 8
       {
@@ -95,7 +95,7 @@ export const ProjectsArray: Project[] = [
         svgPath5: "../assets/svgs/github1.svg",
         svgPath6: "../assets/svgs/france.svg",
         summary:
-          "Angular app using Tailwind styles to display SNCF data from the Navitia API",
+          "Angular app using Tailwind styles to display SNCF data on public transport status from the Navitia API. Also displays disabled parking information using Leaflet maps.",
         github: "https://github.com/AndrewJBateman/angular-tailwind-sncf",
       },
       // app 9
@@ -106,7 +106,7 @@ export const ProjectsArray: Project[] = [
         svgPath3: "../assets/svgs/tailwind.svg",
         svgPath4: "../assets/svgs/arcgis.svg",
         summary:
-          "Angular multi-page app using RxJS operators and ArcGIS esri-mapping solutions from Esri to display a map. Tailwind CSS used for reduced styles build bundle. ",
+          "Angular multi-page Progressive Web App with Server-Side Rendering, using RxJS operators and ArcGIS mapping solutions from Esri to display a map. Tailwind CSS used for reduced styles build bundle. App language is French",
         github: "https://github.com/AndrewJBateman/angular-arcgis-multimaps",
       },
       // app 10
@@ -120,30 +120,30 @@ export const ProjectsArray: Project[] = [
           "Ionic-Angular app to fetch news articles from a REST API using Typescript interfaces & HTTP service providers. Custom pipes used to modify API news article titles, contents and convert the Universal Time Constant (UTC) date string. Dark mode, Offline Storage of favourite articles & settings using Ionic Storage. Common Refresh & Progress Bar Components. Localisation using i18n so user can select between English (default), Spanish and French.",
         github: "https://github.com/AndrewJBateman/ionic-angular-news-app",
       },
-      // app 11
-      {
-        title: "World Data App",
-        svgPath1: "../assets/svgs/ionic.svg",
-        svgPath2: "../assets/svgs/angular.svg",
-        svgPath3: "../assets/svgs/rxjs.svg",
-        svgPath4: "../assets/svgs/capacitor.svg",
-        summary:
-          "Ionic-Angular app that displays information about world countries and oceans using JSON data fetched from a REST API. Includes a user search of countries/capitals. Page popovers used to provide links to external websites or activate functions such as delete item from favourites. Integrated Google Maps API to show interactive country map. Ion-grid with fixed column size used so content is responsive.",
-        github: "https://github.com/AndrewJBateman/ionic-angular-world-data",
-      },
-      // app 12
-      {
-        title: "Next Cryptocurrency Charts",
-        svgPath1: "../assets/svgs/next.svg",
-        svgPath2: "../assets/svgs/react.svg",
-        svgPath3: "../assets/svgs/materialui.svg",
-        svgPath4: "../assets/svgs/apollo.svg",
-        svgPath5: "../assets/svgs/graphql.svg",
-        svgPath6: "../assets/svgs/bitcoin.svg",
-        summary:
-          "Next.js app using React library components, Material-UI, GraphQL, Apollo & Server Side Renderng (SSR) to display cryptocurrency price data from the Nomics Cryptocurrency API",
-        github: "https://github.com/AndrewJBateman/next-apollo-crypto",
-      },
+      // app X
+      // {
+      //   title: "Angular Material API",
+      //   svgPath1: "../assets/svgs/angular.svg",
+      //   svgPath2: "../assets/svgs/material.svg",
+      //   svgPath3: "../assets/svgs/rxjs.svg",
+      //   svgPath4: "../assets/svgs/bitcoin.svg",
+      //   summary:
+      //     "Angular Progressive Web App using Angular Material and Server Side Rendering (SSR) to display cryptocurrency information and achieve an excellent Lighthouse score.",
+      //   github: "https://github.com/AndrewJBateman/angular-material-api",
+      // },
+      // app X
+      // {
+      //   title: "Next Cryptocurrency Charts",
+      //   svgPath1: "../assets/svgs/next.svg",
+      //   svgPath2: "../assets/svgs/react.svg",
+      //   svgPath3: "../assets/svgs/materialui.svg",
+      //   svgPath4: "../assets/svgs/apollo.svg",
+      //   svgPath5: "../assets/svgs/graphql.svg",
+      //   svgPath6: "../assets/svgs/bitcoin.svg",
+      //   summary:
+      //     "Next.js app using React library components, Material-UI, GraphQL, Apollo & Server Side Renderng (SSR) to display cryptocurrency price data from the Nomics Cryptocurrency API",
+      //   github: "https://github.com/AndrewJBateman/next-apollo-crypto",
+      // },
     ],
   },
   {
