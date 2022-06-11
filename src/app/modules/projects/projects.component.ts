@@ -1,12 +1,21 @@
-import { Component, Input, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import {
+  Component,
+  Input,
+  OnInit,
+  ChangeDetectionStrategy,
+  ViewEncapsulation,
+} from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 
 import { ProjectsArray } from "./projects";
-import { Project } from './project.model';
+import { Project } from "./project.model";
+import { MatCardMdImage } from "@angular/material/card";
+import { mixinTabIndex } from "@angular/material/core";
 
 @Component({
   selector: "app-projects",
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
   templateUrl: "./projects.component.html",
   styleUrls: ["./projects.component.scss"],
 })
@@ -25,5 +34,13 @@ export class ProjectsComponent implements OnInit {
       name: "projects",
       content: "andrewbateman.org",
     });
+  }
+
+  tabTrackByFn(index: number, item: any): number {
+    return item.tabId;
+  }
+
+  cardTrackByFn(index: number, item: any): number {
+    return item.cardId;
   }
 }
