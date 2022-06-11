@@ -9,17 +9,15 @@
     <!--define CSP-->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src https://cdn.glitch.com/ https://www.google.com/images/ 'self' 'unsafe-inline'; script-src http://localhost:4000 http://localhost:4200 https://unpkg.com/pwacompat 'unsafe-inline'; connect-src 'self' https://firestore.googleapis.com auth.firebase.com http://localhost:4000/manifest.webmanifest;"
+      content="default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-eval' 'unsafe-inline'; img-src 'self' 'unsafe-inline' https://cdn.glitch.com/ https://www.google.com/images/; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://andrewbateman.org/ https://angular-blog-14cef.web.app https://angular-blog-14cef.firebaseapp.com/ http://localhost:4000 http://localhost:4200 https://unpkg.com/pwacompat; connect-src 'self' https://firestore.googleapis.com auth.firebase.com http://localhost:4000/manifest.webmanifest;"
+
     />
     <meta
       name="description"
       content="Angular portfolio app with Angular Material and a Firebase backend."
     />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      href="assets/icons/apple_touch_icon.png"
-    />
+    <link rel="apple-touch-icon" href="assets/icons/apple_touch_icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <script
       defer
