@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
-import { Post } from '../../post';
+import { Post } from '../../post.model';
 
 @Component({
   selector: 'app-post-detail',

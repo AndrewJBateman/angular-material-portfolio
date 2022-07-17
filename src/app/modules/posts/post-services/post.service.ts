@@ -3,7 +3,7 @@ import { AngularFireLiteFirestore } from "angularfire-lite";
 import { BehaviorSubject, Observable } from "rxjs";
 import { share } from "rxjs/operators";
 
-import { Post } from "../post";
+import { Post } from "../post.model";
 
 @Injectable()
 export class PostService {
