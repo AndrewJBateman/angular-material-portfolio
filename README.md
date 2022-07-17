@@ -125,10 +125,11 @@ export class PostService {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 95%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
+* Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
+* To-Do: white profile image for home page, AB should not be blue when other page active. Fix firestore/storage of posts error
 * To-Do: Skills: add more skills, green skills? add electrical/instr skills
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
-* To-Do: Projects: add to Node projects, add Docker/Java/IoT.. projects
+* To-Do: Projects: add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
 * To-Do: Blog: add articles and tab layout same as projects
 
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
