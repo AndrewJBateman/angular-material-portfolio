@@ -9,10 +9,13 @@
   <!--mat-card for each post with data-binding from post.ts-->
   <mat-card class="mat-card mat-elevation-z1">
     <img
+      *ngIf="imageData$ | async as imageData"
       mat-card-image
-      [src]="post.image"
-      [alt]="post.title"
+      [src]="imageData.body.urls.small"
+      alt="{{ imageData.body.alt_description }}"
       class="card-image"
+      max-width=680
+      height=auto
     />
     <mat-card-content>
       <p class="title-style">{{ post.title }}</p>
@@ -29,14 +32,14 @@
           </a>
 
           <div fxFlex></div>
-          <a
+          <!-- <a
             href="{{ post.imageLink }}"
             target="_blank"
             rel="noreferrer"
           >
             <app-svg-camera></app-svg-camera>
             {{ post.imageby }}
-          </a>
+          </a> -->
           <div fxFlex></div>
           <p>
             <app-svg-timer></app-svg-timer>

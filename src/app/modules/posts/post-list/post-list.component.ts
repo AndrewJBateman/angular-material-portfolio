@@ -18,7 +18,7 @@ import { StorageService } from "../post-services/storage.service";
   templateUrl: "./post-list.component.html",
 })
 export class PostListComponent implements OnInit {
-  title = "Read posts";
+  title = "Blog Posts";
   posts$: Observable<BehaviorSubject<Post[]>>;
 
   constructor(
