@@ -8,8 +8,9 @@
 <div class="post-detail-container">
   <!--mat-card for each post with data-binding from post.ts-->
   <mat-card class="mat-card mat-elevation-z1">
+  <!-- <mat-card class="mat-card mat-elevation-z1" *ngFor="imageData$ | async as imageData"> -->
     <img
-      *ngIf="imageData$ | async as imageData"
+    *ngIf="imageData$ | async as imageData"
       mat-card-image
       [src]="imageData.body.urls.small"
       alt="{{ imageData.body.alt_description }}"
