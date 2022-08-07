@@ -5,36 +5,45 @@
   // Card styling
   .mat-card {
     max-width: 700px;
-  }
-  .mat-card-image {
-    flex-shrink: 0;
-  }
 
-  .title-style {
-    margin: 0 0 4px;
-    font-size: 18px;
-    text-decoration: underline;
-    text-decoration-color: #68a1e2;
-    text-decoration-thickness: 2px;
-  }
+    .card-image {
+      flex-shrink: 0;
+    }
 
-  .subtitle-style {
-    font-size: 14px;
-    font-weight: 700;
-  }
+    .card-title {
+      margin: 0 0 4px;
+      font-size: 18px;
+      text-decoration: underline;
+      text-decoration-color: #68a1e2;
+      text-decoration-thickness: 2px;
+    }
 
-  .content-style {
-    white-space: pre-wrap;
-    margin: 0 0 8px;
-  }
+    .card-subtitle {
+      font-size: 14px;
+      font-weight: 700;
+    }
 
-  .small-text {
-    font-size: 14px !important;
-  }
+    .card-content {
+      white-space: pre-wrap;
+      margin: 0 0 8px;
+    }
 
-  .image-div {
-    position: relative;
-    text-align: center;
-    color: white;
+    .small-text {
+      font-size: 14px !important;
+
+      button {
+        background-color: #455a64;
+      }
+    }
+
+    .card-footer {
+      margin: auto 0 !important;
+    }
+
+    .image-div {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
   }
 }

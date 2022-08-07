@@ -8,42 +8,38 @@
 <div class="post-detail-container">
   <!--mat-card for each post with data-binding from post.ts-->
   <mat-card class="mat-card mat-elevation-z1">
-  <!-- <mat-card class="mat-card mat-elevation-z1" *ngFor="imageData$ | async as imageData"> -->
     <img
-    *ngIf="imageData$ | async as imageData"
+      *ngIf="imageData$ | async as imageData"
       mat-card-image
       [src]="imageData.body.urls.small"
       alt="{{ imageData.body.alt_description }}"
       class="card-image"
-      max-width=680
-      height=auto
+      max-width="680"
+      height="auto"
     />
     <mat-card-content>
-      <p class="title-style">{{ post.title }}</p>
-      <p class="content-style">
-        <span class="subtitle-style">{{ post.subtitle }}:</span>
+      <p class="card-title">{{ post.title }}</p>
+      <p class="card-content">
+        <span class="card-subtitle">{{ post.subtitle }}:</span>
         {{ post.content }}
       </p>
       <p>
         <span class="small-text">
-          <a (click)="onNavigateBackToPosts()" target="_blank" rel="noreferrer">
-            <!-- <app-svg-list></app-svg-list> -->
-
-            <app-svg-back></app-svg-back>Back
-          </a>
-
-          <div fxFlex></div>
-          <!-- <a
-            href="{{ post.imageLink }}"
-            target="_blank"
-            rel="noreferrer"
+          <button
+            mat-raised-button
+            (click)="onNavigateBackToPosts()"
           >
-            <app-svg-camera></app-svg-camera>
-            {{ post.imageby }}
-          </a> -->
+            <span style="color: #fff;">Back to list</span>
+          </button>
+
           <div fxFlex></div>
-          <p>
-            <app-svg-timer></app-svg-timer>
+          <p class="card-footer">
+            <app-svg-folder></app-svg-folder>
+            {{ post.category }}
+          </p>
+          <div fxFlex></div>
+          <p class="card-footer">
+            <app-svg-calender></app-svg-calender>
             {{ post.published.toDate() | dateConvert }}
           </p>
         </span>
