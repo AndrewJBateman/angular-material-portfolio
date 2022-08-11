@@ -10,8 +10,9 @@
   </button>
   <a
     class="top-nav-link no-hover-effect"
-    [routerLink]="['/']"
-    href="/"
+    [routerLink]="['/home']"
+    [routerLinkActiveOptions]="{ exact: true }"
+    href="/home"
     routerLinkActive="top-link-active"
     aria-label="home nav button"
     mat-button

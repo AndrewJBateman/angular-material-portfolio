@@ -12,8 +12,9 @@
   <a
     mat-list-item
     class="side-nav-link"
-    [routerLink]="['/']"
-    href="/"
+    [routerLink]="['/home']"
+    [routerLinkActiveOptions]="{ exact: true }"
+    href="/home"
     routerLinkActive="side-link-active"
     (click)="onSidenavClose()"
   >
