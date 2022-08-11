@@ -37,6 +37,7 @@ export class PostListComponent implements OnInit {
 
   // get posts Observable and store if not stored already
   async ngOnInit(): Promise<void> {
+    window.scrollTo(0, 0);
     this.posts$ = this.postService.getPosts();
     if (this.storageService.get("storedPosts") == null) {
       this.posts$.subscribe((val) => {
