@@ -1,5 +1,4 @@
 import { NgModule } from "@angular/core";
-import { AngularFireLite } from "angularfire-lite";
 import { CommonModule } from "@angular/common";
 
 import { ContactRoutingModule } from "./contact-routing.module";
@@ -9,7 +8,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
-import { environment } from "../../../environments/environment";
+import {
+  MatSnackBarModule,
+  MAT_SNACK_BAR_DEFAULT_OPTIONS,
+} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [ContactComponent],
@@ -17,13 +19,19 @@ import { environment } from "../../../environments/environment";
     CommonModule,
     ContactRoutingModule,
     SharedModule,
-    AngularFireLite.forRoot(environment.config),
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
+    MatSnackBarModule,
   ],
   exports: [ContactComponent],
+  providers: [
+    {
+      provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
+      useValue: { duration: 2500, verticalPosition: "top" },
+    },
+  ],
 })
 export class ContactModule {}

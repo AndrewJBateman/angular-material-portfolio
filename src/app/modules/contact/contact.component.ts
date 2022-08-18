@@ -1,9 +1,15 @@
+import { ContactModel } from "./models/contact.model";
+import { EmailContactService } from "./services/email-contact.service";
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
 import { Location } from "@angular/common";
-import { UntypedFormGroup, UntypedFormBuilder, Validators } from "@angular/forms";
-import { AngularFireLiteFirestore } from "angularfire-lite";
+import {
+  UntypedFormGroup,
+  UntypedFormBuilder,
+  Validators,
+} from "@angular/forms";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({
   selector: "app-contact",
@@ -12,19 +18,20 @@ import { AngularFireLiteFirestore } from "angularfire-lite";
   styleUrls: ["./contact.component.scss"],
 })
 export class ContactComponent implements OnInit {
-  title = "Send a message";
-
+  title = "Contact Page";
   contactForm: UntypedFormGroup;
 
   // Form state
   loading = false;
-  success = false;
+  success = "Thanks for sending a message 😉";
+  failure = "Error, message not sent 😦";
   imagePath = "/assets/images/laptop-desk.jpg";
   imageAlt = "photo of someone typing at a laptop on a desk";
 
   constructor(
-    private fb: UntypedFormBuilder,
-    private afs: AngularFireLiteFirestore,
+    private formBuilder: UntypedFormBuilder,
+    private emailService: EmailContactService,
+    private matSnackBar: MatSnackBar,
     private router: Router,
     private location: Location,
     private titleService: Title,
@@ -41,7 +48,7 @@ export class ContactComponent implements OnInit {
   }
 
   private fillForm() {
-    this.contactForm = this.fb.group({
+    this.contactForm = this.formBuilder.group({
       name: [
         "",
         [
@@ -59,7 +66,6 @@ export class ContactComponent implements OnInit {
           Validators.maxLength(400),
         ],
       ],
-      date: Date.now()
     });
   }
 
@@ -76,32 +82,19 @@ export class ContactComponent implements OnInit {
     return returnMessage;
   }
 
-  async submitHandler(): Promise<void> {
-    this.loading = true;
+  submitHandler() {
     const formValue = this.contactForm.value;
-
-    try {
-      this.afs.push("contacts", formValue)
-      this.success = true;
-    } catch (err) {
-      console.log(err);
-    }
-    this.imagePath = "/assets/images/thanks.jpg";
-    this.imageAlt = "photo of a card with the word thanks on a wooden table";
-    this.loading = false;
-  }
-
-  goHome(): any {
-    this.router.navigate(["/"]);
+    this.emailService.sendEmail(formValue).subscribe({
+      next: () => {
+        this.matSnackBar.open(this.success);
+      },
+      error: () => {
+        this.matSnackBar.open(this.failure);
+      },
+    });
   }
 
   goBack(): any {
     this.location.back();
-  }
-
-  sendAnother(): any {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this.router.onSameUrlNavigation = "reload";
-    this.router.navigate(["/contact"]);
   }
 }

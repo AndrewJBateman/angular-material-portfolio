@@ -5,125 +5,63 @@
   />
 </head>
 
-<div
-  class="container"
-  fxLayout
-  fxLayout.xs="column"
-  fxLayoutAlign="center"
-  fxLayoutGap="10px"
-  fxLayoutGap.xs="0"
->
-  <div class="item-1" fxFlex="40%">
-    <img class="img-thumbnail" src="{{ imagePath }}" alt="{{ imageAlt }}" />
-    <h2 class="contact-heading" [hidden]="success">Send me a message...</h2>
-  </div>
-  <div class="item-2" fxFlex="60%" fxFlexOrder="2">
-    <form
-      [formGroup]="contactForm"
-      [hidden]="success"
-      (ngSubmit)="submitHandler()"
-    >
-      <mat-card class="card-container">
-        <mat-form-field>
-          <input
-            matInput
-            placeholder="Enter your name"
-            formControlName="name"
-          />
-          <mat-error
-            *ngIf="name.invalid && name.touched"
-            class="alert alert-danger"
-          >
-            There is an error with the input data
-          </mat-error>
-        </mat-form-field>
+<form [formGroup]="contactForm" (ngSubmit)="submitHandler()">
+  <mat-card class="card-container">
+    <mat-form-field>
+      <input matInput placeholder="Enter your name" formControlName="name" />
+      <mat-error
+        *ngIf="name.invalid && name.touched"
+        class="alert alert-danger"
+      >
+        There is an error with the input data
+      </mat-error>
+    </mat-form-field>
 
-        <mat-form-field>
-          <input
-            matInput
-            placeholder="Enter your email"
-            formControlName="email"
-          />
-          <mat-error
-            *ngIf="email.invalid && email.touched"
-            class="alert alert-danger"
-          >
-            There is an error in your email
-          </mat-error>
-        </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter your email" formControlName="email" />
+      <mat-error
+        *ngIf="email.invalid && email.touched"
+        class="alert alert-danger"
+      >
+        There is an error in your email
+      </mat-error>
+    </mat-form-field>
 
-        <mat-form-field>
-          <textarea
-            matInput
-            placeholder="Enter your message..."
-            formControlName="message"
-          ></textarea>
-          <mat-error
-            *ngIf="message.invalid && message.touched"
-            class="alert alert-danger"
-          >
-            Your message is empty.
-          </mat-error>
-        </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        placeholder="Enter your message..."
+        formControlName="message"
+      ></textarea>
+      <mat-error
+        *ngIf="message.invalid && message.touched"
+        class="alert alert-danger"
+      >
+        Your message is empty.
+      </mat-error>
+    </mat-form-field>
 
-        <mat-card-actions>
-          <button
-            mat-flat-button
-            [disabled]="contactForm.valid && loading"
-            color="accent"
-            (click)="goBack()"
-            aria-label="Back button"
-          >
-            <span>Back</span>
-          </button>
-          <div fxFlex></div>
-          <button
-            mat-raised-button
-            type="submit"
-            [disabled]="contactForm.invalid || loading"
-            color="primary"
-            aria-label="Send button"
-          >
-            <span>Send</span>
-          </button>
-          <div fxFlex></div>
-          <div [hidden]="">
-            <a
-              mat-flat-button
-              (click)="sendAnother()"
-              [disabled]="!contactForm.touched"
-              color="warn"
-              aria-label="cancel button"
-              ><span>Cancel</span>
-            </a>
-          </div>
-        </mat-card-actions>
-      </mat-card>
-    </form>
-
-    <div *ngIf="success" class="success-div">
-      <mat-card class="thanks-card">
-        <mat-card-header>
-          <mat-card-title style="color: green;">
-            Success!
-          </mat-card-title>
-        </mat-card-header>
-
-        <mat-card-content>
-          <p class="success-message">Your message has been sent.</p>
-          <button mat-button (click)="goHome()" class="home-another-button">
-            <p>Go to Homepage</p>
-          </button>
-
-          <button
-            mat-button
-            (click)="sendAnother()"
-            class="home-another-button"
-          >
-            <p>Send Another</p>
-          </button>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
-</div>
+    <mat-card-actions>
+      <button
+        mat-flat-button
+        [disabled]="contactForm.valid && loading"
+        color="accent"
+        (click)="goBack()"
+        aria-label="Back button"
+      >
+        <span>Back</span>
+      </button>
+      <div fxFlex></div>
+      <button
+        mat-raised-button
+        type="submit"
+        [disabled]="contactForm.invalid || loading"
+        color="primary"
+        aria-label="Send button"
+      >
+        <span>Send</span>
+      </button>
+      <div fxFlex></div>
+    </mat-card-actions>
+  </mat-card>
+</form>
