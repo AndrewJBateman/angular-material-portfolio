@@ -25,13 +25,12 @@ export class PostDetailComponent {
   ) {
     this.activatedRoute.queryParams.subscribe((params) => {
       this.post = this.router.getCurrentNavigation().extras.state.post;
-      console.log('post:', this.post)
     });
     this.getPhoto(this.post.image);
   }
 
   onNavigateBackToPosts(): void {
-    this.router.navigate(["../blog"]);
+    this.location.back()
   }
 
   getPhoto(subject: string): void {
