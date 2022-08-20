@@ -12,10 +12,10 @@ import { SharedModule } from "./shared/shared.module";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 import { ServiceWorkerModule } from "@angular/service-worker";
-import { FooterComponent } from './core/footer/footer.component';
+import { FooterComponent } from "./core/footer/footer.component";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, FooterComponent],
@@ -35,6 +35,6 @@ import { FooterComponent } from './core/footer/footer.component';
   exports: [],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

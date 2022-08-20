@@ -7,7 +7,6 @@ import { SvgDarkComponent } from "../../shared/components/svg-dark/svg-dark.comp
 import { SvgMenuComponent } from "../../shared/components/svg-menu/svg-menu.component";
 import { SvgHomeComponent } from "../../shared/components/svg-home/svg-home.component";
 import { SvgProjectComponent } from "../../shared/components/svg-project/svg-project.component";
-import { SvgMailComponent } from "../../shared/components/svg-mail/svg-mail.component";
 import { SvgGithubComponent } from "../../shared/components/svg-github/svg-github.component";
 import { SvgLinkedinComponent } from "../../shared/components/svg-linkedin/svg-linkedin.component";
 import { SvgDownloadComponent } from "../../shared/components/svg-download/svg-download.component";
@@ -15,6 +14,7 @@ import { SvgBlogComponent } from "../../shared/components/svg-blog/svg-blog.comp
 import { SvgCloseComponent } from "../../shared/components/svg-close/svg-close.component";
 import { SvgCreateComponent } from "../../shared/components/svg-create/svg-create.component";
 
+import { SvgMailModule } from "../../shared/components/svg-mail/svg-mail.module";
 import { SvgWorkModule } from "../../shared/components/svg-work/svg-work.module";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -36,7 +36,6 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     SvgMenuComponent,
     SvgHomeComponent,
     SvgProjectComponent,
-    SvgMailComponent,
     SvgGithubComponent,
     SvgLinkedinComponent,
     SvgDownloadComponent,
@@ -53,6 +52,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     MatSidenavModule,
     MatButtonModule,
     MatSlideToggleModule,
+    SvgMailModule,
     SvgWorkModule,
   ],
   exports: [TopNavbarComponent, SideNavbarComponent, SvgDarkComponent],

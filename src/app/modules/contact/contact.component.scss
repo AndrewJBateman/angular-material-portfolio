@@ -1,64 +1,111 @@
-mat-form-field {
-  display: block;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
 }
 
-mat-card-actions {
-  margin: auto;
-  padding: 8px 0 !important;
+.contact-card {
+  width: 60em;
+  height: 35em;
+  margin: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
 
-p {
-  margin: 0 0 8px;
+@media (max-width: 60em) {
+  .contact-card {
+    width: fit-content;
+    height: fit-content;
+    margin: 1em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-p .success-message {
-  margin: 0 0 16px;
+.mat-form-field {
+  font-size: 14px;
 }
 
-textarea {
-  min-height: 130px;
+.email-section {
+  width: 30em;
+  padding-left: 5px;
+
+  .mat-raised-button {
+    width: 10em;
+  }
+
+  .mat-card-header {
+    margin: 2em 0 2em 0;
+    font-size: 20px;
+    padding-right: 1em;
+  }
 }
 
-.contact-heading {
-  text-align: center;
-  margin: 0px auto 0 auto;
+@media (max-width: 40em) {
+  .message-section {
+    width: fit-content;
+    padding-left: 0;
+  }
 }
 
-.img-thumbnail {
-  display: block;
-  width: 60%;
-  height: auto;
-  margin: 16px auto;
-  border-radius: 50%;
+.submit-button {
+  padding-left: 7px;
 }
 
-.card-container {
+.map-section {
+  width: 30em;
   display: flex;
   flex-direction: column;
+
+  .mat-mini-fab {
+    margin: 1em;
+    // background-color: $maincolor;
+  }
 }
 
-.card-container > * {
+@media (max-width: 40em) {
+  .map-section {
+    width: fit-content;
+    padding-left: 0;
+  }
+}
+
+.section-divider {
+  padding: 10px;
+}
+
+@media (max-width: 60em) {
+  .section-divider {
+    visibility: hidden;
+    padding: 20px;
+  }
+}
+
+.map-location {
+  margin: 0 0 2em 1em;
+  min-width: min-content;
+}
+
+@media (max-width: 60em) {
+  .map-location {
+    margin: 0 0 3em 0;
+    width: fit-content;
+  }
+}
+
+.line {
+  height: 1px;
   width: 100%;
+  // background-color: $transparentgraycolor;
 }
 
-.thanks-card {
-  margin: 16px auto;
-  text-align: center;
-  padding: 16px;
-  align-items: center;
-}
+// .fab-links {
+//   margin-top: 1em;
+// }
 
-.success-div {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-another-button {
-  position: center;
-  text-align: center;
-  padding: 16px 16px 4px 16px;
-  border: 1px solid #0d47a1 !important;
-  width: 60%;
+.mat-card-subtitle {
+  margin-left: 7px;
 }
