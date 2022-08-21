@@ -64,57 +64,55 @@
         </mat-form-field>
 
         <div fxLayoutAlign="center">
+          <div fxFlex></div>
           <button
-            mat-raised-button
-            type="submit"
-            [disabled]="contactForm.invalid || loading"
-            color="accent"
-          >
-            <app-svg-mail></app-svg-mail>
-            <span class="submit-button">SEND</span>
-          </button>
-        </div>
-
-        <!-- <mat-card-actions>
-          <button
+            class="contact-button"
             mat-flat-button
             [disabled]="contactForm.valid && loading"
             color="accent"
             (click)="goBack()"
             aria-label="Back button"
           >
-            <span>Back</span>
+            <app-svg-back-white class="button-icon"></app-svg-back-white>
+            <span>BACK</span>
           </button>
           <div fxFlex></div>
           <button
+            class="contact-button"
             mat-raised-button
             type="submit"
             [disabled]="contactForm.invalid || loading"
-            color="primary"
+            color="accent"
             aria-label="Send button"
           >
-            <span>Send</span>
+            <app-svg-mail></app-svg-mail>
+            <span>SEND</span>
           </button>
           <div fxFlex></div>
-        </mat-card-actions> -->
+        </div>
       </form>
     </div>
 
     <mat-divider class="section-divider" [vertical]="true"></mat-divider>
 
+    <!--Map & More Info. section-->
     <div
       class="map-section"
       fxLayout="column"
       fxLayoutAlign="space-evenly center"
     >
-      <!-- <iframe
-        class="map-location"
-        width="400"
-        height="300"
-        frameBorder="0"
-        src="https://maps.google.com/maps?q=34912&t=&z=13&ie=UTF8&iwloc=&output=embed"
-      >
-      </iframe> -->
+      <div fxLayout="column">
+        <!-- <mat-card-subtitle>MORE INFO.</mat-card-subtitle> -->
+
+        <div class="line"></div>
+
+        <div class="fab-links" fxLayout="row">
+          <button mat-mini-fab color="accent"></button>
+          <button mat-mini-fab color="accent"></button>
+        </div>
+      </div>
+
+      <mat-card-subtitle>MY LOCATION</mat-card-subtitle>
       <iframe
         class="map-location"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.3794082198315!2d1.444990014810271!3d43.59864126397625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebc8340c0b109%3A0xe6b3fc528aeecc7d!2s6%20Rue%20Tolosane%2C%2031000%20Toulouse%2C%20Francia!5e0!3m2!1ses!2ses!4v1661008980042!5m2!1ses!2ses"
@@ -126,17 +124,6 @@
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
-
-      <div fxLayout="column">
-        <mat-card-subtitle>OTHER WAYS TO CONTACT ME</mat-card-subtitle>
-
-        <div class="line"></div>
-
-        <div class="fab-links" fxLayout="row">
-          <button mat-mini-fab color="accent"></button>
-          <button mat-mini-fab color="accent"></button>
-        </div>
-      </div>
     </div>
   </mat-card>
 </div>

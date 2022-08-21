@@ -38,9 +38,16 @@
   }
 
   .mat-card-header {
-    margin: 2em 0 2em 0;
+    margin: 1em 0 1em 0;
     font-size: 20px;
     padding-right: 1em;
+  }
+
+  .mat-card-subtitle {
+    margin: 1em 0 1em 0;
+    font-size: 18px;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -51,8 +58,8 @@
   }
 }
 
-.submit-button {
-  padding-left: 7px;
+.contact-button {
+  padding-top: 8px;
 }
 
 .map-section {
@@ -102,10 +109,7 @@
   // background-color: $transparentgraycolor;
 }
 
-// .fab-links {
-//   margin-top: 1em;
-// }
-
-.mat-card-subtitle {
-  margin-left: 7px;
+.fab-links {
+  margin-bottom: 1em;
 }
+

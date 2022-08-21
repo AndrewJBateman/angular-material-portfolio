@@ -5,6 +5,7 @@ import { ContactRoutingModule } from "./contact-routing.module";
 import { ContactComponent } from "./contact.component";
 import { SharedModule } from "../../shared/shared.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { SvgBackWhiteModule } from "app/shared/components/svg-back-white/svg-back-white.module";
 import { SvgMailModule } from "../../shared/components/svg-mail/svg-mail.module";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
@@ -14,8 +15,6 @@ import {
   MatSnackBarModule,
   MAT_SNACK_BAR_DEFAULT_OPTIONS,
 } from "@angular/material/snack-bar";
-import { SvgMailComponent } from "app/shared/components/svg-mail/svg-mail.component";
-
 
 @NgModule({
   declarations: [ContactComponent],
@@ -30,6 +29,7 @@ import { SvgMailComponent } from "app/shared/components/svg-mail/svg-mail.compon
     MatDividerModule,
     MatInputModule,
     MatSnackBarModule,
+    SvgBackWhiteModule,
     SvgMailModule,
   ],
   exports: [ContactComponent],
