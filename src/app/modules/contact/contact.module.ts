@@ -15,6 +15,7 @@ import {
   MatSnackBarModule,
   MAT_SNACK_BAR_DEFAULT_OPTIONS,
 } from "@angular/material/snack-bar";
+import { SvgLinkedinModule } from "app/shared/components/svg-linkedin/svg-linkedin.module";
 
 @NgModule({
   declarations: [ContactComponent],
@@ -29,6 +30,7 @@ import {
     MatDividerModule,
     MatInputModule,
     MatSnackBarModule,
+    SvgLinkedinModule,
     SvgBackWhiteModule,
     SvgMailModule,
   ],
