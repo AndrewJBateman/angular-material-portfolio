@@ -3,7 +3,7 @@
   <button
     (click)="onToggleSidenav()"
     style="border: none; background-color: transparent"
-    fxHide.gt-sm
+    fxHide.gt-xs
     aria-label="drop-down menu button"
   >
     <app-svg-menu></app-svg-menu>
@@ -31,7 +31,7 @@
   </span>
 
   <div fxFlex fxLayout fxLayoutAlign="end">
-    <div fxHide.lt-md>
+    <div fxHide.lt-sm>
       <!-- The following menu items will be hidden on both SM and XS screen sizes -->
       <a
         class="top-nav-link"
@@ -73,7 +73,7 @@
         [disableRipple]="true"
         >Blog</a
       >
-      <a
+      <!-- <a
         class="top-link-social"
         href="https://www.github.com/andrewjbateman"
         target="_blank"
@@ -88,7 +88,7 @@
         rel="noreferrer"
         aria-label="link to linkedin profile"
         >LinkedIn</a
-      >
+      > -->
     </div>
   </div>
 </mat-toolbar>
