@@ -16,7 +16,7 @@
     <!--Email section-->
     <div class="email-section">
       <mat-card-title fxLayoutAlign="center"
-        ><app-svg-mail></app-svg-mail>SEND A MESSAGE</mat-card-title
+        >SEND A MESSAGE</mat-card-title
       >
       <form
         [formGroup]="contactForm"
@@ -73,15 +73,7 @@
 
         <div fxLayoutAlign="center">
           <button
-            mat-raised-button
-            class="accent-button"
-            (click)="goBack()"
-            aria-label="Back button"
-          >
-            <span class="button-text">BACK</span>
-          </button>
-          <button
-            mat-raised-button
+            mat-stroked-button
             color="primary"
             type="submit"
             [disabled]="contactForm.invalid || loading"
@@ -101,8 +93,8 @@
       fxLayout="column"
       fxLayoutAlign="space-evenly center"
     >
-      <mat-card-subtitle>MORE INFO...</mat-card-subtitle>
-      <div class="line"></div>
+      <!-- <mat-card-subtitle>MORE INFO...</mat-card-subtitle> -->
+      <!-- <div class="line"></div> -->
       <iframe
         class="map-location"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.3794082198315!2d1.444990014810271!3d43.59864126397625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebc8340c0b109%3A0xe6b3fc528aeecc7d!2s6%20Rue%20Tolosane%2C%2031000%20Toulouse%2C%20Francia!5e0!3m2!1ses!2ses!4v1661008980042!5m2!1ses!2ses"
@@ -115,11 +107,11 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
       <div class="contact-links" fxLayout="row">
-        <button mat-raised-button class="accent-button">
-          <span class="button-text">LinkedIn</span>
+        <button class="linkedin-button" mat-stroked-button color="accent">
+          <span>LinkedIn</span>
         </button>
-        <button mat-raised-button class="primary-button">
-          <span class="button-text">Github</span>
+        <button mat-stroked-button color="primary">
+          <span>Github</span>
         </button>
       </div>
     </div>

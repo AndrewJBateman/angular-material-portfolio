@@ -5,7 +5,6 @@ import { ContactRoutingModule } from "./contact-routing.module";
 import { ContactComponent } from "./contact.component";
 import { SharedModule } from "../../shared/shared.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { SvgBackWhiteModule } from "app/shared/components/svg-back-white/svg-back-white.module";
 import { SvgMailModule } from "../../shared/components/svg-mail/svg-mail.module";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
@@ -15,7 +14,6 @@ import {
   MatSnackBarModule,
   MAT_SNACK_BAR_DEFAULT_OPTIONS,
 } from "@angular/material/snack-bar";
-import { SvgLinkedinModule } from "app/shared/components/svg-linkedin/svg-linkedin.module";
 
 @NgModule({
   declarations: [ContactComponent],
@@ -30,15 +28,18 @@ import { SvgLinkedinModule } from "app/shared/components/svg-linkedin/svg-linked
     MatDividerModule,
     MatInputModule,
     MatSnackBarModule,
-    SvgLinkedinModule,
-    SvgBackWhiteModule,
     SvgMailModule,
   ],
   exports: [ContactComponent],
   providers: [
     {
       provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
-      useValue: { duration: 2500, verticalPosition: "top" },
+      useValue: {
+        duration: 2500,
+        verticalPosition: "center",
+        minWidth: "40vw",
+        hasBackdrop: true,
+      },
     },
   ],
 })

@@ -1,5 +1,3 @@
-import { ContactModel } from "./models/contact.model";
-import { EmailContactService } from "./services/email-contact.service";
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
@@ -10,6 +8,9 @@ import {
   Validators,
 } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
+
+import { ContactModel } from "./models/contact.model";
+import { EmailContactService } from "./services/email-contact.service";
 
 @Component({
   selector: "app-contact",
@@ -23,10 +24,8 @@ export class ContactComponent implements OnInit {
 
   // Form state
   loading = false;
-  success = "Thanks for sending a message 😉";
-  failure = "Error, message not sent 😦";
-  imagePath = "/assets/images/laptop-desk.jpg";
-  imageAlt = "photo of someone typing at a laptop on a desk";
+  success = "Message sent";
+  failure = "No message sent";
 
   constructor(
     private formBuilder: UntypedFormBuilder,
@@ -87,14 +86,11 @@ export class ContactComponent implements OnInit {
     this.emailService.sendEmail(formValue).subscribe({
       next: () => {
         this.matSnackBar.open(this.success);
+        this.contactForm.reset();
       },
       error: () => {
         this.matSnackBar.open(this.failure);
       },
     });
-  }
-
-  goBack(): any {
-    this.location.back();
   }
 }

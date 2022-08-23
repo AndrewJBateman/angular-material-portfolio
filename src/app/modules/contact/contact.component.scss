@@ -32,10 +32,6 @@
     width: 30em;
     padding-left: 5px;
 
-    // .mat-raised-button {
-    //   width: 10em;
-    // }
-
     .mat-card-title {
       margin: 0.5em 0 1em 0;
       font-size: 20px;
@@ -50,21 +46,8 @@
     }
   }
 
-  // .contact-button {
-  //   padding-top: 8px;
-  // }
-
-  .accent-button {
+  .linkedin-button {
     margin-right: 2rem;
-    background-color: #0d47a1;
-  }
-
-  .primary-button {
-    background-color: #455a64;
-  }
-
-  .button-text {
-    color: white;
   }
 
   .map-section {
@@ -99,16 +82,16 @@
   }
 
   .map-location {
-    margin: 0 0 1em 1em;
+    margin: 0 1em 1em 1em;
     min-width: min-content;
   }
 
-  @media (max-width: 60em) {
-    .map-location {
-      margin: 0 0 2em 0;
-      width: fit-content;
-    }
-  }
+  // @media (max-width: 60em) {
+  //   .map-location {
+  //     margin: 0 1em 1em 0;
+  //     width: fit-content;
+  //   }
+  // }
 
   .line {
     height: 1px;
@@ -116,7 +99,7 @@
     background-color: #455a64;
   }
 
-  .contact-links {
-    margin-bottom: 1em;
-  }
+  // .contact-links {
+  //   margin-bottom: 1em;
+  // }
 }

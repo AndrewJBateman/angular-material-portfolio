@@ -8,12 +8,12 @@ import { SvgMenuComponent } from "../../shared/components/svg-menu/svg-menu.comp
 import { SvgHomeComponent } from "../../shared/components/svg-home/svg-home.component";
 import { SvgProjectComponent } from "../../shared/components/svg-project/svg-project.component";
 import { SvgGithubComponent } from "../../shared/components/svg-github/svg-github.component";
-import { SvgLinkedinComponent } from "../../shared/components/svg-linkedin/svg-linkedin.component";
 import { SvgDownloadComponent } from "../../shared/components/svg-download/svg-download.component";
 import { SvgBlogComponent } from "../../shared/components/svg-blog/svg-blog.component";
 import { SvgCloseComponent } from "../../shared/components/svg-close/svg-close.component";
 import { SvgCreateComponent } from "../../shared/components/svg-create/svg-create.component";
 
+import { SvgLinkedinModule} from "../../shared/components/svg-linkedin/svg-linkedin.module";
 import { SvgMailModule } from "../../shared/components/svg-mail/svg-mail.module";
 import { SvgWorkModule } from "../../shared/components/svg-work/svg-work.module";
 
@@ -37,7 +37,6 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     SvgHomeComponent,
     SvgProjectComponent,
     SvgGithubComponent,
-    SvgLinkedinComponent,
     SvgDownloadComponent,
     SvgBlogComponent,
     SvgCloseComponent,
@@ -52,6 +51,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     MatSidenavModule,
     MatButtonModule,
     MatSlideToggleModule,
+    SvgLinkedinModule,
     SvgMailModule,
     SvgWorkModule,
   ],
