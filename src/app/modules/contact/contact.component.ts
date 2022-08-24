@@ -86,7 +86,6 @@ export class ContactComponent implements OnInit {
     this.emailService.sendEmail(formValue).subscribe({
       next: () => {
         this.matSnackBar.open(this.success);
-        this.contactForm.reset();
       },
       error: () => {
         this.matSnackBar.open(this.failure);
