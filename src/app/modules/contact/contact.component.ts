@@ -2,11 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
 import { Location } from "@angular/common";
-import {
-  UntypedFormGroup,
-  UntypedFormBuilder,
-  Validators,
-} from "@angular/forms";
+import { FormBuilder, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
 import { ContactModel } from "./models/contact.model";
@@ -20,15 +16,25 @@ import { EmailContactService } from "./services/email-contact.service";
 })
 export class ContactComponent implements OnInit {
   title = "Contact Page";
-  contactForm: UntypedFormGroup;
+  contactForm = this.formBuilder.group({
+    name: [
+      "",
+      [Validators.required, Validators.minLength(4), Validators.maxLength(100)],
+    ],
+    email: ["", [Validators.required, Validators.email]],
+    message: [
+      "",
+      [Validators.required, Validators.minLength(4), Validators.maxLength(400)],
+    ],
+  });
 
   // Form state
   loading = false;
   success = "Message sent";
-  failure = "No message sent";
+  failure = "Message not sent";
 
   constructor(
-    private formBuilder: UntypedFormBuilder,
+    private formBuilder: FormBuilder,
     private emailService: EmailContactService,
     private matSnackBar: MatSnackBar,
     private router: Router,
@@ -38,33 +44,10 @@ export class ContactComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.fillForm();
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({
       name: "contact",
       content: "andrewbateman.org",
-    });
-  }
-
-  private fillForm() {
-    this.contactForm = this.formBuilder.group({
-      name: [
-        "",
-        [
-          Validators.required,
-          Validators.minLength(4),
-          Validators.maxLength(100),
-        ],
-      ],
-      email: ["", [Validators.required, Validators.email]],
-      message: [
-        "",
-        [
-          Validators.required,
-          Validators.minLength(4),
-          Validators.maxLength(400),
-        ],
-      ],
     });
   }
 
@@ -81,11 +64,13 @@ export class ContactComponent implements OnInit {
     return returnMessage;
   }
 
-  submitHandler() {
-    const formValue = this.contactForm.value;
+  submitHandler(formDirective): void {
+    const formValue: Partial<ContactModel> = this.contactForm.value;
     this.emailService.sendEmail(formValue).subscribe({
       next: () => {
         this.matSnackBar.open(this.success);
+        formDirective.resetForm();
+        this.contactForm.reset();
       },
       error: () => {
         this.matSnackBar.open(this.failure);

@@ -11,7 +11,7 @@ export class EmailContactService {
 
   constructor(private http: HttpClient) {}
 
-  sendEmail(form: ContactModel) {
+  sendEmail(form: Partial<ContactModel>) {
     return this.http.post(
       this.formspreeUrl,
       { name: form.name, replyto: form.email, message: form.message },

@@ -82,8 +82,9 @@
   }
 
   .map-location {
-    margin: 0 1em 1em 1em;
+    margin: 1em auto !important;
     min-width: min-content;
+    position: center !important;
   }
 
   // @media (max-width: 60em) {
