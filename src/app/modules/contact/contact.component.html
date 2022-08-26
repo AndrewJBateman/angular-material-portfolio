@@ -18,7 +18,7 @@
       >
         <!--name form-field-->
         <mat-form-field appearance="outline">
-          <input matInput placeholder="Your name..." formControlName="name" />
+          <input matInput placeholder="Your name..." formControlName="name" #name/>
           <mat-error
             *ngIf="name.invalid && name.touched"
             class="alert alert-danger"
@@ -29,7 +29,7 @@
 
         <!--email form-field-->
         <mat-form-field appearance="outline">
-          <input matInput placeholder="Your email..." formControlName="email" />
+          <input matInput placeholder="Your email..." formControlName="email" #email/>
           <mat-error
             *ngIf="email.invalid && name.touched"
             class="alert alert-danger"
@@ -47,6 +47,7 @@
             cdkAutosizeMaxRows="10"
             placeholder="Your message..."
             formControlName="message"
+            #message
           ></textarea>
           <mat-error
             *ngIf="message.invalid && name.touched"

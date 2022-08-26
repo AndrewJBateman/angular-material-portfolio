@@ -51,29 +51,20 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  get name(): any {
-    return this.contactForm.get("name");
-  }
-
-  get email(): any {
-    return this.contactForm.get("email");
-  }
-
-  get message(): any {
-    const returnMessage = this.contactForm.get("message");
-    return returnMessage;
-  }
-
   submitHandler(formDirective): void {
     const formValue: Partial<ContactModel> = this.contactForm.value;
     this.emailService.sendEmail(formValue).subscribe({
       next: () => {
-        this.matSnackBar.open(this.success);
+        this.matSnackBar.open(this.success, 'OK', {
+          panelClass: ['snackbar-common', 'green-snackbar']
+        });
         formDirective.resetForm();
         this.contactForm.reset();
       },
       error: () => {
-        this.matSnackBar.open(this.failure);
+        this.matSnackBar.open(this.failure, 'OK', {
+          panelClass: ['snackbar-common', 'red-snackbar']
+        });
       },
     });
   }

@@ -35,10 +35,7 @@ import {
     {
       provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
       useValue: {
-        duration: 2500,
-        verticalPosition: "center",
-        minWidth: "40vw",
-        hasBackdrop: true,
+        duration: 5000,
       },
     },
   ],

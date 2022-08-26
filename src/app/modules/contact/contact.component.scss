@@ -87,20 +87,16 @@
     position: center !important;
   }
 
-  // @media (max-width: 60em) {
-  //   .map-location {
-  //     margin: 0 1em 1em 0;
-  //     width: fit-content;
-  //   }
-  // }
+  @media (max-width: 60em) {
+    .map-location {
+      margin: 0 1em 1em 0;
+      width: fit-content;
+    }
+  }
 
   .line {
     height: 1px;
     width: 50%;
     background-color: #455a64;
   }
-
-  // .contact-links {
-  //   margin-bottom: 1em;
-  // }
 }
