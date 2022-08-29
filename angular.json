@@ -22,7 +22,9 @@
               "@firebase/firestore",
               "@firebase/component",
               "@firebase/util",
-              "@firebase/app"
+              "@firebase/app",
+              "dayjs",
+              "idb"
             ],
             "outputPath": "dist/angular-material-portfolio/browser",
             "index": "src/index.html",
