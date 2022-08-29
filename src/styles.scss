@@ -104,3 +104,34 @@ mat-card {
   color: white;
   padding: 0 16px;
 }
+
+.snackbar-common {
+  position: absolute;
+  right: 0.5rem;
+  top: 4.5rem;
+
+  .mat-simple-snackbar-action {
+    color: white !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .snackbar-common {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+.green-snackbar {
+  background-color: green !important;
+  color: white;
+
+  .mat-simple-snackbar-action {
+    color: white !important;
+  }
+}
+
+.red-snackbar {
+  background: #b71c1c;
+  color: white;
+}
