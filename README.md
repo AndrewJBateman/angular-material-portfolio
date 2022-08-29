@@ -57,6 +57,7 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
 * [Webpack Bundle Analyser v4](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.
 * [Easy-resize.com](https://www.easy-resize.com/en/) to resize pictures online
+* [Formspree](https://formspree.io/) to send email form
 
 ## :floppy_disk: Setup
 
@@ -126,14 +127,14 @@ export class PostService {
 ## :clipboard: Status & To-Do List
 
 * Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
-* To-Do: white profile image for home page, AB should not be blue when other page active. Fix firestore/storage of posts error
+* To-Do: Home: Store data in firebase
 * To-Do: Skills: add more skills, green skills? add electrical/instr skills
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
 * To-Do: Projects: add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
-* To-Do: Blog: add articles and tab layout same as projects
+* To-Do: Blog: Unsplash images - use sizing website. add articles and tab layout same as projects
 
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
-* To-Do: overview drg, replace contact code to send me an email
+* To-Do: overview drg
 
 ## :clap: Inspiration
 
@@ -149,6 +150,8 @@ export class PostService {
 * [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
 * [Article: THE PAST, PRESENT & FUTURE OF LOCAL STORAGE FOR WEB APPLICATIONS](http://diveintohtml5.info/storage.html)
 * [stackoverflow.com: Is it okay to add Angular routerLink to HTML a tags to avoid SEO issues?](https://stackoverflow.com/questions/57937451/is-it-okay-to-add-angular-routerlink-to-html-a-tags-to-avoid-seo-issues)
+* [Geek Turtorials: Insert a Google Map to Your Website](https://www.youtube.com/watch?v=KIC0OK9nKXY)
+* [Icons For Free](https://icons-for-free.com/)
 
 ## :file_folder: License
 
