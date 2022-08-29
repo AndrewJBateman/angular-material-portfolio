@@ -1,9 +1,9 @@
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
+import { BehaviorSubject, Observable } from "rxjs";
 
-import { AREAS } from "./areas";
-import { Observable } from "rxjs";
-import { Area } from "./area.module";
+import { AreasService } from "./home-services/areas.service";
+import { Area } from "./area.model";
 
 @Component({
   selector: "app-home",
@@ -13,12 +13,12 @@ import { Area } from "./area.module";
 })
 export class HomeComponent implements OnInit {
   title = "Home";
-  areas = AREAS;
-  repos$: Observable<number>;
+  areas$: Observable<BehaviorSubject<Area[]>>;
 
   constructor(
     private metaTagService: Meta,
-    private titleService: Title
+    private titleService: Title,
+    private areasService: AreasService
   ) {}
 
   ngOnInit(): void {
@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
       name: "home",
       content: "andrewbateman.org",
     });
+    this.areas$ = this.areasService.getAreas();
   }
 
   trackByFn(index: number, area: Area): number {

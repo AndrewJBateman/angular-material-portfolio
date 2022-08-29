@@ -1,4 +1,4 @@
-import { Area } from "./area.module";
+import { Area } from "./area.model";
 
 export const AREAS: Area[] = [
   {

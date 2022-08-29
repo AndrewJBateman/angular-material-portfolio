@@ -1,5 +1,4 @@
 import { NgModule } from "@angular/core";
-import { AngularFireLite } from "angularfire-lite";
 import { Routes, RouterModule } from "@angular/router";
 
 import { SharedModule } from "../../shared/shared.module";
@@ -32,7 +31,6 @@ const routes: Routes = [
     SharedModule,
     PipesModule,
     RouterModule.forChild(routes),
-    AngularFireLite.forRoot(environment.config),
     SvgFolderModule,
     SvgTimerModule,
     SvgCalenderModule,
