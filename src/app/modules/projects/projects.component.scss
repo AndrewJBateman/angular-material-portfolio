@@ -1,8 +1,30 @@
 // tabs layout
-.mat-tab-group {
-  margin-bottom: 48px;
+// .mat-tab-group {
+//   margin-bottom: 48px;
 
+// }
 
+/* label style */
+// .mat-tab-label {
+//   background: #455a64;
+//   color: white !important;
+// }
+// /* focus style */
+// .mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus,
+// .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus,
+// .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus
+//  {
+//   background-color: #455a64;
+// }
+// /* ink bar style */
+// .mat-tab-group.mat-primary .mat-ink-bar,
+// .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+//   background: #0e2b38;
+//   height: 4px;
+// }
+
+.mat-tab-label .mat-tab-label-content.white {
+  color: white !important;
 }
 
 // card styling

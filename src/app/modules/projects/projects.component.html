@@ -5,8 +5,8 @@
   />
 </head>
 
-<mat-tab-group mat-align-tabs="start">
-  <mat-tab *ngFor="let area of projectsArray; trackBy: tabTrackByFn" [label]="area.projectArea">
+<mat-tab-group backgroundColor="primary" mat-align-tabs="start">
+  <mat-tab *ngFor="let area of projectsArray; trackBy: tabTrackByFn" [label]="area.projectArea" class="white">
     <div fxFlex fxLayout="column" fxLayoutGap="10px">
       <div fxLayout="row wrap">
         <div
