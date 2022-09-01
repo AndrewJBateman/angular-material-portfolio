@@ -32,18 +32,13 @@ export class PostListComponent implements OnInit {
   @HostListener("document:visibilitychange", ["$event"]) handleVisibilityChange(
     event: any
   ): void {
-    // this.posts$ = this.postService.getPosts();
+    this.posts$ = this.postService.getPosts();
   }
 
   // get posts Observable and store if not stored already
   async ngOnInit(): Promise<void> {
     window.scrollTo(0, 0);
     this.posts$ = this.postService.getPosts();
-    if (this.storageService.get("storedPosts") == null) {
-      this.posts$.subscribe((val) => {
-        this.storageService.set("storedPosts", val);
-      });
-    }
 
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({
