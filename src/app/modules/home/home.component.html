@@ -21,12 +21,12 @@
       <p class="top-card-content">
         <span class="card-bold-text"
           >Full-Stack Development | Engineering | Cloud | IT.</span
-        > I have been studying programming part-time for a number of years,
+        >
+        I have been studying programming part-time for a number of years,
         completing lots of online courses & tutorials from FreeCodeCamp,
-        Treehouse, Udemy, Coursera and Youtube etc. I also gained
-        Google Associate Cloud Engineer Certification. I have hundreds of
-        repositories on Github with a mixture of my own projects and tutorial
-        code.
+        Treehouse, Udemy, Coursera and Youtube etc. I also gained Google
+        Associate Cloud Engineer Certification. I have hundreds of repositories
+        on Github with a mixture of my own projects and tutorial code.
       </p>
       <p class="general-card-content">
         Programming was not new to me as I previously worked for 20 years as an
@@ -47,8 +47,9 @@
     </mat-card-content>
   </mat-card>
   <!--Bottom section: mat-card for each area with async data-binding-->
-  <div *ngFor="let area of areas$ | async; trackBy: trackByFn">
-    <mat-card>
+  <!-- <div *ngFor="let area of areas$ | async; trackBy: trackByFn"> -->
+  <div *ngIf="areas$">
+    <mat-card *ngFor="let area of areas$ | async; trackBy: trackByFn">
       <mat-card-content>
         <p class="general-card-title">
           <img
