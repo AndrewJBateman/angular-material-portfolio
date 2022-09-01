@@ -9,7 +9,7 @@
   <mat-card class="contact-card mat-elevation-z4">
     <!--Email section-->
     <div class="email-section">
-      <mat-card-title fxLayoutAlign="center">SEND ME A MESSAGE</mat-card-title>
+      <mat-card-title fxLayoutAlign="center">SEND A MESSAGE</mat-card-title>
       <form
         [formGroup]="contactForm"
         #formDirective="ngForm"
@@ -57,7 +57,7 @@
           </mat-error>
         </mat-form-field>
 
-        <div fxLayoutAlign="center" class="send-button-div">
+        <div fxLayoutAlign="center">
           <button
             mat-stroked-button
             color="primary"
@@ -79,11 +79,9 @@
       fxLayout="column"
       fxLayoutAlign="space-evenly center"
     >
-      <!-- <mat-card-subtitle>MORE INFO...</mat-card-subtitle> -->
-      <!-- <div class="line"></div> -->
       <iframe
         class="map-location"
-        width="300"
+        width="400"
         height="300"
         src="https://maps.google.com/maps?q=Rue%20tolosan%206,%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
         frameborder="0"
