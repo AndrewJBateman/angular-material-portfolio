@@ -8,15 +8,15 @@
 <div class="post-detail-container">
   <!--mat-card for each post with data-binding from post.ts-->
   <mat-card class="mat-card mat-elevation-z1">
-    <img
+    <ngx-picture
       *ngIf="imageData$ | async as imageData"
       mat-card-image
+      [lazyLoad]="true"
       [src]="imageData.body.urls.small"
       alt="{{ imageData.body.alt_description }}"
       class="card-image"
-      max-width="680"
-      height="auto"
-    />
+    >
+    </ngx-picture>
     <mat-card-content>
       <p class="card-title">{{ post.title }}</p>
       <p class="card-content">
@@ -25,11 +25,8 @@
       </p>
       <p>
         <span class="small-text">
-          <button
-            mat-raised-button
-            (click)="onNavigateBackToPosts()"
-          >
-            <span style="color: #fff;">Back to list</span>
+          <button mat-raised-button (click)="onNavigateBackToPosts()">
+            <span style="color: #fff">Back to list</span>
           </button>
 
           <div fxFlex></div>

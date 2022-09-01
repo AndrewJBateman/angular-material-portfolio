@@ -7,7 +7,9 @@
     max-width: 700px;
 
     .card-image {
-      flex-shrink: 0;
+      position: relative;
+      width: 100% !important;
+      margin: 0 auto;
     }
 
     .card-title {
@@ -38,12 +40,6 @@
 
     .card-footer {
       margin: auto 0 !important;
-    }
-
-    .image-div {
-      position: relative;
-      text-align: center;
-      color: white;
     }
   }
 }

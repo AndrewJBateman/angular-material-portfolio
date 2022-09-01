@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, take } from 'rxjs/operators';
-import { Observable, throwError } from 'rxjs';
-import { environment } from '../../../../environments/environment';
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { catchError, take } from "rxjs/operators";
+import { Observable, of, throwError } from "rxjs";
+import { environment } from "../../../../environments/environment";
 
 const httpOptions: {
   headers: any;
@@ -11,19 +11,19 @@ const httpOptions: {
   responseType: any;
 } = {
   headers: new HttpHeaders({
-    Authorization: 'Client-ID ' + environment.unsplash.UNSPLASH_API_KEY,
-    'Content-Type': 'application/json',
+    Authorization: "Client-ID " + environment.unsplash.UNSPLASH_API_KEY,
+    "Content-Type": "application/json",
   }),
-  observe: 'response',
-  params: 'HttpParams',
-  responseType: 'json',
+  observe: "response",
+  params: "HttpParams",
+  responseType: "json",
 };
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class ImageService {
-  readonly baseUrl = 'https://api.unsplash.com';
+  readonly baseUrl = "https://api.unsplash.com";
 
   constructor(private http: HttpClient) {}
 
@@ -35,14 +35,7 @@ export class ImageService {
       )
       .pipe(
         take(1),
-        catchError((err) => {
-          return throwError(() =>
-            console.log(
-              'There was a problem fetching data from the Unsplash API: ',
-              err.error.errors.toString()
-            )
-          );
-        })
+        catchError(_ => of('Error fetching image data'))
       );
   }
 }
