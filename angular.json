@@ -15,8 +15,15 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "src/custom-webpack.config.js",
+              "mergeRules": {
+                "externals": "replace"
+              },
+              "replaceDuplicatePlugins": true
+            },
             "allowedCommonJsDependencies": [
               "firebase/app",
               "@firebase/firestore",
@@ -39,9 +46,7 @@
               "src/sitemap.xml",
               "src/robots.txt"
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {

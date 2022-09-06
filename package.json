@@ -1,6 +1,7 @@
 {
   "name": "angular-material-portfolio",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -41,6 +42,7 @@
     "zone.js": "~0.11.8"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^14.0.1",
     "@angular-devkit/architect": "^0.1402.1",
     "@angular-devkit/build-angular": "^14.2.1",
     "@angular-eslint/schematics": "^14.0.3",
@@ -54,7 +56,9 @@
     "@types/jasmine": "~4.3.0",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^18.7.13",
+    "brotli-webpack-plugin": "^1.1.0",
     "codelyzer": "^6.0.2",
+    "compression-webpack-plugin": "^10.0.0",
     "firebase-tools": "^11.8.0",
     "fuzzy": "^0.1.3",
     "inquirer": "^9.1.0",
