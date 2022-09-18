@@ -56,21 +56,22 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 * [RxJS share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
 * [Webpack Bundle Analyser v4](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.
-* [Easy-resize.com](https://www.easy-resize.com/en/) to resize pictures online
 * [Formspree](https://formspree.io/) to send email form
+* [ngx-picture](https://www.npmjs.com/package/ngx-picture) to size & lazy load images
 
 ## :floppy_disk: Setup
 
 * `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
 * `npm run build` to create build file with Ahead of Time (AOT) compilation. Source map explorer set to false
-* Once there is a build folder: `npm run explore` to run the webpack-bundle-analyzer - opens bundle analysis drawing
+* If source map explorer was set to true when build folder created: `npm run explore` to run the webpack-bundle-analyzer - opens bundle analysis drawing
+* `http-server -g -b` to run build files on test server using the GZip & Brottli files
 * `npm run build:ssr` to create a build file with SSR. Add "defer" in inline css file in browser/index.html
 * `npm run serve:ssr` to see the SSR on localhost
-* `firebase deploy` to deploy build file to firebase hosting.
+* `firebase deploy` to deploy build file to firebase hosting
 
 ## :computer: Code Examples
 
-* `storage.service.ts` used to store blog Posts to avoid repeated http calls to fetch the same data every time
+* `storage.service.ts` used to store blog Posts to avoid repeated HTTP calls to fetch the same data every time
 
 ```typescript
 @Injectable()
@@ -127,10 +128,11 @@ export class PostService {
 ## :clipboard: Status & To-Do List
 
 * Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
-* To-Do: Home: Store data in firebase
+* To-Do: General: fix index CSP, add text compression, reduce unused JS, cache policy 1 year?
+* To-Do: Home: Move data to Supabase then delete data in app.
 * To-Do: Skills: add more skills, green skills? add electrical/instr skills
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
-* To-Do: Projects: add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
+* To-Do: Projects: correct default Mat-tabs contrast colors. add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
 * To-Do: Blog: Unsplash images - use sizing website. add articles and tab layout same as projects
 
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
@@ -150,8 +152,9 @@ export class PostService {
 * [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
 * [Article: THE PAST, PRESENT & FUTURE OF LOCAL STORAGE FOR WEB APPLICATIONS](http://diveintohtml5.info/storage.html)
 * [stackoverflow.com: Is it okay to add Angular routerLink to HTML a tags to avoid SEO issues?](https://stackoverflow.com/questions/57937451/is-it-okay-to-add-angular-routerlink-to-html-a-tags-to-avoid-seo-issues)
-* [Geek Turtorials: Insert a Google Map to Your Website](https://www.youtube.com/watch?v=KIC0OK9nKXY)
+* [Geek Tutorials: Insert a Google Map to Your Website](https://www.youtube.com/watch?v=KIC0OK9nKXY)
 * [Icons For Free](https://icons-for-free.com/)
+* [Use Brotli to make your Angular app perform faster](https://danielk.tech/home/how-to-use-brotli-to-make-your-angular-app-perform-faster)
 
 ## :file_folder: License
 
