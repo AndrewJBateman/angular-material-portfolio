@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
 import { Location } from "@angular/common";
-import { FormBuilder, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, FormGroupDirective, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
 import { ContactModel } from "./models/contact.model";
@@ -16,17 +16,7 @@ import { EmailContactService } from "./services/email-contact.service";
 })
 export class ContactComponent implements OnInit {
   title = "Contact Page";
-  contactForm = this.formBuilder.group({
-    name: [
-      "",
-      [Validators.required, Validators.minLength(4), Validators.maxLength(100)],
-    ],
-    email: ["", [Validators.required, Validators.email]],
-    message: [
-      "",
-      [Validators.required, Validators.minLength(4), Validators.maxLength(400)],
-    ],
-  });
+  contactForm: FormGroup;
 
   // Form state
   loading = false;
@@ -37,11 +27,11 @@ export class ContactComponent implements OnInit {
     private formBuilder: FormBuilder,
     private emailService: EmailContactService,
     private matSnackBar: MatSnackBar,
-    private router: Router,
-    private location: Location,
     private titleService: Title,
     private metaTagService: Meta
-  ) {}
+  ) {
+    this.buildForm();
+  }
 
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
@@ -51,19 +41,41 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  submitHandler(formDirective): void {
-    const formValue: Partial<ContactModel> = this.contactForm.value;
+  private buildForm() {
+    this.contactForm = this.formBuilder.group({
+      name: [
+        "",
+        [
+          Validators.required,
+          Validators.minLength(4),
+          Validators.maxLength(100),
+        ],
+      ],
+      email: ["", [Validators.required, Validators.email]],
+      message: [
+        "",
+        [
+          Validators.required,
+          Validators.minLength(4),
+          Validators.maxLength(400),
+        ],
+      ],
+    });
+  }
+
+  submitHandler(formDirective: FormGroupDirective): void {
+    const formValue: ContactModel = this.contactForm.value;
     this.emailService.sendEmail(formValue).subscribe({
       next: () => {
-        this.matSnackBar.open(this.success, 'OK', {
-          panelClass: ['snackbar-common', 'green-snackbar']
+        this.matSnackBar.open(this.success, "OK", {
+          panelClass: ["snackbar-common", "green-snackbar"],
         });
         formDirective.resetForm();
         this.contactForm.reset();
       },
       error: () => {
-        this.matSnackBar.open(this.failure, 'OK', {
-          panelClass: ['snackbar-common', 'red-snackbar']
+        this.matSnackBar.open(this.failure, "OK", {
+          panelClass: ["snackbar-common", "red-snackbar"],
         });
       },
     });
