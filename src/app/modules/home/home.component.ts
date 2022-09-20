@@ -13,7 +13,7 @@ import { Area } from "./area.model";
 })
 export class HomeComponent implements OnInit {
   title = "Home";
-  areas$: Observable<BehaviorSubject<Area[]>>;
+  areas$: Observable<Area[]>;
 
   constructor(
     private metaTagService: Meta,

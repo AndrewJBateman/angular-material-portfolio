@@ -49,7 +49,7 @@
   <!--Bottom section: mat-card for each area with async data-binding-->
   <!-- <div *ngFor="let area of areas$ | async; trackBy: trackByFn"> -->
   <div *ngIf="areas$">
-    <mat-card *ngFor="let area of areas$ | async; trackBy: trackByFn">
+    <mat-card *ngFor="let area of (areas$ | async); trackBy: trackByFn">
       <mat-card-content>
         <p class="general-card-title">
           <img

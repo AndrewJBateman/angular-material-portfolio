@@ -12,9 +12,9 @@ export class StorageService {
     }
   }
 
-  get(key: string): string {
+  get(key: string): string | null {
     try {
-      return JSON.parse(sessionStorage.getItem(key));
+      return JSON.parse(sessionStorage.getItem(key) || '{}');
     } catch (err) {
       console.error("Error getting data from localStorage", err);
       return null;

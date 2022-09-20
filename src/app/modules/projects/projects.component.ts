@@ -20,10 +20,10 @@ import { mixinTabIndex } from "@angular/material/core";
   styleUrls: ["./projects.component.scss"],
 })
 export class ProjectsComponent implements OnInit {
-  @Input() darkModeSwitched: Boolean;
+  @Input() darkModeSwitched: Boolean = false;
   title = "Projects";
   projectsArray: Project[] = ProjectsArray;
-  project: Project;
+  project: Project | undefined;
 
   constructor(private titleService: Title, private metaTagService: Meta) {}
 

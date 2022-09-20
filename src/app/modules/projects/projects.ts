@@ -120,29 +120,34 @@ export const ProjectsArray: Project[] = [
           "Ionic-Angular app to fetch news articles from a REST API using Typescript interfaces & HTTP service providers. Custom pipes used to modify API news article titles, contents and convert the Universal Time Constant (UTC) date string. Dark mode, Offline Storage of favourite articles & settings using Ionic Storage. Common Refresh & Progress Bar Components. Localisation using i18n so user can select between English (default), Spanish and French.",
         github: "https://github.com/AndrewJBateman/ionic-angular-news-app",
       },
-      // app X
+      // app 11
       // {
-      //   title: "Angular Material API",
-      //   svgPath1: "../assets/svgs/angular.svg",
-      //   svgPath2: "../assets/svgs/material.svg",
+      //   title: "",
+      //   svgPath1: "../assets/svgs/.svg",
+      //   svgPath2: "../assets/svgs/tailwind.svg",
       //   svgPath3: "../assets/svgs/rxjs.svg",
-      //   svgPath4: "../assets/svgs/bitcoin.svg",
+      //   svgPath4: "../assets/svgs/.svg",
       //   summary:
-      //     "Angular Progressive Web App using Angular Material and Server Side Rendering (SSR) to display cryptocurrency information and achieve an excellent Lighthouse score.",
-      //   github: "https://github.com/AndrewJBateman/angular-material-api",
+      //     "",
+      //   github: "https://github.com/AndrewJBateman/svelte-tailwind-ssr",
       // },
-      // app X
+      // app 12
       // {
-      //   title: "Next Cryptocurrency Charts",
+      //   title: "",
       //   svgPath1: "../assets/svgs/next.svg",
       //   svgPath2: "../assets/svgs/react.svg",
-      //   svgPath3: "../assets/svgs/materialui.svg",
-      //   svgPath4: "../assets/svgs/apollo.svg",
-      //   svgPath5: "../assets/svgs/graphql.svg",
-      //   svgPath6: "../assets/svgs/bitcoin.svg",
-      //   summary:
-      //     "Next.js app using React library components, Material-UI, GraphQL, Apollo & Server Side Renderng (SSR) to display cryptocurrency price data from the Nomics Cryptocurrency API",
-      //   github: "https://github.com/AndrewJBateman/next-apollo-crypto",
+      //   svgPath3: "../assets/svgs/graphql.svg",
+      //   summary: "",
+      //   github: "https://github.com/AndrewJBateman/next-apollo-graphql",
+      // },
+      // app 13
+      // {
+      //   title: "",
+      //   svgPath1: "../assets/svgs/ionic.svg",
+      //   svgPath2: "../assets/svgs/angular.svg",
+      //   svgPath3: "../assets/svgs/github.svg",
+      //   summary: "",
+      //   github: "https://github.com/AndrewJBateman/ionic-angular-github",
       // },
     ],
   },
