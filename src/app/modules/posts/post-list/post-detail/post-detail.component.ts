@@ -14,7 +14,7 @@ import { ImageService } from "../../post-services/image.service";
   styleUrls: ["./post-detail.component.scss"],
 })
 export class PostDetailComponent implements OnInit {
-  post: Post;
+  post: Post | undefined | null;
   imageData$: Observable<IUnsplashResponse> = new Observable();
 
   constructor(
@@ -24,12 +24,15 @@ export class PostDetailComponent implements OnInit {
     private imageService: ImageService
   ) {
     this.activatedRoute.queryParams.subscribe((params) => {
-      this.post = this.router.getCurrentNavigation().extras.state.post;
+        console.log('params: ', params)
+        // this.post = this.router.getCurrentNavigation()?.extras.state.post;
+
+
     });
   }
 
   ngOnInit(): void {
-    this.getPhoto(this.post.image);
+    this.getPhoto(this.post!.image);
   }
 
   onNavigateBackToPosts(): void {
