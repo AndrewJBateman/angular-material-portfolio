@@ -15,7 +15,7 @@ export const ProjectsArray: Project[] = [
           "Angular Material & RxJS Observables are used to display my data. A Google Cloud Firestore NoSQL database stores the blog posts & Contact Form data. Anyone can read the blog posts. Angularfire-lite was used as a Firebase API wrapper as it is simple and lightweight, reducing Vendor bundle size & improving the Chrome Lighthouse score.",
         github: "https://github.com/AndrewJBateman/angular-material-portfolio",
       },
-      // app 2
+      // app 2 - use new data or replace
       {
         title: "Covid API Data",
         svgPath1: "../assets/svgs/angular.svg",
@@ -121,34 +121,26 @@ export const ProjectsArray: Project[] = [
         github: "https://github.com/AndrewJBateman/ionic-angular-news-app",
       },
       // app 11
-      // {
-      //   title: "",
-      //   svgPath1: "../assets/svgs/.svg",
-      //   svgPath2: "../assets/svgs/tailwind.svg",
-      //   svgPath3: "../assets/svgs/rxjs.svg",
-      //   svgPath4: "../assets/svgs/.svg",
-      //   summary:
-      //     "",
-      //   github: "https://github.com/AndrewJBateman/svelte-tailwind-ssr",
-      // },
+      {
+        title: "Svelte Tailwind SSR Data",
+        svgPath1: "../assets/svgs/svelte.svg",
+        svgPath2: "../assets/svgs/tailwind.svg",
+        svgPath3: "../assets/svgs/rxjs.svg",
+        svgPath4: "../assets/svgs/.svg",
+        summary:
+          "Displays data from an API",
+        github: "https://github.com/AndrewJBateman/svelte-tailwind-ssr",
+      },
       // app 12
-      // {
-      //   title: "",
-      //   svgPath1: "../assets/svgs/next.svg",
-      //   svgPath2: "../assets/svgs/react.svg",
-      //   svgPath3: "../assets/svgs/graphql.svg",
-      //   summary: "",
-      //   github: "https://github.com/AndrewJBateman/next-apollo-graphql",
-      // },
-      // app 13
-      // {
-      //   title: "",
-      //   svgPath1: "../assets/svgs/ionic.svg",
-      //   svgPath2: "../assets/svgs/angular.svg",
-      //   svgPath3: "../assets/svgs/github.svg",
-      //   summary: "",
-      //   github: "https://github.com/AndrewJBateman/ionic-angular-github",
-      // },
+      {
+        title: "Next Apollo GraphQL",
+        svgPath1: "../assets/svgs/next.svg",
+        svgPath2: "../assets/svgs/react.svg",
+        svgPath3: "../assets/svgs/apollo.svg"
+        svgPath3: "../assets/svgs/graphql.svg",
+        summary: "Displays data from an API",
+        github: "https://github.com/AndrewJBateman/next-apollo-graphql",
+      }
     ],
   },
   {
