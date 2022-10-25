@@ -1,7 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
-import { Router } from "@angular/router";
-import { Location } from "@angular/common";
 import { FormBuilder, FormGroup, FormGroupDirective, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
@@ -42,7 +40,7 @@ export class ContactComponent implements OnInit {
   }
 
   private buildForm() {
-    this.contactForm = this.formBuilder.group({
+    this.contactForm = this.formBuilder.nonNullable.group({
       name: [
         "",
         [
