@@ -126,7 +126,6 @@ export const ProjectsArray: Project[] = [
         svgPath1: "../assets/svgs/svelte.svg",
         svgPath2: "../assets/svgs/tailwind.svg",
         svgPath3: "../assets/svgs/rxjs.svg",
-        svgPath4: "../assets/svgs/.svg",
         summary:
           "Displays data from an API",
         github: "https://github.com/AndrewJBateman/svelte-tailwind-ssr",
@@ -136,8 +135,8 @@ export const ProjectsArray: Project[] = [
         title: "Next Apollo GraphQL",
         svgPath1: "../assets/svgs/next.svg",
         svgPath2: "../assets/svgs/react.svg",
-        svgPath3: "../assets/svgs/apollo.svg"
-        svgPath3: "../assets/svgs/graphql.svg",
+        svgPath3: "../assets/svgs/apollo.svg",
+        svgPath4: "../assets/svgs/graphql.svg",
         summary: "Displays data from an API",
         github: "https://github.com/AndrewJBateman/next-apollo-graphql",
       }
