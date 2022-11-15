@@ -15,15 +15,8 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-builders/build-angular:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "src/custom-webpack.config.js",
-              "mergeRules": {
-                "externals": "replace"
-              },
-              "replaceDuplicatePlugins": true
-            },
             "allowedCommonJsDependencies": [
               "firebase/app",
               "@firebase/firestore",
@@ -88,6 +81,14 @@
               ],
               "serviceWorker": true,
               "ngswConfigPath": "ngsw-config.json"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           }
         },

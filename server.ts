@@ -1,6 +1,6 @@
 import "zone.js/dist/zone-node";
+
 import { ngExpressEngine } from "@nguniversal/express-engine";
-import * as compression from "compression";
 import * as express from "express";
 import { join } from "path";
 
@@ -11,7 +11,6 @@ import { existsSync } from "fs";
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  server.use(compression());
   const distFolder = join(
     process.cwd(),
     "dist/angular-material-portfolio/browser"
@@ -53,7 +52,7 @@ export function app(): express.Express {
 }
 
 function run(): void {
-  const port = process.env.PORT || 4000;
+  const port = process.env["PORT"] || 4000;
 
   // Start up the Node server
   const server = app();
