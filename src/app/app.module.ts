@@ -1,4 +1,4 @@
-import { AreasService } from './modules/home/home-services/areas.service';
+import { AreasService } from "./modules/home/home-services/areas.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { AngularFireLite } from "angularfire-lite";
