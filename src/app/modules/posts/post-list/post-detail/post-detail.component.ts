@@ -24,10 +24,9 @@ export class PostDetailComponent implements OnInit {
     private imageService: ImageService
   ) {
     this.activatedRoute.queryParams.subscribe((params) => {
-        console.log('params: ', params)
-        // this.post = this.router.getCurrentNavigation()?.extras.state.post;
-
-
+      const routeData = this.router?.getCurrentNavigation()?.extras;
+      const state = routeData?.state;
+      this.post = state? state?.post : null;
     });
   }
 

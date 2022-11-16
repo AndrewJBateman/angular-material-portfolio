@@ -9,7 +9,7 @@
   <!--mat-card for each post with data-binding from post.ts-->
   <mat-card class="mat-card mat-elevation-z1">
     <ngx-picture
-      *ngIf="(imageData$ | async) as imageData"
+      *ngIf="imageData$ | async as imageData"
       mat-card-image
       [lazyLoad]="true"
       [src]="imageData.body.urls.small"
@@ -17,7 +17,7 @@
       class="card-image"
     >
     </ngx-picture>
-    <mat-card-content>
+    <mat-card-content *ngIf="post">
       <p class="card-title">{{ post!.title }}</p>
       <p class="card-content">
         <span class="card-subtitle">{{ post!.subtitle }}:</span>

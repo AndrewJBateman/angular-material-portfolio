@@ -19,7 +19,7 @@ import { StorageService } from "../post-services/storage.service";
 })
 export class PostListComponent implements OnInit {
   title = "Blog Posts";
-  posts$: Observable<Post[]> = new Observable<Post[]>;
+  posts$: Observable<Post[]> = new Observable<Post[]>();
 
   constructor(
     private postService: PostService,
