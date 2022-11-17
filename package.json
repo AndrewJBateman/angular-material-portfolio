@@ -12,7 +12,7 @@
     "explore": "source-map-explorer dist/**/*.js",
     "dev:ssr": "ng run angular-material-portfolio:serve-ssr",
     "serve:ssr": "node dist/angular-material-portfolio/server/main.js",
-    "build:ssr": "ng build --configuration production && ng run angular-material-portfolio:server:production",
+    "build:ssr": "ng build && ng run angular-material-portfolio:server",
     "prerender": "ng run angular-material-portfolio:prerender"
   },
   "private": true,
