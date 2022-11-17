@@ -2,8 +2,9 @@
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app-server",
-    "types": ["node"],
-    "target": "es2019",
+    "types": [
+      "node"
+    ],
     "experimentalDecorators": true
   },
   "files": ["src/main.server.ts", "server.ts"],

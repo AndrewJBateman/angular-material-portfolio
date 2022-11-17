@@ -150,7 +150,6 @@
             "outputPath": "dist/angular-material-portfolio/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
-            "bundleDependencies": false,
             "externalDependencies": ["@firebase/firestore"]
           },
           "configurations": {
@@ -163,8 +162,7 @@
                 }
               ],
               "sourceMap": true,
-              "optimization": true,
-              "bundleDependencies": true
+              "optimization": true
             }
           }
         },
