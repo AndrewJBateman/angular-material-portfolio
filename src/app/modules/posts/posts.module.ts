@@ -43,4 +43,4 @@ const routes: Routes = [
   declarations: [PostListComponent, PostDetailComponent],
   providers: [PostService, StorageService, ImageService],
 })
-export class PostsModule {}
+export default class PostsModule {}

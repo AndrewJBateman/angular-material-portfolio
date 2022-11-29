@@ -19,4 +19,4 @@ import { SharedModule } from "../../shared/shared.module";
     WebTechComponent
   ]
 })
-export class WebTechModule { }
+export default class WebTechModule { }

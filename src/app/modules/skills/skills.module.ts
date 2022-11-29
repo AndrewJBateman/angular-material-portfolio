@@ -10,4 +10,4 @@ import { SharedModule } from "../../shared/shared.module";
   imports: [CommonModule, SkillsRoutingModule, SharedModule],
   exports: [SkillsComponent],
 })
-export class SkillsModule {}
+export default class SkillsModule {}

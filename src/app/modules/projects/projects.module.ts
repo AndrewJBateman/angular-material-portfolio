@@ -12,4 +12,4 @@ import { MatButtonModule } from "@angular/material/button";
   imports: [CommonModule, ProjectsRoutingModule, SharedModule, MatButtonModule],
   exports: [ProjectsComponent],
 })
-export class ProjectsModule {}
+export default class ProjectsModule {}

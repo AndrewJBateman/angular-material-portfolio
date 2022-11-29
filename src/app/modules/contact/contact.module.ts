@@ -40,4 +40,4 @@ import {
     },
   ],
 })
-export class ContactModule {}
+export default class ContactModule {}

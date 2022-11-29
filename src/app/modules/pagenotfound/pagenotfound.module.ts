@@ -17,4 +17,4 @@ import { MatCardModule } from "@angular/material/card";
   ],
   exports: [PageNotFoundComponent, RouterModule],
 })
-export class PageNotFoundModule {}
+export default class PageNotFoundModule {}

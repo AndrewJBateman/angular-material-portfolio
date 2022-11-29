@@ -17,17 +17,17 @@ const routes: Routes = [
   {
     path: "projects",
     loadChildren: () =>
-      import("./modules/projects/projects.module").then((mod) => mod.ProjectsModule),
+      import("./modules/projects/projects.module"),
   },
   {
     path: "skills",
     loadChildren: () =>
-      import("./modules/skills/skills.module").then((mod) => mod.SkillsModule),
+      import("./modules/skills/skills.module"),
   },
   {
     path: "blog",
     loadChildren: () =>
-      import("./modules/posts/posts.module").then((mod) => mod.PostsModule),
+      import("./modules/posts/posts.module"),
 
   },
   {
@@ -37,19 +37,17 @@ const routes: Routes = [
   {
     path: "contact",
     loadChildren: () =>
-      import("./modules/contact/contact.module").then((mod) => mod.ContactModule),
+      import("./modules/contact/contact.module"),
   },
   {
     path: "web-tech",
     loadChildren: () =>
-      import("./modules/web-tech/web-tech.module").then((mod) => mod.WebTechModule),
+      import("./modules/web-tech/web-tech.module"),
   },
   {
     path: "**",
     loadChildren: () =>
-      import("./modules/pagenotfound/pagenotfound.module").then(
-        (mod) => mod.PageNotFoundModule
-      ),
+      import("./modules/pagenotfound/pagenotfound.module"),
   },
 ];
 
