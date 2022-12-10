@@ -16,59 +16,68 @@
   <mat-divider class="sidenav-divider"></mat-divider>
   <a
     mat-list-item
-    class="side-nav-link"
+    class="side-link-home"
     [routerLink]="['/home']"
     [routerLinkActiveOptions]="{ exact: true }"
     href="/home"
     routerLinkActive="side-link-active"
+    #rla="routerLinkActive"
     (click)="onSidenavClose()"
   >
     <app-svg-home></app-svg-home>
-    AB
+    <span [ngClass]="rla.isActive ? 'side-link-active' : 'side-link'">AB</span>
   </a>
   <a
     mat-list-item
-    class="side-nav-link"
     [routerLink]="['/projects']"
     href="/projects"
     routerLinkActive="side-link-active"
+    #rlb="routerLinkActive"
     (click)="onSidenavClose()"
   >
     <app-svg-work></app-svg-work>
-    Projects
+    <span [ngClass]="rlb.isActive ? 'side-link-active' : 'side-link'"
+      >Projects</span
+    >
   </a>
   <a
     mat-list-item
-    class="side-nav-link"
     [routerLink]="['/skills']"
     href="/skills"
     routerLinkActive="side-link-active"
+    #rlc="routerLinkActive"
     (click)="onSidenavClose()"
   >
     <app-svg-project></app-svg-project>
-    Skills
+    <span [ngClass]="rlc.isActive ? 'side-link-active' : 'side-link'"
+      >Skills</span
+    >
   </a>
   <a
     mat-list-item
-    class="side-nav-link"
     [routerLink]="['/contact']"
     href="/contact"
     routerLinkActive="side-link-active"
+    #rld="routerLinkActive"
     (click)="onSidenavClose()"
   >
     <app-svg-mail></app-svg-mail>
-    Contact
+    <span [ngClass]="rld.isActive ? 'side-link-active' : 'side-link'"
+      >Contact</span
+    >
   </a>
   <a
     mat-list-item
-    class="side-nav-link"
     [routerLink]="['/blog']"
     href="/blog"
     routerLinkActive="side-link-active"
+    #rle="routerLinkActive"
     (click)="onSidenavClose()"
   >
     <app-svg-blog></app-svg-blog>
-    Blog
+    <span [ngClass]="rle.isActive ? 'side-link-active' : 'side-link'"
+      >Blog</span
+    >
   </a>
   <mat-divider class="sidenav-divider"></mat-divider>
   <a
@@ -79,7 +88,7 @@
     rel="noreferrer"
   >
     <app-svg-github></app-svg-github>
-    Github
+    <span class="side-link">Github</span>
   </a>
   <a
     mat-list-item
@@ -89,10 +98,10 @@
     rel="noreferrer"
   >
     <app-svg-linkedin></app-svg-linkedin>
-    LinkedIn
+    <span class="side-link">LinkedIn</span>
   </a>
-  <!-- <a mat-list-item class="side-drawer-close" (click)="onSidenavClose()">
+  <a mat-list-item class="side-drawer-close" (click)="onSidenavClose()">
     <app-svg-close></app-svg-close>
-    Close
-  </a> -->
+    <span class="side-link">Close</span>
+  </a>
 </mat-nav-list>

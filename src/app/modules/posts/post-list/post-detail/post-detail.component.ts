@@ -26,7 +26,7 @@ export class PostDetailComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe((params) => {
       const routeData = this.router?.getCurrentNavigation()?.extras;
       const state = routeData?.state;
-      this.post = state? state?.post : null;
+      this.post = state ? state?.post : null;
     });
   }
 

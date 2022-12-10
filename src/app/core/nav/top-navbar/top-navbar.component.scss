@@ -1,6 +1,6 @@
 .top-nav-link {
-  color: white;
-  padding: 0 16px;
+  color: white !important;
+  text-decoration: none;
 }
 
 .top-link-social {
@@ -12,7 +12,7 @@
 }
 
 .top-link-active {
-  color: rgb(173, 211, 255);
+  color: rgb(173, 211, 255) !important;
 }
 
 .mat-button {
@@ -22,11 +22,11 @@
     background-color: none;
     border: 0;
   }
-
+  /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
   ::ng-deep .mat-button-focus-overlay {
-    display: none !important;
-    border: none !important;
-    background-color: transparent;
+  //   display: none !important;
+  //   border: none !important;
+  //   background-color: transparent;
   }
 
 }

@@ -1,7 +1,3 @@
-mat-nav-list-item {
-  color: #fff;
-}
-
 .sidenav-image {
   margin: 16px 34px !important;
 }
@@ -12,13 +8,17 @@ mat-nav-list-item {
   padding: 8px 0;
 }
 
-.side-nav-link {
-  color: #fff !important;
+.side-link {
+  color: #fff;
 }
 
-// .mat-drawer-inner-container {
-//   background-color: #455a64 !important;
-// }
+.side-link-home {
+  background: #455a64 !important;
+}
+
+.mat-mdc-list-item-interactive::before {
+  background: #455a64;
+}
 
 .side-drawer-close {
   color: #fff !important;
@@ -31,6 +31,6 @@ mat-nav-list-item {
 }
 
 .side-link-active {
-  color: rgb(173, 211, 255) !important;
+  color: rgb(173, 211, 255);
   font-weight: bold;
 }

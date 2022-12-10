@@ -7,7 +7,7 @@
 
 <div class="post-detail-container">
   <!--mat-card for each post with data-binding from post.ts-->
-  <mat-card class="mat-card mat-elevation-z1">
+  <mat-card appearance="outlined" class="mat-card mat-elevation-z1">
     <ngx-picture
       *ngIf="imageData$ | async as imageData"
       mat-card-image

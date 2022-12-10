@@ -43,33 +43,6 @@ body {
 
 // styling for mat-card used in home & web-tech page
 mat-card {
-  margin: 10px;
-  padding: 8px;
-
-  .top-card-title {
-    font-size: 24px;
-    margin-bottom: 0 !important;
-  }
-
-  .top-card-content {
-    margin-top: 8px !important;
-  }
-
-  .card-bold-text {
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: underline;
-    text-decoration-color: #68a1e2;
-    text-decoration-thickness: 2px;
-  }
-
-  .general-card-title {
-    font-size: 18px;
-    text-decoration: underline;
-    text-decoration-color: #68a1e2;
-    text-decoration-thickness: 2px;
-  }
-
   .general-card-content {
     white-space: pre-wrap;
   }
