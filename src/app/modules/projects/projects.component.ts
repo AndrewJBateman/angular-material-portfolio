@@ -9,8 +9,6 @@ import { Meta, Title } from "@angular/platform-browser";
 
 import { ProjectsArray } from "./projects";
 import { Project } from "./project.model";
-import { MatCardMdImage } from "@angular/material/card";
-import { mixinTabIndex } from "@angular/material/core";
 
 @Component({
   selector: "app-projects",

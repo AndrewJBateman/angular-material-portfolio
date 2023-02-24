@@ -1,39 +1,18 @@
-// tabs layout
-// .mat-tab-group {
-//   margin-bottom: 48px;
-
-// }
-
-/* label style */
-// .mat-tab-label {
-//   background: #455a64;
-//   color: white !important;
-// }
-// /* focus style */
-// .mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus,
-// .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus,
-// .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus
-//  {
-//   background-color: #455a64;
-// }
-// /* ink bar style */
-// .mat-tab-group.mat-primary .mat-ink-bar,
-// .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-//   background: #0e2b38;
-//   height: 4px;
-// }
-
-/* TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version.*/
-.mat-tab-label .mat-tab-label-content.white {
+// project tab styling
+.project-tab {
   color: white !important;
 }
 
 // card styling
-.mat-card {
+.project-card {
   height: 100%;
   display: flex;
   flex-direction: column;
   padding: 8px;
+
+  .project-card-icons {
+    margin-top: 0;
+  }
 
   .project-card-svg {
     width: 30px;
@@ -46,9 +25,10 @@
     text-decoration: underline;
     text-decoration-color: #68a1e2;
     text-decoration-thickness: 2px;
+
   }
 
-  .mat-card-content {
+  .project-card-content {
     flex-grow: 1;
     overflow: auto;
     white-space: pre-wrap;

@@ -6,7 +6,11 @@
 </head>
 
 <mat-tab-group backgroundColor="primary" mat-align-tabs="start">
-  <mat-tab *ngFor="let area of projectsArray; trackBy: tabTrackByFn" [label]="area.projectArea" class="white">
+  <mat-tab
+    *ngFor="let area of projectsArray; trackBy: tabTrackByFn"
+    [label]="area.projectArea"
+    class="project-tab"
+  >
     <div fxFlex fxLayout="column" fxLayoutGap="10px">
       <div fxLayout="row wrap">
         <div
@@ -18,9 +22,9 @@
           fxLayout="column"
           style="padding: 5px"
         >
-          <mat-card appearance="outlined" class="mat-card">
-            <mat-card-content>
-              <p class="project-card-title">
+          <mat-card appearance="outlined" class="project-card">
+            <mat-card-content class="project-card-content">
+              <p class="project-card-icons">
                 <img
                   class="project-card-svg"
                   [src]="project.svgPath1"
@@ -63,7 +67,7 @@
                   alt="icon of {{ project.title }}"
                 />
               </p>
-              <p class="general-card-content">
+              <p>
                 <span class="project-card-title">{{ project.title }}:</span>
                 {{ project.summary | slice: 0:240 }}...
                 <a
