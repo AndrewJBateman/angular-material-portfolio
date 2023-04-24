@@ -9,7 +9,7 @@
   <mat-card appearance="outlined" class="contact-card mat-elevation-z4">
     <!--Email section-->
     <div class="email-section">
-      <mat-card-title fxLayoutAlign="center">SEND A MESSAGE</mat-card-title>
+      <mat-card-title class="mat-card-title" fxLayoutAlign="center">SEND A MESSAGE</mat-card-title>
       <form
         [formGroup]="contactForm"
         #formDirective="ngForm"
@@ -17,7 +17,7 @@
         fxLayout="column"
       >
         <!--name form-field-->
-        <mat-form-field appearance="outline">
+        <mat-form-field class="mat-form-field" appearance="outline">
           <input
             matInput
             placeholder="Your name..."
@@ -33,7 +33,7 @@
         </mat-form-field>
 
         <!--email form-field-->
-        <mat-form-field appearance="outline">
+        <mat-form-field class="mat-form-field" appearance="outline">
           <input
             matInput
             placeholder="Your email..."
@@ -49,7 +49,7 @@
         </mat-form-field>
 
         <!--message form-field-->
-        <mat-form-field appearance="outline">
+        <mat-form-field class="mat-form-field" appearance="outline">
           <textarea
             matInput
             cdkTextareaAutosize

@@ -14,19 +14,3 @@
 .top-link-active {
   color: rgb(173, 211, 255) !important;
 }
-
-.mat-button {
-  outline: none !important;
-
-  &:focus {
-    background-color: none;
-    border: 0;
-  }
-  /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
-  ::ng-deep .mat-button-focus-overlay {
-  //   display: none !important;
-  //   border: none !important;
-  //   background-color: transparent;
-  }
-
-}

@@ -41,13 +41,6 @@ body {
   @include angular-material-theme($ngMatPort-app-theme);
 }
 
-// styling for mat-card used in home & web-tech page
-mat-card {
-  .general-card-content {
-    white-space: pre-wrap;
-  }
-}
-
 // styling for general cards used in blog and web-info pages
 .general-card {
   .title-style {
@@ -83,7 +76,7 @@ mat-card {
   right: 0.5rem;
   top: 4.5rem;
 
-  .mat-simple-snackbar-action {
+  .mat-mdc-snack-bar-action {
     color: white !important;
   }
 }
@@ -99,7 +92,7 @@ mat-card {
   background-color: green !important;
   color: white;
 
-  .mat-simple-snackbar-action {
+  .mat-mdc-snack-bar-action {
     color: white !important;
   }
 }
