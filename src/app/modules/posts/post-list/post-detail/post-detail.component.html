@@ -37,7 +37,7 @@
           <div fxFlex></div>
           <p class="card-footer">
             <app-svg-calender></app-svg-calender>
-            {{ post!.published.toDate() | dateConvert }}
+            {{ post!.published.seconds*1000 | dateConvert }}
           </p>
         </span>
       </p>

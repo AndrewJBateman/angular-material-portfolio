@@ -1,7 +1,5 @@
 import { AreasService } from "./modules/home/home-services/areas.service";
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
-import { AngularFireLite } from "angularfire-lite";
 import { HttpClientModule } from "@angular/common/http";
 
 import { environment } from "../environments/environment";
@@ -22,8 +20,6 @@ import { FooterComponent } from "./core/footer/footer.component";
 @NgModule({
   declarations: [AppComponent, HomeComponent, FooterComponent],
   imports: [
-    BrowserModule.withServerTransition({ appId: "serverApp" }),
-    AngularFireLite.forRoot(environment.config),
     HttpClientModule,
     NavModule,
     SharedModule,

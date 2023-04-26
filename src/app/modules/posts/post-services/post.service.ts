@@ -1,18 +1,39 @@
 import { Injectable } from "@angular/core";
-import { AngularFireLiteFirestore } from "angularfire-lite";
-import { Observable } from "rxjs";
-import { shareReplay } from "rxjs/operators";
+import { initializeApp } from "firebase/app";
+import { orderBy } from "firebase/firestore/lite";
 
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  query,
+} from "firebase/firestore/lite";
+
+import { environment } from "../../../../environments/environment";
 import { Post } from "../post.model";
 
 @Injectable()
 export class PostService {
+  // init array
+  postArray: Post[] = [];
 
-  constructor(private firestore: AngularFireLiteFirestore) {}
+  // get Posts from firebase storage using firebase firestore lite
+  async getPosts(): Promise<Post[]> {
+    const app = initializeApp(environment.firebase);
+    const firestore = getFirestore(app);
 
-  // get Posts collection Observable using rxjs shareReplay to keep and replay
-  //  last emitted observable to avoid unnecessary http requests
-  getPosts(): Observable<Post[]> {
-    return this.firestore.read("posts").pipe(shareReplay(1));
+    const postQuery = query(
+      collection(firestore, "posts"),
+      orderBy("published", "desc")
+    );
+
+    const docsSnapshot = await getDocs(postQuery);
+
+    docsSnapshot.forEach((doc) => {
+      this.postArray.push({
+        ...(doc.data() as Post),
+      });
+    });
+    return this.postArray;
   }
 }
