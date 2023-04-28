@@ -11,16 +11,16 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: Angular Material Portfolio](#zap-angular-material-portfolio)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
-  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clipboard: Status \& To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
-  * [:file_folder: License](#file_folder-license)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -33,7 +33,7 @@
 * **Projects:** fxFlex layout with tabbed card pages to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 * **Skills:** fxFlex layout with cards to display project data using data-binding from an array of skills based on a Skill model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
 * **Contact:** Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend using angularfire-lite and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
-* **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page. No authorization required to Read posts.
+* **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page.
 Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info. **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
 * **Not Found:** In the event of the user trying to route to any page address that is not listed in the router-module a single Mat-card will display a message to the user. There is a simple button to reroute the user to the Home page.
 
@@ -46,12 +46,11 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 ## :signal_strength: Technologies
 
-* [Angular framework v14](https://angular.io/)
-* [Angular Material v14](https://material.angular.io/)
+* [Angular framework v16](https://angular.io/)
+* [Angular Material v16](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
-* [Angular service worker v14](https://angular.io/guide/service-worker-intro) added
-* [Firebase v8](https://firebase.google.com) Cloud storage and authentication. **Not to be updated to v9**
-* [angularfire-lite v6](https://www.npmjs.com/package/angularfire-lite) lightweight wrapper to use Firebase API with Angular. **Last published 3 years ago**
+* [Angular service worker v16](https://angular.io/guide/service-worker-intro) added
+* [Firebase v9](https://firebase.google.com) Cloud storage and authentication. **Not to be updated to v9**
 * [Reactive Extensions Library for Javascript rxjs v7](https://rxjs-dev.firebaseapp.com/)
 * [RxJS share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
@@ -128,12 +127,12 @@ export class PostService {
 ## :clipboard: Status & To-Do List
 
 * Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
-* To-Do: General: fix index CSP, add text compression, reduce unused JS, cache policy 1 year?
+* To-Do: General: fix index CSP, add text compression, reduce unused JS, cache policy 1 year?, add tailwind and remove ng flex-layout as it is deprecated.
 * To-Do: Home: Move data to Supabase then delete data in app.
 * To-Do: Skills: add more skills, green skills? add electrical/instr skills
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
 * To-Do: Projects: correct default Mat-tabs contrast colors. add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
-* To-Do: Blog: Unsplash images - use sizing website. add articles and tab layout same as projects
+* To-Do: Blog: Correct object/array issue, Unsplash images - use sizing website. add articles and tab layout same as projects
 
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
 * To-Do: overview drg
