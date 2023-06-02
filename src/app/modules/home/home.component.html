@@ -7,39 +7,6 @@
 </head>
 
 <div class="home-container">
-  <!--Top Section-->
-  <mat-card appearance="outlined">
-    <mat-card-header>
-      <img
-        mat-card-avatar
-        src="assets/svgs/profile-blue.svg"
-        class="top-header-image"
-      />
-      <mat-card-title>Andrew Bateman</mat-card-title>
-      <mat-card-subtitle
-        >Full-Stack | Engineering | Cloud | IT</mat-card-subtitle
-      >
-    </mat-card-header>
-    <mat-card-content>
-      I have been studying programming part-time for a number of years,
-      completing lots of online courses & tutorials from FreeCodeCamp,
-      Treehouse, Udemy, Coursera and Youtube etc. I also gained Google Associate
-      Cloud Engineer Certification. I have hundreds of repositories on Github
-      with a mixture of my own projects and tutorial code.<br /><br />
-      Programming was not new to me as I previously worked for 20 years as an
-      Electronic/Electrical Engineer in the UK, Spain and finally in Norway
-      (including 2 years in Hammerfest, the Northermost town in the world).
-      After this I returned to Spain to look after the family (including a child
-      with a rare disease called Landau Kleffner) & continue programming.<br /><br />
-      There is more about my Programming, Engineering & IT below. The aim of
-      this website is to show some of my projects and a little about me, without
-      repeating what is in Linkedin or Github. This website was built with an
-      Angular front-end and a Firebase backend - see Projects for more info.
-      This site has a technical blog with categories: Programming Development,
-      IT and Engineering.
-    </mat-card-content>
-  </mat-card>
-  <!--Bottom section: mat-card for each area with async data-binding-->
   <div *ngIf="areas$">
     <mat-card
       appearance="outlined"
@@ -54,7 +21,7 @@
         />
         <mat-card-title>{{ area.title }}</mat-card-title>
         <mat-card-subtitle
-          >Full-Stack Development | Engineering | Cloud | IT</mat-card-subtitle
+          >{{ area.subtitle }}</mat-card-subtitle
         >
       </mat-card-header>
       <mat-card-content>

@@ -1,23 +1,21 @@
-import { AngularFireLiteFirestore } from "angularfire-lite";
-import { Injectable } from "@angular/core";
-import { Observable, BehaviorSubject, share } from "rxjs";
+import { Injectable, inject } from "@angular/core";
+import { Firestore, collectionData, collection, getDocs, orderBy } from "@angular/fire/firestore";
+import { Observable, map } from "rxjs";
 
 import { Area } from "./../area.model";
 
-@Injectable()
+@Injectable({
+  providedIn: "root",
+})
 export class AreasService {
-  private areasCollection: Observable<Area[]>;
+  areas$: Observable<Area[]> = new Observable<Area[]>();
+  firestore: Firestore = inject(Firestore);
+  id: number = 0;
 
-  constructor(private firestore: AngularFireLiteFirestore) {}
-
-  // get Areas collection Observable if it does not already exist and use RXJS share()
-  // so the same Observable is shared the next time to avoid unnecessary HTTP requests
+  // get Areas array collection Observable
   getAreas(): Observable<Area[]> {
-    if (this.areasCollection) {
-      return this.areasCollection;
-    } else {
-      this.areasCollection = this.firestore.read("areas").pipe(share());
-      return this.areasCollection;
-    }
+    const areas = collection(this.firestore, "areas");
+    this.areas$ = collectionData(areas) as Observable<Area[]>;
+    return this.areas$;
   }
 }

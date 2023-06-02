@@ -2,6 +2,9 @@ import { AreasService } from "./modules/home/home-services/areas.service";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 
+import { provideFirebaseApp, getApp, initializeApp } from "@angular/fire/app";
+import { getFirestore, provideFirestore } from "@angular/fire/firestore";
+
 import { environment } from "../environments/environment";
 
 import { AppComponent } from "./app.component";
@@ -27,6 +30,8 @@ import { FooterComponent } from "./core/footer/footer.component";
     MatSidenavModule,
     MatSlideToggleModule,
     MatToolbarModule,
+    provideFirebaseApp(() => initializeApp({ ...environment.firebaseConfig })),
+    provideFirestore(() => getFirestore()),
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
     }),
