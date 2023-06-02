@@ -4,14 +4,10 @@
     content="Blog page uses Angular cards to display some technical posts that can be clicked on to show a more detailed page."
   />
 </head>
-<div fxFlex fxLayout="column" fxLayoutGap="10px">
-  <mat-card *ngIf="posts">
-    <p>There are {{ posts.length }} posts</p>
-  </mat-card>
-  <pre>{{ posts[0].title }}</pre>
+<div fxFlex fxLayout="column" fxLayoutGap="10px" *ngIf="posts$">
   <div fxLayout="row wrap">
     <div
-      *ngFor="let post of posts; let postId = index"
+      *ngFor="let post of posts$ | async; let postId = index"
       fxFlex="25"
       fxFlex.md="33"
       fxFlex.sm="50"

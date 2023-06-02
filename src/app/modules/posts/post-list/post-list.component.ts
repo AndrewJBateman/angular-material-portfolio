@@ -1,13 +1,10 @@
-import {
-  Component,
-  OnInit,
-  ChangeDetectionStrategy,
-} from "@angular/core";
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { Router, NavigationExtras } from "@angular/router";
 
 import { Post } from "../post.model";
 import { PostService } from "../post-services/post.service";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-post-list",
@@ -16,7 +13,7 @@ import { PostService } from "../post-services/post.service";
 })
 export class PostListComponent implements OnInit {
   title = "Blog Posts";
-  posts: Post[] = [];
+  posts$: Observable<Post[]>;
 
   constructor(
     private postService: PostService,
@@ -32,12 +29,12 @@ export class PostListComponent implements OnInit {
       name: "blog",
       content: "andrewbateman.org",
     });
-    this.getData();
+    this.posts$ = this.postService.getPosts();
   }
 
-  async getData(): Promise<void> {
-    this.posts = await this.postService.getPosts();
-  }
+  // trackByFn(index: number, post: Post): number {
+  //   return post.id;
+  // }
 
   onGoToPostDetail(post: Post): void {
     const navigationExtras: NavigationExtras = {
