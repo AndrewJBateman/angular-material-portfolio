@@ -4,43 +4,33 @@
     content="Blog page uses Angular cards to display some technical posts that can be clicked on to show a more detailed page."
   />
 </head>
-<div fxFlex fxLayout="column" fxLayoutGap="10px" *ngIf="posts$">
-  <div fxLayout="row wrap">
-    <div
-      *ngFor="let post of posts$ | async; let postId = index"
-      fxFlex="25"
-      fxFlex.md="33"
-      fxFlex.sm="50"
-      fxFlex.xs="100"
-      fxLayout="column"
-      style="padding: 5px"
+<div class="responsive-grid" [style.--columns]="columns$ | async">
+  <ng-container *ngFor="let post of posts$ | async; let postId = index">
+    <!--mat-card for each post with data-binding from post.ts-->
+    <mat-card
+      appearance="outlined"
+      class="general-card mat-elevation-z5"
+      (click)="onGoToPostDetail(post)"
     >
-      <!--mat-card for each post with data-binding from post.ts-->
-      <mat-card
-        appearance="outlined"
-        class="general-card"
-        (click)="onGoToPostDetail(post)"
-      >
-        <mat-card-content>
-          <p class="title-style">{{ post.title }}</p>
-          <p class="content-style" style="height: 90px">
-            <span class="subtitle-style">{{ post.subtitle }}:</span>
-            {{ post.content | slice : 0 : 158 - post.subtitle.length }}...
-          </p>
-          <p>
-            <span class="small-text">
-              <app-svg-calender></app-svg-calender>
-              {{ post.published.seconds * 1000 | dateConvert }}
-              <div fxFlex></div>
-              <app-svg-folder></app-svg-folder>
-              {{ post.category }}
-              <div fxFlex></div>
-              <app-svg-timer></app-svg-timer>
-              {{ post.content | readTime }} minutes
-            </span>
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
+      <mat-card-content>
+        <p class="title-style">{{ post.title }}</p>
+        <p class="content-style" style="height: 90px">
+          <span class="subtitle-style">{{ post.subtitle }}:</span>
+          {{ post.content | slice : 0 : 158 - post.subtitle.length }}...
+        </p>
+        <p>
+          <span class="small-text">
+            <app-svg-calender></app-svg-calender>
+            {{ post.published.seconds * 1000 | dateConvert }}
+            <div fxFlex></div>
+            <app-svg-folder></app-svg-folder>
+            {{ post.category }}
+            <div fxFlex></div>
+            <app-svg-timer></app-svg-timer>
+            {{ post.content | readTime }} minutes
+          </span>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
 </div>
