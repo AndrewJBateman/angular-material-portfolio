@@ -1,10 +1,7 @@
 export class Project {
-  projectArea: string = "";
-  projects: ProjectDetails[] = [];
-}
-
-export class ProjectDetails {
+  area: string;
   title: string = "";
+  ref: string = "";
   svgPath1?: string;
   svgPath2?: string;
   svgPath3?: string;
@@ -13,6 +10,6 @@ export class ProjectDetails {
   svgPath6?: string;
   svgPath7?: string;
   svgPath8?: string;
-  summary: string = "";
+  content: string = "";
   github: string = "";
 }
