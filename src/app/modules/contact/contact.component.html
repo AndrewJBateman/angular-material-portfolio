@@ -4,111 +4,79 @@
     content="Contact page gives the viewer the chance to send a message to me via a simple Material form."
   />
 </head>
-
-<div class="container">
-  <mat-card appearance="outlined" class="contact-card mat-elevation-z4">
-    <!--Email section-->
-    <div class="email-section">
-      <mat-card-title class="card-title" fxLayoutAlign="center">SEND A MESSAGE</mat-card-title>
-      <form
-        [formGroup]="contactForm"
-        #formDirective="ngForm"
-        (ngSubmit)="submitHandler(formDirective)"
-        fxLayout="column"
-      >
-        <!--name form-field-->
-        <mat-form-field class="mat-form-field" appearance="outline">
-          <input
-            matInput
-            placeholder="Your name..."
-            formControlName="name"
-            #name
-          />
-          <mat-error
-            *ngIf="contactForm.get('name')?.hasError"
-            class="alert alert-danger"
-          >
-            Your name must be 4-100 characters long
-          </mat-error>
-        </mat-form-field>
-
-        <!--email form-field-->
-        <mat-form-field class="mat-form-field" appearance="outline">
-          <input
-            matInput
-            placeholder="Your email..."
-            formControlName="email"
-            #email
-          />
-          <mat-error
-            *ngIf="contactForm.get('email')?.hasError"
-            class="alert alert-danger"
-          >
-            There is an error in your email format
-          </mat-error>
-        </mat-form-field>
-
-        <!--message form-field-->
-        <mat-form-field class="mat-form-field" appearance="outline">
-          <textarea
-            matInput
-            cdkTextareaAutosize
-            cdkAutosizeMinRows="5"
-            cdkAutosizeMaxRows="10"
-            placeholder="Your message..."
-            formControlName="message"
-            #message
-          ></textarea>
-          <mat-error
-            *ngIf="contactForm.get('message')?.hasError"
-            class="alert alert-danger"
-          >
-            Your message must be 4-400 characters long
-          </mat-error>
-        </mat-form-field>
-
-        <div fxLayoutAlign="center">
-          <button
-            mat-stroked-button
-            color="primary"
-            type="submit"
-            [disabled]="contactForm.invalid || loading"
-            aria-label="Send button"
-          >
-            <span class="button-text">SEND</span>
-          </button>
-        </div>
-      </form>
+<section class="section">
+  <div class="container">
+    <div class="contact-heading">
+      <h1>Send a Message</h1>
     </div>
-
-    <mat-divider class="section-divider" [vertical]="true"></mat-divider>
-
-    <!--Map & More Info. section-->
-    <div
-      class="map-section"
-      fxLayout="column"
-      fxLayoutAlign="space-evenly center"
+    <form
+      class="contact-form"
+      [formGroup]="contactForm"
+      #formDirective="ngForm"
+      (ngSubmit)="submitHandler(formDirective)"
     >
-      <iframe
-        class="map-location"
-        width="400"
-        height="300"
-        src="https://maps.google.com/maps?q=Rue%20tolosan%206,%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
-        frameborder="0"
-        scrolling="no"
-        marginheight="0"
-        marginwidth="0"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-      <div class="contact-links" fxLayout="row">
-        <button class="linkedin-button" mat-stroked-button color="accent">
-          <span>LinkedIn</span>
-        </button>
-        <button mat-stroked-button color="primary">
-          <span>Github</span>
+      <!--name form-field-->
+      <mat-form-field class="mat-form-field" appearance="outline">
+        <input
+          matInput
+          placeholder="Your name..."
+          formControlName="name"
+          #name
+        />
+        <mat-error
+          *ngIf="contactForm.get('name')?.hasError"
+          class="alert alert-danger"
+        >
+          Your name must be 4-100 characters long
+        </mat-error>
+      </mat-form-field>
+
+      <!--email form-field-->
+      <mat-form-field class="mat-form-field" appearance="outline">
+        <input
+          matInput
+          placeholder="Your email..."
+          formControlName="email"
+          #email
+        />
+        <mat-error
+          *ngIf="contactForm.get('email')?.hasError"
+          class="alert alert-danger"
+        >
+          There is an error in your email format
+        </mat-error>
+      </mat-form-field>
+
+      <!--message form-field-->
+      <mat-form-field class="mat-form-field" appearance="outline">
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="5"
+          cdkAutosizeMaxRows="10"
+          placeholder="Your message..."
+          formControlName="message"
+          #message
+        ></textarea>
+        <mat-error
+          *ngIf="contactForm.get('message')?.hasError"
+          class="alert alert-danger"
+        >
+          Your message must be 4-400 characters long
+        </mat-error>
+      </mat-form-field>
+
+      <div class="send-button">
+        <button
+          mat-stroked-button
+          color="primary"
+          type="submit"
+          [disabled]="contactForm.invalid || loading"
+          aria-label="Send button"
+        >
+          <span class="button-text">SEND</span>
         </button>
       </div>
-    </div>
-  </mat-card>
-</div>
+    </form>
+  </div>
+</section>

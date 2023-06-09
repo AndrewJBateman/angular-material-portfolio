@@ -1,88 +1,31 @@
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.section {
+
   margin-top: 30px;
-}
 
-.contact-card {
-  width: 60em;
-  height: 35em;
-  margin: 1em;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-}
-
-@media (max-width: 60em) {
-  .contact-card {
-    width: fit-content;
-    height: fit-content;
-    margin: 1em;
-    overflow: hidden;
+  .container {
     display: flex;
     flex-direction: column;
-  }
-}
+    max-width: 700px;
+    margin-top: 30px;
+    margin: auto;
+    border: 3px solid #455a64;
+    padding: 16px;
 
-.mat-mdc-form-field {
-  font-size: 14px;
-}
+    .contact-heading {
+      margin: auto;
+      color: #455a64;
+    }
 
-.email-section {
-  width: 30em;
-  padding-left: 5px;
-  padding-right: 5px;
+    .contact-form {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      overflow: hidden;
+    }
 
-  .card-title {
-    margin: 1.5em 0 1.5em 0;
-    font-size: 20px;
-    // padding-right: 1em;
-  }
-}
-
-@media (max-width: 40em) {
-  .email-section {
-    width: 100%;
-    padding-left: 0;
-  }
-}
-
-.linkedin-button {
-  margin-right: 2rem;
-}
-
-.map-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-@media (max-width: 40em) {
-  .map-section {
-    width: 100%;
-  }
-}
-
-.section-divider {
-  padding: 10px;
-}
-
-@media (max-width: 60em) {
-  .section-divider {
-    visibility: hidden;
-    padding: 20px;
-  }
-}
-
-.map-location {
-  margin: 0 0 2em 1em;
-  min-width: min-content;
-}
-
-@media (max-width: 60em) {
-  .map-location {
-    margin: 0 0 3em 0;
-    width: fit-content;
+    .send-button {
+      margin: auto;
+    }
   }
 }
