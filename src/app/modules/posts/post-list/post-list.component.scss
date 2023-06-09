@@ -6,4 +6,8 @@
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   gap: 4px;
+
+  .posts-footer {
+    padding: 0 16px;
+  }
 }

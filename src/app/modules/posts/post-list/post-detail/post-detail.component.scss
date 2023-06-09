@@ -29,17 +29,16 @@
       white-space: pre-wrap;
       margin: 0 0 8px;
     }
+    .post-footer {
+      padding: 0 16px;
 
-    .small-text {
-      font-size: 14px !important;
+      .small-text {
+        font-size: 14px !important;
 
-      button {
-        background-color: #455a64;
+        button {
+          background-color: #455a64;
+        }
       }
-    }
-
-    .card-footer {
-      margin: auto 0 !important;
     }
   }
 }

@@ -10,6 +10,7 @@
   <div *ngIf="areas$">
     <mat-card
       appearance="outlined"
+      mat-elevation-z5
       *ngFor="let area of areas$ | async; trackBy: trackByFn"
     >
       <mat-card-header>
@@ -20,9 +21,7 @@
           alt="icon of {{ area.title }}"
         />
         <mat-card-title>{{ area.title }}</mat-card-title>
-        <mat-card-subtitle
-          >{{ area.subtitle }}</mat-card-subtitle
-        >
+        <mat-card-subtitle>{{ area.subtitle }}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         {{ area.content }}

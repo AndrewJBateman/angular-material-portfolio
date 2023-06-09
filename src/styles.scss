@@ -15,7 +15,7 @@ $ngMatPort-app-theme-dark: mat-dark-theme(
   $ngMatPort-app-warn
 );
 
-// @include angular-material-theme($ngMatPort-app-theme-dark);
+@include angular-material-theme($ngMatPort-app-theme-dark);
 @include mat-core();
 
 // html, body {
