@@ -12,11 +12,8 @@ import { SvgFolderModule } from "../../shared/components/svg-folder/svg-folder.m
 import { SvgTimerModule } from "../../shared/components/svg-timer/svg-timer.module";
 import { SvgCameraModule } from "../../shared/components/svg-camera/svg-camera.module";
 import { SvgBackModule } from "../../shared/components/svg-back/svg-back.module";
-import { PostService } from "./post-services/post.service";
 import { ImageService } from "./post-services/image.service";
 import { StorageService } from "./post-services/storage.service";
-
-import { environment } from "../../../environments/environment";
 
 const routes: Routes = [
   {
@@ -25,8 +22,8 @@ const routes: Routes = [
   },
   {
     path: "detail",
-    component: PostDetailComponent
-  }
+    component: PostDetailComponent,
+  },
 ];
 @NgModule({
   imports: [
@@ -38,9 +35,9 @@ const routes: Routes = [
     SvgTimerModule,
     SvgCalenderModule,
     SvgCameraModule,
-    SvgBackModule
+    SvgBackModule,
   ],
   declarations: [PostListComponent, PostDetailComponent],
-  providers: [PostService, StorageService, ImageService],
+  providers: [StorageService, ImageService],
 })
 export default class PostsModule {}

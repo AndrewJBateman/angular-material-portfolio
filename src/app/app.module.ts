@@ -1,8 +1,7 @@
-import { AreasService } from "./modules/home/home-services/areas.service";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 
-import { provideFirebaseApp, getApp, initializeApp } from "@angular/fire/app";
+import { provideFirebaseApp, initializeApp } from "@angular/fire/app";
 import { getFirestore, provideFirestore } from "@angular/fire/firestore";
 
 import { environment } from "../environments/environment";
@@ -37,7 +36,6 @@ import { FooterComponent } from "./core/footer/footer.component";
     }),
   ],
   exports: [],
-  providers: [AreasService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

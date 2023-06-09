@@ -6,14 +6,13 @@ import {
   ViewEncapsulation,
   inject,
 } from "@angular/core";
-import { Observable, tap } from "rxjs";
-import { map } from "rxjs/operators";
+import { Observable } from "rxjs";
 
 import { Meta, Title } from "@angular/platform-browser";
 
 import { Project } from "./project.model";
-import { ProjectService } from "./project-services/project.service";
-import { BreakpointService } from "../../core/breakpoint.service";
+import { BreakpointService } from "../../core/services/breakpoint.service";
+import { FirestoreDataService } from "./../../core/services/firestore-data.service";
 
 @Component({
   selector: "app-projects",
@@ -24,6 +23,10 @@ import { BreakpointService } from "../../core/breakpoint.service";
 })
 export class ProjectsComponent implements OnInit {
   breakpointService = inject(BreakpointService);
+  firestoreDataService = inject(FirestoreDataService);
+  titleService = inject(Title);
+  metaTagService = inject(Meta);
+  
   columns$ = this.breakpointService.columns$;
 
   @Input() darkModeSwitched: Boolean = false;
@@ -33,12 +36,6 @@ export class ProjectsComponent implements OnInit {
   projects$: Observable<Project[]>;
   project: Project | undefined;
 
-  constructor(
-    private titleService: Title,
-    private metaTagService: Meta,
-    private projectService: ProjectService
-  ) {}
-
   ngOnInit(): void {
     // console.log("dark mode?", this.darkModeSwitched);
     this.titleService.setTitle(this.title);
@@ -46,10 +43,7 @@ export class ProjectsComponent implements OnInit {
       name: "projects",
       content: "andrewbateman.org",
     });
-    this.projects$ = this.projectService.getProjects().pipe(
-      tap((val) => console.log(val)),
-      map((val) => val)
-    );
+    this.projects$ = this.firestoreDataService.getData("projects");
   }
 
   tabTrackByFn(index: number, item: any): number {

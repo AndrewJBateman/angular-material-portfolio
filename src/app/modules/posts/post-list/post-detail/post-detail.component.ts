@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, OnInit } from "@angular/core";
+import { Component, ChangeDetectionStrategy, OnInit, inject } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
@@ -14,15 +14,14 @@ import { ImageService } from "../../post-services/image.service";
   styleUrls: ["./post-detail.component.scss"],
 })
 export class PostDetailComponent implements OnInit {
+  activatedRoute = inject(ActivatedRoute);
+  router = inject(Router);
+  location = inject(Location);
+  imageService = inject(ImageService)
   post: Post | undefined | null;
   imageData$: Observable<IUnsplashResponse> = new Observable();
 
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private router: Router,
-    private location: Location,
-    private imageService: ImageService
-  ) {
+  constructor() {
     this.activatedRoute.queryParams.subscribe((params) => {
       const routeData = this.router?.getCurrentNavigation()?.extras;
       const state = routeData?.state;

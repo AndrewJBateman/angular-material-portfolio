@@ -23,24 +23,13 @@
         <span class="card-subtitle">{{ post!.subtitle }}:</span>
         {{ post!.content }}
       </p>
-      <p>
-        <span class="small-text">
-          <button mat-raised-button (click)="onNavigateBackToPosts()">
-            <span style="color: #fff">Back to list</span>
-          </button>
-
-          <div fxFlex></div>
-          <p class="card-footer">
-            <app-svg-folder></app-svg-folder>
-            {{ post!.category }}
-          </p>
-          <div fxFlex></div>
-          <p class="card-footer">
-            <app-svg-calender></app-svg-calender>
-            {{ post!.published.seconds*1000 | dateConvert }}
-          </p>
-        </span>
-      </p>
     </mat-card-content>
+    <mat-card-actions align="start" class="post-footer">
+      <span class="small-text">
+        <button mat-raised-button (click)="onNavigateBackToPosts()">
+          <span style="color: #fff">Back to Grid</span>
+        </button>
+      </span>
+    </mat-card-actions>
   </mat-card>
 </div>
