@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#317EFB" />
 </head>
 
-<div class="home-container">
+<div class="container">
   <div *ngIf="areas$">
     <mat-card
       appearance="outlined"
-      mat-elevation-z5
+      class="home-card mat-elevation-z5"
       *ngFor="let area of areas$ | async; trackBy: trackByFn"
     >
       <mat-card-header>

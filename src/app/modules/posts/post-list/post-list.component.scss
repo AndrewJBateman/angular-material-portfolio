@@ -1,7 +1,3 @@
-:host {
-  --columns: 5;
-}
-
 .responsive-grid {
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);

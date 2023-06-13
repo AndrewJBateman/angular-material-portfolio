@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   gap: 4px;
+  padding: 4px;
 }
 
 // project tab styling

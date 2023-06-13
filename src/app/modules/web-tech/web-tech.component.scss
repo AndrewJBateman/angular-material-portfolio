@@ -1,0 +1,19 @@
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: 4px;
+  padding: 8px;
+
+  .container {
+    padding: 8px;
+  }
+
+  .tech-card-content {
+    margin: 0;
+
+    .tech-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
