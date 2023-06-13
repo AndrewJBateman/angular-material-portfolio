@@ -1,6 +1,7 @@
 export class DataItem {
+  id: number = 0;
   name: string = '';
-  version: string = '';
+  package: string = '';
   link: string = '';
-  iconLink: string = '';
+  icon: string = '';
 }
