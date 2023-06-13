@@ -1,6 +1,6 @@
 # :zap: Angular Material Portfolio
 
-* Angular Server Side Rendered (SSR) app using Angular Material to create a fully-responsive portfolio website with a Firebase backend storing blog post entries, images as well as messages from users.
+* Angular Server Side Rendered (SSR) app using Angular Material to create a fully-responsive portfolio website with a Firebase Firestore database.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-portfolio?style=plastic)
@@ -25,16 +25,16 @@
 
 ## :books: General info
 
-* **Responsive:** Pages resize using Angular flex layout and grids of Angular Material mat-cards. Using breakpoint sizes from [Angular Flex Layout Documentation](https://github.com/angular/flex-layout/wiki/Responsive-API):
+* **Responsive:** grid of Angular Material mat-cards using Breakpoint detection
 * **Navbars:** Top/side navbars with page routing & links to Github & LinkedIn.
 * **Footer** with date & link to Build information page
-* **Build Data** fxFlex layout with cards to display info. on main dependencies used in app
-* **Home:** Angular Tab Groups/Material cards used to display data, using data-binding from an array of 'areas' based on an Area model.
-* **Projects:** fxFlex layout with tabbed card pages to display project data using data-binding from an array of projects based on a Project model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
-* **Skills:** fxFlex layout with cards to display project data using data-binding from an array of skills based on a Skill model. Cards are sized so up to 4 will show on a row before wrapping to the next line.
-* **Contact:** Simple mat-form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend using angularfire-lite and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
+* **Build Data** info. on main app dependencies
+* **Home:** Angular Tab Groups/Material card grid to display data, using data-binding from an array of 'areas' based on an Area model.
+* **Projects:** card grid to display project data using data-binding from an array of projects based on a Project model.
+* **Skills:** card grid to display project data using data-binding from an array of skills based on a Skill model.
+* **Contact:** Simple form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend using angularfire-lite and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
 * **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page.
-Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info. **OPTION:** add Tabs so all Dev, Eng & IT posts shown in their own tabs (currently creates gaps with div.ng-star-inserted class).
+Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info.
 * **Not Found:** In the event of the user trying to route to any page address that is not listed in the router-module a single Mat-card will display a message to the user. There is a simple button to reroute the user to the Home page.
 
 ## :camera: Screenshots
@@ -100,35 +100,16 @@ export class StorageService {
 }
 ```
 
-* `post.service.ts` class to get Posts collection Observable if it does not already exist using the [rxjs share method](https://rxjs.dev/api/operators/share) so the same Observable is shared the next time to avoid unnecessary HTTP requests
-
-```typescript
-export class PostService {
-  private postsCollection: Observable<BehaviorSubject<Post[]>>;
-  constructor(private firestore: AngularFireLiteFirestore) {}
-
-  getPosts(): Observable<BehaviorSubject<Post[]>> {
-    if (this.postsCollection) {
-      return this.postsCollection;
-    } else {
-      this.postsCollection = this.firestore
-        .read("posts").pipe(share());
-      return this.postsCollection;
-    }
-  }
-}
-```
-
 ## :cool: Features
 
 * **Angularfire-lite** used to read blog posts and push user contact form data to firebase backend. This greatly reduces size of Vendor build bundles
-* **Rxjs pluck and share methods** used to avoid unnecessary http calls and to simplify code
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
+* Fix navbar - remove flex
 * To-Do: General: fix index CSP, add text compression, reduce unused JS, cache policy 1 year?, add tailwind and remove ng flex-layout as it is deprecated.
-* To-Do: Home: Move data to Supabase then delete data in app.
+* To-Do: Home: Order collection by id.
 * To-Do: Skills: add more skills, green skills? add electrical/instr skills
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
 * To-Do: Projects: correct default Mat-tabs contrast colors. add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
@@ -161,4 +142,4 @@ export class PostService {
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
