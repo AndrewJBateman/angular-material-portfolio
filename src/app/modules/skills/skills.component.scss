@@ -1,20 +1,24 @@
-.skills-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: 4px;
+  padding: 8px;
 
-// Card styling
-.card-text {
-  font-size: 20px;
-  overflow-wrap: normal;
-}
+  .skill-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
-.content-style {
-  min-height: 80px;
-}
+    .skill-area {
+      overflow-wrap: normal;
+      font-size: 18px;
+      text-decoration: underline;
+      text-decoration-color: #68a1e2;
+      text-decoration-thickness: 2px;
+    }
 
-.card-horiz-line {
-  margin: 2px;
-  border: 1px solid #68a1e2;
+    .skill-content {
+      min-height: 80px;
+    }
+  }
 }

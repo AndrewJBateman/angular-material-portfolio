@@ -1,8 +1,10 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy, inject } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
-import { Skill } from "./skill.module";
+import { Observable } from "rxjs";
 
-import { SKILLS } from "./skills";
+import { BreakpointService } from "../../core/services/breakpoint.service";
+import { FirestoreDataService } from "./../../core/services/firestore-data.service";
+import { Skill } from "./skill.module";
 
 @Component({
   selector: "app-skills",
@@ -11,11 +13,15 @@ import { SKILLS } from "./skills";
   styleUrls: ["./skills.component.scss"],
 })
 export class SkillsComponent {
+  breakpointService = inject(BreakpointService);
+  firestoreDataService = inject(FirestoreDataService);
+  titleService = inject(Title);
+  metaTagService = inject(Meta);
+
+  columns$ = this.breakpointService.columns$;
+
   title = "List of skills";
-
-  skills = SKILLS;
-
-  constructor(private titleService: Title, private metaTagService: Meta) {}
+  skills$: Observable<Skill[]>;
 
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
@@ -23,6 +29,7 @@ export class SkillsComponent {
       name: "skills",
       content: "andrewbateman.org",
     });
+    this.skills$ = this.firestoreDataService.getData("skills");
   }
 
   trackByFn(index: number, skill: Skill): number {

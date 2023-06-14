@@ -1,24 +1,18 @@
-<div fxFlex fxLayout="column" fxLayoutGap="10px">
-  <div fxLayout="row wrap">
-    <div
-      *ngFor="let skill of skills; trackBy: trackByFn"
-      fxFlex="25"
-      fxFlex.md="33"
-      fxFlex.sm="50"
-      fxFlex.xs="100"
-      fxLayout="column"
-      style="padding: 10px"
-    >
-      <!--mat-card for each skill with data-binding from skills.ts-->
-      <mat-card class="skills-card" appearance="outlined">
-        <mat-card-content>
-          <p class="card-text">
-            {{ skill.title }}
-          </p>
-          <hr class="card-horiz-line" />
-          <p class="content-style">{{ skill.content }}</p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
+<head>
+  <meta
+    name="description"
+    content="Skills page displays programming, IT and cloud computing skills in an Angular Material card grid."
+  />
+</head>
+<div class="responsive-grid" [style.--columns]="columns$ | async">
+  <ng-container *ngFor="let skill of skills$ | async; trackBy: trackByFn">
+    <mat-card appearance="outlined" class="skill-card mat-elevation-z5">
+      <mat-card-content>
+        <p class="skill-area">
+          {{ skill.area }}
+        </p>
+        <p class="skill-content">{{ skill.content }}</p>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
 </div>
