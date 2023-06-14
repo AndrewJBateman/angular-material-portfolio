@@ -1,27 +1,39 @@
+@use "@angular/material" as mat;
 @import "@angular/material/theming";
-
-$ngMatPort-app-primary: mat-palette($mat-blue-grey, 700);
-$ngMatPort-app-accent: mat-palette($mat-blue, 900);
-$ngMatPort-app-warn: mat-palette($mat-orange, 800);
-
-$ngMatPort-app-theme: mat-light-theme(
-  $ngMatPort-app-primary,
-  $ngMatPort-app-accent,
-  $ngMatPort-app-warn
-);
-$ngMatPort-app-theme-dark: mat-dark-theme(
-  $ngMatPort-app-primary,
-  $ngMatPort-app-accent,
-  $ngMatPort-app-warn
-);
-
-@include angular-material-theme($ngMatPort-app-theme-dark);
+@include mat.all-component-typographies();
 @include mat-core();
 
-// html, body {
-//   margin: 0;
-//   font-family: Roboto, "Helvetica Neue", sans-serif;
-// }
+$angular-primary: mat.define-palette(mat.$blue-grey-palette, 700);
+$angular-accent: mat.define-palette(mat.$blue-palette, 900);
+$angular-warn: mat.define-palette(mat.$orange-palette, 800);
+
+$angular-light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $angular-primary,
+      accent: $angular-accent,
+      warn: $angular-warn,
+    ),
+  )
+);
+
+$angular-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $angular-primary,
+      accent: $angular-accent,
+      warn: $angular-warn,
+    ),
+  )
+);
+
+.dark-theme {
+  @include mat.all-component-colors($angular-dark-theme);
+}
+.light-theme {
+  @include mat.all-component-colors($angular-light-theme);
+}
+
 
 html {
   overflow-y: overlay;
@@ -31,14 +43,6 @@ body {
   min-height: 100vh;
   position: relative;
   margin: 0;
-}
-
-.theme-dark {
-  @include angular-material-theme($ngMatPort-app-theme-dark);
-}
-
-.theme-light {
-  @include angular-material-theme($ngMatPort-app-theme);
 }
 
 // styling for general cards used in blog and web-info pages
