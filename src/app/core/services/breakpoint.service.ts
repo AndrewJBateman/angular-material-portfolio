@@ -1,27 +1,25 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Injectable, inject } from '@angular/core';
-import { map } from 'rxjs';
+import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
+import { Injectable, inject } from "@angular/core";
+import { map } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class BreakpointService {
   breakpointObserver = inject(BreakpointObserver);
-  constructor() { }
+  constructor() {}
 
   columns$ = this.breakpointObserver
-    .observe([
-      Breakpoints.XSmall,
-      Breakpoints.Small,
-      Breakpoints.Medium,
-      Breakpoints.Large,
-    ])
+    .observe([Breakpoints.XSmall, Breakpoints.Small, Breakpoints.Medium])
     .pipe(
       map((state) => {
-        if (state.breakpoints[Breakpoints.XSmall]) return 1;
-        if (state.breakpoints[Breakpoints.Small]) return 2;
-        if (state.breakpoints[Breakpoints.Medium]) return 3;
-        return 4;
+        return state.breakpoints[Breakpoints.XSmall]
+          ? 1
+          : state.breakpoints[Breakpoints.Small]
+          ? 2
+          : state.breakpoints[Breakpoints.Medium]
+          ? 3
+          : 4;
       })
     );
 }
