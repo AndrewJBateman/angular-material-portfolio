@@ -33,7 +33,7 @@
 * **Projects:** card grid to display project data using data-binding from an array of projects based on a Project model.
 * **Skills:** card grid to display project data using data-binding from an array of skills based on a Skill model.
 * **Contact:** Simple form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend using angularfire-lite and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
-* **Blog:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page.
+* **Posts:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page.
 Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info.
 * **Not Found:** In the event of the user trying to route to any page address that is not listed in the router-module a single Mat-card will display a message to the user. There is a simple button to reroute the user to the Home page.
 
@@ -70,50 +70,41 @@ Mat-cards now display Post title, subtitle, content, post category (dev, IT or E
 
 ## :computer: Code Examples
 
-* `storage.service.ts` used to store blog Posts to avoid repeated HTTP calls to fetch the same data every time
+* `core/services/breakpoint.service.ts` class to supply the number of columns based on user screen size - used by several modules to decide number of mat-cards in a grid line
 
 ```typescript
-@Injectable()
-export class StorageService {
+export class BreakpointService {
+  breakpointObserver = inject(BreakpointObserver);
   constructor() {}
 
-  set(key: string, data: any): void {
-    try {
-      sessionStorage.setItem(key, JSON.stringify(data));
-    } catch (err) {
-      console.error("Error saving to localStorage", err);
-    }
-  }
-
-  get(key: string): string {
-    try {
-      return JSON.parse(sessionStorage.getItem(key));
-    } catch (err) {
-      console.error("Error getting data from localStorage", err);
-      return null;
-    }
-  }
-
-  clear(): void {
-    sessionStorage.clear();
-  }
+  columns$ = this.breakpointObserver
+    .observe([Breakpoints.XSmall, Breakpoints.Small, Breakpoints.Medium])
+    .pipe(
+      map((state) => {
+        return state.breakpoints[Breakpoints.XSmall]
+          ? 1
+          : state.breakpoints[Breakpoints.Small]
+          ? 2
+          : state.breakpoints[Breakpoints.Medium]
+          ? 3
+          : 4;
+      })
+    );
 }
 ```
 
 ## :cool: Features
 
-* **Angularfire-lite** used to read blog posts and push user contact form data to firebase backend. This greatly reduces size of Vendor build bundles
+* common Grid card layouts using shared firebase database service
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
-* Fix navbar - remove flex
-* To-Do: General: fix index CSP, add text compression, reduce unused JS, cache policy 1 year?, add tailwind and remove ng flex-layout as it is deprecated.
-* To-Do: Home: Order collection by id.
+* To-Do: General: fix index CSP, add text compression, reduce unused JS, cache policy 1 year?
 * To-Do: Skills: add more skills, green skills? add electrical/instr skills
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
 * To-Do: Projects: correct default Mat-tabs contrast colors. add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
-* To-Do: Blog: Correct object/array issue, Unsplash images - use sizing website. add articles and tab layout same as projects
+* To-Do: Posts: Unsplash images - use sizing website. add articles and tab layout same as projects
 
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
 * To-Do: overview drg
