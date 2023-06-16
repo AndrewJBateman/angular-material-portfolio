@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 
 import { BreakpointService } from "../../core/services/breakpoint.service";
 import { FirestoreDataService } from "./../../core/services/firestore-data.service";
-import { Skill } from "./skill.module";
+import { Skill } from "./skill.model";
 
 @Component({
   selector: "app-skills",
@@ -31,7 +31,6 @@ export class SkillsComponent {
     });
     this.skills$ = this.firestoreDataService.getData("skills");
   }
-
   trackByFn(index: number, skill: Skill): number {
     return skill.id;
   }
