@@ -1,22 +1,14 @@
-<mat-nav-list
-  style="
-    background-color: #455a64 !important;
-    height: 100%;
-    position: fixed;
-    min-height: 100vh;
-  "
-  (click)="onSidenavClose()"
+<mat-nav-list class="sidenav-list" (click)="onSidenavClose()"
   ><img
-    class="mat-elevation-z8 sidenav-image"
+    class="sidenav-image mat-elevation-z8"
     src="../../../../assets/svgs/angular.svg"
     alt="profile image"
-    style="background-color: white !important; width: 60px; height: 60px"
   />
 
   <mat-divider class="sidenav-divider"></mat-divider>
   <a
     mat-list-item
-    class="side-link-home"
+    class="sidenav-item"
     [routerLink]="['/home']"
     [routerLinkActiveOptions]="{ exact: true }"
     href="/home"
@@ -24,84 +16,85 @@
     #rla="routerLinkActive"
     (click)="onSidenavClose()"
   >
-    <app-svg-home></app-svg-home>
-    <span [ngClass]="rla.isActive ? 'side-link-active' : 'side-link'">AB</span>
+    <span
+      [ngClass]="rla.isActive ? 'side-link-active' : 'side-link'"
+      >AB</span
+    >
   </a>
   <a
     mat-list-item
+    class="sidenav-item"
     [routerLink]="['/projects']"
     href="/projects"
     routerLinkActive="side-link-active"
     #rlb="routerLinkActive"
     (click)="onSidenavClose()"
   >
-    <app-svg-work></app-svg-work>
     <span [ngClass]="rlb.isActive ? 'side-link-active' : 'side-link'"
       >Projects</span
     >
   </a>
   <a
     mat-list-item
+    class="sidenav-item"
     [routerLink]="['/skills']"
     href="/skills"
     routerLinkActive="side-link-active"
     #rlc="routerLinkActive"
     (click)="onSidenavClose()"
   >
-    <app-svg-project></app-svg-project>
     <span [ngClass]="rlc.isActive ? 'side-link-active' : 'side-link'"
       >Skills</span
     >
   </a>
   <a
     mat-list-item
+    class="sidenav-item"
     [routerLink]="['/contact']"
     href="/contact"
     routerLinkActive="side-link-active"
     #rld="routerLinkActive"
     (click)="onSidenavClose()"
   >
-    <app-svg-mail></app-svg-mail>
     <span [ngClass]="rld.isActive ? 'side-link-active' : 'side-link'"
       >Contact</span
     >
   </a>
   <a
     mat-list-item
-    [routerLink]="['/blog']"
-    href="/blog"
+    class="sidenav-item"
+    [routerLink]="['/posts']"
+    href="/posts"
     routerLinkActive="side-link-active"
     #rle="routerLinkActive"
     (click)="onSidenavClose()"
   >
-    <app-svg-blog></app-svg-blog>
     <span [ngClass]="rle.isActive ? 'side-link-active' : 'side-link'"
-      >Blog</span
+      >Posts</span
     >
   </a>
-  <mat-divider class="sidenav-divider"></mat-divider>
-  <a
-    mat-list-item
-    class="side-link-social"
-    href="https://www.github.com/andrewjbateman"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <app-svg-github></app-svg-github>
-    <span class="side-link">Github</span>
-  </a>
-  <a
-    mat-list-item
-    class="side-link-social"
-    href="https://www.linkedin.com/in/andrew-bateman"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <app-svg-linkedin></app-svg-linkedin>
-    <span class="side-link">LinkedIn</span>
-  </a>
-  <a mat-list-item class="side-drawer-close" (click)="onSidenavClose()">
-    <app-svg-close></app-svg-close>
-    <span class="side-link">Close</span>
-  </a>
+  <mat-divider class="sidenav-divider" />
+  <div class="sidenav-bar-social">
+    <a
+      mat-list-item
+      class="side-link-social"
+      href="https://www.github.com/andrewjbateman"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <app-svg-github />
+    </a>
+    <a
+      mat-list-item
+      class="side-link-social"
+      href="https://www.linkedin.com/in/andrew-bateman"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <app-svg-linkedin />
+    </a>
+    <a mat-list-item class="side-drawer-close" (click)="onSidenavClose()">
+      <app-svg-close />
+    </a>
+  </div>
 </mat-nav-list>

@@ -1,5 +1,6 @@
-import { Component, Output, EventEmitter, ChangeDetectionStrategy } from "@angular/core";
+import { Component, Output, EventEmitter, ChangeDetectionStrategy, inject } from "@angular/core";
 import { MatSlideToggleChange } from "@angular/material/slide-toggle";
+import { BreakpointService } from "../../services/breakpoint.service";
 
 @Component({
   selector: "app-top-navbar",
@@ -8,6 +9,8 @@ import { MatSlideToggleChange } from "@angular/material/slide-toggle";
   styleUrls: ["./top-navbar.component.scss"],
 })
 export class TopNavbarComponent {
+  breakpointService = inject(BreakpointService);
+  columns$ = this.breakpointService.columns$;
   @Output()
   readonly darkModeSwitched = new EventEmitter();
 
