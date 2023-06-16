@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, ChangeDetectionStrategy, inject } from "@angular/core";
+import { Component, Output, EventEmitter, ChangeDetectionStrategy, inject, OnInit } from "@angular/core";
 import { MatSlideToggleChange } from "@angular/material/slide-toggle";
 import { BreakpointService } from "../../services/breakpoint.service";
 

@@ -10,7 +10,7 @@ import { SvgDownloadComponent } from "../../shared/components/svg-download/svg-d
 import { SvgCloseComponent } from "../../shared/components/svg-close/svg-close.component";
 import { SvgCreateComponent } from "../../shared/components/svg-create/svg-create.component";
 
-import { SvgLinkedinModule} from "../../shared/components/svg-linkedin/svg-linkedin.module";
+import { SvgLinkedinModule } from "../../shared/components/svg-linkedin/svg-linkedin.module";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "../../app-routing.module";
