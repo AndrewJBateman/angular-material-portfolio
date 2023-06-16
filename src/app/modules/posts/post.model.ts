@@ -1,6 +1,5 @@
 export class Post {
-  author?: string = '';
-  id?: string;
+  id: number = 0;
   content: string = '';
   image: string = '';
   published: {
@@ -9,6 +8,6 @@ export class Post {
   };
   subtitle: string = '';
   title: string = '';
-  category: string = '';
+  category: string = 'IT' || 'Dev' || 'Eng';
 }
 

@@ -20,7 +20,7 @@ export class PostListComponent implements OnInit {
   breakpointService = inject(BreakpointService);
   router = inject(Router);
 
-  title = "Blog Posts";
+  title = "Technical Posts";
   posts$: Observable<Post[]>;
   columns$ = this.breakpointService.columns$;
 
@@ -28,15 +28,15 @@ export class PostListComponent implements OnInit {
     window.scrollTo(0, 0);
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({
-      name: "blog",
+      name: "posts",
       content: "andrewbateman.org",
     });
     this.posts$ = this.firestoreDataService.getData("posts");
   }
 
-  // trackByFn(index: number, post: Post): number {
-  //   return post.id;
-  // }
+  cardTrackByFn(index: number, post: Post): number {
+    return post.id;
+  }
 
   onGoToPostDetail(post: Post): void {
     const navigationExtras: NavigationExtras = {
@@ -44,6 +44,6 @@ export class PostListComponent implements OnInit {
         post,
       },
     };
-    this.router.navigate(["blog/detail"], navigationExtras);
+    this.router.navigate(["posts/detail"], navigationExtras);
   }
 }

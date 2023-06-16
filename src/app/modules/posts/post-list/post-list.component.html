@@ -1,12 +1,11 @@
 <head>
   <meta
     name="description"
-    content="Blog page uses Angular cards to display some technical posts that can be clicked on to show a more detailed page."
+    content="Posts page uses Angular cards to display some technical posts that can be clicked on to show a more detailed page."
   />
 </head>
 <div class="responsive-grid" [style.--columns]="columns$ | async">
-  <ng-container *ngFor="let post of posts$ | async; let postId = index">
-    <!--mat-card for each post with data-binding from post.ts-->
+  <ng-container *ngFor="let post of posts$ | async; trackBy: cardTrackByFn">
     <mat-card
       appearance="outlined"
       class="general-card mat-elevation-z5"

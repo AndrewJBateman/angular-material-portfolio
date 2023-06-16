@@ -1,12 +1,11 @@
 <head>
   <meta
     name="description"
-    content="Blog detail page uses an Angular card to display technical post in detail"
+    content="posts detail page uses an Angular card to display technical post in detail"
   />
 </head>
 
 <div class="post-detail-container">
-  <!--mat-card for each post with data-binding from post.ts-->
   <mat-card appearance="outlined" class="post-card mat-elevation-z1">
     <ngx-picture
       *ngIf="imageData$ | async as imageData"
