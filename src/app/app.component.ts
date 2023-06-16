@@ -1,4 +1,9 @@
-import { Component, HostBinding, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import {
+  Component,
+  HostBinding,
+  OnInit,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { Meta } from "@angular/platform-browser";
 
 @Component({
@@ -12,7 +17,7 @@ export class AppComponent implements OnInit {
 
   @HostBinding("class")
   get themeMode(): string | boolean {
-    return this.isDark ? "theme-dark" : "theme-light";
+    return this.isDark ? "dark-theme" : "light-theme";
   }
 
   constructor(private metaTagService: Meta) {}
