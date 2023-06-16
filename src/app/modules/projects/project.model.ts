@@ -1,15 +1,8 @@
 export class Project {
-  area: string;
+  area: string = "";
   title: string = "";
-  ref: string = "";
-  svgPath1?: string;
-  svgPath2?: string;
-  svgPath3?: string;
-  svgPath4?: string;
-  svgPath5?: string;
-  svgPath6?: string;
-  svgPath7?: string;
-  svgPath8?: string;
+  id: string = "";
+  svgs: [string] = [""];
   content: string = "";
   github: string = "";
 }

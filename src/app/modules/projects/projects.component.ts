@@ -26,10 +26,10 @@ export class ProjectsComponent implements OnInit {
   firestoreDataService = inject(FirestoreDataService);
   titleService = inject(Title);
   metaTagService = inject(Meta);
-  
+
   columns$ = this.breakpointService.columns$;
 
-  @Input() darkModeSwitched: Boolean = false;
+  // @Input() darkModeSwitched: Boolean = false;
 
   title = "Projects";
   areas = ["Javascript", "Full-Stack", "Node"];
@@ -37,7 +37,6 @@ export class ProjectsComponent implements OnInit {
   project: Project | undefined;
 
   ngOnInit(): void {
-    // console.log("dark mode?", this.darkModeSwitched);
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag({
       name: "projects",
@@ -50,7 +49,7 @@ export class ProjectsComponent implements OnInit {
     return item.tabId;
   }
 
-  cardTrackByFn(index: number, item: any): number {
-    return item.cardId;
+  cardTrackByFn(index: number, project: Project): number {
+    return +project.id;
   }
 }

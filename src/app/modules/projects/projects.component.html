@@ -8,51 +8,17 @@
 <mat-tab-group backgroundColor="primary" mat-align-tabs="start">
   <mat-tab *ngFor="let area of areas" [label]="area" class="project-tab">
     <div class="responsive-grid" [style.--columns]="columns$ | async">
-      <ng-container *ngFor="let project of projects$ | async; trackBy: cardTrackByFn">
+      <ng-container
+        *ngFor="let project of projects$ | async; trackBy: cardTrackByFn"
+      >
         <ng-container *ngIf="project.area == area">
           <mat-card appearance="outlined" class="project-card mat-elevation-z5">
             <mat-card-content class="project-card-content">
-              <p class="project-card-icons">
+              <p class="project-card-icons" *ngFor="let svg of project.svgs">
                 <img
                   class="project-card-svg"
-                  [src]="project.svgPath1"
-                  alt="icon of {{ project }}"
-                />
-                <img
-                  *ngIf="project.svgPath2"
-                  class="project-card-svg"
-                  [src]="project.svgPath2"
-                  alt="icon of {{ project }}"
-                />
-                <img
-                  *ngIf="project.svgPath3"
-                  class="project-card-svg"
-                  [src]="project.svgPath3"
-                  alt="icon of {{ project.title }}"
-                />
-                <img
-                  *ngIf="project.svgPath4"
-                  class="project-card-svg"
-                  [src]="project.svgPath4"
-                  alt="icon of {{ project.title }}"
-                />
-                <img
-                  *ngIf="project.svgPath5"
-                  class="project-card-svg"
-                  [src]="project.svgPath5"
-                  alt="icon of {{ project.title }}"
-                />
-                <img
-                  *ngIf="project.svgPath6"
-                  class="project-card-svg"
-                  [src]="project.svgPath6"
-                  alt="icon of {{ project.title }}"
-                />
-                <img
-                  *ngIf="project.svgPath7"
-                  class="project-card-svg"
-                  [src]="project.svgPath7"
-                  alt="icon of {{ project.title }}"
+                  src="../assets/svgs/{{ svg }}.svg"
+                  alt="icon of {{ svg }}"
                 />
               </p>
               <p>
