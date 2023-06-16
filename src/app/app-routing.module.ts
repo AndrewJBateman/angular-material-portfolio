@@ -2,7 +2,6 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./modules/home/home.component";
-import { PostDetailComponent } from "./modules/posts/post-list/post-detail/post-detail.component";
 
 const routes: Routes = [
   {
@@ -25,14 +24,10 @@ const routes: Routes = [
       import("./modules/skills/skills.module"),
   },
   {
-    path: "blog",
+    path: "posts",
     loadChildren: () =>
       import("./modules/posts/posts.module"),
 
-  },
-  {
-    path: "blog/detail",
-    component: PostDetailComponent
   },
   {
     path: "contact",
