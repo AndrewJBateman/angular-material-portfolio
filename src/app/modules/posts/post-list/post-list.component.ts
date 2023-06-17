@@ -21,6 +21,7 @@ export class PostListComponent implements OnInit {
   router = inject(Router);
 
   title = "Technical Posts";
+  areas = ["Dev", "IT", "Eng"];
   posts$: Observable<Post[]>;
   columns$ = this.breakpointService.columns$;
 
