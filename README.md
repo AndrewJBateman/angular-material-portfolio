@@ -95,7 +95,7 @@ export class BreakpointService {
 
 ## :cool: Features
 
-* common Grid card layouts using shared firebase database service
+* common Grid card layouts with data from a shared firebase database service
 
 ## :clipboard: Status & To-Do List
 
@@ -103,8 +103,8 @@ export class BreakpointService {
 * To-Do: General: fix index CSP, add text compression, reduce unused JS, cache policy 1 year?
 * To-Do: Skills: add more skills, green skills? add electrical/instr skills
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
-* To-Do: Projects: correct default Mat-tabs contrast colors. add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
-* To-Do: Posts: Unsplash images - use sizing website. add articles and tab layout same as projects
+* To-Do: Projects: add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
+* To-Do: Posts: Unsplash images - use sizing website. add posts
 
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
 * To-Do: overview drg

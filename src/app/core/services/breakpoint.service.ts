@@ -7,8 +7,8 @@ import { map } from "rxjs";
 })
 export class BreakpointService {
   breakpointObserver = inject(BreakpointObserver);
-  constructor() {}
 
+  // return number of grid columns based on user screen size breakpoint, default 4
   columns$ = this.breakpointObserver
     .observe([Breakpoints.XSmall, Breakpoints.Small, Breakpoints.Medium])
     .pipe(
