@@ -5,11 +5,17 @@
   />
 </head>
 
-<mat-tab-group backgroundColor="primary" mat-align-tabs="start">
-  <mat-tab *ngFor="let area of areas" [label]="area" class="post-tab">
+<mat-tab-group
+  backgroundColor="primary"
+  mat-align-tabs="start"
+  #tabGroup
+  [(selectedIndex)]="tabIndex"
+  (selectedTabChange)="tabChanged($event)"
+>
+  <mat-tab *ngFor="let tab of tabs" [label]="tab" class="post-tab">
     <div class="responsive-grid" [style.--columns]="columns$ | async">
       <ng-container *ngFor="let post of posts$ | async; trackBy: cardTrackByFn">
-        <ng-container *ngIf="post.category == area">
+        <ng-container *ngIf="post.category == tab">
           <mat-card
             appearance="outlined"
             class="general-card mat-elevation-z5"
