@@ -19,6 +19,6 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseConfig: '${{ secrets.FIREBASE_CONFIG }}'
-          unsplash: '${{ secrets.UNSLASH_API_KEY }}'
+          unsplash: '${{ secrets.UNSPLASH_API_KEY }}'
           channelId: live
           projectId: angular-blog-14cef
