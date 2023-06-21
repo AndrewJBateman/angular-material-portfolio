@@ -2,9 +2,7 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
-env:
-  unsplash: ${{ secrets.UNSPLASH_API_KEY }}
-  firebaseConfig: ${{ secrets.FIREBASE_CONFIG }}
+
 'on':
   push:
     branches:
@@ -15,6 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm ci && npm run build
+        env:
+          unsplash: ${{ secrets.UNSPLASH_API_KEY }}
+          firebaseConfig: ${{ secrets.FIREBASE_CONFIG }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
