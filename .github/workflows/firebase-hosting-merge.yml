@@ -2,6 +2,9 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
+env:
+  unsplash: ${{ secrets.env.UNSPLASH_API_KEY }}
+  firebaseConfig: ${{ secrets.env.FIREBASE_CONFIG }}
 'on':
   push:
     branches:
@@ -15,6 +18,7 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANGULAR_BLOG_14CEF }}'
+          firebaseConfig: '${{ secrets.FIREBASE_CONFIG }}'
+          unsplash: '${{ secrets.UNSLASH_API_KEY }}'
           channelId: live
           projectId: angular-blog-14cef
