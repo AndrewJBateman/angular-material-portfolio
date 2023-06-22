@@ -29,7 +29,7 @@ export class PostListComponent implements OnInit, AfterViewInit {
   router = inject(Router);
 
   title = "Technical Posts";
-  tabs = ["Dev", "IT", "Eng"];
+  tabs = ["Dev", "IT", "Eng", "Env"];
   tabIndex: number = 0;
   posts$: Observable<Post[]>;
   columns$ = this.breakpointService.columns$;
