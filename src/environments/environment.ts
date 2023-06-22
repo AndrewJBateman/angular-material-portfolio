@@ -1,9 +1,9 @@
+import { firebase } from "./firebase.environment";
+
 export const environment = {
   production: false,
-  config: {
-    projectId: "angular-blog-14cef",
-  },
+  ...firebase,
   unsplash: {
-    UNSPLASH_API_KEY: "PAV26ftr4SWQoB9xVIcLS8dXqzxR7le6v6Q_t3Qddq4"
+    UNSPLASH_API_KEY: "YOUR API KEY HERE"
   }
 };

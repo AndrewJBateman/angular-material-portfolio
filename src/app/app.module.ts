@@ -29,7 +29,9 @@ import { FooterComponent } from "./core/footer/footer.component";
     MatSidenavModule,
     MatSlideToggleModule,
     MatToolbarModule,
-    provideFirebaseApp(() => initializeApp({ ...environment.firebase })),
+    provideFirebaseApp(() =>
+      initializeApp({ ...environment.firebase })
+    ),
     provideFirestore(() => getFirestore()),
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
@@ -39,4 +41,5 @@ import { FooterComponent } from "./core/footer/footer.component";
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule {
+}
