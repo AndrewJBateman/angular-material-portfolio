@@ -23,7 +23,7 @@
           >
             <mat-card-content>
               <p class="title-style">{{ post.title }}</p>
-              <p class="content-style" style="height: 90px">
+              <p class="content-style">
                 <span class="subtitle-style">{{ post.subtitle }}:</span>
                 {{ post.content | slice : 0 : 158 - post.subtitle.length }}...
               </p>
@@ -32,7 +32,7 @@
               <span class="small-text">
                 <app-svg-calender />
                 {{ post.published.seconds * 1000 | dateConvert }}
-                <app-svg-timer />
+                <app-svg-timer class="card-footer-rhs"/>
                 {{ post.content | readTime }} minutes
               </span>
             </mat-card-actions>
