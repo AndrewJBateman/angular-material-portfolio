@@ -18,7 +18,7 @@ export class TopNavbarComponent implements OnInit {
 	breakpointService = inject(BreakpointService);
 	columns$ = this.breakpointService.columns$;
 
-	isDarkMode: boolean = false;
+	isDarkMode = false;
 
 	@Output() readonly darkModeSwitched = new EventEmitter<boolean>();
 	@Output() public sidenavToggle = new EventEmitter<boolean>();

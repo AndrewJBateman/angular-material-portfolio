@@ -29,7 +29,7 @@ export class PostListComponent implements OnInit, AfterViewInit {
 
 	title = "Technical Posts";
 	tabs = ["Dev", "IT", "Eng", "Env"];
-	tabIndex: number = 0;
+	tabIndex = 0;
 	posts$: Observable<Post[]>;
 	columns$ = this.breakpointService.columns$;
 

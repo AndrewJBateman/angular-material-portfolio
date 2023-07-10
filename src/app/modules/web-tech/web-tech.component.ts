@@ -1,14 +1,14 @@
-import { type Observable } from "rxjs";
-import { type DataItem } from "./data-item.model";
+import { Observable } from "rxjs";
+import { DataItem } from "./data-item.model";
 import {
 	Component,
 	type OnInit,
 	ChangeDetectionStrategy,
 	inject,
 } from "@angular/core";
-import { type Title } from "@angular/platform-browser";
+import { Title } from "@angular/platform-browser";
 import { BreakpointService } from "../../core/services/breakpoint.service";
-import { type FirestoreDataService } from "src/app/core/services/firestore-data.service";
+import { FirestoreDataService } from "src/app/core/services/firestore-data.service";
 
 @Component({
 	selector: "app-web-tech",

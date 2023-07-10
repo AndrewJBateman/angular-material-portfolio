@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { type HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { catchError, shareReplay, take } from "rxjs/operators";
-import { type Observable, of, throwError } from "rxjs";
+import { Observable, of } from "rxjs";
 import { environment } from "../../../../environments/environment";
 
 const httpOptions: {

@@ -1,6 +1,6 @@
-import { type ContactModel } from "./../models/contact.model";
+import { ContactModel } from "./../models/contact.model";
 import { Injectable } from "@angular/core";
-import { type HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable({
 	providedIn: "root",

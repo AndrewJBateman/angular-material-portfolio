@@ -1,8 +1,8 @@
 export class Project {
-	area: string = "";
-	title: string = "";
-	id: string = "";
+	area = "";
+	title = "";
+	id = "";
 	svgs: [string] = [""];
-	content: string = "";
-	github: string = "";
+	content = "";
+	github = "";
 }

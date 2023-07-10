@@ -26,15 +26,15 @@
 ## :books: General info
 
 * **Responsive:** grid of Angular Material mat-cards using Breakpoint detection
-* **Navbars:** Top/side navbars with page routing & links to Github & LinkedIn.
+* **Navbars:** Top/side navbars with page routing & links to Github & LinkedIn. Dark mode can be selected
 * **Footer** with date & link to Build information page
 * **Build Data** info. on main app dependencies
 * **Home:** Angular Tab Groups/Material card grid to display data, using data-binding from an array of 'areas' based on an Area model.
 * **Projects:** card grid to display project data using data-binding from an array of projects based on a Project model.
 * **Skills:** card grid to display project data using data-binding from an array of skills based on a Skill model.
 * **Contact:** Simple form that user can fill in with name, email and comment. Input validation is included - Send button disabled if form incomplete/incorrect. Buttons to navigate to previous page and to clear the form. The data is sent to the app Firestore backend using angularfire-lite and a success message is returned once sending is complete. Large buttons allow user to return to Home page or send another message (which actually navigates 'back' to the same page presenting a clear form).
-* **Posts:** Posts are stored in the app Firebase DB and displayed on the Blog Posts page.
-Mat-cards now display Post title, subtitle, content, post category (dev, IT or Eng), time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page with category and date published info.
+* **Posts:** Posts are stored in the app Firebase DB and displayed using mat-tabs.
+Mat-cards now display Post title, subtitle, content, time to read (calculated using a simple Angular pipe) and how old the post is (another pipe using the npm module Day.js). The Post Detail page includes the post image, Blog Detail and the footer includes an image credit with web link to the authors page and date published info.
 * **Not Found:** In the event of the user trying to route to any page address that is not listed in the router-module a single Mat-card will display a message to the user. There is a simple button to reroute the user to the Home page.
 
 ## :camera: Screenshots
@@ -96,15 +96,16 @@ export class BreakpointService {
 ## :cool: Features
 
 * common Grid card layouts with data from a shared firebase database service
+* local storage dark mode and post mat-tab active settings stored so still there after refresh
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
 * To-Do: General: fix index CSP, add text compression, reduce unused JS, cache policy 1 year?
-* To-Do: Skills: add more skills, green skills? add electrical/instr skills
+* To-Do: Skills: add more skills  
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
 * To-Do: Projects: add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
-* To-Do: Posts: Unsplash images - use sizing website. add posts
+* To-Do: Posts: Unsplash images - use sizing website. add post
 
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
 * To-Do: overview drg

@@ -1,4 +1,4 @@
-import { Pipe, type PipeTransform } from "@angular/core";
+import { Pipe, PipeTransform } from "@angular/core";
 declare const require: any;
 
 @Pipe({

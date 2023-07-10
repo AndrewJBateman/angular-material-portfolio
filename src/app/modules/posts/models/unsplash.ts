@@ -88,7 +88,7 @@ export interface IUnsplashResponse {
 		views: number;
 		downloads: number;
 	};
-	headers: {};
+	headers: NonNullable<unknown>;
 	ok: boolean;
 	status: number;
 	statusText: string;

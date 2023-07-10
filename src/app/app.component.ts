@@ -1,10 +1,10 @@
 import {
 	Component,
 	HostBinding,
-	type OnInit,
+	OnInit,
 	ChangeDetectionStrategy,
 } from "@angular/core";
-import { type Meta } from "@angular/platform-browser";
+import { Meta } from "@angular/platform-browser";
 
 @Component({
 	selector: "app-root",

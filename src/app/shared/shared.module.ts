@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders } from "@angular/core";
+import { NgModule, type ModuleWithProviders } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MatTabsModule } from "@angular/material/tabs";
 import { RouterModule } from "@angular/router";
@@ -6,19 +6,14 @@ import { RouterModule } from "@angular/router";
 import { MaterialModule } from "../material.module";
 
 @NgModule({
-  exports: [
-    CommonModule,
-    MatTabsModule,
-    MaterialModule,
-    RouterModule,
-  ],
-  declarations: [],
+	exports: [CommonModule, MatTabsModule, MaterialModule, RouterModule],
+	declarations: [],
 })
 export class SharedModule {
-  static forRoot(): ModuleWithProviders<SharedModule> {
-    return {
-      ngModule: SharedModule,
-      providers: [],
-    };
-  }
+	static forRoot(): ModuleWithProviders<SharedModule> {
+		return {
+			ngModule: SharedModule,
+			providers: [],
+		};
+	}
 }

@@ -8,7 +8,7 @@ import { Observable, map, shareReplay } from "rxjs";
 export class FirestoreDataService {
 	data$: Observable<any[]> = new Observable<any[]>();
 	firestore: Firestore = inject(Firestore);
-	id: number = 0;
+	id = 0;
 
 	// get array collection from Firestore const {second} =
 	// If collection items had an id then sort data by id (number or string)

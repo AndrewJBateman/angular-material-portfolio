@@ -1,15 +1,15 @@
 import {
 	Component,
 	ChangeDetectionStrategy,
-	type OnInit,
+	OnInit,
 	inject,
 } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
-import { type Post } from "../../post.model";
+import { Post } from "../../post.model";
 import { Observable } from "rxjs";
-import { type IUnsplashResponse } from "../../models/unsplash";
+import { IUnsplashResponse } from "../../models/unsplash";
 import { ImageService } from "../../post-services/image.service";
 
 @Component({

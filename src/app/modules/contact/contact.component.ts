@@ -1,15 +1,15 @@
-import { Component, type OnInit, ChangeDetectionStrategy } from "@angular/core";
-import { type Meta, type Title } from "@angular/platform-browser";
+import { Component,OnInit, ChangeDetectionStrategy } from "@angular/core";
+import { Meta, Title } from "@angular/platform-browser";
 import {
-	type FormBuilder,
-	type FormGroup,
-	type FormGroupDirective,
+	FormBuilder,
+	FormGroup,
+	FormGroupDirective,
 	Validators,
 } from "@angular/forms";
-import { type MatSnackBar } from "@angular/material/snack-bar";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
-import { type ContactModel } from "./models/contact.model";
-import { type EmailContactService } from "./services/email-contact.service";
+import { ContactModel } from "./models/contact.model";
+import { EmailContactService } from "./services/email-contact.service";
 
 @Component({
 	selector: "app-contact",

@@ -1,16 +1,15 @@
 import {
 	Component,
-	Input,
-	type OnInit,
+	OnInit,
 	ChangeDetectionStrategy,
 	ViewEncapsulation,
 	inject,
 } from "@angular/core";
-import { type Observable } from "rxjs";
+import { Observable } from "rxjs";
 
 import { Meta, Title } from "@angular/platform-browser";
 
-import { type Project } from "./project.model";
+import { Project } from "./project.model";
 import { BreakpointService } from "../../core/services/breakpoint.service";
 import { FirestoreDataService } from "./../../core/services/firestore-data.service";
 

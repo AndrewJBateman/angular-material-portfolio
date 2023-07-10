@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { type Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule } from "@angular/router";
 import { CLOUDINARY_CONFIG, NgxPictureModule } from "ngx-picture";
 
 import { SharedModule } from "../../shared/shared.module";
