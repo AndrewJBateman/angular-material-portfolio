@@ -1,3 +1,4 @@
+/* eslint:disable */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {

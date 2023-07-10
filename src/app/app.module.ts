@@ -20,26 +20,23 @@ import { ServiceWorkerModule } from "@angular/service-worker";
 import { FooterComponent } from "./core/footer/footer.component";
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FooterComponent],
-  imports: [
-    HttpClientModule,
-    NavModule,
-    SharedModule,
-    MatDividerModule,
-    MatSidenavModule,
-    MatSlideToggleModule,
-    MatToolbarModule,
-    provideFirebaseApp(() =>
-      initializeApp({ ...environment.firebase })
-    ),
-    provideFirestore(() => getFirestore()),
-    ServiceWorkerModule.register("ngsw-worker.js", {
-      enabled: environment.production,
-    }),
-  ],
-  exports: [],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+	declarations: [AppComponent, HomeComponent, FooterComponent],
+	imports: [
+		HttpClientModule,
+		NavModule,
+		SharedModule,
+		MatDividerModule,
+		MatSidenavModule,
+		MatSlideToggleModule,
+		MatToolbarModule,
+		provideFirebaseApp(() => initializeApp({ ...environment.firebase })),
+		provideFirestore(() => getFirestore()),
+		ServiceWorkerModule.register("ngsw-worker.js", {
+			enabled: environment.production,
+		}),
+	],
+	exports: [],
+	bootstrap: [AppComponent],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {
-}
+export class AppModule {}

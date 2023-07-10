@@ -1,32 +1,29 @@
 <head>
-  <meta
-    name="description"
-    content="Web Tech page shows Angular and other dependencies used in the website build"
-  />
+	<meta
+		name="description"
+		content="Web Tech page shows Angular and other dependencies used in the website build" />
 </head>
 <div class="responsive-grid" [style.--columns]="columns$ | async">
-  <ng-container
-    *ngFor="let item of dataItems$ | async; trackBy: cardTrackByFn"
-    class="container"
-  >
-    <mat-card appearance="outlined" class="general-card mat-elevation-z5">
-      <mat-card-content>
-        <p class="tech-card-content">
-          <img
-            class="tech-icon"
-            [src]="item.icon"
-            alt="icon of {{ item.name }}"
-          />
-          {{ item.name }}
-          <a
-            [href]="item.link"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="link to dependency page"
-            >v{{ item.package | packageConvert }}</a
-          >
-        </p>
-      </mat-card-content>
-    </mat-card>
-  </ng-container>
+	<ng-container
+		*ngFor="let item of dataItems$ | async; trackBy: cardTrackByFn"
+		class="container">
+		<mat-card appearance="outlined" class="general-card mat-elevation-z5">
+			<mat-card-content>
+				<p class="tech-card-content">
+					<img
+						class="tech-icon"
+						[src]="item.icon"
+						alt="icon of {{ item.name }}" />
+					{{ item.name }}
+					<a
+						[href]="item.link"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="link to dependency page"
+						>v{{ item.package | packageConvert }}</a
+					>
+				</p>
+			</mat-card-content>
+		</mat-card>
+	</ng-container>
 </div>

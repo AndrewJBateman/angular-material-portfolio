@@ -6,8 +6,8 @@ import { SkillsComponent } from "./skills.component";
 import { SharedModule } from "../../shared/shared.module";
 
 @NgModule({
-  declarations: [SkillsComponent],
-  imports: [CommonModule, SkillsRoutingModule, SharedModule],
-  exports: [SkillsComponent],
+	declarations: [SkillsComponent],
+	imports: [CommonModule, SkillsRoutingModule, SharedModule],
+	exports: [SkillsComponent],
 })
 export default class SkillsModule {}

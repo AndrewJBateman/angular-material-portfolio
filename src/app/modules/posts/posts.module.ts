@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { type Routes, RouterModule } from "@angular/router";
 import { CLOUDINARY_CONFIG, NgxPictureModule } from "ngx-picture";
 
 import { SharedModule } from "../../shared/shared.module";
@@ -15,28 +15,28 @@ import { SvgBackModule } from "../../shared/components/svg-back/svg-back.module"
 import { ImageService } from "./post-services/image.service";
 
 const routes: Routes = [
-  {
-    path: "",
-    component: PostListComponent,
-  },
-  {
-    path: "detail",
-    component: PostDetailComponent,
-  },
+	{
+		path: "",
+		component: PostListComponent,
+	},
+	{
+		path: "detail",
+		component: PostDetailComponent,
+	},
 ];
 @NgModule({
-  imports: [
-    NgxPictureModule.forRoot(CLOUDINARY_CONFIG),
-    PipesModule,
-    RouterModule.forChild(routes),
-    SharedModule,
-    SvgFolderModule,
-    SvgTimerModule,
-    SvgCalenderModule,
-    SvgCameraModule,
-    SvgBackModule,
-  ],
-  declarations: [PostListComponent, PostDetailComponent],
-  providers: [ImageService],
+	imports: [
+		NgxPictureModule.forRoot(CLOUDINARY_CONFIG),
+		PipesModule,
+		RouterModule.forChild(routes),
+		SharedModule,
+		SvgFolderModule,
+		SvgTimerModule,
+		SvgCalenderModule,
+		SvgCameraModule,
+		SvgBackModule,
+	],
+	declarations: [PostListComponent, PostDetailComponent],
+	providers: [ImageService],
 })
 export default class PostsModule {}

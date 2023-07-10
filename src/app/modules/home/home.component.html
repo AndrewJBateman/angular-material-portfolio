@@ -1,31 +1,28 @@
 <head>
-  <meta
-    name="description"
-    content="Home page gives a brief history of my technical background and years spent learning to code part-time. Shows what I learnt using Material cards"
-  />
-  <meta name="theme-color" content="#317EFB" />
+	<meta
+		name="description"
+		content="Home page gives a brief history of my technical background and years spent learning to code part-time. Shows what I learnt using Material cards" />
+	<meta name="theme-color" content="#317EFB" />
 </head>
 
 <div class="container">
-  <div *ngIf="areas$">
-    <mat-card
-      appearance="outlined"
-      class="home-card mat-elevation-z5"
-      *ngFor="let area of areas$ | async; trackBy: trackByFn"
-    >
-      <mat-card-header>
-        <img
-          mat-card-avatar
-          [src]="area.svgPath"
-          class="top-header-image"
-          alt="icon of {{ area.title }}"
-        />
-        <mat-card-title>{{ area.title }}</mat-card-title>
-        <mat-card-subtitle>{{ area.subtitle }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        {{ area.content }}
-      </mat-card-content>
-    </mat-card>
-  </div>
+	<div *ngIf="areas$">
+		<mat-card
+			appearance="outlined"
+			class="home-card mat-elevation-z5"
+			*ngFor="let area of areas$ | async; trackBy: trackByFn">
+			<mat-card-header>
+				<img
+					mat-card-avatar
+					[src]="area.svgPath"
+					class="top-header-image"
+					alt="icon of {{ area.title }}" />
+				<mat-card-title>{{ area.title }}</mat-card-title>
+				<mat-card-subtitle>{{ area.subtitle }}</mat-card-subtitle>
+			</mat-card-header>
+			<mat-card-content>
+				{{ area.content }}
+			</mat-card-content>
+		</mat-card>
+	</div>
 </div>

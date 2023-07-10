@@ -1,18 +1,17 @@
 <head>
-  <meta
-    name="description"
-    content="Skills page displays programming, IT and cloud computing skills in an Angular Material card grid."
-  />
+	<meta
+		name="description"
+		content="Skills page displays programming, IT and cloud computing skills in an Angular Material card grid." />
 </head>
 <div class="responsive-grid" [style.--columns]="columns$ | async">
-  <ng-container *ngFor="let skill of skills$ | async; trackBy: trackByFn">
-    <mat-card appearance="outlined" class="skill-card mat-elevation-z5">
-      <mat-card-content>
-        <p class="skill-area">
-          {{ skill.area }}
-        </p>
-        <p class="skill-content">{{ skill.content }}</p>
-      </mat-card-content>
-    </mat-card>
-  </ng-container>
+	<ng-container *ngFor="let skill of skills$ | async; trackBy: trackByFn">
+		<mat-card appearance="outlined" class="skill-card mat-elevation-z5">
+			<mat-card-content>
+				<p class="skill-area">
+					{{ skill.area }}
+				</p>
+				<p class="skill-content">{{ skill.content }}</p>
+			</mat-card-content>
+		</mat-card>
+	</ng-container>
 </div>

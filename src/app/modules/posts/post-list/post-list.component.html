@@ -1,44 +1,41 @@
 <head>
-  <meta
-    name="description"
-    content="Posts page uses Angular cards to display some technical posts that can be clicked on to show a more detailed page."
-  />
+	<meta
+		name="description"
+		content="Posts page uses Angular cards to display some technical posts that can be clicked on to show a more detailed page." />
 </head>
 
 <mat-tab-group
-  backgroundColor="primary"
-  mat-align-tabs="start"
-  #tabGroup
-  [(selectedIndex)]="tabIndex"
-  (selectedTabChange)="tabChanged($event)"
->
-  <mat-tab *ngFor="let tab of tabs" [label]="tab" class="post-tab">
-    <div class="responsive-grid" [style.--columns]="columns$ | async">
-      <ng-container *ngFor="let post of posts$ | async; trackBy: cardTrackByFn">
-        <ng-container *ngIf="post.category == tab">
-          <mat-card
-            appearance="outlined"
-            class="general-card mat-elevation-z5"
-            (click)="onGoToPostDetail(post)"
-          >
-            <mat-card-content>
-              <p class="title-style">{{ post.title }}</p>
-              <p class="content-style">
-                <span class="subtitle-style">{{ post.subtitle }}:</span>
-                {{ post.content | slice : 0 : 158 - post.subtitle.length }}...
-              </p>
-            </mat-card-content>
-            <mat-card-actions align="start" class="posts-footer">
-              <span class="small-text">
-                <app-svg-calender />
-                {{ post.published.seconds * 1000 | dateConvert }}
-                <app-svg-timer class="card-footer-rhs"/>
-                {{ post.content | readTime }} minutes
-              </span>
-            </mat-card-actions>
-          </mat-card>
-        </ng-container>
-      </ng-container>
-    </div>
-  </mat-tab>
+	backgroundColor="primary"
+	mat-align-tabs="start"
+	#tabGroup
+	[(selectedIndex)]="tabIndex"
+	(selectedTabChange)="tabChanged($event)">
+	<mat-tab *ngFor="let tab of tabs" [label]="tab" class="post-tab">
+		<div class="responsive-grid" [style.--columns]="columns$ | async">
+			<ng-container *ngFor="let post of posts$ | async; trackBy: cardTrackByFn">
+				<ng-container *ngIf="post.category === tab">
+					<mat-card
+						appearance="outlined"
+						class="general-card mat-elevation-z5"
+						(click)="onGoToPostDetail(post)">
+						<mat-card-content>
+							<p class="title-style">{{ post.title }}</p>
+							<p class="content-style">
+								<span class="subtitle-style">{{ post.subtitle }}:</span>
+								{{ post.content | slice : 0 : 158 - post.subtitle.length }}...
+							</p>
+						</mat-card-content>
+						<mat-card-actions align="start" class="posts-footer">
+							<span class="small-text">
+								<app-svg-calender />
+								{{ post.published.seconds * 1000 | dateConvert }}
+								<app-svg-timer class="card-footer-rhs" />
+								{{ post.content | readTime }} minutes
+							</span>
+						</mat-card-actions>
+					</mat-card>
+				</ng-container>
+			</ng-container>
+		</div>
+	</mat-tab>
 </mat-tab-group>

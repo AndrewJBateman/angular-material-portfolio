@@ -8,8 +8,8 @@ import { SharedModule } from "../../shared/shared.module";
 import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
-  declarations: [ProjectsComponent],
-  imports: [CommonModule, ProjectsRoutingModule, SharedModule, MatButtonModule],
-  exports: [ProjectsComponent],
+	declarations: [ProjectsComponent],
+	imports: [CommonModule, ProjectsRoutingModule, SharedModule, MatButtonModule],
+	exports: [ProjectsComponent],
 })
 export default class ProjectsModule {}

@@ -5,8 +5,8 @@ import { DateConvertPipe } from "./date-convert.pipe";
 import { ReadTimePipe } from "./read-time.pipe";
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [DateConvertPipe, ReadTimePipe],
-  exports: [DateConvertPipe, ReadTimePipe],
+	imports: [CommonModule],
+	declarations: [DateConvertPipe, ReadTimePipe],
+	exports: [DateConvertPipe, ReadTimePipe],
 })
 export class PipesModule {}

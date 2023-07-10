@@ -1,42 +1,39 @@
 <head>
-  <meta
-    name="description"
-    content="Projects page shows some of my recent projects using Angular cards. From the footer it is possible to navigate to the GitHub code."
-  />
+	<meta
+		name="description"
+		content="Projects page shows some of my recent projects using Angular cards. From the footer it is possible to navigate to the GitHub code." />
 </head>
 
 <mat-tab-group backgroundColor="primary" mat-align-tabs="start">
-  <mat-tab *ngFor="let area of areas" [label]="area" class="project-tab">
-    <div class="responsive-grid" [style.--columns]="columns$ | async">
-      <ng-container
-        *ngFor="let project of projects$ | async; trackBy: cardTrackByFn"
-      >
-        <ng-container *ngIf="project.area == area">
-          <mat-card appearance="outlined" class="project-card mat-elevation-z5">
-            <mat-card-content class="project-card-content">
-              <p class="project-card-icons" *ngFor="let svg of project.svgs">
-                <img
-                  class="project-card-svg"
-                  src="../assets/svgs/{{ svg }}.svg"
-                  alt="icon of {{ svg }}"
-                />
-              </p>
-              <p>
-                <span class="project-card-title">{{ project.title }}:</span>
-                {{ project.content | slice : 0 : 240 }}...
-                <a
-                  class="project-card-link"
-                  [href]="project.github"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="link to GitHub page"
-                  ><span>View on Github</span>
-                </a>
-              </p>
-            </mat-card-content>
-          </mat-card>
-        </ng-container>
-      </ng-container>
-    </div>
-  </mat-tab>
+	<mat-tab *ngFor="let area of areas" [label]="area" class="project-tab">
+		<div class="responsive-grid" [style.--columns]="columns$ | async">
+			<ng-container
+				*ngFor="let project of projects$ | async; trackBy: cardTrackByFn">
+				<ng-container *ngIf="project.area === area">
+					<mat-card appearance="outlined" class="project-card mat-elevation-z5">
+						<mat-card-content class="project-card-content">
+							<p class="project-card-icons" *ngFor="let svg of project.svgs">
+								<img
+									class="project-card-svg"
+									src="../assets/svgs/{{ svg }}.svg"
+									alt="icon of {{ svg }}" />
+							</p>
+							<p>
+								<span class="project-card-title">{{ project.title }}:</span>
+								{{ project.content | slice : 0 : 240 }}...
+								<a
+									class="project-card-link"
+									[href]="project.github"
+									target="_blank"
+									rel="noreferrer"
+									aria-label="link to GitHub page"
+									><span>View on Github</span>
+								</a>
+							</p>
+						</mat-card-content>
+					</mat-card>
+				</ng-container>
+			</ng-container>
+		</div>
+	</mat-tab>
 </mat-tab-group>

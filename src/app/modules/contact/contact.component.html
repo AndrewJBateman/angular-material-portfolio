@@ -1,82 +1,73 @@
 <head>
-  <meta
-    name="contact"
-    content="Contact page gives the viewer the chance to send a message to me via a simple Material form."
-  />
+	<meta
+		name="contact"
+		content="Contact page gives the viewer the chance to send a message to me via a simple Material form." />
 </head>
 <section class="section">
-  <div class="container">
-    <div class="contact-heading">
-      <h1>Send a Message</h1>
-    </div>
-    <form
-      class="contact-form"
-      [formGroup]="contactForm"
-      #formDirective="ngForm"
-      (ngSubmit)="submitHandler(formDirective)"
-    >
-      <!--name form-field-->
-      <mat-form-field class="mat-form-field" appearance="outline">
-        <input
-          matInput
-          placeholder="Your name..."
-          formControlName="name"
-          #name
-        />
-        <mat-error
-          *ngIf="contactForm.get('name')?.hasError"
-          class="alert alert-danger"
-        >
-          Your name must be 4-100 characters long
-        </mat-error>
-      </mat-form-field>
+	<div class="container">
+		<div class="contact-heading">
+			<h1>Send a Message</h1>
+		</div>
+		<form
+			class="contact-form"
+			[formGroup]="contactForm"
+			#formDirective="ngForm"
+			(ngSubmit)="submitHandler(formDirective)">
+			<!--name form-field-->
+			<mat-form-field class="mat-form-field" appearance="outline">
+				<input
+					matInput
+					placeholder="Your name..."
+					formControlName="name"
+					#name />
+				<mat-error
+					*ngIf="contactForm.get('name')?.hasError"
+					class="alert alert-danger">
+					Your name must be 4-100 characters long
+				</mat-error>
+			</mat-form-field>
 
-      <!--email form-field-->
-      <mat-form-field class="mat-form-field" appearance="outline">
-        <input
-          matInput
-          placeholder="Your email..."
-          formControlName="email"
-          #email
-        />
-        <mat-error
-          *ngIf="contactForm.get('email')?.hasError"
-          class="alert alert-danger"
-        >
-          There is an error in your email format
-        </mat-error>
-      </mat-form-field>
+			<!--email form-field-->
+			<mat-form-field class="mat-form-field" appearance="outline">
+				<input
+					matInput
+					placeholder="Your email..."
+					formControlName="email"
+					#email />
+				<mat-error
+					*ngIf="contactForm.get('email')?.hasError"
+					class="alert alert-danger">
+					There is an error in your email format
+				</mat-error>
+			</mat-form-field>
 
-      <!--message form-field-->
-      <mat-form-field class="mat-form-field" appearance="outline">
-        <textarea
-          matInput
-          cdkTextareaAutosize
-          cdkAutosizeMinRows="5"
-          cdkAutosizeMaxRows="10"
-          placeholder="Your message..."
-          formControlName="message"
-          #message
-        ></textarea>
-        <mat-error
-          *ngIf="contactForm.get('message')?.hasError"
-          class="alert alert-danger"
-        >
-          Your message must be 4-400 characters long
-        </mat-error>
-      </mat-form-field>
+			<!--message form-field-->
+			<mat-form-field class="mat-form-field" appearance="outline">
+				<textarea
+					matInput
+					cdkTextareaAutosize
+					cdkAutosizeMinRows="5"
+					cdkAutosizeMaxRows="10"
+					placeholder="Your message..."
+					formControlName="message"
+					#message></textarea>
+				<mat-error
+					*ngIf="contactForm.get('message')?.hasError"
+					class="alert alert-danger">
+					Your message must be 4-400 characters long
+				</mat-error>
+			</mat-form-field>
 
-      <div class="send-button">
-        <button
-          mat-stroked-button
-          color="primary"
-          type="submit"
-          [disabled]="contactForm.invalid || loading"
-          aria-label="Send button"
-        >
-          <span class="button-text">SEND</span>
-        </button>
-      </div>
-    </form>
-  </div>
+			<div class="send-button">
+				<button
+					mat-stroked-button
+					color="primary"
+					type="submit"
+					[disabled]="contactForm.invalid || loading"
+					aria-label="Send button">
+					<span class="button-text">SEND</span>
+				</button>
+			</div>
+		</form>
+	</div>
 </section>

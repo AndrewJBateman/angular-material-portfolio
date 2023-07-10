@@ -8,13 +8,13 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
-  declarations: [PageNotFoundComponent],
-  imports: [
-    CommonModule,
-    PageNotFoundRoutingModule,
-    MatButtonModule,
-    MatCardModule,
-  ],
-  exports: [PageNotFoundComponent, RouterModule],
+	declarations: [PageNotFoundComponent],
+	imports: [
+		CommonModule,
+		PageNotFoundRoutingModule,
+		MatButtonModule,
+		MatCardModule,
+	],
+	exports: [PageNotFoundComponent, RouterModule],
 })
 export default class PageNotFoundModule {}

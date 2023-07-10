@@ -8,30 +8,30 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import {
-  MatSnackBarModule,
-  MAT_SNACK_BAR_DEFAULT_OPTIONS,
+	MatSnackBarModule,
+	MAT_SNACK_BAR_DEFAULT_OPTIONS,
 } from "@angular/material/snack-bar";
 
 @NgModule({
-  declarations: [ContactComponent],
-  imports: [
-    CommonModule,
-    ContactRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
-    MatSnackBarModule,
-  ],
-  exports: [ContactComponent],
-  providers: [
-    {
-      provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
-      useValue: {
-        duration: 5000,
-      },
-    },
-  ],
+	declarations: [ContactComponent],
+	imports: [
+		CommonModule,
+		ContactRoutingModule,
+		FormsModule,
+		ReactiveFormsModule,
+		MatFormFieldModule,
+		MatButtonModule,
+		MatInputModule,
+		MatSnackBarModule,
+	],
+	exports: [ContactComponent],
+	providers: [
+		{
+			provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
+			useValue: {
+				duration: 5000,
+			},
+		},
+	],
 })
 export default class ContactModule {}

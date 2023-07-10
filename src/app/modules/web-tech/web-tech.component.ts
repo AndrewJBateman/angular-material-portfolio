@@ -1,39 +1,39 @@
-import { Observable } from "rxjs";
-import { DataItem } from "./data-item.model";
+import { type Observable } from "rxjs";
+import { type DataItem } from "./data-item.model";
 import {
-  Component,
-  OnInit,
-  ChangeDetectionStrategy,
-  inject,
+	Component,
+	type OnInit,
+	ChangeDetectionStrategy,
+	inject,
 } from "@angular/core";
-import { Title } from "@angular/platform-browser";
+import { type Title } from "@angular/platform-browser";
 import { BreakpointService } from "../../core/services/breakpoint.service";
-import { FirestoreDataService } from "src/app/core/services/firestore-data.service";
+import { type FirestoreDataService } from "src/app/core/services/firestore-data.service";
 
 @Component({
-  selector: "app-web-tech",
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./web-tech.component.html",
-  styleUrls: ["./web-tech.component.scss"],
+	selector: "app-web-tech",
+	changeDetection: ChangeDetectionStrategy.OnPush,
+	templateUrl: "./web-tech.component.html",
+	styleUrls: ["./web-tech.component.scss"],
 })
 export class WebTechComponent implements OnInit {
-  breakpointService = inject(BreakpointService);
+	breakpointService = inject(BreakpointService);
 
-  dataItems$: Observable<DataItem[]>;
-  columns$ = this.breakpointService.columns$;
+	dataItems$: Observable<DataItem[]>;
+	columns$ = this.breakpointService.columns$;
 
-  constructor(
-    private firestoreDataService: FirestoreDataService,
-    private title: Title
-  ) {
-    this.title.setTitle("Website Build Info");
-  }
+	constructor(
+		private readonly firestoreDataService: FirestoreDataService,
+		private readonly title: Title
+	) {
+		this.title.setTitle("Website Build Info");
+	}
 
-  ngOnInit(): void {
-    this.dataItems$ = this.firestoreDataService.getData("tech");
-  }
+	ngOnInit(): void {
+		this.dataItems$ = this.firestoreDataService.getData("tech");
+	}
 
-  cardTrackByFn(index: number, item: DataItem): number {
-    return item.id;
-  }
+	cardTrackByFn(index: number, item: DataItem): number {
+		return item.id;
+	}
 }
