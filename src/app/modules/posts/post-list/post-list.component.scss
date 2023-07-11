@@ -1,13 +1,13 @@
 .responsive-grid {
-  display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
-  gap: 4px;
+	display: grid;
+	grid-template-columns: repeat(var(--columns), 1fr);
+	gap: 4px;
 
-  .posts-footer {
-    padding: 0 16px;
+	.posts-footer {
+		padding: 0 16px;
 
-    .card-footer-rhs {
-      margin-left: 16px !important;
-    }
-  }
+		.card-footer-rhs {
+			margin-left: 16px !important;
+		}
+	}
 }

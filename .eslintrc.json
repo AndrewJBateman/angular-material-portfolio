@@ -1,7 +1,7 @@
 {
   "root": true,
   "ignorePatterns": [
-    "projects/**/*"
+    "src/test.ts", "src/main.ts", "projects/**/*"
   ],
   "overrides": [
     {

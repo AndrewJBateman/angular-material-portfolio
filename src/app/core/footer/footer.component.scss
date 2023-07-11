@@ -1,27 +1,25 @@
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  line-height: 25px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	line-height: 25px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 8px;
 
-  p {
-    margin: 8px 0;
-    font-weight: 300;
-    font-size: medium;
+	p {
+		margin: 8px 0;
+		font-weight: 300;
+		font-size: medium;
 
-    .footer-contrast-text {
-      color: #add3ff;
-    }
-  }
+		.footer-contrast-text {
+			color: #add3ff;
+		}
+	}
 
-
-
-  .general-link {
-    color: white;
-    padding: 0 16px;
-  }
+	.general-link {
+		color: white;
+		padding: 0 16px;
+	}
 }

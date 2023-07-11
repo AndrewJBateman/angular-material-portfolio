@@ -1,31 +1,30 @@
 .section {
+	margin-top: 30px;
 
-  margin-top: 30px;
+	.container {
+		display: flex;
+		flex-direction: column;
+		max-width: 700px;
+		margin-top: 30px;
+		margin: auto;
+		border: 3px solid #455a64;
+		padding: 16px;
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 700px;
-    margin-top: 30px;
-    margin: auto;
-    border: 3px solid #455a64;
-    padding: 16px;
+		.contact-heading {
+			margin: auto;
+			color: #455a64;
+		}
 
-    .contact-heading {
-      margin: auto;
-      color: #455a64;
-    }
+		.contact-form {
+			margin-top: 16px;
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			overflow: hidden;
+		}
 
-    .contact-form {
-      margin-top: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      overflow: hidden;
-    }
-
-    .send-button {
-      margin: auto;
-    }
-  }
+		.send-button {
+			margin: auto;
+		}
+	}
 }

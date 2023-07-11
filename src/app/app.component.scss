@@ -1,14 +1,12 @@
 /* for sidenav to take a whole page */
-.root-container{
-  min-height: calc(100vh);
+.root-container {
+	min-height: calc(100vh);
 
-  .container {
-    padding-bottom: 50px;
+	.container {
+		padding-bottom: 50px;
 
-    mat-sidenav-container {
-      height: 100vh;
-    }
-  }
-
+		mat-sidenav-container {
+			height: 100vh;
+		}
+	}
 }
-

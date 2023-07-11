@@ -8,6 +8,7 @@
     "build": "ng build --configuration production --source-map=false",
     "test": "ng test",
     "lint": "ng lint --fix",
+    "format": "prettier --write --config .prettierrc \"src/**/*.{js,ts,html,scss,json}",
     "e2e": "ng e2e",
     "explore": "source-map-explorer dist/**/*.js",
     "dev:ssr": "ng run angular-material-portfolio:serve-ssr",

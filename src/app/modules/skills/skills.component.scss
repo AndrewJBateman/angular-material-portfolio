@@ -1,24 +1,24 @@
 .responsive-grid {
-  display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
-  gap: 4px;
-  padding: 4px;
+	display: grid;
+	grid-template-columns: repeat(var(--columns), 1fr);
+	gap: 4px;
+	padding: 4px;
 
-  .skill-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+	.skill-card {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 
-    .skill-area {
-      overflow-wrap: normal;
-      font-size: 18px;
-      text-decoration: underline;
-      text-decoration-color: #68a1e2;
-      text-decoration-thickness: 2px;
-    }
+		.skill-area {
+			overflow-wrap: normal;
+			font-size: 18px;
+			text-decoration: underline;
+			text-decoration-color: #68a1e2;
+			text-decoration-thickness: 2px;
+		}
 
-    .skill-content {
-      min-height: 80px;
-    }
-  }
+		.skill-content {
+			min-height: 80px;
+		}
+	}
 }

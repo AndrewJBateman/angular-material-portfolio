@@ -1,7 +1,6 @@
 {
 	"tabWidth": 2,
 	"useTabs": true,
-  "indent-style": "tabs",
 	"singleQuote": false,
 	"semi": true,
 	"bracketSpacing": true,

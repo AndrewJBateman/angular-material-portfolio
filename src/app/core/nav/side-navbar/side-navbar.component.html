@@ -60,7 +60,7 @@
 		routerLinkActive="side-link-active"
 		#rle="routerLinkActive"
 		(onClick)="onSidenavClose()"
-    (onKeyUp)="onSidenavClose()">
+		(onKeyUp)="onSidenavClose()">
 		<span [ngClass]="rle.isActive ? 'side-link-active' : 'side-link'"
 			>Posts</span
 		>
@@ -83,7 +83,11 @@
 			rel="noreferrer">
 			<app-svg-linkedin />
 		</a>
-		<a mat-list-item class="side-drawer-close" (onClick)="onSidenavClose()" (onKeyUp)="onSidenavClose()">
+		<a
+			mat-list-item
+			class="side-drawer-close"
+			(onClick)="onSidenavClose()"
+			(onKeyUp)="onSidenavClose()">
 			<app-svg-close />
 		</a>
 	</div>

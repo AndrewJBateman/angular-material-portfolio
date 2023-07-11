@@ -8,101 +8,100 @@ $angular-accent: mat.define-palette(mat.$blue-palette, 900);
 $angular-warn: mat.define-palette(mat.$orange-palette, 800);
 
 $angular-light-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $angular-primary,
-      accent: $angular-accent,
-      warn: $angular-warn,
-    ),
-  )
+	(
+		color: (
+			primary: $angular-primary,
+			accent: $angular-accent,
+			warn: $angular-warn,
+		),
+	)
 );
 
 $angular-dark-theme: mat.define-dark-theme(
-  (
-    color: (
-      primary: $angular-primary,
-      accent: $angular-accent,
-      warn: $angular-warn,
-    ),
-  )
+	(
+		color: (
+			primary: $angular-primary,
+			accent: $angular-accent,
+			warn: $angular-warn,
+		),
+	)
 );
 
 .dark-theme {
-  @include mat.all-component-colors($angular-dark-theme);
+	@include mat.all-component-colors($angular-dark-theme);
 }
 .light-theme {
-  @include mat.all-component-colors($angular-light-theme);
+	@include mat.all-component-colors($angular-light-theme);
 }
 
-
 html {
-  overflow-y: overlay;
+	overflow-y: overlay;
 }
 
 body {
-  min-height: 100vh;
-  position: relative;
-  margin: 0;
+	min-height: 100vh;
+	position: relative;
+	margin: 0;
 }
 
 // styling for general cards used in blog and web-info pages
 .general-card {
-  .title-style {
-    margin: 0 0 4px;
-    font-size: 18px;
-    text-decoration: underline;
-    text-decoration-color: #68a1e2;
-    text-decoration-thickness: 2px;
-  }
+	.title-style {
+		margin: 0 0 4px;
+		font-size: 18px;
+		text-decoration: underline;
+		text-decoration-color: #68a1e2;
+		text-decoration-thickness: 2px;
+	}
 
-  .subtitle-style {
-    font-size: 14px;
-    font-weight: 700;
-  }
+	.subtitle-style {
+		font-size: 14px;
+		font-weight: 700;
+	}
 
-  .content-style {
-    white-space: pre-wrap;
-    margin: 0 0 8px;
-    height: 90px
-  }
+	.content-style {
+		white-space: pre-wrap;
+		margin: 0 0 8px;
+		height: 90px;
+	}
 
-  .small-text {
-    font-size: 14px !important;
-  }
+	.small-text {
+		font-size: 14px !important;
+	}
 }
 
 .general-link {
-  color: white;
-  padding: 0 16px;
+	color: white;
+	padding: 0 16px;
 }
 
 .snackbar-common {
-  position: absolute;
-  right: 0.5rem;
-  top: 4.5rem;
+	position: absolute;
+	right: 0.5rem;
+	top: 4.5rem;
 
-  .mat-mdc-snack-bar-action {
-    color: white !important;
-  }
+	.mat-mdc-snack-bar-action {
+		color: white !important;
+	}
 }
 
 @media only screen and (max-width: 480px) {
-  .snackbar-common {
-    width: 100%;
-    min-width: 100%;
-  }
+	.snackbar-common {
+		width: 100%;
+		min-width: 100%;
+	}
 }
 
 .green-snackbar {
-  background-color: green !important;
-  color: white;
+	background-color: green !important;
+	color: white;
 
-  .mat-mdc-snack-bar-action {
-    color: white !important;
-  }
+	.mat-mdc-snack-bar-action {
+		color: white !important;
+	}
 }
 
 .red-snackbar {
-  background: #b71c1c;
-  color: white;
+	background: #b71c1c;
+	color: white;
 }

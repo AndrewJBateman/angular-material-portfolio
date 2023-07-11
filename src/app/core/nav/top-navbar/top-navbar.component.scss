@@ -1,28 +1,26 @@
 .top-nav-toolbar {
-  padding: 4px 0;
-  position: relative;
+	padding: 4px 0;
+	position: relative;
 
-  .top-nav-link {
-    color: white !important;
-    text-decoration: none;
-  }
+	.top-nav-link {
+		color: white !important;
+		text-decoration: none;
+	}
 
-  .top-link-social {
-    padding: 0 16px;
-    color: #eaecf5;
-    font-size: 14px !important;
-    text-decoration: underline;
-    text-decoration-color: #fff;
-  }
+	.top-link-social {
+		padding: 0 16px;
+		color: #eaecf5;
+		font-size: 14px !important;
+		text-decoration: underline;
+		text-decoration-color: #fff;
+	}
 
-  .top-link-active {
-    color: rgb(173, 211, 255) !important;
-  }
+	.top-link-active {
+		color: rgb(173, 211, 255) !important;
+	}
 
-  .top-nav-rhs {
-    margin-left: auto;
-    margin-right: 0;
-  }
-
+	.top-nav-rhs {
+		margin-left: auto;
+		margin-right: 0;
+	}
 }
-
