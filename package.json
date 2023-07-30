@@ -53,6 +53,7 @@
     "@nguniversal/builders": "^16.1.1",
     "@types/compression": "^1.7.2",
     "@types/express": "^4.17.17",
+    "@types/istanbul-lib-coverage": "^2.0.4",
     "@types/jasmine": "~4.3.5",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^20.4.5",
