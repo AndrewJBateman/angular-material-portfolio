@@ -4,5 +4,6 @@ import { Component } from "@angular/core";
 	selector: "app-svg-menu",
 	templateUrl: "../../../../../src/assets/svgs/menu.svg",
 	styleUrls: ["../svg.component.scss"],
+	standalone: true,
 })
 export class SvgMenuComponent {}

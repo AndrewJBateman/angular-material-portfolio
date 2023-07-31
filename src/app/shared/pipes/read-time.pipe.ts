@@ -2,6 +2,7 @@ import { Pipe, type PipeTransform } from "@angular/core";
 
 @Pipe({
 	name: "readTime",
+	standalone: true,
 })
 export class ReadTimePipe implements PipeTransform {
 	transform(value: string): number {

@@ -6,6 +6,7 @@ dayjs.extend(relativeTime);
 
 @Pipe({
 	name: "dateConvert",
+	standalone: true,
 })
 export class DateConvertPipe implements PipeTransform {
 	transform(value: any): string {

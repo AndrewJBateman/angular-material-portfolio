@@ -4,5 +4,6 @@ import { Component } from "@angular/core";
 	selector: "app-svg-back",
 	templateUrl: "../../../../../src/assets/svgs/arrow_back.svg",
 	styleUrls: ["../svg.component-accent.scss"],
+	standalone: true,
 })
 export class SvgBackComponent {}

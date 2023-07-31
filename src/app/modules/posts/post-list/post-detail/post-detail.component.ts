@@ -3,20 +3,29 @@ import {
 	ChangeDetectionStrategy,
 	OnInit,
 	inject,
+  CUSTOM_ELEMENTS_SCHEMA,
 } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { Location } from "@angular/common";
+import { Location, NgIf, AsyncPipe } from "@angular/common";
 
 import { Post } from "../../post.model";
 import { Observable } from "rxjs";
 import { IUnsplashResponse } from "../../models/unsplash";
 import { ImageService } from "../../post-services/image.service";
+import { MatCardModule } from "@angular/material/card";
 
 @Component({
 	selector: "app-post-detail",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: "./post-detail.component.html",
 	styleUrls: ["./post-detail.component.scss"],
+	standalone: true,
+	imports: [
+		MatCardModule,
+		NgIf,
+		AsyncPipe,
+	],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PostDetailComponent implements OnInit {
 	activatedRoute = inject(ActivatedRoute);
@@ -27,7 +36,7 @@ export class PostDetailComponent implements OnInit {
 	imageData$ = new Observable<IUnsplashResponse>();
 
 	constructor() {
-		this.activatedRoute.queryParams.subscribe(params => {
+		this.activatedRoute.queryParams.subscribe(() => {
 			const routeData = this.router?.getCurrentNavigation()?.extras;
 			const state = routeData?.state;
 			this.post = state != null ? state?.post : null;
@@ -43,6 +52,7 @@ export class PostDetailComponent implements OnInit {
 	}
 
 	getPhoto(subject: string): void {
+    console.log('subject: ', subject);
 		this.imageData$ = this.imageService.photoQuery(subject);
 	}
 }

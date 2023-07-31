@@ -4,5 +4,6 @@ import { Component } from "@angular/core";
 	selector: "app-svg-github",
 	templateUrl: "../../../../../src/assets/svgs/github.svg",
 	styleUrls: ["../svg.component.scss"],
+	standalone: true,
 })
 export class SvgGithubComponent {}

@@ -3,6 +3,7 @@ declare const require: any;
 
 @Pipe({
 	name: "packageConvert",
+	standalone: true,
 })
 export class PackageConvertPipe implements PipeTransform {
 	transform(value: string): string {

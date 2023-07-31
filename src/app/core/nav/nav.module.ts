@@ -10,10 +10,8 @@ import { SvgDownloadComponent } from "../../shared/components/svg-download/svg-d
 import { SvgCloseComponent } from "../../shared/components/svg-close/svg-close.component";
 import { SvgCreateComponent } from "../../shared/components/svg-create/svg-create.component";
 
-import { SvgLinkedinModule } from "../../shared/components/svg-linkedin/svg-linkedin.module";
-
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { AppRoutingModule } from "../../app-routing.module";
+import { routes } from "../../app.routes";
 
 // Shared & Material modules
 import { SharedModule } from "../../shared/shared.module";
@@ -22,9 +20,17 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { provideRouter, withComponentInputBinding } from "@angular/router";
 
 @NgModule({
-	declarations: [
+	imports: [
+		BrowserAnimationsModule,
+		SharedModule,
+		MatListModule,
+		MatToolbarModule,
+		MatSidenavModule,
+		MatButtonModule,
+		MatSlideToggleModule,
 		TopNavbarComponent,
 		SideNavbarComponent,
 		SvgDarkComponent,
@@ -34,17 +40,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 		SvgCloseComponent,
 		SvgCreateComponent,
 	],
-	imports: [
-		BrowserAnimationsModule,
-		AppRoutingModule,
-		SharedModule,
-		MatListModule,
-		MatToolbarModule,
-		MatSidenavModule,
-		MatButtonModule,
-		MatSlideToggleModule,
-		SvgLinkedinModule,
-	],
 	exports: [TopNavbarComponent, SideNavbarComponent, SvgDarkComponent],
+  providers: [provideRouter(routes, withComponentInputBinding()),]
 })
 export class NavModule {}

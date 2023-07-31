@@ -4,5 +4,6 @@ import { Component } from "@angular/core";
 	selector: "app-svg-linkedin",
 	templateUrl: "../../../../../src/assets/svgs/linkedin.svg",
 	styleUrls: ["../svg.component.scss"],
+	standalone: true,
 })
 export class SvgLinkedinComponent {}

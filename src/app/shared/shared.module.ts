@@ -3,10 +3,8 @@ import { CommonModule } from "@angular/common";
 import { MatTabsModule } from "@angular/material/tabs";
 import { RouterModule } from "@angular/router";
 
-import { MaterialModule } from "../material.module";
-
 @NgModule({
-	exports: [CommonModule, MatTabsModule, MaterialModule, RouterModule],
+	exports: [CommonModule, MatTabsModule, RouterModule],
 	declarations: [],
 })
 export class SharedModule {

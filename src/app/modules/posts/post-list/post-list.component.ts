@@ -12,13 +12,32 @@ import { type Post } from "../post.model";
 import { type Observable } from "rxjs";
 import { BreakpointService } from "../../../core/services/breakpoint.service";
 import { FirestoreDataService } from "src/app/core/services/firestore-data.service";
-import { type MatTabChangeEvent } from "@angular/material/tabs";
+import { type MatTabChangeEvent, MatTabsModule } from "@angular/material/tabs";
+import { ReadTimePipe } from "../../../shared/pipes/read-time.pipe";
+import { DateConvertPipe } from "../../../shared/pipes/date-convert.pipe";
+import { SvgTimerComponent } from "../../../shared/components/svg-timer/svg-timer.component";
+import { SvgCalenderComponent } from "../../../shared/components/svg-calender/svg-calender.component";
+import { MatCardModule } from "@angular/material/card";
+import { NgFor, NgIf, AsyncPipe, SlicePipe } from "@angular/common";
 
 @Component({
 	selector: "app-post-list",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: "./post-list.component.html",
 	styleUrls: ["./post-list.component.scss"],
+	standalone: true,
+	imports: [
+		MatTabsModule,
+		NgFor,
+		NgIf,
+		MatCardModule,
+		SvgCalenderComponent,
+		SvgTimerComponent,
+		DateConvertPipe,
+		ReadTimePipe,
+		AsyncPipe,
+		SlicePipe,
+	],
 })
 export class PostListComponent implements OnInit, AfterViewInit {
 	firestoreDataService = inject(FirestoreDataService);

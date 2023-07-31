@@ -35,7 +35,7 @@ export class ImageService {
 			)
 			.pipe(
 				take(1),
-				catchError(_ => of("Error fetching image data")),
+				catchError(() => of("Error fetching image data")),
 				shareReplay(1)
 			);
 	}

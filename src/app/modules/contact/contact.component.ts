@@ -5,17 +5,35 @@ import {
 	FormGroup,
 	FormGroupDirective,
 	Validators,
+	FormsModule,
+	ReactiveFormsModule,
 } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
 import { ContactModel } from "./models/contact.model";
 import { EmailContactService } from "./services/email-contact.service";
+import { MatButtonModule } from "@angular/material/button";
+import { TextFieldModule } from "@angular/cdk/text-field";
+import { NgIf } from "@angular/common";
+import { MatInputModule } from "@angular/material/input";
+import { MatFormFieldModule } from "@angular/material/form-field";
 
 @Component({
 	selector: "app-contact",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: "./contact.component.html",
 	styleUrls: ["./contact.component.scss"],
+	standalone: true,
+	imports: [
+		FormsModule,
+		ReactiveFormsModule,
+		MatFormFieldModule,
+		MatInputModule,
+		NgIf,
+		TextFieldModule,
+		MatButtonModule,
+	],
+  providers: [MatSnackBar]
 })
 export class ContactComponent implements OnInit {
 	title = "Contact Page";

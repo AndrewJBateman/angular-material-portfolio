@@ -5,12 +5,25 @@ import {
 	ChangeDetectionStrategy,
 } from "@angular/core";
 import { Meta } from "@angular/platform-browser";
+import { FooterComponent } from "./core/footer/footer.component";
+import { RouterOutlet } from "@angular/router";
+import { SideNavbarComponent } from "./core/nav/side-navbar/side-navbar.component";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { TopNavbarComponent } from "./core/nav/top-navbar/top-navbar.component";
 
 @Component({
 	selector: "app-root",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: "./app.component.html",
 	styleUrls: ["./app.component.scss"],
+	standalone: true,
+	imports: [
+		TopNavbarComponent,
+		MatSidenavModule,
+		SideNavbarComponent,
+		RouterOutlet,
+		FooterComponent,
+	],
 })
 export class AppComponent implements OnInit {
 	private isDark = false;

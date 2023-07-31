@@ -12,6 +12,9 @@ import { Meta, Title } from "@angular/platform-browser";
 import { Project } from "./project.model";
 import { BreakpointService } from "../../core/services/breakpoint.service";
 import { FirestoreDataService } from "./../../core/services/firestore-data.service";
+import { MatCardModule } from "@angular/material/card";
+import { NgFor, NgIf, AsyncPipe, SlicePipe } from "@angular/common";
+import { MatTabsModule } from "@angular/material/tabs";
 
 @Component({
 	selector: "app-projects",
@@ -19,6 +22,8 @@ import { FirestoreDataService } from "./../../core/services/firestore-data.servi
 	encapsulation: ViewEncapsulation.None,
 	templateUrl: "./projects.component.html",
 	styleUrls: ["./projects.component.scss"],
+	standalone: true,
+	imports: [MatTabsModule, NgFor, NgIf, MatCardModule, AsyncPipe, SlicePipe],
 })
 export class ProjectsComponent implements OnInit {
 	breakpointService = inject(BreakpointService);

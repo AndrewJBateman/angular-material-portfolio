@@ -4,5 +4,6 @@ import { Component } from "@angular/core";
 	selector: "app-svg-dark",
 	templateUrl: "../../../../../src/assets/svgs/dark.svg",
 	styleUrls: ["../svg.component.scss"],
+	standalone: true,
 })
 export class SvgDarkComponent {}
