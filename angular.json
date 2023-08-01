@@ -146,57 +146,6 @@
             }
           }
         },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/angular-material-portfolio/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "externalDependencies": [
-              "@firebase/firestore"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "sourceMap": true,
-              "optimization": true
-            }
-          }
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "angular-material-portfolio:build:development",
-              "serverTarget": "angular-material-portfolio:server:development"
-            },
-            "production": {
-              "browserTarget": "angular-material-portfolio:build:production",
-              "serverTarget": "angular-material-portfolio:server:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "browserTarget": "angular-material-portfolio:build:production",
-            "serverTarget": "angular-material-portfolio:server:production",
-            "routes": [
-              "/"
-            ]
-          },
-          "configurations": {
-            "production": {}
-          }
-        },
         "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {}
