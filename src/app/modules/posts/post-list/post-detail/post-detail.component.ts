@@ -3,7 +3,7 @@ import {
 	ChangeDetectionStrategy,
 	OnInit,
 	inject,
-  CUSTOM_ELEMENTS_SCHEMA,
+	CUSTOM_ELEMENTS_SCHEMA,
 } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Location, NgIf, AsyncPipe } from "@angular/common";
@@ -13,6 +13,7 @@ import { Observable } from "rxjs";
 import { IUnsplashResponse } from "../../models/unsplash";
 import { ImageService } from "../../post-services/image.service";
 import { MatCardModule } from "@angular/material/card";
+import { NgxPictureModule } from "ngx-picture";
 
 @Component({
 	selector: "app-post-detail",
@@ -20,12 +21,8 @@ import { MatCardModule } from "@angular/material/card";
 	templateUrl: "./post-detail.component.html",
 	styleUrls: ["./post-detail.component.scss"],
 	standalone: true,
-	imports: [
-		MatCardModule,
-		NgIf,
-		AsyncPipe,
-	],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+	imports: [MatCardModule, NgIf, AsyncPipe, NgxPictureModule],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PostDetailComponent implements OnInit {
 	activatedRoute = inject(ActivatedRoute);
@@ -52,7 +49,6 @@ export class PostDetailComponent implements OnInit {
 	}
 
 	getPhoto(subject: string): void {
-    console.log('subject: ', subject);
 		this.imageData$ = this.imageService.photoQuery(subject);
 	}
 }
