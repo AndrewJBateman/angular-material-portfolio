@@ -1,6 +1,6 @@
 # :zap: Angular Material Portfolio
 
-* Angular Server Side Rendered (SSR) app using Angular Material to create a fully-responsive portfolio website with a Firebase Firestore database.
+* Angular app using standalone components and Angular Material to create a fully-responsive portfolio website with a Firebase Firestore database.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-portfolio?style=plastic)
@@ -64,8 +64,6 @@ Mat-cards now display Post title, subtitle, content, time to read (calculated us
 * `npm run build` to create build file with Ahead of Time (AOT) compilation. Source map explorer set to false
 * If source map explorer was set to true when build folder created: `npm run explore` to run the webpack-bundle-analyzer - opens bundle analysis drawing
 * `http-server -g -b` to run build files on test server using the GZip & Brottli files
-* `npm run build:ssr` to create a build file with SSR. Add "defer" in inline css file in browser/index.html
-* `npm run serve:ssr` to see the SSR on localhost
 * `firebase deploy` to deploy build file to firebase hosting
 
 ## :computer: Code Examples
@@ -100,25 +98,25 @@ export class BreakpointService {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working SSR. non-SSR version Built for Production, deployed to Firebase & linked to my domain - Lighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
+* Status: Working, deployed to Firebase & linked to my domain - Lighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
 * To-Do: General: fix index CSP, add text compression, reduce unused JS, cache policy 1 year?
 * To-Do: Skills: add more skills  
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
 * To-Do: Projects: add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
-* To-Do: Posts: Unsplash images - use sizing website. add post
+* To-Do: Posts: Unsplash images - use sizing website.
 
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
 * To-Do: overview drg
 
 ## :clap: Inspiration
 
+* [Angular docs: auto migration to standalone components](https://angular.io/guide/standalone-migration)
 * [Website by Jaxon Wright](https://jaxonwright.com/)
 * [Medium article by Tomas Trajan: The complete guide to Angular Material Themes](https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1)
 * [Article by Paul Halliday: Angular: Performance Analysis with webpack Bundle Analyzer](https://alligator.io/angular/angular-webpack-bundle-analyzer/)
 * [Blog post images from Unsplash](https://unsplash.com/)
 * [Simon Grimm of Devdactic's article: How to Host Your Ionic App as a Website on Firebase & Standard Web Servers](https://devdactic.com/host-ionic-website-firebase/)
 * [Okta, Holger Schmitz: What Is Angular Ivy and Why Is It Awesome?](https://developer.okta.com/blog/2020/02/12/angular-ivy)
-* [Ahmed Bouchefra, Setting Up Angular Server-Side Rendering (SSR)](https://blog.jscrambler.com/setting-up-angular-server-side-rendering-ssr/)
 * [Angular 8/9 SEO – Set Dynamic Page Title and Meta Tags in Universal App](https://www.positronx.io/angular-seo-set-dynamic-page-title-meta-tags-in-universal-app/)
 * [Andrei Voicu: Using ESLint and Prettier with VScode in an Angular Project](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
 * [Best practices for a clean and performant Angular application](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)

@@ -46,7 +46,7 @@ export const routes: Routes = [
 		path: "**",
 		loadChildren: () =>
 			import("./modules/pagenotfound/pagenotfound.routes").then(
-				mode => mode.NOTFOUND_ROUTES
+				mod => mod.NOTFOUND_ROUTES
 			),
 	},
 ];
