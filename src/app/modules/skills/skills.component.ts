@@ -42,6 +42,6 @@ export class SkillsComponent implements OnInit {
 	}
 
 	trackByFn(index: number, skill: Skill): number {
-		return skill.id;
+		return skill?.id;
 	}
 }

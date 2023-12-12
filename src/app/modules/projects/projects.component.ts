@@ -49,11 +49,12 @@ export class ProjectsComponent implements OnInit {
 		this.projects$ = this.firestoreDataService.getData("projects");
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	tabTrackByFn(index: number, item: any): number {
-		return item.tabId;
+		return item?.tabId;
 	}
 
 	cardTrackByFn(index: number, project: Project): number {
-		return +project.id;
+		return +project?.id;
 	}
 }

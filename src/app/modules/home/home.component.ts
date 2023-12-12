@@ -6,7 +6,7 @@ import {
 	inject,
 } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
-import { type Observable } from "rxjs";
+import { Observable } from "rxjs";
 
 import { type Area } from "./area.model";
 import { MatCardModule } from "@angular/material/card";
@@ -29,15 +29,17 @@ export class HomeComponent implements OnInit {
 	areas$: Observable<Area[]>;
 
 	ngOnInit(): void {
+		const AREAS_COLLECTION = "areas";
+
 		this.titleService.setTitle(this.title);
 		this.metaTagService.updateTag({
 			name: "home",
 			content: "andrewbateman.org",
 		});
-		this.areas$ = this.firestoreDataService.getData("areas");
+		this.areas$ = this.firestoreDataService.getData(AREAS_COLLECTION);
 	}
 
 	trackByFn(index: number, area: Area): number {
-		return area.id;
+		return area?.id;
 	}
 }

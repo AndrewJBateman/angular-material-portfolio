@@ -14,13 +14,14 @@ import { MatCardModule } from "@angular/material/card";
 import { NgFor, AsyncPipe } from "@angular/common";
 
 @Component({
-	selector: "app-web-tech",
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	templateUrl: "./web-tech.component.html",
-	styleUrls: ["./web-tech.component.scss"],
-	standalone: true,
-	imports: [NgFor, MatCardModule, AsyncPipe, PackageConvertPipe],
+  selector: "app-web-tech",
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: "./web-tech.component.html",
+  styleUrls: ["./web-tech.component.scss"],
+  standalone: true,
+  imports: [NgFor, MatCardModule, AsyncPipe, PackageConvertPipe],
 })
+
 export class WebTechComponent implements OnInit {
 	breakpointService = inject(BreakpointService);
 
@@ -39,6 +40,6 @@ export class WebTechComponent implements OnInit {
 	}
 
 	cardTrackByFn(index: number, item: DataItem): number {
-		return item.id;
+		return item?.id;
 	}
 }

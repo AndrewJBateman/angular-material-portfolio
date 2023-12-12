@@ -66,9 +66,9 @@ export class PostListComponent implements OnInit, AfterViewInit {
 	// the previous tab label string will be retrieved from local storage
 	// Tab label converted to numeric tab key from tabs array
 	ngAfterViewInit(): void {
-		const tabIndexLabel = localStorage.getItem("tab") || "";
-		if (tabIndexLabel) {
-			this.tabIndex = this.getKeyFromValue(tabIndexLabel);
+		const tabLabel = localStorage.getItem("tab") || "";
+		if (tabLabel) {
+			this.tabIndex = this.getKeyFromValue(tabLabel);
 		}
 	}
 
@@ -79,12 +79,12 @@ export class PostListComponent implements OnInit, AfterViewInit {
 		return arrayKey ? +arrayKey : 0;
 	};
 
-	cardTrackByFn(index: number, post: Post): number {
-		return post.id;
+	trackPostById(index: number, post: Post): number {
+		return post?.id;
 	}
 
 	// store current tab in local storage
-	tabChanged(tabChangeEvent: MatTabChangeEvent): void {
+	tabSelected(tabChangeEvent: MatTabChangeEvent): void {
 		const currentTabLabel = tabChangeEvent.tab.textLabel;
 		localStorage.setItem("tab", currentTabLabel);
 	}
