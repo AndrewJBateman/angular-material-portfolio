@@ -50,7 +50,7 @@ Mat-cards now display Post title, subtitle, content, time to read (calculated us
 * [Angular Material v16](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
 * [Angular service worker v16](https://angular.io/guide/service-worker-intro) added
-* [Firebase v9](https://firebase.google.com) Cloud storage and authentication. **Not to be updated to v9**
+* [Firebase v10](https://firebase.google.com) Cloud storage and authentication.
 * [Reactive Extensions Library for Javascript rxjs v7](https://rxjs-dev.firebaseapp.com/)
 * [RxJS share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
