@@ -14,4 +14,9 @@
     "editor.formatOnSave": false
   },
   "typescript.tsdk": "node_modules\\typescript\\lib",
+  "[html][typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
 }
