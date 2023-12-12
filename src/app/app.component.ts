@@ -33,13 +33,7 @@ export class AppComponent implements OnInit {
 		return this.isDark ? "dark-theme" : "light-theme";
 	}
 
-	constructor(private readonly metaTagService: Meta) {
-		// this will clear dark mode and post tab settings if page refreshed
-		// window.onbeforeunload = function () {
-		//   localStorage.clear();
-		//   return "";
-		// };
-	}
+	constructor(private readonly metaTagService: Meta) {}
 
 	ngOnInit(): void {
 		this.metaTagService.addTags([

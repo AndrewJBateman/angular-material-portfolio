@@ -1,7 +1,6 @@
 @use "@angular/material" as mat;
-@import "@angular/material/theming";
 @include mat.all-component-typographies();
-@include mat-core();
+
 
 $angular-primary: mat.define-palette(mat.$blue-grey-palette, 700);
 $angular-accent: mat.define-palette(mat.$blue-palette, 900);
