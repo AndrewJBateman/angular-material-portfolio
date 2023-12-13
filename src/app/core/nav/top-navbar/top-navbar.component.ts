@@ -12,7 +12,7 @@ import {
 
 import { BreakpointService } from "../../services/breakpoint.service";
 import { SvgDarkComponent } from "../../../shared/components/svg-dark/svg-dark.component";
-import { RouterLinkActive, RouterLink} from "@angular/router";
+import { RouterLinkActive, RouterLink } from "@angular/router";
 import { MatButtonModule } from "@angular/material/button";
 import { SvgMenuComponent } from "../../../shared/components/svg-menu/svg-menu.component";
 import { NgIf, AsyncPipe } from "@angular/common";
@@ -33,8 +33,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 		MatSlideToggleModule,
 		SvgDarkComponent,
 		AsyncPipe,
-	]
-
+	],
 })
 export class TopNavbarComponent implements OnInit {
 	breakpointService = inject(BreakpointService);

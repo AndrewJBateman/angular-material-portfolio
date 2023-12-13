@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	bootstrapApplication(AppComponent, {
 		providers: [
 			importProvidersFrom(
-        NgxPictureModule.forRoot(CLOUDINARY_CONFIG),
+				NgxPictureModule.forRoot(CLOUDINARY_CONFIG),
 				NavModule,
 				SharedModule,
 				MatDividerModule,

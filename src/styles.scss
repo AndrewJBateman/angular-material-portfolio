@@ -1,7 +1,6 @@
 @use "@angular/material" as mat;
 @include mat.all-component-typographies();
 
-
 $angular-primary: mat.define-palette(mat.$blue-grey-palette, 700);
 $angular-accent: mat.define-palette(mat.$blue-palette, 900);
 $angular-warn: mat.define-palette(mat.$orange-palette, 800);

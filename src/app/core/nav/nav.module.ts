@@ -41,6 +41,6 @@ import { provideRouter, withComponentInputBinding } from "@angular/router";
 		SvgCreateComponent,
 	],
 	exports: [TopNavbarComponent, SideNavbarComponent, SvgDarkComponent],
-  providers: [provideRouter(routes, withComponentInputBinding()),]
+	providers: [provideRouter(routes, withComponentInputBinding())],
 })
 export class NavModule {}

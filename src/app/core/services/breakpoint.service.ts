@@ -16,10 +16,10 @@ export class BreakpointService {
 				return state.breakpoints[Breakpoints.XSmall]
 					? 1
 					: state.breakpoints[Breakpoints.Small]
-					? 2
-					: state.breakpoints[Breakpoints.Medium]
-					? 3
-					: 4;
+						? 2
+						: state.breakpoints[Breakpoints.Medium]
+							? 3
+							: 4;
 			})
 		);
 }

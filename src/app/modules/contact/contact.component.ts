@@ -33,7 +33,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 		TextFieldModule,
 		MatButtonModule,
 	],
-  providers: [MatSnackBar]
+	providers: [MatSnackBar],
 })
 export class ContactComponent implements OnInit {
 	title = "Contact Page";
