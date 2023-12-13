@@ -38,7 +38,7 @@ export class WebTechComponent implements OnInit {
 		this.dataItems$ = this.firestoreDataService.getData("tech");
 	}
 
-	cardTrackByFn(index: number, item: DataItem): number {
+	trackTechById(index: number, item: DataItem): number {
 		return item?.id;
 	}
 }

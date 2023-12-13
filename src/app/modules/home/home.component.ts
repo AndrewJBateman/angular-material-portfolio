@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
 		this.areas$ = this.firestoreDataService.getData(AREAS_COLLECTION);
 	}
 
-	trackByFn(index: number, area: Area): number {
+	trackAreaById(index: number, area: Area): number {
 		return area?.id;
 	}
 }

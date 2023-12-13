@@ -5,7 +5,7 @@
 </head>
 <div class="responsive-grid" [style.--columns]="columns$ | async">
 	<ng-container
-		*ngFor="let item of dataItems$ | async; trackBy: cardTrackByFn"
+		*ngFor="let item of dataItems$ | async; trackBy: trackTechById"
 		class="container">
 		<mat-card appearance="outlined" class="general-card mat-elevation-z5">
 			<mat-card-content>

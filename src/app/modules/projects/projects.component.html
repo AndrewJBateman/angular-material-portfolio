@@ -8,7 +8,7 @@
 	<mat-tab *ngFor="let area of areas" [label]="area" class="project-tab">
 		<div class="responsive-grid" [style.--columns]="columns$ | async">
 			<ng-container
-				*ngFor="let project of projects$ | async; trackBy: cardTrackByFn">
+				*ngFor="let project of projects$ | async; trackBy: trackProjectById">
 				<ng-container *ngIf="project.area === area">
 					<mat-card appearance="outlined" class="project-card mat-elevation-z5">
 						<mat-card-content class="project-card-content">

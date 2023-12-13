@@ -41,7 +41,7 @@ export class SkillsComponent implements OnInit {
 		this.skills$ = this.firestoreDataService.getData("skills");
 	}
 
-	trackByFn(index: number, skill: Skill): number {
+	trackSkillById(index: number, skill: Skill): number {
 		return skill?.id;
 	}
 }

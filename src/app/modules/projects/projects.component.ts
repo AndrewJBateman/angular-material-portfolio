@@ -54,7 +54,7 @@ export class ProjectsComponent implements OnInit {
 		return item?.tabId;
 	}
 
-	cardTrackByFn(index: number, project: Project): number {
+	trackProjectById(index: number, project: Project): number {
 		return +project?.id;
 	}
 }

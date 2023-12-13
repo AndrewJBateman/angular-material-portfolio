@@ -10,7 +10,7 @@
 		<mat-card
 			appearance="outlined"
 			class="home-card mat-elevation-z5"
-			*ngFor="let area of areas$ | async; trackBy: trackByFn">
+			*ngFor="let area of areas$ | async; trackBy: trackAreaById">
 			<mat-card-header>
 				<img
 					mat-card-avatar
