@@ -46,16 +46,16 @@ Mat-cards now display Post title, subtitle, content, time to read (calculated us
 
 ## :signal_strength: Technologies
 
-* [Angular framework v16](https://angular.io/)
-* [Angular Material v16](https://material.angular.io/)
+* [Angular framework v17](https://angular.io/)
+* [Angular Material v17](https://material.angular.io/)
 * [Angular Material Icons](https://material.io/resources/icons/?style=baseline)
-* [Angular service worker v16](https://angular.io/guide/service-worker-intro) added
+* [Angular service worker v17](https://angular.io/guide/service-worker-intro) added
 * [Firebase v10](https://firebase.google.com) Cloud storage and authentication.
 * [Reactive Extensions Library for Javascript rxjs v7](https://rxjs-dev.firebaseapp.com/)
 * [RxJS share](https://rxjs.dev/api/operators/share) used to multicast (share) the original Observable with multiple subscribers to prevent more than one http fetch of Posts data in a user session - the Posts data does not change that frequently so this avoids wasting a user's mobile data quota with unnecessary http data requests
 * [Dayjs v1](https://github.com/iamkun/dayjs) to convert Github UTC Timestamp to '... ago'
 * [Webpack Bundle Analyser v4](https://www.npmjs.com/package/webpack-bundle-analyzer) to create an 'interactive treemap visualization of the contents of all your bundles.
-* [Formspree](https://formspree.io/) to send email form
+* [Formspree](https://formspree.io/) used to send email form
 * [ngx-picture](https://www.npmjs.com/package/ngx-picture) to size & lazy load images
 
 ## :floppy_disk: Setup
