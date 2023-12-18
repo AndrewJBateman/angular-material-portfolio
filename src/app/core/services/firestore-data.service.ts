@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable, inject } from "@angular/core";
 import { Firestore, collection, collectionData } from "@angular/fire/firestore";
 import { Observable, map, shareReplay } from "rxjs";

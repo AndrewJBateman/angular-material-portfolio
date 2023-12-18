@@ -6,14 +6,18 @@
 
 <div class="post-detail-container">
 	<mat-card appearance="outlined" class="post-card mat-elevation-z1">
-		<ngx-picture
-			*ngIf="imageData$ | async as imageData"
-			mat-card-image
-			[lazyLoad]="true"
-			[src]="imageData.body.urls.small"
-			alt="{{ imageData.body.alt_description }}"
-			class="card-image">
-		</ngx-picture>
+		<div *ngIf="imageData$ | async as imageData">
+			<ngx-picture
+				mat-card-image
+				[lazyLoad]="true"
+				[src]="imageData.body.urls.small"
+				alt="Unsplash image"
+				class="card-image">
+			</ngx-picture>
+			<pre
+				class="image-text"><a href="http://www.unsplash.com" target="_blank" rel="noreferrer">Unsplash</a> image: <span *ngIf="imageData.body.description">{{imageData.body.description}}</span>" by {{ imageData.body.user.name }}</pre>
+		</div>
+
 		<mat-card-content *ngIf="post">
 			<p class="card-title">{{ post!.title }}</p>
 			<p class="card-content">
