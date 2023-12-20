@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Injectable, inject } from "@angular/core";
-import { map } from "rxjs";
+import { map, shareReplay } from "rxjs/operators";
 
 /**
  * numberGridColumns enum provides a mapping of screen size breakpoints to number of grid columns.
@@ -24,7 +24,7 @@ export class BreakpointService {
 	breakpointObserver = inject(BreakpointObserver);
 
 	// return number of grid columns based on user screen size breakpoint, default 4
-	BreakpointColumnNr$ = this.breakpointObserver
+	breakpointColumnNr$ = this.breakpointObserver
 		.observe([Breakpoints.XSmall, Breakpoints.Small, Breakpoints.Medium])
 		.pipe(
 			map(state =>
@@ -35,6 +35,7 @@ export class BreakpointService {
 						: state.breakpoints[Breakpoints.Medium]
 							? BreakpointSize.Medium
 							: BreakpointSize.Large
-			)
+			),
+			shareReplay(1)
 		);
 }

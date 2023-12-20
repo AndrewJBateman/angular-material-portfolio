@@ -50,7 +50,7 @@ export class PostListComponent implements OnInit, AfterViewInit {
 	tabs = ["Dev", "IT", "Eng", "Env"];
 	tabIndex = 0;
 	posts$: Observable<Post[]>;
-	BreakpointColumnNr$ = this.breakpointService.BreakpointColumnNr$;
+	BreakpointColumnNr$ = this.breakpointService.breakpointColumnNr$;
 
 	ngOnInit(): void {
 		window.scrollTo(0, 0);
