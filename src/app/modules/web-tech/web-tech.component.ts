@@ -25,7 +25,7 @@ export class WebTechComponent implements OnInit {
 	breakpointService = inject(BreakpointService);
 
 	dataItems$: Observable<DataItem[]>;
-	columns$ = this.breakpointService.columns$;
+	BreakpointColumnNr$ = this.breakpointService.BreakpointColumnNr$;
 
 	constructor(
 		private readonly firestoreDataService: FirestoreDataService,

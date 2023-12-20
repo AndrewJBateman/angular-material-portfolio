@@ -3,7 +3,7 @@
 		name="description"
 		content="Web Tech page shows Angular and other dependencies used in the website build" />
 </head>
-<div class="responsive-grid" [style.--columns]="columns$ | async">
+<div class="responsive-grid" [style.--columns]="BreakpointColumnNr$ | async">
 	<ng-container
 		*ngFor="let item of dataItems$ | async; trackBy: trackTechById"
 		class="container">

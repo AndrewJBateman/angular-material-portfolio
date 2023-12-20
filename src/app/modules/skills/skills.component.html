@@ -3,7 +3,7 @@
 		name="description"
 		content="Skills page displays programming, IT and cloud computing skills in an Angular Material card grid." />
 </head>
-<div class="responsive-grid" [style.--columns]="columns$ | async">
+<div class="responsive-grid" [style.--columns]="BreakpointColumnNr$ | async">
 	<ng-container *ngFor="let skill of skills$ | async; trackBy: trackSkillById">
 		<mat-card appearance="outlined" class="skill-card mat-elevation-z5">
 			<mat-card-content>

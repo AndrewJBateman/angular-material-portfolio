@@ -75,7 +75,7 @@ export class BreakpointService {
   breakpointObserver = inject(BreakpointObserver);
   constructor() {}
 
-  columns$ = this.breakpointObserver
+  BreakpointColumnNr$ = this.breakpointObserver
     .observe([Breakpoints.XSmall, Breakpoints.Small, Breakpoints.Medium])
     .pipe(
       map((state) => {

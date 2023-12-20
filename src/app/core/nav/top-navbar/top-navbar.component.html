@@ -5,7 +5,7 @@
 			type="button"
 			(click)="onToggleSidenav()"
 			style="border: none; background-color: transparent"
-			*ngIf="columns$ && (columns$ | async) === 1"
+			*ngIf="BreakpointColumnNr$ && (BreakpointColumnNr$ | async) === 1"
 			aria-label="drop-down menu button">
 			<app-svg-menu />
 		</button>
@@ -32,7 +32,7 @@
 		</span>
 
 		<!-- The following menu items will be hidden on both SM and XS screen sizes -->
-		<div class="top-nav-rhs" *ngIf="columns$ && (columns$ | async) !== 1">
+		<div class="top-nav-rhs" *ngIf="BreakpointColumnNr$ && (BreakpointColumnNr$ | async) !== 1">
 			<a
 				class="top-nav-link"
 				[routerLink]="['/projects']"

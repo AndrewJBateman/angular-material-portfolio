@@ -37,7 +37,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 })
 export class TopNavbarComponent implements OnInit {
 	breakpointService = inject(BreakpointService);
-	columns$ = this.breakpointService.columns$;
+	BreakpointColumnNr$ = this.breakpointService.BreakpointColumnNr$;
 
 	isDarkMode = false;
 

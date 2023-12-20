@@ -6,7 +6,7 @@
 
 <mat-tab-group backgroundColor="primary" mat-align-tabs="start">
 	<mat-tab *ngFor="let area of areas" [label]="area" class="project-tab">
-		<div class="responsive-grid" [style.--columns]="columns$ | async">
+		<div class="responsive-grid" [style.--columns]="BreakpointColumnNr$ | async">
 			<ng-container
 				*ngFor="let project of projects$ | async; trackBy: trackProjectById">
 				<ng-container *ngIf="project.area === area">

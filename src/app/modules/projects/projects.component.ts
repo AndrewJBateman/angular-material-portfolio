@@ -31,7 +31,7 @@ export class ProjectsComponent implements OnInit {
 	titleService = inject(Title);
 	metaTagService = inject(Meta);
 
-	columns$ = this.breakpointService.columns$;
+	BreakpointColumnNr$ = this.breakpointService.BreakpointColumnNr$;
 
 	// @Input() darkModeSwitched: Boolean = false;
 

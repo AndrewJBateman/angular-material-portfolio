@@ -27,7 +27,7 @@ export class SkillsComponent implements OnInit {
 	titleService = inject(Title);
 	metaTagService = inject(Meta);
 
-	columns$ = this.breakpointService.columns$;
+	BreakpointColumnNr$ = this.breakpointService.BreakpointColumnNr$;
 
 	title = "List of skills";
 	skills$: Observable<Skill[]>;
