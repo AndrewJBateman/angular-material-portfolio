@@ -19,14 +19,14 @@ export class BreakpointService {
 	BreakpointColumnNr$ = this.breakpointObserver
 		.observe([Breakpoints.XSmall, Breakpoints.Small, Breakpoints.Medium])
 		.pipe(
-			map(state => {
-				return state.breakpoints[Breakpoints.XSmall]
+			map(state =>
+				state.breakpoints[Breakpoints.XSmall]
 					? numberGridColumns.XSmall
 					: state.breakpoints[Breakpoints.Small]
 						? numberGridColumns.Small
 						: state.breakpoints[Breakpoints.Medium]
 							? numberGridColumns.Medium
-							: numberGridColumns.Large;
-			})
+							: numberGridColumns.Large
+			)
 		);
 }
