@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Pipe, PipeTransform } from "@angular/core";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";

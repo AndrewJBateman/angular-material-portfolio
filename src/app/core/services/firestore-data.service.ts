@@ -3,11 +3,20 @@ import { Injectable, inject } from "@angular/core";
 import { Firestore, collection, collectionData } from "@angular/fire/firestore";
 import { Observable, map, shareReplay } from "rxjs";
 
+interface Item {
+	id?: number;
+	title: string;
+	subtitle: string;
+	content: string;
+	svgPath: string;
+	published?: { minutes: number; seconds: number };
+}
+
 @Injectable({
 	providedIn: "root",
 })
 export class FirestoreDataService {
-	data$: Observable<any[]> = new Observable<any[]>();
+	data$: Observable<Item[]> = new Observable<Item[]>();
 	firestore: Firestore = inject(Firestore);
 	id = 0;
 
@@ -18,20 +27,23 @@ export class FirestoreDataService {
 	getData(collectionName: string): Observable<any[]> {
 		const data = collection(this.firestore, collectionName);
 		const unsortedData$ = collectionData(data) as Observable<any[]>;
-		this.data$ = unsortedData$.pipe(
-			map((items: any[]) =>
-				items[0].id ? items.sort(this.sortById) : items.sort(this.sortByDate)
-			),
-			shareReplay(1)
-		);
-		return this.data$;
+		const sortItems = (items: Item[]) => {
+			return items[0].id
+				? items.sort(this.sortById)
+				: items.sort(this.sortByDate);
+		};
+		return unsortedData$.pipe(map(sortItems), shareReplay(1));
 	}
 
-	sortById(a: any, b: any) {
-		return a.id < b.id ? -1 : 1;
+	sortById(a: Item, b: Item) {
+		return a.id && b.id ? (a.id < b.id ? -1 : 1) : 1;
 	}
 
-	sortByDate(a: any, b: any) {
-		return a.published.seconds > b.published.seconds ? -1 : 1;
+	sortByDate(a: Item, b: Item) {
+		return a.published && b.published
+			? a.published.seconds > b.published.seconds
+				? -1
+				: 1
+			: 1;
 	}
 }
