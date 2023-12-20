@@ -2,7 +2,10 @@ import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Injectable, inject } from "@angular/core";
 import { map } from "rxjs";
 
-enum numberGridColumns {
+/**
+ * numberGridColumns enum provides a mapping of screen size breakpoints to number of grid columns.
+ */
+enum BreakpointSize {
 	XSmall = 1,
 	Small = 2,
 	Medium = 3,
@@ -12,6 +15,11 @@ enum numberGridColumns {
 @Injectable({
 	providedIn: "root",
 })
+/**
+ * BreakpointService provides information about current viewport size breakpoints.
+ * It uses Angular CDK BreakpointObserver to get breakpoint state, and maps it to
+ * a number of grid columns to use for grid layouts.
+ */
 export class BreakpointService {
 	breakpointObserver = inject(BreakpointObserver);
 
@@ -21,12 +29,12 @@ export class BreakpointService {
 		.pipe(
 			map(state =>
 				state.breakpoints[Breakpoints.XSmall]
-					? numberGridColumns.XSmall
+					? BreakpointSize.XSmall
 					: state.breakpoints[Breakpoints.Small]
-						? numberGridColumns.Small
+						? BreakpointSize.Small
 						: state.breakpoints[Breakpoints.Medium]
-							? numberGridColumns.Medium
-							: numberGridColumns.Large
+							? BreakpointSize.Medium
+							: BreakpointSize.Large
 			)
 		);
 }
