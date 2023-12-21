@@ -23,14 +23,14 @@ const httpOptions: {
 	providedIn: "root",
 })
 export class ImageService {
-	readonly baseUrl = "https://api.unsplash.com";
+	readonly API_URL = environment.unsplash.API_URL;
 
 	constructor(private readonly http: HttpClient) {}
 
 	photoQuery(subject: string): Observable<any> {
 		return this.http
 			.get(
-				`${this.baseUrl}/photos/random?query=${subject}&orientation=landscape`,
+				`${this.API_URL}/photos/random?query=${subject}&orientation=landscape`,
 				httpOptions
 			)
 			.pipe(
