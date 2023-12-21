@@ -3,7 +3,7 @@
 	<mat-toolbar-row class="top-nav-toolbar">
 		<button
 			type="button"
-			(click)="onToggleSidenav()"
+			(click)="toggleSidenav()"
 			style="border: none; background-color: transparent"
 			*ngIf="BreakpointColumnNr$ && (BreakpointColumnNr$ | async) === 1"
 			aria-label="drop-down menu button">

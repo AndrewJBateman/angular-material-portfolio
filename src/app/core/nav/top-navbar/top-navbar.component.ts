@@ -45,15 +45,18 @@ export class TopNavbarComponent implements OnInit {
 	@Output() public sidenavToggle = new EventEmitter<boolean>();
 
 	ngOnInit(): void {
+		this.initializeDarkMode();
+	}
+
+	initializeDarkMode = () => {
 		const localMode = localStorage.getItem("darkMode");
 
 		// If dark mode not defined in local storage then default to dark mode false
 		// If dark mode is defined in local storage then parse value to define dark mode
 		this.isDarkMode = localMode == null ? false : JSON.parse(localMode);
-		this.darkModeSwitched.emit(this.isDarkMode);
-	}
+	};
 
-	onToggleSidenav = (): void => {
+	toggleSidenav = (): void => {
 		this.sidenavToggle.emit();
 	};
 
