@@ -10,9 +10,13 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 	imports: [MatToolbarModule, RouterLink],
 })
 export class FooterComponent implements OnInit {
-	year: number;
+	currentYear: number;
 
 	ngOnInit(): void {
-		this.year = new Date().getFullYear();
+		this.currentYear = this.getCurrentYear();
+	}
+
+	getCurrentYear() {
+		return new Date().getFullYear();
 	}
 }
