@@ -49,6 +49,6 @@ export class PostDetailComponent implements OnInit {
 	}
 
 	getPhoto(subject: string): void {
-		this.imageData$ = this.imageService.photoQuery(subject);
+		this.imageData$ = this.imageService.getRandomImage(subject);
 	}
 }

@@ -1,42 +1,36 @@
-import { Injectable } from "@angular/core";
+/**
+ * ImageService handles fetching random images from Unsplash API.
+ *
+ * getRandomImage() takes a search query and returns an observable
+ * with the API response containing a random image matching the query.
+ *
+ * It constructs the API request with the provided API key and parameters,
+ * and returns the HTTP GET request observable.
+ */
+import { Injectable, inject } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { catchError, shareReplay, take } from "rxjs/operators";
-import { Observable, of } from "rxjs";
 import { environment } from "../../../../environments/environment";
-
-const httpOptions: {
-	headers: any;
-	observe: any;
-	params: any;
-	responseType: any;
-} = {
-	headers: new HttpHeaders({
-		Authorization: "Client-ID " + environment.unsplash.UNSPLASH_API_KEY,
-		"Content-Type": "application/json",
-	}),
-	observe: "response",
-	params: "HttpParams",
-	responseType: "json",
-};
+import { Observable } from "rxjs";
+import { IUnsplashResponse } from "../models/unsplash";
 
 @Injectable({
 	providedIn: "root",
 })
 export class ImageService {
-	readonly API_URL = environment.unsplash.API_URL;
+	http = inject(HttpClient);
 
-	constructor(private readonly http: HttpClient) {}
+	getRandomImage(subject: string): Observable<IUnsplashResponse> {
+		const url = `${environment.unsplash.API_URL}/photos/random`;
+		const params = {
+			query: subject,
+			orientation: "landscape",
+		};
 
-	photoQuery(subject: string): Observable<any> {
-		return this.http
-			.get(
-				`${this.API_URL}/photos/random?query=${subject}&orientation=landscape`,
-				httpOptions
-			)
-			.pipe(
-				take(1),
-				catchError(() => of("Error fetching image data")),
-				shareReplay(1)
-			);
+		const headers = new HttpHeaders({
+			Authorization: `Client-ID ${environment.unsplash.UNSPLASH_API_KEY}`,
+			"Content-Type": "application/json",
+		});
+
+		return this.http.get<IUnsplashResponse>(url, { params, headers });
 	}
 }
