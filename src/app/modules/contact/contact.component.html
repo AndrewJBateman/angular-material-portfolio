@@ -10,7 +10,7 @@
 		</div>
 		<form
 			class="contact-form"
-			[formGroup]="contactForm"
+			[formGroup]="formControlService.contactForm"
 			#formDirective="ngForm"
 			(ngSubmit)="submitHandler(formDirective)">
 			<!--name form-field-->
@@ -21,7 +21,7 @@
 					formControlName="name"
 					#name />
 				<mat-error
-					*ngIf="contactForm.get('name')?.hasError"
+					*ngIf="formControlService.contactForm.get('name')?.hasError"
 					class="alert alert-danger">
 					Your name must be 4-100 characters long
 				</mat-error>
@@ -35,7 +35,7 @@
 					formControlName="email"
 					#email />
 				<mat-error
-					*ngIf="contactForm.get('email')?.hasError"
+					*ngIf="formControlService.contactForm.get('email')?.hasError"
 					class="alert alert-danger">
 					There is an error in your email format
 				</mat-error>
@@ -52,7 +52,7 @@
 					formControlName="message"
 					#message></textarea>
 				<mat-error
-					*ngIf="contactForm.get('message')?.hasError"
+					*ngIf="formControlService.contactForm.get('message')?.hasError"
 					class="alert alert-danger">
 					Your message must be 4-400 characters long
 				</mat-error>
@@ -63,7 +63,7 @@
 					mat-stroked-button
 					color="primary"
 					type="submit"
-					[disabled]="contactForm.invalid || loading"
+					[disabled]="formControlService.contactForm.invalid"
 					aria-label="Send button">
 					<span class="button-text">SEND</span>
 				</button>

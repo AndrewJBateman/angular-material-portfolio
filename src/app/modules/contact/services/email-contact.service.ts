@@ -19,7 +19,7 @@ import { environment } from "../../../../environments/environment";
 	providedIn: "root",
 })
 export class EmailContactService {
-	httpClient = inject(HttpClient);
+	http = inject(HttpClient);
 
 	formspreeUrl = environment.formspree.FORMSPREE_URL;
 
@@ -30,7 +30,7 @@ export class EmailContactService {
 	}
 
 	makeRequest(form: Partial<ContactModel>) {
-		return this.httpClient
+		return this.http
 			.post(
 				this.formspreeUrl,
 				{ name: form.name, replyto: form.email, message: form.message },

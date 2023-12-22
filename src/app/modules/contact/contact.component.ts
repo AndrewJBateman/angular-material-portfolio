@@ -1,14 +1,16 @@
-import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
-import { Meta, Title } from "@angular/platform-browser";
 import {
-	FormBuilder,
-	FormGroup,
-	FormGroupDirective,
-	Validators,
-	FormsModule,
-	ReactiveFormsModule,
-} from "@angular/forms";
-import { MatSnackBar } from "@angular/material/snack-bar";
+	Component,
+	OnInit,
+	inject,
+	ChangeDetectionStrategy,
+} from "@angular/core";
+import { FormGroupDirective } from "@angular/forms";
+import { Meta, Title } from "@angular/platform-browser";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import {
+	MatSnackBar,
+	MAT_SNACK_BAR_DEFAULT_OPTIONS,
+} from "@angular/material/snack-bar";
 
 import { ContactModel } from "./models/contact.model";
 import { EmailContactService } from "./services/email-contact.service";
@@ -17,6 +19,8 @@ import { TextFieldModule } from "@angular/cdk/text-field";
 import { NgIf } from "@angular/common";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
+
+import { FormControlService } from "./services/form-control.service";
 
 @Component({
 	selector: "app-contact",
@@ -33,25 +37,31 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 		TextFieldModule,
 		MatButtonModule,
 	],
-	providers: [MatSnackBar],
+	providers: [
+		MatSnackBar,
+		FormControlService,
+		{
+			provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
+			useValue: {
+				duration: 3000,
+				verticalPosition: 'center',
+				horizontalPosition: "center",
+        panelClass: ["snackbar-common"]
+			},
+		},
+	],
 })
 export class ContactComponent implements OnInit {
+	formControlService = inject(FormControlService);
 	title = "Contact Page";
-	contactForm: FormGroup;
-
-	// Form state
-	loading = false;
-	success = "Message sent";
-	failure = "Message not sent";
 
 	constructor(
-		private readonly formBuilder: FormBuilder,
 		private readonly emailService: EmailContactService,
 		private readonly matSnackBar: MatSnackBar,
 		private readonly titleService: Title,
 		private readonly metaTagService: Meta
 	) {
-		this.buildForm();
+		this.formControlService.buildForm();
 	}
 
 	ngOnInit(): void {
@@ -62,41 +72,19 @@ export class ContactComponent implements OnInit {
 		});
 	}
 
-	private buildForm() {
-		this.contactForm = this.formBuilder.nonNullable.group({
-			name: [
-				"",
-				[
-					Validators.required,
-					Validators.minLength(4),
-					Validators.maxLength(100),
-				],
-			],
-			email: ["", [Validators.required, Validators.email]],
-			message: [
-				"",
-				[
-					Validators.required,
-					Validators.minLength(4),
-					Validators.maxLength(400),
-				],
-			],
-		});
-	}
-
 	submitHandler(formDirective: FormGroupDirective): void {
-		const formValue: ContactModel = this.contactForm.value;
+		const formValue: ContactModel = this.formControlService.contactForm.value;
 		this.emailService.sendEmail(formValue).subscribe({
 			next: () => {
-				this.matSnackBar.open(this.success, "OK", {
-					panelClass: ["snackbar-common", "green-snackbar"],
+				this.matSnackBar.open(this.formControlService.success, "OK", {
+					panelClass: ["green-snackbar"],
 				});
 				formDirective.resetForm();
-				this.contactForm.reset();
+				this.formControlService.resetForm();
 			},
 			error: () => {
-				this.matSnackBar.open(this.failure, "OK", {
-					panelClass: ["snackbar-common", "red-snackbar"],
+				this.matSnackBar.open(this.formControlService.failure, "Error", {
+					panelClass: ["red-snackbar"],
 				});
 			},
 		});
