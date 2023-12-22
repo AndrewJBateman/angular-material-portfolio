@@ -1,16 +1,30 @@
+/**
+ * Side navigation bar component.
+ *
+ * Displays a responsive side nav with router links, SVG icons,
+ * and emits an event when closed.
+ *
+ * Imports Angular modules for UI components, and custom SVG icon components.
+ *
+ * Selector: 'app-side-navbar'
+ *
+ * Exports the SideNavbarComponent class.
+ */
 import {
 	Component,
 	Output,
 	EventEmitter,
 	ChangeDetectionStrategy,
 } from "@angular/core";
-import { SvgCloseComponent } from "../../../shared/components/svg-close/svg-close.component";
-import { SvgLinkedinComponent } from "../../../shared/components/svg-linkedin/svg-linkedin.component";
-import { SvgGithubComponent } from "../../../shared/components/svg-github/svg-github.component";
+
 import { NgClass } from "@angular/common";
 import { RouterLinkActive, RouterLink } from "@angular/router";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatListModule } from "@angular/material/list";
+
+import { SvgCloseComponent } from "../../../shared/components/svg-close/svg-close.component";
+import { SvgLinkedinComponent } from "../../../shared/components/svg-linkedin/svg-linkedin.component";
+import { SvgGithubComponent } from "../../../shared/components/svg-github/svg-github.component";
 
 @Component({
 	selector: "app-side-navbar",
@@ -30,9 +44,9 @@ import { MatListModule } from "@angular/material/list";
 	],
 })
 export class SideNavbarComponent {
-	@Output() sidenavClose = new EventEmitter();
+	@Output() sidenavClosed = new EventEmitter();
 
-	public onSidenavClose = (): void => {
-		this.sidenavClose.emit();
-	};
+	onSidenavClose() {
+		this.sidenavClosed.emit();
+	}
 }

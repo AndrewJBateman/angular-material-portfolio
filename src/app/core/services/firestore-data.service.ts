@@ -1,4 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/**
+ * FirestoreDataService provides methods to fetch data from Firestore
+ * and transform the results into sorted Observables.
+ *
+ * The getData method fetches a collection from Firestore, converts it to
+ * an Observable array, sorts the items, and shares the Observable to prevent
+ * duplicate requests.
+ *
+ * The sort methods sort by id if available, otherwise by published date.
+ */
 import { Injectable, inject } from "@angular/core";
 import { Firestore, collection, collectionData } from "@angular/fire/firestore";
 import { Observable, map, shareReplay } from "rxjs";

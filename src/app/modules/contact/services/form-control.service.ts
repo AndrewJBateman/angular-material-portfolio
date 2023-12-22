@@ -1,20 +1,24 @@
-import { Injectable, inject } from "@angular/core";
+import { inject } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
-@Injectable({
-	providedIn: "root",
-})
+// @Injectable({
+// 	providedIn: "root",
+// })
+
+const SUCCESS_MESSAGE = "Message sent";
+const FAILURE_MESSAGE = "Message not sent";
+
 export class FormControlService {
-	formBuilder = inject(FormBuilder);
+	private formBuilder = inject(FormBuilder);
 	contactForm: FormGroup;
 
-	// Form state
-	loading = false;
-	success = "Message sent";
-	failure = "Message not sent";
+  // Form state
+  success = SUCCESS_MESSAGE;
+	failure = FAILURE_MESSAGE;
+  loading = false;
 
-	buildForm() {
-    this.loading = true;
+	initContactForm() {
+		this.loading = true;
 		this.contactForm = this.formBuilder.nonNullable.group({
 			name: [
 				"",
@@ -36,7 +40,7 @@ export class FormControlService {
 		});
 	}
 
-  resetForm() {
-    this.loading = false;
-  } 
+	resetForm() {
+		this.loading = false;
+	}
 }
