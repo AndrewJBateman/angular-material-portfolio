@@ -1,3 +1,10 @@
+/**
+ * Contact component class for Angular application.
+ *
+ * Handles contact form submission and communication with contact email service.
+ * Sets page title and meta tags.
+ * Displays success/error snackbar messages on form submission.
+ */
 import {
 	Component,
 	OnInit,
@@ -19,8 +26,8 @@ import { TextFieldModule } from "@angular/cdk/text-field";
 import { NgIf } from "@angular/common";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { tap, } from "rxjs/operators"
-import {of, catchError } from "rxjs"
+import { tap } from "rxjs/operators";
+import { of, catchError } from "rxjs";
 
 import { FormControlService } from "./services/form-control.service";
 
@@ -64,7 +71,7 @@ export class ContactComponent implements OnInit {
 		private readonly titleService: Title,
 		private readonly metaTagService: Meta
 	) {
-		this.formControlService.buildForm();
+		this.formControlService.initContactForm();
 	}
 
 	ngOnInit(): void {
@@ -77,23 +84,30 @@ export class ContactComponent implements OnInit {
 
 	submitHandler(formDirective: FormGroupDirective): void {
 		const formValue: ContactModel = this.formControlService.contactForm.value;
-		this.emailService
-			.sendEmail(formValue)
-			.pipe(
-				tap(() => {
-					this.matSnackBar.open(this.formControlService.success, "OK", {
-						panelClass: ["green-snackbar"],
-					});
-					formDirective.resetForm();
-					this.formControlService.resetForm();
-				}),
-				catchError(() => {
-					this.matSnackBar.open(this.formControlService.failure, "Error", {
-						panelClass: ["red-snackbar"],
-					});
-					return of(null);
-				})
-			)
-			.subscribe();
+
+		try {
+			this.emailService
+				.sendEmail(formValue)
+				.pipe(
+					tap(() => {
+						this.matSnackBar.open(this.formControlService.success, "OK", {
+							panelClass: ["green-snackbar"],
+						});
+						formDirective.resetForm();
+						this.formControlService.resetForm();
+					}),
+					catchError(() => {
+						this.matSnackBar.open(this.formControlService.failure, "Error", {
+							panelClass: ["red-snackbar"],
+						});
+						return of(null);
+					})
+				)
+				.subscribe();
+		} catch (error) {
+			this.matSnackBar.open(this.formControlService.failure, "Error" + error, {
+				panelClass: ["red-snackbar"],
+			});
+		}
 	}
 }
