@@ -19,6 +19,8 @@ import { TextFieldModule } from "@angular/cdk/text-field";
 import { NgIf } from "@angular/common";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { tap, } from "rxjs/operators"
+import {of, catchError } from "rxjs"
 
 import { FormControlService } from "./services/form-control.service";
 
@@ -44,15 +46,16 @@ import { FormControlService } from "./services/form-control.service";
 			provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
 			useValue: {
 				duration: 3000,
-				verticalPosition: 'center',
+				verticalPosition: "center",
 				horizontalPosition: "center",
-        panelClass: ["snackbar-common"]
+				panelClass: ["snackbar-common"],
 			},
 		},
 	],
 })
 export class ContactComponent implements OnInit {
 	formControlService = inject(FormControlService);
+
 	title = "Contact Page";
 
 	constructor(
@@ -74,19 +77,23 @@ export class ContactComponent implements OnInit {
 
 	submitHandler(formDirective: FormGroupDirective): void {
 		const formValue: ContactModel = this.formControlService.contactForm.value;
-		this.emailService.sendEmail(formValue).subscribe({
-			next: () => {
-				this.matSnackBar.open(this.formControlService.success, "OK", {
-					panelClass: ["green-snackbar"],
-				});
-				formDirective.resetForm();
-				this.formControlService.resetForm();
-			},
-			error: () => {
-				this.matSnackBar.open(this.formControlService.failure, "Error", {
-					panelClass: ["red-snackbar"],
-				});
-			},
-		});
+		this.emailService
+			.sendEmail(formValue)
+			.pipe(
+				tap(() => {
+					this.matSnackBar.open(this.formControlService.success, "OK", {
+						panelClass: ["green-snackbar"],
+					});
+					formDirective.resetForm();
+					this.formControlService.resetForm();
+				}),
+				catchError(() => {
+					this.matSnackBar.open(this.formControlService.failure, "Error", {
+						panelClass: ["red-snackbar"],
+					});
+					return of(null);
+				})
+			)
+			.subscribe();
 	}
 }
