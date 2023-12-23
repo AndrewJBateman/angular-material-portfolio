@@ -23,7 +23,6 @@ import { ContactModel } from "./models/contact.model";
 import { EmailContactService } from "./services/email-contact.service";
 import { MatButtonModule } from "@angular/material/button";
 import { TextFieldModule } from "@angular/cdk/text-field";
-import { NgIf } from "@angular/common";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { tap } from "rxjs/operators";
@@ -42,7 +41,6 @@ import { FormControlService } from "./services/form-control.service";
 		ReactiveFormsModule,
 		MatFormFieldModule,
 		MatInputModule,
-		NgIf,
 		TextFieldModule,
 		MatButtonModule,
 	],

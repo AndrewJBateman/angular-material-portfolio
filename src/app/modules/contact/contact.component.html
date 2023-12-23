@@ -20,11 +20,11 @@
 					placeholder="Your name..."
 					formControlName="name"
 					#name />
-				<mat-error
-					*ngIf="formControlService.contactForm.get('name')?.hasError"
-					class="alert alert-danger">
-					Your name must be 4-100 characters long
-				</mat-error>
+				@if (formControlService.contactForm.get("name")?.hasError) {
+					<mat-error class="alert alert-danger">
+						Your name must be 4-100 characters long
+					</mat-error>
+				}
 			</mat-form-field>
 
 			<!--email form-field-->
@@ -34,11 +34,12 @@
 					placeholder="Your email..."
 					formControlName="email"
 					#email />
-				<mat-error
-					*ngIf="formControlService.contactForm.get('email')?.hasError"
-					class="alert alert-danger">
-					There is an error in your email format
-				</mat-error>
+
+				@if (formControlService.contactForm.get("email")?.hasError) {
+					<mat-error class="alert alert-danger"
+						>There is an error in your email format</mat-error
+					>
+				}
 			</mat-form-field>
 
 			<!--message form-field-->
@@ -51,11 +52,11 @@
 					placeholder="Your message..."
 					formControlName="message"
 					#message></textarea>
-				<mat-error
-					*ngIf="formControlService.contactForm.get('message')?.hasError"
-					class="alert alert-danger">
-					Your message must be 4-400 characters long
-				</mat-error>
+				@if (formControlService.contactForm.get("message")?.hasError) {
+					<mat-error class="alert alert-danger">
+						Your message must be 4-400 characters long
+					</mat-error>
+				}
 			</mat-form-field>
 
 			<div class="send-button">

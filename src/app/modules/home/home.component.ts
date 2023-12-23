@@ -19,7 +19,7 @@ import { Observable } from "rxjs";
 
 import { type Area } from "./area.model";
 import { MatCardModule } from "@angular/material/card";
-import { NgIf, NgFor, AsyncPipe } from "@angular/common";
+import { AsyncPipe } from "@angular/common";
 
 @Component({
 	selector: "app-home",
@@ -27,7 +27,7 @@ import { NgIf, NgFor, AsyncPipe } from "@angular/common";
 	templateUrl: "./home.component.html",
 	styleUrls: ["./home.component.scss"],
 	standalone: true,
-	imports: [NgIf, NgFor, MatCardModule, AsyncPipe],
+	imports: [MatCardModule, AsyncPipe],
 })
 export class HomeComponent implements OnInit {
 	firestoreDataService = inject(FirestoreDataService);
