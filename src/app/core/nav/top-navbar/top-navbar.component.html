@@ -1,17 +1,19 @@
 <!-- Top Navbar sticks to top of screen -->
 <mat-toolbar color="primary" sticky>
 	<mat-toolbar-row class="top-nav-toolbar">
-		<button
-			type="button"
-			(click)="toggleSidenav()"
-			style="border: none; background-color: transparent"
-			*ngIf="
-				this.breakpointService.breakpointColumnNr$ &&
-				(this.breakpointService.breakpointColumnNr$ | async) === 1
-			"
-			aria-label="drop-down menu button">
-			<app-svg-menu />
-		</button>
+		@if (
+			this.breakpointService.breakpointColumnNr$ &&
+			(this.breakpointService.breakpointColumnNr$ | async) === 1
+		) {
+			<button
+				type="button"
+				(click)="toggleSidenav()"
+				style="border: none; background-color: transparent"
+				aria-label="drop-down menu button">
+				<app-svg-menu />
+			</button>
+		}
+
 		<a
 			class="top-nav-link no-hover-effect"
 			[routerLink]="['/home']"
@@ -35,59 +37,58 @@
 		</span>
 
 		<!-- The following menu items will be hidden on both SM and XS screen sizes -->
-		<div
-			class="top-nav-rhs"
-			*ngIf="
-				this.breakpointService.breakpointColumnNr$ &&
-				(this.breakpointService.breakpointColumnNr$ | async) !== 1
-			">
-			<a
-				class="top-nav-link"
-				[routerLink]="['/projects']"
-				href="/projects"
-				routerLinkActive="top-link-active"
-				aria-label="projects nav button"
-				mat-button
-				[disableRipple]="true"
-				>Projects</a
-			>
-			<a
-				class="top-nav-link"
-				[routerLink]="['/skills']"
-				href="/skills"
-				routerLinkActive="top-link-active"
-				aria-label="skills nav button"
-				mat-button
-				[disableRipple]="true"
-				>Skills</a
-			>
-			<a
-				class="top-nav-link"
-				[routerLink]="['/contact']"
-				href="/contact"
-				routerLinkActive="top-link-active"
-				aria-label="contact nav button"
-				mat-button
-				[disableRipple]="true"
-				>Contact</a
-			>
-			<a
-				class="top-nav-link"
-				[routerLink]="['/posts']"
-				href="/posts"
-				routerLinkActive="top-link-active"
-				aria-label="posts nav button"
-				mat-button
-				[disableRipple]="true"
-				>Posts</a
-			>
-			<!-- <a
+		@if (
+			this.breakpointService.breakpointColumnNr$ &&
+			(this.breakpointService.breakpointColumnNr$ | async) !== 1
+		) {
+			<div class="top-nav-rhs">
+				<a
+					class="top-nav-link"
+					[routerLink]="['/projects']"
+					href="/projects"
+					routerLinkActive="top-link-active"
+					aria-label="projects nav button"
+					mat-button
+					[disableRipple]="true"
+					>Projects</a
+				>
+				<a
+					class="top-nav-link"
+					[routerLink]="['/skills']"
+					href="/skills"
+					routerLinkActive="top-link-active"
+					aria-label="skills nav button"
+					mat-button
+					[disableRipple]="true"
+					>Skills</a
+				>
+				<a
+					class="top-nav-link"
+					[routerLink]="['/contact']"
+					href="/contact"
+					routerLinkActive="top-link-active"
+					aria-label="contact nav button"
+					mat-button
+					[disableRipple]="true"
+					>Contact</a
+				>
+				<a
+					class="top-nav-link"
+					[routerLink]="['/posts']"
+					href="/posts"
+					routerLinkActive="top-link-active"
+					aria-label="posts nav button"
+					mat-button
+					[disableRipple]="true"
+					>Posts</a
+				>
+				<a
         class="top-link-social"
         href="https://www.github.com/andrewjbateman"
         target="_blank"
         rel="noreferrer"
         aria-label="link to github profile"
-        >Github</a
+        ></a
       >
       <a
         class="top-link-social"
@@ -96,7 +97,8 @@
         rel="noreferrer"
         aria-label="link to linkedin profile"
         >LinkedIn</a
-      > -->
-		</div>
+      >
+			</div>
+		}
 	</mat-toolbar-row>
 </mat-toolbar>

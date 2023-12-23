@@ -15,7 +15,7 @@ import { SvgDarkComponent } from "../../../shared/components/svg-dark/svg-dark.c
 import { RouterLinkActive, RouterLink } from "@angular/router";
 import { MatButtonModule } from "@angular/material/button";
 import { SvgMenuComponent } from "../../../shared/components/svg-menu/svg-menu.component";
-import { NgIf, AsyncPipe } from "@angular/common";
+import { AsyncPipe } from "@angular/common";
 import { MatToolbarModule } from "@angular/material/toolbar";
 
 @Component({
@@ -25,7 +25,6 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 	standalone: true,
 	imports: [
 		MatToolbarModule,
-		NgIf,
 		SvgMenuComponent,
 		MatButtonModule,
 		RouterLinkActive,

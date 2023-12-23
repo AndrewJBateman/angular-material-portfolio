@@ -6,7 +6,7 @@
 
 <div class="post-detail-container">
 	<mat-card appearance="outlined" class="post-card mat-elevation-z1">
-		<div *ngIf="imageData$ | async as imageData">
+		@if (imageData$ | async; as imageData) {
 			<ngx-picture
 				mat-card-image
 				[lazyLoad]="true"
@@ -14,15 +14,16 @@
 				alt="Unsplash image"
 				class="card-image">
 			</ngx-picture>
+			<!-- <pre>{{ imageData.body }}</pre> -->
 			<pre
 				class="image-text"><a href="http://www.unsplash.com" target="_blank" rel="noreferrer">Unsplash</a> image: <span *ngIf="imageData.body.description">{{imageData.body.description}}</span>" by {{ imageData.body.user.name }}</pre>
-		</div>
+		}
 
-		<mat-card-content *ngIf="post">
-			<p class="card-title">{{ post!.title }}</p>
+		<mat-card-content *ngIf="postDetails">
+			<p class="card-title">{{ postDetails!.title }}</p>
 			<p class="card-content">
-				<span class="card-subtitle">{{ post!.subtitle }}:</span>
-				{{ post!.content }}
+				<span class="card-subtitle">{{ postDetails!.subtitle }}:</span>
+				{{ postDetails!.content }}
 			</p>
 		</mat-card-content>
 		<mat-card-actions align="start" class="post-footer">

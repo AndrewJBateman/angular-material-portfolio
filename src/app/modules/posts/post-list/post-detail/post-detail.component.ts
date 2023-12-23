@@ -9,7 +9,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 import { Location, NgIf, AsyncPipe } from "@angular/common";
 
 import { Post } from "../../post.model";
-import { Observable } from "rxjs";
+import { Observable, catchError, throwError } from "rxjs";
 import { IUnsplashResponse } from "../../models/unsplash";
 import { ImageService } from "../../post-services/image.service";
 import { MatCardModule } from "@angular/material/card";
@@ -29,19 +29,22 @@ export class PostDetailComponent implements OnInit {
 	router = inject(Router);
 	location = inject(Location);
 	imageService = inject(ImageService);
-	post: Post | undefined | null;
+	postDetails: Post | undefined | null;
 	imageData$ = new Observable<IUnsplashResponse>();
 
 	constructor() {
 		this.activatedRoute.queryParams.subscribe(() => {
-			const routeData = this.router?.getCurrentNavigation()?.extras;
-			const state = routeData?.state;
-			this.post = state != null ? state?.post : null;
+			const state = this.getRouteData();
+			this.postDetails = state !== null ? state?.post : null;
 		});
 	}
 
 	ngOnInit(): void {
-		this.getPhoto(this.post!.image);
+		this.getPhoto(this.postDetails!.image);
+	}
+
+	getRouteData() {
+		return this.router?.getCurrentNavigation()?.extras?.state;
 	}
 
 	onNavigateBackToPosts(): void {
@@ -49,6 +52,11 @@ export class PostDetailComponent implements OnInit {
 	}
 
 	getPhoto(subject: string): void {
-		this.imageData$ = this.imageService.getRandomImage(subject);
+		this.imageData$ = this.imageService.getRandomImage(subject).pipe(
+			catchError(error => {
+				// handle error
+				return throwError(() => new Error(error));
+			})
+		);
 	}
 }

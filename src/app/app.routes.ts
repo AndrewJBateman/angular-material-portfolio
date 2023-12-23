@@ -45,7 +45,7 @@ export const routes: Route[] = [
 	{
 		path: "**",
 		loadChildren: () =>
-			import("./modules/pagenotfound/pagenotfound.routes").then(
+			import("./modules/page-not-found/page-not-found.routes").then(
 				mod => mod.NOTFOUND_ROUTES
 			),
 	},
