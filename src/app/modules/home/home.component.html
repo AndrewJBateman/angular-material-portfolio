@@ -6,11 +6,8 @@
 </head>
 
 <div class="container">
-	<div *ngIf="areas$">
-		<mat-card
-			appearance="outlined"
-			class="home-card mat-elevation-z5"
-			*ngFor="let area of areas$ | async; trackBy: trackAreaById">
+	@for (area of areas$ | async; track trackAreaById) {
+		<mat-card appearance="outlined" class="home-card mat-elevation-z5">
 			<mat-card-header>
 				<img
 					mat-card-avatar
@@ -24,5 +21,7 @@
 				{{ area.content }}
 			</mat-card-content>
 		</mat-card>
-	</div>
+	} @empty {
+		<div>There are no items.</div>
+	}
 </div>

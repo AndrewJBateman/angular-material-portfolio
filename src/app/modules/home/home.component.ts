@@ -1,3 +1,12 @@
+/**
+ * HomeComponent handles the main home page functionality.
+ *
+ * It imports Angular dependencies for the component, metadata, observables, etc.
+ *
+ * The component loads areas data from Firestore and sets the page title and meta tags.
+ *
+ * It has methods to set the page metadata and track areas by ID.
+ */
 import { FirestoreDataService } from "./../../core/services/firestore-data.service";
 import {
 	Component,
@@ -29,14 +38,18 @@ export class HomeComponent implements OnInit {
 	areas$: Observable<Area[]>;
 
 	ngOnInit(): void {
-		const AREAS_COLLECTION = "areas";
+		const areasCollection = "areas";
+		this.areas$ = this.firestoreDataService.getData(areasCollection);
 
+		this.setPageMetadata();
+	}
+
+	setPageMetadata() {
 		this.titleService.setTitle(this.title);
 		this.metaTagService.updateTag({
 			name: "home",
 			content: "andrewbateman.org",
 		});
-		this.areas$ = this.firestoreDataService.getData(AREAS_COLLECTION);
 	}
 
 	trackAreaById(index: number, area: Area): number {
