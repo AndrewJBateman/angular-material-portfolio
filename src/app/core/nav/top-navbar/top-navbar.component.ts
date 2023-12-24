@@ -17,6 +17,9 @@ import { MatButtonModule } from "@angular/material/button";
 import { SvgMenuComponent } from "../../../shared/components/svg-menu/svg-menu.component";
 import { AsyncPipe } from "@angular/common";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { SvgGithubModule } from "src/app/shared/components/svg-github/svg-github.module";
+import { SvgLinkedinModule } from "src/app/shared/components/svg-linkedin/svg-linkedin.module";
+
 
 @Component({
 	selector: "app-top-navbar",
@@ -26,6 +29,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 	imports: [
 		MatToolbarModule,
 		SvgMenuComponent,
+    SvgGithubModule,
+    SvgLinkedinModule,
 		MatButtonModule,
 		RouterLinkActive,
 		RouterLink,

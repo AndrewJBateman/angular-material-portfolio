@@ -23,8 +23,8 @@ import { MatDividerModule } from "@angular/material/divider";
 import { MatListModule } from "@angular/material/list";
 
 import { SvgCloseComponent } from "../../../shared/components/svg-close/svg-close.component";
-import { SvgLinkedinComponent } from "../../../shared/components/svg-linkedin/svg-linkedin.component";
-import { SvgGithubComponent } from "../../../shared/components/svg-github/svg-github.component";
+import { SvgLinkedinModule } from "../../../shared/components/svg-linkedin/svg-linkedin.module";
+import { SvgGithubModule } from "src/app/shared/components/svg-github/svg-github.module";
 
 @Component({
 	selector: "app-side-navbar",
@@ -38,9 +38,9 @@ import { SvgGithubComponent } from "../../../shared/components/svg-github/svg-gi
 		RouterLinkActive,
 		RouterLink,
 		NgClass,
-		SvgGithubComponent,
-		SvgLinkedinComponent,
+		SvgLinkedinModule,
 		SvgCloseComponent,
+    SvgGithubModule
 	],
 })
 export class SideNavbarComponent {
