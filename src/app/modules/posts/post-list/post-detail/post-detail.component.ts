@@ -6,7 +6,7 @@ import {
 	CUSTOM_ELEMENTS_SCHEMA,
 } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { Location, NgIf, AsyncPipe } from "@angular/common";
+import { Location, AsyncPipe } from "@angular/common";
 
 import { Post } from "../../post.model";
 import { Observable, catchError, throwError } from "rxjs";
@@ -21,7 +21,7 @@ import { NgxPictureModule } from "ngx-picture";
 	templateUrl: "./post-detail.component.html",
 	styleUrls: ["./post-detail.component.scss"],
 	standalone: true,
-	imports: [MatCardModule, NgIf, AsyncPipe, NgxPictureModule],
+	imports: [MatCardModule, AsyncPipe, NgxPictureModule],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PostDetailComponent implements OnInit {
