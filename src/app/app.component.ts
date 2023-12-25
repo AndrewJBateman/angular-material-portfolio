@@ -1,3 +1,11 @@
+/**
+ * The main application component.
+ *
+ * Initializes Angular metadata like change detection strategy, template, and styles.
+ * Imports and declares child components.
+ * Implements logic for theme switching between light and dark modes.
+ * Handles SEO metadata in ngOnInit.
+ */
 import {
 	Component,
 	HostBinding,
