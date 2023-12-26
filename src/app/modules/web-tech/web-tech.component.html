@@ -4,7 +4,7 @@
 		content="Web Tech page shows Angular and other dependencies used in the website build" />
 </head>
 <div class="responsive-grid" [style.--columns]="BreakpointColumnNr$ | async">
-	@for (item of dataItems$ | async; track trackTechById) {
+	@for (item of techDataItems$ | async; track trackByFn) {
 		<ng-container class="container">
 			<mat-card appearance="outlined" class="general-card mat-elevation-z5">
 				<mat-card-content>

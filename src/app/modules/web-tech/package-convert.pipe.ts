@@ -1,3 +1,13 @@
+/**
+ * PackageConvertPipe is a Pipe that transforms a package name
+ * into its version by looking it up in the packageMap.
+ *
+ * The packageMap is a Map that contains package names mapped to their
+ * versions loaded dynamically using require().
+ *
+ * The pipe is marked as standalone so it can be used outside of
+ * Angular modules.
+ */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Pipe, PipeTransform } from "@angular/core";
 declare const require: (moduleName: string) => any;

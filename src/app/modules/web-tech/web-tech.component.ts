@@ -1,3 +1,15 @@
+/**
+ * WebTechComponent displays information about the technologies used to build the website.
+ *
+ * It imports RxJS Observables and components from Angular framework.
+ *
+ * The component class fetches data from a Firestore database service, transforms it with pipes,
+ * and renders it with Angular template bindings.
+ *
+ * It implements OnInit to initialize on component load.
+ *
+ * The template uses Angular Material card components to display the data.
+ */
 import { Observable } from "rxjs";
 import { DataItem } from "./data-item.model";
 import {
@@ -24,7 +36,7 @@ import { AsyncPipe } from "@angular/common";
 export class WebTechComponent implements OnInit {
 	breakpointService = inject(BreakpointService);
 
-	dataItems$: Observable<DataItem[]>;
+	techDataItems$: Observable<DataItem[]>;
 	BreakpointColumnNr$ = this.breakpointService.breakpointColumnNr$;
 
 	constructor(
@@ -35,10 +47,15 @@ export class WebTechComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.dataItems$ = this.firestoreDataService.getData("tech");
+		this.init();
 	}
 
-	trackTechById(index: number, item: DataItem): number {
-		return item?.id;
+	init() {
+		this.title.setTitle("Website Build Info");
+		this.techDataItems$ = this.firestoreDataService.getData("tech");
+	}
+
+	trackByFn(index: number, item: DataItem) {
+		return item.id;
 	}
 }
