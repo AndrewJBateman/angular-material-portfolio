@@ -11,7 +11,7 @@ import { Router, type NavigationExtras } from "@angular/router";
 import { type Post } from "../post.model";
 import { type Observable } from "rxjs";
 import { BreakpointService } from "../../../core/services/breakpoint.service";
-import { FirestoreDataService } from "src/app/core/services/firestore-data.service";
+import { FirestoreDataService } from "../../../core/services/firestore-data.service";
 import { type MatTabChangeEvent, MatTabsModule } from "@angular/material/tabs";
 import { ReadTimePipe } from "../../../shared/pipes/read-time.pipe";
 import { DateConvertPipe } from "../../../shared/pipes/date-convert.pipe";

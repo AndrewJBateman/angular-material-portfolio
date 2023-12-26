@@ -20,7 +20,7 @@ import {
 } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 import { BreakpointService } from "../../core/services/breakpoint.service";
-import { FirestoreDataService } from "src/app/core/services/firestore-data.service";
+import { FirestoreDataService } from "../../core/services/firestore-data.service";
 import { PackageConvertPipe } from "./package-convert.pipe";
 import { MatCardModule } from "@angular/material/card";
 import { AsyncPipe } from "@angular/common";
