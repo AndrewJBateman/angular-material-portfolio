@@ -5,8 +5,7 @@
 </head>
 <div class="responsive-grid" [style.--columns]="BreakpointColumnNr$ | async">
 	@for (item of dataItems$ | async; track trackTechById) {
-		<ng-container>
-			class="container">
+		<ng-container class="container">
 			<mat-card appearance="outlined" class="general-card mat-elevation-z5">
 				<mat-card-content>
 					<p class="tech-card-content">

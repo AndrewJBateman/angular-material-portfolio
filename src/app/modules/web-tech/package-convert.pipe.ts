@@ -1,6 +1,23 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Pipe, PipeTransform } from "@angular/core";
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-declare const require: any;
+declare const require: (moduleName: string) => any;
+
+const packageMap = new Map([
+	["@angular/core/package.json", require("@angular/core/package.json").version],
+	[
+		"@angular/material/package.json",
+		require("@angular/material/package.json").version,
+	],
+	["rxjs/package.json", require("rxjs/package.json").version],
+	["typescript/package.json", require("typescript/package.json").version],
+	["firebase/package.json", require("firebase/package.json").version],
+	[
+		"@angular/service-worker/package.json",
+		require("@angular/service-worker/package.json").version,
+	],
+	["express/package.json", require("express/package.json").version],
+	["eslint/package.json", require("eslint/package.json").version],
+]);
 
 @Pipe({
 	name: "packageConvert",
@@ -8,23 +25,6 @@ declare const require: any;
 })
 export class PackageConvertPipe implements PipeTransform {
 	transform(value: string): string {
-		switch (value) {
-			case "@angular/core/package.json":
-				return require("@angular/core/package.json").version;
-			case "@angular/material/package.json":
-				return require("@angular/material/package.json").version;
-			case "rxjs/package.json":
-				return require("rxjs/package.json").version;
-			case "typescript/package.json":
-				return require("typescript/package.json").version;
-			case "firebase/package.json":
-				return require("firebase/package.json").version;
-			case "@angular/service-worker/package.json":
-				return require("@angular/service-worker/package.json").version;
-			case "express/package.json":
-				return require("express/package.json").version;
-			default:
-				return "latest";
-		}
+		return packageMap.get(value) || "latest";
 	}
 }

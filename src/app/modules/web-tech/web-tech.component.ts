@@ -11,7 +11,7 @@ import { BreakpointService } from "../../core/services/breakpoint.service";
 import { FirestoreDataService } from "src/app/core/services/firestore-data.service";
 import { PackageConvertPipe } from "./package-convert.pipe";
 import { MatCardModule } from "@angular/material/card";
-import { NgFor, AsyncPipe } from "@angular/common";
+import { AsyncPipe } from "@angular/common";
 
 @Component({
 	selector: "app-web-tech",
@@ -19,7 +19,7 @@ import { NgFor, AsyncPipe } from "@angular/common";
 	templateUrl: "./web-tech.component.html",
 	styleUrls: ["./web-tech.component.scss"],
 	standalone: true,
-	imports: [NgFor, MatCardModule, AsyncPipe, PackageConvertPipe],
+	imports: [MatCardModule, AsyncPipe, PackageConvertPipe],
 })
 export class WebTechComponent implements OnInit {
 	breakpointService = inject(BreakpointService);

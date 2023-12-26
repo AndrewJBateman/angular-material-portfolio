@@ -1,7 +1,7 @@
 export class DataItem {
-	id = 0;
-	name = "";
-	package = "";
-	link = "";
-	icon = "";
+  readonly icon = "";
+	readonly id = 0;
+  readonly link = "";
+	readonly name = "";
+	readonly package = "";
 }
