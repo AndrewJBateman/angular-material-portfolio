@@ -18,7 +18,7 @@ import { DateConvertPipe } from "../../../shared/pipes/date-convert.pipe";
 import { SvgTimerComponent } from "../../../shared/components/svg-timer/svg-timer.component";
 import { SvgCalenderComponent } from "../../../shared/components/svg-calender/svg-calender.component";
 import { MatCardModule } from "@angular/material/card";
-import { NgFor, NgIf, AsyncPipe, SlicePipe } from "@angular/common";
+import { AsyncPipe, SlicePipe } from "@angular/common";
 
 @Component({
 	selector: "app-post-list",
@@ -28,8 +28,6 @@ import { NgFor, NgIf, AsyncPipe, SlicePipe } from "@angular/common";
 	standalone: true,
 	imports: [
 		MatTabsModule,
-		NgFor,
-		NgIf,
 		MatCardModule,
 		SvgCalenderComponent,
 		SvgTimerComponent,

@@ -18,14 +18,15 @@
 									appearance="outlined"
 									class="project-card mat-elevation-z5">
 									<mat-card-content class="project-card-content">
-										<p
-											class="project-card-icons"
-											*ngFor="let svg of project.svgs">
-											<img
-												class="project-card-svg"
-												src="../assets/svgs/{{ svg }}.svg"
-												alt="icon of {{ svg }}" />
-										</p>
+										@for (svg of project.svgs; track svg) {
+											<p class="project-card-icons">
+												<img
+													class="project-card-svg"
+													src="../assets/svgs/{{ svg }}.svg"
+													alt="icon of {{ svg }}" />
+											</p>
+										}
+
 										<p>
 											<span class="project-card-title"
 												>{{ project.title }}:</span

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { browser, by, element } from "protractor";
 
 export class AppPage {
