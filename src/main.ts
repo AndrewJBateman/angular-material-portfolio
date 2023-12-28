@@ -2,7 +2,6 @@ import { enableProdMode, importProvidersFrom } from "@angular/core";
 import { environment } from "./environments/environment";
 import { bootstrapApplication } from "@angular/platform-browser";
 import { AppComponent } from "./app/app.component";
-import { ServiceWorkerModule } from "@angular/service-worker";
 import { provideFirestore, getFirestore } from "@angular/fire/firestore";
 import { provideFirebaseApp, initializeApp } from "@angular/fire/app";
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -34,9 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 				MatToolbarModule,
 				provideFirebaseApp(() => initializeApp({ ...environment.firebase })),
 				provideFirestore(() => getFirestore()),
-				ServiceWorkerModule.register("ngsw-worker.js", {
-					enabled: environment.production,
-				})
 			),
 			provideHttpClient(withInterceptorsFromDi()),
 		],
