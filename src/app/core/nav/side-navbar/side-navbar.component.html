@@ -12,9 +12,10 @@
 		[routerLinkActiveOptions]="{ exact: true }"
 		href="/home"
 		routerLinkActive="side-link-active"
+    aria-label="side menu button"
 		#rla="routerLinkActive"
 		(click)="onSidenavClose()">
-		<span [ngClass]="rla.isActive ? 'side-link-active' : 'side-link'">AB</span>
+		<span [ngClass]="rla.isActive ? 'side-link-active' : 'side-link'">Home</span>
 	</a>
 	<a
 		mat-list-item
@@ -22,6 +23,7 @@
 		[routerLink]="['/projects']"
 		href="/projects"
 		routerLinkActive="side-link-active"
+    aria-label="Projects side menu button"
 		#rlb="routerLinkActive"
 		(click)="onSidenavClose()">
 		<span [ngClass]="rlb.isActive ? 'side-link-active' : 'side-link'"
@@ -34,6 +36,7 @@
 		[routerLink]="['/skills']"
 		href="/skills"
 		routerLinkActive="side-link-active"
+    aria-label="Skills side menu button"
 		#rlc="routerLinkActive"
 		(click)="onSidenavClose()">
 		<span [ngClass]="rlc.isActive ? 'side-link-active' : 'side-link'"
@@ -46,6 +49,7 @@
 		[routerLink]="['/contact']"
 		href="/contact"
 		routerLinkActive="side-link-active"
+    aria-label="Contact side menu button"
 		#rld="routerLinkActive"
 		(click)="onSidenavClose()">
 		<span [ngClass]="rld.isActive ? 'side-link-active' : 'side-link'"
@@ -58,6 +62,7 @@
 		[routerLink]="['/posts']"
 		href="/posts"
 		routerLinkActive="side-link-active"
+    aria-label="Posts side menu button"
 		#rle="routerLinkActive"
 		(onClick)="onSidenavClose()"
 		(onKeyUp)="onSidenavClose()">
@@ -70,6 +75,7 @@
 		<a
 			mat-list-item
 			class="side-link-social"
+      aria-label="side menu link button"
 			href="https://www.github.com/andrewjbateman"
 			target="_blank"
 			rel="noreferrer">
@@ -78,6 +84,7 @@
 		<a
 			mat-list-item
 			class="side-link-social"
+      aria-label="side menu link button"
 			href="https://www.linkedin.com/in/andrew-bateman"
 			target="_blank"
 			rel="noreferrer">
@@ -86,7 +93,7 @@
 		<a
 			mat-list-item
 			class="side-drawer-close"
-			(onClick)="onSidenavClose()"
+      aria-label="side menu close button"
 			(onKeyUp)="onSidenavClose()">
 			<app-svg-close />
 		</a>

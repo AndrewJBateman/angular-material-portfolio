@@ -9,7 +9,7 @@
 				type="button"
 				(click)="toggleSidenav()"
 				style="border: none; background-color: transparent"
-				aria-label="drop-down menu button">
+				aria-label="menu drop-down button">
 				<app-svg-menu />
 			</button>
 		}
@@ -23,7 +23,7 @@
 			aria-label="home nav button"
 			mat-button
 			[disableRipple]="true"
-			>AB</a
+			>Home</a
 		>
 		<span>
 			<mat-slide-toggle
@@ -47,7 +47,7 @@
 					[routerLink]="['/projects']"
 					href="/projects"
 					routerLinkActive="top-link-active"
-					aria-label="projects nav button"
+					aria-label="Projects nav button"
 					mat-button
 					[disableRipple]="true"
 					>Projects</a
@@ -57,7 +57,7 @@
 					[routerLink]="['/skills']"
 					href="/skills"
 					routerLinkActive="top-link-active"
-					aria-label="skills nav button"
+					aria-label="Skills nav button"
 					mat-button
 					[disableRipple]="true"
 					>Skills</a
@@ -67,7 +67,7 @@
 					[routerLink]="['/contact']"
 					href="/contact"
 					routerLinkActive="top-link-active"
-					aria-label="contact nav button"
+					aria-label="Contact nav button"
 					mat-button
 					[disableRipple]="true"
 					>Contact</a
@@ -77,28 +77,28 @@
 					[routerLink]="['/posts']"
 					href="/posts"
 					routerLinkActive="top-link-active"
-					aria-label="posts nav button"
+					aria-label="Posts nav button"
 					mat-button
 					[disableRipple]="true"
 					>Posts</a
 				>
-					<a
-						class="top-link-social"
-						href="https://www.github.com/andrewjbateman"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="link to github profile"
-						><app-svg-github
-					/></a>
-					<a
-						class="top-link-social"
-						href="https://www.linkedin.com/in/andrew-bateman"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="link to linkedin profile"
-						><app-svg-linkedin /></a
-					>
-				</div>
+				<a
+					class="top-link-social"
+					href="https://www.github.com/andrewjbateman"
+					target="_blank"
+					rel="noreferrer"
+					aria-label="link to github profile"
+					><app-svg-github
+				/></a>
+				<a
+					class="top-link-social"
+					href="https://www.linkedin.com/in/andrew-bateman"
+					target="_blank"
+					rel="noreferrer"
+					aria-label="link to linkedin profile"
+					><app-svg-linkedin
+				/></a>
+			</div>
 		}
 	</mat-toolbar-row>
 </mat-toolbar>

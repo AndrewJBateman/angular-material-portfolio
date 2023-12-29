@@ -6,22 +6,26 @@
 </head>
 
 <div class="container">
-	@for (area of areas$ | async; track trackAreaById) {
-		<mat-card appearance="outlined" class="home-card mat-elevation-z5">
-			<mat-card-header>
-				<img
-					mat-card-avatar
-					[src]="area.svgPath"
-					class="top-header-image"
-					alt="icon of {{ area.title }}" />
-				<mat-card-title>{{ area.title }}</mat-card-title>
-				<mat-card-subtitle>{{ area.subtitle }}</mat-card-subtitle>
-			</mat-card-header>
-			<mat-card-content>
-				{{ area.content }}
-			</mat-card-content>
-		</mat-card>
-	} @empty {
-		<div>Loading...</div>
-	}
+	<main>
+		@for (area of areas$ | async; track trackAreaById) {
+			<section>
+				<mat-card appearance="outlined" class="home-card mat-elevation-z5">
+					<mat-card-header>
+						<img
+							mat-card-avatar
+							[src]="area.svgPath"
+							class="top-header-image"
+							alt="icon of {{ area.title }}" />
+						<mat-card-title>{{ area.title }}</mat-card-title>
+						<mat-card-subtitle>{{ area.subtitle }}</mat-card-subtitle>
+					</mat-card-header>
+					<mat-card-content>
+						{{ area.content }}
+					</mat-card-content>
+				</mat-card>
+			</section>
+		} @empty {
+			<div>Loading...</div>
+		}
+	</main>
 </div>

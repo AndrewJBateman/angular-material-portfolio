@@ -63,30 +63,37 @@ Mat-cards now display Post title, subtitle, content, time to read (calculated us
 * `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
 * `npm run build` to create build file with Ahead of Time (AOT) compilation. Source map explorer set to false
 * If source map explorer was set to true when build folder created: `npm run explore` to run the webpack-bundle-analyzer - opens bundle analysis drawing
-* `http-server -g -b` to run build files on test server using the GZip & Brottli files
+* `http-server -g -b -p 8080 dist/angular-material-portfolio/browser` to run build files on test server port 8080 using the GZip & Brottli files
 * `firebase deploy` to deploy build file to firebase hosting
+* `firebase login --reauth` if `firebase deploy` not working and it shows you are logged in but in fact login token is stale
 
 ## :computer: Code Examples
 
-* `core/services/breakpoint.service.ts` class to supply the number of columns based on user screen size - used by several modules to decide number of mat-cards in a grid line
+* `core/services/breakpoint.service.ts` extracted BreakpointObserver service to provide breakpoint information to components
 
 ```typescript
+/**
+ * BreakpointService provides information about current viewport size breakpoints.
+ * It uses Angular CDK BreakpointObserver to get breakpoint state, and maps it to
+ * a number of grid columns to use for grid layouts.
+ */
 export class BreakpointService {
   breakpointObserver = inject(BreakpointObserver);
-  constructor() {}
 
-  BreakpointColumnNr$ = this.breakpointObserver
+  // return number of grid columns based on user screen size breakpoint, default 4
+  breakpointColumnNr$ = this.breakpointObserver
     .observe([Breakpoints.XSmall, Breakpoints.Small, Breakpoints.Medium])
     .pipe(
-      map((state) => {
-        return state.breakpoints[Breakpoints.XSmall]
-          ? 1
+      map(state =>
+        state.breakpoints[Breakpoints.XSmall]
+          ? BreakpointSize.XSmall
           : state.breakpoints[Breakpoints.Small]
-          ? 2
-          : state.breakpoints[Breakpoints.Medium]
-          ? 3
-          : 4;
-      })
+            ? BreakpointSize.Small
+            : state.breakpoints[Breakpoints.Medium]
+              ? BreakpointSize.Medium
+              : BreakpointSize.Large
+      ),
+      shareReplay(1)
     );
 }
 ```
@@ -94,6 +101,7 @@ export class BreakpointService {
 ## :cool: Features
 
 * common Grid card layouts with data from a shared firebase database service
+* latest Angular 17 control flows replace '*ngIf' and '*ngFor'
 * local storage dark mode and post mat-tab active settings stored so still there after refresh
 
 ## :clipboard: Status & To-Do List
@@ -104,7 +112,7 @@ export class BreakpointService {
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
 * To-Do: Projects: add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
 * To-Do: Posts: Unsplash images - use sizing website.
-
+* To-Do: SCSS - reorganise
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
 * To-Do: overview drg
 
