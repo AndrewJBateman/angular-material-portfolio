@@ -1,3 +1,20 @@
+/**
+ * Top navigation bar component.
+ *
+ * Declares Angular component with selector 'app-top-navbar'.
+ *
+ * Imports Angular modules and components needed.
+ *
+ * Exports component class TopNavbarComponent implementing OnInit.
+ *
+ * Contains properties to inject BreakpointService and DarkModeService.
+ *
+ * Handles toggling dark mode on/off and emitting event.
+ *
+ * Handles side navigation open/close and emitting event.
+ *
+ * Initializes by setting up dark mode from service.
+ */
 import {
 	Component,
 	Output,
@@ -11,6 +28,7 @@ import {
 } from "@angular/material/slide-toggle";
 
 import { BreakpointService } from "../../services/breakpoint.service";
+import { DarkModeService } from "../../services/dark-mode.service";
 import { SvgDarkComponent } from "../../../shared/components/svg-dark/svg-dark.component";
 import { RouterLinkActive, RouterLink } from "@angular/router";
 import { MatButtonModule } from "@angular/material/button";
@@ -20,7 +38,6 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { SvgGithubModule } from "src/app/shared/components/svg-github/svg-github.module";
 import { SvgLinkedinModule } from "src/app/shared/components/svg-linkedin/svg-linkedin.module";
 
-
 @Component({
 	selector: "app-top-navbar",
 	templateUrl: "./top-navbar.component.html",
@@ -29,8 +46,8 @@ import { SvgLinkedinModule } from "src/app/shared/components/svg-linkedin/svg-li
 	imports: [
 		MatToolbarModule,
 		SvgMenuComponent,
-    SvgGithubModule,
-    SvgLinkedinModule,
+		SvgGithubModule,
+		SvgLinkedinModule,
 		MatButtonModule,
 		RouterLinkActive,
 		RouterLink,
@@ -41,6 +58,7 @@ import { SvgLinkedinModule } from "src/app/shared/components/svg-linkedin/svg-li
 })
 export class TopNavbarComponent implements OnInit {
 	breakpointService = inject(BreakpointService);
+	darkModeService = inject(DarkModeService);
 
 	isDarkMode = false;
 
@@ -48,22 +66,14 @@ export class TopNavbarComponent implements OnInit {
 	@Output() public sidenavToggle = new EventEmitter<boolean>();
 
 	ngOnInit(): void {
-		this.initializeDarkMode();
+		this.darkModeService.initDarkMode();
 	}
-
-	initializeDarkMode = () => {
-		const localMode = localStorage.getItem("darkMode");
-
-		// If dark mode not defined in local storage then default to dark mode false
-		// If dark mode is defined in local storage then parse value to define dark mode
-		this.isDarkMode = localMode == null ? false : JSON.parse(localMode);
-	};
 
 	toggleSidenav = (): void => {
 		this.sidenavToggle.emit();
 	};
 
-	// user can toggle dark mode so checked if true or false
+	// user can toggle dark mode so checked is true or false
 	// save this value in local storage and emit so app scss can be changed
 	onDarkModeSwitched({ checked }: MatSlideToggleChange): void {
 		localStorage.setItem("darkMode", JSON.stringify(checked));
