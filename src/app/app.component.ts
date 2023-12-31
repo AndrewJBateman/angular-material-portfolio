@@ -12,12 +12,19 @@ import {
 	OnInit,
 	ChangeDetectionStrategy,
 } from "@angular/core";
+import { NgClass } from "@angular/common";
 import { Meta } from "@angular/platform-browser";
 import { FooterComponent } from "./core/footer/footer.component";
 import { RouterOutlet } from "@angular/router";
-import { SideNavbarComponent } from "./core/nav/side-navbar/side-navbar.component";
+import { RouterLinkActive, RouterLink } from "@angular/router";
+import { MatDividerModule } from "@angular/material/divider";
+import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { TopNavbarComponent } from "./core/nav/top-navbar/top-navbar.component";
+
+import { SvgCloseComponent } from "./shared/components/svg-close/svg-close.component";
+import { SvgLinkedinModule } from "./shared/components/svg-linkedin/svg-linkedin.module";
+import { SvgGithubModule } from "./shared/components/svg-github/svg-github.module";
 
 @Component({
 	selector: "app-root",
@@ -26,11 +33,18 @@ import { TopNavbarComponent } from "./core/nav/top-navbar/top-navbar.component";
 	styleUrls: ["./app.component.scss"],
 	standalone: true,
 	imports: [
+    MatListModule,
+    MatDividerModule,
+		RouterLinkActive,
+		RouterLink,
 		TopNavbarComponent,
+    NgClass,
 		MatSidenavModule,
-		SideNavbarComponent,
 		RouterOutlet,
 		FooterComponent,
+		SvgLinkedinModule,
+		SvgCloseComponent,
+		SvgGithubModule,
 	],
 })
 export class AppComponent implements OnInit {

@@ -1,11 +1,100 @@
 <div class="root-container">
 	<app-top-navbar
 		(darkModeSwitched)="switchMode($event)"
-		(sidenavToggle)="sidenav.toggle()"></app-top-navbar>
+		(sidenavToggle)="sidenav.toggle($event)"></app-top-navbar>
 	<div class="container">
-		<mat-sidenav-container>
-			<mat-sidenav #sidenav>
-				<app-side-navbar (sidenavClose)="sidenav.close()"></app-side-navbar>
+		<mat-sidenav-container [hasBackdrop]="true">
+			<mat-sidenav class="sidenav-drawer" mode="side" #sidenav>
+				<mat-nav-list class="sidenav-list" (click)="sidenav.close()"
+					><img
+						class="sidenav-image mat-elevation-z8"
+						src="../../../../assets/svgs/angular.svg"
+						alt="profile image" />
+
+					<mat-divider class="sidenav-divider"></mat-divider>
+					<a
+						mat-list-item
+						class="sidenav-item"
+						[routerLink]="['/home']"
+						[routerLinkActiveOptions]="{ exact: true }"
+						href="/home"
+						routerLinkActive="side-link-active"
+						aria-label="side menu button"
+						#rla="routerLinkActive">
+						<span [ngClass]="rla.isActive ? 'side-link-active' : 'side-link'"
+							>Home</span
+						>
+					</a>
+					<a
+						mat-list-item
+						class="sidenav-item"
+						[routerLink]="['/projects']"
+						href="/projects"
+						routerLinkActive="side-link-active"
+						aria-label="Projects side menu button"
+						#rlb="routerLinkActive">
+						<span [ngClass]="rlb.isActive ? 'side-link-active' : 'side-link'"
+							>Projects</span
+						>
+					</a>
+					<a
+						mat-list-item
+						class="sidenav-item"
+						[routerLink]="['/skills']"
+						href="/skills"
+						routerLinkActive="side-link-active"
+						aria-label="Skills side menu button"
+						#rlc="routerLinkActive">
+						<span [ngClass]="rlc.isActive ? 'side-link-active' : 'side-link'"
+							>Skills</span
+						>
+					</a>
+					<a
+						mat-list-item
+						class="sidenav-item"
+						[routerLink]="['/contact']"
+						href="/contact"
+						routerLinkActive="side-link-active"
+						aria-label="Contact side menu button"
+						#rld="routerLinkActive">
+						<span [ngClass]="rld.isActive ? 'side-link-active' : 'side-link'"
+							>Contact</span
+						>
+					</a>
+					<a
+						mat-list-item
+						class="sidenav-item"
+						[routerLink]="['/posts']"
+						href="/posts"
+						routerLinkActive="side-link-active"
+						aria-label="Posts side menu button"
+						#rle="routerLinkActive">
+						<span [ngClass]="rle.isActive ? 'side-link-active' : 'side-link'"
+							>Posts</span
+						>
+					</a>
+					<mat-divider class="sidenav-divider" />
+					<div class="sidenav-bar-social">
+						<a
+							mat-list-item
+							class="side-link-social"
+							aria-label="side menu link button"
+							href="https://www.github.com/andrewjbateman"
+							target="_blank"
+							rel="noreferrer">
+							<app-svg-github />
+						</a>
+						<a
+							mat-list-item
+							class="side-link-social"
+							aria-label="side menu link button"
+							href="https://www.linkedin.com/in/andrew-bateman"
+							target="_blank"
+							rel="noreferrer">
+							<app-svg-linkedin />
+						</a>
+					</div>
+				</mat-nav-list>
 			</mat-sidenav>
 			<mat-sidenav-content>
 				<router-outlet></router-outlet>

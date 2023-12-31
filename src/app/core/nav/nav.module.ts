@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { TopNavbarComponent } from "./top-navbar/top-navbar.component";
-import { SideNavbarComponent } from "../nav/side-navbar/side-navbar.component";
 
 import { SvgDarkComponent } from "../../shared/components/svg-dark/svg-dark.component";
 import { SvgMenuComponent } from "../../shared/components/svg-menu/svg-menu.component";
@@ -33,14 +32,13 @@ import { SvgLinkedinModule } from "src/app/shared/components/svg-linkedin/svg-li
 		MatButtonModule,
 		MatSlideToggleModule,
 		TopNavbarComponent,
-		SideNavbarComponent,
 		SvgDarkComponent,
 		SvgMenuComponent,
 		SvgDownloadComponent,
 		SvgCloseComponent,
 		SvgCreateComponent,
 	],
-	exports: [TopNavbarComponent, SideNavbarComponent, SvgDarkComponent],
+	exports: [TopNavbarComponent, SvgDarkComponent],
 	providers: [provideRouter(routes, withComponentInputBinding())],
 })
 export class NavModule {}
