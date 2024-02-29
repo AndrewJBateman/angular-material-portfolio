@@ -2,7 +2,7 @@ repo_name: AndrewJBateman/angular-material-portfolio
 report_id: 7f48ff4c22c974ef8fa27bbaeefead68
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-31T09:09:51+00:00'
+timestamp: '2024-02-29T19:43:50+00:00'
 requested_by: AndrewJBateman
 provider: github
 branch: master
@@ -148,7 +148,7 @@ tools:
   last_updated_by: AndrewJBateman
   last_updated_on: 2023-06-14 08:18:16.000000000 Z
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 3.1.1
   license: MIT
