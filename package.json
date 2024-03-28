@@ -30,7 +30,7 @@
     "@angular/router": "^17.0.8",
     "@angular/service-worker": "^17.0.8",
     "dayjs": "^1.11.10",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "firebase": "^10.7.1",
     "ngx-picture": "^3.0.0",
     "rxjs": "^7.8.1",
