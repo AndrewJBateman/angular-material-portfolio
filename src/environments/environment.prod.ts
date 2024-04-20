@@ -1,7 +1,13 @@
 export const environment = {
 	production: true,
-	firebase: {},
-	unsplash: {
-		UNSPLASH_API_KEY: "${process.env.UNSPLASH_API_KEY}",
+	firebase: {
+    "access credentials here"
 	},
+	unsplash: {
+    API_URL: "https://api.unsplash.com",
+    UNSPLASH_API_KEY: "access credentials here",
+  },
+  formspree: {
+    FORMSPREE_URL: "access credentials here"
+  },
 };

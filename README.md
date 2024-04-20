@@ -106,11 +106,11 @@ export class BreakpointService {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working, deployed to Firebase & linked to my domain - Lighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
+* Status: Working, deployed to Firebase. ighthouse performance 90%, accessibility 100%, Best Practises: 100%, SEO 100% & working PWA
 * To-Do: General: fix index CSP, add text compression, reduce unused JS, cache policy 1 year?
-* To-Do: Skills: add more skills  
+* To-Do: Skills: add more skills, PLC programming Beckhoff...
 * To-Do: Improve lighthouse performance score: remove unused CSS and redo small images.
-* To-Do: Projects: add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
+* To-Do: Projects: Terracota project, add to Node projects, add Docker/Java/IoT.. projects. Serve static assets with an efficient cache policy
 * To-Do: Posts: Unsplash images - use sizing website.
 * To-Do: SCSS - reorganise
 * To-Do: **Colors:** Add to styles SCSS to reduce repeated scss throughout app.
