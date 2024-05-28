@@ -10,10 +10,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatDividerModule } from "@angular/material/divider";
 import { SharedModule } from "./app/shared/shared.module";
 import { NavModule } from "./app/core/nav/nav.module";
-import {
-	withInterceptorsFromDi,
-	provideHttpClient,
-} from "@angular/common/http";
+import { withInterceptorsFromDi, provideHttpClient } from "@angular/common/http";
 import { NgxPictureModule, CLOUDINARY_CONFIG } from "ngx-picture";
 
 if (environment.production) {
