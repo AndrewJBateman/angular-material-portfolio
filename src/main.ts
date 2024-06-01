@@ -1,4 +1,5 @@
 import { enableProdMode, importProvidersFrom } from "@angular/core";
+import { provideAnimations } from "@angular/platform-browser/animations";
 import { environment } from "./environments/environment";
 import { bootstrapApplication } from "@angular/platform-browser";
 import { AppComponent } from "./app/app.component";
@@ -10,7 +11,10 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatDividerModule } from "@angular/material/divider";
 import { SharedModule } from "./app/shared/shared.module";
 import { NavModule } from "./app/core/nav/nav.module";
-import { withInterceptorsFromDi, provideHttpClient } from "@angular/common/http";
+import {
+	withInterceptorsFromDi,
+	provideHttpClient,
+} from "@angular/common/http";
 import { NgxPictureModule, CLOUDINARY_CONFIG } from "ngx-picture";
 
 if (environment.production) {
@@ -27,11 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
 				MatDividerModule,
 				MatSidenavModule,
 				MatSlideToggleModule,
-				MatToolbarModule,
-				provideFirebaseApp(() => initializeApp({ ...environment.firebase })),
-				provideFirestore(() => getFirestore()),
+				MatToolbarModule
 			),
+			provideFirebaseApp(() => initializeApp(environment.firebase)),
+			provideFirestore(() => getFirestore()),
 			provideHttpClient(withInterceptorsFromDi()),
+			provideAnimations(),
 		],
 	}).catch(err => {
 		console.error(err);
