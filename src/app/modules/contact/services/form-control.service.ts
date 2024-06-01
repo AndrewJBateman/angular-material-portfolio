@@ -12,10 +12,10 @@ export class FormControlService {
 	private formBuilder = inject(FormBuilder);
 	contactForm: FormGroup;
 
-  // Form state
-  success = SUCCESS_MESSAGE;
+	// Form state
+	success = SUCCESS_MESSAGE;
 	failure = FAILURE_MESSAGE;
-  loading = false;
+	loading = false;
 
 	initContactForm() {
 		this.loading = true;

@@ -76,7 +76,7 @@ export class ContactComponent implements OnInit {
 		this.titleService.setTitle(this.title);
 		this.metaTagService.updateTag({
 			name: "contact",
-			content: "andrewbateman.org",
+			content: "angular-blog-14cef.web.app",
 		});
 	}
 

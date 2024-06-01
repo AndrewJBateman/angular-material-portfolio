@@ -22,8 +22,8 @@ import { SvgLinkedinModule } from "src/app/shared/components/svg-linkedin/svg-li
 
 @NgModule({
 	imports: [
-    SvgGithubModule,
-    SvgLinkedinModule,
+		SvgGithubModule,
+		SvgLinkedinModule,
 		BrowserAnimationsModule,
 		SharedModule,
 		MatListModule,
@@ -42,4 +42,3 @@ import { SvgLinkedinModule } from "src/app/shared/components/svg-linkedin/svg-li
 	providers: [provideRouter(routes, withComponentInputBinding())],
 })
 export class NavModule {}
-

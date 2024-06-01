@@ -16,9 +16,9 @@ dayjs.extend(relativeTime);
 })
 export class DateConvertPipe implements PipeTransform {
 	/**
- * Converts a timestamp to a relative time string (e.g. "5 minutes ago")
- */
-  transform(timestamp: number | Date): string {
-		return timestamp? dayjs(timestamp).fromNow() : '';
+	 * Converts a timestamp to a relative time string (e.g. "5 minutes ago")
+	 */
+	transform(timestamp: number | Date): string {
+		return timestamp ? dayjs(timestamp).fromNow() : "";
 	}
 }

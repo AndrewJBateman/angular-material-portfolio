@@ -63,7 +63,8 @@ export class TopNavbarComponent implements OnInit {
 	isDarkMode = false;
 
 	@Output() readonly darkModeSwitched = new EventEmitter<boolean>();
-	@Output() public sidenavToggle: EventEmitter<boolean> = new EventEmitter<boolean>();
+	@Output() public sidenavToggle: EventEmitter<boolean> =
+		new EventEmitter<boolean>();
 
 	ngOnInit(): void {
 		this.darkModeService.initDarkMode();

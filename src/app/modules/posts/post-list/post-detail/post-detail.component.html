@@ -15,8 +15,15 @@
 				class="card-image">
 			</ngx-picture>
 			<p class="image-text">
-          <a href="http://www.unsplash.com" target="_blank" rel="noreferrer">Unsplash</a> image: @if (imageData.description) {
-            <span>"{{imageData.description}}"</span> } by {{ imageData.user.name }}</p>
+				<a href="http://www.unsplash.com" target="_blank" rel="noreferrer"
+					>Unsplash</a
+				>
+				image:
+				@if (imageData.description) {
+					<span>"{{ imageData.description }}"</span>
+				}
+				by {{ imageData.user.name }}
+			</p>
 		}
 
 		@if (postDetails) {
