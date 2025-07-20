@@ -8,12 +8,11 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { DatePipe } from "@angular/common";
 
 @Component({
-	selector: "app-footer",
-	templateUrl: "./footer.component.html",
-	styleUrls: ["./footer.component.scss"],
-	standalone: true,
-	imports: [MatToolbarModule, RouterLink],
-	providers: [DatePipe],
+    selector: "app-footer",
+    templateUrl: "./footer.component.html",
+    styleUrls: ["./footer.component.scss"],
+    imports: [MatToolbarModule, RouterLink],
+    providers: [DatePipe]
 })
 export class FooterComponent implements OnInit {
 	currentYear!: string;

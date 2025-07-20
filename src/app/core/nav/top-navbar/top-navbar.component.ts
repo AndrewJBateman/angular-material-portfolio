@@ -39,22 +39,21 @@ import { SvgGithubModule } from "src/app/shared/components/svg-github/svg-github
 import { SvgLinkedinModule } from "src/app/shared/components/svg-linkedin/svg-linkedin.module";
 
 @Component({
-	selector: "app-top-navbar",
-	templateUrl: "./top-navbar.component.html",
-	styleUrls: ["./top-navbar.component.scss"],
-	standalone: true,
-	imports: [
-		MatToolbarModule,
-		SvgMenuComponent,
-		SvgGithubModule,
-		SvgLinkedinModule,
-		MatButtonModule,
-		RouterLinkActive,
-		RouterLink,
-		MatSlideToggleModule,
-		SvgDarkComponent,
-		AsyncPipe,
-	],
+    selector: "app-top-navbar",
+    templateUrl: "./top-navbar.component.html",
+    styleUrls: ["./top-navbar.component.scss"],
+    imports: [
+        MatToolbarModule,
+        SvgMenuComponent,
+        SvgGithubModule,
+        SvgLinkedinModule,
+        MatButtonModule,
+        RouterLinkActive,
+        RouterLink,
+        MatSlideToggleModule,
+        SvgDarkComponent,
+        AsyncPipe,
+    ]
 })
 export class TopNavbarComponent implements OnInit {
 	breakpointService = inject(BreakpointService);

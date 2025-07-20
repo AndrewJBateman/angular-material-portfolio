@@ -22,12 +22,11 @@ import { MatCardModule } from "@angular/material/card";
 import { AsyncPipe } from "@angular/common";
 
 @Component({
-	selector: "app-home",
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	templateUrl: "./home.component.html",
-	styleUrls: ["./home.component.scss"],
-	standalone: true,
-	imports: [MatCardModule, AsyncPipe],
+    selector: "app-home",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./home.component.html",
+    styleUrls: ["./home.component.scss"],
+    imports: [MatCardModule, AsyncPipe]
 })
 export class HomeComponent implements OnInit {
 	firestoreDataService = inject(FirestoreDataService);

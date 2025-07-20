@@ -31,32 +31,31 @@ import { of, catchError } from "rxjs";
 import { FormControlService } from "./services/form-control.service";
 
 @Component({
-	selector: "app-contact",
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	templateUrl: "./contact.component.html",
-	styleUrls: ["./contact.component.scss"],
-	standalone: true,
-	imports: [
-		FormsModule,
-		ReactiveFormsModule,
-		MatFormFieldModule,
-		MatInputModule,
-		TextFieldModule,
-		MatButtonModule,
-	],
-	providers: [
-		MatSnackBar,
-		FormControlService,
-		{
-			provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
-			useValue: {
-				duration: 3000,
-				verticalPosition: "center",
-				horizontalPosition: "center",
-				panelClass: ["snackbar-common"],
-			},
-		},
-	],
+    selector: "app-contact",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./contact.component.html",
+    styleUrls: ["./contact.component.scss"],
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        TextFieldModule,
+        MatButtonModule,
+    ],
+    providers: [
+        MatSnackBar,
+        FormControlService,
+        {
+            provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
+            useValue: {
+                duration: 3000,
+                verticalPosition: "center",
+                horizontalPosition: "center",
+                panelClass: ["snackbar-common"],
+            },
+        },
+    ]
 })
 export class ContactComponent implements OnInit {
 	formControlService = inject(FormControlService);

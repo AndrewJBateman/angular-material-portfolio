@@ -27,25 +27,24 @@ import { SvgLinkedinModule } from "./shared/components/svg-linkedin/svg-linkedin
 import { SvgGithubModule } from "./shared/components/svg-github/svg-github.module";
 
 @Component({
-	selector: "app-root",
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	templateUrl: "./app.component.html",
-	styleUrls: ["./app.component.scss"],
-	standalone: true,
-	imports: [
-		MatListModule,
-		MatDividerModule,
-		RouterLinkActive,
-		RouterLink,
-		TopNavbarComponent,
-		NgClass,
-		MatSidenavModule,
-		RouterOutlet,
-		FooterComponent,
-		SvgLinkedinModule,
-		SvgCloseComponent,
-		SvgGithubModule,
-	],
+    selector: "app-root",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./app.component.html",
+    styleUrls: ["./app.component.scss"],
+    imports: [
+        MatListModule,
+        MatDividerModule,
+        RouterLinkActive,
+        RouterLink,
+        TopNavbarComponent,
+        NgClass,
+        MatSidenavModule,
+        RouterOutlet,
+        FooterComponent,
+        SvgLinkedinModule,
+        SvgCloseComponent,
+        SvgGithubModule,
+    ]
 })
 export class AppComponent implements OnInit {
 	private isDark = false;

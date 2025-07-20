@@ -13,11 +13,10 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 
 @Component({
-	selector: "app-page-not-found",
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	templateUrl: "./page-not-found.component.html",
-	styleUrls: ["./page-not-found.component.scss"],
-	standalone: true,
-	imports: [MatCardModule, MatButtonModule, RouterLink],
+    selector: "app-page-not-found",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./page-not-found.component.html",
+    styleUrls: ["./page-not-found.component.scss"],
+    imports: [MatCardModule, MatButtonModule, RouterLink]
 })
 export class PageNotFoundComponent {}

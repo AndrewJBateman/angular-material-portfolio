@@ -17,13 +17,12 @@ import { AsyncPipe, SlicePipe } from "@angular/common";
 import { MatTabsModule } from "@angular/material/tabs";
 
 @Component({
-	selector: "app-projects",
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	encapsulation: ViewEncapsulation.None,
-	templateUrl: "./projects.component.html",
-	styleUrls: ["./projects.component.scss"],
-	standalone: true,
-	imports: [MatTabsModule, MatCardModule, AsyncPipe, SlicePipe],
+    selector: "app-projects",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
+    templateUrl: "./projects.component.html",
+    styleUrls: ["./projects.component.scss"],
+    imports: [MatTabsModule, MatCardModule, AsyncPipe, SlicePipe]
 })
 export class ProjectsComponent implements OnInit {
 	breakpointService = inject(BreakpointService);

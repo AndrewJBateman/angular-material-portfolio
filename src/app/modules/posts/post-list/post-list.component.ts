@@ -21,21 +21,20 @@ import { MatCardModule } from "@angular/material/card";
 import { AsyncPipe, SlicePipe } from "@angular/common";
 
 @Component({
-	selector: "app-post-list",
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	templateUrl: "./post-list.component.html",
-	styleUrls: ["./post-list.component.scss"],
-	standalone: true,
-	imports: [
-		MatTabsModule,
-		MatCardModule,
-		SvgCalenderComponent,
-		SvgTimerComponent,
-		DateConvertPipe,
-		ReadTimePipe,
-		AsyncPipe,
-		SlicePipe,
-	],
+    selector: "app-post-list",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./post-list.component.html",
+    styleUrls: ["./post-list.component.scss"],
+    imports: [
+        MatTabsModule,
+        MatCardModule,
+        SvgCalenderComponent,
+        SvgTimerComponent,
+        DateConvertPipe,
+        ReadTimePipe,
+        AsyncPipe,
+        SlicePipe,
+    ]
 })
 export class PostListComponent implements OnInit, AfterViewInit {
 	firestoreDataService = inject(FirestoreDataService);

@@ -16,13 +16,12 @@ import { MatCardModule } from "@angular/material/card";
 import { NgxPictureModule } from "ngx-picture";
 
 @Component({
-	selector: "app-post-detail",
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	templateUrl: "./post-detail.component.html",
-	styleUrls: ["./post-detail.component.scss"],
-	standalone: true,
-	imports: [MatCardModule, AsyncPipe, NgxPictureModule],
-	schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    selector: "app-post-detail",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./post-detail.component.html",
+    styleUrls: ["./post-detail.component.scss"],
+    imports: [MatCardModule, AsyncPipe, NgxPictureModule],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PostDetailComponent implements OnInit {
 	activatedRoute = inject(ActivatedRoute);

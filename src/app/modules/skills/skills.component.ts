@@ -14,12 +14,11 @@ import { MatCardModule } from "@angular/material/card";
 import { NgFor, AsyncPipe } from "@angular/common";
 
 @Component({
-	selector: "app-skills",
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	templateUrl: "./skills.component.html",
-	styleUrls: ["./skills.component.scss"],
-	standalone: true,
-	imports: [NgFor, MatCardModule, AsyncPipe],
+    selector: "app-skills",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./skills.component.html",
+    styleUrls: ["./skills.component.scss"],
+    imports: [NgFor, MatCardModule, AsyncPipe]
 })
 export class SkillsComponent implements OnInit {
 	breakpointService = inject(BreakpointService);

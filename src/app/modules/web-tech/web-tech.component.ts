@@ -26,12 +26,11 @@ import { MatCardModule } from "@angular/material/card";
 import { AsyncPipe } from "@angular/common";
 
 @Component({
-	selector: "app-web-tech",
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	templateUrl: "./web-tech.component.html",
-	styleUrls: ["./web-tech.component.scss"],
-	standalone: true,
-	imports: [MatCardModule, AsyncPipe, PackageConvertPipe],
+    selector: "app-web-tech",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./web-tech.component.html",
+    styleUrls: ["./web-tech.component.scss"],
+    imports: [MatCardModule, AsyncPipe, PackageConvertPipe]
 })
 export class WebTechComponent implements OnInit {
 	breakpointService = inject(BreakpointService);
